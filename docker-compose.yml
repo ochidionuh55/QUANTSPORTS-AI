@@ -1,0 +1,110 @@
+# QUANTSPORT AI - local development stack.
+#
+# Three application processes share one image and one .env file:
+#   api    - FastAPI, the only service with an HTTP surface
+#   bot    - Aiogram polling; must never run heavy work
+#   worker - APScheduler; owns all scheduled and heavy work
+#
+# Start with:  make up
+
+name: quantsport
+
+x-app-common: &app-common
+  build:
+    context: .
+    dockerfile: docker/Dockerfile
+    target: development
+  env_file: .env
+  environment:
+    POSTGRES__HOST: postgres
+    REDIS__HOST: redis
+    API_FOOTBALL_KEY: ${API_FOOTBALL_KEY:-}
+  volumes:
+    - ./app:/srv/app/app:ro
+    - ./tests:/srv/app/tests:ro
+    - ./scripts:/srv/app/scripts:ro
+    # Drop football-data.co.uk CSVs into ./data to run scripts/backtest.py.
+    - ./data:/data:ro
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES__USER:-quantsport}
+      POSTGRES_PASSWORD: ${POSTGRES__PASSWORD:-quantsport}
+      POSTGRES_DB: ${POSTGRES__DATABASE:-quantsport}
+    ports:
+      - "${POSTGRES_PUBLISHED_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        ["CMD-SHELL", "pg_isready -U ${POSTGRES__USER:-quantsport} -d ${POSTGRES__DATABASE:-quantsport}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--save", "60", "1"]
+    ports:
+      - "${REDIS_PUBLISHED_PORT:-6379}:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    restart: unless-stopped
+
+  api:
+    <<: *app-common
+    environment:
+      POSTGRES__HOST: postgres
+      REDIS__HOST: redis
+      SERVICE_ROLE: api
+    # Note: with --reload, uvicorn's supervisor survives a crash in the child
+    # process, so the container can report "Up" while serving nothing. The
+    # healthcheck below is what actually tells you the API is alive.
+    command:
+      ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    ports:
+      - "${API_PUBLISHED_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health/live"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  bot:
+    <<: *app-common
+    environment:
+      POSTGRES__HOST: postgres
+      REDIS__HOST: redis
+      SERVICE_ROLE: bot
+    command: ["python", "-m", "app.bot.main"]
+    # The bot exits if TELEGRAM__BOT_TOKEN is unset. Comment this service out
+    # while you have no token rather than leaving it in a restart loop.
+
+  worker:
+    <<: *app-common
+    environment:
+      POSTGRES__HOST: postgres
+      REDIS__HOST: redis
+      SERVICE_ROLE: worker
+    command: ["python", "-m", "app.worker.main"]
+
+volumes:
+  postgres-data:
+  redis-data:

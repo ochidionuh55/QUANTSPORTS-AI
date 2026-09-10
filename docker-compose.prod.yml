@@ -1,0 +1,174 @@
+# QUANTSPORT AI — production stack.
+#
+# Runs on a small cloud VM, independent of any desktop machine.
+#
+#   docker compose -f docker-compose.prod.yml up -d
+#
+# Differences from the development stack that matter:
+#
+# * The production image target — no dev dependencies, no source mount, so the
+#   running code is what was built rather than whatever is on disk.
+# * ``restart: always`` rather than ``unless-stopped``, so containers come back
+#   after a host reboot without anyone logging in.
+# * Migrations run once in their own container before the app starts, instead
+#   of being a step someone remembers.
+# * Postgres and Redis are optional. Point the URLs at managed services and
+#   comment the local ones out; the app cannot tell the difference.
+# * Log rotation, or a chatty worker fills the disk in a few weeks.
+
+# A distinct project name, so production containers, networks and volumes are
+# namespaced apart from the development stack.
+#
+# Sharing the name meant both stacks resolved to the same
+# `quantsport_postgres-data` volume, and `down -v` on one destroyed the other's
+# database. Isolation here is the difference between tearing down a test stack
+# and losing a day of ingestion.
+name: quantsport-prod
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "5"
+
+x-app: &app
+  image: quantsport:${QUANTSPORT_VERSION:-latest}
+  build:
+    context: .
+    dockerfile: docker/Dockerfile
+    target: production
+    args:
+      BUILD_SHA: ${BUILD_SHA:-unknown}
+  env_file: .env
+  environment:
+    ENVIRONMENT: production
+    DEBUG: "false"
+    OBSERVABILITY__LOG_FORMAT: json
+    POSTGRES__HOST: ${POSTGRES__HOST:-postgres}
+    REDIS__HOST: ${REDIS__HOST:-redis}
+  restart: always
+  logging: *logging
+  depends_on:
+    migrate:
+      condition: service_completed_successfully
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES__USER:-quantsport}
+      POSTGRES_PASSWORD: ${POSTGRES__PASSWORD:?POSTGRES__PASSWORD is required}
+      POSTGRES_DB: ${POSTGRES__DATABASE:-quantsport}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./backups:/backups
+    # Not published to the host. Nothing outside the compose network needs it,
+    # and an exposed database with a guessable password is how servers get
+    # taken over.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES__USER:-quantsport}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: always
+    logging: *logging
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes", "--save", "300", "10"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: always
+    logging: *logging
+
+  migrate:
+    <<: *app
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: ["alembic", "upgrade", "head"]
+    restart: "no"
+    # Runs to completion, then the app services start. A deployment that would
+    # run new code against an old schema fails here instead of at 3am.
+
+  api:
+    <<: *app
+    command:
+      - uvicorn
+      - app.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --workers
+      - "2"
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      OBSERVABILITY__LOG_FORMAT: json
+      SERVICE_ROLE: api
+      POSTGRES__HOST: ${POSTGRES__HOST:-postgres}
+      REDIS__HOST: ${REDIS__HOST:-redis}
+    ports:
+      - "127.0.0.1:${API_PUBLISHED_PORT:-8000}:8000"
+      # Bound to loopback: reach it through a reverse proxy or an SSH tunnel
+      # rather than exposing it directly.
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  bot:
+    <<: *app
+    command: ["python", "-m", "app.bot.main"]
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      OBSERVABILITY__LOG_FORMAT: json
+      SERVICE_ROLE: bot
+      POSTGRES__HOST: ${POSTGRES__HOST:-postgres}
+      REDIS__HOST: ${REDIS__HOST:-redis}
+    # No healthcheck: the bot has no HTTP surface. Its liveness is the Redis
+    # heartbeat, which the API reports on /health.
+
+  worker:
+    <<: *app
+    command: ["python", "-m", "app.worker.main"]
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      OBSERVABILITY__LOG_FORMAT: json
+      SERVICE_ROLE: worker
+      POSTGRES__HOST: ${POSTGRES__HOST:-postgres}
+      REDIS__HOST: ${REDIS__HOST:-redis}
+
+  backup:
+    image: postgres:16-alpine
+    env_file: .env
+    environment:
+      PGPASSWORD: ${POSTGRES__PASSWORD:?POSTGRES__PASSWORD is required}
+    volumes:
+      - ./backups:/backups
+      - ./scripts/backup.sh:/backup.sh:ro
+    entrypoint: ["/bin/sh", "/backup.sh"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    logging: *logging
+    # A daily dump kept for two weeks. Small, cheap, and the difference between
+    # a bad morning and losing 113,000 ingested matches.
+
+volumes:
+  postgres-data:
+  redis-data:

@@ -1,0 +1,79 @@
+[project]
+name = "quantsport-ai"
+version = "0.1.0"
+description = "Quantitative sports market analysis platform"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-q --strict-markers --strict-config"
+# The container runs as a non-root user and the app directory is read-only,
+# so the cache must live somewhere writable.
+cache_dir = "/tmp/.pytest_cache"
+markers = [
+    "integration: requires live Postgres and Redis",
+]
+filterwarnings = ["error::DeprecationWarning:app.*"]
+
+[tool.coverage.run]
+source = ["app"]
+omit = ["*/__init__.py"]
+
+[tool.coverage.report]
+skip_empty = true
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",   # pycodestyle / pyflakes
+    "I",             # import sorting
+    "N",             # naming
+    "UP",            # pyupgrade
+    "B",             # bugbear
+    "S",             # bandit (security)
+    "C4",            # comprehensions
+    "SIM",           # simplify
+    "ASYNC",         # async correctness
+    "BLE",           # blind except
+    "RUF",
+]
+ignore = [
+    "B008",      # FastAPI dependency injection uses calls in defaults
+    "S101",      # assert is expected in tests
+    "ASYNC109",  # health probes take an explicit timeout by design; they wrap
+                 # it in asyncio.timeout internally rather than leaking it up
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Seeded resampling in analysis scripts is reproducibility, not cryptography.
+"scripts/*" = ["S311"]
+"tests/*" = [
+    "S105",
+    "S106",
+    # Seeded pseudo-randomness is exactly what these tests need: reproducible
+    # synthetic datasets. Nothing here is security-sensitive.
+    "S311",
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = false
+disallow_untyped_decorators = false
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["apscheduler.*"]
+ignore_missing_imports = true

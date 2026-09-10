@@ -1,0 +1,30 @@
+# QUANTSPORT AI - runtime dependencies (Phase 1)
+# Pinned to minor versions; upgrade deliberately, not incidentally.
+
+# --- Web / API -------------------------------------------------------------
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# --- Configuration & validation --------------------------------------------
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# --- Database ---------------------------------------------------------------
+SQLAlchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+
+# --- Cache / coordination ---------------------------------------------------
+redis==5.2.1
+
+# --- Telegram ---------------------------------------------------------------
+aiogram==3.31.0
+
+# --- Scheduling -------------------------------------------------------------
+APScheduler==3.11.0
+
+# --- HTTP client ------------------------------------------------------------
+httpx==0.28.1
+
+# --- Logging ----------------------------------------------------------------
+structlog==24.4.0
