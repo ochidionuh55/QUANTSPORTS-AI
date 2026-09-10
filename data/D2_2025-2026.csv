@@ -1,0 +1,307 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+D2,01/08/2025,Schalke 04,Hertha,2,1,2,,H,2.9,3.5,2.3,2.95,3.55,2.45
+D2,02/08/2025,Darmstadt,Bochum,4,1,2,1,H,2.2,3.6,3.0,2.27,3.7,3.11
+D2,02/08/2025,Elversberg,Nurnberg,1,0,,,H,2.1,3.8,3.1,2.17,3.9,3.3
+D2,02/08/2025,Karlsruhe,Preußen Münster,3,2,2,1,H,1.9,3.7,3.7,1.93,4.16,3.8
+D2,02/08/2025,Paderborn,Holstein Kiel,2,1,1,,H,2.15,3.8,3.0,2.22,3.95,3.14
+D2,02/08/2025,Bielefeld,Fortuna Dusseldorf,5,1,1,1,H,2.3,3.6,2.88,2.33,3.8,2.95
+D2,03/08/2025,Greuther Furth,Dresden,3,2,2,1,H,2.2,3.7,2.9,2.27,3.8,3.11
+D2,03/08/2025,Hannover,Kaiserslautern,1,0,,,H,1.91,3.9,3.5,1.98,3.95,3.67
+D2,03/08/2025,Magdeburg,Braunschweig,0,1,,,A,1.8,3.8,4.0,1.85,3.9,4.5
+D2,08/08/2025,Nurnberg,Darmstadt,0,1,,,A,2.88,3.7,2.25,3.0,3.8,2.3
+D2,08/08/2025,Preußen Münster,Paderborn,1,1,,1,D,3.3,3.2,2.25,3.33,3.4,2.31
+D2,09/08/2025,Braunschweig,Greuther Furth,3,2,2,1,H,2.35,3.3,3.0,2.4,3.65,3.0
+D2,09/08/2025,Dresden,Magdeburg,1,2,1,2,A,2.45,3.6,2.63,2.47,3.75,2.7
+D2,09/08/2025,Fortuna Dusseldorf,Hannover,0,2,,,A,2.5,3.6,2.6,2.55,3.8,2.6
+D2,09/08/2025,Kaiserslautern,Schalke 04,1,0,,,H,2.38,3.5,2.8,2.38,3.7,3.05
+D2,10/08/2025,Bochum,Elversberg,2,0,,,H,1.95,3.8,3.5,2.0,3.85,3.55
+D2,10/08/2025,Hertha,Karlsruhe,0,0,,,D,1.8,3.8,4.1,1.83,4.1,4.1
+D2,10/08/2025,Holstein Kiel,Bielefeld,0,2,,2,A,2.15,3.6,3.1,2.2,3.75,3.1
+D2,22/08/2025,Elversberg,Kaiserslautern,2,1,1,,H,1.95,3.6,3.6,2.1,3.75,3.6
+D2,22/08/2025,Preußen Münster,Nurnberg,2,1,2,,H,2.35,3.4,2.9,2.41,3.5,2.95
+D2,23/08/2025,Hannover,Magdeburg,3,1,2,,H,1.95,3.6,3.75,2.05,3.75,3.8
+D2,23/08/2025,Karlsruhe,Braunschweig,2,0,1,,H,1.85,3.8,3.9,1.88,4.0,4.0
+D2,23/08/2025,Paderborn,Fortuna Dusseldorf,1,2,,2,A,1.8,3.8,4.1,1.81,3.95,4.3
+D2,23/08/2025,Schalke 04,Bochum,2,1,,,H,2.4,3.6,2.75,2.46,3.6,2.85
+D2,24/08/2025,Bielefeld,Dresden,1,2,,1,A,1.9,3.3,4.2,1.93,3.6,4.5
+D2,24/08/2025,Darmstadt,Hertha,0,0,,,D,2.1,3.3,3.6,2.13,3.7,3.6
+D2,24/08/2025,Greuther Furth,Holstein Kiel,0,2,,1,A,2.7,3.4,2.5,2.75,3.5,2.55
+D2,29/08/2025,Hertha,Elversberg,0,2,,1,A,2.2,3.4,3.2,2.3,3.5,3.2
+D2,29/08/2025,Nurnberg,Paderborn,0,0,,,D,3.0,3.75,2.15,3.15,3.8,2.2
+D2,30/08/2025,Bochum,Preußen Münster,1,2,1,1,A,2.0,3.6,3.5,2.01,3.8,3.66
+D2,30/08/2025,Braunschweig,Bielefeld,1,1,,,D,2.8,3.6,2.3,3.0,3.7,2.35
+D2,30/08/2025,Holstein Kiel,Hannover,1,2,1,,A,2.55,3.7,2.45,2.66,3.8,2.6
+D2,30/08/2025,Fortuna Dusseldorf,Karlsruhe,0,0,,,D,2.25,3.7,2.88,2.3,3.95,2.88
+D2,31/08/2025,Dresden,Schalke 04,0,1,,,A,2.38,3.5,2.8,2.45,3.8,2.85
+D2,31/08/2025,Kaiserslautern,Darmstadt,3,1,,,H,2.6,3.3,2.63,2.6,3.7,2.66
+D2,31/08/2025,Magdeburg,Greuther Furth,4,5,1,1,A,1.83,3.8,3.9,1.85,4.2,4.0
+D2,12/09/2025,Bielefeld,Magdeburg,2,0,,,H,2.1,3.7,3.1,2.2,3.85,3.15
+D2,12/09/2025,Paderborn,Bochum,1,0,,,H,1.85,3.7,3.9,1.9,4.0,3.9
+D2,13/09/2025,Darmstadt,Braunschweig,2,1,,1,H,1.62,4.0,5.0,1.65,4.2,5.0
+D2,13/09/2025,Karlsruhe,Nurnberg,2,1,1,1,H,1.91,3.7,3.75,1.99,3.95,3.75
+D2,13/09/2025,Schalke 04,Holstein Kiel,0,1,,1,A,2.2,3.5,3.1,2.28,3.6,3.1
+D2,13/09/2025,Hannover,Hertha,0,3,,,A,1.8,3.8,4.0,1.93,3.9,4.0
+D2,14/09/2025,Elversberg,Dresden,2,2,1,2,D,2.0,3.7,3.4,2.05,3.95,3.65
+D2,14/09/2025,Greuther Furth,Kaiserslautern,0,3,,1,A,2.35,3.4,2.88,2.45,3.8,2.88
+D2,14/09/2025,Preußen Münster,Fortuna Dusseldorf,1,2,1,,A,2.6,3.25,2.7,2.6,3.6,2.75
+D2,19/09/2025,Bielefeld,Greuther Furth,1,3,,1,A,1.75,3.6,4.5,1.87,4.0,4.5
+D2,19/09/2025,Kaiserslautern,Preußen Münster,4,1,3,,H,2.3,3.3,3.1,2.35,3.55,3.2
+D2,20/09/2025,Braunschweig,Elversberg,1,4,1,2,A,3.0,3.5,2.2,3.0,3.5,2.3
+D2,20/09/2025,Hertha,Paderborn,0,2,,1,A,2.55,3.6,2.45,2.8,3.85,2.5
+D2,20/09/2025,Magdeburg,Schalke 04,0,2,,1,A,2.3,3.3,3.1,2.3,3.65,3.14
+D2,20/09/2025,Nurnberg,Bochum,2,1,,,H,2.3,3.8,2.63,2.4,3.8,2.85
+D2,21/09/2025,Dresden,Hannover,2,2,2,2,D,3.0,3.6,2.2,3.15,3.75,2.25
+D2,21/09/2025,Fortuna Dusseldorf,Darmstadt,0,3,,,A,2.5,3.5,2.7,2.5,3.8,2.7
+D2,21/09/2025,Holstein Kiel,Karlsruhe,3,0,2,,H,1.95,3.6,3.6,2.05,3.9,3.6
+D2,26/09/2025,Darmstadt,Dresden,2,0,1,,H,1.62,4.1,4.0,1.7,4.4,4.5
+D2,26/09/2025,Schalke 04,Greuther Furth,1,0,,,H,1.85,3.9,3.6,1.9,4.0,3.9
+D2,27/09/2025,Elversberg,Holstein Kiel,1,0,,,H,2.1,3.8,3.0,2.2,3.85,3.25
+D2,27/09/2025,Karlsruhe,Magdeburg,1,0,,,H,2.15,3.6,3.1,2.2,4.1,3.2
+D2,27/09/2025,Paderborn,Kaiserslautern,2,0,,,H,1.9,3.9,3.6,2.0,4.0,3.6
+D2,27/09/2025,Bochum,Fortuna Dusseldorf,0,1,,1,A,2.15,3.5,3.1,2.16,3.8,3.15
+D2,28/09/2025,Hannover,Bielefeld,3,1,,1,H,1.83,3.75,3.9,1.85,4.2,4.0
+D2,28/09/2025,Nurnberg,Hertha,0,3,,2,A,2.25,3.5,3.0,2.3,3.8,3.1
+D2,28/09/2025,Preußen Münster,Braunschweig,3,1,1,,H,1.95,3.6,3.6,2.05,3.8,3.65
+D2,03/10/2025,Braunschweig,Paderborn,1,2,,1,A,4.0,3.7,1.85,4.0,3.75,1.92
+D2,03/10/2025,Fortuna Dusseldorf,Nurnberg,2,3,,1,A,2.38,3.7,2.7,2.55,3.75,2.75
+D2,04/10/2025,Hertha,Preußen Münster,2,1,1,,H,2.0,3.75,3.4,2.16,3.8,3.5
+D2,04/10/2025,Holstein Kiel,Darmstadt,1,1,,,D,2.4,3.5,2.75,2.45,3.75,2.75
+D2,04/10/2025,Kaiserslautern,Bochum,3,2,1,1,H,2.05,3.7,3.2,2.1,3.8,3.35
+D2,04/10/2025,Dresden,Karlsruhe,3,3,1,2,D,2.15,3.75,3.0,2.33,3.8,3.1
+D2,05/10/2025,Bielefeld,Schalke 04,1,2,,2,A,2.3,3.8,2.75,2.35,3.8,2.88
+D2,05/10/2025,Greuther Furth,Hannover,2,2,1,1,D,3.5,3.8,1.95,3.5,3.8,2.0
+D2,05/10/2025,Magdeburg,Elversberg,0,4,,2,A,2.6,3.6,2.5,2.6,3.8,2.63
+D2,17/10/2025,Fortuna Dusseldorf,Braunschweig,1,2,,2,A,1.85,3.6,4.0,1.91,3.85,4.0
+D2,17/10/2025,Hannover,Schalke 04,0,3,,2,A,1.95,3.5,3.8,1.95,3.8,3.8
+D2,18/10/2025,Karlsruhe,Kaiserslautern,2,3,,1,A,2.5,3.5,2.63,2.5,3.6,2.7
+D2,18/10/2025,Paderborn,Bielefeld,4,3,1,2,H,1.75,3.6,4.5,1.82,3.95,4.75
+D2,18/10/2025,Preußen Münster,Dresden,2,2,,1,D,2.3,3.7,2.8,2.3,3.75,2.85
+D2,18/10/2025,Bochum,Hertha,3,2,2,,H,2.35,3.4,2.9,2.45,3.6,2.9
+D2,19/10/2025,Darmstadt,Magdeburg,0,0,,,D,1.8,3.6,4.5,1.81,4.0,4.5
+D2,19/10/2025,Elversberg,Greuther Furth,6,0,1,,H,1.57,4.33,5.0,1.62,4.4,5.0
+D2,19/10/2025,Nurnberg,Holstein Kiel,1,1,1,,D,2.6,3.25,2.7,2.6,3.6,2.7
+D2,24/10/2025,Greuther Furth,Karlsruhe,1,4,,2,A,2.8,3.6,2.3,2.8,3.8,2.45
+D2,24/10/2025,Schalke 04,Darmstadt,1,0,1,,H,2.1,3.6,3.2,2.23,3.65,3.3
+D2,25/10/2025,Bielefeld,Elversberg,2,0,2,,H,2.9,3.7,2.25,2.9,3.9,2.3
+D2,25/10/2025,Dresden,Paderborn,1,2,1,1,A,3.2,3.9,2.05,3.35,3.9,2.1
+D2,25/10/2025,Holstein Kiel,Bochum,1,1,,,D,1.91,4.1,3.4,2.0,4.1,3.6
+D2,25/10/2025,Hertha,Fortuna Dusseldorf,1,0,,,H,1.85,3.8,3.75,1.91,3.95,4.0
+D2,26/10/2025,Braunschweig,Hannover,0,3,,2,A,3.8,3.6,1.9,3.8,3.9,1.94
+D2,26/10/2025,Kaiserslautern,Nurnberg,1,1,1,,D,2.0,3.75,3.4,2.05,3.8,3.4
+D2,26/10/2025,Magdeburg,Preußen Münster,2,0,,,H,1.91,3.9,3.6,1.98,3.9,3.75
+D2,31/10/2025,Elversberg,Hannover,2,2,1,1,D,2.25,3.75,2.88,2.38,3.75,2.88
+D2,31/10/2025,Preußen Münster,Holstein Kiel,2,1,,1,H,3.25,3.5,2.15,3.33,3.7,2.15
+D2,01/11/2025,Hertha,Dresden,2,0,2,,H,1.95,3.4,3.9,1.95,3.9,4.0
+D2,01/11/2025,Karlsruhe,Schalke 04,2,1,,,H,2.8,3.1,2.6,2.8,3.4,2.6
+D2,01/11/2025,Nurnberg,Braunschweig,2,1,2,1,H,1.73,3.8,4.5,1.81,4.0,4.5
+D2,01/11/2025,Darmstadt,Bielefeld,2,2,2,1,D,1.85,4.1,3.5,1.95,4.1,3.6
+D2,02/11/2025,Bochum,Magdeburg,2,0,1,,H,2.3,3.6,2.88,2.3,3.85,3.0
+D2,02/11/2025,Fortuna Dusseldorf,Kaiserslautern,1,1,,,D,2.45,3.5,2.7,2.5,3.8,2.75
+D2,02/11/2025,Paderborn,Greuther Furth,2,1,1,,H,1.4,4.75,7.0,1.41,5.1,7.5
+D2,07/11/2025,Dresden,Nurnberg,1,2,1,1,A,2.5,3.6,2.6,2.6,3.6,2.62
+D2,07/11/2025,Greuther Furth,Preußen Münster,1,0,,,H,2.55,3.3,2.7,2.55,3.7,2.7
+D2,08/11/2025,Bielefeld,Karlsruhe,4,0,1,,H,2.2,3.6,3.0,2.3,3.8,3.0
+D2,08/11/2025,Hannover,Darmstadt,2,3,2,1,A,2.0,3.5,3.5,2.05,3.75,3.8
+D2,08/11/2025,Schalke 04,Elversberg,1,0,1,,H,2.25,3.3,3.2,2.3,3.45,3.33
+D2,08/11/2025,Kaiserslautern,Hertha,0,1,,1,A,2.25,3.6,2.88,2.3,3.75,3.0
+D2,09/11/2025,Braunschweig,Bochum,0,2,,1,A,2.9,3.6,2.25,2.9,3.7,2.38
+D2,09/11/2025,Holstein Kiel,Fortuna Dusseldorf,1,0,,,H,1.9,3.7,3.7,1.93,3.95,3.8
+D2,09/11/2025,Magdeburg,Paderborn,0,1,,1,A,3.4,3.7,2.0,3.5,3.9,2.1
+D2,21/11/2025,Bochum,Dresden,1,2,,2,A,1.95,3.75,3.6,1.95,3.9,3.7
+D2,21/11/2025,Hertha,Braunschweig,1,0,,,H,1.62,4.0,5.0,1.62,4.2,5.4
+D2,22/11/2025,Fortuna Dusseldorf,Magdeburg,2,1,1,,H,2.25,3.8,2.88,2.28,3.8,3.0
+D2,22/11/2025,Paderborn,Hannover,0,2,,2,A,2.15,3.6,3.1,2.2,3.75,3.25
+D2,22/11/2025,Preußen Münster,Schalke 04,0,0,,,D,3.4,3.3,2.15,3.5,3.4,2.2
+D2,22/11/2025,Darmstadt,Greuther Furth,4,2,1,1,H,1.55,4.2,5.5,1.62,4.4,5.5
+D2,23/11/2025,Kaiserslautern,Holstein Kiel,4,1,4,1,H,2.25,3.5,3.0,2.32,3.7,3.0
+D2,23/11/2025,Karlsruhe,Elversberg,2,3,,1,A,3.1,3.6,2.15,3.1,3.9,2.23
+D2,23/11/2025,Nurnberg,Bielefeld,2,0,,,H,2.3,3.6,2.88,2.35,3.8,2.9
+D2,28/11/2025,Hannover,Karlsruhe,3,0,,,H,1.45,4.75,5.75,1.56,4.75,6.0
+D2,28/11/2025,Schalke 04,Paderborn,2,1,1,1,H,2.6,2.9,3.0,2.75,3.25,3.0
+D2,29/11/2025,Braunschweig,Kaiserslautern,2,0,1,,H,3.0,3.5,2.25,3.05,3.8,2.3
+D2,29/11/2025,Greuther Furth,Bochum,0,3,,3,A,3.0,3.6,2.2,3.05,3.8,2.2
+D2,29/11/2025,Holstein Kiel,Hertha,0,1,,,A,2.5,3.5,2.63,2.5,3.6,2.95
+D2,29/11/2025,Magdeburg,Nurnberg,3,0,,,H,2.3,3.5,2.88,2.3,3.75,2.9
+D2,30/11/2025,Bielefeld,Preußen Münster,1,2,1,1,A,1.8,3.8,4.0,1.93,3.8,4.1
+D2,30/11/2025,Dresden,Fortuna Dusseldorf,2,1,1,,H,2.35,3.6,2.8,2.45,3.75,2.85
+D2,30/11/2025,Elversberg,Darmstadt,0,0,,,D,2.15,3.5,3.2,2.15,3.8,3.4
+D2,05/12/2025,Fortuna Dusseldorf,Schalke 04,0,2,,1,A,3.25,3.4,2.15,3.3,3.5,2.25
+D2,05/12/2025,Preußen Münster,Hannover,2,2,,1,D,4.2,4.0,1.75,4.2,4.0,1.88
+D2,06/12/2025,Bochum,Bielefeld,1,0,,,H,2.25,3.5,3.0,2.4,3.6,3.3
+D2,06/12/2025,Kaiserslautern,Dresden,3,1,1,,H,1.9,3.9,3.5,1.91,4.0,4.0
+D2,06/12/2025,Paderborn,Elversberg,1,2,,1,A,2.3,3.6,2.88,2.4,3.7,3.15
+D2,06/12/2025,Darmstadt,Karlsruhe,3,2,1,1,H,1.73,4.1,4.33,1.8,4.2,4.4
+D2,07/12/2025,Braunschweig,Holstein Kiel,1,1,1,1,D,2.7,3.8,2.3,2.95,3.8,2.35
+D2,07/12/2025,Hertha,Magdeburg,0,2,,,A,1.83,3.7,4.0,1.92,3.8,4.2
+D2,07/12/2025,Nurnberg,Greuther Furth,2,2,,,D,1.75,4.0,4.1,1.8,4.2,4.2
+D2,12/12/2025,Dresden,Braunschweig,2,3,,2,A,2.25,3.1,3.4,2.25,3.55,3.4
+D2,12/12/2025,Greuther Furth,Hertha,3,3,1,2,D,3.75,3.7,1.9,3.8,3.8,1.92
+D2,13/12/2025,Bielefeld,Kaiserslautern,0,0,,,D,2.2,3.4,3.25,2.23,3.7,3.33
+D2,13/12/2025,Karlsruhe,Paderborn,0,4,,,A,3.5,3.6,2.05,3.6,3.9,2.05
+D2,13/12/2025,Magdeburg,Holstein Kiel,3,3,2,1,D,2.25,3.4,3.0,2.33,3.6,3.1
+D2,13/12/2025,Hannover,Bochum,0,0,,,D,1.73,3.6,5.0,1.77,4.1,5.0
+D2,14/12/2025,Darmstadt,Preußen Münster,1,0,,,H,1.67,3.6,5.25,1.7,4.0,5.66
+D2,14/12/2025,Elversberg,Fortuna Dusseldorf,1,0,,,H,1.53,4.33,5.5,1.66,4.5,5.5
+D2,14/12/2025,Schalke 04,Nurnberg,1,0,,,H,1.75,3.8,4.33,1.78,3.85,4.9
+D2,19/12/2025,Hertha,Bielefeld,1,1,,,D,1.95,3.5,3.9,2.0,3.75,3.9
+D2,19/12/2025,Paderborn,Darmstadt,2,2,,2,D,2.1,3.5,3.25,2.18,3.7,3.4
+D2,20/12/2025,Bochum,Karlsruhe,2,2,1,,D,1.73,4.0,4.33,1.78,4.2,4.4
+D2,20/12/2025,Fortuna Dusseldorf,Greuther Furth,2,1,1,,H,1.91,3.6,3.9,1.93,3.75,3.95
+D2,20/12/2025,Kaiserslautern,Magdeburg,2,3,,2,A,2.15,3.75,3.0,2.16,3.8,3.15
+D2,20/12/2025,Holstein Kiel,Dresden,2,1,1,1,H,1.91,3.75,3.75,1.95,3.75,3.85
+D2,21/12/2025,Braunschweig,Schalke 04,2,1,,,H,3.3,3.3,2.2,3.4,3.35,2.23
+D2,21/12/2025,Nurnberg,Hannover,2,1,1,1,H,3.25,3.6,2.05,3.4,3.9,2.1
+D2,21/12/2025,Preußen Münster,Elversberg,1,1,,1,D,3.3,3.5,2.05,3.5,3.7,2.05
+D2,16/01/2026,Braunschweig,Magdeburg,0,3,,1,A,2.63,3.6,2.4,2.75,3.7,2.5
+D2,16/01/2026,Fortuna Dusseldorf,Bielefeld,1,0,,,H,2.55,3.5,2.63,2.55,3.5,2.75
+D2,17/01/2026,Dresden,Greuther Furth,2,0,1,,H,1.85,3.9,3.75,1.95,3.9,3.9
+D2,17/01/2026,Nurnberg,Elversberg,3,2,,1,H,2.9,3.6,2.25,3.15,3.6,2.28
+D2,17/01/2026,Preußen Münster,Karlsruhe,0,2,,,A,1.95,3.5,3.8,2.0,3.65,3.8
+D2,17/01/2026,Hertha,Schalke 04,0,0,,,D,2.63,3.2,2.75,2.66,3.3,2.8
+D2,18/01/2026,Bochum,Darmstadt,3,3,2,2,D,2.35,3.5,2.88,2.48,3.55,2.88
+D2,18/01/2026,Holstein Kiel,Paderborn,2,0,1,,H,2.75,3.5,2.4,2.95,3.6,2.4
+D2,18/01/2026,Kaiserslautern,Hannover,3,1,,,H,3.3,3.5,2.1,3.3,3.6,2.18
+D2,23/01/2026,Bielefeld,Holstein Kiel,2,2,,2,D,2.15,3.25,3.5,2.18,3.3,3.5
+D2,23/01/2026,Darmstadt,Nurnberg,2,0,,,H,2.0,3.7,3.6,2.0,3.7,3.9
+D2,24/01/2026,Greuther Furth,Braunschweig,0,0,,,D,2.55,3.5,2.63,2.55,3.6,2.8
+D2,24/01/2026,Hannover,Fortuna Dusseldorf,2,1,1,,H,1.65,4.0,5.0,1.71,4.2,5.0
+D2,24/01/2026,Karlsruhe,Hertha,2,2,2,1,D,3.5,3.6,2.0,3.5,3.75,2.12
+D2,24/01/2026,Magdeburg,Dresden,1,2,1,2,A,1.8,4.0,4.0,1.82,4.0,4.2
+D2,25/01/2026,Elversberg,Bochum,1,1,,1,D,2.0,3.6,3.4,2.05,3.75,3.6
+D2,25/01/2026,Paderborn,Preußen Münster,2,1,,1,H,1.7,3.6,5.0,1.73,3.9,5.0
+D2,25/01/2026,Schalke 04,Kaiserslautern,2,2,,,D,1.95,3.3,3.9,2.05,3.4,4.0
+D2,30/01/2026,Magdeburg,Hannover,1,2,,1,A,2.35,3.6,2.8,2.55,3.7,2.8
+D2,30/01/2026,Nurnberg,Preußen Münster,1,1,,,D,1.91,3.4,4.0,2.0,3.55,4.0
+D2,31/01/2026,Bochum,Schalke 04,2,0,2,,H,2.5,3.3,2.75,2.6,3.4,2.9
+D2,31/01/2026,Braunschweig,Karlsruhe,1,0,1,,H,2.25,3.4,3.1,2.3,3.5,3.25
+D2,31/01/2026,Holstein Kiel,Greuther Furth,1,2,,,A,1.67,3.75,5.0,1.71,4.0,5.0
+D2,31/01/2026,Kaiserslautern,Elversberg,1,3,1,1,A,2.7,3.5,2.45,2.7,3.8,2.5
+D2,01/02/2026,Dresden,Bielefeld,1,1,1,,D,2.45,3.3,2.8,2.5,3.4,2.8
+D2,01/02/2026,Fortuna Dusseldorf,Paderborn,2,1,,1,H,3.1,3.6,2.15,3.15,3.8,2.25
+D2,01/02/2026,Hertha,Darmstadt,2,2,2,1,D,2.2,3.5,3.1,2.25,3.75,3.1
+D2,06/02/2026,Greuther Furth,Magdeburg,4,5,3,5,A,3.9,3.75,1.85,3.95,3.8,1.91
+D2,06/02/2026,Preußen Münster,Bochum,1,1,1,,D,2.55,3.4,2.63,2.65,3.45,2.63
+D2,07/02/2026,Elversberg,Hertha,0,3,,1,A,2.1,3.75,3.1,2.1,3.8,3.3
+D2,07/02/2026,Paderborn,Nurnberg,2,1,2,,H,1.85,3.75,3.8,1.9,3.8,4.0
+D2,07/02/2026,Schalke 04,Dresden,2,2,,,D,1.73,3.75,4.5,1.75,3.75,5.0
+D2,07/02/2026,Darmstadt,Kaiserslautern,4,0,3,,H,1.85,3.6,4.1,1.9,3.8,4.2
+D2,08/02/2026,Bielefeld,Braunschweig,3,2,2,2,H,2.0,3.4,3.75,2.02,3.4,3.8
+D2,08/02/2026,Hannover,Holstein Kiel,3,1,2,,H,1.75,3.5,4.75,1.8,3.9,4.75
+D2,08/02/2026,Karlsruhe,Fortuna Dusseldorf,1,1,,1,D,2.8,3.6,2.35,2.8,3.75,2.4
+D2,13/02/2026,Fortuna Dusseldorf,Preußen Münster,0,0,,,D,2.0,3.5,3.5,2.05,3.65,3.55
+D2,13/02/2026,Nurnberg,Karlsruhe,5,1,3,,H,1.73,4.0,4.2,1.8,4.2,4.2
+D2,14/02/2026,Braunschweig,Darmstadt,2,2,2,,D,3.0,3.5,2.25,3.1,3.5,2.28
+D2,14/02/2026,Hertha,Hannover,2,3,,2,A,2.6,3.6,2.5,2.7,3.6,2.55
+D2,14/02/2026,Kaiserslautern,Greuther Furth,1,0,1,,H,1.62,4.0,5.0,1.66,4.2,5.0
+D2,14/02/2026,Dresden,Elversberg,1,2,1,,A,3.1,3.4,2.25,3.35,3.6,2.25
+D2,15/02/2026,Bochum,Paderborn,0,0,,,D,2.5,3.5,2.63,2.6,3.66,2.63
+D2,15/02/2026,Holstein Kiel,Schalke 04,1,2,,2,A,2.8,3.25,2.5,2.8,3.3,2.6
+D2,15/02/2026,Magdeburg,Bielefeld,0,2,,1,A,2.05,3.75,3.25,2.1,3.75,3.4
+D2,20/02/2026,Bochum,Nurnberg,1,1,,1,D,2.1,3.5,3.3,2.15,3.55,3.4
+D2,20/02/2026,Greuther Furth,Bielefeld,2,1,1,1,H,3.8,3.75,1.9,3.8,3.75,1.98
+D2,21/02/2026,Darmstadt,Fortuna Dusseldorf,2,1,1,1,H,1.91,3.6,3.75,1.95,3.6,4.25
+D2,21/02/2026,Elversberg,Braunschweig,3,1,2,1,H,1.57,3.9,5.75,1.6,4.2,5.75
+D2,21/02/2026,Karlsruhe,Holstein Kiel,3,1,1,,H,2.63,3.4,2.55,2.85,3.7,2.55
+D2,21/02/2026,Schalke 04,Magdeburg,5,3,2,1,H,2.2,3.4,3.1,2.2,3.6,3.25
+D2,22/02/2026,Hannover,Dresden,0,0,,,D,1.53,4.1,6.0,1.58,4.33,6.0
+D2,22/02/2026,Paderborn,Hertha,5,2,3,1,H,2.25,3.5,3.0,2.25,3.7,3.25
+D2,22/02/2026,Preußen Münster,Kaiserslautern,2,3,1,3,A,2.38,3.4,2.88,2.5,3.5,2.9
+D2,27/02/2026,Dresden,Darmstadt,3,1,2,,H,2.75,3.5,2.35,2.85,3.5,2.45
+D2,27/02/2026,Fortuna Dusseldorf,Bochum,2,1,1,,H,2.2,3.6,2.9,2.3,3.6,3.14
+D2,28/02/2026,Bielefeld,Hannover,0,1,,,A,2.75,3.7,2.3,2.9,3.7,2.33
+D2,28/02/2026,Holstein Kiel,Elversberg,1,1,,,D,3.1,3.5,2.15,3.2,3.6,2.15
+D2,28/02/2026,Kaiserslautern,Paderborn,1,2,,1,A,2.88,3.75,2.2,3.0,3.75,2.25
+D2,28/02/2026,Greuther Furth,Schalke 04,1,1,1,,D,4.33,3.9,1.7,4.5,4.0,1.74
+D2,01/03/2026,Braunschweig,Preußen Münster,1,2,,,A,2.35,3.3,2.9,2.43,3.3,3.0
+D2,01/03/2026,Hertha,Nurnberg,2,1,1,1,H,2.0,3.6,3.4,2.05,3.75,3.55
+D2,01/03/2026,Magdeburg,Karlsruhe,1,3,,1,A,1.7,4.2,4.1,1.7,4.33,4.2
+D2,06/03/2026,Elversberg,Magdeburg,1,0,,,H,1.91,4.0,3.6,1.93,4.0,3.6
+D2,06/03/2026,Schalke 04,Bielefeld,1,0,1,,H,1.85,3.5,4.1,1.9,3.6,4.1
+D2,07/03/2026,Darmstadt,Holstein Kiel,2,0,,,H,1.95,3.7,3.6,1.95,3.8,3.7
+D2,07/03/2026,Nurnberg,Fortuna Dusseldorf,0,1,,,A,2.2,3.5,3.0,2.3,3.6,3.0
+D2,07/03/2026,Paderborn,Braunschweig,1,1,,,D,1.48,4.5,6.0,1.51,4.5,6.5
+D2,07/03/2026,Bochum,Kaiserslautern,3,2,1,1,H,1.95,3.75,3.5,2.0,3.8,3.55
+D2,08/03/2026,Hannover,Greuther Furth,1,2,,1,A,1.4,4.75,7.0,1.43,5.1,7.0
+D2,08/03/2026,Karlsruhe,Dresden,3,3,1,3,D,2.5,3.4,2.63,2.57,3.6,2.63
+D2,08/03/2026,Preußen Münster,Hertha,1,2,,1,A,3.1,3.6,2.15,3.1,3.7,2.3
+D2,13/03/2026,Greuther Furth,Elversberg,2,0,1,,H,4.33,4.0,1.7,4.4,4.1,1.73
+D2,13/03/2026,Magdeburg,Darmstadt,1,1,,,D,2.4,3.8,2.6,2.4,3.8,2.75
+D2,14/03/2026,Bielefeld,Paderborn,2,2,1,,D,2.63,3.5,2.5,2.85,3.6,2.5
+D2,14/03/2026,Braunschweig,Fortuna Dusseldorf,1,0,,,H,3.2,3.4,2.2,3.2,3.5,2.25
+D2,14/03/2026,Holstein Kiel,Nurnberg,2,3,2,2,A,2.35,3.6,2.88,2.45,3.7,2.88
+D2,14/03/2026,Hertha,Bochum,1,1,1,,D,2.05,3.8,3.2,2.1,3.8,3.25
+D2,15/03/2026,Dresden,Preußen Münster,6,0,3,,H,2.05,3.6,3.25,2.16,3.6,3.3
+D2,15/03/2026,Kaiserslautern,Karlsruhe,3,0,2,,H,1.95,3.8,3.5,1.98,3.85,3.7
+D2,15/03/2026,Schalke 04,Hannover,2,2,2,,D,2.3,3.5,2.88,2.5,3.5,2.95
+D2,20/03/2026,Hannover,Braunschweig,1,0,1,,H,1.5,4.5,5.75,1.55,4.5,6.0
+D2,20/03/2026,Karlsruhe,Greuther Furth,3,1,,1,H,2.15,3.5,3.1,2.15,3.75,3.25
+D2,21/03/2026,Elversberg,Bielefeld,3,1,1,,H,1.91,3.8,3.6,1.93,3.9,3.75
+D2,21/03/2026,Nurnberg,Kaiserslautern,3,0,1,,H,2.15,3.6,3.1,2.22,3.75,3.2
+D2,21/03/2026,Paderborn,Dresden,2,1,,1,H,1.75,3.75,4.33,1.78,3.95,4.4
+D2,21/03/2026,Darmstadt,Schalke 04,1,1,1,1,D,2.6,3.4,2.6,2.65,3.5,2.65
+D2,22/03/2026,Bochum,Holstein Kiel,2,3,1,2,A,2.0,3.5,3.6,2.1,3.8,3.6
+D2,22/03/2026,Fortuna Dusseldorf,Hertha,2,5,1,4,A,2.25,3.5,3.0,2.35,3.75,3.0
+D2,22/03/2026,Preußen Münster,Magdeburg,1,3,,1,A,3.0,3.6,2.2,3.0,3.7,2.38
+D2,04/04/2026,Bielefeld,Darmstadt,2,1,,1,H,2.25,3.75,2.88,2.35,3.75,2.9
+D2,04/04/2026,Kaiserslautern,Fortuna Dusseldorf,3,0,,,H,2.5,3.6,2.63,2.5,3.7,2.7
+D2,04/04/2026,Magdeburg,Bochum,4,1,2,,H,2.1,3.6,3.25,2.15,3.8,3.3
+D2,04/04/2026,Dresden,Hertha,0,1,,,A,2.63,3.5,2.55,2.65,3.6,2.55
+D2,05/04/2026,Braunschweig,Nurnberg,1,1,,1,D,2.5,3.6,2.63,2.5,3.66,2.63
+D2,05/04/2026,Greuther Furth,Paderborn,0,2,,,A,4.0,3.75,1.85,4.1,3.9,1.87
+D2,05/04/2026,Hannover,Elversberg,1,1,1,,D,2.2,3.5,3.1,2.22,3.75,3.1
+D2,05/04/2026,Holstein Kiel,Preußen Münster,0,0,,,D,1.85,3.8,3.8,1.93,3.8,3.8
+D2,05/04/2026,Schalke 04,Karlsruhe,1,0,,,H,1.5,4.5,5.75,1.52,4.75,6.6
+D2,10/04/2026,Fortuna Dusseldorf,Holstein Kiel,1,2,,,A,2.1,3.6,3.2,2.15,3.6,3.2
+D2,10/04/2026,Karlsruhe,Bielefeld,4,1,1,1,H,3.25,3.6,2.05,3.25,3.7,2.12
+D2,11/04/2026,Hertha,Kaiserslautern,0,1,,,A,1.75,4.2,4.0,1.8,4.2,4.2
+D2,11/04/2026,Nurnberg,Dresden,0,2,,,A,2.1,3.6,3.25,2.12,3.75,3.25
+D2,11/04/2026,Preußen Münster,Greuther Furth,0,0,,,D,2.2,3.4,3.2,2.2,3.45,3.3
+D2,11/04/2026,Darmstadt,Hannover,0,2,,1,A,2.7,3.6,2.45,2.7,3.75,2.55
+D2,12/04/2026,Bochum,Braunschweig,4,1,2,,H,1.73,3.9,4.33,1.83,4.0,4.33
+D2,12/04/2026,Elversberg,Schalke 04,1,2,1,1,A,2.0,3.6,3.5,2.12,3.7,3.5
+D2,12/04/2026,Paderborn,Magdeburg,4,3,3,2,H,1.83,4.0,3.8,1.88,4.0,3.8
+D2,17/04/2026,Elversberg,Karlsruhe,3,0,1,,H,1.44,5.0,6.0,1.5,5.0,6.5
+D2,17/04/2026,Holstein Kiel,Kaiserslautern,3,0,3,,H,2.15,3.8,3.0,2.15,3.8,3.2
+D2,18/04/2026,Bielefeld,Nurnberg,1,1,,1,D,1.95,3.6,3.7,2.0,3.75,3.7
+D2,18/04/2026,Dresden,Bochum,2,0,1,,H,2.3,3.8,2.7,2.4,3.8,2.85
+D2,18/04/2026,Magdeburg,Fortuna Dusseldorf,2,0,2,,H,2.0,3.8,3.3,2.1,3.8,3.4
+D2,18/04/2026,Hannover,Paderborn,1,1,,1,D,2.15,3.8,3.0,2.2,3.8,3.1
+D2,19/04/2026,Braunschweig,Hertha,1,1,,1,D,3.2,3.6,2.1,3.2,3.7,2.23
+D2,19/04/2026,Greuther Furth,Darmstadt,3,2,1,1,H,3.1,4.0,2.05,3.3,4.0,2.1
+D2,19/04/2026,Schalke 04,Preußen Münster,4,1,2,,H,1.57,4.0,5.5,1.58,4.0,6.0
+D2,24/04/2026,Fortuna Dusseldorf,Dresden,3,1,2,,H,2.15,3.4,2.8,2.3,3.6,3.0
+D2,24/04/2026,Kaiserslautern,Braunschweig,0,2,,1,A,2.25,3.6,3.0,2.28,3.7,3.15
+D2,25/04/2026,Hertha,Holstein Kiel,0,1,,,A,2.05,3.9,3.2,2.05,3.9,3.6
+D2,25/04/2026,Karlsruhe,Hannover,1,3,1,1,A,3.9,4.1,1.8,4.0,4.1,1.82
+D2,25/04/2026,Preußen Münster,Bielefeld,2,3,1,3,A,3.1,3.6,2.15,3.2,3.7,2.2
+D2,25/04/2026,Darmstadt,Elversberg,3,3,2,3,D,2.8,3.8,2.25,2.8,3.8,2.38
+D2,26/04/2026,Bochum,Greuther Furth,2,1,1,,H,1.67,4.2,4.5,1.77,4.2,4.5
+D2,26/04/2026,Nurnberg,Magdeburg,1,0,1,,H,2.45,3.6,2.7,2.5,3.75,2.75
+D2,26/04/2026,Paderborn,Schalke 04,2,3,2,2,A,2.3,3.3,3.1,2.36,3.6,3.1
+D2,02/05/2026,Bielefeld,Bochum,1,1,1,,D,1.95,3.8,3.4,2.06,3.8,3.4
+D2,02/05/2026,Dresden,Kaiserslautern,1,0,,,H,1.75,4.0,4.0,1.86,4.0,4.0
+D2,02/05/2026,Holstein Kiel,Braunschweig,2,0,1,,H,2.15,3.6,3.1,2.2,3.6,3.2
+D2,02/05/2026,Schalke 04,Fortuna Dusseldorf,1,0,1,,H,1.55,4.33,5.25,1.58,4.4,5.5
+D2,03/05/2026,Elversberg,Paderborn,5,1,4,,H,2.1,3.9,3.0,2.12,4.0,3.1
+D2,03/05/2026,Greuther Furth,Nurnberg,1,1,1,1,D,2.6,3.75,2.45,2.8,3.8,2.45
+D2,03/05/2026,Hannover,Preußen Münster,3,3,2,2,D,1.4,5.25,6.0,1.4,5.33,8.2
+D2,03/05/2026,Karlsruhe,Darmstadt,2,1,,,H,2.7,3.8,2.1,2.88,4.0,2.25
+D2,03/05/2026,Magdeburg,Hertha,1,0,,,H,2.1,3.8,3.1,2.15,3.85,3.3
+D2,08/05/2026,Kaiserslautern,Bielefeld,2,0,2,,H,3.2,3.5,2.1,3.2,3.7,2.25
+D2,08/05/2026,Paderborn,Karlsruhe,2,2,1,,D,1.38,5.5,6.25,1.42,5.5,7.4
+D2,09/05/2026,Bochum,Hannover,1,1,,,D,3.0,4.0,2.1,3.0,4.0,2.15
+D2,09/05/2026,Braunschweig,Dresden,2,1,1,,H,2.63,3.4,2.63,2.63,3.5,2.63
+D2,09/05/2026,Holstein Kiel,Magdeburg,1,3,,2,A,3.0,4.0,2.1,3.0,4.0,2.15
+D2,09/05/2026,Nurnberg,Schalke 04,3,0,2,,H,1.91,3.8,3.5,2.02,3.8,3.55
+D2,10/05/2026,Fortuna Dusseldorf,Elversberg,3,1,2,,H,3.1,3.9,2.1,3.1,4.0,2.1
+D2,10/05/2026,Hertha,Greuther Furth,2,1,,,H,1.83,4.2,3.5,1.85,4.2,3.65
+D2,10/05/2026,Preußen Münster,Darmstadt,1,1,1,1,D,2.2,4.0,2.75,2.3,4.0,2.85
+D2,17/05/2026,Bielefeld,Hertha,6,1,,1,H,1.73,3.9,4.33,1.75,4.4,4.33
+D2,17/05/2026,Darmstadt,Paderborn,0,2,,1,A,3.25,4.1,1.83,3.5,4.33,1.93
+D2,17/05/2026,Dresden,Holstein Kiel,2,1,2,,H,1.67,4.1,4.2,1.73,4.1,4.5
+D2,17/05/2026,Elversberg,Preußen Münster,3,0,2,,H,1.22,6.0,10.0,1.26,6.5,13.0
+D2,17/05/2026,Greuther Furth,Fortuna Dusseldorf,3,0,3,,H,2.5,3.6,2.5,2.6,3.75,2.63
+D2,17/05/2026,Hannover,Nurnberg,3,3,2,1,D,1.44,4.75,5.75,1.45,5.0,6.6
+D2,17/05/2026,Karlsruhe,Bochum,1,2,1,1,A,2.45,3.9,2.38,2.6,4.0,2.45
+D2,17/05/2026,Magdeburg,Kaiserslautern,0,1,,,A,1.67,4.1,4.2,1.77,4.33,4.2
+D2,17/05/2026,Schalke 04,Braunschweig,1,0,1,,H,1.9,3.6,3.7,1.9,4.0,3.9

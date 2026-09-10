@@ -1,0 +1,289 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+JAP,05/07/2022,Sanfrecce Hiroshima,Kashima Antlers,3,0,,,H,2.25,3.38,3.13,2.33,3.55,3.5
+JAP,05/07/2022,Shimizu S-Pulse,Kawasaki Frontale,0,2,,,A,4.55,3.89,1.71,4.9,4.36,1.82
+JAP,05/07/2022,Yokohama F. Marinos,Nagoya Grampus,2,1,,,H,1.95,3.46,3.88,2.04,3.75,4.3
+JAP,05/07/2022,Hokkaido Consadole Sapporo,Kyoto,1,0,,,H,1.78,3.72,4.37,1.85,4.0,4.7
+JAP,05/07/2022,Avispa Fukuoka,Shonan Bellmare,0,0,,,D,2.27,2.91,3.63,2.34,3.05,3.9
+JAP,08/07/2022,FC Tokyo,Shimizu S-Pulse,0,2,,,A,2.24,3.5,3.0,2.34,3.68,3.27
+JAP,08/07/2022,Kawasaki Frontale,Yokohama F. Marinos,2,1,,,H,2.53,3.69,2.51,2.78,3.92,2.6
+JAP,08/07/2022,Sagan Tosu,Iwata,2,0,,,H,1.75,3.57,4.67,1.8,3.82,5.19
+JAP,08/07/2022,Shonan Bellmare,Hokkaido Consadole Sapporo,1,5,,,A,2.04,3.38,3.58,2.11,3.6,3.83
+JAP,09/07/2022,Yokohama F. Marinos,Shonan Bellmare,3,0,,,H,1.59,4.18,5.07,1.66,4.4,5.5
+JAP,16/07/2022,Kashima Antlers,Vissel Kobe,1,1,,,D,2.14,3.36,3.34,2.26,3.54,3.76
+JAP,16/07/2022,Shimizu S-Pulse,Urawa Reds,1,2,,,A,4.09,3.67,1.83,4.4,3.95,1.88
+JAP,16/07/2022,Gamba Osaka,Cerezo Osaka,1,2,,,A,3.4,3.42,2.08,3.6,3.66,2.17
+JAP,16/07/2022,Kashiwa Reysol,Hokkaido Consadole Sapporo,1,0,,,H,2.13,3.66,3.09,2.21,3.87,3.25
+JAP,16/07/2022,Sagan Tosu,Yokohama F. Marinos,2,2,,,D,3.19,3.62,2.1,3.48,3.82,2.2
+JAP,16/07/2022,Shonan Bellmare,Avispa Fukuoka,0,0,,,D,2.4,2.88,3.31,2.47,3.03,3.45
+JAP,17/07/2022,FC Tokyo,Iwata,2,0,,,H,1.82,3.42,4.43,1.92,3.63,4.75
+JAP,17/07/2022,Kyoto,Sanfrecce Hiroshima,1,1,,,D,4.71,3.82,1.69,5.02,4.1,1.75
+JAP,30/07/2022,Hokkaido Consadole Sapporo,Nagoya Grampus,2,2,,,D,2.77,3.08,2.64,2.99,3.3,2.8
+JAP,30/07/2022,Iwata,Shonan Bellmare,1,0,,,H,3.79,3.22,2.04,4.03,3.4,2.1
+JAP,30/07/2022,Cerezo Osaka,Avispa Fukuoka,2,0,,,H,1.96,3.23,4.07,2.05,3.43,4.43
+JAP,30/07/2022,Gamba Osaka,Kyoto,1,1,,,D,1.93,3.56,3.75,2.15,3.75,4.04
+JAP,30/07/2022,Sanfrecce Hiroshima,FC Tokyo,1,2,,,A,1.67,3.79,4.92,1.74,4.17,5.4
+JAP,30/07/2022,Urawa Reds,Kawasaki Frontale,3,1,,,H,2.62,3.28,2.64,2.73,3.48,2.79
+JAP,30/07/2022,Vissel Kobe,Kashiwa Reysol,0,1,,,A,2.27,3.24,3.16,2.36,3.5,3.3
+JAP,30/07/2022,Yokohama F. Marinos,Kashima Antlers,2,0,,,H,1.78,4.04,3.9,1.88,4.33,4.08
+JAP,31/07/2022,Shimizu S-Pulse,Sagan Tosu,3,3,,,D,2.59,3.19,2.73,2.74,3.43,2.89
+JAP,05/08/2022,Gamba Osaka,Vissel Kobe,2,0,,,H,3.37,3.41,2.12,3.6,3.64,2.2
+JAP,05/08/2022,FC Tokyo,Sagan Tosu,0,1,,,A,2.86,3.09,2.57,3.02,3.3,2.7
+JAP,05/08/2022,Kashiwa Reysol,Urawa Reds,0,0,,,D,4.19,3.15,1.98,4.5,3.28,2.05
+JAP,10/08/2022,Hokkaido Consadole Sapporo,Avispa Fukuoka,1,2,,,A,2.3,3.22,3.15,2.47,3.37,3.51
+JAP,10/08/2022,Iwata,Kashima Antlers,3,3,,,D,3.55,3.49,2.03,3.9,3.7,2.09
+JAP,10/08/2022,Kawasaki Frontale,Shimizu S-Pulse,3,2,,,H,1.6,4.12,5.1,1.66,4.4,5.5
+JAP,10/08/2022,Kyoto,Nagoya Grampus,1,1,,,D,3.3,3.06,2.31,3.5,3.18,2.38
+JAP,10/08/2022,Vissel Kobe,Sanfrecce Hiroshima,4,0,,,H,2.7,3.18,2.65,2.87,3.36,2.75
+JAP,10/08/2022,Yokohama F. Marinos,Gamba Osaka,0,2,,,A,1.35,5.31,7.4,1.4,5.86,8.3
+JAP,10/08/2022,FC Tokyo,Shonan Bellmare,0,2,,,A,2.32,3.16,3.17,2.4,3.3,3.42
+JAP,10/08/2022,Urawa Reds,Sagan Tosu,2,1,,,H,1.74,3.71,4.61,1.79,3.96,5.0
+JAP,10/08/2022,Kashiwa Reysol,Cerezo Osaka,0,0,,,D,3.11,3.29,2.29,3.3,3.55,2.47
+JAP,13/08/2022,Hokkaido Consadole Sapporo,Vissel Kobe,0,2,,,A,2.41,3.36,2.83,2.55,3.58,2.97
+JAP,13/08/2022,Iwata,Urawa Reds,0,6,,,A,4.7,3.73,1.72,5.18,3.93,1.77
+JAP,14/08/2022,Kashima Antlers,Avispa Fukuoka,2,0,,,H,1.75,3.4,5.04,1.82,3.57,5.75
+JAP,14/08/2022,Kashiwa Reysol,Sanfrecce Hiroshima,2,3,,,A,3.42,3.3,2.13,3.82,3.48,2.2
+JAP,14/08/2022,Gamba Osaka,Shimizu S-Pulse,0,2,,,A,3.41,3.44,2.09,3.71,3.68,2.16
+JAP,14/08/2022,Sagan Tosu,Nagoya Grampus,0,0,,,D,3.1,2.96,2.48,3.32,3.17,2.65
+JAP,19/08/2022,Nagoya Grampus,Iwata,1,0,,,H,1.62,3.75,5.63,1.67,4.0,6.27
+JAP,20/08/2022,Hokkaido Consadole Sapporo,Sagan Tosu,1,2,,,A,2.27,3.34,3.09,2.36,3.55,3.4
+JAP,20/08/2022,Shimizu S-Pulse,Kashiwa Reysol,1,1,,,D,2.52,3.35,2.71,2.62,3.57,2.85
+JAP,20/08/2022,Avispa Fukuoka,Kawasaki Frontale,1,4,,,A,4.73,3.45,1.78,5.25,3.65,1.83
+JAP,20/08/2022,Sanfrecce Hiroshima,Gamba Osaka,5,2,,,H,1.39,4.77,7.56,1.42,5.2,9.15
+JAP,21/08/2022,Shonan Bellmare,Kashima Antlers,1,1,,,D,3.01,3.21,2.4,3.26,3.37,2.49
+JAP,26/08/2022,Sagan Tosu,Avispa Fukuoka,1,1,,,D,2.44,2.99,3.14,2.62,3.26,3.55
+JAP,27/08/2022,Nagoya Grampus,Gamba Osaka,0,2,,,A,1.67,3.65,5.24,1.7,4.0,6.4
+JAP,27/08/2022,Shimizu S-Pulse,Kyoto,1,0,,,H,1.64,3.84,5.22,1.75,4.11,5.75
+JAP,27/08/2022,Cerezo Osaka,Sanfrecce Hiroshima,0,3,,,A,2.9,3.35,2.39,3.07,3.5,2.47
+JAP,27/08/2022,Kashiwa Reysol,FC Tokyo,3,6,,,A,2.2,3.37,3.2,2.29,3.55,3.36
+JAP,27/08/2022,Kawasaki Frontale,Kashima Antlers,2,1,,,H,1.85,3.65,4.05,1.93,3.85,4.33
+JAP,31/08/2022,Avispa Fukuoka,Gamba Osaka,0,1,,,A,2.17,3.18,3.47,2.25,3.35,3.68
+JAP,31/08/2022,Kawasaki Frontale,Sagan Tosu,4,0,,,H,1.54,4.12,5.9,1.57,4.36,6.5
+JAP,04/09/2022,Kawasaki Frontale,Kashiwa Reysol,1,0,,,H,1.96,3.44,3.82,2.02,3.6,4.02
+JAP,07/09/2022,Iwata,Vissel Kobe,0,1,,,A,3.71,3.47,1.98,4.0,3.66,2.08
+JAP,07/09/2022,Kawasaki Frontale,Gamba Osaka,4,0,,,H,1.39,4.76,7.47,1.42,5.1,8.25
+JAP,14/09/2022,Kyoto,Yokohama F. Marinos,1,2,,,A,5.73,4.63,1.48,6.25,4.95,1.54
+JAP,14/09/2022,Vissel Kobe,FC Tokyo,2,1,,,H,2.29,3.33,3.06,2.43,3.5,3.29
+JAP,14/09/2022,Nagoya Grampus,Kawasaki Frontale,1,1,,,D,3.93,3.23,2.0,4.3,3.46,2.09
+JAP,14/09/2022,Urawa Reds,Cerezo Osaka,0,1,,,A,2.18,3.39,3.23,2.24,3.56,3.45
+JAP,16/09/2022,Sagan Tosu,Kashima Antlers,1,1,,,D,3.2,3.3,2.24,3.39,3.47,2.35
+JAP,17/09/2022,Iwata,Cerezo Osaka,2,2,,,D,4.06,3.62,1.85,4.62,3.87,1.91
+JAP,17/09/2022,Avispa Fukuoka,Shimizu S-Pulse,3,2,,,H,2.76,3.06,2.66,3.0,3.23,2.83
+JAP,17/09/2022,Kashiwa Reysol,Kawasaki Frontale,1,1,,,D,4.19,3.8,1.78,4.5,4.05,1.86
+JAP,17/09/2022,Nagoya Grampus,Sanfrecce Hiroshima,0,0,,,D,3.64,3.14,2.12,3.93,3.35,2.17
+JAP,17/09/2022,Shonan Bellmare,Urawa Reds,0,0,,,D,3.32,3.18,2.22,3.6,3.33,2.32
+JAP,18/09/2022,Yokohama F. Marinos,Hokkaido Consadole Sapporo,0,0,,,D,1.53,4.67,5.2,1.58,4.9,6.47
+JAP,18/09/2022,FC Tokyo,Kyoto,2,0,,,H,2.06,3.41,3.54,2.17,3.58,3.89
+JAP,18/09/2022,Vissel Kobe,Gamba Osaka,2,1,,,H,2.05,3.3,3.7,2.15,3.45,4.08
+JAP,04/10/2022,Shimizu S-Pulse,Gamba Osaka,1,1,,,D,2.48,3.18,2.9,2.6,3.32,3.07
+JAP,04/10/2022,FC Tokyo,Urawa Reds,0,0,,,D,2.79,3.11,2.63,3.0,3.25,2.8
+JAP,04/10/2022,Sanfrecce Hiroshima,Avispa Fukuoka,1,0,,,H,2.2,3.0,3.67,2.3,3.15,3.85
+JAP,04/10/2022,Vissel Kobe,Cerezo Osaka,0,1,,,A,2.78,3.25,2.54,2.94,3.4,2.8
+JAP,04/10/2022,Kashima Antlers,Yokohama F. Marinos,0,3,,,A,2.23,3.67,2.93,2.3,3.88,3.06
+JAP,04/10/2022,Nagoya Grampus,Hokkaido Consadole Sapporo,0,2,,,A,2.29,3.22,3.18,2.35,3.35,3.35
+JAP,04/10/2022,Shonan Bellmare,Iwata,0,0,,,D,2.01,3.2,3.99,2.17,3.33,4.35
+JAP,04/10/2022,Kyoto,Sagan Tosu,3,1,,,H,3.7,3.06,2.15,3.92,3.2,2.2
+JAP,07/10/2022,Hokkaido Consadole Sapporo,Kashima Antlers,0,0,,,D,3.07,3.65,2.16,3.25,3.81,2.24
+JAP,07/10/2022,Nagoya Grampus,Shimizu S-Pulse,0,2,,,A,1.95,3.34,3.99,2.04,3.46,4.3
+JAP,07/10/2022,Sanfrecce Hiroshima,Shonan Bellmare,1,1,,,D,2.28,3.11,3.31,2.43,3.28,3.6
+JAP,07/10/2022,Avispa Fukuoka,Kyoto,1,0,,,H,2.08,3.19,3.71,2.19,3.37,4.13
+JAP,07/10/2022,Cerezo Osaka,Yokohama F. Marinos,2,2,,,D,3.1,3.75,2.12,3.32,4.0,2.2
+JAP,07/10/2022,Sagan Tosu,Kashiwa Reysol,0,1,,,A,2.61,3.12,2.76,2.75,3.35,2.95
+JAP,07/10/2022,Urawa Reds,FC Tokyo,3,0,,,H,1.92,3.34,4.12,1.98,3.57,4.4
+JAP,09/10/2022,Shimizu S-Pulse,Shonan Bellmare,1,1,,,D,2.25,3.29,3.16,2.35,3.44,3.34
+JAP,09/10/2022,Kawasaki Frontale,Sanfrecce Hiroshima,4,0,,,H,1.93,3.43,3.93,2.0,3.68,4.24
+JAP,09/10/2022,Cerezo Osaka,Sagan Tosu,2,1,,,H,1.87,3.75,3.82,1.92,3.97,4.2
+JAP,09/10/2022,Gamba Osaka,FC Tokyo,0,0,,,D,2.74,3.4,2.47,2.88,3.6,2.55
+JAP,09/10/2022,Kyoto,Kashima Antlers,1,1,,,D,3.16,3.3,2.25,3.32,3.52,2.36
+JAP,09/10/2022,Urawa Reds,Kashiwa Reysol,4,1,,,H,1.9,3.64,3.81,1.95,3.9,4.1
+JAP,09/10/2022,Vissel Kobe,Nagoya Grampus,0,0,,,D,2.54,3.06,2.92,2.67,3.19,3.1
+JAP,09/10/2022,Yokohama F. Marinos,Avispa Fukuoka,1,0,,,H,1.39,4.8,7.31,1.42,5.2,8.26
+JAP,22/10/2022,Shimizu S-Pulse,Iwata,1,1,,,D,1.86,3.6,4.05,1.96,3.8,4.33
+JAP,29/10/2022,Avispa Fukuoka,Kashiwa Reysol,2,1,,,H,2.0,3.24,3.97,2.1,3.39,4.25
+JAP,29/10/2022,Gamba Osaka,Iwata,2,0,,,H,2.1,3.42,3.39,2.15,3.63,3.6
+JAP,29/10/2022,Kawasaki Frontale,Vissel Kobe,2,1,,,H,1.58,3.98,5.57,1.64,4.28,6.5
+JAP,29/10/2022,Kyoto,Cerezo Osaka,0,0,,,D,3.22,3.16,2.3,3.5,3.5,2.37
+JAP,29/10/2022,Nagoya Grampus,FC Tokyo,2,1,,,H,2.58,3.15,2.8,2.66,3.35,2.92
+JAP,29/10/2022,Sanfrecce Hiroshima,Hokkaido Consadole Sapporo,1,2,,,A,1.64,4.08,4.84,1.71,4.31,5.25
+JAP,29/10/2022,Shimizu S-Pulse,Kashima Antlers,0,1,,,A,2.21,3.46,3.11,2.3,3.65,3.26
+JAP,29/10/2022,Shonan Bellmare,Sagan Tosu,3,0,,,H,1.91,3.34,4.19,1.98,3.51,4.5
+JAP,29/10/2022,Yokohama F. Marinos,Urawa Reds,4,1,,,H,1.54,4.47,5.26,1.58,4.85,5.75
+JAP,30/10/2022,Kumamoto,Oita Trinita,2,2,,,D,2.68,3.12,2.64,3.0,3.39,2.85
+JAP,30/10/2022,Okayama,Montedio Yamagata,0,3,,,A,2.5,3.16,2.81,2.6,3.36,2.94
+JAP,03/11/2022,Vissel Kobe,Kashima Antlers,0,2,,,A,3.61,3.47,2.02,3.8,3.73,2.11
+JAP,09/11/2022,Hokkaido Consadole Sapporo,Iwata,4,0,,,H,1.74,3.84,4.37,1.79,4.08,4.88
+JAP,13/11/2022,Kyoto,Kumamoto,1,1,,,D,2.17,3.21,3.39,2.25,3.37,3.78
+JAP,03/12/2022,Hokkaido Consadole Sapporo,Yokohama F. Marinos,1,1,,,D,2.5,3.72,2.55,3.2,3.97,2.69
+JAP,03/12/2022,Iwata,Gamba Osaka,1,1,,,D,2.09,3.43,3.41,2.15,3.64,3.6
+JAP,03/12/2022,Shimizu S-Pulse,Cerezo Osaka,1,3,,,A,3.1,3.15,2.37,3.3,3.33,2.6
+JAP,03/12/2022,FC Tokyo,Sanfrecce Hiroshima,2,1,,,H,2.41,3.05,3.13,2.5,3.27,3.3
+JAP,03/12/2022,Shonan Bellmare,Kyoto,1,1,,,D,2.47,2.85,3.26,2.56,3.05,3.49
+JAP,03/12/2022,Kashiwa Reysol,Avispa Fukuoka,1,0,,,H,2.25,3.03,3.5,2.31,3.21,3.68
+JAP,03/12/2022,Kawasaki Frontale,Nagoya Grampus,1,0,,,H,1.87,3.34,4.38,1.95,3.6,4.65
+JAP,10/12/2022,FC Tokyo,Cerezo Osaka,4,0,,,H,3.02,3.19,2.4,3.15,3.38,2.59
+JAP,10/12/2022,Yokohama F. Marinos,Iwata,0,1,,,A,1.2,6.87,11.85,1.25,7.52,14.0
+JAP,10/12/2022,Kawasaki Frontale,Kyoto,3,1,,,H,1.45,4.46,6.68,1.5,4.9,7.6
+JAP,10/12/2022,Vissel Kobe,Shonan Bellmare,1,0,,,H,2.22,3.04,3.51,2.36,3.27,3.8
+JAP,10/12/2022,Urawa Reds,Hokkaido Consadole Sapporo,1,1,,,D,2.0,3.7,3.42,2.07,3.94,3.8
+JAP,04/01/2023,Albirex Niigata,Nagoya Grampus,1,3,,,A,3.59,3.09,2.17,4.08,3.25,2.3
+JAP,04/01/2023,Kyoto,Vissel Kobe,0,3,,,A,4.0,3.31,1.96,4.29,3.56,2.15
+JAP,04/01/2023,Yokohama FC,Avispa Fukuoka,1,1,,,D,3.2,3.08,2.34,3.36,3.21,2.42
+JAP,04/01/2023,Kashima Antlers,Sanfrecce Hiroshima,1,2,,,A,2.55,3.22,2.77,2.64,3.4,2.86
+JAP,04/01/2023,Sagan Tosu,FC Tokyo,1,0,,,H,4.01,3.41,1.93,4.4,3.7,2.3
+JAP,04/01/2023,Shonan Bellmare,Gamba Osaka,4,1,,,H,2.02,3.38,3.67,2.13,3.57,4.1
+JAP,04/01/2023,Cerezo Osaka,Yokohama F. Marinos,2,1,,,H,2.74,3.47,2.43,2.83,3.68,2.53
+JAP,04/01/2023,Hokkaido Consadole Sapporo,Kawasaki Frontale,3,4,,,A,2.43,3.54,2.71,3.0,3.66,2.89
+JAP,07/01/2023,Albirex Niigata,Sanfrecce Hiroshima,2,0,,,H,3.68,3.47,1.99,3.97,3.7,2.12
+JAP,07/01/2023,Kashima Antlers,Kyoto,0,0,,,D,1.82,3.48,4.41,1.9,3.82,5.06
+JAP,07/01/2023,Nagoya Grampus,Kawasaki Frontale,2,0,,,H,2.58,3.27,2.69,2.69,3.45,2.85
+JAP,07/01/2023,Yokohama FC,Gamba Osaka,0,0,,,D,3.93,3.73,1.85,4.5,3.97,1.95
+JAP,07/01/2023,FC Tokyo,Kashiwa Reysol,1,0,,,H,2.1,3.38,3.42,2.22,3.63,3.94
+JAP,07/01/2023,Sagan Tosu,Urawa Reds,1,2,,,A,3.92,3.57,1.89,4.16,3.76,1.95
+JAP,07/01/2023,Vissel Kobe,Hokkaido Consadole Sapporo,1,1,,,D,1.76,4.01,4.04,1.8,4.32,4.3
+JAP,10/01/2023,FC Tokyo,Gamba Osaka,3,0,,,H,2.12,3.54,3.24,2.21,3.65,3.42
+JAP,07/02/2023,Yokohama F. Marinos,Shonan Bellmare,4,1,,,H,1.64,4.43,4.42,1.7,5.02,5.98
+JAP,09/02/2023,Hokkaido Consadole Sapporo,Gamba Osaka,4,0,,,H,1.95,3.97,3.37,2.06,4.34,3.75
+JAP,09/02/2023,Albirex Niigata,Urawa Reds,1,1,,,D,3.28,3.18,2.26,3.51,3.45,2.36
+JAP,09/02/2023,Nagoya Grampus,Yokohama FC,1,1,,,D,1.49,4.22,6.45,1.56,4.49,7.0
+JAP,09/02/2023,Cerezo Osaka,Kawasaki Frontale,3,0,,,H,2.33,3.54,2.86,2.46,3.76,3.0
+JAP,09/02/2023,Kashiwa Reysol,Yokohama F. Marinos,2,0,,,H,2.8,3.72,2.29,3.04,3.95,2.4
+JAP,09/02/2023,Sagan Tosu,Sanfrecce Hiroshima,0,2,,,A,4.18,3.87,1.77,4.46,4.1,1.83
+JAP,09/02/2023,Shonan Bellmare,Kashima Antlers,2,2,,,D,3.04,3.23,2.36,3.2,3.38,2.47
+JAP,17/02/2023,Kawasaki Frontale,Yokohama F. Marinos,1,2,,,A,2.64,3.5,2.53,2.8,3.7,2.63
+JAP,18/02/2023,Cerezo Osaka,Albirex Niigata,2,2,,,D,1.9,3.42,4.14,1.98,3.57,4.5
+JAP,18/02/2023,FC Tokyo,Urawa Reds,2,0,,,H,2.89,3.18,2.49,3.06,3.37,2.64
+JAP,18/02/2023,Kyoto,Kashima Antlers,0,2,,,A,3.42,3.29,2.15,3.66,3.46,2.27
+JAP,18/02/2023,Sanfrecce Hiroshima,Hokkaido Consadole Sapporo,0,0,,,D,1.82,3.73,4.09,1.87,4.0,4.33
+JAP,18/02/2023,Vissel Kobe,Avispa Fukuoka,1,0,,,H,2.29,3.01,3.41,2.39,3.15,3.6
+JAP,18/02/2023,Yokohama FC,Nagoya Grampus,0,1,,,A,3.93,3.25,2.01,4.33,3.43,2.1
+JAP,18/02/2023,Kashiwa Reysol,Gamba Osaka,2,2,,,D,2.21,3.39,3.2,2.3,3.55,3.47
+JAP,18/02/2023,Sagan Tosu,Shonan Bellmare,1,5,,,A,2.88,3.03,2.61,3.05,3.2,2.76
+JAP,24/02/2023,Shonan Bellmare,Yokohama FC,2,2,,,D,1.65,3.76,5.29,1.7,3.93,5.7
+JAP,25/02/2023,Yokohama F. Marinos,Urawa Reds,2,0,,,H,1.92,3.87,3.55,2.04,4.1,4.2
+JAP,25/02/2023,Avispa Fukuoka,Cerezo Osaka,2,1,,,H,3.02,2.92,2.58,3.3,3.17,2.69
+JAP,25/02/2023,Gamba Osaka,Sagan Tosu,1,1,,,D,2.27,3.34,3.1,2.35,3.5,3.21
+JAP,25/02/2023,Hokkaido Consadole Sapporo,Vissel Kobe,1,3,,,A,2.44,3.44,2.78,2.55,3.6,2.93
+JAP,25/02/2023,Kashima Antlers,Kawasaki Frontale,1,2,,,A,2.81,3.28,2.5,2.91,3.52,2.6
+JAP,25/02/2023,Nagoya Grampus,Kyoto,1,0,,,H,1.73,3.49,5.14,1.96,3.8,5.8
+JAP,26/02/2023,Sanfrecce Hiroshima,Albirex Niigata,1,2,,,A,1.72,3.61,4.92,1.78,3.84,5.44
+JAP,26/02/2023,Kashiwa Reysol,FC Tokyo,1,1,,,D,2.86,3.29,2.45,3.1,3.5,2.55
+JAP,03/03/2023,Yokohama F. Marinos,Sanfrecce Hiroshima,1,1,,,D,2.24,3.6,2.95,2.42,3.86,3.2
+JAP,05/03/2023,Gamba Osaka,Cerezo Osaka,1,2,,,A,2.46,3.31,2.82,2.75,3.5,2.98
+JAP,05/03/2023,Hokkaido Consadole Sapporo,Kashima Antlers,0,1,,,A,2.53,3.31,2.72,2.61,3.46,2.89
+JAP,05/03/2023,Kyoto,Kawasaki Frontale,0,1,,,A,4.0,3.66,1.85,4.3,3.87,1.99
+JAP,05/03/2023,Avispa Fukuoka,FC Tokyo,1,0,,,H,2.89,2.92,2.67,3.08,3.17,2.83
+JAP,05/03/2023,Nagoya Grampus,Vissel Kobe,2,2,,,D,2.39,3.12,3.09,2.63,3.27,3.3
+JAP,05/03/2023,Sagan Tosu,Yokohama F. Marinos,1,3,,,A,4.17,4.17,1.72,4.63,4.5,1.8
+JAP,05/03/2023,Shonan Bellmare,Kashiwa Reysol,1,2,,,A,2.1,3.46,3.36,2.2,3.7,3.73
+JAP,05/03/2023,Yokohama FC,Albirex Niigata,1,0,,,H,2.74,3.45,2.45,3.55,3.7,2.57
+JAP,06/03/2023,FC Tokyo,Yokohama F. Marinos,2,3,,,A,2.89,3.8,2.2,3.18,4.1,2.31
+JAP,06/03/2023,Shonan Bellmare,Albirex Niigata,2,2,,,D,2.12,3.52,3.25,2.21,3.77,3.42
+JAP,06/03/2023,Nagoya Grampus,Cerezo Osaka,3,1,,,H,1.97,3.28,3.99,2.03,3.45,4.53
+JAP,06/03/2023,Avispa Fukuoka,Gamba Osaka,1,2,,,A,2.31,3.02,3.32,2.4,3.24,3.61
+JAP,06/03/2023,Yokohama FC,Sagan Tosu,1,2,,,A,2.88,3.33,2.41,3.05,3.6,2.56
+JAP,06/03/2023,Kashiwa Reysol,Hokkaido Consadole Sapporo,4,5,,,A,3.17,3.6,2.12,3.5,3.85,2.22
+JAP,09/03/2023,FC Tokyo,Avispa Fukuoka,1,2,,,A,2.24,3.13,3.36,2.33,3.27,3.8
+JAP,09/03/2023,Vissel Kobe,Kyoto,2,1,,,H,1.77,3.63,4.52,1.85,3.82,5.12
+JAP,12/03/2023,Albirex Niigata,Cerezo Osaka,1,0,,,H,2.28,3.31,3.07,2.51,3.5,3.26
+JAP,12/03/2023,Avispa Fukuoka,Sanfrecce Hiroshima,0,1,,,A,5.21,3.8,1.64,5.8,4.1,1.76
+JAP,12/03/2023,Gamba Osaka,Vissel Kobe,0,1,,,A,3.46,3.7,1.97,3.75,3.9,2.12
+JAP,12/03/2023,Hokkaido Consadole Sapporo,Urawa Reds,0,2,,,A,2.73,3.61,2.37,2.97,3.82,2.71
+JAP,12/03/2023,Kashima Antlers,Yokohama FC,2,1,,,H,1.76,3.76,4.37,1.85,3.93,5.1
+JAP,12/03/2023,Kyoto,Yokohama F. Marinos,3,1,,,H,3.17,3.95,2.01,3.51,4.22,2.2
+JAP,12/03/2023,Sagan Tosu,Kawasaki Frontale,0,1,,,A,3.64,3.92,1.87,3.81,4.2,1.96
+JAP,12/03/2023,Shonan Bellmare,FC Tokyo,0,1,,,A,2.33,3.52,2.83,2.44,3.66,2.96
+JAP,12/03/2023,Nagoya Grampus,Kashiwa Reysol,1,1,,,D,2.56,3.27,2.64,2.75,3.36,3.05
+JAP,18/03/2023,Nagoya Grampus,FC Tokyo,0,0,,,D,2.34,3.01,3.29,2.41,3.16,3.47
+JAP,18/03/2023,Yokohama F. Marinos,Kashima Antlers,2,1,,,H,2.09,3.67,3.22,2.19,3.97,3.55
+JAP,18/03/2023,Yokohama FC,Kyoto,1,4,,,A,2.94,3.19,2.44,3.26,3.35,2.6
+JAP,18/03/2023,Gamba Osaka,Hokkaido Consadole Sapporo,2,2,,,D,3.11,3.47,2.2,3.34,3.68,2.4
+JAP,18/03/2023,Sagan Tosu,Vissel Kobe,0,1,,,A,3.21,3.16,2.29,3.58,3.3,2.38
+JAP,18/03/2023,Urawa Reds,Albirex Niigata,2,1,,,H,1.76,3.66,4.53,1.85,3.98,4.8
+JAP,18/03/2023,Kawasaki Frontale,Cerezo Osaka,0,0,,,D,2.25,3.36,3.13,2.34,3.5,3.75
+JAP,19/03/2023,Avispa Fukuoka,Shonan Bellmare,2,1,,,H,2.97,2.93,2.59,3.11,3.06,2.7
+JAP,19/03/2023,Sanfrecce Hiroshima,Kashiwa Reysol,1,0,,,H,1.57,3.89,5.78,1.71,4.2,6.4
+JAP,31/03/2023,Kashiwa Reysol,Urawa Reds,0,3,,,A,3.72,3.35,2.01,3.92,3.56,2.2
+JAP,03/04/2023,Kawasaki Frontale,Shonan Bellmare,1,1,,,D,1.88,3.57,3.95,1.93,3.8,4.2
+JAP,03/04/2023,Albirex Niigata,Hokkaido Consadole Sapporo,2,2,,,D,2.21,3.53,3.02,2.34,3.79,3.18
+JAP,03/04/2023,Kyoto,FC Tokyo,2,0,,,H,4.28,3.41,1.86,4.7,3.64,2.24
+JAP,03/04/2023,Vissel Kobe,Gamba Osaka,4,0,,,H,1.84,3.49,4.34,2.05,3.77,4.91
+JAP,03/04/2023,Yokohama FC,Kashima Antlers,1,3,,,A,3.87,3.51,1.92,4.37,3.75,2.0
+JAP,03/04/2023,Avispa Fukuoka,Kashiwa Reysol,1,0,,,H,2.4,2.98,3.2,2.51,3.15,3.37
+JAP,03/04/2023,Sagan Tosu,Nagoya Grampus,1,0,,,H,3.28,3.06,2.3,3.5,3.2,2.43
+JAP,03/04/2023,Urawa Reds,Cerezo Osaka,2,1,,,H,2.18,3.24,3.34,2.36,3.41,3.52
+JAP,06/04/2023,Sanfrecce Hiroshima,Kyoto,3,1,,,H,1.54,4.11,5.89,1.6,4.62,7.17
+JAP,06/04/2023,Urawa Reds,Kashima Antlers,0,0,,,D,2.33,3.02,3.26,2.42,3.2,3.49
+JAP,15/04/2023,Albirex Niigata,Avispa Fukuoka,3,2,,,H,2.26,3.02,3.45,2.42,3.16,3.79
+JAP,15/04/2023,Yokohama FC,Sanfrecce Hiroshima,0,3,,,A,7.23,4.55,1.42,8.58,4.95,1.46
+JAP,15/04/2023,Kawasaki Frontale,Nagoya Grampus,1,2,,,A,2.8,3.21,2.53,2.9,3.41,2.68
+JAP,15/04/2023,Sagan Tosu,Kashiwa Reysol,1,1,,,D,2.57,3.23,2.73,2.68,3.4,2.85
+JAP,15/04/2023,Shonan Bellmare,Yokohama F. Marinos,1,1,,,D,2.67,3.72,2.37,2.83,3.96,2.47
+JAP,15/04/2023,Urawa Reds,Hokkaido Consadole Sapporo,4,1,,,H,2.01,3.56,3.5,2.11,3.74,3.92
+JAP,15/04/2023,FC Tokyo,Cerezo Osaka,1,2,,,A,2.49,3.19,2.87,2.67,3.32,3.05
+JAP,15/04/2023,Kashima Antlers,Vissel Kobe,1,5,,,A,2.39,3.14,3.06,2.52,3.3,3.2
+JAP,15/04/2023,Kyoto,Gamba Osaka,2,1,,,H,3.29,3.31,2.18,3.56,3.53,2.32
+JAP,22/04/2023,Sanfrecce Hiroshima,FC Tokyo,1,2,,,A,1.78,3.47,4.61,1.86,3.67,5.05
+JAP,22/04/2023,Vissel Kobe,Yokohama F. Marinos,2,3,,,A,2.2,3.67,2.96,2.38,3.97,3.14
+JAP,23/04/2023,Albirex Niigata,Kashima Antlers,0,2,,,A,3.09,3.18,2.35,3.45,3.4,2.61
+JAP,23/04/2023,Cerezo Osaka,Kashiwa Reysol,1,0,,,H,1.96,3.36,3.91,2.04,3.5,4.31
+JAP,23/04/2023,Hokkaido Consadole Sapporo,Avispa Fukuoka,2,2,,,D,1.84,3.43,4.36,2.08,3.64,4.75
+JAP,23/04/2023,Kyoto,Sagan Tosu,2,3,,,A,2.32,3.26,3.06,2.4,3.41,3.35
+JAP,23/04/2023,Nagoya Grampus,Shonan Bellmare,2,2,,,D,2.22,3.17,3.32,2.3,3.3,3.6
+JAP,23/04/2023,Gamba Osaka,Yokohama FC,1,1,,,D,1.61,4.08,4.99,1.65,4.41,5.25
+JAP,23/04/2023,Kawasaki Frontale,Urawa Reds,1,1,,,D,2.18,3.3,3.29,2.28,3.45,3.51
+JAP,29/04/2023,Cerezo Osaka,Sanfrecce Hiroshima,0,1,,,A,3.28,3.4,2.15,3.6,3.6,2.31
+JAP,29/04/2023,Vissel Kobe,Shonan Bellmare,2,0,,,H,1.94,3.64,3.66,2.11,3.93,3.93
+JAP,29/04/2023,Yokohama FC,Hokkaido Consadole Sapporo,1,4,,,A,4.36,4.03,1.71,4.67,4.3,1.83
+JAP,29/04/2023,FC Tokyo,Albirex Niigata,2,1,,,H,2.14,3.27,3.43,2.26,3.45,3.8
+JAP,29/04/2023,Kashiwa Reysol,Kyoto,1,1,,,D,2.03,3.4,3.66,2.32,3.75,4.2
+JAP,29/04/2023,Yokohama F. Marinos,Nagoya Grampus,1,1,,,D,2.3,3.54,2.89,2.41,3.77,3.07
+JAP,29/04/2023,Avispa Fukuoka,Kawasaki Frontale,1,3,,,A,3.28,3.08,2.3,3.55,3.25,2.38
+JAP,29/04/2023,Kashima Antlers,Gamba Osaka,4,0,,,H,2.34,3.21,3.09,2.53,3.5,3.5
+JAP,08/05/2023,Nagoya Grampus,Albirex Niigata,1,0,,,H,1.86,3.37,4.36,1.98,3.53,4.75
+JAP,08/05/2023,Shonan Bellmare,Sanfrecce Hiroshima,1,0,,,H,3.06,3.41,2.25,3.41,3.65,2.35
+JAP,13/05/2023,Vissel Kobe,Sanfrecce Hiroshima,2,0,,,H,2.87,3.35,2.4,3.01,3.57,2.54
+JAP,13/05/2023,Shonan Bellmare,Hokkaido Consadole Sapporo,2,4,,,A,2.55,3.62,2.53,2.72,3.9,2.65
+JAP,13/05/2023,Kashiwa Reysol,Yokohama FC,0,1,,,A,1.84,3.62,4.11,1.9,3.9,4.49
+JAP,14/05/2023,Albirex Niigata,Yokohama F. Marinos,2,1,,,H,3.54,3.93,1.9,4.12,4.2,1.98
+JAP,14/05/2023,Avispa Fukuoka,Sagan Tosu,0,0,,,D,2.05,3.17,3.86,2.16,3.34,4.2
+JAP,14/05/2023,Kashima Antlers,Nagoya Grampus,2,0,,,H,3.09,2.94,2.51,3.42,3.15,2.76
+JAP,14/05/2023,Kyoto,Cerezo Osaka,0,1,,,A,3.06,3.28,2.32,3.35,3.46,2.45
+JAP,14/05/2023,Urawa Reds,Gamba Osaka,3,1,,,H,1.91,3.48,3.93,1.96,3.76,4.37
+JAP,19/05/2023,Hokkaido Consadole Sapporo,Kyoto,2,1,,,H,1.58,4.22,5.13,1.65,4.4,5.77
+JAP,20/05/2023,Avispa Fukuoka,Urawa Reds,0,0,,,D,2.97,2.97,2.57,3.26,3.08,2.69
+JAP,20/05/2023,Kashima Antlers,FC Tokyo,1,1,,,D,1.92,3.27,4.21,2.01,3.49,4.51
+JAP,20/05/2023,Nagoya Grampus,Sanfrecce Hiroshima,2,1,,,H,2.66,3.01,2.81,2.93,3.18,2.9
+JAP,20/05/2023,Shonan Bellmare,Cerezo Osaka,0,2,,,A,2.17,3.48,3.18,2.41,3.7,3.4
+JAP,20/05/2023,Kashiwa Reysol,Vissel Kobe,1,1,,,D,3.35,3.46,2.1,3.6,3.65,2.23
+JAP,20/05/2023,Yokohama FC,Kawasaki Frontale,2,1,,,H,7.52,4.74,1.39,8.24,5.1,1.44
+JAP,20/05/2023,Sagan Tosu,Albirex Niigata,2,0,,,H,3.05,3.32,2.3,3.18,3.5,2.54
+JAP,20/05/2023,Gamba Osaka,Yokohama F. Marinos,0,2,,,A,3.3,3.91,1.99,3.79,4.2,2.24
+JAP,27/05/2023,Hokkaido Consadole Sapporo,Nagoya Grampus,1,2,,,A,2.58,3.36,2.65,2.69,3.52,2.89
+JAP,27/05/2023,Sanfrecce Hiroshima,Shonan Bellmare,1,0,,,H,1.69,3.89,4.65,1.74,4.22,5.04
+JAP,27/05/2023,Vissel Kobe,FC Tokyo,3,2,,,H,1.69,3.76,4.85,1.86,3.99,5.25
+JAP,27/05/2023,Sagan Tosu,Kashima Antlers,2,2,,,D,4.13,3.34,1.92,4.58,3.49,1.98
+JAP,27/05/2023,Kyoto,Urawa Reds,0,2,,,A,4.21,3.4,1.88,4.89,3.66,2.07
+JAP,28/05/2023,Albirex Niigata,Gamba Osaka,1,3,,,A,2.15,3.35,3.34,2.59,3.52,3.6
+JAP,28/05/2023,Cerezo Osaka,Yokohama FC,2,0,,,H,1.58,4.19,5.14,1.64,4.45,5.5
+JAP,28/05/2023,Yokohama F. Marinos,Avispa Fukuoka,2,0,,,H,1.99,3.55,3.59,2.11,3.9,4.46
+JAP,28/05/2023,Kawasaki Frontale,Kashiwa Reysol,2,0,,,H,1.66,3.8,5.02,1.81,4.11,5.4
+JAP,31/05/2023,Urawa Reds,Sanfrecce Hiroshima,2,1,,,H,2.74,3.09,2.67,2.83,3.29,2.9
+JAP,05/06/2023,Hokkaido Consadole Sapporo,FC Tokyo,5,1,,,H,1.96,3.61,3.63,2.2,3.85,3.96
+JAP,05/06/2023,Nagoya Grampus,Gamba Osaka,1,0,,,H,2.11,3.21,3.6,2.21,3.37,3.82
+JAP,08/06/2023,Kashima Antlers,Hokkaido Consadole Sapporo,3,0,,,H,2.08,3.58,3.27,2.15,3.77,3.56
+JAP,08/06/2023,Yokohama FC,Vissel Kobe,2,0,,,H,5.32,4.14,1.58,6.0,4.45,1.61
+JAP,08/06/2023,Cerezo Osaka,FC Tokyo,0,1,,,A,2.26,3.29,3.13,2.38,3.5,3.5
+JAP,08/06/2023,Kawasaki Frontale,Gamba Osaka,3,4,,,A,1.61,3.95,5.24,1.69,4.2,5.71
+JAP,08/06/2023,Kyoto,Kashiwa Reysol,0,1,,,A,2.57,3.2,2.74,2.74,3.39,3.0
+JAP,08/06/2023,Sagan Tosu,Avispa Fukuoka,0,1,,,A,2.61,3.05,2.81,2.7,3.25,3.1
+JAP,08/06/2023,Urawa Reds,Yokohama F. Marinos,0,0,,,D,2.53,3.75,2.48,2.63,4.05,2.63
+JAP,24/06/2023,Hokkaido Consadole Sapporo,Cerezo Osaka,1,4,,,A,1.86,3.89,3.72,2.0,4.26,4.19
+JAP,24/06/2023,FC Tokyo,Nagoya Grampus,2,0,,,H,3.38,3.29,2.15,3.73,3.48,2.31
+JAP,24/06/2023,Gamba Osaka,Kashima Antlers,2,1,,,H,2.76,3.1,2.65,3.21,3.35,2.85
+JAP,24/06/2023,Kashiwa Reysol,Albirex Niigata,0,0,,,D,2.34,3.37,2.93,2.46,3.58,3.04
+JAP,24/06/2023,Kyoto,Yokohama FC,2,1,,,H,1.95,3.46,3.81,2.02,3.74,4.33
+JAP,24/06/2023,Sanfrecce Hiroshima,Yokohama F. Marinos,0,1,,,A,2.06,3.86,3.12,2.22,4.34,3.38
+JAP,24/06/2023,Shonan Bellmare,Sagan Tosu,0,6,,,A,2.14,3.46,3.23,2.26,3.71,3.57
+JAP,24/06/2023,Urawa Reds,Kawasaki Frontale,1,1,,,D,2.58,3.2,2.75,2.73,3.39,3.01
+JAP,25/06/2023,Avispa Fukuoka,Vissel Kobe,0,3,,,A,3.78,3.23,2.04,4.33,3.49,2.16
+JAP,28/06/2023,Urawa Reds,Shonan Bellmare,4,1,,,H,1.72,3.74,4.69,1.78,4.4,5.64
+JAP,30/06/2023,Cerezo Osaka,Avispa Fukuoka,0,1,,,A,2.24,3.07,3.44,2.34,3.37,4.08

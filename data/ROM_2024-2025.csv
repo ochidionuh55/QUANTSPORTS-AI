@@ -1,0 +1,104 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+ROM,04/07/2024,FC Hermannstadt,U. Cluj,1,1,,,D,2.43,2.72,3.31,2.57,2.88,3.5
+ROM,04/07/2024,FCSB,Univ. Craiova,2,0,,,H,1.55,3.95,5.4,1.59,4.11,6.0
+ROM,13/07/2024,Sepsi Sf. Gheorghe,Poli Iasi,1,0,,,H,1.68,3.65,4.73,1.73,3.82,5.2
+ROM,13/07/2024,UTA Arad,FC Rapid Bucuresti,1,1,,,D,3.5,3.28,2.05,3.7,3.4,2.15
+ROM,13/07/2024,FCSB,U. Cluj,1,1,,,D,1.49,3.94,6.47,1.52,4.1,7.2
+ROM,14/07/2024,CFR Cluj,Din. Bucuresti,3,2,,,H,1.5,4.03,6.06,1.55,4.3,7.1
+ROM,15/07/2024,FC Botosani,Otelul,2,3,,,A,2.4,2.86,3.18,2.5,3.0,3.39
+ROM,15/07/2024,Petrolul,Gloria Buzau,0,0,,,D,2.05,3.08,3.8,2.19,3.34,4.35
+ROM,19/07/2024,Poli Iasi,FC Botosani,1,0,,,H,2.35,2.94,3.21,2.42,3.18,3.5
+ROM,19/07/2024,Unirea Slobozia,FCSB,2,2,,,D,6.75,4.36,1.42,7.62,4.69,1.49
+ROM,20/07/2024,Univ. Craiova,UTA Arad,4,2,,,H,1.57,3.87,5.42,1.6,4.01,6.1
+ROM,20/07/2024,FC Rapid Bucuresti,CFR Cluj,2,2,,,D,2.5,3.26,2.68,2.63,3.44,2.78
+ROM,21/07/2024,U. Cluj,FC Hermannstadt,3,1,,,H,2.02,2.96,4.1,2.14,3.15,4.47
+ROM,21/07/2024,Din. Bucuresti,Petrolul,4,1,,,H,2.03,3.1,3.79,2.11,3.2,4.0
+ROM,22/07/2024,Gloria Buzau,Sepsi Sf. Gheorghe,1,2,,,A,4.05,3.45,1.85,4.33,3.6,1.94
+ROM,22/07/2024,Otelul,Farul Constanta,0,0,,,D,2.67,3.08,2.63,2.76,3.2,2.75
+ROM,26/07/2024,FC Hermannstadt,Unirea Slobozia,1,1,,,D,2.18,2.99,3.51,2.31,3.1,3.75
+ROM,26/07/2024,FCSB,Otelul,0,2,,,A,1.81,3.38,4.34,1.86,3.51,4.63
+ROM,27/07/2024,Poli Iasi,Gloria Buzau,1,2,,,A,1.96,3.2,3.91,2.01,3.35,4.25
+ROM,27/07/2024,Sepsi Sf. Gheorghe,Din. Bucuresti,1,1,,,D,1.87,3.46,3.93,1.97,3.63,4.6
+ROM,28/07/2024,Farul Constanta,FC Botosani,0,1,,,A,1.56,3.93,5.41,1.61,4.2,6.25
+ROM,28/07/2024,CFR Cluj,Univ. Craiova,0,2,,,A,2.01,3.52,3.38,2.08,3.65,3.6
+ROM,29/07/2024,UTA Arad,U. Cluj,0,0,,,D,2.62,3.18,2.62,3.01,3.28,2.71
+ROM,29/07/2024,Petrolul,FC Rapid Bucuresti,1,0,,,H,3.92,3.17,1.97,4.2,3.44,2.04
+ROM,03/08/2024,CFR Cluj,FC Hermannstadt,1,0,,,H,1.65,3.61,5.05,1.71,3.77,5.5
+ROM,03/08/2024,Din. Bucuresti,UTA Arad,1,0,,,H,2.28,3.12,3.12,2.5,3.25,3.34
+ROM,03/08/2024,FC Botosani,Farul Constanta,0,0,,,D,3.08,2.99,2.37,3.3,3.2,2.45
+ROM,03/08/2024,FC Voluntari,U. Cluj,0,0,,,D,3.39,3.14,2.14,3.63,3.27,2.21
+ROM,03/08/2024,Petrolul,Sepsi Sf. Gheorghe,1,2,,,A,3.15,3.15,2.25,3.45,3.45,2.36
+ROM,04/08/2024,Poli Iasi,U Craiova 1948,0,0,,,D,2.33,3.1,3.02,2.42,3.25,3.21
+ROM,04/08/2024,Otelul,Din. Bucuresti,1,0,,,H,2.19,2.82,3.68,2.29,2.91,4.0
+ROM,16/08/2024,Unirea Slobozia,Petrolul,1,2,,,A,2.7,2.73,2.94,2.92,2.9,3.2
+ROM,16/08/2024,Univ. Craiova,Gloria Buzau,5,1,,,H,1.33,5.01,7.72,1.37,5.3,8.5
+ROM,17/08/2024,FC Botosani,UTA Arad,1,0,,,H,2.35,3.06,3.09,2.48,3.2,3.3
+ROM,17/08/2024,FCSB,Poli Iasi,0,1,,,A,1.42,4.49,6.6,1.47,4.8,7.01
+ROM,18/08/2024,FC Rapid Bucuresti,Din. Bucuresti,1,1,,,D,1.79,3.55,4.18,1.85,3.69,4.43
+ROM,19/08/2024,U. Cluj,Sepsi Sf. Gheorghe,3,0,,,H,2.23,3.08,3.28,2.31,3.25,3.47
+ROM,19/08/2024,Farul Constanta,FC Hermannstadt,3,2,,,H,1.74,3.51,4.54,1.82,3.6,5.0
+ROM,23/08/2024,Petrolul,Otelul,0,0,,,D,2.61,2.73,3.05,2.88,2.9,3.44
+ROM,23/08/2024,Poli Iasi,FC Rapid Bucuresti,1,2,,,A,3.81,3.5,1.89,3.98,3.66,1.95
+ROM,24/08/2024,Sepsi Sf. Gheorghe,Unirea Slobozia,0,1,,,A,1.51,4.05,5.85,1.54,4.22,6.54
+ROM,24/08/2024,Din. Bucuresti,Univ. Craiova,2,1,,,H,3.02,3.3,2.26,3.2,3.45,2.38
+ROM,25/08/2024,CFR Cluj,FC Botosani,3,0,,,H,1.8,3.64,4.04,1.86,3.85,4.35
+ROM,25/08/2024,FC Hermannstadt,FCSB,2,0,,,H,3.68,3.21,2.02,3.98,3.37,2.14
+ROM,26/08/2024,Gloria Buzau,U. Cluj,0,2,,,A,4.71,3.48,1.74,5.04,3.6,1.85
+ROM,26/08/2024,UTA Arad,Farul Constanta,1,1,,,D,2.83,3.16,2.47,3.0,3.3,2.61
+ROM,30/08/2024,Otelul,Sepsi Sf. Gheorghe,2,0,,,H,2.52,2.94,2.92,2.63,3.03,3.1
+ROM,31/08/2024,FC Hermannstadt,Poli Iasi,6,2,,,H,2.12,3.15,3.46,2.21,3.42,3.9
+ROM,31/08/2024,Univ. Craiova,FC Rapid Bucuresti,1,1,,,D,2.06,3.46,3.28,2.15,3.65,3.5
+ROM,02/09/2024,Otelul,U Craiova 1948,1,0,,,H,2.17,3.08,3.37,2.25,3.2,3.75
+ROM,02/09/2024,Univ. Craiova,U. Cluj,2,2,,,D,1.94,3.24,3.87,2.01,3.46,4.4
+ROM,03/09/2024,FC Rapid Bucuresti,FCSB,4,0,,,H,3.37,3.34,2.06,3.73,3.51,2.25
+ROM,08/09/2024,FCSB,Farul Constanta,3,2,,,H,2.17,3.4,3.08,2.28,3.52,3.21
+ROM,13/09/2024,Sepsi Sf. Gheorghe,FC Botosani,3,0,,,H,1.5,3.96,6.18,1.57,4.2,6.87
+ROM,13/09/2024,Din. Bucuresti,Unirea Slobozia,1,0,,,H,2.0,3.1,3.94,2.17,3.25,4.5
+ROM,14/09/2024,Gloria Buzau,Otelul,0,0,,,D,3.68,3.09,2.07,3.94,3.25,2.14
+ROM,14/09/2024,Petrolul,Farul Constanta,1,1,,,D,2.67,2.93,2.76,2.8,3.05,2.9
+ROM,15/09/2024,Poli Iasi,Univ. Craiova,2,0,,,H,3.92,3.8,1.79,4.2,3.99,1.84
+ROM,15/09/2024,CFR Cluj,FCSB,2,2,,,D,2.0,3.42,3.49,2.08,3.53,3.7
+ROM,16/09/2024,UTA Arad,FC Hermannstadt,1,1,,,D,2.47,3.07,2.88,2.55,3.25,3.04
+ROM,16/09/2024,FC Rapid Bucuresti,U. Cluj,0,2,,,A,2.12,3.0,3.67,2.23,3.2,4.1
+ROM,20/09/2024,FC Botosani,Gloria Buzau,3,3,,,D,1.86,3.3,4.24,1.93,3.43,4.63
+ROM,20/09/2024,Otelul,Din. Bucuresti,1,1,,,D,2.14,2.83,3.84,2.22,3.0,4.34
+ROM,21/09/2024,FC Hermannstadt,CFR Cluj,0,0,,,D,3.8,3.27,1.96,4.1,3.41,2.06
+ROM,21/09/2024,FCSB,Petrolul,1,1,,,D,1.45,4.1,6.84,1.53,4.33,8.0
+ROM,22/09/2024,Farul Constanta,Sepsi Sf. Gheorghe,2,1,,,H,2.3,3.39,2.87,2.38,3.52,3.05
+ROM,22/09/2024,U. Cluj,Univ. Craiova,1,1,,,D,2.75,3.05,2.57,2.94,3.31,2.7
+ROM,23/09/2024,UTA Arad,Poli Iasi,0,0,,,D,2.11,3.17,3.44,2.19,3.3,3.73
+ROM,23/09/2024,Unirea Slobozia,FC Rapid Bucuresti,1,2,,,A,4.08,3.3,1.88,4.4,3.48,1.99
+ROM,27/09/2024,Petrolul,FC Hermannstadt,4,1,,,H,2.25,2.88,3.47,2.38,3.1,3.78
+ROM,27/09/2024,Din. Bucuresti,FC Botosani,2,2,,,D,1.88,3.23,4.23,1.98,3.41,4.6
+ROM,28/09/2024,Poli Iasi,U. Cluj,1,0,,,H,3.32,3.12,2.18,3.6,3.23,2.25
+ROM,28/09/2024,CFR Cluj,UTA Arad,1,3,,,A,1.39,4.49,7.45,1.42,4.71,8.28
+ROM,28/09/2024,FC Rapid Bucuresti,Otelul,0,0,,,D,1.84,3.32,4.29,1.93,3.51,4.7
+ROM,29/09/2024,Gloria Buzau,Farul Constanta,1,0,,,H,2.97,3.33,2.26,3.2,3.47,2.35
+ROM,29/09/2024,Sepsi Sf. Gheorghe,FCSB,0,1,,,A,3.05,3.26,2.25,3.23,3.4,2.31
+ROM,30/09/2024,Univ. Craiova,Unirea Slobozia,3,0,,,H,1.32,4.96,8.41,1.35,5.44,9.43
+ROM,02/10/2024,Poli Iasi,FC Voluntari,0,0,,,D,2.18,3.08,3.36,2.35,3.41,3.79
+ROM,02/10/2024,CFR Cluj,FC Rapid Bucuresti,0,1,,,A,1.63,3.8,4.83,1.71,3.98,5.2
+ROM,03/10/2024,U Craiova 1948,Univ. Craiova,1,2,,,A,4.07,3.74,1.77,4.45,3.98,1.86
+ROM,05/10/2024,Sepsi Sf. Gheorghe,FC Rapid Bucuresti,3,2,,,H,2.11,3.63,3.05,2.2,3.8,3.25
+ROM,08/10/2024,FC Hermannstadt,FC Botosani,2,1,,,H,2.1,2.98,3.79,2.15,3.15,4.24
+ROM,08/10/2024,UTA Arad,Otelul,1,1,,,D,2.61,2.96,2.8,2.75,3.2,2.98
+ROM,08/10/2024,Gloria Buzau,FC Rapid Bucuresti,1,1,,,D,3.92,3.49,1.87,4.29,3.65,1.98
+ROM,02/11/2024,FC Hermannstadt,Petrolul,0,0,,,D,2.15,2.77,3.86,2.22,3.09,4.5
+ROM,02/11/2024,FCSB,Sepsi Sf. Gheorghe,1,0,,,H,1.64,3.74,4.9,1.78,3.88,5.4
+ROM,03/11/2024,Otelul,Poli Iasi,1,1,,,D,2.04,3.03,3.86,2.14,3.22,4.3
+ROM,05/11/2024,FCSB,CFR Cluj,0,1,,,A,2.43,3.64,2.56,3.06,3.83,2.67
+ROM,08/11/2024,Sepsi Sf. Gheorghe,Univ. Craiova,1,2,,,A,2.56,3.29,2.59,2.69,3.45,2.75
+ROM,08/11/2024,CFR Cluj,Unirea Slobozia,3,0,,,H,1.55,3.86,5.59,1.61,4.11,6.75
+ROM,02/12/2024,UTA Arad,FC Botosani,2,2,,,D,1.96,3.21,3.85,2.03,3.38,4.33
+ROM,02/12/2024,Farul Constanta,Din. Bucuresti,0,2,,,A,1.65,3.71,4.86,1.76,4.14,5.7
+ROM,04/12/2024,UTA Arad,FC Hermannstadt,1,3,,,A,2.74,2.88,2.71,2.85,3.0,2.95
+ROM,04/12/2024,Univ. Craiova,Farul Constanta,1,2,,,A,1.79,3.61,4.05,1.85,3.79,4.47
+ROM,05/12/2024,Din. Bucuresti,UTA Arad,2,0,,,H,1.51,4.27,5.37,1.75,4.52,5.9
+ROM,05/12/2024,FC Voluntari,U. Cluj,0,1,,,A,2.65,3.11,2.61,2.81,3.52,2.93
+ROM,05/12/2024,Otelul,FC Botosani,2,0,,,H,3.02,3.21,2.27,3.23,3.59,2.71
+ROM,05/12/2024,Poli Iasi,Petrolul,2,0,,,H,1.79,3.28,4.58,1.88,3.61,6.0
+ROM,05/12/2024,U Craiova 1948,FC Hermannstadt,1,3,,,A,2.11,3.24,3.31,2.17,3.66,3.59
+ROM,07/12/2024,Farul Constanta,Unirea Slobozia,0,1,,,A,1.61,3.72,5.28,1.66,4.0,6.25
+ROM,07/12/2024,FC Hermannstadt,Univ. Craiova,0,0,,,D,2.92,3.02,2.46,3.1,3.2,2.56
+ROM,08/12/2024,Petrolul,U. Cluj,0,0,,,D,2.98,2.93,2.48,3.12,3.05,2.7
+ROM,08/12/2024,Poli Iasi,Din. Bucuresti,2,2,,,D,2.94,3.04,2.44,3.11,3.28,2.59

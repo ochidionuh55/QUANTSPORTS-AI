@@ -1,0 +1,61 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+EC,08/08/2026,Altrincham,Southend,1,3,1,1,A,4.0,3.8,1.73,4.4,3.8,1.73
+EC,08/08/2026,Boreham Wood,Tamworth,3,3,1,1,D,1.4,4.5,6.25,1.4,4.75,6.5
+EC,08/08/2026,Boston Utd,Aldershot,0,1,,,A,1.95,3.6,3.25,2.0,3.6,3.33
+EC,08/08/2026,Carlisle,Worthing,2,3,1,,A,1.6,4.2,4.33,1.6,4.2,5.1
+EC,08/08/2026,Eastleigh,Gateshead,2,1,1,,H,2.2,3.5,2.8,2.25,3.75,2.8
+EC,08/08/2026,Forest Green,Halifax,3,2,,1,H,1.62,3.9,4.6,1.62,4.0,5.0
+EC,08/08/2026,Fylde,Wealdstone,2,2,,,D,2.0,3.6,3.2,2.05,3.6,3.3
+EC,08/08/2026,Harrogate,Solihull,5,2,1,,H,1.65,3.9,4.5,1.65,4.25,5.0
+EC,08/08/2026,Hartlepool,Barrow,2,0,1,,H,2.2,3.4,2.88,2.25,3.66,2.88
+EC,08/08/2026,Hornchurch,Kidderminster,3,0,3,,H,2.75,3.4,2.3,2.75,3.5,2.38
+EC,08/08/2026,Scunthorpe,Yeovil,1,1,,,D,1.8,3.6,3.9,1.91,3.6,3.9
+EC,08/08/2026,Woking,Sutton,0,3,,1,A,1.85,3.5,3.7,1.92,3.75,3.7
+EC,15/08/2026,Aldershot,Hartlepool,0,1,,,A,3.25,3.6,2.0,3.25,3.8,2.15
+EC,15/08/2026,Barrow,Hornchurch,1,2,,,A,1.57,4.2,4.33,1.62,4.2,5.5
+EC,15/08/2026,Gateshead,Woking,2,0,,,H,2.63,3.4,2.38,2.7,3.5,2.5
+EC,15/08/2026,Halifax,Boreham Wood,1,3,,1,A,3.2,3.6,2.0,3.2,3.8,2.05
+EC,15/08/2026,Kidderminster,Eastleigh,1,0,,,H,1.83,3.75,3.6,1.95,3.8,3.75
+EC,15/08/2026,Solihull,Boston Utd,0,2,,1,A,2.3,3.5,2.63,2.4,3.5,2.7
+EC,15/08/2026,Southend,Scunthorpe,1,0,1,,H,1.75,3.7,4.0,1.8,3.8,4.2
+EC,15/08/2026,Sutton,Altrincham,1,0,1,,H,2.0,3.5,3.25,2.0,3.6,3.35
+EC,15/08/2026,Tamworth,Fylde,1,2,1,2,A,2.05,3.7,3.0,2.08,3.8,3.1
+EC,15/08/2026,Wealdstone,Harrogate,1,3,1,1,A,3.3,3.7,1.9,3.4,3.8,2.0
+EC,15/08/2026,Worthing,Forest Green,1,2,1,,A,3.25,3.5,2.0,3.25,3.6,2.25
+EC,15/08/2026,Yeovil,Carlisle,1,1,1,,D,3.5,3.7,1.83,3.8,3.8,1.91
+EC,22/08/2026,Boston Utd,Altrincham,1,0,,,H,1.75,3.7,4.0,1.8,4.0,4.1
+EC,22/08/2026,Carlisle,Hornchurch,4,1,1,,H,1.55,4.2,4.5,1.62,4.2,4.75
+EC,22/08/2026,Eastleigh,Scunthorpe,3,2,1,,H,3.1,3.5,2.05,3.2,3.75,2.1
+EC,22/08/2026,Forest Green,Boreham Wood,0,3,,2,A,2.25,3.6,2.75,2.4,3.75,2.75
+EC,22/08/2026,Halifax,Tamworth,4,1,3,,H,2.2,3.5,2.8,2.2,3.5,3.1
+EC,22/08/2026,Harrogate,Barrow,2,2,1,1,D,2.1,3.5,2.9,2.25,3.6,2.9
+EC,22/08/2026,Kidderminster,Aldershot,1,1,1,,D,2.1,3.5,3.0,2.15,3.6,3.14
+EC,22/08/2026,Solihull,Southend,1,3,1,2,A,4.2,3.8,1.67,4.2,3.8,1.85
+EC,22/08/2026,Sutton,Hartlepool,2,1,2,1,H,2.35,3.4,2.7,2.38,3.8,2.7
+EC,22/08/2026,Woking,Fylde,3,2,,1,H,2.15,3.5,2.88,2.3,3.6,2.9
+EC,22/08/2026,Worthing,Wealdstone,1,0,1,,H,2.05,3.7,3.0,2.12,3.8,3.1
+EC,22/08/2026,Yeovil,Gateshead,3,0,1,,H,2.0,3.5,3.3,2.1,3.5,3.5
+EC,27/08/2026,Boreham Wood,Boston Utd,2,1,,1,H,1.55,4.0,5.0,1.58,4.2,5.0
+EC,28/08/2026,Aldershot,Harrogate,3,1,3,,H,2.7,3.75,2.1,2.9,3.75,2.2
+EC,28/08/2026,Altrincham,Halifax,2,1,2,,H,2.3,3.5,2.7,2.38,3.5,2.8
+EC,28/08/2026,Barrow,Yeovil,1,2,,,A,2.05,3.4,3.25,2.05,3.4,3.5
+EC,28/08/2026,Fylde,Forest Green,2,0,,,H,2.63,3.7,2.25,2.75,3.8,2.3
+EC,28/08/2026,Gateshead,Sutton,0,1,,,A,2.55,3.5,2.4,2.7,3.5,2.45
+EC,28/08/2026,Hartlepool,Eastleigh,0,1,,,A,1.7,3.7,4.2,1.75,3.7,4.5
+EC,28/08/2026,Hornchurch,Woking,1,0,,,H,2.3,3.4,2.7,2.35,3.4,2.8
+EC,28/08/2026,Scunthorpe,Solihull,3,1,1,1,H,1.73,3.9,4.0,1.75,3.9,4.0
+EC,28/08/2026,Southend,Kidderminster,1,3,1,,A,1.48,4.2,5.75,1.48,4.5,6.5
+EC,28/08/2026,Tamworth,Worthing,3,2,,1,H,2.15,3.5,2.9,2.15,3.8,2.9
+EC,28/08/2026,Wealdstone,Carlisle,1,1,,1,D,3.7,3.6,1.83,3.7,4.0,1.88
+EC,31/08/2026,Boston Utd,Hornchurch,2,3,2,1,A,1.95,3.5,3.4,2.08,3.55,3.9
+EC,31/08/2026,Carlisle,Scunthorpe,4,2,3,1,H,1.67,3.8,4.2,1.74,3.94,4.39
+EC,31/08/2026,Eastleigh,Aldershot,1,1,,,D,2.2,3.5,2.8,2.34,3.8,3.0
+EC,31/08/2026,Forest Green,Altrincham,1,2,,,A,1.53,4.33,4.75,1.6,4.47,5.75
+EC,31/08/2026,Harrogate,Gateshead,2,1,,,H,1.55,4.2,4.75,1.63,4.28,4.87
+EC,31/08/2026,Kidderminster,Barrow,1,1,1,1,D,2.38,3.4,2.55,2.5,3.4,2.83
+EC,31/08/2026,Solihull,Fylde,1,3,,2,A,2.4,3.6,2.5,2.59,3.81,2.6
+EC,31/08/2026,Sutton,Wealdstone,0,2,,1,A,1.85,3.6,3.6,1.97,3.83,3.66
+EC,31/08/2026,Woking,Southend,1,1,,1,D,3.4,3.5,1.95,3.65,3.55,2.17
+EC,31/08/2026,Worthing,Boreham Wood,2,3,1,,A,4.2,4.2,1.62,4.4,4.42,1.69
+EC,31/08/2026,Yeovil,Tamworth,3,2,1,1,H,2.1,3.5,3.0,2.23,3.75,3.13
+EC,01/09/2026,Halifax,Hartlepool,1,0,,,H,2.5,3.4,2.5,2.5,3.6,2.6

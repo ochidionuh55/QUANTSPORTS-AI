@@ -1,0 +1,180 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+SC3,04/08/2018,Annan Athletic,Elgin,1,1,,,D,2.5,3.5,2.62,2.5,3.7,2.79
+SC3,04/08/2018,Berwick,Stirling,1,0,,,H,3.1,3.5,2.2,3.1,3.86,2.21
+SC3,04/08/2018,Clyde,Cowdenbeath,2,0,2,,H,1.61,4.0,5.0,1.67,4.2,5.33
+SC3,04/08/2018,Edinburgh City,Albion Rvs,4,0,1,,H,1.57,3.8,6.0,1.65,4.2,6.0
+SC3,04/08/2018,Peterhead,Queens Park,1,1,1,1,D,1.95,3.6,3.6,2.05,3.7,3.85
+SC3,11/08/2018,Albion Rvs,Peterhead,0,4,,1,A,6.0,4.33,1.5,6.0,4.73,1.55
+SC3,11/08/2018,Cowdenbeath,Annan Athletic,1,2,1,1,A,2.62,3.5,2.5,2.8,3.6,2.6
+SC3,11/08/2018,Elgin,Edinburgh City,1,0,,,H,2.3,3.5,2.9,2.48,3.75,2.94
+SC3,11/08/2018,Queens Park,Berwick,1,0,1,,H,1.75,3.8,4.33,1.83,4.04,4.5
+SC3,11/08/2018,Stirling,Clyde,0,3,,2,A,2.8,3.6,2.3,2.89,4.04,2.4
+SC3,18/08/2018,Albion Rvs,Elgin,0,1,,,A,5.0,4.0,1.61,5.4,4.34,1.65
+SC3,18/08/2018,Annan Athletic,Queens Park,3,1,,,H,2.6,3.25,2.7,2.6,3.5,2.75
+SC3,18/08/2018,Cowdenbeath,Berwick,4,0,2,,H,2.1,3.4,3.4,2.1,3.62,3.6
+SC3,18/08/2018,Edinburgh City,Stirling,3,1,,,H,2.14,3.5,3.2,2.15,3.84,3.32
+SC3,18/08/2018,Peterhead,Clyde,1,0,,,H,2.1,3.5,3.3,2.11,4.4,3.4
+SC3,25/08/2018,Berwick,Annan Athletic,0,3,,1,A,3.25,3.6,2.1,3.54,3.9,2.15
+SC3,25/08/2018,Clyde,Edinburgh City,0,2,,,A,1.7,3.75,4.75,1.8,3.84,4.8
+SC3,25/08/2018,Queens Park,Albion Rvs,2,0,2,,H,1.36,5.0,7.5,1.42,5.5,8.25
+SC3,25/08/2018,Stirling,Peterhead,0,2,,1,A,3.8,3.8,1.85,4.2,4.2,1.88
+SC3,01/09/2018,Albion Rvs,Berwick,3,5,2,2,A,2.7,3.4,2.5,2.76,3.7,2.55
+SC3,01/09/2018,Annan Athletic,Clyde,1,2,1,1,A,2.75,3.5,2.4,2.75,3.7,2.6
+SC3,01/09/2018,Elgin,Stirling,0,3,,3,A,1.95,3.75,3.5,1.99,3.8,3.77
+SC3,01/09/2018,Peterhead,Edinburgh City,0,1,,,A,1.66,4.0,4.75,1.74,4.04,5.2
+SC3,01/09/2018,Queens Park,Cowdenbeath,0,0,,,D,1.75,3.8,4.33,1.81,4.2,4.5
+SC3,15/09/2018,Berwick,Elgin,0,3,,3,A,3.25,3.6,2.1,3.36,3.6,2.25
+SC3,15/09/2018,Clyde,Albion Rvs,1,0,1,,H,1.25,5.75,12.0,1.29,6.0,12.0
+SC3,15/09/2018,Cowdenbeath,Peterhead,2,4,2,1,A,7.0,4.0,1.5,7.0,4.4,1.61
+SC3,15/09/2018,Edinburgh City,Annan Athletic,2,1,1,,H,2.14,3.5,3.25,2.2,3.7,3.4
+SC3,15/09/2018,Stirling,Queens Park,1,0,1,,H,2.8,3.4,2.4,2.9,3.6,2.42
+SC3,22/09/2018,Clyde,Elgin,4,1,3,1,H,1.72,3.8,4.5,1.8,3.8,5.08
+SC3,22/09/2018,Cowdenbeath,Albion Rvs,1,1,,1,D,1.61,3.75,5.5,1.66,3.93,5.5
+SC3,22/09/2018,Peterhead,Berwick,1,0,,,H,1.22,5.5,13.0,1.29,6.57,13.0
+SC3,22/09/2018,Queens Park,Edinburgh City,0,2,,1,A,2.45,3.3,2.87,2.61,3.5,2.88
+SC3,22/09/2018,Stirling,Annan Athletic,1,2,,1,A,2.04,3.5,3.4,2.3,3.87,3.4
+SC3,29/09/2018,Albion Rvs,Stirling,3,0,1,,H,4.33,3.75,1.8,4.33,4.2,1.85
+SC3,29/09/2018,Annan Athletic,Peterhead,1,3,,1,A,4.0,3.8,1.8,4.15,4.15,1.89
+SC3,29/09/2018,Berwick,Clyde,2,3,2,,A,4.33,4.2,1.66,4.6,4.2,1.8
+SC3,29/09/2018,Edinburgh City,Cowdenbeath,1,0,,,H,1.5,4.0,7.0,1.6,4.2,7.0
+SC3,29/09/2018,Elgin,Queens Park,2,1,,1,H,2.25,3.5,3.0,2.5,3.55,3.0
+SC3,06/10/2018,Annan Athletic,Albion Rvs,3,1,1,,H,1.44,4.33,7.0,1.5,4.8,7.0
+SC3,06/10/2018,Cowdenbeath,Stirling,1,0,1,,H,2.62,3.3,2.6,2.9,3.4,2.63
+SC3,06/10/2018,Edinburgh City,Berwick,3,0,1,,H,1.3,5.0,10.0,1.4,5.25,10.0
+SC3,06/10/2018,Peterhead,Elgin,3,0,1,,H,1.5,4.33,6.0,1.52,4.65,6.38
+SC3,06/10/2018,Queens Park,Clyde,1,0,1,,H,3.5,3.4,2.04,3.65,3.75,2.12
+SC3,13/10/2018,Elgin,Cowdenbeath,3,1,1,1,H,1.95,3.5,3.8,2.0,3.6,4.0
+SC3,27/10/2018,Albion Rvs,Queens Park,0,3,,2,A,4.75,4.0,1.66,5.25,4.21,1.67
+SC3,27/10/2018,Berwick,Cowdenbeath,0,3,,2,A,2.3,3.5,2.87,2.5,3.5,3.0
+SC3,27/10/2018,Clyde,Peterhead,1,3,,1,A,2.7,3.4,2.5,2.76,3.55,2.6
+SC3,27/10/2018,Elgin,Annan Athletic,0,1,,1,A,2.37,3.6,2.75,2.46,3.78,2.88
+SC3,27/10/2018,Stirling,Edinburgh City,0,1,,1,A,4.0,3.5,1.9,4.3,3.85,1.91
+SC3,03/11/2018,Cowdenbeath,Elgin,1,2,1,,A,2.8,3.6,2.3,3.0,3.6,2.45
+SC3,03/11/2018,Edinburgh City,Clyde,0,1,,1,A,2.37,3.5,2.8,2.37,3.5,3.2
+SC3,03/11/2018,Peterhead,Albion Rvs,2,1,2,,H,1.14,8.5,13.0,1.18,8.5,20.0
+SC3,03/11/2018,Queens Park,Annan Athletic,0,0,,,D,2.4,3.4,2.8,2.5,3.57,2.9
+SC3,03/11/2018,Stirling,Berwick,3,0,2,,H,1.66,4.0,4.75,1.71,4.2,5.0
+SC3,10/11/2018,Albion Rvs,Edinburgh City,1,2,1,1,A,9.0,5.5,1.3,10.0,5.5,1.35
+SC3,10/11/2018,Annan Athletic,Cowdenbeath,0,2,,,A,1.72,3.75,4.5,1.8,3.8,5.03
+SC3,10/11/2018,Clyde,Stirling,1,1,,,D,1.66,3.75,5.0,1.73,3.9,5.6
+SC3,10/11/2018,Elgin,Berwick,2,4,,2,A,1.4,4.75,7.0,1.5,4.75,7.86
+SC3,10/11/2018,Queens Park,Peterhead,2,0,1,,H,4.33,3.6,1.8,4.52,3.65,1.9
+SC3,17/11/2018,Annan Athletic,Stirling,2,2,1,,D,2.2,3.4,3.2,2.3,3.6,3.2
+SC3,17/11/2018,Berwick,Albion Rvs,2,0,1,,H,2.2,3.5,3.1,2.2,3.9,3.25
+SC3,17/11/2018,Elgin,Clyde,1,3,,2,A,3.2,3.4,2.2,3.25,3.5,2.3
+SC3,27/11/2018,Cowdenbeath,Queens Park,2,0,,,H,3.4,3.25,2.14,3.59,3.31,2.3
+SC3,01/12/2018,Albion Rvs,Cowdenbeath,1,1,1,1,D,4.0,3.3,1.95,4.1,3.5,2.12
+SC3,01/12/2018,Clyde,Berwick,3,3,,3,D,1.33,5.0,9.0,1.35,5.5,10.0
+SC3,01/12/2018,Edinburgh City,Queens Park,2,0,2,,H,1.72,3.6,4.75,1.8,3.6,5.7
+SC3,01/12/2018,Peterhead,Annan Athletic,2,1,1,,H,1.5,4.0,7.0,1.6,4.4,7.0
+SC3,01/12/2018,Stirling,Elgin,5,2,3,2,H,2.25,3.5,3.0,2.31,3.5,3.17
+SC3,08/12/2018,Annan Athletic,Edinburgh City,1,2,,1,A,3.2,3.6,2.1,3.6,3.6,2.11
+SC3,08/12/2018,Berwick,Peterhead,0,5,,3,A,8.0,4.75,1.36,8.75,5.5,1.36
+SC3,08/12/2018,Cowdenbeath,Clyde,1,1,,1,D,4.0,4.2,1.72,4.85,4.2,1.73
+SC3,08/12/2018,Elgin,Albion Rvs,4,2,2,1,H,1.5,4.5,5.75,1.55,4.7,6.25
+SC3,08/12/2018,Queens Park,Stirling,1,1,1,1,D,2.4,3.4,2.8,2.45,3.5,2.95
+SC3,11/12/2018,Edinburgh City,Peterhead,1,1,,,D,2.9,3.4,2.35,2.95,3.51,2.45
+SC3,15/12/2018,Clyde,Annan Athletic,1,0,,,H,1.61,4.0,5.0,1.75,4.0,5.0
+SC3,15/12/2018,Edinburgh City,Elgin,4,1,1,,H,1.7,4.0,4.5,1.7,4.0,5.5
+SC3,22/12/2018,Albion Rvs,Clyde,0,3,,2,A,7.5,4.5,1.4,8.0,5.0,1.4
+SC3,22/12/2018,Annan Athletic,Berwick,4,0,1,,H,1.44,4.5,6.5,1.5,4.85,6.5
+SC3,22/12/2018,Cowdenbeath,Edinburgh City,0,2,,1,A,5.0,3.6,1.7,5.25,3.78,1.75
+SC3,22/12/2018,Peterhead,Stirling,4,1,2,,H,1.44,4.5,6.5,1.5,4.7,6.5
+SC3,22/12/2018,Queens Park,Elgin,0,4,,2,A,2.35,3.25,3.0,2.45,3.5,3.1
+SC3,29/12/2018,Albion Rvs,Annan Athletic,1,1,,,D,4.33,4.2,1.66,4.9,4.2,1.7
+SC3,29/12/2018,Berwick,Edinburgh City,2,2,,1,D,7.0,4.75,1.4,8.5,4.95,1.4
+SC3,29/12/2018,Clyde,Queens Park,2,0,2,,H,1.6,4.2,5.25,1.65,4.24,5.5
+SC3,29/12/2018,Elgin,Peterhead,0,3,,2,A,4.33,3.75,1.75,4.4,4.2,1.75
+SC3,29/12/2018,Stirling,Cowdenbeath,2,1,2,1,H,1.95,3.8,3.5,2.07,3.82,3.7
+SC3,05/01/2019,Annan Athletic,Elgin,2,0,1,,H,2.0,3.6,3.5,2.16,3.75,3.5
+SC3,05/01/2019,Cowdenbeath,Berwick,2,0,1,,H,1.65,4.0,4.75,1.77,4.2,5.0
+SC3,05/01/2019,Edinburgh City,Stirling,0,1,,,A,1.5,4.33,6.0,1.53,4.85,6.25
+SC3,05/01/2019,Peterhead,Clyde,1,2,1,,A,1.61,4.2,4.75,1.76,4.21,4.75
+SC3,05/01/2019,Queens Park,Albion Rvs,2,2,1,2,D,1.53,4.33,5.75,1.53,4.9,6.5
+SC3,12/01/2019,Albion Rvs,Peterhead,0,2,,,A,8.5,5.5,1.3,10.0,5.75,1.32
+SC3,12/01/2019,Berwick,Clyde,0,3,,2,A,8.0,4.75,1.36,8.5,5.15,1.4
+SC3,12/01/2019,Elgin,Cowdenbeath,1,4,,2,A,2.3,3.5,2.87,2.38,3.91,2.95
+SC3,12/01/2019,Queens Park,Edinburgh City,0,4,,3,A,3.5,3.4,2.05,4.0,3.5,2.05
+SC3,12/01/2019,Stirling,Annan Athletic,2,1,1,1,H,2.15,3.3,3.4,2.5,3.63,3.4
+SC3,19/01/2019,Edinburgh City,Annan Athletic,1,2,1,,A,1.66,3.6,5.25,1.7,4.29,5.25
+SC3,19/01/2019,Peterhead,Berwick,2,0,,,H,1.14,8.0,15.0,1.16,9.4,22.0
+SC3,19/01/2019,Stirling,Queens Park,1,1,1,1,D,1.9,3.4,4.0,2.03,3.6,4.0
+SC3,26/01/2019,Albion Rvs,Stirling,0,5,,1,A,5.5,3.8,1.61,5.5,4.1,1.66
+SC3,26/01/2019,Annan Athletic,Peterhead,3,0,,,H,4.0,3.6,1.85,4.0,3.7,2.0
+SC3,26/01/2019,Clyde,Cowdenbeath,1,0,,,H,1.45,4.33,7.0,1.45,5.05,7.0
+SC3,26/01/2019,Elgin,Edinburgh City,3,3,2,,D,4.5,3.75,1.75,4.5,3.9,1.9
+SC3,26/01/2019,Queens Park,Berwick,7,1,3,,H,1.57,4.0,5.5,1.57,4.76,6.5
+SC3,02/02/2019,Edinburgh City,Albion Rvs,3,1,2,1,H,1.18,7.0,13.0,1.2,7.0,19.0
+SC3,09/02/2019,Albion Rvs,Elgin,0,3,,1,A,6.0,4.33,1.5,6.0,4.5,1.58
+SC3,09/02/2019,Annan Athletic,Clyde,1,1,,1,D,3.0,3.75,2.15,3.13,3.75,2.25
+SC3,09/02/2019,Berwick,Stirling,1,2,,1,A,7.0,4.33,1.45,7.0,4.9,1.5
+SC3,09/02/2019,Peterhead,Edinburgh City,0,0,,,D,1.85,3.8,3.75,1.92,3.89,4.0
+SC3,09/02/2019,Queens Park,Cowdenbeath,1,1,,,D,2.05,3.6,3.3,2.06,3.6,3.75
+SC3,12/02/2019,Stirling,Albion Rvs,1,0,,,H,1.33,5.0,8.5,1.36,5.5,10.0
+SC3,16/02/2019,Clyde,Albion Rvs,1,0,1,,H,1.25,6.0,10.0,1.26,6.25,13.0
+SC3,16/02/2019,Cowdenbeath,Annan Athletic,2,4,2,1,A,3.3,3.4,2.15,3.3,3.53,2.26
+SC3,16/02/2019,Elgin,Stirling,3,2,1,1,H,2.37,3.5,2.8,2.51,3.73,2.8
+SC3,16/02/2019,Peterhead,Queens Park,2,1,1,,H,1.5,4.33,6.0,1.57,4.33,6.25
+SC3,19/02/2019,Cowdenbeath,Albion Rvs,1,0,,,H,1.61,4.0,5.0,1.71,4.0,5.55
+SC3,23/02/2019,Annan Athletic,Albion Rvs,4,0,3,,H,1.33,5.0,9.0,1.37,5.25,9.0
+SC3,23/02/2019,Berwick,Elgin,0,3,,,A,5.75,4.2,1.53,5.75,4.68,1.55
+SC3,23/02/2019,Edinburgh City,Cowdenbeath,2,0,2,,H,1.5,4.0,7.0,1.53,4.4,7.0
+SC3,23/02/2019,Queens Park,Clyde,1,1,,,D,3.75,3.6,1.9,4.0,3.7,1.93
+SC3,23/02/2019,Stirling,Peterhead,0,1,,1,A,3.6,3.8,1.9,3.9,3.8,1.91
+SC3,26/02/2019,Berwick,Annan Athletic,1,2,,1,A,12.0,6.0,1.22,13.0,6.25,1.3
+SC3,26/02/2019,Elgin,Queens Park,2,2,,,D,2.37,3.6,2.7,2.4,3.8,2.9
+SC3,26/02/2019,Peterhead,Cowdenbeath,1,0,1,,H,1.33,5.0,8.5,1.4,5.0,8.5
+SC3,26/02/2019,Stirling,Clyde,0,1,,1,A,3.6,3.6,1.95,3.6,3.83,2.05
+SC3,02/03/2019,Albion Rvs,Berwick,1,1,1,,D,2.45,3.5,2.7,2.61,3.5,2.75
+SC3,02/03/2019,Annan Athletic,Queens Park,2,1,1,,H,1.75,3.75,4.33,1.85,4.25,4.33
+SC3,02/03/2019,Clyde,Edinburgh City,1,0,,,H,2.6,3.3,2.62,2.6,3.47,2.9
+SC3,02/03/2019,Cowdenbeath,Stirling,1,2,,1,A,3.25,3.4,2.15,3.6,3.54,2.25
+SC3,02/03/2019,Peterhead,Elgin,1,0,1,,H,1.44,4.33,7.0,1.48,4.9,7.0
+SC3,05/03/2019,Cowdenbeath,Peterhead,1,3,1,2,A,7.0,4.75,1.4,8.0,4.75,1.5
+SC3,05/03/2019,Edinburgh City,Berwick,1,0,,,H,1.14,8.0,15.0,1.17,8.25,29.0
+SC3,09/03/2019,Berwick,Cowdenbeath,1,1,1,1,D,4.5,3.75,1.72,4.6,4.05,1.77
+SC3,09/03/2019,Edinburgh City,Queens Park,2,0,1,,H,1.5,4.0,6.5,1.55,4.2,6.5
+SC3,09/03/2019,Peterhead,Annan Athletic,2,1,1,1,H,1.7,3.6,5.0,1.8,3.85,5.0
+SC3,09/03/2019,Stirling,Albion Rvs,0,1,,1,A,1.22,6.0,12.0,1.3,6.5,12.0
+SC3,12/03/2019,Berwick,Queens Park,1,2,1,1,A,8.0,4.5,1.4,8.0,5.23,1.45
+SC3,16/03/2019,Annan Athletic,Edinburgh City,3,1,1,,H,3.0,3.3,2.37,3.1,3.41,2.4
+SC3,16/03/2019,Clyde,Stirling,3,1,1,,H,1.66,4.0,4.75,1.75,4.05,4.75
+SC3,16/03/2019,Queens Park,Elgin,4,1,1,1,H,2.2,3.5,3.1,2.25,3.81,3.1
+SC3,19/03/2019,Berwick,Peterhead,2,0,2,,H,13.0,6.5,1.2,15.0,6.75,1.22
+SC3,19/03/2019,Clyde,Elgin,2,0,1,,H,1.5,4.33,6.0,1.57,4.6,6.0
+SC3,23/03/2019,Clyde,Annan Athletic,2,1,,,H,2.0,4.0,3.2,2.07,4.0,3.6
+SC3,23/03/2019,Cowdenbeath,Queens Park,0,0,,,D,2.7,3.8,2.3,3.01,3.8,2.5
+SC3,23/03/2019,Edinburgh City,Peterhead,0,0,,,D,2.62,3.8,2.37,2.9,3.8,2.5
+SC3,23/03/2019,Elgin,Albion Rvs,0,2,,2,A,1.5,4.8,5.25,1.55,4.8,6.0
+SC3,23/03/2019,Stirling,Berwick,1,0,,,H,1.5,4.33,6.0,1.55,4.58,6.5
+SC3,26/03/2019,Albion Rvs,Cowdenbeath,1,0,1,,H,2.9,3.75,2.2,3.3,3.75,2.3
+SC3,30/03/2019,Albion Rvs,Clyde,0,1,,,A,8.5,5.5,1.3,10.0,5.5,1.37
+SC3,30/03/2019,Berwick,Edinburgh City,0,2,,2,A,10.0,6.0,1.25,13.0,6.0,1.28
+SC3,30/03/2019,Elgin,Annan Athletic,0,1,,1,A,3.5,3.8,1.95,3.6,3.99,2.05
+SC3,30/03/2019,Peterhead,Cowdenbeath,2,1,1,1,H,1.33,5.0,9.0,1.4,5.0,9.5
+SC3,30/03/2019,Queens Park,Stirling,0,0,,,D,2.25,3.6,2.9,2.3,3.6,3.2
+SC3,06/04/2019,Albion Rvs,Queens Park,0,4,,1,A,4.33,3.5,1.83,4.33,3.7,1.98
+SC3,06/04/2019,Annan Athletic,Berwick,6,0,,,H,1.22,6.0,12.0,1.26,6.25,12.0
+SC3,06/04/2019,Clyde,Peterhead,3,3,,2,D,2.7,3.4,2.5,2.8,3.4,2.7
+SC3,06/04/2019,Cowdenbeath,Edinburgh City,4,1,2,,H,6.0,3.8,1.57,6.0,3.8,1.68
+SC3,06/04/2019,Stirling,Elgin,2,1,1,1,H,2.2,3.3,3.25,2.25,3.65,3.25
+SC3,13/04/2019,Annan Athletic,Stirling,2,2,,1,D,1.72,3.6,4.75,1.8,4.1,4.75
+SC3,13/04/2019,Berwick,Queens Park,0,3,,2,A,5.25,4.33,1.55,5.3,4.33,1.65
+SC3,13/04/2019,Cowdenbeath,Elgin,2,1,,1,H,2.62,3.6,2.45,2.86,3.6,2.5
+SC3,13/04/2019,Edinburgh City,Clyde,1,2,,,A,2.25,3.4,3.1,2.45,3.53,3.1
+SC3,13/04/2019,Peterhead,Albion Rvs,1,1,,,D,1.22,6.0,12.0,1.25,6.25,15.0
+SC3,20/04/2019,Albion Rvs,Edinburgh City,3,2,1,1,H,6.0,4.0,1.55,6.0,4.4,1.6
+SC3,20/04/2019,Clyde,Berwick,5,0,1,,H,1.14,8.0,15.0,1.15,8.5,23.0
+SC3,20/04/2019,Elgin,Peterhead,1,2,1,2,A,6.5,4.5,1.44,6.5,4.95,1.45
+SC3,20/04/2019,Queens Park,Annan Athletic,0,3,,,A,2.9,3.4,2.37,2.9,3.45,2.5
+SC3,20/04/2019,Stirling,Cowdenbeath,0,1,,,A,2.0,3.6,3.5,2.09,3.6,3.7
+SC3,27/04/2019,Annan Athletic,Cowdenbeath,3,2,2,,H,1.72,3.5,4.33,1.8,3.75,4.65
+SC3,27/04/2019,Berwick,Albion Rvs,0,3,,2,A,2.8,3.5,2.2,2.95,3.7,2.3
+SC3,27/04/2019,Clyde,Queens Park,3,0,1,,H,1.44,4.0,6.5,1.5,4.45,7.0
+SC3,27/04/2019,Edinburgh City,Elgin,1,1,1,,D,2.0,3.5,3.25,2.1,3.7,3.45
+SC3,27/04/2019,Peterhead,Stirling,1,1,1,,D,1.33,4.5,8.0,1.38,5.0,8.75
+SC3,04/05/2019,Albion Rvs,Annan Athletic,0,2,,,A,3.6,3.5,1.9,3.75,3.8,1.97
+SC3,04/05/2019,Cowdenbeath,Clyde,2,1,1,,H,6.5,4.5,1.4,7.0,4.8,1.5
+SC3,04/05/2019,Elgin,Berwick,2,0,,,H,1.36,4.75,6.75,1.45,5.04,8.0
+SC3,04/05/2019,Queens Park,Peterhead,0,2,,2,A,6.5,4.5,1.4,7.0,4.75,1.5
+SC3,04/05/2019,Stirling,Edinburgh City,0,0,,,D,3.0,3.5,2.15,3.0,3.6,2.55

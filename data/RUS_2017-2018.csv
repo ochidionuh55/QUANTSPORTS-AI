@@ -1,0 +1,255 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+RUS,05/07/2017,Orenburg,Krasnodar,1,0,,,H,3.59,3.02,2.17,4.04,3.2,2.29
+RUS,05/07/2017,Rubin Kazan,Ufa,2,1,,,H,2.01,3.0,4.25,2.12,3.11,4.7
+RUS,05/07/2017,Zenit,Akhmat Grozny,0,1,,,A,1.39,4.5,8.2,1.42,5.2,10.5
+RUS,15/07/2017,Ural,FK Rostov,1,1,,,D,2.86,2.9,2.69,3.08,3.01,3.25
+RUS,15/07/2017,Tosno,Ufa,0,1,,,A,2.38,2.87,3.32,2.6,3.0,3.6
+RUS,15/07/2017,FK Anzi Makhackala,CSKA Moscow,1,3,,,A,8.25,4.02,1.44,10.32,4.34,1.61
+RUS,16/07/2017,SKA Khabarovsk,Zenit,0,2,,,A,8.99,4.43,1.37,11.0,5.0,1.4
+RUS,16/07/2017,Rubin Kazan,Krasnodar,1,2,,,A,2.53,2.91,3.03,2.72,3.1,3.34
+RUS,16/07/2017,Akhmat Grozny,Amkar,1,0,,,H,1.85,3.19,4.66,1.92,3.54,5.9
+RUS,18/07/2017,Dynamo Moscow,Spartak Moscow,2,2,,,D,3.67,3.37,2.02,4.35,3.66,2.11
+RUS,18/07/2017,Lokomotiv Moscow,Arsenal Tula,1,0,,,H,1.43,4.06,8.4,1.49,4.33,10.0
+RUS,21/07/2017,CSKA Moscow,Lokomotiv Moscow,1,3,,,A,1.52,3.81,6.73,1.57,4.14,7.7
+RUS,21/07/2017,FK Anzi Makhackala,Amkar,1,0,,,H,2.17,2.98,3.72,2.35,3.13,4.2
+RUS,22/07/2017,Zenit,Rubin Kazan,2,1,,,H,1.44,4.16,7.53,1.5,4.75,9.5
+RUS,22/07/2017,Krasnodar,Tosno,2,0,,,H,1.4,4.37,8.18,1.48,5.0,11.5
+RUS,23/07/2017,Ufa,Spartak Moscow,0,0,,,D,4.24,3.27,1.91,5.47,3.62,2.0
+RUS,23/07/2017,Dynamo Moscow,Ural,0,1,,,A,1.53,3.84,6.5,1.59,4.17,7.5
+RUS,23/07/2017,FK Rostov,Akhmat Grozny,0,1,,,A,2.42,2.94,3.17,2.58,3.2,3.37
+RUS,24/07/2017,Arsenal Tula,SKA Khabarovsk,1,0,,,H,1.69,3.31,5.86,1.82,3.53,6.99
+RUS,29/07/2017,CSKA Moscow,SKA Khabarovsk,2,0,,,H,1.18,6.58,16.08,1.21,7.57,21.0
+RUS,29/07/2017,Ural,Ufa,1,1,,,D,2.54,2.83,3.12,2.72,3.0,3.36
+RUS,29/07/2017,Rubin Kazan,Arsenal Tula,2,1,,,H,1.66,3.43,5.91,1.72,3.7,7.3
+RUS,29/07/2017,Akhmat Grozny,Dynamo Moscow,2,0,,,H,2.08,3.04,3.87,2.16,3.18,4.3
+RUS,30/07/2017,Amkar,FK Rostov,0,1,,,A,2.79,2.63,3.02,3.14,2.8,3.34
+RUS,30/07/2017,Lokomotiv Moscow,FK Anzi Makhackala,1,0,,,H,1.54,3.7,6.86,1.6,4.0,8.0
+RUS,30/07/2017,Tosno,Zenit,0,1,,,A,16.27,6.15,1.19,22.38,7.03,1.28
+RUS,31/07/2017,Spartak Moscow,Krasnodar,2,0,,,H,1.68,3.81,4.81,1.81,4.06,5.6
+RUS,04/08/2017,Krylya Sovetov,Amkar,2,2,,,D,2.51,2.82,3.16,2.64,3.01,3.62
+RUS,04/08/2017,Akhmat Grozny,Arsenal Tula,3,1,,,H,1.95,3.14,4.3,2.07,3.45,5.95
+RUS,04/08/2017,Zenit,FK Anzi Makhackala,1,1,,,D,1.16,6.83,17.14,1.22,10.0,26.0
+RUS,05/08/2017,Ural,Krylya Sovetov,1,3,,,A,2.55,2.93,2.99,2.7,3.07,3.28
+RUS,05/08/2017,FK Anzi Makhackala,Lokomotiv Moscow,0,0,,,D,2.5,3.03,2.93,2.74,3.15,3.21
+RUS,08/08/2017,SKA Khabarovsk,FK Anzi Makhackala,2,0,,,H,2.68,2.8,2.95,2.85,2.97,3.38
+RUS,08/08/2017,Amkar,Ufa,0,0,,,D,2.55,2.75,3.21,2.77,2.88,3.4
+RUS,09/08/2017,Amkar,CSKA Moscow,0,1,,,A,5.73,3.52,1.65,6.51,3.94,1.73
+RUS,12/08/2017,Ural,Arsenal Tula,1,1,,,D,2.49,2.92,3.12,2.64,3.12,3.48
+RUS,13/08/2017,SKA Khabarovsk,Rubin Kazan,1,1,,,D,4.1,3.12,2.0,4.85,3.38,2.1
+RUS,13/08/2017,Lokomotiv Moscow,Tosno,0,2,,,A,1.37,4.37,9.48,1.44,4.68,11.5
+RUS,13/08/2017,Krasnodar,Amkar,1,1,,,D,1.45,4.07,7.74,1.49,4.5,9.3
+RUS,13/08/2017,Zenit,Akhmat Grozny,4,0,,,H,1.44,4.21,7.47,1.48,4.7,8.9
+RUS,14/08/2017,Arsenal Tula,Ural,2,2,,,D,2.35,2.94,3.33,2.68,3.17,3.52
+RUS,18/08/2017,Tosno,SKA Khabarovsk,0,0,,,D,1.58,3.51,6.69,1.77,3.82,8.0
+RUS,19/08/2017,Ural,CSKA Moscow,0,0,,,D,5.15,3.55,1.69,5.75,3.81,1.79
+RUS,19/08/2017,Spartak Moscow,Lokomotiv Moscow,3,4,,,A,1.82,3.36,4.61,1.95,3.54,5.4
+RUS,19/08/2017,Rubin Kazan,FK Anzi Makhackala,6,0,,,H,1.61,3.53,6.27,1.67,3.78,7.4
+RUS,20/08/2017,Amkar,Zenit,0,1,,,A,5.41,3.39,1.71,6.9,3.66,1.78
+RUS,20/08/2017,Dynamo Moscow,Ufa,1,1,,,D,1.81,3.25,4.84,1.93,3.43,5.63
+RUS,20/08/2017,FK Rostov,Krasnodar,0,0,,,D,2.25,3.03,3.42,2.46,3.24,3.64
+RUS,21/08/2017,Akhmat Grozny,Arsenal Tula,1,2,,,A,1.55,3.73,6.54,1.6,4.4,8.2
+RUS,25/08/2017,FK Anzi Makhackala,Ufa,1,0,,,H,2.67,2.82,2.95,2.96,3.1,3.12
+RUS,26/08/2017,Arsenal Tula,Amkar,0,1,,,A,2.4,2.85,3.35,2.5,2.96,3.74
+RUS,26/08/2017,Rubin Kazan,Tosno,1,0,,,H,1.62,3.55,6.01,1.72,3.88,7.3
+RUS,26/08/2017,Lokomotiv Moscow,Ural,2,1,,,H,1.48,4.01,7.2,1.55,4.3,8.2
+RUS,27/08/2017,SKA Khabarovsk,Spartak Moscow,0,0,,,D,7.14,3.99,1.48,8.2,4.5,1.52
+RUS,27/08/2017,CSKA Moscow,Akhmat Grozny,0,1,,,A,1.38,4.56,8.21,1.47,5.1,9.0
+RUS,27/08/2017,Krasnodar,Dynamo Moscow,2,0,,,H,1.7,3.63,4.97,1.8,3.91,5.61
+RUS,27/08/2017,Zenit,FK Rostov,0,0,,,D,1.65,3.55,5.63,1.7,4.25,7.4
+RUS,04/09/2017,Ufa,Spartak Moscow,1,3,,,A,4.85,3.3,1.79,5.8,3.55,1.85
+RUS,04/09/2017,Krasnodar,CSKA Moscow,1,1,,,D,2.26,3.07,3.34,2.55,3.26,3.95
+RUS,04/09/2017,Lokomotiv Moscow,FK Rostov,0,0,,,D,2.21,2.92,3.65,2.38,3.1,4.4
+RUS,08/09/2017,Ural,Zenit,1,1,,,D,6.64,3.82,1.53,8.3,4.38,1.58
+RUS,08/09/2017,Spartak Moscow,Arsenal Tula,2,0,,,H,1.31,4.96,9.98,1.34,6.0,14.0
+RUS,08/09/2017,FK Rostov,Dynamo Moscow,1,0,,,H,1.94,3.08,4.34,2.07,3.26,5.0
+RUS,08/09/2017,Rubin Kazan,Lokomotiv Moscow,1,1,,,D,2.54,2.91,3.01,2.68,3.08,3.32
+RUS,08/09/2017,Tosno,CSKA Moscow,1,2,,,A,6.38,3.91,1.53,8.0,4.3,1.59
+RUS,09/09/2017,Tosno,FK Anzi Makhackala,2,2,,,D,1.98,3.2,4.03,2.1,3.44,4.65
+RUS,09/09/2017,FK Rostov,Arsenal Tula,2,2,,,D,1.5,3.71,7.95,1.56,4.03,9.73
+RUS,09/09/2017,Spartak Moscow,Rubin Kazan,1,0,,,H,1.68,3.72,5.05,1.74,4.1,5.52
+RUS,12/09/2017,Dynamo Moscow,FK Anzi Makhackala,2,0,,,H,1.83,3.3,4.69,1.95,3.48,5.2
+RUS,12/09/2017,Rubin Kazan,SKA Khabarovsk,3,1,,,H,1.28,4.93,12.36,1.34,5.4,15.25
+RUS,15/09/2017,Arsenal Tula,Dynamo Moscow,1,0,,,H,2.68,2.94,2.83,3.14,3.04,3.02
+RUS,16/09/2017,CSKA Moscow,FK Rostov,2,0,,,H,1.66,3.46,5.75,1.73,3.7,6.5
+RUS,16/09/2017,FK Anzi Makhackala,Krasnodar,1,5,,,A,4.91,3.65,1.71,5.75,4.0,1.8
+RUS,17/09/2017,SKA Khabarovsk,Akhmat Grozny,2,2,,,D,4.63,3.15,1.88,5.1,3.32,1.96
+RUS,17/09/2017,Tosno,Spartak Moscow,2,2,,,D,4.3,3.46,1.84,5.1,3.72,1.93
+RUS,17/09/2017,Rubin Kazan,Ural,0,1,,,A,1.58,3.7,6.14,1.7,4.0,7.1
+RUS,18/09/2017,Lokomotiv Moscow,Amkar,0,1,,,A,1.49,3.82,7.87,1.57,7.75,9.8
+RUS,18/09/2017,Zenit,Ufa,3,0,,,H,1.27,5.43,11.29,1.33,10.0,15.72
+RUS,23/09/2017,Dynamo Moscow,CSKA Moscow,0,0,,,D,5.05,3.59,1.71,5.9,6.5,1.77
+RUS,23/09/2017,Spartak Moscow,FK Anzi Makhackala,2,2,,,D,1.3,5.49,8.96,1.35,8.5,11.5
+RUS,24/09/2017,Ural,Tosno,3,1,,,H,2.33,3.05,3.23,2.43,3.26,3.5
+RUS,24/09/2017,FK Rostov,Lokomotiv Moscow,0,1,,,A,2.29,2.87,3.55,2.43,3.02,3.81
+RUS,24/09/2017,Ufa,Arsenal Tula,1,0,,,H,2.28,2.93,3.5,2.38,3.05,3.94
+RUS,24/09/2017,Krasnodar,Zenit,0,2,,,A,2.6,3.19,2.72,2.9,3.38,2.9
+RUS,25/09/2017,Amkar,SKA Khabarovsk,3,0,,,H,1.6,3.48,6.72,1.73,6.5,7.7
+RUS,25/09/2017,Akhmat Grozny,Rubin Kazan,1,0,,,H,2.43,3.18,3.01,2.66,6.5,3.25
+RUS,29/09/2017,Arsenal Tula,Krasnodar,1,0,,,H,4.95,3.65,1.7,5.8,4.0,2.0
+RUS,30/09/2017,SKA Khabarovsk,FK Rostov,2,1,,,H,5.72,3.23,1.73,6.5,3.45,1.87
+RUS,30/09/2017,Tosno,Akhmat Grozny,1,0,,,H,2.92,3.0,2.55,3.38,3.23,2.75
+RUS,30/09/2017,Rubin Kazan,Amkar,0,1,,,A,1.73,3.24,5.63,1.84,3.74,6.45
+RUS,30/09/2017,Spartak Moscow,Ural,2,0,,,H,1.46,4.46,6.24,1.53,4.94,7.43
+RUS,03/10/2017,Arsenal Tula,Ural,2,0,,,H,2.31,2.87,3.48,2.5,3.15,3.78
+RUS,04/10/2017,Tomsk,Rubin Kazan,2,2,,,D,10.91,4.62,1.32,16.5,5.7,1.37
+RUS,04/10/2017,Ural,Orenburg,2,0,,,H,2.39,2.81,3.39,2.6,2.96,4.1
+RUS,08/10/2017,Akhmat Grozny,Krasnodar,2,3,,,A,2.69,3.0,2.75,2.91,3.15,2.99
+RUS,09/10/2017,Dynamo Moscow,Zenit,0,0,,,D,5.08,3.64,1.69,5.9,4.1,1.75
+RUS,09/10/2017,Ufa,Krasnodar,0,1,,,A,3.73,3.14,2.09,4.22,3.32,2.2
+RUS,09/10/2017,Akhmat Grozny,Lokomotiv Moscow,1,1,,,D,2.58,3.02,2.85,2.71,3.15,3.1
+RUS,12/10/2017,Amkar,Krasnodar,1,3,,,A,3.27,2.92,2.41,3.7,3.03,2.56
+RUS,12/10/2017,Spartak Moscow,CSKA Moscow,3,0,,,H,2.64,3.16,2.72,2.8,3.4,2.9
+RUS,12/10/2017,FK Rostov,Ufa,1,0,,,H,2.0,2.94,4.48,2.13,3.11,5.1
+RUS,13/10/2017,Akhmat Grozny,Spartak Moscow,1,2,,,A,3.01,3.24,2.34,3.34,3.45,2.48
+RUS,14/10/2017,Dynamo Moscow,SKA Khabarovsk,2,0,,,H,1.39,4.26,8.92,1.46,4.65,10.97
+RUS,14/10/2017,Ural,FK Anzi Makhackala,2,1,,,H,1.98,3.27,3.89,2.09,3.45,4.46
+RUS,14/10/2017,Krasnodar,CSKA Moscow,0,1,,,A,2.14,3.25,3.38,2.3,3.49,3.8
+RUS,15/10/2017,Ufa,Lokomotiv Moscow,1,0,,,H,3.64,2.89,2.24,3.95,3.04,2.33
+RUS,15/10/2017,FK Rostov,Rubin Kazan,0,1,,,A,2.37,2.8,3.46,2.59,2.94,3.75
+RUS,15/10/2017,Zenit,Arsenal Tula,0,1,,,A,1.25,5.42,12.83,1.29,6.2,17.0
+RUS,16/10/2017,Amkar,Tosno,0,0,,,D,2.28,2.84,3.6,2.4,3.02,4.04
+RUS,21/10/2017,SKA Khabarovsk,Ufa,2,2,,,D,3.41,2.74,2.45,3.65,2.88,2.69
+RUS,21/10/2017,Tosno,FK Rostov,1,1,,,D,3.21,2.86,2.47,3.43,3.01,2.69
+RUS,21/10/2017,Rubin Kazan,Dynamo Moscow,0,0,,,D,1.87,3.23,4.5,1.95,3.42,5.1
+RUS,21/10/2017,Spartak Moscow,Amkar,0,0,,,D,1.42,4.23,7.86,1.47,4.64,9.0
+RUS,22/10/2017,Ural,Akhmat Grozny,2,0,,,H,2.97,3.06,2.47,3.19,3.23,2.63
+RUS,22/10/2017,CSKA Moscow,Zenit,0,0,,,D,2.73,3.08,2.67,3.15,3.28,2.84
+RUS,22/10/2017,FK Anzi Makhackala,Arsenal Tula,3,2,,,H,2.5,3.0,2.98,2.69,3.17,3.16
+RUS,23/10/2017,Lokomotiv Moscow,Krasnodar,2,0,,,H,2.48,3.1,2.91,2.66,3.31,3.1
+RUS,27/10/2017,Arsenal Tula,CSKA Moscow,1,0,,,H,5.01,3.34,1.77,5.63,3.55,1.86
+RUS,28/10/2017,FK Rostov,Spartak Moscow,2,2,,,D,2.88,2.98,2.6,3.22,3.13,2.72
+RUS,29/10/2017,Amkar,Ural,1,1,,,D,2.19,2.85,3.85,2.36,3.0,4.21
+RUS,29/10/2017,Dynamo Moscow,Tosno,0,1,,,A,2.23,3.08,3.42,2.36,3.26,3.9
+RUS,29/10/2017,Zenit,Lokomotiv Moscow,0,3,,,A,1.69,3.41,5.56,1.76,3.68,6.5
+RUS,29/10/2017,Krasnodar,SKA Khabarovsk,4,1,,,H,1.17,6.58,16.25,1.22,7.8,23.0
+RUS,30/10/2017,Ufa,Rubin Kazan,2,1,,,H,3.51,2.8,2.36,3.84,3.08,2.55
+RUS,30/10/2017,Akhmat Grozny,FK Anzi Makhackala,1,1,,,D,1.58,3.78,6.01,1.66,4.14,7.5
+RUS,03/11/2017,Ufa,Krylya Sovetov,1,0,,,H,2.2,2.93,3.66,2.33,3.2,4.3
+RUS,03/11/2017,CSKA Moscow,Tomsk,4,0,,,H,1.01,22.55,48.41,1.03,47.0,176.0
+RUS,03/11/2017,Rubin Kazan,Orenburg,0,0,,,D,1.95,3.04,4.37,2.06,3.26,5.2
+RUS,09/11/2017,Ural,SKA Khabarovsk,1,1,,,D,1.58,3.61,6.47,1.66,3.91,7.7
+RUS,12/11/2017,Akhmat Grozny,Zenit,0,0,,,D,4.17,3.27,1.93,4.9,3.58,2.06
+RUS,12/11/2017,Tosno,Lokomotiv Moscow,1,3,,,A,4.27,3.19,1.94,5.3,3.44,2.08
+RUS,18/11/2017,SKA Khabarovsk,CSKA Moscow,2,4,,,A,7.18,3.77,1.52,8.5,4.0,1.58
+RUS,18/11/2017,Dynamo Moscow,Akhmat Grozny,1,1,,,D,2.64,2.95,2.87,2.76,3.12,3.1
+RUS,18/11/2017,Krasnodar,Spartak Moscow,1,4,,,A,2.3,3.39,2.99,2.48,3.65,3.21
+RUS,18/11/2017,Arsenal Tula,Rubin Kazan,0,0,,,D,3.07,2.88,2.53,3.24,3.1,2.7
+RUS,19/11/2017,Ufa,Ural,2,0,,,H,2.19,2.94,3.74,2.39,3.15,4.2
+RUS,19/11/2017,FK Anzi Makhackala,Lokomotiv Moscow,0,1,,,A,4.29,3.34,1.88,4.75,3.6,1.96
+RUS,19/11/2017,FK Rostov,Amkar,0,0,,,D,1.78,3.06,5.69,1.85,3.21,6.5
+RUS,19/11/2017,Zenit,Tosno,5,0,,,H,1.34,4.75,9.39,1.37,5.6,13.5
+RUS,24/11/2017,Amkar,Dynamo Moscow,2,1,,,H,2.34,2.73,3.67,2.5,2.9,3.93
+RUS,25/11/2017,Tosno,Arsenal Tula,3,2,,,H,2.25,3.01,3.48,2.44,3.23,3.85
+RUS,25/11/2017,Akhmat Grozny,Ufa,2,1,,,H,1.92,3.1,4.52,2.06,3.3,5.0
+RUS,26/11/2017,Ural,Krasnodar,0,1,,,A,4.0,3.34,1.95,4.6,3.5,2.05
+RUS,26/11/2017,Rubin Kazan,CSKA Moscow,0,1,,,A,3.21,2.89,2.45,3.6,3.13,2.6
+RUS,26/11/2017,FK Rostov,FK Anzi Makhackala,2,0,,,H,1.64,3.48,6.06,1.71,3.69,6.9
+RUS,27/11/2017,SKA Khabarovsk,Lokomotiv Moscow,1,2,,,A,5.44,3.57,1.66,6.3,3.81,1.75
+RUS,27/11/2017,Spartak Moscow,Zenit,3,1,,,H,2.62,3.22,2.68,2.75,3.5,2.9
+RUS,03/12/2017,Amkar,Zenit,1,0,,,H,4.61,3.17,1.86,5.5,3.45,1.96
+RUS,03/12/2017,Spartak Moscow,FK Anzi Makhackala,1,0,,,H,1.34,4.63,9.62,1.4,5.5,13.5
+RUS,03/12/2017,FK Rostov,Akhmat Grozny,0,0,,,D,2.4,2.86,3.3,2.62,3.03,3.66
+RUS,05/12/2017,CSKA Moscow,Arsenal Tula,3,0,,,H,1.24,5.66,12.35,1.27,6.7,15.5
+RUS,08/12/2017,Ufa,FK Rostov,1,4,,,A,2.91,2.72,2.8,3.11,2.95,3.02
+RUS,08/12/2017,CSKA Moscow,Spartak Moscow,2,1,,,H,2.03,3.45,3.54,2.35,3.68,3.91
+RUS,08/12/2017,FK Anzi Makhackala,Dynamo Moscow,1,3,,,A,2.82,2.89,2.73,3.1,3.05,2.91
+RUS,04/01/2018,Ural,Rubin Kazan,1,1,,,D,3.16,2.78,2.57,3.46,2.9,2.75
+RUS,04/01/2018,Ufa,Zenit,1,2,,,A,4.27,3.08,1.98,4.9,3.25,2.06
+RUS,04/01/2018,FK Rostov,CSKA Moscow,1,2,,,A,3.34,2.91,2.37,3.6,3.0,2.5
+RUS,04/01/2018,Krasnodar,FK Anzi Makhackala,1,1,,,D,1.41,4.44,7.68,1.46,4.85,9.5
+RUS,09/01/2018,Krylya Sovetov,FK Anzi Makhackala,1,0,,,H,1.68,3.47,5.62,1.74,3.64,6.35
+RUS,09/01/2018,CSKA Moscow,Ural,4,0,,,H,1.54,3.9,6.45,1.59,4.25,7.46
+RUS,09/01/2018,Krasnodar,Lokomotiv Moscow,2,1,,,H,2.39,2.99,3.21,2.54,3.26,3.42
+RUS,10/01/2018,Rubin Kazan,Krylya Sovetov,2,1,,,H,1.71,3.3,5.85,1.84,3.45,6.7
+RUS,12/01/2018,Yenisey,Akhmat Grozny,1,1,,,D,2.69,2.85,2.91,2.81,3.01,3.07
+RUS,12/01/2018,FK Anzi Makhackala,Ufa,0,0,,,D,3.92,2.84,2.19,4.3,2.94,2.3
+RUS,03/02/2018,FK Anzi Makhackala,Rubin Kazan,1,1,,,D,3.53,2.85,2.31,3.81,3.02,2.43
+RUS,09/02/2018,Yenisey,Arsenal Tula,0,0,,,D,2.39,2.92,3.31,2.53,3.06,3.6
+RUS,09/02/2018,Dynamo Moscow,Orenburg,2,0,,,H,2.11,3.04,3.85,2.26,3.2,4.35
+RUS,09/02/2018,Zenit,Spartak Moscow,0,0,,,D,1.99,3.47,3.7,2.06,3.72,4.15
+RUS,09/02/2018,Akhmat Grozny,Ufa,2,1,,,H,1.8,3.17,5.24,1.91,3.4,5.87
+RUS,12/02/2018,Krasnodar,Ural,2,0,,,H,1.44,4.46,6.87,1.48,4.75,8.25
+RUS,12/02/2018,FK Rostov,CSKA Moscow,0,0,,,D,2.78,2.76,2.9,3.1,2.95,3.09
+RUS,12/02/2018,Spartak Moscow,Lokomotiv Moscow,2,1,,,H,2.51,3.1,2.91,2.65,3.22,3.09
+RUS,03/03/2018,CSKA Moscow,Ural,1,0,,,H,1.28,5.09,12.21,1.35,5.6,15.47
+RUS,03/03/2018,Zenit,Amkar,0,0,,,D,1.31,4.68,11.69,1.35,5.5,14.3
+RUS,03/03/2018,Krasnodar,FK Rostov,3,1,,,H,1.99,3.16,4.1,2.07,3.35,5.15
+RUS,08/03/2018,Dynamo Moscow,Rubin Kazan,1,1,,,D,2.75,2.75,2.95,2.95,2.92,3.1
+RUS,11/03/2018,Lokomotiv Moscow,Arsenal Tula,3,1,,,H,1.7,3.37,5.66,1.76,3.6,6.56
+RUS,11/03/2018,Dynamo Moscow,CSKA Moscow,0,0,,,D,3.17,2.97,2.44,3.4,3.08,2.57
+RUS,12/03/2018,Arsenal Tula,Zenit,4,2,,,H,4.22,3.18,1.95,4.84,3.35,2.04
+RUS,17/03/2018,SKA Khabarovsk,Ural,0,3,,,A,3.53,2.99,2.23,3.8,3.15,2.4
+RUS,17/03/2018,Arsenal Tula,FK Rostov,2,2,,,D,2.73,2.74,2.97,2.88,2.89,3.2
+RUS,17/03/2018,Krasnodar,Ufa,0,1,,,A,1.49,3.93,7.35,1.67,4.2,8.55
+RUS,17/03/2018,FK Anzi Makhackala,Tosno,2,0,,,H,2.23,3.02,3.48,2.35,3.18,3.84
+RUS,17/03/2018,Rubin Kazan,Spartak Moscow,1,2,,,A,3.16,2.98,2.41,3.4,3.1,2.54
+RUS,31/03/2018,Akhmat Grozny,SKA Khabarovsk,0,0,,,D,1.24,5.45,14.33,1.3,6.1,19.0
+RUS,31/03/2018,Amkar,Lokomotiv Moscow,2,1,,,H,8.0,3.53,1.54,11.0,3.85,1.61
+RUS,31/03/2018,Dynamo Moscow,Arsenal Tula,2,1,,,H,2.25,3.0,3.51,2.42,3.2,3.8
+RUS,31/03/2018,Spartak Moscow,Tosno,2,1,,,H,1.32,4.78,10.26,1.37,5.05,13.35
+RUS,03/04/2018,SKA Khabarovsk,Tosno,0,1,,,A,3.77,3.15,2.08,4.33,3.34,2.3
+RUS,03/04/2018,Ufa,Dynamo Moscow,1,1,,,D,2.41,2.82,3.35,2.53,3.0,3.7
+RUS,03/04/2018,Lokomotiv Moscow,Spartak Moscow,0,0,,,D,2.71,3.12,2.66,2.97,3.36,2.94
+RUS,03/04/2018,Arsenal Tula,Akhmat Grozny,1,0,,,H,2.49,2.96,3.06,2.65,3.1,3.3
+RUS,08/04/2018,Ural,Krasnodar,1,2,,,A,3.3,3.09,2.28,3.6,3.26,2.36
+RUS,08/04/2018,Zenit,Arsenal Tula,1,0,,,H,1.32,4.77,10.79,1.35,5.44,14.77
+RUS,08/04/2018,Lokomotiv Moscow,Spartak Moscow,0,0,,,D,2.67,3.01,2.79,2.86,3.2,2.94
+RUS,11/04/2018,Zenit,Akhmat Grozny,1,0,,,H,1.5,4.06,6.67,1.57,4.31,7.4
+RUS,11/04/2018,Krasnodar,FK Rostov,2,2,,,D,1.82,3.35,4.68,1.9,3.55,5.2
+RUS,11/04/2018,Spartak Moscow,Ural,1,2,,,A,1.57,3.92,5.89,1.64,4.13,6.65
+RUS,13/04/2018,Akhmat Grozny,Tosno,1,0,,,H,1.68,3.49,5.53,1.75,3.85,6.3
+RUS,14/04/2018,Amkar,Rubin Kazan,0,3,,,A,2.96,2.71,2.82,3.18,2.8,3.02
+RUS,14/04/2018,Dynamo Moscow,Lokomotiv Moscow,0,4,,,A,3.59,3.06,2.18,3.9,3.23,2.3
+RUS,14/04/2018,Zenit,FK Anzi Makhackala,1,0,,,H,1.35,4.77,9.03,1.39,5.25,10.97
+RUS,14/04/2018,Krasnodar,Arsenal Tula,3,0,,,H,1.63,3.8,5.45,1.68,4.1,6.13
+RUS,15/04/2018,Ural,Spartak Moscow,2,1,,,H,5.6,3.88,1.6,6.13,4.25,1.66
+RUS,15/04/2018,Ufa,CSKA Moscow,1,1,,,D,5.12,3.25,1.79,5.5,3.46,1.87
+RUS,15/04/2018,FK Rostov,SKA Khabarovsk,2,0,,,H,1.22,5.7,15.5,1.27,6.3,19.05
+RUS,18/04/2018,Lokomotiv Moscow,Akhmat Grozny,0,0,,,D,1.7,3.38,5.65,1.81,3.7,6.5
+RUS,18/04/2018,Zenit,Dynamo Moscow,2,1,,,H,1.5,3.96,6.93,1.56,4.2,8.3
+RUS,18/04/2018,CSKA Moscow,Amkar,3,0,,,H,1.43,4.16,8.37,1.48,4.5,10.02
+RUS,21/04/2018,Rubin Kazan,FK Rostov,1,1,,,D,2.15,2.86,4.01,2.34,3.1,4.46
+RUS,21/04/2018,FK Anzi Makhackala,Ural,0,1,,,A,2.1,3.18,3.68,2.25,3.36,4.1
+RUS,22/04/2018,SKA Khabarovsk,Dynamo Moscow,0,1,,,A,6.81,3.7,1.55,7.7,3.88,1.61
+RUS,22/04/2018,Arsenal Tula,Zenit,3,3,,,D,4.53,3.41,1.83,5.09,3.6,1.91
+RUS,22/04/2018,CSKA Moscow,Krasnodar,2,1,,,H,1.83,3.47,4.43,1.94,3.62,4.75
+RUS,22/04/2018,Tosno,Amkar,0,2,,,A,2.6,2.9,3.01,2.75,3.01,3.3
+RUS,22/04/2018,Lokomotiv Moscow,Ufa,0,0,,,D,1.53,3.68,7.36,1.63,3.98,8.5
+RUS,23/04/2018,Spartak Moscow,Akhmat Grozny,1,3,,,A,1.41,4.47,7.88,1.46,4.85,9.0
+RUS,28/04/2018,Arsenal Tula,FK Anzi Makhackala,2,1,,,H,1.88,3.37,4.27,2.03,3.6,4.85
+RUS,29/04/2018,Amkar,Spartak Moscow,0,2,,,A,5.12,3.53,1.72,5.71,3.75,1.82
+RUS,29/04/2018,Zenit,CSKA Moscow,0,0,,,D,2.24,3.19,3.32,2.33,3.4,3.6
+RUS,29/04/2018,FK Rostov,Tosno,2,0,,,H,1.61,3.54,6.32,1.67,3.7,7.5
+RUS,30/04/2018,Ufa,SKA Khabarovsk,1,0,,,H,1.29,4.96,11.84,1.34,5.35,14.3
+RUS,30/04/2018,Dynamo Moscow,Rubin Kazan,0,0,,,D,2.96,2.73,2.76,3.2,2.83,3.05
+RUS,30/04/2018,Akhmat Grozny,Ural,0,0,,,D,1.72,3.41,5.27,1.8,3.6,5.94
+RUS,30/04/2018,Krasnodar,Lokomotiv Moscow,2,0,,,H,2.46,3.18,2.92,2.6,3.42,3.2
+RUS,05/05/2018,SKA Khabarovsk,Krasnodar,0,1,,,A,10.38,5.06,1.3,15.0,5.54,1.34
+RUS,05/05/2018,Tosno,Dynamo Moscow,1,2,,,A,2.93,2.97,2.58,3.1,3.15,2.8
+RUS,05/05/2018,Lokomotiv Moscow,Zenit,1,0,,,H,2.35,3.06,3.2,2.51,3.2,3.4
+RUS,05/05/2018,Spartak Moscow,FK Rostov,2,0,,,H,1.62,3.7,5.71,1.72,4.2,7.1
+RUS,08/05/2018,Krylya Sovetov,Orenburg,0,3,,,A,2.36,2.83,3.47,2.48,3.0,3.76
+RUS,08/05/2018,CSKA Moscow,FK Rostov,0,1,,,A,1.87,3.15,4.72,1.97,3.27,5.25
+RUS,08/05/2018,Akhmat Grozny,Yenisey,1,0,,,H,1.74,3.37,5.19,1.87,3.64,5.65
+RUS,10/05/2018,Arsenal Tula,Ufa,1,1,,,D,2.26,2.98,3.5,2.41,3.13,3.72
+RUS,11/05/2018,Orenburg,Rubin Kazan,1,0,,,H,3.07,2.77,2.65,3.22,2.88,2.85
+RUS,11/05/2018,Ufa,Krylya Sovetov,1,2,,,A,2.2,2.92,3.77,2.35,3.04,4.04
+RUS,11/05/2018,FK Anzi Makhackala,Yenisey,2,1,,,H,3.15,3.03,2.41,3.31,3.17,2.57
+RUS,13/05/2018,Amkar,Akhmat Grozny,0,0,,,D,2.06,3.26,3.68,2.2,3.5,4.05
+RUS,13/05/2018,Arsenal Tula,Lokomotiv Moscow,2,0,,,H,2.06,3.49,3.4,2.18,3.72,3.7
+RUS,13/05/2018,CSKA Moscow,FK Anzi Makhackala,2,1,,,H,1.19,6.56,14.55,1.23,7.2,18.57
+RUS,13/05/2018,FK Rostov,Ural,1,0,,,H,1.68,3.43,5.69,1.77,3.62,6.23
+RUS,13/05/2018,Krasnodar,Rubin Kazan,1,1,,,D,1.62,3.71,5.67,1.66,3.95,6.4
+RUS,13/05/2018,Spartak Moscow,Dynamo Moscow,0,1,,,A,1.43,4.57,6.92,1.47,5.25,8.0
+RUS,13/05/2018,Ufa,Tosno,5,0,,,H,1.78,3.31,5.02,1.86,3.5,5.85
+RUS,13/05/2018,Zenit,SKA Khabarovsk,6,0,,,H,1.13,7.82,19.35,1.17,9.0,27.6
+RUS,17/05/2018,Yenisey,FK Anzi Makhackala,3,0,,,H,2.12,3.18,3.58,2.23,3.34,3.88
+RUS,17/05/2018,Amkar,Tambov,2,0,,,H,1.77,3.19,5.36,1.86,3.4,6.51
+RUS,20/05/2018,Tambov,Amkar,0,1,,,A,2.99,3.08,2.45,3.22,3.3,2.7
+RUS,20/05/2018,FK Anzi Makhackala,Yenisey,4,3,,,H,2.06,3.43,3.45,2.19,3.66,4.0
+RUS,05/06/2018,Ural,Amkar,0,2,,,A,2.66,2.87,2.93,2.85,3.0,3.25
+RUS,05/06/2018,CSKA Moscow,Arsenal Tula,6,0,,,H,1.32,5.04,9.08,1.39,5.95,10.97
+RUS,08/06/2018,Ufa,FK Anzi Makhackala,3,0,,,H,1.57,3.58,6.86,1.65,3.86,7.69
+RUS,10/06/2018,Krylya Sovetov,Dynamo Moscow,1,0,,,H,3.23,2.97,2.4,3.4,3.18,2.48
+RUS,10/06/2018,FK Rostov,Orenburg,0,1,,,A,1.85,3.12,4.97,1.92,3.25,5.6
+RUS,10/06/2018,Rubin Kazan,Ural,1,0,,,H,1.86,3.16,4.84,1.95,3.4,5.23

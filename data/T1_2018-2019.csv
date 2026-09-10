@@ -1,0 +1,307 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+T1,10/08/2018,Ankaragucu,Galatasaray,1,3,1,2,A,4.5,4.0,1.72,4.89,4.09,1.82
+T1,11/08/2018,Fenerbahce,Bursaspor,2,1,2,1,H,1.36,5.0,7.5,1.44,5.35,9.5
+T1,11/08/2018,Rizespor,Kasimpasa,2,3,1,,A,2.3,3.4,3.0,2.5,3.64,3.05
+T1,11/08/2018,Sivasspor,Alanyaspor,1,0,,,H,2.25,3.25,3.2,2.3,3.77,3.3
+T1,12/08/2018,Besiktas,Akhisar Belediyespor,2,1,2,,H,1.4,5.0,6.5,1.47,5.25,8.7
+T1,12/08/2018,Buyuksehyr,Trabzonspor,2,0,1,,H,1.8,3.6,4.5,1.97,3.74,4.7
+T1,12/08/2018,Goztep,Yeni Malatyaspor,1,3,,1,A,1.95,3.3,4.0,2.1,3.63,4.0
+T1,12/08/2018,Konyaspor,Erzurum BB,3,2,2,1,H,1.75,3.5,4.75,1.89,3.77,4.75
+T1,13/08/2018,Kayserispor,Antalyaspor,2,0,1,,H,1.95,3.4,3.9,2.03,3.63,4.13
+T1,17/08/2018,Trabzonspor,Sivasspor,3,1,3,1,H,1.75,3.75,4.5,1.89,3.83,4.84
+T1,18/08/2018,Antalyaspor,Konyaspor,3,3,1,2,D,2.87,3.1,2.54,2.87,3.49,2.67
+T1,18/08/2018,Bursaspor,Kayserispor,0,0,,,D,2.5,3.2,2.87,2.61,3.38,3.1
+T1,18/08/2018,Yeni Malatyaspor,Fenerbahce,1,0,,,H,5.0,3.5,1.72,5.0,3.7,1.92
+T1,19/08/2018,Akhisar Belediyespor,Rizespor,1,1,,1,D,2.1,3.1,3.75,2.29,3.49,3.75
+T1,19/08/2018,Alanyaspor,Ankaragucu,0,2,,,A,2.0,3.3,3.8,2.18,3.78,3.8
+T1,19/08/2018,Erzurum BB,Besiktas,1,3,1,,A,6.0,3.8,1.57,6.0,4.3,1.65
+T1,19/08/2018,Galatasaray,Goztep,1,0,1,,H,1.25,5.5,12.0,1.26,7.21,13.95
+T1,20/08/2018,Kasimpasa,Buyuksehyr,2,1,,,H,4.2,3.75,1.8,4.46,3.9,1.89
+T1,24/08/2018,Rizespor,Erzurum BB,0,0,,,D,1.64,3.6,5.75,1.76,4.29,5.75
+T1,25/08/2018,Ankaragucu,Trabzonspor,2,2,1,1,D,3.4,3.25,2.14,3.4,3.64,2.34
+T1,25/08/2018,Goztep,Fenerbahce,1,0,,,H,4.75,3.5,1.75,5.14,3.67,1.92
+T1,25/08/2018,Kayserispor,Yeni Malatyaspor,0,0,,,D,2.04,3.1,4.0,2.2,3.4,4.0
+T1,26/08/2018,Besiktas,Antalyaspor,2,3,1,3,A,1.2,6.5,13.0,1.27,7.03,15.55
+T1,26/08/2018,Konyaspor,Bursaspor,1,1,1,1,D,1.8,3.4,4.75,1.95,3.83,4.75
+T1,26/08/2018,Sivasspor,Kasimpasa,0,3,,1,A,1.95,3.3,4.0,2.11,3.79,4.0
+T1,27/08/2018,Buyuksehyr,Akhisar Belediyespor,3,1,1,1,H,1.44,4.5,6.5,1.47,4.79,9.17
+T1,27/08/2018,Galatasaray,Alanyaspor,6,0,1,,H,1.25,5.75,11.0,1.3,6.57,14.0
+T1,31/08/2018,Yeni Malatyaspor,Konyaspor,0,1,,1,A,2.2,3.2,3.5,2.39,3.33,3.5
+T1,01/09/2018,Akhisar Belediyespor,Sivasspor,1,1,,,D,2.0,3.5,3.6,2.2,3.74,3.65
+T1,01/09/2018,Alanyaspor,Goztep,1,0,,,H,2.45,3.3,2.8,2.65,3.62,2.82
+T1,01/09/2018,Fenerbahce,Kayserispor,2,3,1,,A,1.44,4.33,7.0,1.49,4.82,8.83
+T1,01/09/2018,Trabzonspor,Galatasaray,4,0,3,,H,3.5,3.6,2.0,3.5,3.84,2.22
+T1,02/09/2018,Antalyaspor,Rizespor,2,1,,1,H,2.4,3.3,2.87,2.48,3.7,2.97
+T1,02/09/2018,Bursaspor,Besiktas,1,1,,,D,5.25,4.0,1.6,5.45,4.2,1.72
+T1,02/09/2018,Erzurum BB,Buyuksehyr,0,1,,1,A,5.5,4.0,1.57,5.6,4.51,1.64
+T1,02/09/2018,Kasimpasa,Ankaragucu,2,1,1,,H,1.9,3.6,3.8,2.03,4.0,3.95
+T1,14/09/2018,Galatasaray,Kasimpasa,4,1,,,H,1.55,4.33,5.25,1.64,4.71,6.5
+T1,15/09/2018,Ankaragucu,Akhisar Belediyespor,1,0,1,,H,2.3,3.3,3.0,2.47,3.6,3.15
+T1,15/09/2018,Besiktas,Yeni Malatyaspor,2,1,,,H,1.33,5.25,8.0,1.39,5.5,9.47
+T1,15/09/2018,Goztep,Kayserispor,2,0,2,,H,2.2,3.25,3.3,2.4,3.46,3.3
+T1,16/09/2018,Buyuksehyr,Antalyaspor,4,0,1,,H,1.4,4.5,7.5,1.47,5.15,7.5
+T1,16/09/2018,Konyaspor,Fenerbahce,0,1,,,A,3.5,3.5,2.04,3.75,3.72,2.16
+T1,16/09/2018,Rizespor,Bursaspor,1,1,,1,D,2.0,3.4,3.75,2.28,3.68,3.75
+T1,16/09/2018,Sivasspor,Erzurum BB,2,2,1,1,D,1.72,3.75,4.5,1.84,4.0,4.65
+T1,17/09/2018,Alanyaspor,Trabzonspor,1,0,1,,H,3.0,3.5,2.25,3.19,3.75,2.33
+T1,21/09/2018,Bursaspor,Buyuksehyr,0,0,,,D,3.4,3.3,2.14,3.75,3.3,2.23
+T1,21/09/2018,Erzurum BB,Ankaragucu,0,1,,,A,2.0,3.6,3.5,2.18,3.7,3.6
+T1,22/09/2018,Kayserispor,Konyaspor,0,2,,2,A,2.3,3.2,3.2,2.46,3.2,3.48
+T1,22/09/2018,Trabzonspor,Goztep,1,2,,2,A,1.6,4.0,5.25,1.71,4.05,5.41
+T1,22/09/2018,Yeni Malatyaspor,Rizespor,1,0,1,,H,1.83,3.6,4.2,1.95,3.6,4.27
+T1,23/09/2018,Akhisar Belediyespor,Galatasaray,3,0,,,H,5.0,3.6,1.7,5.0,4.11,1.8
+T1,23/09/2018,Antalyaspor,Sivasspor,2,1,2,1,H,2.4,3.4,2.8,2.4,3.66,2.92
+T1,23/09/2018,Kasimpasa,Alanyaspor,1,2,,1,A,1.7,3.75,4.75,1.78,4.2,4.75
+T1,24/09/2018,Fenerbahce,Besiktas,1,1,,1,D,2.4,3.4,2.87,2.5,3.47,2.95
+T1,28/09/2018,Galatasaray,Erzurum BB,1,0,,,H,1.28,5.5,10.0,1.35,5.9,11.7
+T1,29/09/2018,Alanyaspor,Akhisar Belediyespor,2,1,1,,H,1.95,3.5,3.8,2.02,3.8,3.9
+T1,29/09/2018,Besiktas,Kayserispor,2,0,1,,H,1.3,5.25,10.0,1.36,5.5,12.41
+T1,29/09/2018,Trabzonspor,Kasimpasa,4,2,1,2,H,1.83,4.0,3.75,1.95,4.25,3.84
+T1,30/09/2018,Goztep,Konyaspor,3,2,2,,H,2.37,3.25,3.0,2.5,3.3,3.3
+T1,30/09/2018,Rizespor,Fenerbahce,3,0,3,,H,3.8,3.6,1.9,4.1,3.65,2.0
+T1,30/09/2018,Sivasspor,Bursaspor,2,0,1,,H,2.0,3.4,3.7,2.15,3.65,3.75
+T1,01/10/2018,Ankaragucu,Antalyaspor,0,1,,1,A,2.1,3.4,3.4,2.28,3.6,3.4
+T1,01/10/2018,Buyuksehyr,Yeni Malatyaspor,1,1,,1,D,1.33,5.25,8.0,1.4,5.25,10.56
+T1,05/10/2018,Kasimpasa,Goztep,3,1,1,,H,2.25,3.6,2.9,2.37,3.72,3.21
+T1,06/10/2018,Antalyaspor,Galatasaray,0,1,,,A,5.0,3.8,1.66,5.0,4.1,1.8
+T1,06/10/2018,Bursaspor,Ankaragucu,1,0,1,,H,2.04,3.4,3.6,2.1,3.55,4.15
+T1,06/10/2018,Erzurum BB,Alanyaspor,1,0,,,H,2.3,3.25,3.1,2.4,3.55,3.15
+T1,06/10/2018,Kayserispor,Rizespor,2,2,,1,D,2.14,3.3,3.4,2.3,3.56,3.51
+T1,07/10/2018,Akhisar Belediyespor,Trabzonspor,1,3,,2,A,3.4,3.2,2.2,3.4,3.8,2.3
+T1,07/10/2018,Fenerbahce,Buyuksehyr,0,0,,,D,2.37,3.2,3.0,2.5,3.4,3.12
+T1,07/10/2018,Konyaspor,Besiktas,2,2,1,,D,5.0,3.8,1.64,5.0,4.0,1.8
+T1,07/10/2018,Yeni Malatyaspor,Sivasspor,4,4,1,3,D,2.3,3.3,3.1,2.4,3.4,3.25
+T1,19/10/2018,Galatasaray,Bursaspor,1,1,,,D,1.53,4.0,6.0,1.61,4.45,7.25
+T1,20/10/2018,Buyuksehyr,Kayserispor,1,0,1,,H,1.44,4.2,7.5,1.5,4.61,8.31
+T1,20/10/2018,Kasimpasa,Akhisar Belediyespor,5,0,,,H,1.75,3.6,4.5,1.81,4.2,4.5
+T1,20/10/2018,Sivasspor,Fenerbahce,0,0,,,D,3.2,3.4,2.2,3.4,3.65,2.26
+T1,21/10/2018,Alanyaspor,Antalyaspor,0,1,,1,A,2.0,3.5,3.6,2.07,3.72,3.75
+T1,21/10/2018,Ankaragucu,Yeni Malatyaspor,1,0,1,,H,2.54,3.1,2.87,2.71,3.25,3.0
+T1,21/10/2018,Goztep,Besiktas,2,0,,,H,3.5,3.4,2.04,3.7,3.6,2.15
+T1,21/10/2018,Rizespor,Konyaspor,1,1,1,,D,3.2,3.2,2.25,3.2,3.5,2.4
+T1,22/10/2018,Trabzonspor,Erzurum BB,0,0,,,D,1.44,4.33,7.0,1.49,4.9,7.0
+T1,26/10/2018,Bursaspor,Alanyaspor,2,0,2,,H,1.8,3.5,4.5,1.86,3.6,5.02
+T1,27/10/2018,Antalyaspor,Trabzonspor,1,1,1,1,D,3.2,3.4,2.2,3.3,3.82,2.22
+T1,27/10/2018,Erzurum BB,Kasimpasa,1,1,1,,D,2.7,3.4,2.5,2.85,3.6,2.65
+T1,27/10/2018,Konyaspor,Buyuksehyr,0,1,,,A,2.9,3.1,2.5,3.05,3.2,2.62
+T1,28/10/2018,Fenerbahce,Ankaragucu,1,3,,1,A,1.44,4.5,6.5,1.5,4.8,9.02
+T1,28/10/2018,Kayserispor,Sivasspor,2,0,,,H,2.37,3.3,2.9,2.5,3.4,3.1
+T1,28/10/2018,Yeni Malatyaspor,Galatasaray,2,0,1,,H,3.6,3.3,2.04,3.79,3.35,2.23
+T1,29/10/2018,Akhisar Belediyespor,Goztep,1,0,1,,H,2.9,3.25,2.4,2.9,3.5,2.65
+T1,29/10/2018,Besiktas,Rizespor,4,1,2,,H,1.2,6.0,15.0,1.22,8.25,25.0
+T1,02/11/2018,Galatasaray,Fenerbahce,2,2,1,,D,2.0,3.4,3.75,2.15,3.4,4.1
+T1,03/11/2018,Akhisar Belediyespor,Erzurum BB,1,1,1,1,D,1.9,3.3,4.2,2.05,3.6,4.2
+T1,03/11/2018,Buyuksehyr,Besiktas,1,0,1,,H,2.3,3.25,3.1,2.4,3.4,3.3
+T1,03/11/2018,Kasimpasa,Antalyaspor,1,2,1,1,A,1.85,3.4,4.33,1.95,4.0,4.33
+T1,04/11/2018,Alanyaspor,Yeni Malatyaspor,0,1,,1,A,2.7,3.1,2.7,2.85,3.25,2.8
+T1,04/11/2018,Ankaragucu,Kayserispor,3,1,2,,H,2.3,3.1,3.3,2.45,3.25,3.35
+T1,04/11/2018,Trabzonspor,Bursaspor,1,1,1,,D,1.7,3.6,5.0,1.8,3.95,5.0
+T1,05/11/2018,Goztep,Rizespor,2,0,1,,H,1.7,3.6,5.0,1.77,4.04,5.0
+T1,05/11/2018,Sivasspor,Konyaspor,0,0,,,D,2.37,3.1,3.1,2.58,3.35,3.1
+T1,09/11/2018,Yeni Malatyaspor,Trabzonspor,5,0,2,,H,3.0,3.3,2.35,3.18,3.35,2.6
+T1,10/11/2018,Erzurum BB,Goztep,2,1,1,,H,2.37,3.2,3.1,2.5,3.37,3.25
+T1,10/11/2018,Kayserispor,Galatasaray,0,3,,1,A,2.37,3.4,2.9,2.52,3.4,3.1
+T1,10/11/2018,Konyaspor,Ankaragucu,2,0,,,H,1.72,3.4,5.25,1.87,3.75,5.25
+T1,10/11/2018,Rizespor,Buyuksehyr,1,2,,,A,4.0,3.5,1.9,4.35,3.65,1.95
+T1,11/11/2018,Antalyaspor,Akhisar Belediyespor,1,2,,,A,1.95,3.5,3.75,2.0,3.7,4.05
+T1,11/11/2018,Besiktas,Sivasspor,1,2,1,1,A,1.36,4.75,8.0,1.45,5.0,8.22
+T1,11/11/2018,Bursaspor,Kasimpasa,1,2,1,1,A,2.0,3.5,3.6,2.12,3.6,3.7
+T1,11/11/2018,Fenerbahce,Alanyaspor,2,0,2,,H,1.44,4.33,7.0,1.5,4.9,7.35
+T1,23/11/2018,Galatasaray,Konyaspor,1,1,,,D,1.75,3.5,4.75,1.85,3.65,5.05
+T1,24/11/2018,Alanyaspor,Kayserispor,5,0,1,,H,1.9,3.25,4.2,2.1,3.55,4.2
+T1,24/11/2018,Ankaragucu,Besiktas,1,4,,3,A,4.5,3.75,1.75,4.5,3.85,1.85
+T1,24/11/2018,Erzurum BB,Antalyaspor,1,0,,,H,2.0,3.3,3.75,2.15,3.45,3.8
+T1,25/11/2018,Akhisar Belediyespor,Bursaspor,2,4,2,1,A,2.5,3.2,2.87,2.65,3.2,3.04
+T1,25/11/2018,Kasimpasa,Yeni Malatyaspor,3,0,1,,H,2.04,3.5,3.4,2.1,3.65,3.72
+T1,25/11/2018,Sivasspor,Rizespor,1,1,,,D,1.75,3.5,4.75,1.86,3.7,4.75
+T1,25/11/2018,Trabzonspor,Fenerbahce,2,1,,,H,2.4,3.3,2.87,2.51,3.5,3.08
+T1,26/11/2018,Goztep,Buyuksehyr,0,2,,1,A,2.87,3.2,2.5,3.07,3.25,2.65
+T1,30/11/2018,Konyaspor,Alanyaspor,2,0,,,H,1.7,3.6,5.0,1.79,3.8,5.25
+T1,30/11/2018,Rizespor,Ankaragucu,1,1,,1,D,1.95,3.5,3.75,2.08,3.85,3.75
+T1,01/12/2018,Antalyaspor,Goztep,1,0,1,,H,2.2,3.1,3.5,2.37,3.35,3.5
+T1,01/12/2018,Buyuksehyr,Sivasspor,0,1,,1,A,1.5,4.33,6.0,1.56,4.33,7.1
+T1,01/12/2018,Kayserispor,Trabzonspor,0,2,,,A,3.75,3.5,1.95,3.75,3.76,2.15
+T1,02/12/2018,Besiktas,Galatasaray,1,0,1,,H,1.75,3.75,4.33,1.81,3.9,4.75
+T1,02/12/2018,Bursaspor,Erzurum BB,2,1,1,1,H,1.75,3.5,4.75,1.85,3.65,4.95
+T1,03/12/2018,Fenerbahce,Kasimpasa,2,2,2,1,D,1.72,3.8,4.5,1.8,4.15,4.5
+T1,03/12/2018,Yeni Malatyaspor,Akhisar Belediyespor,1,1,1,,D,1.83,3.4,4.5,1.86,3.65,4.62
+T1,07/12/2018,Alanyaspor,Besiktas,0,0,,,D,3.75,3.4,2.0,4.0,3.55,2.11
+T1,08/12/2018,Galatasaray,Rizespor,2,2,1,,D,1.44,4.2,7.5,1.5,4.7,7.5
+T1,08/12/2018,Sivasspor,Goztep,2,0,,,H,2.1,3.3,3.5,2.2,3.4,3.75
+T1,08/12/2018,Trabzonspor,Konyaspor,3,0,,,H,1.85,3.4,4.33,1.94,3.51,4.68
+T1,09/12/2018,Akhisar Belediyespor,Fenerbahce,3,0,1,,H,3.5,3.4,2.04,3.65,3.55,2.2
+T1,09/12/2018,Bursaspor,Antalyaspor,0,2,,2,A,1.75,3.5,4.75,1.81,3.85,4.8
+T1,09/12/2018,Erzurum BB,Yeni Malatyaspor,1,3,1,,A,2.1,3.25,3.6,2.13,3.41,3.8
+T1,10/12/2018,Ankaragucu,Buyuksehyr,0,1,,1,A,4.33,3.6,1.8,4.5,3.65,1.9
+T1,10/12/2018,Kasimpasa,Kayserispor,0,3,,1,A,1.44,4.33,7.0,1.55,4.81,7.0
+T1,14/12/2018,Goztep,Bursaspor,0,0,,,D,2.04,3.2,3.75,2.23,3.32,3.91
+T1,15/12/2018,Buyuksehyr,Galatasaray,1,1,1,1,D,1.9,3.4,4.1,2.02,3.64,4.13
+T1,15/12/2018,Konyaspor,Kasimpasa,3,2,,,H,1.95,3.75,3.5,2.1,3.77,3.58
+T1,15/12/2018,Rizespor,Alanyaspor,1,1,,1,D,2.3,3.3,3.1,2.33,3.5,3.25
+T1,15/12/2018,Sivasspor,Ankaragucu,4,0,2,,H,1.66,3.8,5.0,1.7,4.19,5.25
+T1,16/12/2018,Besiktas,Trabzonspor,2,2,,1,D,1.85,3.8,3.8,1.95,3.8,4.14
+T1,16/12/2018,Kayserispor,Akhisar Belediyespor,1,0,,,H,2.2,3.25,3.3,2.35,3.46,3.45
+T1,16/12/2018,Yeni Malatyaspor,Antalyaspor,2,0,2,,H,2.04,3.25,3.75,2.15,3.35,3.75
+T1,17/12/2018,Fenerbahce,Erzurum BB,2,2,2,,D,1.5,4.0,7.0,1.58,4.4,7.08
+T1,22/12/2018,Alanyaspor,Buyuksehyr,1,1,,1,D,3.75,3.4,2.0,3.96,3.5,2.06
+T1,22/12/2018,Ankaragucu,Goztep,0,3,,,A,3.25,3.25,2.2,3.25,3.35,2.45
+T1,22/12/2018,Kasimpasa,Besiktas,4,1,2,,H,2.54,3.6,2.54,2.63,3.8,2.65
+T1,23/12/2018,Bursaspor,Yeni Malatyaspor,1,1,1,,D,2.0,3.3,3.8,2.1,3.42,3.95
+T1,23/12/2018,Erzurum BB,Kayserispor,1,1,1,1,D,2.0,3.3,3.8,2.05,3.57,4.16
+T1,23/12/2018,Galatasaray,Sivasspor,4,2,2,2,H,1.66,4.0,4.75,1.73,4.1,4.85
+T1,23/12/2018,Trabzonspor,Rizespor,4,1,1,,H,1.44,4.5,6.5,1.55,4.65,6.5
+T1,24/12/2018,Akhisar Belediyespor,Konyaspor,0,0,,,D,2.6,3.2,2.75,2.66,3.3,2.9
+T1,24/12/2018,Antalyaspor,Fenerbahce,0,0,,,D,4.75,3.6,1.75,4.75,4.15,1.96
+T1,18/01/2019,Akhisar Belediyespor,Besiktas,1,3,,1,A,3.5,3.6,2.0,3.9,3.66,2.1
+T1,19/01/2019,Antalyaspor,Kayserispor,0,0,,,D,2.4,3.2,3.0,2.52,3.35,3.15
+T1,19/01/2019,Erzurum BB,Konyaspor,1,2,,1,A,2.6,3.25,2.7,2.71,3.25,2.84
+T1,19/01/2019,Galatasaray,Ankaragucu,6,0,3,,H,1.28,5.75,9.0,1.35,5.75,10.72
+T1,19/01/2019,Yeni Malatyaspor,Goztep,3,2,2,2,H,2.3,3.4,3.0,2.45,3.4,3.35
+T1,20/01/2019,Alanyaspor,Sivasspor,2,0,2,,H,2.2,3.4,3.2,2.42,3.6,3.25
+T1,20/01/2019,Trabzonspor,Buyuksehyr,2,4,,2,A,2.75,3.25,2.55,2.84,3.35,2.7
+T1,21/01/2019,Bursaspor,Fenerbahce,1,1,,1,D,3.2,3.4,2.2,3.35,3.45,2.39
+T1,21/01/2019,Kasimpasa,Rizespor,0,1,,1,A,1.66,4.0,4.75,1.72,4.25,5.0
+T1,25/01/2019,Besiktas,Erzurum BB,1,1,,,D,1.4,4.5,7.5,1.43,5.0,9.0
+T1,26/01/2019,Goztep,Galatasaray,0,1,,,A,3.1,3.4,2.25,3.32,3.55,2.45
+T1,26/01/2019,Kayserispor,Bursaspor,1,1,,1,D,2.37,3.25,3.0,2.59,3.3,3.15
+T1,27/01/2019,Konyaspor,Antalyaspor,2,0,1,,H,1.57,3.8,6.0,1.62,4.4,6.25
+T1,27/01/2019,Rizespor,Akhisar Belediyespor,3,1,,1,H,2.0,3.5,3.6,2.1,3.55,3.88
+T1,27/01/2019,Sivasspor,Trabzonspor,1,1,,,D,2.6,3.4,2.6,2.67,3.7,2.7
+T1,28/01/2019,Ankaragucu,Alanyaspor,0,2,,1,A,4.2,3.75,1.83,4.4,3.9,1.87
+T1,28/01/2019,Buyuksehyr,Kasimpasa,2,0,1,,H,1.53,4.2,5.75,1.54,4.44,6.52
+T1,28/01/2019,Fenerbahce,Yeni Malatyaspor,3,2,2,2,H,1.61,4.0,5.0,1.7,4.0,6.06
+T1,01/02/2019,Fenerbahce,Goztep,2,0,1,,H,1.72,3.6,4.75,1.74,4.3,5.0
+T1,02/02/2019,Alanyaspor,Galatasaray,1,1,1,,D,3.3,3.25,2.2,3.3,3.6,2.31
+T1,02/02/2019,Kasimpasa,Sivasspor,1,3,1,1,A,2.1,3.5,3.25,2.15,3.85,3.45
+T1,02/02/2019,Trabzonspor,Ankaragucu,1,0,1,,H,1.3,5.5,9.0,1.34,6.5,11.12
+T1,02/02/2019,Yeni Malatyaspor,Kayserispor,1,1,1,1,D,2.0,3.2,4.0,2.13,3.45,4.0
+T1,03/02/2019,Akhisar Belediyespor,Buyuksehyr,0,3,,2,A,6.5,3.6,1.57,6.5,4.25,1.59
+T1,03/02/2019,Antalyaspor,Besiktas,2,6,,3,A,5.0,3.5,1.72,5.0,4.0,1.8
+T1,03/02/2019,Erzurum BB,Rizespor,0,1,,,A,2.3,3.2,3.1,2.45,3.4,3.15
+T1,04/02/2019,Bursaspor,Konyaspor,0,0,,,D,2.37,3.1,3.1,2.48,3.25,3.3
+T1,08/02/2019,Kayserispor,Fenerbahce,1,0,,,H,3.5,3.4,2.05,3.7,3.55,2.18
+T1,09/02/2019,Besiktas,Bursaspor,2,0,1,,H,1.53,3.8,6.5,1.6,4.35,6.65
+T1,09/02/2019,Buyuksehyr,Erzurum BB,1,1,1,,D,1.28,5.25,11.0,1.34,5.75,12.0
+T1,09/02/2019,Rizespor,Antalyaspor,1,1,1,,D,1.75,3.5,4.75,1.8,4.04,4.75
+T1,10/02/2019,Galatasaray,Trabzonspor,3,1,2,1,H,1.75,3.75,4.33,1.8,4.33,5.0
+T1,10/02/2019,Goztep,Alanyaspor,3,2,2,1,H,2.37,3.2,3.0,2.48,3.35,3.15
+T1,10/02/2019,Konyaspor,Yeni Malatyaspor,1,1,,,D,1.83,3.4,4.5,1.91,3.5,4.7
+T1,11/02/2019,Ankaragucu,Kasimpasa,3,0,1,,H,3.4,3.75,2.0,3.7,3.8,2.1
+T1,11/02/2019,Sivasspor,Akhisar Belediyespor,2,1,1,,H,1.75,3.4,5.0,1.85,3.85,5.0
+T1,15/02/2019,Yeni Malatyaspor,Besiktas,1,2,,,A,4.0,3.5,1.9,4.0,3.75,2.02
+T1,16/02/2019,Akhisar Belediyespor,Ankaragucu,0,0,,,D,1.8,3.6,4.33,1.93,3.8,4.33
+T1,16/02/2019,Bursaspor,Rizespor,0,2,,1,A,1.83,3.5,4.33,1.89,3.76,4.37
+T1,16/02/2019,Fenerbahce,Konyaspor,1,1,1,1,D,1.9,3.6,3.8,1.95,3.6,4.35
+T1,17/02/2019,Erzurum BB,Sivasspor,4,2,2,1,H,2.3,3.4,3.0,2.55,3.4,3.05
+T1,17/02/2019,Kasimpasa,Galatasaray,1,4,1,2,A,4.5,3.75,1.72,4.5,4.26,1.85
+T1,17/02/2019,Kayserispor,Goztep,2,1,1,,H,2.1,3.4,3.4,2.2,3.45,3.7
+T1,17/02/2019,Trabzonspor,Alanyaspor,0,2,,,A,1.9,3.75,3.6,2.02,3.85,3.75
+T1,18/02/2019,Antalyaspor,Buyuksehyr,0,1,,1,A,5.5,3.8,1.61,6.0,4.1,1.65
+T1,22/02/2019,Goztep,Trabzonspor,1,3,,1,A,2.4,3.4,2.8,2.6,3.55,2.85
+T1,22/02/2019,Rizespor,Yeni Malatyaspor,3,0,1,,H,1.85,3.6,4.0,1.92,3.7,4.4
+T1,23/02/2019,Alanyaspor,Kasimpasa,3,0,1,,H,1.75,4.2,3.8,1.8,4.28,4.4
+T1,23/02/2019,Buyuksehyr,Bursaspor,3,0,2,,H,1.5,4.0,7.0,1.55,4.3,7.75
+T1,23/02/2019,Sivasspor,Antalyaspor,1,2,,2,A,1.66,3.75,5.0,1.7,4.25,5.5
+T1,24/02/2019,Ankaragucu,Erzurum BB,2,1,1,,H,2.5,3.2,2.87,2.7,3.31,2.95
+T1,24/02/2019,Galatasaray,Akhisar Belediyespor,1,0,,,H,1.28,6.0,8.0,1.35,6.0,10.5
+T1,24/02/2019,Konyaspor,Kayserispor,0,1,,,A,2.05,3.3,3.6,2.2,3.3,3.9
+T1,25/02/2019,Besiktas,Fenerbahce,3,3,3,,D,1.75,3.8,4.33,1.81,3.95,4.75
+T1,01/03/2019,Antalyaspor,Ankaragucu,2,4,2,3,A,1.9,3.4,4.0,2.05,3.5,4.0
+T1,02/03/2019,Bursaspor,Sivasspor,3,2,1,1,H,2.1,3.25,3.5,2.3,3.4,3.5
+T1,02/03/2019,Fenerbahce,Rizespor,3,2,2,1,H,1.6,4.2,5.0,1.65,4.41,5.3
+T1,02/03/2019,Kayserispor,Besiktas,2,2,,1,D,3.75,3.4,2.0,3.96,3.6,2.06
+T1,03/03/2019,Erzurum BB,Galatasaray,1,1,1,,D,3.75,3.5,1.95,4.36,3.7,1.95
+T1,03/03/2019,Konyaspor,Goztep,1,1,1,,D,2.0,3.1,4.2,2.1,3.25,4.3
+T1,03/03/2019,Yeni Malatyaspor,Buyuksehyr,0,2,,1,A,4.5,3.5,1.8,5.02,3.65,1.85
+T1,04/03/2019,Akhisar Belediyespor,Alanyaspor,3,1,,,H,3.0,3.2,2.4,3.05,3.45,2.62
+T1,04/03/2019,Kasimpasa,Trabzonspor,2,2,,2,D,3.3,3.6,2.05,3.4,3.95,2.18
+T1,08/03/2019,Sivasspor,Yeni Malatyaspor,2,0,2,,H,1.9,3.4,4.0,2.05,3.65,4.2
+T1,09/03/2019,Ankaragucu,Bursaspor,0,0,,,D,2.87,3.2,2.5,3.1,3.2,2.71
+T1,09/03/2019,Buyuksehyr,Fenerbahce,2,1,1,,H,1.95,3.4,3.9,2.03,3.6,4.09
+T1,09/03/2019,Trabzonspor,Akhisar Belediyespor,2,1,,,H,1.5,4.2,6.25,1.6,4.55,6.25
+T1,10/03/2019,Alanyaspor,Erzurum BB,2,1,1,,H,1.75,3.6,4.75,1.82,3.8,4.85
+T1,10/03/2019,Besiktas,Konyaspor,3,2,2,1,H,1.57,3.75,6.0,1.65,4.2,6.0
+T1,10/03/2019,Goztep,Kasimpasa,0,0,,,D,1.95,3.6,3.6,2.03,3.9,3.79
+T1,10/03/2019,Rizespor,Kayserispor,3,0,1,,H,2.15,3.3,3.4,2.25,3.5,3.45
+T1,11/03/2019,Galatasaray,Antalyaspor,5,0,1,,H,1.28,6.0,8.5,1.32,7.0,11.5
+T1,15/03/2019,Fenerbahce,Sivasspor,2,1,,,H,1.45,4.75,6.0,1.52,4.82,6.5
+T1,16/03/2019,Akhisar Belediyespor,Kasimpasa,2,3,1,1,A,2.3,3.5,2.9,2.41,3.77,2.95
+T1,16/03/2019,Antalyaspor,Alanyaspor,3,0,2,,H,3.25,3.5,2.1,3.5,3.5,2.26
+T1,16/03/2019,Besiktas,Goztep,1,0,,,H,1.44,4.5,6.5,1.5,5.25,7.02
+T1,16/03/2019,Erzurum BB,Trabzonspor,0,1,,,A,2.6,3.4,2.6,2.75,3.82,2.65
+T1,16/03/2019,Konyaspor,Rizespor,0,2,,1,A,2.1,3.4,3.4,2.3,3.4,3.65
+T1,17/03/2019,Bursaspor,Galatasaray,2,3,2,1,A,3.4,3.4,2.1,3.65,3.5,2.2
+T1,17/03/2019,Kayserispor,Buyuksehyr,1,1,1,,D,4.5,3.5,1.8,4.65,3.55,1.93
+T1,17/03/2019,Yeni Malatyaspor,Ankaragucu,3,1,,,H,2.1,3.3,3.5,2.25,3.35,3.74
+T1,05/04/2019,Trabzonspor,Antalyaspor,4,1,1,1,H,1.57,4.0,5.75,1.62,4.3,6.01
+T1,06/04/2019,Alanyaspor,Bursaspor,1,0,,,H,2.1,3.25,3.6,2.15,3.4,4.05
+T1,06/04/2019,Galatasaray,Yeni Malatyaspor,3,0,1,,H,1.36,4.75,8.5,1.43,5.05,8.5
+T1,06/04/2019,Sivasspor,Kayserispor,1,3,,3,A,1.75,3.6,4.75,1.85,3.85,4.75
+T1,07/04/2019,Ankaragucu,Fenerbahce,1,1,1,,D,5.0,3.6,1.7,5.0,3.9,1.8
+T1,07/04/2019,Buyuksehyr,Konyaspor,2,0,,,H,1.44,3.8,9.0,1.5,4.48,9.0
+T1,07/04/2019,Goztep,Akhisar Belediyespor,0,1,,,A,1.9,3.5,4.0,1.97,3.53,4.35
+T1,07/04/2019,Kasimpasa,Erzurum BB,2,1,1,,H,2.0,3.4,3.75,2.15,3.75,3.75
+T1,08/04/2019,Rizespor,Besiktas,2,7,1,2,A,3.8,3.5,1.95,3.8,3.8,2.06
+T1,12/04/2019,Bursaspor,Trabzonspor,0,1,,,A,2.37,3.3,3.0,2.42,3.45,3.2
+T1,13/04/2019,Besiktas,Buyuksehyr,2,1,1,1,H,2.2,3.4,3.2,2.35,3.5,3.26
+T1,13/04/2019,Konyaspor,Sivasspor,1,1,1,1,D,2.1,3.2,3.6,2.25,3.45,3.6
+T1,13/04/2019,Rizespor,Goztep,1,0,,,H,1.9,3.75,3.6,1.97,3.8,4.05
+T1,14/04/2019,Antalyaspor,Kasimpasa,1,0,1,,H,2.55,3.6,2.5,2.7,3.7,2.65
+T1,14/04/2019,Fenerbahce,Galatasaray,1,1,,,D,2.4,3.5,2.7,2.5,3.55,3.05
+T1,14/04/2019,Kayserispor,Ankaragucu,0,2,,,A,1.8,3.75,4.2,1.8,3.75,4.95
+T1,14/04/2019,Yeni Malatyaspor,Alanyaspor,1,1,1,1,D,2.8,3.2,2.6,2.85,3.4,2.65
+T1,15/04/2019,Erzurum BB,Akhisar Belediyespor,2,1,,,H,1.85,3.75,3.8,2.07,3.75,3.8
+T1,19/04/2019,Kasimpasa,Bursaspor,1,1,,,D,2.45,3.4,2.8,2.6,3.55,2.85
+T1,20/04/2019,Akhisar Belediyespor,Antalyaspor,1,2,,2,A,1.85,3.5,4.33,1.91,4.08,4.33
+T1,20/04/2019,Galatasaray,Kayserispor,3,1,3,1,H,1.36,4.75,8.0,1.4,5.5,9.22
+T1,20/04/2019,Goztep,Erzurum BB,0,1,,1,A,2.1,3.3,3.5,2.25,3.45,3.6
+T1,20/04/2019,Trabzonspor,Yeni Malatyaspor,2,1,1,1,H,1.57,4.0,5.5,1.6,4.5,5.75
+T1,21/04/2019,Alanyaspor,Fenerbahce,1,0,,,H,2.4,3.3,2.9,2.6,3.55,2.9
+T1,21/04/2019,Ankaragucu,Konyaspor,0,0,,,D,2.37,3.25,3.0,2.52,3.3,3.15
+T1,21/04/2019,Buyuksehyr,Rizespor,1,1,,,D,1.36,4.75,8.5,1.4,5.5,9.58
+T1,22/04/2019,Sivasspor,Besiktas,1,2,1,1,A,3.75,3.6,1.9,3.75,4.0,2.05
+T1,26/04/2019,Buyuksehyr,Goztep,0,2,,1,A,1.25,5.25,13.0,1.28,6.0,13.0
+T1,27/04/2019,Antalyaspor,Erzurum BB,1,1,1,,D,2.55,3.3,2.7,2.6,3.5,2.9
+T1,27/04/2019,Fenerbahce,Trabzonspor,1,1,,1,D,2.0,3.5,3.6,2.15,3.9,3.6
+T1,27/04/2019,Rizespor,Sivasspor,0,0,,,D,2.0,3.5,3.6,2.1,3.8,3.89
+T1,28/04/2019,Besiktas,Ankaragucu,4,1,1,,H,1.33,5.25,8.0,1.36,5.5,8.55
+T1,28/04/2019,Bursaspor,Akhisar Belediyespor,0,0,,,D,1.61,3.8,5.5,1.71,4.11,5.5
+T1,28/04/2019,Kayserispor,Alanyaspor,1,1,1,1,D,2.75,3.4,2.45,2.96,3.4,2.65
+T1,29/04/2019,Konyaspor,Galatasaray,0,0,,,D,5.0,3.6,1.7,5.0,3.9,1.8
+T1,29/04/2019,Yeni Malatyaspor,Kasimpasa,2,1,,1,H,2.4,3.4,2.75,2.55,3.55,3.03
+T1,03/05/2019,Sivasspor,Buyuksehyr,0,0,,,D,4.75,3.6,1.72,4.8,3.84,1.83
+T1,04/05/2019,Ankaragucu,Rizespor,2,2,,1,D,2.55,3.4,2.62,2.67,3.42,2.82
+T1,04/05/2019,Erzurum BB,Bursaspor,2,0,,,H,2.3,3.2,3.1,2.51,3.3,3.15
+T1,04/05/2019,Kasimpasa,Fenerbahce,1,3,1,1,A,3.3,3.75,2.05,3.35,3.82,2.17
+T1,05/05/2019,Akhisar Belediyespor,Yeni Malatyaspor,0,2,,,A,1.9,3.5,4.0,1.93,3.65,4.05
+T1,05/05/2019,Galatasaray,Besiktas,2,0,1,,H,1.9,4.0,3.5,1.93,4.0,3.9
+T1,05/05/2019,Goztep,Antalyaspor,4,1,2,1,H,1.57,4.0,5.5,1.65,4.5,5.75
+T1,06/05/2019,Alanyaspor,Konyaspor,2,4,1,2,A,2.05,3.4,3.5,2.11,3.45,3.95
+T1,06/05/2019,Trabzonspor,Kayserispor,4,2,2,1,H,1.45,4.5,6.5,1.53,4.7,6.82
+T1,10/05/2019,Antalyaspor,Bursaspor,0,1,,1,A,3.4,3.4,2.1,3.51,3.62,2.2
+T1,11/05/2019,Fenerbahce,Akhisar Belediyespor,2,1,2,1,H,1.28,5.5,11.0,1.33,5.7,11.0
+T1,11/05/2019,Goztep,Sivasspor,3,3,1,2,D,1.72,4.0,4.2,1.79,4.08,4.55
+T1,11/05/2019,Rizespor,Galatasaray,2,3,1,1,A,5.25,3.9,1.61,5.25,4.3,1.67
+T1,12/05/2019,Buyuksehyr,Ankaragucu,2,1,,1,H,1.25,5.5,12.0,1.3,6.0,12.0
+T1,12/05/2019,Kayserispor,Kasimpasa,2,1,,1,H,2.3,3.4,3.0,2.42,3.6,3.32
+T1,12/05/2019,Konyaspor,Trabzonspor,2,2,2,1,D,3.5,3.25,2.1,3.55,3.5,2.24
+T1,12/05/2019,Yeni Malatyaspor,Erzurum BB,3,1,,,H,2.4,3.25,2.9,2.5,3.5,2.9
+T1,13/05/2019,Besiktas,Alanyaspor,2,1,1,1,H,1.44,4.2,7.5,1.55,4.6,7.5
+T1,17/05/2019,Kasimpasa,Konyaspor,1,1,,1,D,2.4,3.6,2.7,2.65,3.75,2.86
+T1,18/05/2019,Antalyaspor,Yeni Malatyaspor,3,0,1,,H,2.62,3.5,2.5,2.83,3.52,2.65
+T1,18/05/2019,Trabzonspor,Besiktas,2,1,,,H,2.75,3.75,2.3,2.75,4.0,2.41
+T1,19/05/2019,Akhisar Belediyespor,Kayserispor,2,2,1,,D,3.4,3.4,2.1,3.6,3.75,2.1
+T1,19/05/2019,Alanyaspor,Rizespor,1,1,1,,D,1.9,3.75,3.6,2.0,3.9,3.8
+T1,19/05/2019,Bursaspor,Goztep,0,0,,,D,2.1,3.3,3.5,2.17,3.35,3.8
+T1,19/05/2019,Galatasaray,Buyuksehyr,2,1,,1,H,1.7,3.6,5.0,1.84,3.9,5.25
+T1,20/05/2019,Ankaragucu,Sivasspor,3,1,2,,H,2.8,2.3,3.75,2.9,2.4,3.85
+T1,20/05/2019,Erzurum BB,Fenerbahce,0,1,,,A,2.3,3.75,2.75,2.55,3.75,3.1
+T1,24/05/2019,Besiktas,Kasimpasa,3,2,3,1,H,1.25,6.0,11.0,1.35,7.4,11.0
+T1,24/05/2019,Buyuksehyr,Alanyaspor,1,1,1,1,D,1.72,4.0,4.33,1.72,4.4,4.9
+T1,24/05/2019,Rizespor,Trabzonspor,2,3,1,3,A,2.8,3.8,2.25,2.86,4.01,2.45
+T1,24/05/2019,Sivasspor,Galatasaray,4,3,2,2,H,2.75,3.6,2.37,3.3,4.0,2.56
+T1,25/05/2019,Konyaspor,Akhisar Belediyespor,0,0,,,D,1.45,4.5,6.5,1.54,4.6,6.5
+T1,26/05/2019,Fenerbahce,Antalyaspor,3,1,1,1,H,1.66,4.0,4.75,1.75,4.6,5.0
+T1,26/05/2019,Goztep,Ankaragucu,2,1,1,,H,1.36,4.75,8.0,1.4,5.3,9.15
+T1,26/05/2019,Kayserispor,Erzurum BB,0,2,,2,A,2.62,3.4,2.55,2.65,3.7,2.7
+T1,26/05/2019,Yeni Malatyaspor,Bursaspor,1,2,,2,A,3.0,3.3,2.35,3.0,3.62,2.45

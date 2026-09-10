@@ -1,0 +1,262 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+T1,16/08/2019,Denizlispor,Galatasaray,2,0,,,H,4.25,3.75,1.77,4.58,3.99,1.85
+T1,17/08/2019,Genclerbirligi,Rizespor,0,1,,,A,2.06,3.36,3.51,2.13,3.58,3.75
+T1,17/08/2019,Kayserispor,Alanyaspor,0,1,,,A,2.38,3.3,2.91,2.46,3.52,3.02
+T1,17/08/2019,Sivasspor,Besiktas,3,0,1,,H,2.76,3.46,2.4,2.85,3.7,2.48
+T1,18/08/2019,Konyaspor,Ankaragucu,0,0,,,D,1.75,3.51,4.78,1.85,3.7,5.21
+T1,18/08/2019,Goztep,Antalyaspor,0,1,,1,A,1.84,3.65,3.98,1.94,3.84,4.23
+T1,18/08/2019,Kasimpasa,Trabzonspor,1,1,1,1,D,3.15,3.65,2.11,3.3,3.92,2.16
+T1,18/08/2019,Yeni Malatyaspor,Buyuksehyr,3,0,,,H,3.35,3.29,2.15,3.55,3.5,2.21
+T1,19/08/2019,Fenerbahce,Gaziantep,5,0,3,,H,1.45,4.43,6.6,1.51,4.7,7.5
+T1,23/08/2019,Besiktas,Goztep,3,0,1,,H,1.48,4.26,6.37,1.52,4.54,7.5
+T1,24/08/2019,Ankaragucu,Kayserispor,1,1,,,D,2.34,3.23,3.04,2.46,3.42,3.2
+T1,24/08/2019,Alanyaspor,Kasimpasa,4,1,1,1,H,1.67,4.21,4.35,1.76,4.56,4.7
+T1,24/08/2019,Buyuksehyr,Fenerbahce,1,2,1,,A,2.48,3.3,2.77,2.57,3.44,2.9
+T1,25/08/2019,Rizespor,Sivasspor,2,1,,,H,2.12,3.46,3.27,2.2,3.74,3.6
+T1,25/08/2019,Trabzonspor,Yeni Malatyaspor,2,1,1,,H,1.66,3.96,4.73,1.76,4.1,5.25
+T1,25/08/2019,Antalyaspor,Denizlispor,0,2,,1,A,2.61,3.22,2.68,2.75,3.5,2.8
+T1,25/08/2019,Galatasaray,Konyaspor,1,1,,,D,1.43,4.54,6.62,1.51,4.8,7.17
+T1,26/08/2019,Gaziantep,Genclerbirligi,4,1,2,,H,2.4,3.17,2.96,2.49,3.34,3.1
+T1,30/08/2019,Kasimpasa,Ankaragucu,0,1,,1,A,1.69,3.99,4.48,1.78,4.25,4.75
+T1,30/08/2019,Kayserispor,Galatasaray,2,3,1,,A,4.42,3.78,1.73,4.75,3.96,1.81
+T1,31/08/2019,Konyaspor,Antalyaspor,2,2,,1,D,1.61,3.67,5.77,1.7,3.8,6.38
+T1,31/08/2019,Besiktas,Rizespor,1,1,,1,D,1.59,4.17,5.06,1.66,4.47,5.5
+T1,31/08/2019,Goztep,Denizlispor,0,0,,,D,2.38,3.29,2.93,2.46,3.42,3.05
+T1,01/09/2019,Genclerbirligi,Buyuksehyr,1,2,1,,A,4.29,3.47,1.83,4.6,3.62,1.97
+T1,01/09/2019,Sivasspor,Gaziantep,1,1,,1,D,1.48,4.22,6.47,1.56,4.45,7.5
+T1,01/09/2019,Fenerbahce,Trabzonspor,1,1,1,1,D,1.64,4.15,4.6,1.72,4.4,4.9
+T1,01/09/2019,Yeni Malatyaspor,Alanyaspor,2,3,,3,A,2.82,3.4,2.4,3.1,3.6,2.47
+T1,13/09/2019,Galatasaray,Kasimpasa,1,0,1,,H,1.3,5.64,8.6,1.33,6.05,9.6
+T1,14/09/2019,Buyuksehyr,Sivasspor,1,1,,1,D,1.58,3.94,5.52,1.67,4.14,6.01
+T1,14/09/2019,Antalyaspor,Kayserispor,2,2,1,1,D,2.1,3.34,3.42,2.2,3.56,3.6
+T1,14/09/2019,Gaziantep,Besiktas,3,2,1,,H,4.06,3.75,1.81,4.31,3.96,1.88
+T1,15/09/2019,Ankaragucu,Yeni Malatyaspor,0,4,,3,A,2.72,3.16,2.61,2.82,3.35,2.71
+T1,15/09/2019,Rizespor,Goztep,0,0,,,D,1.97,3.39,3.79,2.05,3.64,4.1
+T1,15/09/2019,Denizlispor,Konyaspor,0,1,,,A,2.08,3.24,3.61,2.15,3.46,3.8
+T1,15/09/2019,Trabzonspor,Genclerbirligi,2,2,1,1,D,1.49,4.42,5.84,1.57,4.7,6.5
+T1,16/09/2019,Alanyaspor,Fenerbahce,3,1,1,1,H,2.77,3.45,2.4,2.87,3.7,2.47
+T1,20/09/2019,Goztep,Konyaspor,1,0,,,H,2.37,2.98,3.24,2.45,3.22,3.39
+T1,21/09/2019,Kasimpasa,Antalyaspor,3,0,,,H,2.36,3.43,2.84,2.43,3.72,2.96
+T1,21/09/2019,Kayserispor,Denizlispor,1,1,1,,D,2.44,3.23,2.87,2.55,3.36,3.0
+T1,21/09/2019,Fenerbahce,Ankaragucu,2,1,1,1,H,1.23,6.08,11.34,1.26,7.0,13.0
+T1,22/09/2019,Rizespor,Gaziantep,1,2,,2,A,1.98,3.42,3.7,2.05,3.56,4.0
+T1,22/09/2019,Genclerbirligi,Alanyaspor,1,1,1,,D,3.44,3.55,2.02,3.75,3.76,2.1
+T1,22/09/2019,Yeni Malatyaspor,Galatasaray,1,1,,1,D,3.99,3.63,1.85,4.22,3.84,1.94
+T1,23/09/2019,Besiktas,Buyuksehyr,1,1,,,D,2.32,3.42,2.9,2.4,3.62,3.01
+T1,23/09/2019,Sivasspor,Trabzonspor,2,1,1,1,H,2.34,3.54,2.77,2.42,3.8,2.91
+T1,27/09/2019,Buyuksehyr,Rizespor,5,0,2,,H,1.61,3.8,5.41,1.7,4.0,6.0
+T1,28/09/2019,Denizlispor,Kasimpasa,0,1,,,A,1.95,3.64,3.59,2.0,3.92,3.8
+T1,28/09/2019,Alanyaspor,Sivasspor,1,1,,1,D,1.76,3.78,4.29,1.84,4.04,4.75
+T1,28/09/2019,Galatasaray,Fenerbahce,0,0,,,D,2.11,3.56,3.21,2.2,3.8,3.6
+T1,29/09/2019,Konyaspor,Kayserispor,2,1,1,1,H,1.96,3.38,3.81,2.07,3.59,4.03
+T1,29/09/2019,Ankaragucu,Genclerbirligi,2,1,,,H,3.23,3.39,2.16,3.6,3.6,2.25
+T1,29/09/2019,Antalyaspor,Yeni Malatyaspor,3,0,1,,H,2.41,3.28,2.88,2.5,3.54,3.01
+T1,29/09/2019,Trabzonspor,Besiktas,4,1,2,,H,2.21,3.73,2.89,2.28,3.96,3.03
+T1,30/09/2019,Gaziantep,Goztep,1,1,,,D,2.34,3.24,3.01,2.45,3.42,3.2
+T1,04/10/2019,Fenerbahce,Antalyaspor,0,1,,1,A,1.38,4.95,7.15,1.43,5.5,8.25
+T1,04/10/2019,Yeni Malatyaspor,Denizlispor,5,1,2,,H,1.97,3.62,3.53,2.05,3.82,3.8
+T1,05/10/2019,Kasimpasa,Konyaspor,1,4,1,3,A,2.33,3.3,2.98,2.44,3.52,3.1
+T1,05/10/2019,Goztep,Kayserispor,4,0,3,,H,1.75,3.55,4.66,1.86,3.78,4.95
+T1,05/10/2019,Genclerbirligi,Galatasaray,0,0,,,D,3.4,3.54,2.04,3.6,3.76,2.11
+T1,06/10/2019,Sivasspor,Ankaragucu,3,1,1,1,H,1.39,4.71,7.27,1.45,5.05,8.14
+T1,06/10/2019,Besiktas,Alanyaspor,2,0,,,H,2.02,3.63,3.38,2.09,3.82,3.6
+T1,06/10/2019,Gaziantep,Buyuksehyr,1,2,1,1,A,3.9,3.34,1.96,4.19,3.62,2.01
+T1,06/10/2019,Rizespor,Trabzonspor,1,2,1,,A,2.6,3.44,2.55,2.69,3.76,2.65
+T1,18/10/2019,Galatasaray,Sivasspor,3,2,2,,H,1.55,4.21,5.45,1.61,4.5,5.75
+T1,19/10/2019,Antalyaspor,Genclerbirligi,0,6,,5,A,2.25,3.35,3.1,2.35,3.5,3.2
+T1,19/10/2019,Buyuksehyr,Goztep,2,1,1,,H,1.6,3.78,5.71,1.7,4.0,6.44
+T1,19/10/2019,Trabzonspor,Gaziantep,4,1,2,,H,1.6,4.09,5.14,1.68,4.34,5.5
+T1,19/10/2019,Ankaragucu,Besiktas,0,0,,,D,5.82,4.3,1.51,6.25,4.5,1.6
+T1,20/10/2019,Kayserispor,Kasimpasa,1,1,,1,D,2.38,3.39,2.86,2.5,3.68,3.06
+T1,20/10/2019,Alanyaspor,Rizespor,5,2,2,,H,1.65,3.79,5.12,1.7,4.18,5.5
+T1,20/10/2019,Denizlispor,Fenerbahce,1,2,,1,A,3.97,3.67,1.84,4.23,3.92,1.89
+T1,21/10/2019,Konyaspor,Yeni Malatyaspor,0,2,,1,A,2.13,3.26,3.42,2.2,3.48,3.62
+T1,25/10/2019,Rizespor,Ankaragucu,2,0,1,,H,1.6,4.02,5.17,1.68,4.24,5.59
+T1,26/10/2019,Sivasspor,Antalyaspor,2,1,,,H,1.74,3.71,4.48,1.83,3.94,4.79
+T1,26/10/2019,Gaziantep,Alanyaspor,1,1,,1,D,3.45,3.47,2.04,3.7,3.6,2.15
+T1,26/10/2019,Fenerbahce,Konyaspor,5,1,3,1,H,1.46,4.43,6.29,1.53,4.75,7.0
+T1,27/10/2019,Yeni Malatyaspor,Kayserispor,4,0,1,,H,1.55,4.18,5.53,1.62,4.42,6.0
+T1,27/10/2019,Genclerbirligi,Denizlispor,0,2,,1,A,1.81,3.69,4.09,1.94,3.92,4.5
+T1,27/10/2019,Goztep,Kasimpasa,1,4,1,1,A,1.82,3.73,4.02,1.9,3.92,4.33
+T1,27/10/2019,Besiktas,Galatasaray,1,0,,,H,2.72,3.51,2.41,2.87,3.72,2.5
+T1,28/10/2019,Buyuksehyr,Trabzonspor,2,2,,,D,2.0,3.49,3.56,2.08,3.74,3.82
+T1,01/11/2019,Galatasaray,Rizespor,2,0,2,,H,1.52,4.1,6.07,1.57,4.5,7.0
+T1,02/11/2019,Konyaspor,Genclerbirligi,1,1,1,,D,2.3,3.24,3.1,2.38,3.42,3.28
+T1,02/11/2019,Alanyaspor,Buyuksehyr,0,0,,,D,2.34,3.33,2.95,2.4,3.64,3.1
+T1,02/11/2019,Trabzonspor,Goztep,0,1,,1,A,1.66,3.8,5.02,1.7,4.0,5.5
+T1,02/11/2019,Antalyaspor,Besiktas,1,2,,2,A,3.02,3.44,2.24,3.2,3.78,2.31
+T1,03/11/2019,Denizlispor,Sivasspor,0,2,,1,A,2.72,3.38,2.46,2.82,3.66,2.53
+T1,03/11/2019,Kasimpasa,Yeni Malatyaspor,2,2,1,,D,2.24,3.67,2.87,2.33,3.89,3.1
+T1,03/11/2019,Kayserispor,Fenerbahce,1,0,,,H,6.38,4.44,1.46,7.0,4.76,1.5
+T1,04/11/2019,Ankaragucu,Gaziantep,1,2,,1,A,2.83,3.43,2.35,2.95,3.67,2.46
+T1,08/11/2019,Fenerbahce,Kasimpasa,3,2,2,1,H,1.34,5.35,7.38,1.4,5.7,8.27
+T1,09/11/2019,Genclerbirligi,Kayserispor,2,1,1,,H,1.6,4.06,5.11,1.68,4.33,5.82
+T1,09/11/2019,Rizespor,Antalyaspor,1,0,1,,H,1.93,3.55,3.74,2.05,3.81,4.1
+T1,09/11/2019,Sivasspor,Konyaspor,2,0,,,H,1.82,3.6,4.21,1.94,3.82,4.5
+T1,09/11/2019,Gaziantep,Galatasaray,0,2,,2,A,3.81,3.64,1.89,4.22,3.81,1.99
+T1,10/11/2019,Goztep,Yeni Malatyaspor,1,1,1,,D,2.02,3.44,3.56,2.1,3.62,3.8
+T1,10/11/2019,Trabzonspor,Alanyaspor,1,0,,,H,2.38,3.52,2.75,2.45,3.8,2.99
+T1,10/11/2019,Besiktas,Denizlispor,1,0,,,H,1.55,4.16,5.52,1.62,4.38,6.05
+T1,10/11/2019,Buyuksehyr,Ankaragucu,2,1,1,,H,1.24,5.92,11.33,1.29,6.5,13.0
+T1,22/11/2019,Galatasaray,Buyuksehyr,0,1,,,A,2.52,3.25,2.76,2.68,3.4,3.09
+T1,23/11/2019,Denizlispor,Rizespor,2,0,,,H,2.17,3.34,3.25,2.25,3.5,3.44
+T1,23/11/2019,Ankaragucu,Trabzonspor,0,3,,1,A,3.51,3.68,1.97,3.87,3.95,2.06
+T1,23/11/2019,Konyaspor,Besiktas,0,1,,,A,2.82,3.31,2.43,2.99,3.52,2.58
+T1,24/11/2019,Kayserispor,Sivasspor,1,4,1,1,A,3.76,3.6,1.91,4.02,3.84,2.0
+T1,24/11/2019,Alanyaspor,Goztep,0,1,,,A,1.63,3.82,5.17,1.73,4.02,5.75
+T1,24/11/2019,Kasimpasa,Genclerbirligi,1,2,,,A,2.21,3.66,2.93,2.42,3.84,3.2
+T1,24/11/2019,Yeni Malatyaspor,Fenerbahce,0,0,,,D,2.6,3.53,2.49,2.73,3.72,2.64
+T1,25/11/2019,Antalyaspor,Gaziantep,1,1,,1,D,2.01,3.52,3.5,2.1,3.77,3.79
+T1,29/11/2019,Genclerbirligi,Yeni Malatyaspor,3,3,,1,D,2.18,3.4,3.18,2.3,3.66,3.46
+T1,30/11/2019,Rizespor,Konyaspor,3,1,2,1,H,2.27,3.13,3.25,2.36,3.31,3.64
+T1,30/11/2019,Sivasspor,Kasimpasa,2,0,2,,H,1.63,4.16,4.71,1.72,4.4,5.25
+T1,30/11/2019,Alanyaspor,Ankaragucu,5,0,2,,H,1.3,5.41,9.08,1.35,5.76,10.5
+T1,30/11/2019,Goztep,Fenerbahce,2,2,1,1,D,3.16,3.3,2.23,3.36,3.47,2.35
+T1,01/12/2019,Gaziantep,Denizlispor,1,2,,,A,2.03,3.34,3.63,2.1,3.58,3.82
+T1,01/12/2019,Buyuksehyr,Antalyaspor,2,0,,,H,1.44,4.33,6.9,1.54,4.6,8.0
+T1,01/12/2019,Trabzonspor,Galatasaray,1,1,,,D,2.27,3.45,2.95,2.48,3.68,3.11
+T1,02/12/2019,Besiktas,Kayserispor,4,1,3,,H,1.25,5.8,10.49,1.31,6.35,12.58
+T1,06/12/2019,Fenerbahce,Genclerbirligi,5,2,3,1,H,1.43,4.6,6.52,1.47,5.1,7.6
+T1,07/12/2019,Yeni Malatyaspor,Sivasspor,1,3,1,2,A,2.22,3.59,2.95,2.31,3.84,3.07
+T1,07/12/2019,Ankaragucu,Goztep,1,3,1,1,A,3.62,3.33,2.04,3.85,3.52,2.2
+T1,07/12/2019,Galatasaray,Alanyaspor,1,0,1,,H,1.92,3.53,3.82,2.01,3.8,4.2
+T1,08/12/2019,Konyaspor,Gaziantep,0,0,,,D,2.07,3.24,3.63,2.16,3.5,3.88
+T1,08/12/2019,Antalyaspor,Trabzonspor,1,3,1,3,A,2.63,3.47,2.5,2.73,3.72,2.77
+T1,08/12/2019,Denizlispor,Buyuksehyr,1,1,,,D,3.63,3.26,2.06,3.86,3.52,2.12
+T1,08/12/2019,Kasimpasa,Besiktas,2,3,1,1,A,3.65,3.89,1.86,3.82,4.05,1.94
+T1,09/12/2019,Kayserispor,Rizespor,1,0,1,,H,2.92,3.45,2.29,3.07,3.68,2.52
+T1,13/12/2019,Alanyaspor,Antalyaspor,0,0,,,D,1.53,4.17,5.68,1.6,4.35,6.4
+T1,14/12/2019,Rizespor,Kasimpasa,0,3,,2,A,2.12,3.49,3.25,2.23,3.77,3.42
+T1,14/12/2019,Genclerbirligi,Goztep,3,1,2,1,H,2.07,3.29,3.56,2.18,3.46,3.76
+T1,14/12/2019,Galatasaray,Ankaragucu,2,2,,,D,1.27,5.38,10.55,1.31,5.75,12.25
+T1,15/12/2019,Gaziantep,Kayserispor,3,0,,,H,1.55,4.14,5.5,1.61,4.4,6.0
+T1,15/12/2019,Sivasspor,Fenerbahce,3,1,1,,H,2.63,3.46,2.5,2.75,3.74,2.6
+T1,15/12/2019,Besiktas,Yeni Malatyaspor,0,2,,,A,1.47,4.53,5.97,1.53,4.86,6.5
+T1,16/12/2019,Buyuksehyr,Konyaspor,1,1,1,,D,1.46,4.15,6.85,1.54,4.35,7.55
+T1,16/12/2019,Trabzonspor,Denizlispor,1,2,1,,A,1.6,4.13,5.04,1.66,4.4,5.5
+T1,20/12/2019,Antalyaspor,Ankaragucu,2,2,1,,D,1.55,4.13,5.52,1.6,4.29,5.96
+T1,21/12/2019,Yeni Malatyaspor,Rizespor,0,2,,1,A,1.64,4.13,4.66,1.71,4.36,4.87
+T1,21/12/2019,Kasimpasa,Gaziantep,3,4,1,4,A,2.03,3.66,3.32,2.1,3.92,3.6
+T1,21/12/2019,Goztep,Galatasaray,2,1,1,1,H,2.89,3.25,2.41,3.04,3.48,2.5
+T1,22/12/2019,Genclerbirligi,Sivasspor,2,2,,1,D,2.52,3.6,2.53,2.61,3.82,2.64
+T1,22/12/2019,Kayserispor,Buyuksehyr,1,4,1,2,A,7.81,4.98,1.35,9.0,5.37,1.4
+T1,22/12/2019,Fenerbahce,Besiktas,3,1,2,1,H,2.07,3.6,3.26,2.14,3.9,3.5
+T1,23/12/2019,Denizlispor,Alanyaspor,1,5,,3,A,3.21,3.32,2.19,3.34,3.5,2.32
+T1,23/12/2019,Konyaspor,Trabzonspor,0,1,,1,A,2.97,3.2,2.38,3.1,3.39,2.48
+T1,27/12/2019,Besiktas,Genclerbirligi,4,1,,1,H,1.51,4.35,5.72,1.6,4.75,6.3
+T1,28/12/2019,Ankaragucu,Denizlispor,2,2,,2,D,2.82,3.4,2.39,2.91,3.64,2.46
+T1,28/12/2019,Buyuksehyr,Kasimpasa,5,1,4,,H,1.38,4.96,7.05,1.43,5.25,7.75
+T1,28/12/2019,Trabzonspor,Kayserispor,6,2,2,1,H,1.12,8.56,18.1,1.14,10.0,24.0
+T1,28/12/2019,Galatasaray,Antalyaspor,5,0,3,,H,1.4,4.53,7.43,1.45,4.75,8.17
+T1,29/12/2019,Sivasspor,Goztep,1,0,,,H,1.74,3.72,4.47,1.81,3.98,4.88
+T1,29/12/2019,Alanyaspor,Konyaspor,2,1,1,1,H,1.53,3.93,6.31,1.59,4.32,7.3
+T1,29/12/2019,Gaziantep,Yeni Malatyaspor,1,1,1,,D,2.36,3.52,2.78,2.5,3.73,2.93
+T1,29/12/2019,Rizespor,Fenerbahce,1,2,1,1,A,4.49,3.85,1.71,5.0,4.14,1.79
+T1,17/01/2020,Ankaragucu,Konyaspor,0,1,,,A,2.83,3.11,2.55,2.96,3.32,2.63
+T1,18/01/2020,Alanyaspor,Kayserispor,5,1,1,,H,1.19,6.84,12.09,1.24,8.3,15.0
+T1,18/01/2020,Buyuksehyr,Yeni Malatyaspor,4,1,4,,H,1.55,4.17,5.48,1.62,4.42,5.91
+T1,18/01/2020,Gaziantep,Fenerbahce,0,2,,,A,4.17,3.95,1.73,4.42,4.2,1.79
+T1,19/01/2020,Antalyaspor,Goztep,0,3,,3,A,2.48,3.14,2.88,2.61,3.4,3.04
+T1,19/01/2020,Galatasaray,Denizlispor,2,1,1,,H,1.3,5.25,9.01,1.33,5.9,10.5
+T1,19/01/2020,Trabzonspor,Kasimpasa,6,0,3,,H,1.47,4.83,5.48,1.55,5.01,6.82
+T1,19/01/2020,Besiktas,Sivasspor,1,2,1,2,A,1.86,3.7,3.82,1.93,4.02,4.07
+T1,20/01/2020,Rizespor,Genclerbirligi,2,0,,,H,2.37,3.31,2.89,2.47,3.6,3.0
+T1,24/01/2020,Genclerbirligi,Gaziantep,1,0,,,H,1.96,3.52,3.67,2.1,3.69,4.0
+T1,25/01/2020,Kayserispor,Ankaragucu,1,1,1,,D,2.68,3.54,2.43,2.86,3.72,2.55
+T1,25/01/2020,Kasimpasa,Alanyaspor,1,2,,1,A,3.67,3.93,1.85,3.9,4.2,1.95
+T1,25/01/2020,Fenerbahce,Buyuksehyr,2,0,,,H,2.18,3.36,3.21,2.26,3.6,3.37
+T1,26/01/2020,Denizlispor,Antalyaspor,0,3,,2,A,2.22,3.37,3.09,2.33,3.5,3.25
+T1,26/01/2020,Goztep,Besiktas,2,1,2,1,H,2.8,3.22,2.49,2.9,3.41,2.66
+T1,26/01/2020,Konyaspor,Galatasaray,0,3,,2,A,3.56,3.33,2.06,3.76,3.6,2.12
+T1,27/01/2020,Sivasspor,Rizespor,1,1,,,D,1.49,4.31,5.94,1.58,4.75,6.36
+T1,31/01/2020,Buyuksehyr,Genclerbirligi,3,1,1,1,H,1.43,4.51,6.82,1.46,4.8,7.6
+T1,01/02/2020,Antalyaspor,Konyaspor,0,0,,,D,2.2,3.17,3.36,2.3,3.36,3.52
+T1,01/02/2020,Rizespor,Besiktas,1,2,1,1,A,3.46,3.49,2.03,3.66,3.68,2.12
+T1,01/02/2020,Trabzonspor,Fenerbahce,2,1,2,1,H,2.54,3.57,2.52,2.66,3.76,2.76
+T1,02/02/2020,Ankaragucu,Kasimpasa,1,1,,1,D,2.44,3.56,2.64,2.61,3.75,2.76
+T1,02/02/2020,Alanyaspor,Yeni Malatyaspor,2,1,1,,H,1.48,4.4,5.99,1.58,4.75,6.5
+T1,02/02/2020,Gaziantep,Sivasspor,5,1,3,1,H,3.28,3.5,2.1,3.44,3.76,2.19
+T1,02/02/2020,Galatasaray,Kayserispor,4,1,2,,H,1.14,7.96,15.5,1.17,10.0,18.75
+T1,03/02/2020,Denizlispor,Goztep,1,1,,1,D,3.02,3.34,2.27,3.24,3.52,2.35
+T1,07/02/2020,Yeni Malatyaspor,Ankaragucu,0,1,,,A,1.58,3.93,5.53,1.65,4.3,6.1
+T1,08/02/2020,Konyaspor,Denizlispor,0,0,,,D,1.92,3.32,4.1,2.03,3.52,4.5
+T1,08/02/2020,Besiktas,Gaziantep,3,0,,,H,1.39,4.65,7.53,1.46,5.0,8.41
+T1,08/02/2020,Genclerbirligi,Trabzonspor,0,2,,,A,3.22,3.58,2.1,3.5,3.9,2.19
+T1,08/02/2020,Fenerbahce,Alanyaspor,1,1,,1,D,1.79,3.69,4.2,1.86,3.96,4.5
+T1,09/02/2020,Kayserispor,Antalyaspor,2,2,1,1,D,2.99,3.45,2.25,3.3,3.7,2.4
+T1,09/02/2020,Sivasspor,Buyuksehyr,1,1,,,D,2.46,3.39,2.72,2.6,3.68,2.85
+T1,09/02/2020,Kasimpasa,Galatasaray,0,3,,3,A,4.42,4.09,1.67,5.0,4.33,1.75
+T1,14/02/2020,Buyuksehyr,Besiktas,1,0,,,H,2.2,3.5,3.06,2.3,3.68,3.2
+T1,15/02/2020,Denizlispor,Kayserispor,0,1,,,A,1.73,3.74,4.46,1.83,3.9,4.75
+T1,15/02/2020,Konyaspor,Goztep,1,3,1,1,A,2.7,3.11,2.66,2.81,3.26,2.76
+T1,15/02/2020,Ankaragucu,Fenerbahce,2,1,1,,H,6.58,4.55,1.43,8.0,4.9,1.48
+T1,16/02/2020,Alanyaspor,Genclerbirligi,0,1,,,A,1.46,4.35,6.45,1.53,4.75,7.0
+T1,16/02/2020,Trabzonspor,Sivasspor,2,1,2,,H,1.91,3.51,3.87,1.99,3.8,4.2
+T1,16/02/2020,Galatasaray,Yeni Malatyaspor,1,0,1,,H,1.41,4.53,7.2,1.46,5.0,8.59
+T1,17/02/2020,Antalyaspor,Kasimpasa,3,1,,,H,2.03,3.62,3.32,2.13,3.92,3.5
+T1,17/02/2020,Gaziantep,Rizespor,2,0,,,H,2.21,3.35,3.15,2.3,3.6,3.34
+T1,21/02/2020,Sivasspor,Alanyaspor,1,0,1,,H,2.19,3.47,3.1,2.31,3.6,3.4
+T1,22/02/2020,Kayserispor,Konyaspor,2,2,1,2,D,2.62,3.24,2.64,2.71,3.46,2.77
+T1,22/02/2020,Goztep,Gaziantep,1,1,,,D,1.73,3.74,4.49,1.84,3.95,4.89
+T1,22/02/2020,Besiktas,Trabzonspor,2,2,,1,D,2.12,3.64,3.11,2.21,3.8,3.28
+T1,23/02/2020,Yeni Malatyaspor,Antalyaspor,1,2,1,1,A,1.97,3.51,3.6,2.09,3.66,4.0
+T1,23/02/2020,Genclerbirligi,Ankaragucu,1,0,,,H,1.75,3.73,4.36,1.86,3.92,4.75
+T1,23/02/2020,Fenerbahce,Galatasaray,1,3,1,1,A,2.01,3.5,3.52,2.15,3.74,3.75
+T1,24/02/2020,Kasimpasa,Denizlispor,2,0,1,,H,2.01,3.57,3.4,2.08,3.75,3.66
+T1,24/02/2020,Rizespor,Buyuksehyr,1,2,,1,A,3.51,3.35,2.05,3.73,3.6,2.16
+T1,28/02/2020,Alanyaspor,Besiktas,1,2,1,,A,2.38,3.56,2.73,2.5,3.7,2.9
+T1,29/02/2020,Konyaspor,Kasimpasa,0,0,,,D,1.94,3.5,3.74,2.0,3.74,3.94
+T1,29/02/2020,Trabzonspor,Rizespor,5,2,,1,H,1.45,4.44,6.52,1.51,4.65,7.16
+T1,29/02/2020,Antalyaspor,Fenerbahce,2,2,,1,D,3.58,3.54,1.96,3.77,3.76,2.08
+T1,01/03/2020,Denizlispor,Yeni Malatyaspor,2,0,1,,H,2.36,3.42,2.82,2.45,3.6,2.95
+T1,01/03/2020,Ankaragucu,Sivasspor,0,3,,,A,3.8,3.64,1.88,4.0,3.86,1.96
+T1,01/03/2020,Galatasaray,Genclerbirligi,3,0,2,,H,1.34,4.92,8.23,1.38,5.25,9.4
+T1,02/03/2020,Buyuksehyr,Gaziantep,3,1,,,H,1.41,4.52,6.92,1.5,4.8,8.0
+T1,02/03/2020,Kayserispor,Goztep,1,0,,,H,3.14,3.31,2.22,3.28,3.52,2.3
+T1,06/03/2020,Besiktas,Ankaragucu,2,1,1,,H,1.22,6.34,10.86,1.27,7.5,12.0
+T1,07/03/2020,Yeni Malatyaspor,Konyaspor,1,1,,1,D,2.33,3.23,3.02,2.44,3.36,3.27
+T1,07/03/2020,Gaziantep,Trabzonspor,1,1,,1,D,3.4,3.63,2.01,3.78,3.88,2.1
+T1,07/03/2020,Goztep,Buyuksehyr,0,3,,1,A,2.86,3.23,2.44,2.98,3.44,2.6
+T1,07/03/2020,Fenerbahce,Denizlispor,2,2,1,1,D,1.37,4.91,7.4,1.4,5.45,8.05
+T1,08/03/2020,Kasimpasa,Kayserispor,5,1,3,,H,1.79,3.8,4.02,1.88,4.04,4.48
+T1,08/03/2020,Rizespor,Alanyaspor,1,1,,1,D,2.84,3.39,2.37,2.96,3.62,2.47
+T1,08/03/2020,Sivasspor,Galatasaray,2,2,1,2,D,2.61,3.43,2.52,2.75,3.62,2.64
+T1,09/03/2020,Genclerbirligi,Antalyaspor,1,1,,,D,2.08,3.36,3.41,2.19,3.64,3.63
+T1,11/03/2020,Yeni Malatyaspor,Trabzonspor,1,3,1,2,A,3.26,3.65,2.04,3.61,3.9,2.15
+T1,13/03/2020,Ankaragucu,Rizespor,2,1,2,1,H,2.41,3.22,2.92,2.5,3.42,3.09
+T1,13/03/2020,Kasimpasa,Goztep,2,0,1,,H,2.26,3.51,2.94,2.41,3.71,3.1
+T1,14/03/2020,Denizlispor,Genclerbirligi,1,0,,,H,2.44,3.38,2.77,2.56,3.64,2.94
+T1,14/03/2020,Alanyaspor,Gaziantep,1,0,1,,H,1.55,4.24,5.35,1.62,4.48,6.02
+T1,14/03/2020,Konyaspor,Fenerbahce,1,0,1,,H,3.47,3.29,2.11,3.67,3.5,2.2
+T1,15/03/2020,Kayserispor,Yeni Malatyaspor,2,1,2,,H,2.52,3.31,2.7,2.65,3.52,2.85
+T1,15/03/2020,Trabzonspor,Buyuksehyr,1,1,,,D,2.31,3.41,2.92,2.41,3.7,3.01
+T1,15/03/2020,Galatasaray,Besiktas,0,0,,,D,1.96,3.54,3.61,2.03,3.8,3.93
+T1,16/03/2020,Antalyaspor,Sivasspor,1,0,,,H,2.89,3.48,2.28,3.01,3.68,2.38
+T1,17/03/2020,Goztep,Rizespor,2,0,,,H,1.97,3.48,3.76,2.04,3.67,4.2
+T1,12/06/2020,Fenerbahce,Kayserispor,2,1,,,H,1.32,5.43,7.98,1.35,5.9,9.14
+T1,12/06/2020,Goztep,Trabzonspor,1,3,,1,A,3.38,3.5,2.05,3.55,3.7,2.13
+T1,13/06/2020,Buyuksehyr,Alanyaspor,2,0,,,H,1.84,3.68,3.99,1.94,3.85,4.2
+T1,13/06/2020,Besiktas,Antalyaspor,1,2,,2,A,1.47,4.39,6.16,1.55,4.79,6.68
+T1,13/06/2020,Yeni Malatyaspor,Kasimpasa,1,2,1,,A,2.2,3.57,3.01,2.3,3.8,3.31
+T1,14/06/2020,Genclerbirligi,Konyaspor,2,1,,,H,2.36,3.22,2.99,2.44,3.4,3.12
+T1,14/06/2020,Gaziantep,Ankaragucu,1,1,1,,D,1.92,3.62,3.7,2.0,3.84,3.9
+T1,14/06/2020,Rizespor,Galatasaray,2,0,1,,H,5.03,4.03,1.61,5.77,4.26,1.7
+T1,15/06/2020,Sivasspor,Denizlispor,1,0,1,,H,1.5,4.18,6.06,1.61,4.38,7.09
+T1,19/06/2020,Ankaragucu,Buyuksehyr,1,2,1,,A,4.87,3.89,1.66,5.2,4.12,1.72
+T1,20/06/2020,Kayserispor,Genclerbirligi,2,0,1,,H,2.36,3.39,2.89,2.55,3.68,3.06
+T1,20/06/2020,Denizlispor,Besiktas,1,5,,1,A,3.73,3.69,1.9,3.97,3.92,1.95
+T1,20/06/2020,Yeni Malatyaspor,Goztep,2,1,1,,H,2.43,3.43,2.75,2.53,3.63,2.84
+T1,21/06/2020,Kasimpasa,Fenerbahce,2,0,,,H,3.26,3.59,2.08,3.64,3.9,2.16
+T1,21/06/2020,Galatasaray,Gaziantep,3,3,2,1,D,1.5,4.23,6.04,1.59,4.45,6.71
+T1,21/06/2020,Konyaspor,Sivasspor,2,2,2,1,D,2.67,3.29,2.58,2.77,3.42,2.7
+T1,22/06/2020,Alanyaspor,Trabzonspor,2,2,1,1,D,2.79,3.36,2.43,2.88,3.62,2.52
+T1,22/06/2020,Antalyaspor,Rizespor,3,1,1,,H,2.27,3.37,3.04,2.34,3.58,3.17
+T1,26/06/2020,Besiktas,Konyaspor,3,0,2,,H,1.69,3.8,4.84,1.73,4.06,5.25
+T1,27/06/2020,Fenerbahce,Yeni Malatyaspor,3,2,,,H,1.61,4.09,4.96,1.68,4.38,6.06
+T1,27/06/2020,Goztep,Alanyaspor,3,3,1,2,D,3.01,3.27,2.34,3.13,3.52,2.43
+T1,27/06/2020,Trabzonspor,Ankaragucu,1,1,1,,D,1.33,5.29,8.0,1.36,5.75,9.2
+T1,28/06/2020,Rizespor,Denizlispor,2,2,1,2,D,2.02,3.37,3.65,2.11,3.52,3.85
+T1,28/06/2020,Sivasspor,Kayserispor,0,2,,1,A,1.57,4.12,5.28,1.66,4.34,5.86
+T1,28/06/2020,Buyuksehyr,Galatasaray,1,1,,,D,2.04,3.45,3.5,2.11,3.68,3.71
+T1,28/06/2020,Gaziantep,Antalyaspor,1,1,,,D,2.45,3.46,2.7,2.58,3.6,2.85
+T1,29/06/2020,Genclerbirligi,Kasimpasa,0,2,,1,A,2.45,3.32,2.79,2.56,3.72,2.91

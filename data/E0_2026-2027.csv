@@ -1,0 +1,21 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+E0,21/08/2026,Arsenal,Coventry,3,0,2,,H,1.2,7.0,13.0,1.23,7.5,16.5
+E0,22/08/2026,Hull,Man United,2,0,2,,H,8.5,5.0,1.36,9.0,5.25,1.39
+E0,22/08/2026,Everton,Crystal Palace,2,0,1,,H,2.15,3.5,3.3,3.2,3.5,3.4
+E0,22/08/2026,Ipswich,Sunderland,2,1,1,1,H,2.7,3.3,2.63,2.75,3.4,2.68
+E0,22/08/2026,Nott'm Forest,Leeds,0,1,,,A,2.3,3.4,3.1,2.35,3.5,3.4
+E0,22/08/2026,Brentford,Tottenham,3,0,2,,H,2.4,3.7,2.75,3.4,3.75,2.8
+E0,23/08/2026,Brighton,Aston Villa,4,0,4,,H,2.15,3.6,3.0,2.25,3.6,3.15
+E0,23/08/2026,Man City,Bournemouth,2,1,,1,H,1.48,4.5,6.25,1.48,5.0,6.6
+E0,23/08/2026,Newcastle,Liverpool,2,2,1,,D,4.0,3.8,1.9,4.0,4.0,2.5
+E0,24/08/2026,Fulham,Chelsea,2,3,1,2,A,3.6,3.8,1.9,3.8,4.0,1.95
+E0,28/08/2026,Crystal Palace,Man City,1,4,,1,A,5.0,3.9,1.67,5.0,4.05,1.7
+E0,29/08/2026,Liverpool,Nott'm Forest,2,2,,1,D,1.5,4.5,5.75,2.25,4.6,6.0
+E0,29/08/2026,Bournemouth,Everton,1,1,1,,D,2.05,3.5,3.6,2.6,3.6,3.6
+E0,29/08/2026,Coventry,Hull,0,1,,,A,1.9,3.5,4.2,1.92,3.6,4.33
+E0,29/08/2026,Tottenham,Newcastle,0,2,,,A,2.25,3.75,2.9,2.3,3.75,2.98
+E0,30/08/2026,Chelsea,Brighton,4,3,3,1,H,1.83,4.0,4.0,1.88,4.0,4.0
+E0,30/08/2026,Leeds,Brentford,1,1,,1,D,2.6,3.3,2.7,2.88,3.5,2.75
+E0,30/08/2026,Sunderland,Fulham,1,0,,,H,2.4,3.2,3.1,2.45,3.4,3.1
+E0,30/08/2026,Man United,Ipswich,5,2,1,1,H,1.42,5.0,7.0,1.43,5.0,7.8
+E0,31/08/2026,Aston Villa,Arsenal,0,1,,,A,6.0,4.1,1.53,6.5,4.2,1.55

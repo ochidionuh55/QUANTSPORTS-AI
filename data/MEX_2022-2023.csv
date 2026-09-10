@@ -1,0 +1,360 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+MEX,01/07/2022,Atl. San Luis,Pachuca,0,2,,,A,2.76,3.2,2.53,3.25,3.39,2.71
+MEX,02/07/2022,Atlas,Santos Laguna,2,1,,,H,2.14,3.0,3.73,2.22,3.2,4.05
+MEX,02/07/2022,U.A.N.L.- Tigres,Mazatlan FC,4,3,,,H,1.44,4.15,7.61,1.48,4.45,9.0
+MEX,04/07/2022,Toluca,Monterrey,2,2,,,D,3.67,3.52,1.97,4.1,3.75,2.05
+MEX,04/07/2022,Club Tijuana,Atl. San Luis,1,1,,,D,1.89,3.34,4.14,1.95,3.53,4.42
+MEX,05/07/2022,Cruz Azul,Necaxa,1,1,,,D,2.37,2.92,3.32,2.49,3.09,3.68
+MEX,08/07/2022,Monterrey,Club Leon,5,1,,,H,1.56,4.16,5.24,1.65,4.47,5.75
+MEX,08/07/2022,Santos Laguna,Cruz Azul,4,0,,,H,2.37,3.3,2.9,2.48,3.51,3.2
+MEX,08/07/2022,Toluca,Club Tijuana,3,1,,,H,1.79,3.55,4.34,1.9,3.75,4.76
+MEX,08/07/2022,Atl. San Luis,Necaxa,1,2,,,A,2.22,3.14,3.31,2.3,3.31,3.67
+MEX,09/07/2022,Club Leon,Juarez,1,0,,,H,2.04,3.33,3.52,2.12,3.6,3.9
+MEX,09/07/2022,Santos Laguna,Necaxa,3,1,,,H,1.85,3.6,4.0,1.91,3.81,4.77
+MEX,09/07/2022,Club America,Atl. San Luis,3,0,,,H,1.42,4.47,7.05,1.45,5.07,8.1
+MEX,09/07/2022,Monterrey,Cruz Azul,3,2,,,H,1.44,4.38,6.76,1.48,4.65,8.0
+MEX,14/07/2022,Club America,Toluca,1,0,,,H,1.48,4.46,5.87,1.54,5.0,6.5
+MEX,16/07/2022,Puebla,Club Leon,1,1,,,D,2.19,3.57,2.99,2.3,3.8,3.17
+MEX,16/07/2022,Juarez,Queretaro,1,1,,,D,2.46,3.02,2.98,2.6,3.2,3.2
+MEX,16/07/2022,Atlas,Cruz Azul,3,2,,,H,2.12,3.09,3.64,2.23,3.3,3.99
+MEX,17/07/2022,Santos Laguna,Guadalajara Chivas,1,1,,,D,2.16,3.21,3.35,2.29,3.4,3.65
+MEX,17/07/2022,U.N.A.M.- Pumas,Necaxa,1,0,,,H,2.18,3.31,3.22,2.29,3.5,3.46
+MEX,17/07/2022,Atl. San Luis,Monterrey,0,1,,,A,3.26,3.36,2.14,3.53,3.53,2.22
+MEX,18/07/2022,U.A.N.L.- Tigres,Club Tijuana,1,0,,,H,1.43,4.37,6.95,1.48,4.7,11.0
+MEX,19/07/2022,Pachuca,Mazatlan FC,1,1,,,D,1.39,4.6,7.52,1.43,5.0,10.0
+MEX,21/07/2022,Guadalajara Chivas,Club Leon,0,0,,,D,2.11,3.34,3.35,2.22,3.5,3.66
+MEX,22/07/2022,Queretaro,Monterrey,0,3,,,A,3.11,3.28,2.24,3.3,3.46,2.37
+MEX,23/07/2022,Mazatlan FC,Atl. San Luis,1,1,,,D,2.45,3.18,2.86,2.57,3.4,3.0
+MEX,23/07/2022,Necaxa,Juarez,1,0,,,H,2.11,3.01,3.79,2.2,3.3,4.18
+MEX,23/07/2022,Toluca,Santos Laguna,2,1,,,H,2.7,3.38,2.47,2.85,3.58,2.75
+MEX,24/07/2022,Cruz Azul,Puebla,2,2,,,D,1.99,3.39,3.66,2.15,3.58,3.92
+MEX,24/07/2022,Club Tijuana,Club America,2,0,,,H,3.48,3.3,2.08,3.75,3.51,2.18
+MEX,24/07/2022,U.A.N.L.- Tigres,Atlas,2,0,,,H,1.89,3.37,4.06,2.0,3.54,4.33
+MEX,25/07/2022,Pachuca,U.N.A.M.- Pumas,0,0,,,D,1.62,3.79,5.13,1.68,4.03,5.68
+MEX,27/07/2022,Atlas,Club Tijuana,1,2,,,A,2.03,3.24,3.74,2.13,3.5,4.94
+MEX,27/07/2022,Juarez,U.A.N.L.- Tigres,0,1,,,A,4.22,3.36,1.86,4.5,3.55,1.96
+MEX,27/07/2022,Monterrey,Puebla,1,0,,,H,1.36,4.88,7.66,1.46,5.25,9.0
+MEX,27/07/2022,Atl. San Luis,Cruz Azul,0,0,,,D,2.63,3.16,2.68,2.81,3.34,2.82
+MEX,27/07/2022,Club Leon,Toluca,0,1,,,A,1.69,4.05,4.3,1.75,4.31,4.85
+MEX,28/07/2022,Necaxa,Pachuca,2,0,,,H,2.98,3.18,2.37,3.14,3.4,2.5
+MEX,28/07/2022,Queretaro,Guadalajara Chivas,2,2,,,D,3.27,3.0,2.32,3.53,3.16,2.39
+MEX,28/07/2022,U.N.A.M.- Pumas,Mazatlan FC,1,1,,,D,1.68,3.66,4.89,1.74,3.94,5.4
+MEX,30/07/2022,Juarez,Toluca,1,1,,,D,2.23,3.12,3.29,2.4,3.3,3.5
+MEX,30/07/2022,Cruz Azul,Necaxa,1,0,,,H,2.26,3.15,3.21,2.35,3.38,3.7
+MEX,31/07/2022,U.A.N.L.- Tigres,Queretaro,2,1,,,H,1.43,4.38,7.0,1.5,4.79,8.11
+MEX,31/07/2022,Club Tijuana,Mazatlan FC,2,0,,,H,2.03,3.28,3.67,2.11,3.48,4.1
+MEX,31/07/2022,Guadalajara Chivas,Pachuca,0,0,,,D,2.75,3.06,2.63,2.9,3.22,2.8
+MEX,31/07/2022,Puebla,Atl. San Luis,0,0,,,D,2.16,3.31,3.26,2.29,3.55,3.54
+MEX,31/07/2022,U.N.A.M.- Pumas,Monterrey,1,1,,,D,2.6,3.26,2.61,2.72,3.48,2.93
+MEX,01/08/2022,Juarez,Necaxa,2,1,,,H,2.94,2.82,2.67,3.11,3.05,2.81
+MEX,01/08/2022,Puebla,Club America,1,1,,,D,2.78,2.95,2.7,2.92,3.15,2.9
+MEX,02/08/2022,Club Leon,Cruz Azul,0,1,,,A,2.56,3.03,2.88,2.66,3.15,3.03
+MEX,04/08/2022,Pachuca,U.A.N.L.- Tigres,2,1,,,H,1.94,3.55,3.71,2.0,3.78,3.92
+MEX,04/08/2022,Atlas,Necaxa,2,1,,,H,1.99,2.98,4.4,2.11,3.2,5.25
+MEX,05/08/2022,Monterrey,Atl. San Luis,2,2,,,D,1.65,3.58,5.55,1.71,3.87,6.5
+MEX,05/08/2022,Puebla,Mazatlan FC,2,2,,,D,1.8,3.44,4.56,1.88,3.74,6.3
+MEX,08/08/2022,Pachuca,U.A.N.L.- Tigres,2,0,,,H,2.0,3.35,3.65,2.1,3.6,4.06
+MEX,08/08/2022,Club America,Juarez,2,1,,,H,1.59,3.58,6.12,1.66,3.82,7.5
+MEX,09/08/2022,Puebla,Pachuca,2,2,,,D,3.27,3.3,2.17,3.55,3.67,2.27
+MEX,09/08/2022,U.A.N.L.- Tigres,Toluca,3,1,,,H,1.51,4.22,5.95,1.63,4.54,6.5
+MEX,09/08/2022,Mazatlan FC,Atlas,1,0,,,H,2.51,3.06,2.89,2.7,3.36,3.01
+MEX,09/08/2022,Club Tijuana,Guadalajara Chivas,1,2,,,A,2.55,3.08,2.84,2.91,3.37,3.05
+MEX,09/08/2022,U.N.A.M.- Pumas,Queretaro,4,1,,,H,1.9,3.52,3.84,1.97,3.72,4.27
+MEX,13/08/2022,Necaxa,Monterrey,1,2,,,A,3.13,3.18,2.27,3.28,3.35,2.36
+MEX,13/08/2022,Club Tijuana,Puebla,3,3,,,D,2.2,3.27,3.21,2.29,3.49,3.42
+MEX,13/08/2022,Club Leon,Mazatlan FC,0,3,,,A,1.59,4.1,5.05,1.64,4.42,6.45
+MEX,14/08/2022,U.N.A.M.- Pumas,Club America,0,3,,,A,3.12,3.21,2.27,3.5,3.4,2.35
+MEX,14/08/2022,Guadalajara Chivas,Atlas,1,1,,,D,2.39,2.97,3.19,2.53,3.21,3.65
+MEX,14/08/2022,Cruz Azul,Toluca,2,3,,,A,2.13,3.28,3.38,2.21,3.45,3.63
+MEX,15/08/2022,U.A.N.L.- Tigres,Santos Laguna,2,0,,,H,1.59,3.91,5.32,1.65,4.2,5.95
+MEX,17/08/2022,Atlas,Juarez,0,1,,,A,2.1,3.03,3.78,2.27,3.25,4.1
+MEX,17/08/2022,Mazatlan FC,Queretaro,1,1,,,D,1.97,3.53,3.56,2.25,3.75,4.07
+MEX,17/08/2022,Puebla,Necaxa,2,2,,,D,2.3,3.16,3.11,2.42,3.39,3.5
+MEX,18/08/2022,Toluca,Monterrey,1,1,,,D,2.35,3.42,2.8,2.55,3.7,3.02
+MEX,18/08/2022,Cruz Azul,Club Tijuana,1,2,,,A,1.87,3.5,4.0,1.95,3.75,4.37
+MEX,18/08/2022,Pachuca,Club America,0,3,,,A,2.27,3.31,3.05,2.37,3.55,3.23
+MEX,19/08/2022,Santos Laguna,Club Leon,2,1,,,H,2.18,3.51,3.06,2.26,4.04,3.37
+MEX,19/08/2022,Atl. San Luis,U.N.A.M.- Pumas,3,2,,,H,2.46,3.21,2.83,2.58,3.4,2.95
+MEX,20/08/2022,Necaxa,Guadalajara Chivas,0,4,,,A,2.99,2.95,2.52,3.22,3.2,2.67
+MEX,20/08/2022,Queretaro,Club Tijuana,2,0,,,H,2.15,3.37,3.23,2.21,3.58,3.45
+MEX,21/08/2022,Atlas,Puebla,1,1,,,D,2.03,3.39,3.56,2.12,3.63,3.95
+MEX,21/08/2022,Monterrey,U.A.N.L.- Tigres,0,0,,,D,2.18,3.28,3.26,2.27,3.64,3.71
+MEX,21/08/2022,Club America,Cruz Azul,7,0,,,H,1.68,3.72,4.91,1.74,4.19,6.47
+MEX,21/08/2022,Juarez,Mazatlan FC,1,1,,,D,1.92,3.16,4.2,2.05,3.29,5.0
+MEX,21/08/2022,U.N.A.M.- Pumas,Santos Laguna,1,5,,,A,2.49,3.23,2.78,2.59,3.47,3.14
+MEX,21/08/2022,Atl. San Luis,Toluca,1,0,,,H,2.46,3.41,2.7,2.56,3.72,2.95
+MEX,22/08/2022,Pachuca,Club Leon,1,0,,,H,1.67,3.97,4.54,1.72,4.2,5.12
+MEX,24/08/2022,Guadalajara Chivas,Monterrey,1,0,,,H,2.62,3.06,2.78,2.85,3.48,2.97
+MEX,24/08/2022,Queretaro,Club America,0,1,,,A,4.8,3.84,1.66,5.5,4.2,1.73
+MEX,25/08/2022,U.N.A.M.- Pumas,U.A.N.L.- Tigres,1,1,,,D,3.21,3.24,2.22,3.5,3.49,2.33
+MEX,26/08/2022,Pachuca,Atlas,3,1,,,H,1.75,3.52,4.57,1.83,3.74,5.01
+MEX,26/08/2022,Club Tijuana,Santos Laguna,0,2,,,A,2.67,3.29,2.54,2.87,3.53,2.7
+MEX,27/08/2022,Puebla,Juarez,2,2,,,D,2.3,3.14,3.16,2.39,3.33,3.36
+MEX,27/08/2022,Mazatlan FC,Club America,1,3,,,A,4.09,3.48,1.85,5.2,3.9,1.97
+MEX,27/08/2022,Cruz Azul,Queretaro,2,1,,,H,1.99,3.48,3.58,2.06,3.7,4.33
+MEX,28/08/2022,U.A.N.L.- Tigres,Necaxa,0,0,,,D,1.53,3.95,6.21,1.64,4.5,7.2
+MEX,28/08/2022,Guadalajara Chivas,U.N.A.M.- Pumas,3,1,,,H,1.74,3.56,4.73,1.87,3.75,5.25
+MEX,28/08/2022,Toluca,Pachuca,1,4,,,A,2.75,3.34,2.45,2.86,3.52,2.7
+MEX,29/08/2022,Club Leon,Atlas,4,2,,,H,2.72,3.16,2.6,2.9,3.37,2.8
+MEX,29/08/2022,Santos Laguna,Atl. San Luis,4,1,,,H,1.86,3.72,3.79,1.94,4.0,4.15
+MEX,29/08/2022,Club Tijuana,Monterrey,0,3,,,A,3.63,3.4,2.0,4.04,3.57,2.1
+MEX,01/09/2022,Monterrey,Queretaro,0,0,,,D,1.47,4.06,6.96,1.5,4.32,7.67
+MEX,01/09/2022,Cruz Azul,Club Tijuana,2,0,,,H,1.71,3.34,5.47,1.78,3.55,6.25
+MEX,04/09/2022,Puebla,U.N.A.M.- Pumas,2,2,,,D,1.8,3.65,4.2,1.87,3.82,5.2
+MEX,04/09/2022,Mazatlan FC,Cruz Azul,1,1,,,D,2.37,3.01,3.2,2.56,3.18,3.35
+MEX,04/09/2022,Atl. San Luis,Club Leon,2,0,,,H,2.97,3.07,2.45,3.19,3.25,2.6
+MEX,05/09/2022,Guadalajara Chivas,U.N.A.M.- Pumas,4,1,,,H,2.03,3.17,3.86,2.1,3.38,4.4
+MEX,07/09/2022,Mazatlan FC,U.A.N.L.- Tigres,0,1,,,A,3.46,3.34,2.08,3.74,3.6,2.16
+MEX,07/09/2022,Club Tijuana,Juarez,0,2,,,A,1.93,3.24,4.11,2.02,3.44,4.6
+MEX,07/09/2022,Puebla,Santos Laguna,1,0,,,H,2.44,3.35,2.74,2.56,3.59,2.88
+MEX,10/09/2022,U.A.N.L.- Tigres,Necaxa,2,0,,,H,1.54,4.01,5.85,1.59,4.3,6.76
+MEX,10/09/2022,Cruz Azul,Club Leon,1,0,,,H,2.38,3.26,2.94,2.5,3.45,3.35
+MEX,10/09/2022,Toluca,Juarez,3,0,,,H,1.96,3.41,3.78,2.02,3.65,4.3
+MEX,10/09/2022,Puebla,Guadalajara Chivas,1,1,,,D,2.64,3.1,2.73,2.83,3.51,2.91
+MEX,14/09/2022,Guadalajara Chivas,U.A.N.L.- Tigres,1,4,,,A,2.76,3.0,2.67,3.01,3.16,2.82
+MEX,15/09/2022,Club America,Santos Laguna,3,3,,,D,1.5,4.38,5.64,1.57,4.75,6.85
+MEX,15/09/2022,Juarez,Pachuca,2,1,,,H,3.02,3.17,2.35,3.4,3.32,2.45
+MEX,16/09/2022,Cruz Azul,Club Leon,2,1,,,H,2.47,3.42,2.69,2.64,3.68,2.82
+MEX,17/09/2022,Puebla,U.A.N.L.- Tigres,2,1,,,H,2.77,3.29,2.47,3.0,3.55,2.61
+MEX,17/09/2022,Mazatlan FC,Toluca,1,1,,,D,2.73,3.33,2.48,2.85,3.63,2.7
+MEX,18/09/2022,Monterrey,Atlas,2,0,,,H,1.42,4.39,7.24,1.45,4.61,8.63
+MEX,18/09/2022,Club America,Guadalajara Chivas,2,1,,,H,1.67,3.79,4.76,1.72,4.01,5.3
+MEX,18/09/2022,U.N.A.M.- Pumas,Cruz Azul,1,2,,,A,2.39,3.41,2.78,2.56,3.56,3.0
+MEX,19/09/2022,Club Leon,Queretaro,3,1,,,H,1.7,3.85,4.49,1.75,4.0,5.22
+MEX,19/09/2022,Santos Laguna,Juarez,2,0,,,H,1.94,3.49,3.71,2.0,3.68,4.17
+MEX,19/09/2022,Atl. San Luis,Pachuca,1,2,,,A,3.77,3.55,1.9,4.02,3.75,1.95
+MEX,19/09/2022,Club Tijuana,Necaxa,1,1,,,D,2.05,3.36,3.5,2.14,3.54,3.83
+MEX,24/09/2022,Necaxa,Mazatlan FC,2,2,,,D,1.9,3.36,4.06,2.0,3.54,4.49
+MEX,24/09/2022,Puebla,U.N.A.M.- Pumas,2,1,,,H,2.25,3.5,2.94,2.37,3.75,3.2
+MEX,01/10/2022,Guadalajara Chivas,Mazatlan FC,3,0,,,H,1.61,3.5,6.18,1.74,3.73,7.0
+MEX,02/10/2022,Juarez,Guadalajara Chivas,1,3,,,A,2.9,2.8,2.72,3.05,2.97,2.9
+MEX,04/10/2022,Toluca,Guadalajara Chivas,1,1,,,D,3.31,3.17,2.22,3.57,3.35,2.35
+MEX,04/10/2022,Monterrey,Santos Laguna,1,0,,,H,1.77,3.61,4.43,1.82,3.79,5.0
+MEX,04/10/2022,Club America,Juarez,3,0,,,H,1.31,4.86,10.08,1.36,5.33,13.0
+MEX,07/10/2022,Club Leon,U.N.A.M.- Pumas,3,3,,,D,1.94,3.69,3.53,2.02,3.89,3.83
+MEX,07/10/2022,Guadalajara Chivas,Atl. San Luis,0,1,,,A,1.96,3.24,3.97,2.08,3.43,4.3
+MEX,07/10/2022,Cruz Azul,Pachuca,1,2,,,A,2.65,3.22,2.61,2.77,3.4,2.97
+MEX,07/10/2022,Monterrey,Club America,3,2,,,H,2.24,3.25,3.18,2.41,3.49,3.42
+MEX,07/10/2022,Toluca,Atlas,3,2,,,H,2.62,3.09,2.73,2.76,3.29,2.86
+MEX,07/10/2022,Queretaro,Necaxa,1,2,,,A,2.49,3.04,2.92,2.61,3.27,3.1
+MEX,09/10/2022,Juarez,Monterrey,0,1,,,A,3.63,3.2,2.07,4.5,3.4,2.19
+MEX,09/10/2022,Queretaro,Santos Laguna,3,3,,,D,2.97,3.47,2.24,3.3,3.9,2.35
+MEX,13/10/2022,Puebla,Club America,1,6,,,A,3.99,3.35,1.92,4.46,3.56,1.98
+MEX,13/10/2022,Cruz Azul,Monterrey,0,0,,,D,2.98,3.09,2.45,3.32,3.27,2.58
+MEX,14/10/2022,Toluca,Santos Laguna,4,3,,,H,2.41,3.45,2.75,2.54,3.72,2.88
+MEX,14/10/2022,U.A.N.L.- Tigres,Pachuca,1,0,,,H,2.34,2.97,3.28,2.44,3.15,3.55
+MEX,16/10/2022,Monterrey,Cruz Azul,3,0,,,H,1.72,3.64,4.68,1.78,3.81,5.4
+MEX,16/10/2022,Club America,Puebla,5,1,,,H,1.45,4.61,6.22,1.5,5.2,8.0
+MEX,17/10/2022,Santos Laguna,Toluca,1,2,,,A,1.47,4.69,5.73,1.53,5.05,6.56
+MEX,17/10/2022,Pachuca,U.A.N.L.- Tigres,2,1,,,H,1.69,3.63,4.95,1.75,3.83,5.36
+MEX,20/10/2022,Toluca,Club America,2,1,,,H,5.16,4.1,1.58,5.8,4.36,1.67
+MEX,21/10/2022,Pachuca,Monterrey,5,2,,,H,2.08,3.05,3.87,2.13,3.18,4.59
+MEX,23/10/2022,Club America,Toluca,1,1,,,D,1.26,5.82,9.75,1.28,6.2,11.34
+MEX,24/10/2022,Monterrey,Pachuca,0,1,,,A,1.9,3.62,3.74,1.99,3.89,4.09
+MEX,28/10/2022,Toluca,Pachuca,1,5,,,A,3.56,3.6,1.96,3.89,4.0,2.1
+MEX,31/10/2022,Pachuca,Toluca,3,1,,,H,1.57,4.39,4.89,1.63,4.73,5.77
+MEX,01/11/2022,U.N.A.M.- Pumas,Toluca,5,0,,,H,2.24,3.24,3.2,2.34,3.49,3.4
+MEX,04/11/2022,Queretaro,U.A.N.L.- Tigres,0,1,,,A,3.77,3.23,2.02,4.44,3.45,2.14
+MEX,09/11/2022,Necaxa,Club America,1,2,,,A,3.41,3.32,2.1,3.71,3.5,2.25
+MEX,09/11/2022,U.A.N.L.- Tigres,Club Leon,0,1,,,A,1.65,3.9,4.8,1.72,4.11,5.75
+MEX,09/11/2022,Guadalajara Chivas,Puebla,1,0,,,H,2.09,3.31,3.44,2.17,3.5,4.0
+MEX,09/11/2022,Toluca,U.N.A.M.- Pumas,2,2,,,D,2.32,3.47,2.83,2.45,3.72,3.09
+MEX,09/11/2022,Cruz Azul,Mazatlan FC,2,0,,,H,1.86,3.56,3.96,1.94,3.8,4.33
+MEX,02/12/2022,Mazatlan FC,Club Tijuana,2,0,,,H,2.96,3.13,2.43,3.12,3.3,2.61
+MEX,02/12/2022,Puebla,Atlas,1,1,,,D,3.07,2.78,2.63,3.27,3.05,2.79
+MEX,02/12/2022,Atl. San Luis,Toluca,0,1,,,A,1.95,3.45,3.76,2.0,3.65,3.96
+MEX,02/12/2022,Guadalajara Chivas,U.A.N.L.- Tigres,1,3,,,A,2.56,3.01,2.89,2.67,3.2,3.05
+MEX,03/12/2022,Necaxa,Queretaro,1,0,,,H,2.29,2.94,3.43,2.4,3.14,3.65
+MEX,03/12/2022,Juarez,Atlas,1,2,,,A,3.78,2.81,2.23,4.01,2.96,2.34
+MEX,03/12/2022,Monterrey,Mazatlan FC,2,1,,,H,1.45,4.13,7.35,1.5,4.4,8.5
+MEX,03/12/2022,Club Leon,U.A.N.L.- Tigres,0,3,,,A,2.63,3.23,2.64,2.76,3.47,2.79
+MEX,04/12/2022,Pachuca,Club Tijuana,0,0,,,D,1.39,4.81,7.19,1.44,5.2,8.0
+MEX,05/12/2022,Atl. San Luis,Pachuca,2,2,,,D,3.3,3.03,2.31,3.6,3.24,2.44
+MEX,05/12/2022,Puebla,Club America,1,1,,,D,3.98,3.17,2.0,4.3,3.34,2.07
+MEX,08/12/2022,Queretaro,Atl. San Luis,1,1,,,D,2.94,3.21,2.39,3.1,3.47,2.8
+MEX,09/12/2022,Atlas,Atl. San Luis,1,3,,,A,2.4,3.19,2.95,2.57,3.45,4.4
+MEX,09/12/2022,Pachuca,Club Tijuana,6,1,,,H,1.44,4.32,6.86,1.48,4.58,7.6
+MEX,04/01/2023,Necaxa,Santos Laguna,0,0,,,D,2.71,3.46,2.41,2.88,3.69,2.54
+MEX,04/01/2023,Juarez,Puebla,0,2,,,A,1.74,3.6,4.7,2.3,3.9,5.4
+MEX,05/01/2023,Queretaro,Pachuca,0,1,,,A,3.95,3.71,1.83,4.3,4.0,1.97
+MEX,05/01/2023,Club Leon,U.A.N.L.- Tigres,3,0,,,H,1.83,3.71,3.95,2.05,4.0,4.33
+MEX,07/01/2023,Club America,Juarez,1,2,,,A,1.44,4.51,6.61,1.5,4.9,7.5
+MEX,07/01/2023,Mazatlan FC,Pachuca,1,1,,,D,3.55,3.54,1.98,3.94,3.8,2.08
+MEX,07/01/2023,Club Tijuana,U.N.A.M.- Pumas,2,3,,,A,1.95,3.59,3.6,2.05,3.86,4.0
+MEX,10/01/2023,Pachuca,Necaxa,1,1,,,D,1.72,3.75,4.48,1.79,3.98,4.92
+MEX,10/01/2023,Club America,U.N.A.M.- Pumas,1,0,,,H,1.72,3.92,4.29,1.77,4.15,4.75
+MEX,10/01/2023,Mazatlan FC,U.A.N.L.- Tigres,2,3,,,A,3.58,3.54,1.96,4.0,3.68,2.08
+MEX,11/01/2023,Queretaro,Guadalajara Chivas,1,2,,,A,2.76,3.14,2.55,3.0,3.3,2.7
+MEX,11/01/2023,Toluca,Puebla,0,1,,,A,1.45,4.67,5.93,1.52,5.0,7.0
+MEX,11/01/2023,Club Leon,U.N.A.M.- Pumas,1,1,,,D,1.81,3.74,3.99,2.02,4.05,4.5
+MEX,11/01/2023,Monterrey,Necaxa,3,0,,,H,1.28,5.4,9.34,1.34,5.94,10.7
+MEX,12/01/2023,Puebla,U.A.N.L.- Tigres,2,2,,,D,3.76,3.6,1.91,3.96,3.7,1.96
+MEX,12/01/2023,Guadalajara Chivas,U.N.A.M.- Pumas,1,0,,,H,2.25,3.22,3.18,2.42,3.34,3.3
+MEX,13/01/2023,Atlas,Mazatlan FC,2,1,,,H,1.72,3.48,4.98,1.79,3.81,5.42
+MEX,14/01/2023,Atl. San Luis,Guadalajara Chivas,0,0,,,D,2.94,3.17,2.39,3.19,3.39,2.5
+MEX,14/01/2023,Puebla,Queretaro,2,0,,,H,2.17,3.3,3.25,2.3,3.54,3.59
+MEX,14/01/2023,Cruz Azul,Monterrey,2,3,,,A,2.61,3.15,2.69,2.75,3.48,2.81
+MEX,15/01/2023,Juarez,Club Tijuana,3,0,,,H,2.26,3.15,3.21,2.35,3.33,3.45
+MEX,15/01/2023,Toluca,Club America,2,2,,,D,3.96,3.74,1.81,4.25,4.09,1.85
+MEX,15/01/2023,Santos Laguna,U.N.A.M.- Pumas,3,0,,,H,2.14,3.53,3.1,2.23,3.78,3.4
+MEX,16/01/2023,U.A.N.L.- Tigres,Pachuca,4,1,,,H,2.11,3.14,3.57,2.18,3.33,3.85
+MEX,17/01/2023,Club Leon,Necaxa,2,1,,,H,1.76,3.73,4.23,1.95,4.0,4.62
+MEX,21/01/2023,Mazatlan FC,Santos Laguna,1,2,,,A,3.33,3.54,2.04,3.6,3.73,2.14
+MEX,21/01/2023,Club Tijuana,U.A.N.L.- Tigres,1,1,,,D,3.91,3.56,1.88,4.25,3.75,1.98
+MEX,21/01/2023,Monterrey,Atl. San Luis,3,1,,,H,1.39,4.57,7.55,1.52,5.0,8.9
+MEX,22/01/2023,Club America,Puebla,2,2,,,D,1.37,4.88,7.45,1.43,5.22,8.52
+MEX,22/01/2023,Guadalajara Chivas,Toluca,1,2,,,A,1.95,3.38,3.79,2.08,3.64,4.24
+MEX,22/01/2023,Necaxa,Cruz Azul,1,0,,,H,3.22,3.3,2.19,3.5,3.58,2.66
+MEX,22/01/2023,U.N.A.M.- Pumas,Club Leon,4,1,,,H,2.22,3.59,2.92,2.31,3.84,3.09
+MEX,22/01/2023,Queretaro,Atlas,3,3,,,D,3.35,3.18,2.18,3.75,3.46,2.29
+MEX,23/01/2023,Pachuca,Juarez,4,1,,,H,1.54,3.91,5.93,1.6,4.2,6.81
+MEX,27/01/2023,Atlas,Santos Laguna,2,2,,,D,2.09,3.49,3.26,2.19,3.64,3.53
+MEX,28/01/2023,Puebla,Monterrey,1,2,,,A,3.72,3.51,1.92,4.1,3.72,2.0
+MEX,28/01/2023,Club Tijuana,U.N.A.M.- Pumas,0,0,,,D,1.97,3.53,3.59,2.04,3.75,4.0
+MEX,29/01/2023,U.A.N.L.- Tigres,Atl. San Luis,0,0,,,D,1.44,4.36,6.8,1.48,4.63,7.5
+MEX,29/01/2023,Club America,Mazatlan FC,6,0,,,H,1.22,6.26,11.22,1.25,6.9,13.0
+MEX,29/01/2023,Juarez,Guadalajara Chivas,1,2,,,A,2.89,2.89,2.64,3.07,3.02,2.75
+MEX,29/01/2023,Toluca,Club Leon,0,0,,,D,2.18,3.64,2.95,2.27,3.83,3.12
+MEX,30/01/2023,Pachuca,Necaxa,2,1,,,H,1.44,4.41,6.71,1.49,4.82,7.8
+MEX,02/02/2023,Atlas,Toluca,0,0,,,D,2.07,3.49,3.32,2.19,3.77,3.74
+MEX,04/02/2023,Pachuca,Cruz Azul,0,2,,,A,1.95,3.39,3.79,2.02,3.62,4.27
+MEX,04/02/2023,Club America,Club Leon,2,2,,,D,1.68,3.97,4.47,1.75,4.3,4.8
+MEX,04/02/2023,Monterrey,Club Tijuana,4,0,,,H,1.49,4.12,6.36,1.54,4.5,7.37
+MEX,04/02/2023,Atlas,Guadalajara Chivas,3,3,,,D,2.42,3.1,2.97,2.65,3.3,3.27
+MEX,04/02/2023,Toluca,U.A.N.L.- Tigres,3,2,,,H,2.23,3.47,2.97,2.45,3.69,3.17
+MEX,07/02/2023,Atl. San Luis,Monterrey,1,1,,,D,3.5,3.42,2.04,3.82,3.62,2.14
+MEX,07/02/2023,U.A.N.L.- Tigres,Puebla,1,1,,,D,1.47,4.48,6.08,1.51,4.9,6.87
+MEX,07/02/2023,Atlas,Cruz Azul,2,0,,,H,1.89,3.39,4.09,1.97,3.61,4.6
+MEX,07/02/2023,Toluca,Necaxa,0,0,,,D,1.57,4.16,5.2,1.65,4.83,6.4
+MEX,09/02/2023,Juarez,Mazatlan FC,3,1,,,H,1.99,3.48,3.58,2.11,3.96,4.0
+MEX,09/02/2023,Puebla,Club Tijuana,3,0,,,H,2.01,3.64,3.37,2.11,3.8,3.75
+MEX,10/02/2023,Toluca,Guadalajara Chivas,1,1,,,D,2.08,3.51,3.28,2.2,3.73,3.89
+MEX,11/02/2023,Atlas,Pachuca,0,2,,,A,2.37,3.2,2.96,2.57,3.36,3.14
+MEX,11/02/2023,Cruz Azul,Juarez,2,0,,,H,1.63,3.94,4.89,1.69,4.22,5.28
+MEX,11/02/2023,Atl. San Luis,Club America,0,1,,,A,4.42,3.94,1.69,5.28,4.16,1.74
+MEX,11/02/2023,Club Tijuana,U.A.N.L.- Tigres,2,0,,,H,3.18,3.27,2.22,3.67,3.5,2.3
+MEX,11/02/2023,Mazatlan FC,Santos Laguna,3,1,,,H,2.77,3.5,2.36,3.0,3.77,2.47
+MEX,15/02/2023,Club Leon,Puebla,2,0,,,H,1.66,3.96,4.65,1.74,4.2,5.03
+MEX,15/02/2023,U.A.N.L.- Tigres,Juarez,0,0,,,D,1.42,4.6,6.86,1.45,5.05,7.9
+MEX,15/02/2023,Atl. San Luis,Club America,1,3,,,A,4.46,3.83,1.71,4.76,4.1,1.77
+MEX,16/02/2023,Guadalajara Chivas,Club Tijuana,2,1,,,H,1.84,3.41,4.3,1.93,3.58,4.82
+MEX,16/02/2023,Monterrey,Queretaro,2,0,,,H,1.33,5.03,8.38,1.41,5.54,10.13
+MEX,16/02/2023,Necaxa,U.N.A.M.- Pumas,3,1,,,H,2.73,3.36,2.47,2.92,3.61,2.72
+MEX,17/02/2023,Mazatlan FC,Pachuca,2,3,,,A,4.54,3.95,1.68,5.0,4.21,1.73
+MEX,18/02/2023,Juarez,Club Leon,0,0,,,D,2.81,3.25,2.47,2.95,3.52,2.61
+MEX,18/02/2023,Puebla,Cruz Azul,1,3,,,A,3.04,3.45,2.21,3.3,3.67,2.35
+MEX,18/02/2023,Atl. San Luis,Santos Laguna,1,1,,,D,2.66,3.48,2.46,2.75,3.68,2.6
+MEX,18/02/2023,Monterrey,Necaxa,2,1,,,H,1.31,5.17,9.03,1.36,5.8,11.0
+MEX,19/02/2023,Atlas,U.A.N.L.- Tigres,0,1,,,A,3.37,3.29,2.13,3.6,3.49,2.21
+MEX,19/02/2023,U.N.A.M.- Pumas,Guadalajara Chivas,1,2,,,A,2.32,3.26,3.0,2.46,3.5,3.28
+MEX,19/02/2023,Queretaro,Mazatlan FC,1,1,,,D,1.84,3.5,4.15,1.94,3.81,4.7
+MEX,20/02/2023,Club America,Club Tijuana,2,1,,,H,1.29,5.46,9.0,1.34,6.15,11.09
+MEX,20/02/2023,Pachuca,Toluca,1,2,,,A,1.76,3.86,4.17,1.82,4.1,4.5
+MEX,23/02/2023,Cruz Azul,Atlas,1,0,,,H,2.35,3.21,2.98,2.48,3.45,3.25
+MEX,24/02/2023,Santos Laguna,Toluca,0,5,,,A,2.01,3.85,3.21,2.08,4.1,3.42
+MEX,25/02/2023,Necaxa,Queretaro,1,1,,,D,2.39,3.08,3.06,2.51,3.28,3.38
+MEX,25/02/2023,Mazatlan FC,U.N.A.M.- Pumas,1,2,,,A,2.36,3.49,2.78,2.5,3.71,2.93
+MEX,25/02/2023,Cruz Azul,Juarez,1,0,,,H,1.72,3.58,4.85,1.77,3.82,5.3
+MEX,26/02/2023,U.A.N.L.- Tigres,Guadalajara Chivas,1,2,,,A,1.69,3.46,5.24,1.75,3.72,6.17
+MEX,26/02/2023,Atlas,Club America,2,2,,,D,3.69,3.56,1.93,4.23,3.77,2.01
+MEX,26/02/2023,Toluca,Atl. San Luis,2,0,,,H,1.64,4.06,4.68,1.7,4.4,5.2
+MEX,27/02/2023,Santos Laguna,Puebla,3,2,,,H,1.51,4.44,5.48,1.56,4.7,6.0
+MEX,27/02/2023,Club Tijuana,Pachuca,2,0,,,H,2.6,3.35,2.57,2.82,3.6,2.69
+MEX,28/02/2023,Club Leon,Monterrey,1,1,,,D,2.67,3.33,2.54,2.95,3.56,2.68
+MEX,02/03/2023,Atl. San Luis,Puebla,2,0,,,H,2.36,3.1,3.1,2.51,3.26,3.41
+MEX,04/03/2023,Atl. San Luis,Mazatlan FC,2,1,,,H,1.55,3.95,5.94,2.01,4.3,6.8
+MEX,04/03/2023,Queretaro,U.N.A.M.- Pumas,1,0,,,H,2.73,3.34,2.46,2.96,3.52,2.58
+MEX,07/03/2023,Santos Laguna,Queretaro,0,2,,,A,1.66,3.94,4.68,1.74,4.2,5.12
+MEX,09/03/2023,Club Leon,Necaxa,1,1,,,D,1.41,4.58,7.05,1.45,4.86,8.02
+MEX,09/03/2023,Santos Laguna,U.N.A.M.- Pumas,2,1,,,H,1.86,3.85,3.65,1.91,4.13,3.91
+MEX,09/03/2023,U.A.N.L.- Tigres,Queretaro,5,0,,,H,1.45,4.23,6.87,1.54,4.66,7.83
+MEX,09/03/2023,Cruz Azul,Club America,2,3,,,A,3.3,3.68,2.01,3.7,3.94,2.07
+MEX,09/03/2023,Toluca,Pachuca,5,0,,,H,2.19,3.6,2.94,2.27,3.85,3.28
+MEX,12/03/2023,Club America,Club Leon,2,0,,,H,1.52,4.32,5.59,1.61,4.57,6.25
+MEX,12/03/2023,Monterrey,Atl. San Luis,1,1,,,D,1.48,4.4,5.95,1.52,4.61,6.5
+MEX,13/03/2023,Pachuca,Monterrey,1,2,,,A,2.36,3.11,3.06,2.53,3.3,3.35
+MEX,13/03/2023,Santos Laguna,Club Tijuana,3,2,,,H,1.79,3.78,3.97,1.91,4.02,4.36
+MEX,13/03/2023,Juarez,Necaxa,1,1,,,D,2.14,3.08,3.57,2.31,3.5,4.1
+MEX,18/03/2023,Puebla,Atlas,0,4,,,A,3.19,3.27,2.22,3.63,3.5,2.5
+MEX,18/03/2023,Club Tijuana,Toluca,3,3,,,D,2.31,3.4,2.89,2.48,3.61,3.08
+MEX,18/03/2023,Mazatlan FC,Necaxa,0,1,,,A,2.82,3.23,2.45,3.0,3.4,2.85
+MEX,18/03/2023,Cruz Azul,Atl. San Luis,1,0,,,H,1.74,3.53,4.63,1.83,3.72,5.16
+MEX,19/03/2023,U.A.N.L.- Tigres,Monterrey,0,1,,,A,2.39,3.09,3.03,2.53,3.3,3.3
+MEX,19/03/2023,Guadalajara Chivas,Club America,2,4,,,A,3.11,3.36,2.21,3.39,3.55,2.31
+MEX,19/03/2023,U.N.A.M.- Pumas,Pachuca,0,2,,,A,2.56,3.33,2.63,2.85,3.5,2.84
+MEX,20/03/2023,Queretaro,Juarez,2,2,,,D,2.5,2.98,2.95,2.7,3.15,3.11
+MEX,20/03/2023,Club Leon,Santos Laguna,4,1,,,H,1.85,3.82,3.68,1.91,4.1,4.05
+MEX,25/03/2023,Mazatlan FC,Club Leon,1,2,,,A,4.41,3.56,1.77,5.0,3.85,1.87
+MEX,30/03/2023,Queretaro,Cruz Azul,2,2,,,D,3.79,3.26,2.0,4.25,3.45,2.2
+MEX,02/04/2023,Necaxa,Club Tijuana,1,1,,,D,2.63,3.14,2.7,2.8,3.34,2.81
+MEX,02/04/2023,Mazatlan FC,Juarez,2,3,,,A,2.72,3.05,2.68,2.92,3.28,2.85
+MEX,02/04/2023,Club Leon,Pachuca,0,1,,,A,2.9,3.45,2.29,3.15,3.65,2.43
+MEX,03/04/2023,Mazatlan FC,Cruz Azul,3,1,,,H,3.46,3.37,2.06,3.71,3.55,2.14
+MEX,03/04/2023,Necaxa,U.A.N.L.- Tigres,0,1,,,A,4.58,3.54,1.75,5.1,3.72,1.82
+MEX,03/04/2023,Club Tijuana,Atlas,1,1,,,D,1.96,3.33,3.84,2.18,3.58,4.22
+MEX,03/04/2023,Club Leon,Atl. San Luis,2,0,,,H,1.6,3.92,5.18,1.67,4.2,6.06
+MEX,07/04/2023,Club Leon,Guadalajara Chivas,1,2,,,A,1.91,3.34,4.03,2.0,3.54,4.48
+MEX,09/04/2023,Guadalajara Chivas,Monterrey,1,2,,,A,2.89,3.15,2.45,3.1,3.3,2.56
+MEX,09/04/2023,Atl. San Luis,Atlas,2,0,,,H,2.49,3.22,2.79,2.6,3.4,2.95
+MEX,10/04/2023,Puebla,Monterrey,1,1,,,D,4.38,3.86,1.71,5.0,4.0,1.81
+MEX,10/04/2023,Club America,Pachuca,4,0,,,H,1.54,4.25,5.43,1.58,4.5,6.07
+MEX,11/04/2023,Puebla,Club Leon,5,4,,,H,3.74,3.76,1.87,4.0,3.99,1.94
+MEX,11/04/2023,U.A.N.L.- Tigres,Atl. San Luis,2,2,,,D,1.43,4.57,6.58,1.54,4.88,7.41
+MEX,12/04/2023,U.N.A.M.- Pumas,Guadalajara Chivas,3,0,,,H,1.98,3.4,3.67,2.15,3.6,4.07
+MEX,12/04/2023,U.A.N.L.- Tigres,Puebla,3,0,,,H,1.35,4.95,7.81,1.42,5.55,8.8
+MEX,14/04/2023,Atl. San Luis,Juarez,2,0,,,H,2.2,3.23,3.27,2.29,3.4,3.5
+MEX,15/04/2023,Necaxa,Puebla,1,1,,,D,2.03,3.37,3.56,2.22,3.56,4.0
+MEX,15/04/2023,Mazatlan FC,Club Tijuana,1,2,,,A,3.59,3.7,1.92,3.79,3.93,2.01
+MEX,16/04/2023,Atlas,Pachuca,4,1,,,H,2.99,3.37,2.28,3.21,3.55,2.4
+MEX,16/04/2023,Club Leon,Guadalajara Chivas,0,2,,,A,2.32,3.33,2.96,2.45,3.56,3.3
+MEX,16/04/2023,Cruz Azul,Club America,1,3,,,A,3.3,3.53,2.06,3.72,3.79,2.16
+MEX,16/04/2023,U.N.A.M.- Pumas,Toluca,3,1,,,H,2.79,3.65,2.27,3.08,3.94,2.39
+MEX,17/04/2023,Queretaro,U.A.N.L.- Tigres,0,0,,,D,4.25,3.45,1.83,4.7,3.65,1.9
+MEX,17/04/2023,Monterrey,Santos Laguna,1,2,,,A,1.52,4.41,5.39,1.6,4.73,5.9
+MEX,21/04/2023,U.A.N.L.- Tigres,Puebla,1,0,,,H,1.55,4.12,5.47,1.62,4.6,6.8
+MEX,22/04/2023,Mazatlan FC,Monterrey,0,2,,,A,5.63,4.38,1.51,6.07,4.8,1.59
+MEX,22/04/2023,Necaxa,Atlas,1,3,,,A,3.28,3.44,2.12,3.53,3.68,2.45
+MEX,22/04/2023,Club Tijuana,Club Leon,0,0,,,D,2.15,3.61,3.06,2.26,3.87,3.26
+MEX,23/04/2023,Pachuca,Atl. San Luis,2,1,,,H,1.7,3.85,4.55,1.77,4.11,6.0
+MEX,23/04/2023,Guadalajara Chivas,Cruz Azul,2,1,,,H,2.16,3.27,3.35,2.25,3.45,3.62
+MEX,23/04/2023,Club America,U.N.A.M.- Pumas,1,1,,,D,1.55,4.35,5.18,1.61,4.8,6.0
+MEX,23/04/2023,Toluca,Juarez,1,1,,,D,1.53,4.26,5.58,1.58,4.5,6.2
+MEX,24/04/2023,Santos Laguna,Queretaro,0,2,,,A,1.58,4.15,5.16,1.65,4.4,6.33
+MEX,29/04/2023,Juarez,Club America,0,1,,,A,4.83,3.83,1.66,5.5,4.1,1.73
+MEX,30/04/2023,Puebla,Club Tijuana,5,2,,,H,2.13,3.65,3.14,2.24,3.76,3.2
+MEX,30/04/2023,Atl. San Luis,Atlas,0,0,,,D,2.75,3.36,2.43,2.94,3.69,2.57
+MEX,30/04/2023,Guadalajara Chivas,Mazatlan FC,4,1,,,H,1.33,5.04,8.47,1.37,5.7,9.52
+MEX,30/04/2023,Monterrey,U.N.A.M.- Pumas,4,1,,,H,1.68,3.94,4.53,1.74,4.3,5.01
+MEX,30/04/2023,Cruz Azul,Santos Laguna,3,2,,,H,2.01,3.59,3.43,2.1,3.88,3.8
+MEX,30/04/2023,Toluca,Necaxa,3,0,,,H,1.43,4.9,6.18,1.47,5.55,7.26
+MEX,02/05/2023,Cruz Azul,U.A.N.L.- Tigres,0,1,,,A,2.78,3.16,2.53,2.9,3.37,2.68
+MEX,02/05/2023,Santos Laguna,Club America,2,2,,,D,2.95,3.75,2.15,3.1,4.1,2.28
+MEX,02/05/2023,U.N.A.M.- Pumas,Atlas,2,2,,,D,2.64,3.19,2.65,2.77,3.45,2.8
+MEX,02/05/2023,Guadalajara Chivas,Queretaro,1,1,,,D,1.85,3.46,4.15,1.95,3.66,4.71
+MEX,03/05/2023,Club America,Pachuca,0,3,,,A,1.85,3.77,3.78,1.95,4.0,4.5
+MEX,03/05/2023,Monterrey,Juarez,3,0,,,H,1.59,3.71,5.7,1.68,4.1,6.6
+MEX,03/05/2023,Guadalajara Chivas,Santos Laguna,2,0,,,H,2.06,3.57,3.28,2.17,3.75,3.56
+MEX,03/05/2023,U.N.A.M.- Pumas,Puebla,2,4,,,A,1.6,4.1,4.94,1.67,4.33,5.72
+MEX,10/05/2023,Necaxa,Cruz Azul,1,3,,,A,3.28,3.42,2.11,3.5,3.6,2.2
+MEX,10/05/2023,U.N.A.M.- Pumas,Queretaro,4,0,,,H,1.82,3.62,4.08,1.91,3.9,4.59
+MEX,10/05/2023,Santos Laguna,Club Tijuana,2,1,,,H,1.63,4.14,4.6,1.68,4.33,4.93
+MEX,10/05/2023,U.A.N.L.- Tigres,Toluca,2,2,,,D,1.54,4.2,5.47,1.73,4.5,6.0
+MEX,11/05/2023,Club America,Club Tijuana,3,0,,,H,1.34,5.17,7.59,1.39,5.62,8.43
+MEX,11/05/2023,Guadalajara Chivas,Cruz Azul,1,0,,,H,2.35,3.31,2.95,2.47,3.48,3.17
+MEX,11/05/2023,Pachuca,Monterrey,0,2,,,A,2.65,3.42,2.51,2.85,3.5,2.75
+MEX,11/05/2023,U.N.A.M.- Pumas,Atlas,3,0,,,H,1.84,3.6,4.04,1.9,3.77,4.32
+MEX,11/05/2023,Necaxa,Mazatlan FC,4,0,,,H,2.5,3.45,2.63,2.62,3.66,2.87
+MEX,14/05/2023,Monterrey,Santos Laguna,2,0,,,H,1.55,4.2,5.36,1.62,4.75,5.86
+MEX,14/05/2023,Club America,Atl. San Luis,1,2,,,A,1.31,5.52,8.05,1.35,6.0,8.9
+MEX,14/05/2023,Toluca,U.A.N.L.- Tigres,3,1,,,H,1.86,3.76,3.81,2.08,4.01,4.5
+MEX,15/05/2023,Guadalajara Chivas,Atlas,1,0,,,H,2.19,3.32,3.21,2.36,3.45,3.52
+MEX,18/05/2023,U.A.N.L.- Tigres,Monterrey,1,1,,,D,2.58,2.95,2.91,2.84,3.15,3.13
+MEX,19/05/2023,Guadalajara Chivas,Club America,0,1,,,A,2.98,3.21,2.37,3.23,3.39,2.54
+MEX,21/05/2023,Monterrey,U.A.N.L.- Tigres,0,1,,,A,2.04,3.17,3.79,2.14,3.34,4.17
+MEX,22/05/2023,Club America,Guadalajara Chivas,1,3,,,A,1.75,3.69,4.39,1.82,3.97,4.75
+MEX,26/05/2023,U.A.N.L.- Tigres,Guadalajara Chivas,0,0,,,D,1.81,3.26,4.77,1.86,3.45,5.25
+MEX,29/05/2023,Guadalajara Chivas,U.A.N.L.- Tigres,2,3,,,A,2.57,2.89,2.97,2.76,3.08,3.2
+MEX,02/06/2023,Monterrey,Toluca,2,1,,,H,1.51,4.23,5.86,1.58,4.5,6.9
+MEX,03/06/2023,Queretaro,Toluca,1,0,,,H,3.43,3.47,2.03,3.7,3.67,2.18
+MEX,11/06/2023,Santos Laguna,Toluca,3,1,,,H,2.12,3.75,3.02,2.21,3.97,3.4
+MEX,11/06/2023,Juarez,Queretaro,0,3,,,A,1.9,3.53,3.87,2.03,3.72,4.2

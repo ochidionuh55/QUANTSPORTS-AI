@@ -1,0 +1,138 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+SC3,03/08/2019,Brechin,Annan Athletic,0,1,,,A,2.35,3.44,2.68,2.5,3.67,2.84
+SC3,03/08/2019,Cove Rangers,Edinburgh City,5,0,3,,H,2.08,3.5,3.08,2.17,3.86,3.4
+SC3,03/08/2019,Elgin,Cowdenbeath,3,0,1,,H,1.93,3.74,3.27,2.0,4.31,3.5
+SC3,03/08/2019,Stenhousemuir,Albion Rvs,2,3,,1,A,1.68,3.74,4.42,1.79,4.13,5.01
+SC3,03/08/2019,Stirling,Queens Park,0,1,,,A,2.15,3.32,3.09,2.29,3.5,3.4
+SC3,10/08/2019,Albion Rvs,Cove Rangers,4,4,1,3,D,4.26,3.83,1.67,4.75,4.13,1.74
+SC3,10/08/2019,Annan Athletic,Elgin,1,1,,,D,1.79,3.84,3.62,1.89,4.45,4.2
+SC3,10/08/2019,Cowdenbeath,Stirling,1,0,,,H,2.6,3.3,2.46,2.77,3.5,2.56
+SC3,10/08/2019,Edinburgh City,Brechin,2,1,1,,H,1.87,3.6,3.53,1.93,4.02,3.8
+SC3,10/08/2019,Queens Park,Stenhousemuir,1,1,,,D,2.21,3.37,2.88,2.31,3.58,3.06
+SC3,17/08/2019,Annan Athletic,Albion Rvs,3,2,3,1,H,1.74,3.74,4.02,1.83,4.0,4.5
+SC3,17/08/2019,Brechin,Queens Park,0,3,,2,A,2.72,3.4,2.32,2.88,3.76,2.42
+SC3,17/08/2019,Cove Rangers,Cowdenbeath,3,2,1,,H,1.52,4.29,5.05,1.59,4.82,5.5
+SC3,17/08/2019,Edinburgh City,Stirling,1,0,,,H,1.63,3.87,4.59,1.7,4.2,5.5
+SC3,17/08/2019,Elgin,Stenhousemuir,0,1,,,A,2.23,3.67,2.69,2.3,4.36,2.95
+SC3,24/08/2019,Albion Rvs,Brechin,0,1,,1,A,2.13,3.7,2.84,2.25,4.03,3.06
+SC3,24/08/2019,Cowdenbeath,Annan Athletic,3,1,1,,H,2.79,3.55,2.19,3.02,3.75,2.29
+SC3,24/08/2019,Queens Park,Elgin,0,0,,,D,1.97,3.79,3.11,2.05,4.37,3.4
+SC3,24/08/2019,Stenhousemuir,Edinburgh City,1,3,1,,A,2.7,3.51,2.28,2.9,3.7,2.37
+SC3,24/08/2019,Stirling,Cove Rangers,1,2,,1,A,4.54,3.88,1.62,5.0,4.15,1.67
+SC3,31/08/2019,Albion Rvs,Stirling,2,1,,1,H,2.51,3.36,2.53,2.74,3.6,2.7
+SC3,31/08/2019,Annan Athletic,Stenhousemuir,1,1,1,1,D,2.03,3.56,3.16,2.1,3.8,3.43
+SC3,31/08/2019,Cove Rangers,Queens Park,3,0,1,,H,1.63,3.95,4.5,1.7,4.41,5.0
+SC3,31/08/2019,Cowdenbeath,Brechin,2,1,2,1,H,2.26,3.43,2.8,2.36,3.6,3.1
+SC3,31/08/2019,Elgin,Edinburgh City,3,3,,2,D,2.49,3.4,2.52,2.62,3.6,2.65
+SC3,14/09/2019,Brechin,Cove Rangers,2,4,2,4,A,5.97,4.37,1.44,7.0,4.88,1.5
+SC3,14/09/2019,Edinburgh City,Annan Athletic,4,0,1,,H,1.86,3.65,3.56,1.98,4.2,4.0
+SC3,14/09/2019,Queens Park,Albion Rvs,1,1,,1,D,1.85,3.6,3.66,1.93,3.9,4.08
+SC3,14/09/2019,Stenhousemuir,Cowdenbeath,0,3,,1,A,2.15,3.47,2.94,2.25,3.79,3.14
+SC3,14/09/2019,Stirling,Elgin,1,0,1,,H,2.73,3.37,2.32,2.91,3.61,2.45
+SC3,21/09/2019,Albion Rvs,Edinburgh City,1,3,,2,A,3.19,3.72,1.97,3.6,4.32,2.09
+SC3,21/09/2019,Annan Athletic,Stirling,0,0,,,D,1.76,3.65,4.02,1.87,3.85,4.5
+SC3,21/09/2019,Elgin,Cove Rangers,0,2,,1,A,4.55,4.21,1.58,5.0,4.77,1.63
+SC3,21/09/2019,Queens Park,Cowdenbeath,0,3,,,A,2.03,3.38,3.32,2.1,3.58,4.0
+SC3,21/09/2019,Stenhousemuir,Brechin,1,0,,,H,1.89,3.39,3.72,1.95,3.7,4.33
+SC3,28/09/2019,Brechin,Elgin,2,1,,,H,2.9,3.43,2.2,3.3,3.64,2.3
+SC3,28/09/2019,Cove Rangers,Annan Athletic,3,0,1,,H,1.34,4.83,7.35,1.37,5.52,8.5
+SC3,28/09/2019,Cowdenbeath,Albion Rvs,1,0,1,,H,2.09,3.57,3.0,2.22,4.02,3.3
+SC3,28/09/2019,Edinburgh City,Queens Park,2,1,,,H,1.83,3.54,3.81,1.93,3.75,4.2
+SC3,28/09/2019,Stirling,Stenhousemuir,1,1,,1,D,2.22,3.41,2.88,2.3,3.73,3.1
+SC3,05/10/2019,Albion Rvs,Elgin,1,3,,2,A,2.61,3.5,2.37,2.77,3.75,2.5
+SC3,05/10/2019,Brechin,Stirling,1,1,,,D,2.7,3.45,2.31,2.88,3.95,2.46
+SC3,05/10/2019,Cowdenbeath,Edinburgh City,1,0,1,,H,2.87,3.4,2.22,3.1,3.67,2.35
+SC3,05/10/2019,Queens Park,Annan Athletic,1,2,,2,A,2.13,3.43,3.02,2.3,3.74,3.27
+SC3,05/10/2019,Stenhousemuir,Cove Rangers,3,2,3,1,H,6.59,4.92,1.35,8.0,5.31,1.42
+SC3,26/10/2019,Elgin,Queens Park,3,1,3,1,H,2.27,3.42,2.81,2.38,3.71,2.95
+SC3,29/10/2019,Cove Rangers,Albion Rvs,3,0,1,,H,1.16,6.94,12.64,1.2,7.63,19.0
+SC3,29/10/2019,Edinburgh City,Stenhousemuir,4,0,2,,H,1.85,3.55,3.72,1.95,3.91,4.09
+SC3,29/10/2019,Stirling,Cowdenbeath,0,0,,,D,2.43,3.27,2.7,2.55,3.51,2.82
+SC3,02/11/2019,Brechin,Edinburgh City,2,3,,1,A,3.94,3.79,1.74,4.28,4.2,1.8
+SC3,02/11/2019,Cowdenbeath,Cove Rangers,1,3,1,2,A,5.41,4.25,1.49,6.25,4.65,1.55
+SC3,02/11/2019,Elgin,Annan Athletic,4,0,3,,H,2.02,3.5,3.25,2.15,4.04,3.55
+SC3,02/11/2019,Stenhousemuir,Queens Park,0,3,,1,A,2.05,3.5,3.17,2.17,3.9,3.6
+SC3,02/11/2019,Stirling,Albion Rvs,3,0,,,H,1.85,3.52,3.77,1.91,3.8,4.15
+SC3,09/11/2019,Albion Rvs,Stenhousemuir,2,1,2,1,H,2.44,3.49,2.54,2.54,3.85,2.63
+SC3,09/11/2019,Annan Athletic,Cowdenbeath,1,0,,,H,2.49,3.35,2.55,2.63,3.6,2.7
+SC3,09/11/2019,Cove Rangers,Stirling,1,0,,,H,1.18,6.45,10.79,1.21,7.1,15.0
+SC3,09/11/2019,Edinburgh City,Elgin,1,1,,1,D,1.93,3.78,3.25,2.02,4.3,3.5
+SC3,09/11/2019,Queens Park,Brechin,5,2,4,1,H,1.63,3.86,4.56,1.71,4.25,5.0
+SC3,12/11/2019,Annan Athletic,Brechin,5,2,3,2,H,1.55,4.01,5.08,1.61,4.36,6.0
+SC3,16/11/2019,Cove Rangers,Brechin,3,0,,,H,1.15,7.0,12.74,1.2,8.09,17.0
+SC3,16/11/2019,Cowdenbeath,Queens Park,1,0,1,,H,2.49,3.33,2.57,2.67,3.62,2.7
+SC3,16/11/2019,Edinburgh City,Albion Rvs,3,2,,1,H,1.46,4.4,5.64,1.5,4.96,7.0
+SC3,16/11/2019,Stirling,Annan Athletic,2,0,1,,H,2.18,3.18,3.13,2.28,3.34,3.34
+SC3,30/11/2019,Annan Athletic,Cove Rangers,6,1,3,1,H,7.38,5.32,1.3,10.0,5.8,1.34
+SC3,30/11/2019,Brechin,Stenhousemuir,1,2,,1,A,3.12,3.7,2.0,3.4,4.17,2.07
+SC3,30/11/2019,Elgin,Stirling,1,2,,1,A,1.82,3.59,3.78,1.94,3.8,4.1
+SC3,30/11/2019,Queens Park,Edinburgh City,2,1,1,,H,2.75,3.54,2.25,2.9,3.85,2.4
+SC3,03/12/2019,Stenhousemuir,Elgin,2,2,1,2,D,3.09,3.63,2.03,3.4,4.0,2.25
+SC3,07/12/2019,Albion Rvs,Queens Park,2,0,2,,H,3.29,3.55,1.98,3.8,3.77,2.1
+SC3,07/12/2019,Cowdenbeath,Elgin,0,0,,,D,2.57,3.46,2.43,2.7,3.83,2.53
+SC3,07/12/2019,Edinburgh City,Cove Rangers,2,1,2,1,H,3.2,4.02,1.9,3.4,4.39,2.01
+SC3,07/12/2019,Stenhousemuir,Annan Athletic,1,2,1,1,A,2.48,3.42,2.51,2.64,3.66,2.63
+SC3,07/12/2019,Stirling,Brechin,2,4,2,2,A,1.5,4.06,5.69,1.57,4.4,6.5
+SC3,14/12/2019,Annan Athletic,Edinburgh City,0,2,,,A,2.84,3.54,2.19,3.01,3.77,2.26
+SC3,14/12/2019,Brechin,Cowdenbeath,2,1,2,,H,3.48,3.58,1.92,3.8,3.83,2.0
+SC3,14/12/2019,Cove Rangers,Stenhousemuir,2,1,,,H,1.22,5.87,9.94,1.29,6.28,13.0
+SC3,14/12/2019,Elgin,Albion Rvs,2,2,,1,D,1.59,3.99,4.74,1.66,4.28,5.31
+SC3,14/12/2019,Queens Park,Stirling,1,1,,1,D,1.98,3.45,3.39,2.08,3.86,3.68
+SC3,21/12/2019,Albion Rvs,Annan Athletic,4,2,2,,H,3.0,3.55,2.11,3.31,3.91,2.22
+SC3,21/12/2019,Cowdenbeath,Stenhousemuir,3,1,2,1,H,2.08,3.31,3.27,2.15,3.52,3.53
+SC3,21/12/2019,Elgin,Brechin,3,1,1,,H,1.47,4.36,5.62,1.53,4.65,6.65
+SC3,21/12/2019,Queens Park,Cove Rangers,1,3,,2,A,4.54,4.14,1.6,5.05,4.49,1.66
+SC3,21/12/2019,Stirling,Edinburgh City,0,1,,,A,3.23,3.53,2.02,3.6,3.87,2.15
+SC3,28/12/2019,Annan Athletic,Queens Park,3,2,2,1,H,2.27,3.48,2.76,2.43,3.75,2.9
+SC3,28/12/2019,Brechin,Albion Rvs,0,0,,,D,2.78,3.65,2.2,3.0,4.02,2.31
+SC3,28/12/2019,Cove Rangers,Elgin,2,0,1,,H,1.34,4.88,7.22,1.38,5.25,8.6
+SC3,28/12/2019,Edinburgh City,Cowdenbeath,2,0,,,H,1.62,3.75,4.88,1.69,4.05,5.4
+SC3,28/12/2019,Stenhousemuir,Stirling,0,2,,1,A,2.39,3.32,2.69,2.49,3.6,2.89
+SC3,04/01/2020,Albion Rvs,Stirling,0,3,,3,A,2.41,3.44,2.59,2.52,3.76,2.7
+SC3,04/01/2020,Brechin,Cove Rangers,1,5,,1,A,11.2,6.59,1.18,13.0,8.05,1.2
+SC3,04/01/2020,Cowdenbeath,Annan Athletic,3,1,3,,H,2.33,3.44,2.71,2.4,3.69,2.9
+SC3,04/01/2020,Elgin,Edinburgh City,0,1,,1,A,2.53,3.66,2.37,2.63,4.03,2.45
+SC3,04/01/2020,Queens Park,Stenhousemuir,2,1,2,,H,1.86,3.58,3.66,1.92,3.83,3.99
+SC3,11/01/2020,Annan Athletic,Elgin,0,4,,1,A,2.43,3.65,2.47,2.57,4.1,2.65
+SC3,11/01/2020,Edinburgh City,Queens Park,1,2,1,,A,1.58,3.81,5.22,1.64,4.22,5.81
+SC3,11/01/2020,Stenhousemuir,Brechin,2,2,,1,D,1.83,3.69,3.7,1.9,3.95,4.01
+SC3,18/01/2020,Annan Athletic,Stirling,2,3,,1,A,2.45,3.42,2.56,2.59,3.6,2.65
+SC3,18/01/2020,Cove Rangers,Cowdenbeath,3,1,2,,H,1.29,5.1,8.27,1.33,5.65,10.09
+SC3,18/01/2020,Elgin,Stenhousemuir,2,3,,2,A,1.64,3.84,4.5,1.7,4.1,5.02
+SC3,25/01/2020,Cove Rangers,Annan Athletic,2,0,1,,H,1.18,6.68,10.87,1.22,7.5,13.16
+SC3,25/01/2020,Cowdenbeath,Brechin,3,2,2,,H,1.59,3.92,4.82,1.65,4.34,5.5
+SC3,25/01/2020,Queens Park,Albion Rvs,2,2,,2,D,1.77,3.78,3.81,1.86,4.14,4.05
+SC3,25/01/2020,Stenhousemuir,Edinburgh City,1,2,1,,A,4.18,3.82,1.7,4.6,4.24,1.78
+SC3,25/01/2020,Stirling,Elgin,1,2,,1,A,2.3,3.41,2.76,2.45,3.65,3.1
+SC3,01/02/2020,Albion Rvs,Cove Rangers,2,2,,1,D,7.27,5.49,1.29,8.5,6.07,1.34
+SC3,01/02/2020,Annan Athletic,Stenhousemuir,0,3,,3,A,2.28,3.7,2.61,2.41,4.12,2.8
+SC3,01/02/2020,Brechin,Elgin,1,2,1,,A,3.56,3.81,1.83,4.04,4.29,1.9
+SC3,01/02/2020,Edinburgh City,Stirling,0,1,,,A,1.62,3.71,4.92,1.68,4.03,5.31
+SC3,01/02/2020,Queens Park,Cowdenbeath,1,0,1,,H,2.02,3.32,3.38,2.1,3.52,3.75
+SC3,08/02/2020,Albion Rvs,Brechin,4,1,2,1,H,1.78,3.94,3.64,1.86,4.3,3.97
+SC3,08/02/2020,Edinburgh City,Annan Athletic,3,0,1,,H,1.45,4.4,5.72,1.5,4.77,6.52
+SC3,08/02/2020,Elgin,Cove Rangers,3,0,2,,H,4.79,4.19,1.55,5.6,4.48,1.62
+SC3,08/02/2020,Stenhousemuir,Cowdenbeath,2,2,1,2,D,2.48,3.35,2.56,2.61,3.6,2.7
+SC3,08/02/2020,Stirling,Queens Park,1,3,1,,A,2.21,3.4,2.91,2.4,3.69,3.16
+SC3,15/02/2020,Cove Rangers,Edinburgh City,2,1,,,H,1.55,4.28,4.7,1.63,4.81,5.25
+SC3,15/02/2020,Cowdenbeath,Stirling,1,4,1,3,A,2.44,3.35,2.61,2.6,3.67,2.8
+SC3,15/02/2020,Queens Park,Elgin,2,0,1,,H,2.19,3.57,2.8,2.3,3.89,3.05
+SC3,15/02/2020,Stenhousemuir,Albion Rvs,1,0,1,,H,2.01,3.63,3.13,2.1,3.92,3.32
+SC3,22/02/2020,Annan Athletic,Albion Rvs,2,1,2,,H,2.19,3.69,2.75,2.31,4.08,3.05
+SC3,22/02/2020,Cove Rangers,Queens Park,2,0,2,,H,1.51,4.17,5.24,1.59,4.5,6.0
+SC3,22/02/2020,Edinburgh City,Brechin,0,0,,,D,1.27,5.27,8.62,1.31,5.74,10.0
+SC3,26/02/2020,Brechin,Queens Park,0,0,,,D,3.97,3.79,1.74,4.34,4.06,1.8
+SC3,29/02/2020,Albion Rvs,Elgin,1,2,1,2,A,3.2,3.69,1.97,3.64,4.15,2.05
+SC3,29/02/2020,Brechin,Stirling,0,2,,,A,3.8,3.73,1.79,4.21,4.07,1.86
+SC3,29/02/2020,Cowdenbeath,Edinburgh City,1,1,1,,D,3.27,3.41,2.04,3.52,3.63,2.17
+SC3,29/02/2020,Queens Park,Annan Athletic,2,0,2,,H,1.76,3.86,3.79,1.86,4.33,4.37
+SC3,29/02/2020,Stenhousemuir,Cove Rangers,0,3,,2,A,6.07,4.71,1.4,7.09,5.09,1.45
+SC3,03/03/2020,Cowdenbeath,Albion Rvs,2,1,1,1,H,2.11,3.59,2.96,2.23,3.89,3.13
+SC3,03/03/2020,Stirling,Stenhousemuir,0,0,,,D,1.89,3.61,3.55,1.98,3.93,3.81
+SC3,07/03/2020,Annan Athletic,Cowdenbeath,0,0,,,D,2.38,3.48,2.6,2.53,3.78,2.8
+SC3,07/03/2020,Cove Rangers,Brechin,3,2,1,,H,1.12,7.78,14.94,1.15,9.07,21.0
+SC3,07/03/2020,Edinburgh City,Albion Rvs,3,0,1,,H,1.46,4.27,5.7,1.54,4.5,6.63
+SC3,07/03/2020,Elgin,Stirling,3,1,3,1,H,2.21,3.55,2.79,2.36,3.79,2.92
+SC3,07/03/2020,Stenhousemuir,Queens Park,0,0,,,D,2.73,3.56,2.26,2.9,3.84,2.4
+SC3,10/03/2020,Elgin,Cowdenbeath,3,2,,1,H,1.78,3.72,3.88,1.87,4.02,4.2
+SC3,10/03/2020,Stirling,Cove Rangers,1,7,,5,A,5.61,4.18,1.49,6.5,4.7,1.58

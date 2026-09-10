@@ -1,0 +1,37 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+B1,07/08/2026,Club Brugge,Kortrijk,3,0,1,,H,1.22,6.0,10.0,1.25,6.5,11.5
+B1,08/08/2026,Standard,Cercle Brugge,2,2,1,1,D,2.2,3.5,2.8,2.4,3.5,2.9
+B1,08/08/2026,St Truiden,Lommel SK,1,1,,1,D,1.6,3.75,5.25,1.62,4.0,5.33
+B1,08/08/2026,Westerlo,St. Gilloise,1,5,1,1,A,3.9,3.75,1.7,4.5,3.8,1.8
+B1,09/08/2026,Gent,Mechelen,2,0,2,,H,1.91,3.5,3.6,2.0,3.6,3.7
+B1,09/08/2026,Charleroi,Oud-Heverlee Leuven,3,1,1,1,H,1.75,3.5,4.2,1.85,3.6,4.4
+B1,09/08/2026,Waregem,Genk,2,1,,1,H,2.9,3.6,2.1,3.2,3.65,2.16
+B1,09/08/2026,Anderlecht,RAAL La Louviere,2,1,,,H,1.73,3.5,4.2,1.85,3.6,4.5
+B1,09/08/2026,Antwerp,Beveren,2,1,,1,H,1.73,3.5,4.33,1.73,3.75,5.0
+B1,14/08/2026,Cercle Brugge,St Truiden,3,3,1,2,D,2.35,3.5,2.88,2.38,3.6,2.9
+B1,15/08/2026,St. Gilloise,Waregem,0,0,,,D,1.33,5.0,9.5,1.35,5.25,9.5
+B1,15/08/2026,Kortrijk,Antwerp,0,3,,1,A,2.55,3.2,2.7,2.65,3.3,2.7
+B1,15/08/2026,Genk,Westerlo,3,2,2,2,H,1.62,4.1,5.0,1.73,4.2,5.0
+B1,15/08/2026,Oud-Heverlee Leuven,Club Brugge,0,3,,1,A,6.0,4.75,1.44,7.2,5.0,1.44
+B1,16/08/2026,Beveren,Anderlecht,1,0,1,,H,3.3,3.5,2.1,3.4,3.6,2.1
+B1,16/08/2026,RAAL La Louviere,Gent,1,2,1,1,A,3.1,3.25,2.3,3.1,3.5,2.35
+B1,16/08/2026,Mechelen,Standard,3,3,1,2,D,2.63,3.3,2.63,2.63,3.4,2.71
+B1,16/08/2026,Lommel SK,Charleroi,0,1,,,A,3.25,3.4,2.1,3.3,3.6,2.15
+B1,21/08/2026,Standard,RAAL La Louviere,2,0,,,H,1.95,3.4,3.6,1.98,3.6,4.0
+B1,22/08/2026,Waregem,Beveren,4,0,2,,H,1.95,3.5,3.3,2.1,3.55,3.4
+B1,22/08/2026,Charleroi,Mechelen,2,0,1,,H,1.75,3.6,4.2,1.78,3.8,4.4
+B1,22/08/2026,Antwerp,Genk,4,4,1,1,D,3.1,3.4,2.1,3.4,3.5,2.2
+B1,23/08/2026,Lommel SK,Westerlo,4,0,2,,H,2.5,3.3,2.5,2.6,3.5,2.6
+B1,23/08/2026,Club Brugge,Cercle Brugge,1,0,1,,H,1.29,5.25,8.0,1.31,6.25,9.75
+B1,28/08/2026,Genk,Beveren,4,0,3,,H,1.42,4.1,6.0,1.49,4.75,6.5
+B1,29/08/2026,RAAL La Louviere,Mechelen,2,2,2,1,D,2.3,3.2,2.88,2.4,3.3,3.1
+B1,29/08/2026,Kortrijk,Charleroi,1,3,1,1,A,3.7,3.4,1.91,3.75,3.6,2.0
+B1,29/08/2026,Cercle Brugge,Lommel SK,0,1,,,A,1.5,4.33,5.25,1.55,4.5,5.5
+B1,29/08/2026,Oud-Heverlee Leuven,Standard,1,2,,1,A,2.8,3.25,2.35,2.88,3.5,2.45
+B1,30/08/2026,Gent,Club Brugge,2,1,1,1,H,4.1,3.8,1.7,4.33,4.2,1.75
+B1,30/08/2026,Antwerp,St Truiden,1,4,,1,A,2.45,3.4,2.7,2.5,3.5,2.75
+B1,30/08/2026,St. Gilloise,Anderlecht,3,0,2,,H,1.67,3.7,4.75,1.71,3.9,4.75
+B1,30/08/2026,Westerlo,Waregem,2,2,1,1,D,2.8,3.6,2.2,2.88,3.75,2.25
+B1,02/09/2026,St Truiden,St. Gilloise,0,3,,1,A,3.7,3.4,1.91,3.75,3.6,2.05
+B1,03/09/2026,Anderlecht,Kortrijk,1,0,1,,H,1.48,4.2,5.5,1.53,4.5,5.75
+B1,03/09/2026,Gent,Oud-Heverlee Leuven,1,0,,,H,1.62,3.7,5.0,1.63,4.1,5.6

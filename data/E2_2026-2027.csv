@@ -1,0 +1,48 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+E2,15/08/2026,Notts County,Leicester,1,1,,,D,3.6,3.4,1.96,3.8,3.5,2.05
+E2,15/08/2026,Oxford,Milton Keynes Dons,2,2,1,2,D,2.1,3.3,3.3,2.25,3.4,3.4
+E2,15/08/2026,Reading,Luton,3,4,3,1,A,3.3,3.4,2.05,3.3,3.55,2.25
+E2,15/08/2026,Barnsley,Bromley,0,1,,,A,2.05,3.5,3.3,2.15,3.65,3.4
+E2,15/08/2026,Blackpool,Wycombe,1,1,,1,D,2.45,3.3,2.65,2.65,3.5,2.7
+E2,15/08/2026,Bradford,Peterboro,2,0,,,H,1.62,3.8,4.75,1.73,4.0,5.0
+E2,15/08/2026,Burton,Stevenage,1,1,,,D,2.25,3.2,3.1,2.4,3.25,3.25
+E2,15/08/2026,Cambridge,Wigan,3,2,2,,H,2.35,3.2,2.85,2.45,3.3,3.25
+E2,15/08/2026,Huddersfield,AFC Wimbledon,3,0,2,,H,1.57,3.75,5.25,1.67,4.2,5.25
+E2,15/08/2026,Leyton Orient,Sheffield Weds,1,2,1,1,A,2.85,3.4,2.25,3.1,3.5,2.33
+E2,15/08/2026,Mansfield,Doncaster,2,1,1,,H,2.05,3.4,3.3,2.2,3.55,3.4
+E2,15/08/2026,Plymouth,Stockport,1,3,,2,A,2.05,3.5,3.2,2.2,3.7,3.2
+E2,20/08/2026,Sheffield Weds,Bradford,0,1,,,A,2.4,3.3,2.7,2.55,3.5,2.75
+E2,22/08/2026,Doncaster,Barnsley,0,0,,,D,1.96,3.5,3.5,2.0,3.8,3.75
+E2,22/08/2026,Luton,Notts County,2,2,1,1,D,1.57,3.9,5.0,1.65,4.2,5.5
+E2,22/08/2026,AFC Wimbledon,Reading,0,0,,,D,2.5,3.25,2.57,2.63,3.4,2.75
+E2,22/08/2026,Bromley,Cambridge,1,1,,,D,2.65,3.1,2.55,2.8,3.4,2.63
+E2,22/08/2026,Leicester,Burton,1,2,1,2,A,1.49,4.2,5.5,1.55,4.33,6.0
+E2,22/08/2026,Milton Keynes Dons,Huddersfield,1,1,,1,D,2.57,3.3,2.5,2.65,3.5,2.65
+E2,22/08/2026,Peterboro,Mansfield,2,1,,,H,2.75,3.5,2.25,2.8,3.75,2.45
+E2,22/08/2026,Stevenage,Oxford,1,2,,,A,2.32,3.2,2.85,2.4,3.3,3.1
+E2,22/08/2026,Stockport,Blackpool,1,2,,2,A,1.56,3.7,5.5,1.6,4.2,6.0
+E2,22/08/2026,Wigan,Leyton Orient,0,2,,1,A,2.15,3.1,3.25,2.25,3.3,3.4
+E2,22/08/2026,Wycombe,Plymouth,1,1,,1,D,2.4,3.3,2.7,2.55,3.6,2.75
+E2,29/08/2026,Blackpool,Peterboro,4,0,2,,H,1.71,3.8,4.2,1.83,4.0,4.2
+E2,29/08/2026,Milton Keynes Dons,Leicester,0,0,,,D,2.7,3.4,2.35,2.8,3.6,2.5
+E2,29/08/2026,Cambridge,Huddersfield,1,2,,,A,3.0,3.3,2.3,3.0,3.6,2.4
+E2,29/08/2026,Leyton Orient,Barnsley,1,3,,1,A,2.15,3.4,3.0,2.3,3.75,3.0
+E2,29/08/2026,Notts County,Burton,2,1,,1,H,2.2,3.4,3.0,2.33,3.4,3.1
+E2,29/08/2026,Plymouth,Bradford,2,0,1,,H,2.15,3.3,3.2,2.25,3.6,3.2
+E2,29/08/2026,Sheffield Weds,Bromley,7,2,3,,H,1.79,3.6,4.1,1.9,3.75,4.2
+E2,29/08/2026,Stevenage,Doncaster,2,2,,,D,2.15,3.2,3.3,2.3,3.4,3.35
+E2,29/08/2026,Stockport,Wycombe,5,1,2,1,H,1.86,3.5,3.9,1.91,3.75,4.0
+E2,30/08/2026,AFC Wimbledon,Wigan,1,0,,,H,3.2,3.2,2.2,3.2,3.4,2.33
+E2,30/08/2026,Mansfield,Luton,5,2,3,,H,2.85,3.4,2.25,2.9,3.8,2.35
+E2,01/09/2026,Bradford,Cambridge,1,2,,,A,1.71,3.4,4.5,1.8,3.75,4.75
+E2,01/09/2026,Bromley,Leyton Orient,0,5,,1,A,2.57,3.1,2.57,2.6,3.6,2.75
+E2,01/09/2026,Doncaster,Notts County,1,1,1,,D,2.15,3.4,3.0,2.25,3.6,3.2
+E2,01/09/2026,Huddersfield,Oxford,3,1,,,H,1.66,3.8,4.5,1.75,4.0,4.5
+E2,01/09/2026,Leicester,Plymouth,2,0,2,,H,1.86,3.6,3.6,1.95,4.0,3.7
+E2,01/09/2026,Peterboro,Stevenage,0,0,,,D,2.4,3.1,2.82,2.5,3.6,2.85
+E2,01/09/2026,Wycombe,Sheffield Weds,1,2,1,2,A,2.57,3.3,2.45,2.65,3.8,2.55
+E2,02/09/2026,Barnsley,Blackpool,2,1,,,H,2.1,3.5,3.0,2.25,3.6,3.1
+E2,02/09/2026,Burton,AFC Wimbledon,4,1,2,1,H,1.91,3.25,4.0,2.0,3.5,4.0
+E2,02/09/2026,Luton,Stockport,2,0,,,H,2.15,3.4,3.1,2.2,3.8,3.1
+E2,02/09/2026,Wigan,Milton Keynes Dons,3,1,1,,H,2.3,3.25,2.85,2.55,3.4,2.9
+E2,02/09/2026,Reading,Mansfield,5,0,3,,H,1.96,3.5,3.4,2.05,3.7,3.55

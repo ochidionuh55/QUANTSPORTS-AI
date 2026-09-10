@@ -1,0 +1,300 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+POL,03/07/2016,Pogon Szczecin,Ruch,2,3,,,A,2.04,3.06,3.93,2.16,3.2,4.6
+POL,05/07/2016,Slask Wroclaw,Termalica B-B.,2,1,,,H,1.93,3.28,4.02,2.04,3.55,4.5
+POL,05/07/2016,Leczna,Gornik Z.,0,0,,,D,2.12,3.24,3.43,2.2,3.42,3.78
+POL,05/07/2016,Lechia Gdansk,Ruch,2,1,,,H,1.34,4.66,9.2,1.42,5.16,11.0
+POL,08/07/2016,Zaglebie,Pogon Szczecin,1,1,,,D,1.96,3.26,3.94,2.06,3.43,4.4
+POL,08/07/2016,Legia,Piast Gliwice,0,0,,,D,1.47,4.23,6.55,1.51,4.66,8.0
+POL,15/07/2016,Wisla Plock,Lechia Gdansk,2,1,,,H,3.33,3.22,2.19,3.62,3.38,2.31
+POL,15/07/2016,Slask Wroclaw,Lech Poznan,0,0,,,D,2.57,3.17,2.75,2.74,3.4,3.03
+POL,16/07/2016,Ruch,Leczna,2,1,,,H,2.37,3.08,3.08,2.5,3.2,3.33
+POL,16/07/2016,Wisla,Pogon Szczecin,2,1,,,H,2.1,3.22,3.5,2.22,3.4,3.93
+POL,16/07/2016,Legia,Jagiellonia,1,1,,,D,1.67,3.67,5.03,1.76,3.97,5.75
+POL,17/07/2016,Zaglebie,Korona Kielce,4,0,,,H,1.77,3.43,4.73,1.86,3.72,5.35
+POL,17/07/2016,Cracovia,Piast Gliwice,5,1,,,H,2.01,3.38,3.64,2.18,3.57,4.33
+POL,18/07/2016,Termalica B-B.,Arka Gdynia,2,0,,,H,2.53,3.07,2.86,2.71,3.3,3.07
+POL,22/07/2016,Pogon Szczecin,Korona Kielce,1,1,,,D,1.69,3.52,5.18,1.78,3.81,6.0
+POL,22/07/2016,Arka Gdynia,Wisla,3,0,,,H,2.51,3.17,2.81,2.67,3.32,3.07
+POL,23/07/2016,Jagiellonia,Ruch,4,1,,,H,1.76,3.59,4.53,1.95,3.83,5.05
+POL,23/07/2016,Legia,Slask Wroclaw,0,0,,,D,1.6,3.78,5.53,1.66,4.1,6.5
+POL,24/07/2016,Piast Gliwice,Wisla Plock,2,1,,,H,2.53,3.16,2.78,2.7,3.32,3.01
+POL,24/07/2016,Termalica B-B.,Cracovia,3,2,,,H,2.56,3.25,2.69,2.7,3.46,2.88
+POL,24/07/2016,Lech Poznan,Zaglebie,0,2,,,A,1.92,3.34,4.02,1.99,3.68,4.46
+POL,25/07/2016,Leczna,Lechia Gdansk,1,2,,,A,3.62,3.33,2.03,4.06,3.65,2.16
+POL,29/07/2016,Arka Gdynia,Ruch,3,0,,,H,1.85,3.43,4.26,1.99,3.6,4.95
+POL,29/07/2016,Lech Poznan,Jagiellonia,0,2,,,A,1.96,3.37,3.78,2.03,3.57,4.16
+POL,30/07/2016,Lechia Gdansk,Wisla,3,1,,,H,1.77,3.57,4.46,1.86,3.77,5.25
+POL,30/07/2016,Wisla Plock,Legia,2,3,,,A,3.35,3.22,2.17,3.67,3.4,2.28
+POL,31/07/2016,Leczna,Cracovia,0,0,,,D,2.81,3.23,2.47,3.0,3.4,2.75
+POL,31/07/2016,Zaglebie,Termalica B-B.,2,0,,,H,1.88,3.31,4.25,1.98,3.5,4.8
+POL,31/07/2016,Korona Kielce,Piast Gliwice,1,1,,,D,2.57,3.18,2.72,2.71,3.3,2.92
+POL,03/08/2016,Korona Kielce,Wisla,1,1,,,D,2.73,3.15,2.57,2.88,3.31,2.76
+POL,03/08/2016,Piast Gliwice,Slask Wroclaw,1,0,,,H,1.91,3.31,4.06,1.97,3.5,4.6
+POL,05/08/2016,Cracovia,Lech Poznan,2,0,,,H,2.46,3.13,2.84,2.62,3.26,3.06
+POL,05/08/2016,Pogon Szczecin,Zaglebie,1,3,,,A,2.7,3.06,2.64,2.93,3.2,2.83
+POL,05/08/2016,Legia,Piast Gliwice,4,0,,,H,1.42,4.31,7.46,1.55,4.79,8.66
+POL,08/08/2016,Ruch,Wisla Plock,2,2,,,D,2.72,3.07,2.66,2.9,3.35,2.9
+POL,13/08/2016,Arka Gdynia,Slask Wroclaw,2,0,,,H,2.06,3.23,3.61,2.2,3.41,4.09
+POL,13/08/2016,Leczna,Legia,1,0,,,H,4.31,3.49,1.81,5.2,3.85,1.93
+POL,13/08/2016,Pogon Szczecin,Termalica B-B.,5,0,,,H,2.11,3.2,3.53,2.27,3.37,4.25
+POL,14/08/2016,Piast Gliwice,Zaglebie,0,0,,,D,2.49,3.14,2.84,2.71,3.42,3.06
+POL,14/08/2016,Wisla,Ruch,1,2,,,A,1.63,3.74,5.25,1.72,4.06,5.94
+POL,15/08/2016,Wisla Plock,Jagiellonia,1,0,,,H,2.5,3.19,2.8,2.65,3.37,2.98
+POL,19/08/2016,Slask Wroclaw,Wisla Plock,0,0,,,D,2.24,3.19,3.22,2.38,3.35,3.47
+POL,19/08/2016,Termalica B-B.,Lech Poznan,0,0,,,D,3.01,3.19,2.36,3.25,3.35,2.48
+POL,20/08/2016,Cracovia,Ruch,1,1,,,D,1.75,3.72,4.37,1.85,3.96,5.0
+POL,20/08/2016,Piast Gliwice,Pogon Szczecin,0,2,,,A,2.38,3.23,2.94,2.52,3.4,3.1
+POL,20/08/2016,Legia,Arka Gdynia,1,3,,,A,1.8,3.46,4.44,1.9,3.75,4.96
+POL,21/08/2016,Zaglebie,Leczna,0,0,,,D,1.81,3.48,4.36,1.89,3.75,5.05
+POL,21/08/2016,Jagiellonia,Lechia Gdansk,0,1,,,A,2.54,3.22,2.73,2.75,3.45,2.88
+POL,22/08/2016,Korona Kielce,Wisla,1,0,,,H,3.08,3.29,2.27,3.43,3.46,2.45
+POL,26/08/2016,Wisla Plock,Korona Kielce,1,2,,,A,1.96,3.31,3.89,2.03,3.55,4.33
+POL,26/08/2016,Wisla,Slask Wroclaw,1,5,,,A,2.07,3.23,3.64,2.32,3.5,4.04
+POL,27/08/2016,Pogon Szczecin,Cracovia,1,1,,,D,2.0,3.21,3.88,2.14,3.45,4.5
+POL,27/08/2016,Leczna,Jagiellonia,0,2,,,A,2.83,3.16,2.49,3.02,3.31,2.63
+POL,27/08/2016,Arka Gdynia,Zaglebie,1,1,,,D,2.42,3.08,3.01,2.65,3.25,3.3
+POL,28/08/2016,Lech Poznan,Piast Gliwice,2,0,,,H,1.65,3.69,5.22,1.72,3.94,6.0
+POL,28/08/2016,Lechia Gdansk,Termalica B-B.,1,2,,,A,1.6,3.79,5.54,1.67,4.06,6.2
+POL,28/08/2016,Ruch,Legia,0,2,,,A,4.79,3.68,1.7,5.35,3.97,1.82
+POL,04/09/2016,Korona Kielce,Gornik Z.,2,1,,,H,2.03,3.33,3.58,2.16,3.53,4.0
+POL,04/09/2016,Lechia Gdansk,Ruch,2,0,,,H,1.42,4.14,8.17,1.48,4.5,10.0
+POL,04/09/2016,Leczna,Lech Poznan,0,1,,,A,2.63,3.01,2.76,2.84,3.15,3.1
+POL,04/09/2016,Piast Gliwice,Jagiellonia,2,0,,,H,2.06,3.39,3.44,2.2,3.79,3.73
+POL,04/09/2016,Podbeskidzie,Termalica B-B.,2,0,,,H,2.24,3.26,3.14,2.38,3.45,3.4
+POL,04/09/2016,Pogon Szczecin,Legia,0,0,,,D,4.36,3.46,1.81,4.8,3.71,1.89
+POL,04/09/2016,Slask Wroclaw,Cracovia,2,1,,,H,2.31,3.26,3.0,2.5,3.44,3.2
+POL,04/09/2016,Wisla,Zaglebie,1,1,,,D,2.02,3.41,3.53,2.08,3.71,4.0
+POL,09/09/2016,Cracovia,Lechia Gdansk,0,1,,,A,2.49,3.11,2.88,2.72,3.32,3.2
+POL,09/09/2016,Zaglebie,Wisla Plock,1,2,,,A,1.94,3.22,4.09,2.05,3.4,4.5
+POL,12/09/2016,Pogon Szczecin,Zaglebie,1,1,,,D,2.2,3.16,3.35,2.34,3.27,3.66
+POL,12/09/2016,Lechia Gdansk,Slask Wroclaw,3,0,,,H,1.61,3.78,5.43,1.68,4.1,6.41
+POL,16/09/2016,Ruch,Termalica B-B.,0,1,,,A,2.53,3.14,2.8,2.73,3.27,3.05
+POL,16/09/2016,Slask Wroclaw,Jagiellonia,0,4,,,A,2.45,3.12,2.92,2.72,3.3,3.2
+POL,17/09/2016,Leczna,Korona Kielce,4,0,,,H,2.32,3.1,3.16,2.5,3.3,3.68
+POL,17/09/2016,Wisla Plock,Pogon Szczecin,2,0,,,H,2.33,3.11,3.12,2.58,3.3,3.65
+POL,17/09/2016,Wisla,Piast Gliwice,1,0,,,H,2.08,3.36,3.42,2.38,3.62,4.0
+POL,18/09/2016,Lechia Gdansk,Lech Poznan,2,1,,,H,2.38,3.17,2.99,2.58,3.4,3.34
+POL,18/09/2016,Legia,Zaglebie,2,3,,,A,1.78,3.52,4.44,1.84,3.7,5.19
+POL,19/09/2016,Arka Gdynia,Cracovia,1,0,,,H,2.14,3.16,3.49,2.23,3.4,4.0
+POL,23/09/2016,Termalica B-B.,Wisla Plock,0,0,,,D,2.42,3.1,2.99,2.56,3.22,3.36
+POL,23/09/2016,Wisla,Legia,0,0,,,D,3.49,3.33,2.06,4.15,3.5,2.25
+POL,24/09/2016,Pogon Szczecin,Leczna,1,1,,,D,1.93,3.33,3.97,2.04,3.54,4.35
+POL,24/09/2016,Lechia Gdansk,Ruch,2,1,,,H,1.44,4.16,7.23,1.48,4.53,8.5
+POL,24/09/2016,Zaglebie,Cracovia,1,1,,,D,2.07,3.26,3.57,2.22,3.47,4.0
+POL,25/09/2016,Korona Kielce,Jagiellonia,1,2,,,A,3.15,3.17,2.28,3.53,3.4,2.4
+POL,25/09/2016,Lech Poznan,Arka Gdynia,0,0,,,D,1.82,3.48,4.28,1.91,3.71,4.8
+POL,26/09/2016,Piast Gliwice,Slask Wroclaw,1,1,,,D,2.32,3.16,3.11,2.48,3.32,3.3
+POL,30/09/2016,Ruch,Zaglebie,1,2,,,A,3.36,3.24,2.16,3.61,3.38,2.26
+POL,30/09/2016,Leczna,Lech Poznan,1,2,,,A,3.9,3.31,1.95,4.37,3.5,2.05
+POL,05/10/2016,Gornik Z.,Korona Kielce,0,0,,,D,1.94,3.32,3.87,2.05,3.45,4.31
+POL,05/10/2016,Jagiellonia,Termalica B-B.,0,1,,,A,2.41,3.18,2.92,2.52,3.52,3.07
+POL,05/10/2016,Leczna,Podbeskidzie,5,1,,,H,2.06,3.31,3.53,2.46,3.52,3.86
+POL,05/10/2016,Wisla,Slask Wroclaw,1,1,,,D,2.1,3.38,3.33,2.23,3.61,3.84
+POL,09/10/2016,Piast Gliwice,Leczna,3,3,,,D,2.12,3.21,3.44,2.27,3.36,3.75
+POL,09/10/2016,Korona Kielce,Arka Gdynia,1,0,,,H,2.82,3.1,2.55,3.02,3.23,2.74
+POL,09/10/2016,Termalica B-B.,Legia,2,1,,,H,4.26,3.46,1.83,4.75,3.75,1.91
+POL,12/10/2016,Leczna,Termalica B-B.,3,0,,,H,2.74,3.13,2.59,2.95,3.27,2.78
+POL,12/10/2016,Wisla Plock,Ruch,4,3,,,H,1.98,3.25,3.89,2.07,3.5,4.52
+POL,12/10/2016,Wisla,Cracovia,1,1,,,D,2.25,3.33,3.07,2.38,3.5,3.42
+POL,14/10/2016,Cracovia,Wisla Plock,1,0,,,H,1.9,3.35,4.08,1.99,3.61,4.55
+POL,14/10/2016,Pogon Szczecin,Legia,3,2,,,H,3.85,3.36,1.95,4.23,3.61,2.03
+POL,15/10/2016,Leczna,Arka Gdynia,0,0,,,D,2.91,3.13,2.42,3.14,3.3,2.58
+POL,15/10/2016,Piast Gliwice,Ruch,2,1,,,H,2.01,3.33,3.59,2.11,3.52,3.92
+POL,15/10/2016,Zaglebie,Lechia Gdansk,1,2,,,A,2.42,3.15,2.9,2.56,3.37,3.12
+POL,16/10/2016,Termalica B-B.,Jagiellonia,0,0,,,D,2.91,3.1,2.47,3.17,3.4,2.74
+POL,16/10/2016,Lech Poznan,Wisla,1,1,,,D,1.75,3.6,4.48,1.82,3.82,4.9
+POL,17/10/2016,Korona Kielce,Slask Wroclaw,1,2,,,A,2.82,3.06,2.57,3.06,3.22,2.84
+POL,21/10/2016,Arka Gdynia,Pogon Szczecin,0,3,,,A,2.24,3.08,3.35,2.41,3.27,3.67
+POL,21/10/2016,Wisla,Termalica B-B.,2,0,,,H,1.83,3.5,4.21,1.93,3.82,4.86
+POL,22/10/2016,Wisla Plock,Leczna,1,2,,,A,1.97,3.27,3.89,2.08,3.44,4.35
+POL,22/10/2016,Slask Wroclaw,Cracovia,2,2,,,D,2.6,3.15,2.71,2.74,3.37,2.97
+POL,22/10/2016,Legia,Lech Poznan,2,1,,,H,1.92,3.41,3.91,2.02,3.68,4.4
+POL,23/10/2016,Lechia Gdansk,Piast Gliwice,3,2,,,H,1.61,3.84,5.43,1.66,4.22,6.15
+POL,23/10/2016,Jagiellonia,Zaglebie,1,2,,,A,2.02,3.32,3.63,2.12,3.53,3.92
+POL,24/10/2016,Ruch,Korona Kielce,4,0,,,H,2.23,3.15,3.29,2.33,3.34,3.65
+POL,28/10/2016,Piast Gliwice,Termalica B-B.,2,1,,,H,2.43,3.11,2.97,2.6,3.28,3.27
+POL,28/10/2016,Korona Kielce,Legia,2,4,,,A,6.96,4.19,1.46,8.44,4.55,1.52
+POL,29/10/2016,Leczna,Slask Wroclaw,0,3,,,A,2.53,3.01,2.91,2.82,3.2,3.05
+POL,29/10/2016,Pogon Szczecin,Ruch,2,1,,,H,1.84,3.28,4.53,1.96,3.63,5.4
+POL,29/10/2016,Lech Poznan,Wisla Plock,2,0,,,H,1.69,3.49,5.22,1.84,3.8,6.3
+POL,30/10/2016,Cracovia,Jagiellonia,1,3,,,A,2.18,3.17,3.37,2.32,3.35,3.7
+POL,30/10/2016,Arka Gdynia,Lechia Gdansk,1,1,,,D,2.92,3.08,2.48,3.22,3.25,2.66
+POL,31/10/2016,Zaglebie,Wisla,2,2,,,D,2.09,3.3,3.47,2.24,3.5,3.85
+POL,03/11/2016,Korona Kielce,Slask Wroclaw,2,2,,,D,2.43,3.12,2.94,2.55,3.3,3.14
+POL,03/11/2016,Piast Gliwice,Podbeskidzie,3,2,,,H,1.93,3.48,3.75,1.99,3.72,4.2
+POL,05/11/2016,Lechia Gdansk,Legia,2,0,,,H,2.72,3.27,2.52,3.01,3.5,2.74
+POL,05/11/2016,Pogon Szczecin,Cracovia,3,2,,,H,2.52,3.19,2.75,2.7,3.4,2.94
+POL,05/11/2016,Ruch,Piast Gliwice,0,3,,,A,3.2,3.39,2.16,3.6,3.65,2.28
+POL,05/11/2016,Zaglebie,Lech Poznan,3,0,,,H,1.64,3.76,5.06,1.7,4.3,5.7
+POL,09/11/2016,Lech Poznan,Pogon Szczecin,3,1,,,H,1.8,3.41,4.56,1.89,3.62,5.08
+POL,09/11/2016,Jagiellonia,Wisla,2,1,,,H,2.0,3.4,3.61,2.09,3.65,3.98
+POL,12/11/2016,Lech Poznan,Korona Kielce,1,0,,,H,1.42,4.32,7.6,1.5,4.77,10.37
+POL,12/11/2016,Piast Gliwice,Legia,1,5,,,A,5.95,4.1,1.52,6.69,4.75,1.6
+POL,18/11/2016,Piast Gliwice,Cracovia,2,2,,,D,3.13,3.22,2.27,3.49,3.42,2.48
+POL,18/11/2016,Jagiellonia,Legia,1,4,,,A,3.2,3.25,2.22,3.42,3.39,2.35
+POL,19/11/2016,Leczna,Ruch,0,4,,,A,2.16,3.24,3.33,2.26,3.42,3.6
+POL,19/11/2016,Pogon Szczecin,Wisla,6,2,,,H,1.8,3.46,4.46,1.91,3.96,5.4
+POL,19/11/2016,Lechia Gdansk,Wisla Plock,2,1,,,H,1.68,3.61,5.0,1.75,3.88,6.14
+POL,20/11/2016,Arka Gdynia,Termalica B-B.,1,3,,,A,2.18,3.09,3.46,2.33,3.22,3.84
+POL,20/11/2016,Lech Poznan,Slask Wroclaw,3,0,,,H,1.65,3.59,5.43,1.75,3.75,6.42
+POL,21/11/2016,Korona Kielce,Zaglebie,2,1,,,H,3.0,3.16,2.38,3.4,3.3,2.58
+POL,25/11/2016,Cracovia,Termalica B-B.,1,3,,,A,1.97,3.27,3.9,2.1,3.45,4.41
+POL,25/11/2016,Zaglebie,Lech Poznan,0,3,,,A,3.64,3.26,2.05,4.07,3.47,2.2
+POL,26/11/2016,Korona Kielce,Pogon Szczecin,4,1,,,H,3.22,3.16,2.25,3.82,3.4,2.44
+POL,26/11/2016,Ruch,Jagiellonia,1,2,,,A,3.64,3.25,2.06,4.15,3.41,2.31
+POL,26/11/2016,Wisla,Arka Gdynia,5,1,,,H,2.04,3.25,3.68,2.14,3.47,4.1
+POL,27/11/2016,Wisla Plock,Piast Gliwice,0,0,,,D,2.06,3.32,3.53,2.15,3.52,3.82
+POL,27/11/2016,Slask Wroclaw,Legia,0,4,,,A,4.57,3.66,1.73,5.0,3.92,1.8
+POL,28/11/2016,Lechia Gdansk,Leczna,3,0,,,H,1.5,4.08,6.39,1.55,4.46,7.65
+POL,02/12/2016,Ruch,Zaglebie,0,0,,,D,3.47,3.02,2.22,4.0,3.2,2.65
+POL,02/12/2016,Slask Wroclaw,Wisla,1,0,,,H,2.35,3.01,3.19,2.48,3.2,3.6
+POL,03/12/2016,Jagiellonia,Leczna,1,0,,,H,2.18,3.18,3.32,2.34,3.4,3.75
+POL,03/12/2016,Cracovia,Legia,1,2,,,A,3.41,3.41,2.06,3.75,3.62,2.18
+POL,03/12/2016,Ruch,Lech Poznan,1,3,,,A,3.54,3.05,2.17,3.9,3.3,2.38
+POL,08/12/2016,Lechia Gdansk,Korona Kielce,3,2,,,H,1.47,4.12,6.7,1.59,4.47,7.84
+POL,08/12/2016,Lech Poznan,Cracovia,2,1,,,H,1.88,3.45,4.07,2.1,3.67,4.66
+POL,09/12/2016,Slask Wroclaw,Ruch,1,2,,,A,1.81,3.33,4.62,1.91,3.5,5.25
+POL,12/12/2016,Arka Gdynia,Jagiellonia,2,3,,,A,3.14,3.14,2.3,3.6,3.31,2.4
+POL,16/12/2016,Termalica B-B.,Pogon Szczecin,2,0,,,H,2.49,3.04,2.94,2.64,3.2,3.17
+POL,16/12/2016,Ruch,Wisla,1,0,,,H,3.17,3.29,2.22,3.5,3.5,2.38
+POL,17/12/2016,Korona Kielce,Lechia Gdansk,2,0,,,H,3.55,3.19,2.11,4.0,3.42,2.25
+POL,17/12/2016,Jagiellonia,Wisla Plock,1,2,,,A,1.7,3.51,5.13,1.75,3.84,6.09
+POL,17/12/2016,Cracovia,Lech Poznan,1,1,,,D,2.92,3.27,2.37,3.13,3.48,2.52
+POL,18/12/2016,Slask Wroclaw,Arka Gdynia,0,2,,,A,2.23,3.1,3.34,2.33,3.27,3.63
+POL,18/12/2016,Legia,Leczna,5,0,,,H,1.21,6.13,12.65,1.24,6.95,15.5
+POL,19/12/2016,Zaglebie,Piast Gliwice,2,1,,,H,1.73,3.58,4.73,1.8,3.82,5.3
+POL,04/01/2017,Arka Gdynia,Leczna,2,4,,,A,1.78,3.47,4.57,1.85,3.78,5.0
+POL,04/01/2017,Wisla Plock,Cracovia,4,1,,,H,2.01,3.39,3.62,2.1,3.67,3.9
+POL,04/01/2017,Legia,Pogon Szczecin,2,0,,,H,1.44,4.34,6.95,1.49,4.8,8.0
+POL,05/01/2017,Zaglebie,Cracovia,2,2,,,D,2.37,3.18,2.99,2.49,3.4,3.35
+POL,10/01/2017,Gornik Z.,Piast Gliwice,1,0,,,H,2.01,3.53,3.48,2.11,3.86,3.8
+POL,10/01/2017,Wisla Plock,Termalica B-B.,1,0,,,H,2.16,3.3,3.32,2.29,3.54,3.57
+POL,10/01/2017,Lech Poznan,Legia,3,0,,,H,2.52,3.08,2.88,2.66,3.25,3.1
+POL,12/01/2017,Jagiellonia,Pogon Szczecin,1,0,,,H,2.03,3.33,3.63,2.12,3.56,4.1
+POL,12/01/2017,Lechia Gdansk,Slask Wroclaw,3,1,,,H,1.81,3.56,4.29,1.93,3.74,5.0
+POL,04/02/2017,Jagiellonia,Termalica B-B.,1,0,,,H,1.65,3.69,5.29,1.7,4.0,6.14
+POL,04/02/2017,Lechia Gdansk,Zaglebie,1,0,,,H,1.82,3.48,4.31,1.91,3.68,4.72
+POL,06/02/2017,Cracovia,Piast Gliwice,0,1,,,A,2.27,3.52,2.89,2.35,3.87,3.1
+POL,06/02/2017,Wisla Plock,Slask Wroclaw,0,3,,,A,2.32,3.43,2.87,2.4,3.68,3.1
+POL,06/02/2017,Ruch,Leczna,2,2,,,D,3.96,3.68,1.83,4.25,3.93,1.9
+POL,06/02/2017,Zaglebie,Arka Gdynia,1,3,,,A,3.57,3.78,1.9,3.8,4.05,2.02
+POL,12/02/2017,Wisla Plock,Arka Gdynia,2,0,,,H,2.23,3.21,3.26,2.34,3.32,3.49
+POL,12/02/2017,Zaglebie,Termalica B-B.,4,2,,,H,1.91,3.42,3.99,2.07,3.62,4.4
+POL,12/02/2017,Sandecja Nowy S.,Legia,2,2,,,D,5.18,3.63,1.68,6.0,3.94,1.78
+POL,13/02/2017,Pogon Szczecin,Piast Gliwice,2,1,,,H,1.72,3.54,4.85,1.79,3.75,5.45
+POL,17/02/2017,Jagiellonia,Leczna,5,0,,,H,1.51,4.01,6.31,1.55,4.38,7.3
+POL,17/02/2017,Termalica B-B.,Lechia Gdansk,1,1,,,D,3.32,3.21,2.19,3.55,3.4,2.32
+POL,18/02/2017,Korona Kielce,Wisla Plock,4,2,,,H,2.27,3.17,3.18,2.45,3.37,3.44
+POL,18/02/2017,Slask Wroclaw,Wisla,1,0,,,H,2.52,3.22,2.77,2.72,3.4,3.0
+POL,18/02/2017,Piast Gliwice,Lech Poznan,0,3,,,A,5.1,3.76,1.65,5.7,4.09,1.7
+POL,19/02/2017,Cracovia,Pogon Szczecin,1,1,,,D,2.26,3.18,3.19,2.37,3.35,3.52
+POL,19/02/2017,Legia,Ruch,1,3,,,A,1.24,5.71,11.36,1.27,6.3,14.36
+POL,20/02/2017,Zaglebie,Arka Gdynia,1,0,,,H,1.99,3.22,3.85,2.07,3.42,4.28
+POL,24/02/2017,Arka Gdynia,Korona Kielce,4,1,,,H,2.04,3.23,3.7,2.21,3.4,4.35
+POL,24/02/2017,Pogon Szczecin,Lech Poznan,0,3,,,A,3.22,3.25,2.21,3.57,3.48,2.36
+POL,25/02/2017,Wisla Plock,Zaglebie,2,1,,,H,2.58,3.11,2.77,2.72,3.29,2.94
+POL,25/02/2017,Lechia Gdansk,Cracovia,4,2,,,H,1.82,3.51,4.26,1.89,3.74,4.75
+POL,25/02/2017,Wisla,Jagiellonia,3,1,,,H,2.57,3.23,2.69,2.78,3.4,2.88
+POL,26/02/2017,Leczna,Piast Gliwice,1,0,,,H,2.39,3.18,2.96,2.55,3.34,3.16
+POL,26/02/2017,Legia,Termalica B-B.,1,1,,,D,1.32,4.96,8.94,1.37,5.7,10.4
+POL,27/02/2017,Ruch,Slask Wroclaw,2,0,,,H,2.61,2.99,2.82,2.82,3.12,3.15
+POL,03/03/2017,Korona Kielce,Leczna,2,1,,,H,1.87,3.48,4.02,1.94,3.77,4.65
+POL,03/03/2017,Zaglebie,Legia,1,3,,,A,4.01,3.37,1.91,4.6,3.6,2.0
+POL,04/03/2017,Ruch,Piast Gliwice,0,0,,,D,2.34,3.19,3.04,2.48,3.32,3.3
+POL,11/03/2017,Korona Kielce,Slask Wroclaw,3,0,,,H,2.19,3.48,3.08,2.28,3.73,3.25
+POL,11/03/2017,Arka Gdynia,Lechia Gdansk,0,1,,,A,2.54,3.13,2.81,2.71,3.28,3.1
+POL,12/03/2017,Piast Gliwice,Lech Poznan,0,0,,,D,3.92,3.34,1.95,4.3,3.54,2.08
+POL,12/03/2017,Wisla,Gornik Z.,2,3,,,A,2.34,3.36,2.93,2.51,3.56,3.28
+POL,13/03/2017,Cracovia,Zaglebie,1,1,,,D,1.99,3.4,3.68,2.1,3.6,4.11
+POL,17/03/2017,Termalica B-B.,Slask Wroclaw,1,2,,,A,2.13,3.2,3.48,2.26,3.3,3.77
+POL,17/03/2017,Wisla,Wisla Plock,3,2,,,H,1.74,3.56,4.65,1.82,3.82,5.5
+POL,18/03/2017,Piast Gliwice,Arka Gdynia,3,2,,,H,2.68,3.13,2.66,2.86,3.32,2.89
+POL,18/03/2017,Zaglebie,Ruch,0,1,,,A,1.82,3.43,4.38,1.9,3.62,5.0
+POL,18/03/2017,Pogon Szczecin,Jagiellonia,0,0,,,D,2.66,3.21,2.61,2.86,3.38,2.76
+POL,19/03/2017,Korona Kielce,Cracovia,3,0,,,H,2.93,3.18,2.42,3.18,3.38,2.56
+POL,19/03/2017,Lech Poznan,Leczna,0,0,,,D,1.18,6.51,15.22,1.2,7.62,20.0
+POL,19/03/2017,Lechia Gdansk,Legia,1,2,,,A,3.19,3.45,2.15,3.48,3.77,2.32
+POL,31/03/2017,Slask Wroclaw,Korona Kielce,3,0,,,H,2.18,3.18,3.37,2.32,3.32,3.75
+POL,31/03/2017,Wisla,Lech Poznan,0,0,,,D,3.26,3.34,2.16,3.47,3.55,2.3
+POL,03/04/2017,Cracovia,Arka Gdynia,1,1,,,D,1.91,3.36,4.02,2.0,3.63,4.5
+POL,03/04/2017,Termalica B-B.,Ruch,0,0,,,D,1.89,3.4,4.05,2.0,3.6,4.55
+POL,03/04/2017,Piast Gliwice,Wisla,1,2,,,A,3.16,3.36,2.2,3.42,3.62,2.3
+POL,06/04/2017,Jagiellonia,Lech Poznan,2,2,,,D,2.38,3.16,2.98,2.5,3.35,3.26
+POL,06/04/2017,Legia,Lechia Gdansk,0,0,,,D,1.54,3.94,6.06,1.62,4.35,7.0
+POL,06/04/2017,Pogon Szczecin,Korona Kielce,3,0,,,H,1.84,3.72,3.89,2.3,4.07,4.2
+POL,06/04/2017,Wisla,Termalica B-B.,1,2,,,A,1.61,3.98,5.04,1.67,4.4,5.5
+POL,08/04/2017,Piast Gliwice,Slask Wroclaw,1,1,,,D,2.35,3.18,3.03,2.55,3.42,3.29
+POL,08/04/2017,Wisla Plock,Wisla,0,1,,,A,3.01,3.24,2.33,3.13,3.54,2.47
+POL,11/04/2017,Wisla Plock,Jagiellonia,1,2,,,A,2.5,3.22,2.79,2.68,3.44,3.1
+POL,11/04/2017,Wisla,Sandecja Nowy S.,3,0,,,H,1.88,3.37,4.15,1.95,3.5,4.6
+POL,11/04/2017,Gornik Z.,Lech Poznan,3,1,,,H,3.61,3.45,2.0,3.94,3.7,2.1
+POL,12/04/2017,Cracovia,Korona Kielce,2,2,,,D,3.01,3.26,2.33,3.25,3.42,2.45
+POL,15/04/2017,Ruch,Pogon Szczecin,1,2,,,A,3.49,3.21,2.12,3.74,3.41,2.26
+POL,15/04/2017,Slask Wroclaw,Leczna,2,2,,,D,1.79,3.51,4.46,1.87,3.73,5.0
+POL,15/04/2017,Jagiellonia,Cracovia,0,0,,,D,1.71,3.69,4.67,1.83,3.96,5.38
+POL,15/04/2017,Wisla Plock,Lech Poznan,0,3,,,A,4.55,3.46,1.79,5.22,3.65,2.01
+POL,17/04/2017,Legia,Korona Kielce,0,0,,,D,1.3,5.12,9.89,1.33,5.59,12.0
+POL,17/04/2017,Termalica B-B.,Piast Gliwice,1,0,,,H,2.18,3.28,3.27,2.32,3.45,3.64
+POL,17/04/2017,Lechia Gdansk,Arka Gdynia,2,1,,,H,1.57,3.94,5.63,1.62,4.25,6.45
+POL,17/04/2017,Wisla,Zaglebie,1,0,,,H,2.02,3.34,3.65,2.12,3.55,4.1
+POL,22/04/2017,Arka Gdynia,Wisla Plock,1,1,,,D,2.31,3.18,3.08,2.43,3.5,3.4
+POL,22/04/2017,Cracovia,Legia,1,2,,,A,3.75,3.48,1.94,4.0,3.88,2.0
+POL,22/04/2017,Korona Kielce,Termalica B-B.,0,1,,,A,2.05,3.35,3.53,2.18,3.6,3.89
+POL,22/04/2017,Lech Poznan,Ruch,3,0,,,H,1.25,5.59,11.88,1.29,6.25,16.0
+POL,22/04/2017,Leczna,Wisla,3,1,,,H,3.17,3.34,2.2,3.45,3.55,2.29
+POL,22/04/2017,Piast Gliwice,Jagiellonia,0,1,,,A,3.31,3.27,2.17,3.59,3.48,2.25
+POL,22/04/2017,Pogon Szczecin,Lechia Gdansk,3,1,,,H,2.69,3.23,2.57,2.86,3.45,2.9
+POL,22/04/2017,Zaglebie,Slask Wroclaw,1,1,,,D,1.91,3.35,4.04,1.98,3.62,4.6
+POL,28/04/2017,Arka Gdynia,Piast Gliwice,1,1,,,D,2.19,3.22,3.28,2.3,3.46,3.6
+POL,28/04/2017,Lech Poznan,Korona Kielce,3,2,,,H,1.33,4.97,8.64,1.37,5.5,10.5
+POL,29/04/2017,Wisla Plock,Ruch,1,1,,,D,1.65,3.68,5.25,1.77,4.0,5.9
+POL,29/04/2017,Slask Wroclaw,Leczna,0,2,,,A,1.95,3.46,3.7,2.06,3.7,4.0
+POL,29/04/2017,Lechia Gdansk,Termalica B-B.,2,0,,,H,1.58,3.83,5.66,1.62,4.11,6.24
+POL,30/04/2017,Jagiellonia,Pogon Szczecin,1,0,,,H,1.95,3.42,3.72,2.02,3.6,4.05
+POL,30/04/2017,Legia,Wisla,1,1,,,D,1.51,4.13,5.96,1.55,4.6,6.7
+POL,03/05/2017,Jagiellonia,Slask Wroclaw,4,1,,,H,1.62,3.69,5.54,1.67,3.96,6.0
+POL,03/05/2017,Lech Poznan,Lechia Gdansk,1,0,,,H,1.75,3.66,4.44,1.95,4.03,5.06
+POL,05/05/2017,Ruch,Zaglebie,1,1,,,D,3.21,3.27,2.21,3.5,3.45,2.37
+POL,05/05/2017,Korona Kielce,Jagiellonia,1,1,,,D,3.2,3.34,2.18,3.6,3.6,2.28
+POL,08/05/2017,Lechia Gdansk,Gornik Z.,1,1,,,D,1.64,3.77,5.23,1.7,4.05,6.0
+POL,08/05/2017,Zaglebie,Pogon Szczecin,3,0,,,H,2.18,3.23,3.31,2.28,3.36,3.6
+POL,08/05/2017,Termalica B-B.,Legia,1,0,,,H,4.55,3.64,1.74,4.92,3.94,1.8
+POL,11/05/2017,Termalica B-B.,Piast Gliwice,2,1,,,H,2.16,3.21,3.4,2.25,3.4,3.89
+POL,11/05/2017,Zaglebie,Cracovia,1,2,,,A,1.7,3.6,4.91,1.77,3.84,5.5
+POL,11/05/2017,Pogon Szczecin,Legia,1,3,,,A,2.69,3.29,2.55,3.1,3.46,2.79
+POL,13/05/2017,Jagiellonia,Wisla,2,0,,,H,1.77,3.58,4.4,1.82,3.84,4.77
+POL,13/05/2017,Slask Wroclaw,Ruch,6,0,,,H,2.03,3.31,3.6,2.17,3.49,3.95
+POL,13/05/2017,Wisla Plock,Cracovia,1,1,,,D,2.47,3.25,2.78,2.65,3.45,2.93
+POL,14/05/2017,Lech Poznan,Pogon Szczecin,2,0,,,H,1.46,4.17,6.87,1.53,4.6,7.85
+POL,14/05/2017,Lechia Gdansk,Korona Kielce,0,0,,,D,1.62,3.87,5.17,1.65,4.25,5.79
+POL,14/05/2017,Legia,Termalica B-B.,6,0,,,H,1.28,5.32,10.17,1.32,6.0,12.4
+POL,16/05/2017,Arka Gdynia,Wisla Plock,0,1,,,A,2.23,3.16,3.25,2.32,3.3,3.48
+POL,16/05/2017,Leczna,Cracovia,3,0,,,H,2.76,3.24,2.49,2.86,3.42,2.62
+POL,16/05/2017,Ruch,Piast Gliwice,0,3,,,A,2.96,3.22,2.36,3.18,3.37,2.6
+POL,16/05/2017,Zaglebie,Slask Wroclaw,2,0,,,H,2.33,3.15,3.1,2.43,3.31,3.3
+POL,17/05/2017,Korona Kielce,Wisla,3,2,,,H,2.52,3.26,2.71,2.72,3.4,3.2
+POL,17/05/2017,Lechia Gdansk,Jagiellonia,4,0,,,H,2.26,3.17,3.19,2.38,3.3,3.4
+POL,17/05/2017,Legia,Lech Poznan,2,0,,,H,2.03,3.36,3.52,2.15,3.58,3.78
+POL,17/05/2017,Pogon Szczecin,Termalica B-B.,1,1,,,D,1.74,3.61,4.6,1.83,3.82,5.06
+POL,19/05/2017,Slask Wroclaw,Arka Gdynia,4,1,,,H,1.98,3.27,3.86,2.04,3.47,4.3
+POL,19/05/2017,Cracovia,Ruch,2,0,,,H,1.61,3.82,5.38,1.68,4.2,6.5
+POL,20/05/2017,Wisla Plock,Zaglebie,1,2,,,A,2.26,3.2,3.16,2.38,3.35,3.45
+POL,20/05/2017,Piast Gliwice,Leczna,2,1,,,H,2.0,3.38,3.64,2.06,3.54,3.98
+POL,20/05/2017,Wisla,Pogon Szczecin,4,0,,,H,1.72,3.64,4.68,1.83,3.86,5.2
+POL,21/05/2017,Lech Poznan,Lechia Gdansk,0,0,,,D,1.84,3.42,4.2,1.91,3.7,4.62
+POL,21/05/2017,Jagiellonia,Legia,0,0,,,D,3.25,3.25,2.2,3.62,3.43,2.35
+POL,22/05/2017,Termalica B-B.,Korona Kielce,0,2,,,A,2.41,3.26,2.84,2.6,3.48,3.0
+POL,27/05/2017,Arka Gdynia,Ruch,1,1,,,D,1.59,3.83,5.49,1.64,4.15,6.0
+POL,27/05/2017,Leczna,Zaglebie,1,3,,,A,1.93,3.46,3.79,2.04,3.7,4.0
+POL,27/05/2017,Piast Gliwice,Wisla Plock,4,0,,,H,2.02,3.37,3.57,2.18,3.6,4.0
+POL,27/05/2017,Slask Wroclaw,Cracovia,2,0,,,H,2.18,3.25,3.29,2.33,3.4,3.66
+POL,28/05/2017,Korona Kielce,Legia,0,1,,,A,6.79,4.44,1.43,7.5,4.9,1.48
+POL,28/05/2017,Lech Poznan,Wisla,2,1,,,H,1.42,4.48,7.04,1.45,4.84,8.22
+POL,28/05/2017,Lechia Gdansk,Pogon Szczecin,4,0,,,H,1.27,5.39,10.27,1.3,6.0,12.5
+POL,28/05/2017,Termalica B-B.,Jagiellonia,1,2,,,A,6.75,3.91,1.5,7.45,4.19,1.56
+POL,03/06/2017,Pogon Szczecin,Wisla Plock,1,1,,,D,1.88,3.37,4.14,1.94,3.57,4.8
+POL,05/06/2017,Piast Gliwice,Slask Wroclaw,2,0,,,H,2.41,3.17,2.91,2.53,3.37,3.1
+POL,05/06/2017,Leczna,Wisla Plock,2,3,,,A,2.41,3.22,2.89,2.51,3.49,3.05
+POL,05/06/2017,Wisla,Lechia Gdansk,0,1,,,A,2.26,3.27,3.09,2.4,3.56,3.28
+POL,08/06/2017,Jagiellonia,Sandecja Nowy S.,1,3,,,A,1.63,3.67,5.43,1.72,3.97,6.32
+POL,08/06/2017,Cracovia,Lech Poznan,0,2,,,A,3.38,3.42,2.08,3.7,3.71,2.22

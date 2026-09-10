@@ -1,0 +1,307 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+POL,02/07/2021,Podbeskidzie,Gornik Z.,2,1,,,H,3.95,3.38,1.93,4.23,3.6,2.02
+POL,02/07/2021,Wisla,Jagiellonia,2,0,,,H,2.09,3.51,3.27,2.22,3.69,3.54
+POL,03/07/2021,Piast Gliwice,Stal Mielec,2,1,,,H,1.86,3.28,4.4,1.96,3.43,4.8
+POL,03/07/2021,Pogon Szczecin,Lech Poznan,0,1,,,A,2.36,3.21,2.99,2.5,3.35,3.14
+POL,03/07/2021,Slask Wroclaw,Legia,0,1,,,A,5.28,3.76,1.63,5.75,4.03,1.71
+POL,05/07/2021,Gornik Z.,Jagiellonia,3,1,,,H,1.93,3.68,3.58,2.0,3.95,3.84
+POL,05/07/2021,Zaglebie,Pogon Szczecin,1,1,,,D,3.16,3.37,2.2,3.4,3.53,2.34
+POL,08/07/2021,Jagiellonia,Termalica B-B.,1,0,,,H,2.24,3.31,3.12,2.38,3.5,3.4
+POL,08/07/2021,Gornik Z.,Stal Mielec,1,0,,,H,2.08,3.38,3.44,2.23,3.52,3.74
+POL,11/07/2021,Rakow,Pogon Szczecin,0,0,,,D,2.14,3.2,3.49,2.3,3.38,3.94
+POL,11/07/2021,Legia,Stal Mielec,1,3,,,A,1.34,5.07,8.35,1.4,6.0,10.23
+POL,11/07/2021,Wisla,Cracovia,1,0,,,H,2.58,3.17,2.73,2.77,3.4,2.94
+POL,23/07/2021,Termalica B-B.,Stal Mielec,1,1,,,D,2.32,3.21,3.08,2.42,3.43,3.29
+POL,23/07/2021,Lech Poznan,Radomiak Radom,0,0,,,D,1.65,3.62,5.41,1.7,3.87,6.03
+POL,24/07/2021,Leczna,Cracovia,1,1,,,D,3.39,3.18,2.19,3.67,3.4,2.29
+POL,24/07/2021,Jagiellonia,Lechia Gdansk,1,1,,,D,2.47,3.29,2.8,2.6,3.46,2.99
+POL,24/07/2021,Legia,Wisla Plock,1,0,,,H,2.23,3.26,3.22,2.34,3.44,3.4
+POL,25/07/2021,Piast Gliwice,Rakow,2,3,,,A,2.74,3.12,2.63,3.04,3.27,2.91
+POL,25/07/2021,Slask Wroclaw,Warta Poznan,2,2,,,D,2.25,3.16,3.26,2.36,3.31,3.64
+POL,25/07/2021,Pogon Szczecin,Gornik Z.,2,0,,,H,1.98,3.28,3.9,2.06,3.45,4.25
+POL,26/07/2021,Wisla,Zaglebie,3,0,,,H,1.99,3.58,3.49,2.1,3.77,3.86
+POL,30/07/2021,Zaglebie,Leczna,3,1,,,H,1.67,3.75,4.99,1.83,4.08,5.61
+POL,30/07/2021,Gornik Z.,Lech Poznan,1,3,,,A,3.6,3.35,2.03,3.92,3.54,2.15
+POL,31/07/2021,Stal Mielec,Piast Gliwice,0,2,,,A,3.49,3.21,2.13,3.73,3.4,2.29
+POL,31/07/2021,Termalica B-B.,Wisla,2,2,,,D,2.51,3.27,2.76,2.87,3.46,2.96
+POL,31/07/2021,Radomiak Radom,Legia,3,1,,,H,3.02,3.17,2.37,3.17,3.4,2.51
+POL,03/08/2021,Warta Poznan,Wisla Plock,2,0,,,H,3.07,2.84,2.56,3.2,3.03,2.82
+POL,05/08/2021,Podbeskidzie,Wisla Plock,1,1,,,D,2.33,3.27,3.02,2.5,3.4,3.16
+POL,05/08/2021,Lechia Gdansk,Cracovia,1,1,,,D,1.96,3.44,3.77,2.04,3.61,4.0
+POL,05/08/2021,Wisla,Lech Poznan,1,2,,,A,3.48,3.67,1.96,3.77,4.01,2.08
+POL,08/08/2021,Pogon Szczecin,Piast Gliwice,1,0,,,H,2.01,3.23,3.82,2.19,3.42,4.16
+POL,08/08/2021,Wisla,Rakow,1,2,,,A,2.74,3.35,2.47,2.99,3.63,2.76
+POL,08/08/2021,Slask Wroclaw,Lechia Gdansk,1,1,,,D,2.41,3.35,2.82,2.55,3.54,3.02
+POL,13/08/2021,Termalica B-B.,Lech Poznan,1,3,,,A,4.8,3.59,1.72,5.35,3.88,1.9
+POL,13/08/2021,Stal Mielec,Wisla,2,1,,,H,3.06,3.38,2.24,3.3,3.57,2.35
+POL,14/08/2021,Piast Gliwice,Wisla Plock,4,3,,,H,2.08,3.17,3.67,2.27,3.38,4.2
+POL,14/08/2021,Lechia Gdansk,Cracovia,3,0,,,H,2.16,3.27,3.32,2.28,3.57,3.6
+POL,14/08/2021,Warta Poznan,Legia,0,2,,,A,3.28,3.2,2.21,3.6,3.45,2.35
+POL,15/08/2021,Slask Wroclaw,Leczna,0,0,,,D,1.7,3.73,4.68,1.81,3.98,5.15
+POL,15/08/2021,Zaglebie,Pogon Szczecin,2,0,,,H,3.13,3.11,2.34,3.31,3.4,2.43
+POL,16/08/2021,Jagiellonia,Gornik Z.,1,3,,,A,2.24,3.3,3.1,2.32,3.48,3.35
+POL,20/08/2021,Wisla Plock,Zaglebie,4,0,,,H,2.44,3.19,2.89,2.59,3.42,3.19
+POL,20/08/2021,Radomiak Radom,Warta Poznan,1,0,,,H,2.12,3.18,3.57,2.23,3.35,3.9
+POL,21/08/2021,Pogon Szczecin,Stal Mielec,4,1,,,H,1.51,3.93,6.64,1.6,4.19,7.82
+POL,21/08/2021,Cracovia,Jagiellonia,2,1,,,H,2.11,3.23,3.54,2.31,3.46,4.09
+POL,21/08/2021,Leczna,Wisla,1,3,,,A,3.24,3.36,2.16,3.5,3.6,2.27
+POL,22/08/2021,Piast Gliwice,Slask Wroclaw,1,1,,,D,1.88,3.55,3.96,1.96,3.82,4.75
+POL,22/08/2021,Lech Poznan,Lechia Gdansk,2,0,,,H,1.47,4.25,6.64,1.55,4.7,7.5
+POL,27/08/2021,Stal Mielec,Leczna,2,0,,,H,1.98,3.33,3.8,2.07,3.6,4.3
+POL,27/08/2021,Warta Poznan,Jagiellonia,1,1,,,D,2.55,3.07,2.86,2.7,3.22,3.1
+POL,28/08/2021,Termalica B-B.,Cracovia,1,2,,,A,2.65,3.01,2.79,2.79,3.2,3.2
+POL,28/08/2021,Lechia Gdansk,Radomiak Radom,2,2,,,D,2.33,3.19,3.09,2.51,3.42,3.33
+POL,28/08/2021,Lech Poznan,Pogon Szczecin,1,1,,,D,1.88,3.32,4.29,1.95,3.6,4.6
+POL,28/08/2021,Gornik Z.,Piast Gliwice,0,1,,,A,2.75,3.08,2.63,2.88,3.32,2.8
+POL,29/08/2021,Wisla Plock,Rakow,1,1,,,D,3.17,3.12,2.32,3.38,3.26,2.65
+POL,29/08/2021,Zaglebie,Slask Wroclaw,1,3,,,A,2.26,3.42,3.02,2.4,3.67,3.25
+POL,29/08/2021,Wisla,Legia,1,0,,,H,3.08,3.3,2.28,3.23,3.45,2.4
+POL,04/09/2021,Jagiellonia,Cracovia,2,1,,,H,3.21,3.15,2.29,3.41,3.33,2.39
+POL,04/09/2021,Wisla,Rakow,1,2,,,A,3.72,3.5,1.96,3.99,3.79,2.09
+POL,05/09/2021,Warta Poznan,Slask Wroclaw,2,3,,,A,2.27,3.07,3.31,2.38,3.28,3.54
+POL,05/09/2021,Stal Mielec,Legia,0,0,,,D,4.2,3.4,1.87,4.85,3.66,1.96
+POL,08/09/2021,Wisla Plock,Radomiak Radom,1,0,,,H,2.56,3.03,2.88,2.71,3.28,3.04
+POL,13/09/2021,Leczna,Wisla Plock,3,2,,,H,3.28,3.29,2.18,3.63,3.49,2.28
+POL,13/09/2021,Radomiak Radom,Pogon Szczecin,1,1,,,D,3.08,3.09,2.39,3.25,3.28,2.46
+POL,17/09/2021,Zaglebie,Termalica B-B.,2,1,,,H,2.01,3.38,3.68,2.07,3.62,4.1
+POL,17/09/2021,Lech Poznan,Wisla,5,0,,,H,1.52,4.1,6.07,1.6,4.36,7.0
+POL,18/09/2021,Wisla Plock,Jagiellonia,3,0,,,H,2.25,3.25,3.18,2.5,3.44,3.42
+POL,18/09/2021,Pogon Szczecin,Cracovia,1,1,,,D,1.83,3.26,4.66,1.94,3.5,5.25
+POL,18/09/2021,Radomiak Radom,Slask Wroclaw,1,1,,,D,2.24,3.23,3.22,2.45,3.42,3.52
+POL,18/09/2021,Lechia Gdansk,Piast Gliwice,1,0,,,H,2.22,3.29,3.21,2.59,3.49,3.43
+POL,19/09/2021,Stal Mielec,Rakow,0,3,,,A,4.39,3.4,1.83,4.9,3.65,2.04
+POL,19/09/2021,Gornik Z.,Warta Poznan,1,0,,,H,2.02,3.19,3.89,2.1,3.38,4.21
+POL,19/09/2021,Legia,Leczna,3,1,,,H,1.3,5.13,10.01,1.36,5.76,12.0
+POL,24/09/2021,Leczna,Lechia Gdansk,0,4,,,A,3.62,3.36,2.02,3.95,3.53,2.2
+POL,24/09/2021,Jagiellonia,Lech Poznan,1,0,,,H,4.28,3.58,1.81,4.75,3.88,1.87
+POL,25/09/2021,Stal Mielec,Radomiak Radom,1,0,,,H,3.17,3.26,2.24,3.4,3.46,2.35
+POL,25/09/2021,Warta Poznan,Zaglebie,0,2,,,A,2.68,3.14,2.66,2.8,3.38,2.8
+POL,25/09/2021,Legia,Rakow,2,3,,,A,2.09,3.33,3.45,2.25,3.59,3.75
+POL,26/09/2021,Termalica B-B.,Gornik Z.,3,1,,,H,3.02,3.18,2.37,3.3,3.39,2.47
+POL,26/09/2021,Slask Wroclaw,Wisla Plock,3,1,,,H,1.91,3.54,3.83,2.2,3.84,4.24
+POL,26/09/2021,Wisla,Pogon Szczecin,0,1,,,A,2.86,3.32,2.4,3.1,3.58,2.53
+POL,27/09/2021,Piast Gliwice,Cracovia,2,4,,,A,2.32,3.03,3.28,2.4,3.2,3.58
+POL,29/09/2021,Rakow,Radomiak Radom,2,2,,,D,1.77,3.49,4.6,1.81,3.64,5.11
+POL,04/10/2021,Pogon Szczecin,Wisla Plock,2,0,,,H,1.74,3.32,5.23,1.8,3.53,5.74
+POL,04/10/2021,Warta Poznan,Stal Mielec,0,0,,,D,2.6,2.94,2.93,2.83,3.16,3.1
+POL,04/10/2021,Slask Wroclaw,Lechia Gdansk,1,1,,,D,2.8,3.12,2.57,3.01,3.34,2.66
+POL,05/10/2021,Rakow,Piast Gliwice,1,0,,,H,2.23,3.25,3.21,2.36,3.44,3.53
+POL,12/10/2021,Stal Mielec,Termalica B-B.,1,0,,,H,2.5,3.24,2.78,2.65,3.46,2.95
+POL,12/10/2021,Rakow,Piast Gliwice,1,0,,,H,1.73,3.59,4.76,1.8,3.95,5.4
+POL,16/10/2021,Leczna,Piast Gliwice,1,1,,,D,3.62,3.23,2.07,3.91,3.42,2.15
+POL,16/10/2021,Termalica B-B.,Lechia Gdansk,0,2,,,A,3.35,3.35,2.11,3.8,3.65,2.2
+POL,16/10/2021,Gornik Z.,Wisla,0,1,,,A,1.83,3.57,4.13,2.2,3.92,4.68
+POL,16/10/2021,Slask Wroclaw,Rakow,1,2,,,A,3.19,3.37,2.17,3.4,3.58,2.28
+POL,17/10/2021,Wisla Plock,Pogon Szczecin,1,0,,,H,3.44,3.12,2.17,3.75,3.25,2.32
+POL,17/10/2021,Cracovia,Warta Poznan,2,0,,,H,1.93,3.19,4.17,2.0,3.38,4.56
+POL,17/10/2021,Legia,Lech Poznan,0,1,,,A,3.07,3.38,2.22,3.25,3.64,2.43
+POL,18/10/2021,Stal Mielec,Zaglebie,4,2,,,H,2.72,3.23,2.53,2.83,3.42,2.71
+POL,18/10/2021,Jagiellonia,Radomiak Radom,1,1,,,D,2.19,3.27,3.23,2.5,3.43,3.47
+POL,22/10/2021,Radomiak Radom,Leczna,3,1,,,H,1.61,3.74,5.46,1.66,4.05,6.01
+POL,22/10/2021,Lech Poznan,Wisla Plock,4,1,,,H,1.33,5.01,8.64,1.37,5.56,9.91
+POL,23/10/2021,Rakow,Termalica B-B.,3,2,,,H,1.38,4.56,7.8,1.52,5.0,9.13
+POL,23/10/2021,Lechia Gdansk,Gornik Z.,1,1,,,D,2.08,3.4,3.39,2.19,3.68,3.66
+POL,23/10/2021,Pogon Szczecin,Jagiellonia,4,1,,,H,1.65,3.71,5.19,1.82,3.94,5.7
+POL,23/10/2021,Wisla,Slask Wroclaw,0,5,,,A,2.09,3.4,3.37,2.35,3.59,3.8
+POL,24/10/2021,Zaglebie,Cracovia,1,1,,,D,2.61,3.04,2.78,2.73,3.21,2.97
+POL,24/10/2021,Warta Poznan,Stal Mielec,0,0,,,D,2.21,3.21,3.28,2.3,3.41,3.5
+POL,24/10/2021,Piast Gliwice,Legia,4,1,,,H,3.07,3.19,2.31,3.35,3.41,2.4
+POL,29/10/2021,Cracovia,Radomiak Radom,1,2,,,A,2.3,3.04,3.28,2.42,3.24,3.6
+POL,29/10/2021,Stal Mielec,Lech Poznan,0,0,,,D,7.06,4.55,1.41,8.0,4.88,1.5
+POL,30/10/2021,Termalica B-B.,Slask Wroclaw,4,3,,,H,3.31,3.41,2.11,3.58,3.66,2.19
+POL,30/10/2021,Warta Poznan,Lechia Gdansk,0,2,,,A,3.36,3.31,2.13,3.9,3.48,2.23
+POL,30/10/2021,Gornik Z.,Zaglebie,0,0,,,D,1.82,3.62,4.13,1.95,3.91,4.75
+POL,30/10/2021,Jagiellonia,Piast Gliwice,3,3,,,D,2.4,3.18,2.97,2.52,3.42,3.3
+POL,31/10/2021,Wisla Plock,Wisla,2,0,,,H,2.17,3.38,3.18,2.27,3.63,3.4
+POL,31/10/2021,Leczna,Rakow,0,0,,,D,6.65,4.1,1.48,7.32,4.41,1.52
+POL,31/10/2021,Legia,Pogon Szczecin,0,2,,,A,2.27,3.22,3.13,2.42,3.36,3.32
+POL,04/11/2021,Zaglebie,Podbeskidzie,2,1,,,H,2.07,3.42,3.44,2.17,3.6,3.62
+POL,04/11/2021,Lech Poznan,Legia,0,0,,,D,3.37,3.39,2.1,3.67,3.65,2.21
+POL,09/11/2021,Warta Poznan,Termalica B-B.,0,0,,,D,2.34,3.13,3.12,2.61,3.33,3.39
+POL,09/11/2021,Cracovia,Gornik Z.,2,2,,,D,2.34,3.12,3.14,2.47,3.38,3.4
+POL,09/11/2021,Jagiellonia,Stal Mielec,1,1,,,D,1.66,3.84,4.93,1.95,4.08,5.75
+POL,09/11/2021,Slask Wroclaw,Legia,1,0,,,H,3.4,3.36,2.11,4.1,3.6,2.39
+POL,12/11/2021,Radomiak Radom,Lech Poznan,2,1,,,H,4.19,3.57,1.82,4.5,3.8,1.9
+POL,12/11/2021,Zaglebie,Wisla,2,1,,,H,2.61,3.34,2.59,2.75,3.66,2.78
+POL,12/11/2021,Lechia Gdansk,Jagiellonia,1,2,,,A,2.08,3.43,3.41,2.26,3.73,3.79
+POL,20/11/2021,Warta Poznan,Wisla Plock,1,2,,,A,2.56,3.04,2.86,2.69,3.26,3.0
+POL,20/11/2021,Jagiellonia,Wisla,3,1,,,H,2.4,3.35,2.84,2.5,3.59,3.04
+POL,20/11/2021,Stal Mielec,Lechia Gdansk,3,3,,,D,3.14,3.38,2.2,3.4,3.55,2.34
+POL,20/11/2021,Lech Poznan,Piast Gliwice,1,0,,,H,1.38,4.57,8.01,1.43,5.0,9.56
+POL,21/11/2021,Termalica B-B.,Leczna,1,1,,,D,1.67,3.75,4.96,1.74,3.92,5.5
+POL,21/11/2021,Pogon Szczecin,Slask Wroclaw,2,1,,,H,1.65,3.7,5.19,1.83,3.91,5.8
+POL,21/11/2021,Gornik Z.,Legia,3,2,,,H,2.73,3.22,2.55,3.05,3.44,2.73
+POL,22/11/2021,Zaglebie,Radomiak Radom,0,2,,,A,2.62,3.16,2.68,2.73,3.36,2.84
+POL,22/11/2021,Cracovia,Rakow,1,0,,,H,3.16,3.33,2.2,3.4,3.52,2.3
+POL,26/11/2021,Piast Gliwice,Termalica B-B.,2,1,,,H,1.95,3.43,3.81,2.04,3.64,4.2
+POL,26/11/2021,Wisla,Radomiak Radom,0,1,,,A,2.36,3.36,2.87,2.45,3.61,3.1
+POL,27/11/2021,Leczna,Gornik Z.,1,2,,,A,4.23,3.54,1.82,4.91,3.92,1.95
+POL,27/11/2021,Slask Wroclaw,Stal Mielec,2,1,,,H,1.64,3.87,4.98,1.73,4.1,5.62
+POL,27/11/2021,Pogon Szczecin,Lechia Gdansk,5,1,,,H,1.69,3.69,4.89,1.8,3.91,5.32
+POL,27/11/2021,Rakow,Zaglebie,4,0,,,H,1.57,4.0,5.48,1.61,4.25,6.01
+POL,28/11/2021,Wisla Plock,Cracovia,2,1,,,H,2.34,3.08,3.15,2.45,3.28,3.36
+POL,28/11/2021,Lech Poznan,Warta Poznan,2,0,,,H,1.3,5.13,9.84,1.34,6.0,12.0
+POL,28/11/2021,Legia,Jagiellonia,1,0,,,H,1.81,3.56,4.25,1.88,3.88,4.65
+POL,02/12/2021,Slask Wroclaw,Wisla,1,1,,,D,3.33,3.35,2.12,3.56,3.52,2.26
+POL,03/12/2021,Cracovia,Slask Wroclaw,1,1,,,D,2.08,3.15,3.66,2.2,3.35,4.15
+POL,03/12/2021,Jagiellonia,Pogon Szczecin,0,1,,,A,4.08,3.5,1.85,4.4,3.76,1.96
+POL,04/12/2021,Piast Gliwice,Gornik Z.,2,0,,,H,1.96,3.31,3.9,2.05,3.49,4.18
+POL,09/12/2021,Piast Gliwice,Zaglebie,0,1,,,A,1.94,3.5,3.76,2.02,3.7,4.15
+POL,09/12/2021,Wisla,Lechia Gdansk,2,2,,,D,2.03,3.55,3.43,2.1,3.81,3.65
+POL,09/12/2021,Rakow,Lech Poznan,2,2,,,D,2.74,3.18,2.57,2.87,3.4,2.71
+POL,12/12/2021,Cracovia,Leczna,0,2,,,A,1.64,3.72,5.25,1.69,3.92,5.75
+POL,12/12/2021,Wisla Plock,Legia,1,0,,,H,2.9,3.18,2.44,3.04,3.47,2.6
+POL,12/12/2021,Gornik Z.,Pogon Szczecin,2,2,,,D,3.08,3.23,2.3,3.3,3.47,2.39
+POL,13/12/2021,Warta Poznan,Slask Wroclaw,2,1,,,H,2.61,3.07,2.79,2.75,3.36,2.98
+POL,14/12/2021,Radomiak Radom,Piast Gliwice,2,2,,,D,2.28,3.03,3.33,2.39,3.29,3.75
+POL,15/12/2021,Rakow,Gornik Z.,1,2,,,A,1.83,3.55,4.18,1.95,3.74,4.57
+POL,15/12/2021,Legia,Zaglebie,4,0,,,H,1.7,3.78,4.62,1.75,4.12,5.08
+POL,17/12/2021,Wisla,Termalica B-B.,3,0,,,H,1.84,3.64,4.03,1.95,4.0,4.48
+POL,17/12/2021,Wisla Plock,Lechia Gdansk,1,0,,,H,2.83,3.36,2.39,3.0,3.58,2.51
+POL,18/12/2021,Piast Gliwice,Stal Mielec,1,1,,,D,1.65,3.81,5.04,1.75,4.18,5.79
+POL,18/12/2021,Pogon Szczecin,Warta Poznan,1,1,,,D,1.42,4.34,7.69,1.49,4.75,9.0
+POL,18/12/2021,Slask Wroclaw,Cracovia,0,2,,,A,2.15,3.28,3.35,2.25,3.44,3.61
+POL,18/12/2021,Rakow,Jagiellonia,5,0,,,H,1.57,4.05,5.45,1.68,4.4,6.0
+POL,19/12/2021,Leczna,Zaglebie,2,1,,,H,2.55,3.27,2.69,2.7,3.52,2.86
+POL,19/12/2021,Lech Poznan,Gornik Z.,2,1,,,H,1.46,4.33,6.62,1.55,4.79,7.51
+POL,19/12/2021,Legia,Radomiak Radom,0,3,,,A,2.08,3.23,3.59,2.16,3.45,3.98
+POL,04/01/2022,Stal Mielec,Cracovia,1,2,,,A,3.16,2.97,2.4,3.4,3.13,2.52
+POL,04/01/2022,Slask Wroclaw,Lech Poznan,0,1,,,A,5.58,3.86,1.58,6.25,4.2,1.62
+POL,05/01/2022,Termalica B-B.,Wisla Plock,1,0,,,H,2.09,3.4,3.41,2.16,3.6,3.79
+POL,05/01/2022,Cracovia,Wisla,0,0,,,D,2.4,3.18,2.96,2.6,3.36,3.3
+POL,08/01/2022,Korona Kielce,Slask Wroclaw,3,1,,,H,3.11,3.26,2.27,3.4,3.46,2.42
+POL,10/01/2022,Gornik Z.,Zaglebie,2,3,,,A,2.13,3.48,3.2,2.26,3.7,3.43
+POL,10/01/2022,Lech Poznan,Legia,0,0,,,D,1.79,3.61,4.3,1.85,3.8,4.7
+POL,10/01/2022,Pogon Szczecin,Lechia Gdansk,2,1,,,H,1.63,3.94,4.9,1.7,4.17,5.75
+POL,04/02/2022,Warta Poznan,Rakow,0,2,,,A,3.85,3.03,2.1,4.5,3.3,2.19
+POL,04/02/2022,Leczna,Pogon Szczecin,0,4,,,A,5.56,3.54,1.65,6.5,3.85,1.7
+POL,04/02/2022,Legia,Lechia Gdansk,2,1,,,H,1.87,3.38,4.26,2.06,3.64,4.6
+POL,09/02/2022,Legia,Radomiak Radom,1,0,,,H,1.91,3.38,4.02,2.03,3.57,4.4
+POL,10/02/2022,Legnica,Stal Mielec,0,2,,,A,1.98,3.52,3.56,2.06,3.67,3.8
+POL,10/02/2022,Jagiellonia,Korona Kielce,4,1,,,H,1.69,3.79,4.66,1.77,3.98,5.04
+POL,10/02/2022,Widzew Lodz,Rakow,0,0,,,D,5.51,4.16,1.54,6.0,4.46,1.61
+POL,13/02/2022,Wisla Plock,Piast Gliwice,0,2,,,A,2.6,3.02,2.83,2.71,3.25,2.99
+POL,13/02/2022,Pogon Szczecin,Zaglebie,2,1,,,H,1.45,4.17,7.29,1.5,4.5,8.66
+POL,13/02/2022,Legia,Warta Poznan,0,1,,,A,1.7,3.31,5.55,1.75,3.6,6.37
+POL,14/02/2022,Gornik Z.,Jagiellonia,1,2,,,A,1.6,4.03,5.1,1.73,4.3,5.7
+POL,18/02/2022,Zaglebie,Wisla Plock,3,1,,,H,2.28,3.23,3.16,2.64,3.42,3.35
+POL,18/02/2022,Stal Mielec,Pogon Szczecin,0,1,,,A,5.5,3.51,1.67,6.25,3.75,1.72
+POL,19/02/2022,Jagiellonia,Cracovia,0,0,,,D,2.83,3.14,2.53,3.0,3.45,2.75
+POL,19/02/2022,Slask Wroclaw,Piast Gliwice,1,3,,,A,2.68,3.04,2.73,2.9,3.33,2.9
+POL,19/02/2022,Termalica B-B.,Legia,0,0,,,D,3.88,3.35,1.95,4.35,3.63,2.0
+POL,20/02/2022,Warta Poznan,Radomiak Radom,3,1,,,H,2.65,2.94,2.85,2.9,3.31,3.06
+POL,20/02/2022,Gornik Z.,Rakow,1,1,,,D,2.97,3.24,2.37,3.28,3.57,2.58
+POL,20/02/2022,Lechia Gdansk,Lech Poznan,1,0,,,H,3.78,3.46,1.95,4.12,3.84,2.03
+POL,21/02/2022,Wisla,Leczna,0,0,,,D,1.91,3.46,3.91,2.01,3.8,4.5
+POL,25/02/2022,Rakow,Wisla Plock,2,0,,,H,1.32,5.05,8.99,1.45,5.68,10.0
+POL,25/02/2022,Legia,Wisla,2,1,,,H,1.82,3.48,4.33,1.91,3.75,4.55
+POL,26/02/2022,Pogon Szczecin,Lech Poznan,0,3,,,A,2.82,3.15,2.53,3.0,3.34,2.78
+POL,26/02/2022,Leczna,Stal Mielec,2,0,,,H,2.29,3.06,3.26,2.4,3.25,3.48
+POL,26/02/2022,Piast Gliwice,Gornik Z.,0,0,,,D,2.38,3.02,3.15,2.5,3.18,3.35
+POL,27/02/2022,Jagiellonia,Warta Poznan,1,1,,,D,2.4,3.0,3.12,2.55,3.24,3.37
+POL,27/02/2022,Radomiak Radom,Lechia Gdansk,2,0,,,H,2.47,3.15,2.88,2.6,3.37,3.01
+POL,27/02/2022,Slask Wroclaw,Zaglebie,0,0,,,D,2.11,3.37,3.36,2.27,3.58,3.6
+POL,28/02/2022,Cracovia,Termalica B-B.,1,2,,,A,1.83,3.37,4.49,1.88,3.66,5.0
+POL,04/03/2022,Termalica B-B.,Radomiak Radom,1,1,,,D,3.02,3.16,2.38,3.17,3.36,2.47
+POL,04/03/2022,Jagiellonia,Zaglebie,2,1,,,H,2.4,3.29,2.89,2.51,3.5,3.1
+POL,04/03/2022,Wisla,Piast Gliwice,2,2,,,D,2.73,3.04,2.68,2.88,3.27,2.85
+POL,09/03/2022,Stal Mielec,Slask Wroclaw,2,0,,,H,2.28,3.28,3.06,2.4,3.48,3.2
+POL,09/03/2022,Lechia Gdansk,Warta Poznan,0,0,,,D,2.43,3.12,2.96,2.6,3.32,3.16
+POL,09/03/2022,Cracovia,Rakow,3,0,,,H,3.84,3.15,2.04,4.2,3.35,2.12
+POL,10/03/2022,Slask Wroclaw,Warta Poznan,0,2,,,A,2.42,2.98,3.11,2.59,3.18,3.35
+POL,13/03/2022,Jagiellonia,Wisla Plock,0,1,,,A,2.15,3.32,3.31,2.23,3.48,3.56
+POL,13/03/2022,Slask Wroclaw,Radomiak Radom,0,0,,,D,2.27,3.05,3.33,2.37,3.31,3.59
+POL,13/03/2022,Wisla,Lech Poznan,1,1,,,D,6.77,4.17,1.47,7.42,4.37,1.53
+POL,14/03/2022,Rakow,Stal Mielec,2,1,,,H,1.31,5.14,9.4,1.34,5.54,11.05
+POL,15/03/2022,Legia,Termalica B-B.,4,1,,,H,1.52,3.91,6.47,1.56,4.27,7.41
+POL,18/03/2022,Zaglebie,Warta Poznan,0,4,,,A,2.52,2.92,3.03,2.65,3.13,3.35
+POL,18/03/2022,Pogon Szczecin,Wisla,4,1,,,H,1.53,4.02,5.99,1.6,4.26,6.67
+POL,19/03/2022,Wisla Plock,Slask Wroclaw,1,2,,,A,2.38,3.22,2.96,2.46,3.43,3.14
+POL,19/03/2022,Rakow,Legia,1,1,,,D,1.69,3.62,4.94,1.83,3.95,5.56
+POL,19/03/2022,Lechia Gdansk,Leczna,2,0,,,H,1.58,3.87,5.62,1.62,4.1,6.5
+POL,19/03/2022,Lech Poznan,Jagiellonia,3,0,,,H,1.18,6.78,13.94,1.24,7.3,16.0
+POL,20/03/2022,Radomiak Radom,Stal Mielec,1,1,,,D,1.78,3.34,4.78,1.83,3.65,5.42
+POL,20/03/2022,Cracovia,Piast Gliwice,0,1,,,A,2.6,2.79,3.05,2.71,3.0,3.28
+POL,20/03/2022,Gornik Z.,Termalica B-B.,1,1,,,D,1.65,3.71,5.16,1.7,3.94,5.84
+POL,02/04/2022,Termalica B-B.,Jagiellonia,2,1,,,H,2.43,3.28,2.83,2.58,3.46,3.1
+POL,02/04/2022,Zaglebie,Legia,1,3,,,A,3.02,3.09,2.41,3.3,3.32,2.56
+POL,03/04/2022,Stal Mielec,Jagiellonia,1,1,,,D,2.59,3.12,2.77,2.8,3.34,2.95
+POL,03/04/2022,Pogon Szczecin,Radomiak Radom,4,0,,,H,1.87,3.29,4.38,1.95,3.5,4.86
+POL,04/04/2022,Wisla Plock,Gornik Z.,3,2,,,H,2.67,3.33,2.55,2.83,3.58,2.65
+POL,09/04/2022,Zaglebie,Jagiellonia,1,1,,,D,2.17,3.38,3.2,2.26,3.55,3.5
+POL,09/04/2022,Korona Kielce,Pogon Szczecin,1,2,,,A,3.9,3.37,1.94,4.25,3.54,2.0
+POL,09/04/2022,Lech Poznan,Widzew Lodz,2,0,,,H,1.63,3.9,5.03,1.69,4.17,5.5
+POL,11/04/2022,Stal Mielec,Zaglebie,3,0,,,H,2.08,3.45,3.34,2.17,3.6,3.7
+POL,11/04/2022,Legia,Lechia Gdansk,2,1,,,H,1.61,3.92,5.22,1.67,4.2,5.79
+POL,16/04/2022,Leczna,Radomiak Radom,1,0,,,H,3.24,3.18,2.24,3.5,3.42,2.33
+POL,16/04/2022,Stal Mielec,Warta Poznan,0,1,,,A,3.52,2.92,2.26,3.85,3.09,2.49
+POL,16/04/2022,Termalica B-B.,Rakow,0,3,,,A,5.17,3.78,1.64,5.75,4.08,1.71
+POL,16/04/2022,Jagiellonia,Pogon Szczecin,1,2,,,A,4.94,3.69,1.68,5.45,3.95,1.95
+POL,16/04/2022,Wisla Plock,Lech Poznan,0,1,,,A,7.38,4.66,1.39,8.5,5.0,1.55
+POL,18/04/2022,Cracovia,Zaglebie,1,0,,,H,2.16,3.16,3.47,2.23,3.34,3.91
+POL,18/04/2022,Slask Wroclaw,Wisla,1,1,,,D,2.19,3.32,3.24,2.45,3.52,3.47
+POL,18/04/2022,Gornik Z.,Lechia Gdansk,1,3,,,A,2.55,3.44,2.59,2.67,3.62,2.75
+POL,18/04/2022,Legia,Piast Gliwice,0,1,,,A,2.2,2.98,3.62,2.29,3.3,3.86
+POL,20/04/2022,Lech Poznan,Leczna,3,0,,,H,1.14,7.3,18.64,1.16,8.0,23.43
+POL,20/04/2022,Pogon Szczecin,Rakow,1,2,,,A,2.3,3.06,3.27,2.45,3.28,3.47
+POL,22/04/2022,Radomiak Radom,Cracovia,0,1,,,A,2.36,3.0,3.21,2.49,3.2,3.48
+POL,22/04/2022,Zaglebie,Gornik Z.,2,4,,,A,2.23,3.35,3.13,2.35,3.55,3.33
+POL,23/04/2022,Slask Wroclaw,Termalica B-B.,0,4,,,A,1.68,3.77,4.85,1.75,3.95,5.36
+POL,23/04/2022,Piast Gliwice,Jagiellonia,2,1,,,H,1.94,3.33,3.95,2.02,3.48,4.3
+POL,23/04/2022,Lechia Gdansk,Warta Poznan,2,0,,,H,2.04,3.23,3.73,2.1,3.42,4.15
+POL,24/04/2022,Lech Poznan,Stal Mielec,3,1,,,H,1.19,6.54,13.76,1.22,7.11,17.07
+POL,24/04/2022,Rakow,Leczna,2,1,,,H,1.2,6.34,13.42,1.24,6.85,17.0
+POL,24/04/2022,Pogon Szczecin,Legia,3,1,,,H,1.82,3.4,4.45,1.95,3.58,5.03
+POL,25/04/2022,Wisla,Wisla Plock,3,4,,,A,1.65,3.96,4.8,1.75,4.22,5.25
+POL,29/04/2022,Warta Poznan,Piast Gliwice,2,3,,,A,2.87,2.76,2.78,3.1,2.92,2.94
+POL,29/04/2022,Gornik Z.,Radomiak Radom,0,0,,,D,2.03,3.29,3.71,2.2,3.48,4.08
+POL,30/04/2022,Jagiellonia,Slask Wroclaw,1,1,,,D,2.51,3.23,2.77,2.6,3.46,2.91
+POL,30/04/2022,Zaglebie,Lechia Gdansk,2,2,,,D,2.7,3.43,2.47,2.89,3.66,2.6
+POL,30/04/2022,Stal Mielec,Legia,2,1,,,H,4.0,3.36,1.93,5.0,3.54,2.0
+POL,02/05/2022,Stal Mielec,Gornik Z.,1,2,,,A,3.31,3.27,2.17,3.54,3.48,2.25
+POL,02/05/2022,Piast Gliwice,Pogon Szczecin,0,2,,,A,3.36,2.92,2.32,3.65,3.11,2.45
+POL,02/05/2022,Lechia Gdansk,Slask Wroclaw,2,0,,,H,1.79,3.58,4.28,1.9,3.8,4.67
+POL,03/05/2022,Termalica B-B.,Warta Poznan,1,0,,,H,2.86,3.03,2.57,3.04,3.2,2.72
+POL,03/05/2022,Zaglebie,Piast Gliwice,0,0,,,D,2.78,3.14,2.57,2.91,3.33,2.65
+POL,03/05/2022,Lechia Gdansk,Wisla,1,1,,,D,1.78,3.65,4.36,1.88,3.95,4.75
+POL,08/05/2022,Stal Mielec,Cracovia,2,0,,,H,3.86,3.42,1.92,4.15,3.58,2.0
+POL,08/05/2022,Legia,Piast Gliwice,2,0,,,H,2.12,3.23,3.46,2.28,3.4,4.1
+POL,09/05/2022,Piast Gliwice,Legnica,2,1,,,H,1.8,3.36,4.6,1.89,3.65,5.13
+POL,09/05/2022,Wisla Plock,Gornik Z.,1,1,,,D,2.04,3.58,3.33,2.14,3.9,3.58
+POL,11/05/2022,Piast Gliwice,Warta Poznan,0,2,,,A,2.7,2.85,2.88,2.88,3.01,3.25
+POL,11/05/2022,Cracovia,Jagiellonia,1,0,,,H,1.8,3.58,4.28,1.9,3.75,5.25
+POL,11/05/2022,Pogon Szczecin,Gornik Z.,1,4,,,A,1.78,3.82,4.1,1.85,4.01,4.4
+POL,11/05/2022,Rakow,Wisla Plock,7,1,,,H,1.33,5.08,8.45,1.37,5.5,9.5
+POL,13/05/2022,Cracovia,Wisla Plock,3,0,,,H,1.79,3.72,4.17,1.85,3.94,4.59
+POL,13/05/2022,Jagiellonia,Legia,2,2,,,D,2.78,3.07,2.63,3.0,3.27,2.85
+POL,14/05/2022,Termalica B-B.,Piast Gliwice,0,1,,,A,2.27,3.3,3.08,2.72,3.45,3.29
+POL,14/05/2022,Warta Poznan,Lech Poznan,1,2,,,A,8.36,4.73,1.36,9.3,5.1,1.42
+POL,14/05/2022,Zaglebie,Rakow,1,0,,,H,4.28,3.75,1.76,4.57,3.96,1.81
+POL,14/05/2022,Lechia Gdansk,Pogon Szczecin,0,0,,,D,3.23,3.5,2.12,3.66,3.92,2.42
+POL,15/05/2022,Stal Mielec,Slask Wroclaw,1,1,,,D,2.84,3.14,2.51,3.03,3.4,2.68
+POL,15/05/2022,Gornik Z.,Leczna,4,2,,,H,1.37,4.99,7.2,1.43,5.3,8.0
+POL,15/05/2022,Radomiak Radom,Wisla,4,2,,,H,3.64,3.46,2.01,4.58,3.73,2.25
+POL,21/05/2022,Lech Poznan,Zaglebie,2,1,,,H,1.37,5.08,6.98,1.4,5.9,7.86
+POL,21/05/2022,Leczna,Jagiellonia,0,1,,,A,3.58,3.58,1.96,3.9,3.78,2.05
+POL,21/05/2022,Legia,Cracovia,3,0,,,H,1.89,3.51,3.92,1.96,3.72,4.2
+POL,21/05/2022,Piast Gliwice,Radomiak Radom,1,1,,,D,2.05,3.39,3.49,2.1,3.63,3.85
+POL,21/05/2022,Pogon Szczecin,Termalica B-B.,2,2,,,D,1.39,4.96,6.84,1.45,5.29,8.0
+POL,21/05/2022,Rakow,Lechia Gdansk,3,0,,,H,1.24,6.05,10.75,1.35,6.5,13.0
+POL,21/05/2022,Slask Wroclaw,Gornik Z.,3,4,,,A,2.52,3.77,2.45,2.63,4.1,2.6
+POL,21/05/2022,Wisla,Warta Poznan,0,1,,,A,2.26,3.32,3.08,2.35,3.55,3.27
+POL,21/05/2022,Wisla Plock,Stal Mielec,3,0,,,H,1.93,3.78,3.51,2.0,4.04,3.7
+POL,02/06/2022,Warta Poznan,Leczna,1,1,,,D,2.07,3.1,3.79,2.2,3.3,4.2
+POL,02/06/2022,Rakow,Wisla,2,0,,,H,1.52,4.21,5.84,1.6,4.44,6.32
+POL,02/06/2022,Cracovia,Lech Poznan,3,3,,,D,4.25,3.39,1.85,4.6,3.62,1.95
+POL,03/06/2022,Wisla Plock,Leczna,3,1,,,H,1.83,3.38,4.48,1.98,3.6,4.98
+POL,03/06/2022,Gornik Z.,Cracovia,3,0,,,H,2.25,3.1,3.34,2.35,3.4,3.6
+POL,03/06/2022,Lech Poznan,Rakow,0,1,,,A,1.88,3.39,4.16,1.91,3.58,4.53
+POL,05/06/2022,Radomiak Radom,Zaglebie,1,6,,,A,2.6,3.15,2.74,2.76,3.4,3.1
+POL,05/06/2022,Legia,Gornik Z.,5,3,,,H,1.86,3.72,3.84,1.95,4.01,4.1
+POL,08/06/2022,Lechia Gdansk,Korona Kielce,0,1,,,A,1.56,4.12,5.34,1.77,4.54,5.63
+POL,08/06/2022,Jagiellonia,Radomiak Radom,1,2,,,A,2.21,3.27,3.19,2.32,3.44,3.35
+POL,08/06/2022,Slask Wroclaw,Widzew Lodz,0,0,,,D,2.17,3.39,3.15,2.25,3.56,3.43
+POL,10/06/2022,Piast Gliwice,Rakow,0,1,,,A,5.84,3.64,1.6,7.27,3.85,1.67
+POL,11/06/2022,Legnica,Slask Wroclaw,1,0,,,H,2.77,3.34,2.43,3.0,3.45,2.6
+POL,11/06/2022,Widzew Lodz,Radomiak Radom,1,3,,,A,2.4,3.21,2.9,2.51,3.31,3.06
+POL,11/06/2022,Lech Poznan,Korona Kielce,3,2,,,H,1.4,4.63,7.22,1.45,4.96,8.0

@@ -1,0 +1,249 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+RUS,03/07/2022,Krasnodar,Ural,2,1,,,H,2.67,3.25,2.73,2.79,3.48,2.87
+RUS,03/07/2022,FK Rostov,Sochi,0,1,,,A,2.89,3.29,2.49,2.99,3.48,2.6
+RUS,03/07/2022,Zenit,Ufa,2,0,,,H,1.21,6.87,13.34,1.24,7.5,16.75
+RUS,03/07/2022,Akhmat Grozny,Rubin Kazan,1,2,,,A,1.83,3.75,4.1,1.96,4.07,4.59
+RUS,05/07/2022,Ural,Spartak Moscow,1,3,,,A,2.89,3.51,2.39,3.0,3.7,2.49
+RUS,05/07/2022,Pari NN,Akhmat Grozny,0,1,,,A,3.06,3.25,2.41,3.34,3.36,2.53
+RUS,05/07/2022,Zenit,Khimki,1,0,,,H,1.2,7.25,13.28,1.24,7.8,16.8
+RUS,05/07/2022,CSKA Moscow,Sochi,0,1,,,A,2.26,3.52,3.11,2.34,3.75,3.28
+RUS,08/07/2022,Torpedo Moscow,Khimki,1,3,,,A,3.21,3.31,2.29,3.42,3.51,2.36
+RUS,08/07/2022,Krylya Sovetov,Dynamo Moscow,0,2,,,A,2.19,3.51,3.26,2.3,3.75,3.53
+RUS,08/07/2022,FK Rostov,Orenburg,2,1,,,H,1.62,4.08,5.32,1.68,4.26,5.91
+RUS,08/07/2022,Sochi,Pari NN,2,1,,,H,1.43,4.75,7.1,1.49,5.0,8.0
+RUS,10/07/2022,Ural,Khimki,2,1,,,H,1.68,3.89,4.99,1.79,4.1,5.53
+RUS,15/07/2022,Khimki,Zenit,1,1,,,D,9.22,5.56,1.32,12.0,6.4,1.36
+RUS,16/07/2022,CSKA Moscow,Ural,2,0,,,H,1.9,3.34,4.5,1.97,3.74,4.94
+RUS,16/07/2022,Orenburg,Krylya Sovetov,2,4,,,A,2.79,3.35,2.55,2.9,3.5,2.65
+RUS,16/07/2022,Akhmat Grozny,Spartak Moscow,1,1,,,D,2.54,3.26,2.87,2.67,3.4,3.0
+RUS,17/07/2022,Torpedo Moscow,Sochi,1,3,,,A,3.63,3.59,2.03,3.83,3.8,2.09
+RUS,17/07/2022,Lokomotiv Moscow,Pari NN,1,1,,,D,1.81,3.6,4.56,1.88,3.75,5.1
+RUS,17/07/2022,Dynamo Moscow,FK Rostov,1,1,,,D,2.01,3.49,3.86,2.11,3.7,4.4
+RUS,17/07/2022,Krasnodar,Fakel Voronezh,2,2,,,D,1.68,3.9,5.14,1.77,4.08,5.5
+RUS,22/07/2022,Zenit,Krylya Sovetov,3,0,,,H,1.38,5.31,7.2,1.42,5.65,8.1
+RUS,23/07/2022,CSKA Moscow,Sochi,3,0,,,H,2.16,3.48,3.36,2.28,3.66,3.76
+RUS,23/07/2022,Orenburg,Ural,3,0,,,H,2.23,3.27,3.38,2.37,3.44,3.65
+RUS,23/07/2022,Krasnodar,Spartak Moscow,1,4,,,A,3.31,3.52,2.17,3.6,3.7,2.27
+RUS,24/07/2022,Khimki,Pari NN,3,0,,,H,2.05,3.33,3.87,2.12,3.51,4.15
+RUS,24/07/2022,Dynamo Moscow,Torpedo Moscow,4,0,,,H,1.54,4.3,5.94,1.58,4.44,6.25
+RUS,24/07/2022,Akhmat Grozny,Fakel Voronezh,2,1,,,H,1.77,3.81,4.54,1.83,4.05,5.3
+RUS,24/07/2022,Lokomotiv Moscow,FK Rostov,2,2,,,D,2.65,3.31,2.7,2.8,3.52,2.86
+RUS,29/07/2022,Ural,Krasnodar,1,3,,,A,2.65,3.26,2.74,2.76,3.54,2.85
+RUS,30/07/2022,Fakel Voronezh,Dynamo Moscow,3,3,,,D,3.3,3.46,2.19,3.46,3.68,2.3
+RUS,30/07/2022,Zenit,Lokomotiv Moscow,5,0,,,H,1.27,6.35,9.88,1.32,6.75,11.0
+RUS,30/07/2022,Sochi,Akhmat Grozny,2,1,,,H,2.0,3.54,3.75,2.08,3.7,4.0
+RUS,31/07/2022,Pari NN,CSKA Moscow,2,2,,,D,5.99,4.04,1.58,6.5,4.4,1.61
+RUS,31/07/2022,Krylya Sovetov,Torpedo Moscow,1,1,,,D,1.66,4.06,5.06,1.74,4.3,5.75
+RUS,31/07/2022,Spartak Moscow,Orenburg,4,1,,,H,1.39,5.09,7.3,1.43,5.37,7.9
+RUS,31/07/2022,FK Rostov,Khimki,1,0,,,H,1.73,3.8,4.71,1.81,3.98,4.95
+RUS,05/08/2022,Ufa,FK Rostov,0,0,,,D,2.11,3.4,3.6,2.19,3.56,3.95
+RUS,05/08/2022,Arsenal Tula,Krasnodar,1,1,,,D,2.56,3.37,2.79,2.74,3.55,2.96
+RUS,05/08/2022,Lokomotiv Moscow,Rubin Kazan,1,0,,,H,2.54,3.58,2.68,2.72,3.76,2.89
+RUS,10/08/2022,Fakel Voronezh,Zenit,1,1,,,D,8.53,5.18,1.35,9.8,5.7,1.38
+RUS,10/08/2022,CSKA Moscow,Dynamo Moscow,1,1,,,D,1.97,3.66,3.72,2.03,3.92,4.0
+RUS,10/08/2022,Sochi,Lokomotiv Moscow,4,0,,,H,2.03,3.77,3.41,2.08,4.0,3.64
+RUS,13/08/2022,Lokomotiv Moscow,Krylya Sovetov,1,1,,,D,2.62,3.56,2.6,2.85,3.83,2.92
+RUS,13/08/2022,Zenit,CSKA Moscow,2,1,,,H,1.5,4.53,6.2,1.56,4.8,7.4
+RUS,13/08/2022,Dynamo Moscow,Krasnodar,0,0,,,D,1.68,4.13,4.68,1.73,4.37,4.9
+RUS,14/08/2022,Khimki,Akhmat Grozny,1,3,,,A,2.89,3.14,2.58,3.03,3.4,2.69
+RUS,14/08/2022,Pari NN,FK Rostov,3,4,,,A,4.0,3.43,1.97,4.2,3.61,2.05
+RUS,14/08/2022,Orenburg,Torpedo Moscow,1,0,,,H,2.2,3.47,3.29,2.27,3.66,3.52
+RUS,14/08/2022,Spartak Moscow,Sochi,3,0,,,H,1.96,3.75,3.72,2.05,3.95,3.96
+RUS,19/08/2022,Krylya Sovetov,Fakel Voronezh,1,1,,,D,1.74,3.92,4.48,1.77,4.08,5.0
+RUS,20/08/2022,Ural,Pari NN,0,1,,,A,1.93,3.35,4.19,2.14,3.45,4.5
+RUS,20/08/2022,Khimki,Lokomotiv Moscow,0,3,,,A,2.56,3.52,2.64,2.74,3.67,2.76
+RUS,20/08/2022,Dynamo Moscow,Spartak Moscow,1,0,,,H,3.33,3.57,2.12,3.6,3.84,2.18
+RUS,20/08/2022,FK Rostov,Sochi,2,2,,,D,2.47,3.54,2.74,2.54,3.75,2.93
+RUS,21/08/2022,CSKA Moscow,Akhmat Grozny,4,2,,,H,1.73,3.83,4.62,1.81,4.05,5.03
+RUS,21/08/2022,Zenit,Torpedo Moscow,2,0,,,H,1.15,8.15,16.51,1.17,9.3,20.0
+RUS,21/08/2022,Krasnodar,Orenburg,2,0,,,H,1.86,3.69,4.09,1.92,4.04,4.94
+RUS,26/08/2022,Sochi,Khimki,4,1,,,H,1.5,4.57,6.04,1.56,4.8,6.84
+RUS,27/08/2022,Pari NN,Dynamo Moscow,2,2,,,D,3.83,3.52,1.98,4.7,3.75,2.07
+RUS,27/08/2022,Fakel Voronezh,Spartak Moscow,1,4,,,A,4.91,4.09,1.66,5.45,4.33,1.7
+RUS,27/08/2022,Akhmat Grozny,Krylya Sovetov,1,2,,,A,2.18,3.54,3.18,2.26,3.7,3.41
+RUS,28/08/2022,Ural,Zenit,0,4,,,A,11.82,6.02,1.24,15.0,6.85,1.29
+RUS,28/08/2022,Lokomotiv Moscow,Orenburg,5,1,,,H,1.76,3.94,4.3,1.81,4.14,4.58
+RUS,28/08/2022,Torpedo Moscow,Krasnodar,1,4,,,A,3.44,3.49,2.1,3.76,3.7,2.17
+RUS,28/08/2022,FK Rostov,CSKA Moscow,0,0,,,D,3.0,3.54,2.3,3.22,3.76,2.39
+RUS,04/09/2022,Khimki,CSKA Moscow,4,2,,,H,5.69,4.23,1.57,6.05,4.42,1.63
+RUS,04/09/2022,Pari NN,Dynamo Moscow,0,1,,,A,6.14,3.92,1.59,7.0,4.1,1.64
+RUS,04/09/2022,Rubin Kazan,Krasnodar,0,1,,,A,2.0,3.69,3.62,2.06,3.9,3.85
+RUS,04/09/2022,Akhmat Grozny,Zenit,0,2,,,A,4.49,3.88,1.77,5.3,4.2,1.83
+RUS,09/09/2022,Sochi,Dynamo Moscow,2,1,,,H,1.86,3.88,3.87,2.04,4.05,4.15
+RUS,10/09/2022,Spartak Moscow,Krylya Sovetov,5,2,,,H,1.71,3.99,4.58,1.77,4.3,4.85
+RUS,10/09/2022,Orenburg,Akhmat Grozny,2,1,,,H,2.37,3.58,2.85,2.43,3.78,3.0
+RUS,10/09/2022,Torpedo Moscow,Pari NN,0,0,,,D,3.14,3.09,2.43,3.35,3.3,2.48
+RUS,10/09/2022,FK Rostov,Krasnodar,3,2,,,H,2.13,3.56,3.34,2.2,3.82,3.6
+RUS,17/09/2022,Ural,Akhmat Grozny,1,2,,,A,2.57,3.28,2.79,2.75,3.52,2.9
+RUS,17/09/2022,Torpedo Moscow,CSKA Moscow,1,0,,,H,12.31,6.13,1.23,13.41,6.5,1.3
+RUS,17/09/2022,FK Rostov,Krylya Sovetov,2,1,,,H,2.01,3.59,3.63,2.07,3.86,4.18
+RUS,17/09/2022,Dynamo Moscow,Zenit,0,2,,,A,5.78,4.29,1.56,6.55,4.55,1.59
+RUS,18/09/2022,Pari NN,Orenburg,0,2,,,A,2.27,3.3,3.22,2.44,3.54,3.41
+RUS,18/09/2022,Krasnodar,Khimki,3,1,,,H,1.69,4.03,4.66,1.73,4.28,5.05
+RUS,18/09/2022,Sochi,Fakel Voronezh,1,1,,,D,1.5,4.56,5.99,1.52,4.79,6.7
+RUS,18/09/2022,Spartak Moscow,Lokomotiv Moscow,1,0,,,H,1.64,4.42,4.68,1.69,4.75,5.0
+RUS,04/10/2022,Ural,Krylya Sovetov,0,1,,,A,2.85,2.95,2.79,2.93,3.13,2.95
+RUS,04/10/2022,Ufa,Sochi,1,2,,,A,2.77,3.16,2.71,2.85,3.32,2.77
+RUS,04/10/2022,Spartak Moscow,Arsenal Tula,3,0,,,H,1.41,4.69,7.95,1.44,4.94,8.6
+RUS,04/10/2022,FK Rostov,Lokomotiv Moscow,4,1,,,H,2.61,3.2,2.83,2.8,3.5,2.95
+RUS,09/10/2022,Khimki,Krylya Sovetov,0,0,,,D,4.16,3.76,1.82,4.57,3.96,1.89
+RUS,09/10/2022,CSKA Moscow,Krasnodar,4,1,,,H,1.48,4.69,6.1,1.52,4.95,7.0
+RUS,09/10/2022,Akhmat Grozny,Pari NN,1,3,,,A,1.82,3.63,4.34,1.86,3.86,4.66
+RUS,14/10/2022,FK Rostov,Ural,1,2,,,A,1.91,3.63,3.96,1.95,3.9,4.52
+RUS,15/10/2022,Khimki,Fakel Voronezh,0,0,,,D,2.95,3.37,2.39,3.08,3.54,2.45
+RUS,15/10/2022,Torpedo Moscow,Lokomotiv Moscow,0,1,,,A,4.38,3.77,1.79,4.7,3.96,1.84
+RUS,15/10/2022,Krasnodar,Akhmat Grozny,2,3,,,A,2.26,3.58,3.06,2.31,3.85,3.3
+RUS,15/10/2022,Dynamo Moscow,Orenburg,3,2,,,H,1.88,3.9,3.78,1.92,4.15,4.15
+RUS,16/10/2022,Krylya Sovetov,Sochi,2,0,,,H,2.4,3.57,2.81,2.53,3.72,3.0
+RUS,16/10/2022,Pari NN,Zenit,0,3,,,A,9.37,4.98,1.34,10.75,5.45,1.4
+RUS,16/10/2022,CSKA Moscow,Spartak Moscow,2,2,,,D,2.06,3.56,3.56,2.12,4.0,3.88
+RUS,22/10/2022,Pari NN,Krasnodar,0,2,,,A,3.5,3.27,2.17,3.84,3.48,2.31
+RUS,22/10/2022,Fakel Voronezh,FK Rostov,1,1,,,D,3.1,3.19,2.4,3.22,3.46,2.46
+RUS,22/10/2022,Lokomotiv Moscow,Dynamo Moscow,1,3,,,A,2.68,3.54,2.53,2.85,3.76,2.62
+RUS,23/10/2022,Orenburg,CSKA Moscow,2,2,,,D,3.11,3.72,2.15,3.34,3.9,2.19
+RUS,23/10/2022,Spartak Moscow,Khimki,5,0,,,H,1.34,5.59,7.84,1.37,5.9,8.8
+RUS,23/10/2022,Akhmat Grozny,Torpedo Moscow,1,0,,,H,1.48,4.47,6.49,1.53,4.64,6.85
+RUS,24/10/2022,Ural,Krylya Sovetov,2,1,,,H,2.63,3.35,2.67,2.72,3.52,2.82
+RUS,24/10/2022,Zenit,Sochi,7,0,,,H,1.29,6.02,9.34,1.32,6.5,11.0
+RUS,28/10/2022,Orenburg,Fakel Voronezh,4,1,,,H,1.75,3.98,4.46,1.92,4.22,5.25
+RUS,29/10/2022,Dynamo Moscow,Khimki,6,1,,,H,1.32,5.71,8.58,1.35,6.35,10.5
+RUS,29/10/2022,Akhmat Grozny,FK Rostov,1,2,,,A,2.33,3.55,2.92,2.46,3.76,3.2
+RUS,29/10/2022,Lokomotiv Moscow,CSKA Moscow,0,1,,,A,3.79,3.78,1.92,4.0,4.0,1.99
+RUS,30/10/2022,Krylya Sovetov,Pari NN,2,1,,,H,1.75,3.61,4.87,1.8,3.9,5.24
+RUS,30/10/2022,Sochi,Ural,2,2,,,D,1.97,3.83,3.54,2.02,3.99,3.7
+RUS,30/10/2022,Spartak Moscow,Torpedo Moscow,1,0,,,H,1.26,6.15,10.34,1.29,6.6,11.75
+RUS,30/10/2022,Krasnodar,Zenit,0,1,,,A,6.39,4.46,1.49,7.3,4.7,1.54
+RUS,09/11/2022,Ural,Torpedo Moscow,2,0,,,H,1.86,3.51,4.33,1.9,3.7,4.8
+RUS,09/11/2022,Fakel Voronezh,Lokomotiv Moscow,2,0,,,H,3.08,3.5,2.25,3.26,3.7,2.3
+RUS,09/11/2022,Zenit,Orenburg,8,0,,,H,1.14,8.55,16.43,1.17,9.4,19.0
+RUS,09/11/2022,FK Rostov,Spartak Moscow,4,2,,,H,2.6,3.57,2.57,2.76,3.72,2.75
+RUS,11/11/2022,Pari NN,Akhmat Grozny,3,2,,,H,3.18,3.18,2.36,3.3,3.34,2.45
+RUS,13/11/2022,Orenburg,Krasnodar,5,1,,,H,1.82,4.05,3.87,1.93,4.24,4.27
+RUS,13/11/2022,Khimki,Sochi,0,2,,,A,4.58,4.09,1.69,4.98,4.33,1.77
+RUS,13/11/2022,Dynamo Moscow,CSKA Moscow,2,1,,,H,2.78,3.3,2.58,2.98,3.48,2.69
+RUS,03/12/2022,Ufa,Pari NN,0,0,,,D,1.69,3.47,5.9,1.8,3.66,6.55
+RUS,03/12/2022,Arsenal Tula,Dynamo Moscow,1,4,,,A,4.86,3.73,1.74,5.2,3.92,1.8
+RUS,03/12/2022,Lokomotiv Moscow,CSKA Moscow,1,2,,,A,3.84,3.32,2.06,4.15,3.4,2.13
+RUS,08/12/2022,Fakel Voronezh,Ural,0,0,,,D,2.01,3.6,3.65,2.09,3.75,3.81
+RUS,11/12/2022,Ural,Fakel Voronezh,2,0,,,H,1.9,3.58,4.02,1.98,3.88,4.54
+RUS,11/12/2022,Krylya Sovetov,FK Rostov,1,3,,,A,2.46,3.36,2.86,2.51,3.6,3.03
+RUS,11/12/2022,Torpedo Moscow,Zenit,0,2,,,A,16.65,7.52,1.16,21.0,8.8,1.18
+RUS,11/12/2022,Lokomotiv Moscow,Spartak Moscow,1,2,,,A,4.31,3.87,1.79,5.1,4.15,1.94
+RUS,04/01/2023,Dynamo Moscow,Sochi,0,2,,,A,1.97,3.76,3.57,2.04,3.91,3.78
+RUS,04/01/2023,Pari NN,Lokomotiv Moscow,0,4,,,A,3.01,3.25,2.42,3.18,3.48,2.48
+RUS,04/01/2023,Spartak Moscow,Akhmat Grozny,0,0,,,D,1.53,4.58,5.7,1.56,4.9,6.4
+RUS,04/01/2023,Zenit,Ural,2,0,,,H,1.33,5.38,8.87,1.36,5.81,9.9
+RUS,10/01/2023,Fakel Voronezh,Sochi,2,0,,,H,2.65,2.98,2.93,2.8,3.1,3.07
+RUS,10/01/2023,Krylya Sovetov,Spartak Moscow,4,0,,,H,2.91,3.54,2.37,3.18,3.72,2.5
+RUS,10/01/2023,Akhmat Grozny,Dynamo Moscow,1,1,,,D,3.22,3.78,2.09,3.37,4.03,2.14
+RUS,04/02/2023,Khimki,Krasnodar,0,6,,,A,4.19,3.86,1.79,4.4,4.08,1.86
+RUS,04/02/2023,Krylya Sovetov,Orenburg,1,1,,,D,1.97,3.76,3.54,2.03,3.9,3.72
+RUS,04/02/2023,Fakel Voronezh,CSKA Moscow,0,2,,,A,4.27,3.61,1.85,4.78,3.9,1.9
+RUS,04/02/2023,FK Rostov,Torpedo Moscow,2,1,,,H,1.44,4.52,7.31,1.59,4.86,8.4
+RUS,09/02/2023,Ural,Akhmat Grozny,0,1,,,A,2.29,3.23,3.25,2.37,3.44,3.35
+RUS,09/02/2023,Pari NN,Rubin Kazan,2,1,,,H,2.32,3.09,3.36,2.45,3.33,3.54
+RUS,09/02/2023,Krylya Sovetov,Fakel Voronezh,3,0,,,H,1.84,3.45,4.51,1.89,3.65,4.74
+RUS,09/02/2023,Krasnodar,Spartak Moscow,2,0,,,H,2.2,3.72,3.04,2.29,3.91,3.3
+RUS,12/02/2023,Fakel Voronezh,Baltika,0,0,,,D,2.27,2.92,3.73,2.34,3.11,3.85
+RUS,12/02/2023,Sochi,Krylya Sovetov,0,2,,,A,2.97,3.39,2.39,3.25,3.61,2.5
+RUS,12/02/2023,Pari NN,Ural,1,0,,,H,2.95,2.87,2.75,3.11,3.03,2.83
+RUS,03/03/2023,Fakel Voronezh,Khimki,1,1,,,D,1.85,3.62,4.24,1.95,3.92,4.6
+RUS,06/03/2023,Akhmat Grozny,Krasnodar,2,2,,,D,2.55,3.74,2.57,2.82,3.86,2.76
+RUS,06/03/2023,CSKA Moscow,FK Rostov,4,1,,,H,1.44,4.82,6.98,1.52,5.01,7.5
+RUS,06/03/2023,Krylya Sovetov,Spartak Moscow,1,0,,,H,2.53,3.69,2.6,2.78,3.88,2.7
+RUS,06/03/2023,Lokomotiv Moscow,Torpedo Moscow,3,1,,,H,1.19,7.93,12.8,1.2,8.8,14.5
+RUS,06/03/2023,Pari NN,Khimki,2,0,,,H,1.39,4.92,7.88,1.4,5.3,8.8
+RUS,06/03/2023,Orenburg,Dynamo Moscow,3,0,,,H,2.23,4.29,2.69,2.33,4.5,2.78
+RUS,06/03/2023,Ural,Sochi,1,0,,,H,1.91,3.73,3.84,1.99,3.95,4.1
+RUS,06/03/2023,Zenit,Fakel Voronezh,1,0,,,H,2.06,3.5,3.57,2.19,3.66,3.72
+RUS,09/03/2023,Orenburg,Sochi,3,0,,,H,2.44,3.52,2.77,2.53,3.67,2.92
+RUS,09/03/2023,Lokomotiv Moscow,Baltika,3,2,,,H,2.12,3.75,3.32,2.2,3.9,3.69
+RUS,09/03/2023,CSKA Moscow,Zenit,1,1,,,D,2.8,3.19,2.65,3.0,3.4,2.82
+RUS,09/03/2023,FK Rostov,Dynamo Moscow,1,2,,,A,2.85,3.53,2.4,3.3,3.81,2.6
+RUS,12/03/2023,CSKA Moscow,FK Rostov,2,0,,,H,1.88,3.75,3.95,1.95,3.88,4.25
+RUS,12/03/2023,Krasnodar,Orenburg,2,1,,,H,1.62,4.12,5.18,1.66,4.39,5.51
+RUS,12/03/2023,Lokomotiv Moscow,Zenit,3,1,,,H,3.71,3.43,2.09,3.76,3.71,2.13
+RUS,12/03/2023,Akhmat Grozny,Spartak Moscow,2,1,,,H,2.59,3.55,2.61,2.72,3.75,2.69
+RUS,18/03/2023,Orenburg,Spartak Moscow,2,0,,,H,3.47,3.95,1.94,3.74,4.16,2.03
+RUS,18/03/2023,Ural,Dynamo Moscow,0,1,,,A,2.5,3.37,2.79,2.58,3.62,2.9
+RUS,18/03/2023,Fakel Voronezh,Sochi,3,0,,,H,3.35,3.49,2.1,3.51,3.63,2.19
+RUS,18/03/2023,Lokomotiv Moscow,Krasnodar,3,2,,,H,2.26,3.46,3.08,2.37,3.66,3.32
+RUS,19/03/2023,Khimki,FK Rostov,0,1,,,A,3.53,3.44,2.07,3.72,3.68,2.13
+RUS,19/03/2023,Krylya Sovetov,Akhmat Grozny,0,1,,,A,2.0,3.55,3.64,2.08,3.76,3.92
+RUS,19/03/2023,Pari NN,Torpedo Moscow,1,1,,,D,1.85,3.34,4.58,1.91,3.54,4.84
+RUS,19/03/2023,CSKA Moscow,Zenit,1,0,,,H,3.35,3.19,2.27,3.6,3.34,2.39
+RUS,03/04/2023,Spartak Moscow,Ural,2,2,,,D,1.64,4.1,4.99,1.68,4.32,5.44
+RUS,03/04/2023,Akhmat Grozny,Orenburg,3,1,,,H,2.26,3.68,2.95,2.33,3.9,3.14
+RUS,03/04/2023,Zenit,Pari NN,3,0,,,H,1.15,7.21,20.45,1.17,8.8,23.81
+RUS,03/04/2023,FK Rostov,Lokomotiv Moscow,1,3,,,A,2.38,3.24,3.05,2.52,3.42,3.2
+RUS,08/04/2023,Krasnodar,Pari NN,1,0,,,H,1.51,4.09,6.77,1.57,4.38,7.8
+RUS,11/04/2023,Akhmat Grozny,Fakel Voronezh,1,2,,,A,2.0,3.55,3.82,2.06,3.68,4.08
+RUS,11/04/2023,Baltika,Zenit,0,2,,,A,5.23,3.7,1.73,5.91,3.85,1.8
+RUS,12/04/2023,Dynamo Moscow,Rubin Kazan,1,0,,,H,1.89,3.76,3.94,1.93,3.98,4.3
+RUS,15/04/2023,Dynamo Moscow,Pari NN,3,1,,,H,1.47,4.37,7.11,1.56,4.62,7.8
+RUS,15/04/2023,Krylya Sovetov,Khimki,0,0,,,D,1.36,5.21,8.07,1.45,5.63,9.8
+RUS,15/04/2023,Sochi,Krasnodar,0,2,,,A,2.48,3.55,2.73,2.61,3.71,2.79
+RUS,15/04/2023,Ural,CSKA Moscow,1,2,,,A,3.52,3.23,2.19,3.7,3.41,2.34
+RUS,15/04/2023,Torpedo Moscow,Spartak Moscow,1,2,,,A,7.3,4.56,1.44,8.3,4.88,1.51
+RUS,16/04/2023,Orenburg,Lokomotiv Moscow,1,4,,,A,2.28,3.89,2.82,2.35,4.07,2.93
+RUS,16/04/2023,Fakel Voronezh,Akhmat Grozny,1,1,,,D,2.5,3.24,2.91,2.56,3.34,3.07
+RUS,16/04/2023,FK Rostov,Zenit,0,0,,,D,5.85,4.07,1.58,6.2,4.24,1.66
+RUS,22/04/2023,Khimki,Torpedo Moscow,4,2,,,H,2.19,3.45,3.27,2.34,3.58,3.45
+RUS,22/04/2023,Fakel Voronezh,Orenburg,1,3,,,A,2.35,3.66,2.85,2.46,3.8,2.98
+RUS,22/04/2023,Zenit,Dynamo Moscow,3,1,,,H,1.4,4.93,7.74,1.5,5.3,9.1
+RUS,23/04/2023,Ural,FK Rostov,1,3,,,A,2.25,3.18,3.41,2.34,3.38,3.75
+RUS,23/04/2023,Pari NN,Krylya Sovetov,2,1,,,H,3.22,3.19,2.33,3.38,3.38,2.45
+RUS,23/04/2023,Akhmat Grozny,Sochi,1,0,,,H,2.36,3.42,2.99,2.46,3.58,3.12
+RUS,23/04/2023,CSKA Moscow,Lokomotiv Moscow,1,1,,,D,1.8,3.9,4.19,1.89,4.12,4.5
+RUS,24/04/2023,Spartak Moscow,Krasnodar,4,3,,,H,2.16,3.65,3.17,2.23,3.8,3.43
+RUS,28/04/2023,Dynamo Moscow,Fakel Voronezh,0,2,,,A,1.6,4.25,5.19,1.63,4.58,5.8
+RUS,29/04/2023,Krylya Sovetov,Zenit,1,5,,,A,4.75,3.7,1.76,5.0,3.89,1.83
+RUS,29/04/2023,Akhmat Grozny,CSKA Moscow,1,3,,,A,3.61,3.52,2.05,3.79,3.62,2.15
+RUS,29/04/2023,Krasnodar,Ural,1,1,,,D,1.85,3.82,4.07,1.93,3.94,4.36
+RUS,29/04/2023,Spartak Moscow,FK Rostov,1,1,,,D,1.71,4.1,4.62,1.83,4.23,4.8
+RUS,30/04/2023,Orenburg,Pari NN,1,0,,,H,1.68,4.09,4.75,1.72,4.32,5.09
+RUS,30/04/2023,Sochi,Torpedo Moscow,3,1,,,H,1.49,4.61,5.98,1.53,5.1,6.45
+RUS,30/04/2023,Lokomotiv Moscow,Khimki,5,1,,,H,1.44,5.1,6.15,1.47,5.45,7.2
+RUS,03/05/2023,Dynamo Moscow,Krylya Sovetov,1,0,,,H,1.73,3.99,4.47,1.77,4.26,4.84
+RUS,03/05/2023,Krasnodar,Torpedo Moscow,2,2,,,D,1.41,4.74,7.77,1.47,5.14,9.1
+RUS,03/05/2023,Sochi,CSKA Moscow,2,0,,,H,2.76,3.54,2.51,2.93,3.71,2.62
+RUS,08/05/2023,Krylya Sovetov,FK Rostov,5,1,,,H,2.21,3.38,3.29,2.32,3.52,3.53
+RUS,08/05/2023,Orenburg,Ural,0,2,,,A,2.25,3.57,3.02,2.3,3.77,3.17
+RUS,08/05/2023,Rubin Kazan,Spartak Moscow,1,4,,,A,3.36,3.67,2.09,3.62,3.9,2.2
+RUS,08/05/2023,CSKA Moscow,Lokomotiv Moscow,4,1,,,H,1.78,4.03,4.18,1.88,4.15,4.4
+RUS,11/05/2023,Krasnodar,Krylya Sovetov,2,1,,,H,1.77,3.91,4.66,1.81,4.0,5.0
+RUS,11/05/2023,CSKA Moscow,Pari NN,3,2,,,H,1.47,4.32,7.42,1.52,4.53,8.0
+RUS,11/05/2023,Lokomotiv Moscow,Spartak Moscow,1,1,,,D,2.57,3.59,2.65,2.61,3.66,2.78
+RUS,13/05/2023,Ural,Orenburg,2,1,,,H,1.88,3.83,3.82,1.92,4.04,3.97
+RUS,13/05/2023,Khimki,Spartak Moscow,1,1,,,D,8.16,5.68,1.32,9.5,6.5,1.37
+RUS,13/05/2023,Zenit,Krasnodar,2,2,,,D,1.32,5.75,8.8,1.36,6.35,10.75
+RUS,13/05/2023,CSKA Moscow,Torpedo Moscow,3,0,,,H,1.16,8.14,15.53,1.18,9.4,19.0
+RUS,14/05/2023,Krylya Sovetov,Lokomotiv Moscow,1,1,,,D,2.01,3.76,3.49,2.1,3.92,3.65
+RUS,14/05/2023,Dynamo Moscow,Akhmat Grozny,0,3,,,A,1.79,3.89,4.22,1.87,4.16,4.46
+RUS,14/05/2023,Fakel Voronezh,Pari NN,1,0,,,H,2.14,3.1,3.8,2.21,3.3,4.05
+RUS,14/05/2023,Sochi,FK Rostov,1,0,,,H,2.0,3.47,3.77,2.1,3.65,3.98
+RUS,20/05/2023,Lokomotiv Moscow,Fakel Voronezh,1,0,,,H,2.25,3.54,3.08,2.34,3.68,3.23
+RUS,20/05/2023,Orenburg,Zenit,2,2,,,D,4.08,4.26,1.75,4.3,4.4,1.84
+RUS,20/05/2023,Torpedo Moscow,Dynamo Moscow,0,3,,,A,8.31,5.54,1.34,9.8,6.21,1.39
+RUS,20/05/2023,Akhmat Grozny,Khimki,3,0,,,H,1.6,4.38,5.11,1.71,4.7,5.6
+RUS,21/05/2023,Krylya Sovetov,Ural,3,0,,,H,2.11,3.34,3.6,2.17,3.58,3.73
+RUS,21/05/2023,Spartak Moscow,CSKA Moscow,2,1,,,H,2.83,3.45,2.48,3.04,3.55,2.58
+RUS,21/05/2023,Krasnodar,FK Rostov,3,0,,,H,1.75,3.96,4.37,1.82,4.1,4.74
+RUS,22/05/2023,Pari NN,Sochi,4,0,,,H,2.9,3.05,2.65,3.15,3.19,2.84
+RUS,27/05/2023,Khimki,Ural,0,3,,,A,3.91,3.65,1.92,4.27,3.81,1.99
+RUS,27/05/2023,Torpedo Moscow,Orenburg,1,3,,,A,4.12,4.37,1.74,4.7,4.56,1.87
+RUS,27/05/2023,Krasnodar,CSKA Moscow,0,0,,,D,4.44,4.04,1.75,4.72,4.23,1.9
+RUS,27/05/2023,Sochi,Zenit,1,1,,,D,2.88,3.57,2.35,3.09,3.72,2.49
+RUS,28/05/2023,Spartak Moscow,Pari NN,0,0,,,D,1.56,4.14,5.81,1.62,4.36,6.1
+RUS,28/05/2023,Dynamo Moscow,Lokomotiv Moscow,2,4,,,A,1.89,4.04,3.65,2.01,4.42,3.92
+RUS,28/05/2023,Fakel Voronezh,Krylya Sovetov,2,1,,,H,2.96,3.09,2.56,3.05,3.34,2.66
+RUS,28/05/2023,FK Rostov,Akhmat Grozny,3,2,,,H,2.64,3.43,2.62,2.75,3.55,2.75
+RUS,05/06/2023,Khimki,Dynamo Moscow,0,1,,,A,4.77,4.2,1.65,4.99,4.42,1.72
+RUS,05/06/2023,Torpedo Moscow,Akhmat Grozny,1,5,,,A,3.24,3.48,2.19,3.36,3.64,2.25
+RUS,05/06/2023,FK Rostov,Fakel Voronezh,0,2,,,A,1.74,3.76,4.76,1.83,3.88,5.05
+RUS,08/06/2023,Baltika,Fakel Voronezh,2,1,,,H,1.99,3.34,3.96,2.08,3.48,4.25
+RUS,08/06/2023,Zenit,Dynamo Moscow,2,3,,,A,1.78,4.0,4.17,1.95,4.27,4.6
+RUS,08/06/2023,Sochi,Akhmat Grozny,1,2,,,A,2.13,3.48,3.37,2.24,3.59,3.55
+RUS,11/06/2023,Orenburg,FK Rostov,1,1,,,D,2.17,3.82,3.1,2.29,3.91,3.3
+RUS,11/06/2023,Ural,Rubin Kazan,0,1,,,A,2.31,3.23,3.31,2.36,3.41,3.39
+RUS,11/06/2023,Sochi,Dynamo Moscow,3,3,,,D,3.06,3.54,2.3,3.27,3.72,2.38

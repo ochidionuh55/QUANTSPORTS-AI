@@ -1,0 +1,181 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+SC2,02/08/2025,Cove Rangers,Queen of Sth,0,2,,1,A,2.25,3.4,2.88,2.35,3.4,2.9
+SC2,02/08/2025,Hamilton,Montrose,2,0,1,,H,1.95,3.4,3.6,2.0,3.6,3.6
+SC2,02/08/2025,Kelty Hearts,Inverness C,0,3,,2,A,4.33,3.7,1.7,4.63,3.7,1.73
+SC2,02/08/2025,Peterhead,East Fife,4,1,3,1,H,2.2,3.5,2.88,2.25,3.55,3.0
+SC2,02/08/2025,Stenhousemuir,Alloa,1,2,1,1,A,2.5,3.4,2.5,2.6,3.45,2.7
+SC2,09/08/2025,East Fife,Alloa,0,1,,,A,3.0,3.4,2.2,3.0,3.45,2.22
+SC2,09/08/2025,Inverness C,Peterhead,2,0,1,,H,1.67,3.6,4.5,1.69,3.85,5.0
+SC2,09/08/2025,Montrose,Kelty Hearts,1,2,1,1,A,1.95,3.4,3.6,2.0,3.45,3.65
+SC2,09/08/2025,Queen of Sth,Hamilton,1,4,,2,A,2.15,3.5,2.9,2.23,3.5,3.1
+SC2,09/08/2025,Stenhousemuir,Cove Rangers,1,0,1,,H,3.0,3.4,2.1,3.1,3.45,2.19
+SC2,16/08/2025,Cove Rangers,Montrose,3,3,2,1,D,1.91,3.4,3.7,1.96,3.45,3.75
+SC2,16/08/2025,Hamilton,East Fife,1,2,1,,A,1.57,3.9,5.0,1.62,4.0,5.5
+SC2,16/08/2025,Inverness C,Stenhousemuir,1,2,1,1,A,1.67,3.5,4.75,1.71,3.65,5.0
+SC2,16/08/2025,Queen of Sth,Peterhead,4,0,1,,H,2.05,3.3,3.25,2.1,3.5,3.3
+SC2,23/08/2025,Alloa,Hamilton,1,0,,,H,2.5,3.4,2.35,2.75,3.4,2.6
+SC2,23/08/2025,East Fife,Kelty Hearts,2,1,1,1,H,1.75,3.5,3.8,1.82,3.65,4.2
+SC2,23/08/2025,Montrose,Inverness C,0,2,,2,A,3.4,3.6,1.83,3.75,3.6,1.93
+SC2,23/08/2025,Peterhead,Cove Rangers,3,1,2,,H,2.45,3.3,2.4,2.8,3.3,2.6
+SC2,23/08/2025,Stenhousemuir,Queen of Sth,0,0,,,D,2.7,3.4,2.25,2.9,3.4,2.38
+SC2,30/08/2025,Inverness C,Alloa,1,0,,,H,1.57,4.0,4.5,1.61,4.2,5.0
+SC2,30/08/2025,Montrose,Peterhead,2,1,2,1,H,2.38,3.3,2.7,2.41,3.45,2.75
+SC2,30/08/2025,Queen of Sth,Kelty Hearts,2,1,1,,H,1.55,3.7,5.25,1.56,4.0,5.5
+SC2,30/08/2025,Stenhousemuir,East Fife,1,1,,,D,2.45,3.3,2.55,2.5,3.5,2.65
+SC2,30/08/2025,Hamilton,Cove Rangers,0,0,,,D,1.85,3.5,3.6,1.92,3.55,3.75
+SC2,13/09/2025,Alloa,Montrose,0,1,,,A,2.3,3.25,2.88,2.35,3.35,2.9
+SC2,13/09/2025,East Fife,Queen of Sth,2,1,1,1,H,2.45,3.25,2.7,2.45,3.4,2.75
+SC2,13/09/2025,Kelty Hearts,Stenhousemuir,0,1,,1,A,3.25,3.6,1.95,3.6,3.6,2.01
+SC2,13/09/2025,Peterhead,Hamilton,2,2,1,1,D,2.7,3.2,2.5,2.75,3.5,2.5
+SC2,13/09/2025,Cove Rangers,Inverness C,0,1,,,A,6.5,3.8,1.5,7.0,3.95,1.51
+SC2,20/09/2025,Alloa,Cove Rangers,2,1,2,,H,2.15,3.4,3.1,2.2,3.4,3.2
+SC2,20/09/2025,East Fife,Montrose,1,1,1,1,D,2.1,3.3,3.0,2.1,3.4,3.7
+SC2,20/09/2025,Kelty Hearts,Hamilton,0,4,,3,A,4.5,3.75,1.65,5.0,3.9,1.65
+SC2,20/09/2025,Queen of Sth,Inverness C,0,2,,1,A,3.9,3.3,1.85,4.0,3.3,1.9
+SC2,20/09/2025,Stenhousemuir,Peterhead,3,1,1,1,H,2.3,3.5,2.75,2.35,3.5,2.8
+SC2,27/09/2025,Cove Rangers,Kelty Hearts,0,2,,1,A,1.67,3.8,4.33,1.71,3.8,4.5
+SC2,27/09/2025,Hamilton,Stenhousemuir,2,0,1,,H,1.67,3.7,4.33,1.71,3.75,4.5
+SC2,27/09/2025,Inverness C,East Fife,4,1,1,1,H,1.45,4.2,5.25,1.5,4.33,6.5
+SC2,27/09/2025,Montrose,Queen of Sth,2,1,,,H,2.35,3.5,2.7,2.38,3.5,2.7
+SC2,27/09/2025,Peterhead,Alloa,2,1,2,1,H,2.15,3.1,3.0,2.2,3.5,3.0
+SC2,04/10/2025,East Fife,Cove Rangers,2,0,1,,H,1.83,3.9,3.4,1.9,3.9,4.0
+SC2,04/10/2025,Hamilton,Inverness C,3,1,1,,H,3.3,3.7,1.95,3.6,3.7,2.0
+SC2,04/10/2025,Kelty Hearts,Peterhead,1,2,1,1,A,3.5,3.5,1.9,3.6,3.5,1.96
+SC2,04/10/2025,Stenhousemuir,Montrose,3,1,2,,H,2.1,3.6,2.9,2.2,3.6,3.2
+SC2,04/10/2025,Queen of Sth,Alloa,1,0,,,H,2.0,3.9,3.0,2.05,3.9,3.3
+SC2,07/10/2025,Kelty Hearts,Alloa,0,2,,1,A,3.6,3.7,1.83,3.8,3.8,1.97
+SC2,18/10/2025,Alloa,East Fife,1,1,,,D,2.15,3.4,2.9,2.25,3.4,3.0
+SC2,18/10/2025,Cove Rangers,Stenhousemuir,0,1,,,A,3.1,3.25,2.15,3.2,3.5,2.2
+SC2,18/10/2025,Inverness C,Kelty Hearts,2,2,1,2,D,1.17,6.25,13.0,1.17,7.0,15.0
+SC2,18/10/2025,Montrose,Hamilton,0,4,,1,A,2.63,3.3,2.45,2.75,3.4,2.54
+SC2,18/10/2025,Peterhead,Queen of Sth,3,0,2,,H,2.2,3.4,2.9,2.25,3.6,2.9
+SC2,24/10/2025,Hamilton,Queen of Sth,1,2,,1,A,1.53,3.8,5.0,1.55,4.4,5.75
+SC2,25/10/2025,Alloa,Stenhousemuir,0,0,,,D,2.55,3.5,2.35,2.8,3.5,2.88
+SC2,25/10/2025,Kelty Hearts,East Fife,0,3,,1,A,3.9,3.5,1.8,4.0,3.5,1.87
+SC2,25/10/2025,Montrose,Cove Rangers,0,3,,1,A,2.05,3.3,3.1,2.1,3.4,3.4
+SC2,25/10/2025,Peterhead,Inverness C,0,1,,,A,4.5,3.9,1.6,5.25,4.0,1.62
+SC2,01/11/2025,Alloa,Kelty Hearts,3,0,2,,H,1.48,3.8,6.0,1.55,4.75,6.25
+SC2,01/11/2025,Cove Rangers,Peterhead,1,2,1,1,A,2.9,3.2,2.3,2.9,3.3,2.4
+SC2,01/11/2025,East Fife,Hamilton,1,1,,,D,2.55,3.5,2.38,2.63,3.75,2.42
+SC2,01/11/2025,Inverness C,Montrose,1,0,,,H,1.4,4.75,5.75,1.43,4.75,7.5
+SC2,01/11/2025,Queen of Sth,Stenhousemuir,1,1,1,,D,2.63,3.25,2.45,2.75,3.25,2.55
+SC2,08/11/2025,Hamilton,Peterhead,3,0,2,,H,1.75,3.75,4.0,1.77,3.75,4.4
+SC2,08/11/2025,Inverness C,Cove Rangers,1,0,1,,H,1.36,5.0,7.0,1.36,5.0,9.0
+SC2,08/11/2025,Montrose,Alloa,0,4,,1,A,2.8,3.3,2.35,2.9,3.3,2.38
+SC2,08/11/2025,Queen of Sth,East Fife,3,0,2,,H,2.2,3.5,3.0,2.25,3.9,3.0
+SC2,08/11/2025,Stenhousemuir,Kelty Hearts,2,2,,1,D,1.44,4.33,6.5,1.45,4.4,7.0
+SC2,15/11/2025,Cove Rangers,Hamilton,2,1,2,1,H,4.0,3.5,1.73,4.25,3.75,1.77
+SC2,15/11/2025,Kelty Hearts,Queen of Sth,1,1,,,D,4.0,3.5,1.73,4.4,3.6,1.88
+SC2,15/11/2025,Peterhead,Montrose,1,1,,,D,1.7,3.6,4.1,1.73,4.0,4.4
+SC2,15/11/2025,East Fife,Stenhousemuir,1,0,,,H,2.1,3.3,3.1,2.17,3.3,3.3
+SC2,22/11/2025,Cove Rangers,Alloa,0,0,,,D,2.75,3.25,2.3,2.88,3.3,2.42
+SC2,22/11/2025,Hamilton,Kelty Hearts,3,1,1,1,H,1.3,4.75,8.0,1.33,5.0,8.5
+SC2,22/11/2025,Montrose,East Fife,2,1,2,1,H,3.4,3.4,1.95,3.6,3.5,1.96
+SC2,22/11/2025,Peterhead,Stenhousemuir,1,4,,1,A,2.25,3.3,2.88,2.38,3.3,3.0
+SC2,22/11/2025,Inverness C,Queen of Sth,4,0,2,,H,1.4,4.33,6.25,1.44,4.6,6.5
+SC2,25/11/2025,Alloa,Inverness C,1,1,,1,D,4.5,3.9,1.62,4.75,3.9,1.73
+SC2,06/12/2025,Alloa,Peterhead,4,0,1,,H,1.85,3.5,3.6,1.91,3.6,3.8
+SC2,06/12/2025,Kelty Hearts,Montrose,0,3,,2,A,2.88,3.3,2.2,3.1,3.3,2.28
+SC2,06/12/2025,Queen of Sth,Cove Rangers,1,1,,1,D,2.1,3.4,3.1,2.12,3.6,3.2
+SC2,06/12/2025,Stenhousemuir,Hamilton,0,0,,,D,2.63,3.4,2.35,2.75,3.5,2.4
+SC2,13/12/2025,Alloa,Queen of Sth,0,2,,1,A,1.85,3.3,3.8,1.91,3.5,3.85
+SC2,13/12/2025,Cove Rangers,East Fife,0,1,,,A,2.5,3.3,2.55,2.5,3.4,2.55
+SC2,13/12/2025,Inverness C,Hamilton,4,0,2,,H,1.67,3.2,5.0,1.7,3.5,5.1
+SC2,13/12/2025,Montrose,Stenhousemuir,3,0,2,,H,2.75,3.5,2.2,3.0,3.5,2.3
+SC2,13/12/2025,Peterhead,Kelty Hearts,3,2,1,,H,1.65,3.9,4.2,1.65,4.33,4.5
+SC2,20/12/2025,East Fife,Peterhead,0,1,,1,A,2.1,3.3,2.9,2.15,3.6,3.0
+SC2,20/12/2025,Hamilton,Alloa,1,0,1,,H,2.4,3.2,2.55,2.5,3.6,2.75
+SC2,20/12/2025,Kelty Hearts,Cove Rangers,2,5,2,1,A,3.0,3.25,2.05,3.35,3.3,2.3
+SC2,20/12/2025,Queen of Sth,Montrose,1,0,,,H,1.8,3.6,3.6,1.95,3.9,3.9
+SC2,20/12/2025,Stenhousemuir,Inverness C,1,0,,,H,3.8,3.3,1.8,5.0,3.4,1.87
+SC2,27/12/2025,Alloa,Stenhousemuir,0,0,,,D,2.1,3.3,3.0,2.15,3.4,3.35
+SC2,27/12/2025,East Fife,Kelty Hearts,0,1,,1,A,1.53,3.7,5.25,1.55,4.0,5.75
+SC2,27/12/2025,Montrose,Inverness C,2,1,,1,H,6.25,3.8,1.45,6.5,4.2,1.48
+SC2,27/12/2025,Peterhead,Cove Rangers,0,4,,2,A,2.15,3.3,2.9,2.2,3.4,3.1
+SC2,27/12/2025,Queen of Sth,Hamilton,4,1,2,,H,2.63,3.4,2.3,2.75,3.5,2.4
+SC2,03/01/2026,Kelty Hearts,Alloa,1,1,,,D,4.2,3.4,1.73,4.5,3.6,1.75
+SC2,03/01/2026,Stenhousemuir,Queen of Sth,2,0,1,,H,2.3,3.1,2.9,2.35,3.2,2.9
+SC2,10/01/2026,Cove Rangers,Inverness C,0,0,,,D,3.4,3.4,1.9,3.75,3.5,1.95
+SC2,10/01/2026,Queen of Sth,Kelty Hearts,3,1,,1,H,1.55,3.9,4.75,1.55,4.2,5.25
+SC2,10/01/2026,Stenhousemuir,East Fife,5,0,2,,H,1.95,3.3,3.4,2.05,3.4,3.65
+SC2,17/01/2026,Peterhead,Hamilton,2,3,1,1,A,2.4,3.3,2.5,2.63,3.6,2.6
+SC2,20/01/2026,Alloa,Montrose,4,1,2,,H,1.85,3.3,3.6,2.0,3.4,3.85
+SC2,20/01/2026,East Fife,Inverness C,0,2,,,A,5.75,3.8,1.48,6.0,4.0,1.53
+SC2,24/01/2026,East Fife,Queen of Sth,1,5,,2,A,2.6,3.25,2.38,2.88,3.25,2.4
+SC2,24/01/2026,Hamilton,Cove Rangers,2,0,,,H,2.38,3.25,2.6,2.38,3.5,2.8
+SC2,24/01/2026,Inverness C,Alloa,3,1,,1,H,1.5,3.7,5.75,1.54,4.2,6.0
+SC2,24/01/2026,Kelty Hearts,Stenhousemuir,0,2,,2,A,3.75,3.3,1.83,4.1,3.5,1.92
+SC2,31/01/2026,Alloa,Cove Rangers,2,2,1,,D,1.95,3.25,3.5,2.0,3.4,3.6
+SC2,31/01/2026,East Fife,Montrose,2,3,1,2,A,2.35,3.4,2.63,2.45,3.5,2.8
+SC2,31/01/2026,Kelty Hearts,Hamilton,0,0,,,D,2.8,3.5,2.1,3.5,3.5,2.3
+SC2,31/01/2026,Queen of Sth,Inverness C,2,2,1,1,D,4.0,3.6,1.7,4.5,3.6,1.81
+SC2,31/01/2026,Stenhousemuir,Peterhead,2,2,,1,D,1.65,3.6,4.33,1.76,3.6,5.0
+SC2,07/02/2026,Cove Rangers,Queen of Sth,1,1,,1,D,2.55,3.3,2.35,2.7,3.3,2.65
+SC2,07/02/2026,Inverness C,East Fife,3,0,1,,H,1.3,4.33,8.0,1.33,5.1,8.5
+SC2,10/02/2026,Montrose,Peterhead,1,1,1,,D,2.15,3.4,2.8,2.4,3.4,3.1
+SC2,14/02/2026,East Fife,Cove Rangers,2,1,,1,H,2.5,3.25,2.45,2.6,3.4,2.5
+SC2,14/02/2026,Kelty Hearts,Peterhead,1,1,,1,D,2.9,3.4,2.1,3.1,3.5,2.15
+SC2,14/02/2026,Queen of Sth,Alloa,1,2,,1,A,2.05,3.3,3.0,2.15,3.4,3.1
+SC2,14/02/2026,Stenhousemuir,Montrose,2,2,1,,D,1.5,3.7,5.5,1.53,4.0,5.75
+SC2,14/02/2026,Hamilton,Inverness C,0,1,,1,A,4.75,3.2,1.7,5.0,3.65,1.73
+SC2,17/02/2026,Cove Rangers,Montrose,3,1,2,,H,2.05,3.3,3.0,2.2,3.4,3.15
+SC2,17/02/2026,Hamilton,East Fife,1,0,1,,H,1.8,3.5,3.7,2.9,3.6,4.0
+SC2,21/02/2026,Alloa,Hamilton,3,0,,,H,1.91,3.2,3.6,2.0,3.3,3.7
+SC2,21/02/2026,Cove Rangers,Kelty Hearts,1,1,,1,D,1.67,3.5,4.2,1.75,3.9,4.5
+SC2,21/02/2026,Inverness C,Stenhousemuir,1,1,1,1,D,1.48,3.7,5.75,1.55,3.8,6.5
+SC2,21/02/2026,Montrose,Queen of Sth,3,2,2,,H,3.5,3.7,1.8,3.8,3.7,2.05
+SC2,21/02/2026,Peterhead,East Fife,3,1,2,1,H,1.85,3.3,3.5,2.05,3.6,3.5
+SC2,28/02/2026,East Fife,Alloa,0,2,,1,A,3.7,3.4,1.8,3.9,3.5,1.85
+SC2,28/02/2026,Hamilton,Montrose,1,1,,1,D,2.1,3.5,2.8,2.16,3.6,2.9
+SC2,28/02/2026,Kelty Hearts,Inverness C,0,0,,,D,8.5,4.5,1.29,10.0,5.25,1.3
+SC2,28/02/2026,Queen of Sth,Peterhead,0,2,,1,A,1.73,3.5,3.9,1.73,3.75,4.33
+SC2,28/02/2026,Stenhousemuir,Cove Rangers,1,0,1,,H,1.85,3.2,3.7,1.95,3.3,3.8
+SC2,03/03/2026,Montrose,Kelty Hearts,1,1,1,,D,1.83,3.25,3.7,1.85,3.55,4.1
+SC2,03/03/2026,Hamilton,Stenhousemuir,0,1,,,A,3.0,3.2,2.1,3.1,3.33,2.2
+SC2,07/03/2026,Alloa,Kelty Hearts,2,1,,1,H,1.67,3.5,4.75,1.67,3.75,4.8
+SC2,07/03/2026,Cove Rangers,Peterhead,2,1,1,1,H,2.25,3.3,2.88,2.25,3.3,3.0
+SC2,07/03/2026,East Fife,Hamilton,0,3,,1,A,2.4,3.3,2.63,2.45,3.4,2.63
+SC2,07/03/2026,Inverness C,Montrose,3,1,1,,H,1.25,5.0,10.0,1.25,5.5,11.0
+SC2,07/03/2026,Queen of Sth,Stenhousemuir,1,1,,1,D,2.2,3.3,2.9,2.25,3.3,2.9
+SC2,10/03/2026,Peterhead,Alloa,3,1,2,,H,2.35,3.3,2.6,2.5,3.3,2.7
+SC2,14/03/2026,Hamilton,Queen of Sth,1,3,1,1,A,3.25,3.4,1.95,3.4,3.5,2.0
+SC2,14/03/2026,Inverness C,Cove Rangers,1,1,1,,D,1.3,4.5,8.0,1.33,5.0,9.0
+SC2,14/03/2026,Kelty Hearts,East Fife,1,1,,1,D,2.2,3.2,2.9,2.25,3.25,3.0
+SC2,14/03/2026,Peterhead,Stenhousemuir,0,1,,,A,2.5,3.2,2.45,2.6,3.25,2.6
+SC2,14/03/2026,Montrose,Alloa,5,4,2,2,H,3.0,3.3,2.1,3.0,3.3,2.3
+SC2,17/03/2026,Inverness C,Peterhead,3,1,2,,H,1.3,4.5,8.0,1.33,5.0,9.0
+SC2,21/03/2026,Alloa,Inverness C,1,1,1,,D,4.5,3.5,1.65,4.75,3.75,1.67
+SC2,21/03/2026,Cove Rangers,Hamilton,2,2,,2,D,2.35,3.25,2.63,2.35,3.3,3.0
+SC2,21/03/2026,Peterhead,Montrose,1,1,,1,D,1.95,3.3,3.3,2.0,3.6,3.35
+SC2,21/03/2026,Queen of Sth,East Fife,2,2,2,1,D,1.7,3.4,4.33,1.7,3.6,4.75
+SC2,21/03/2026,Stenhousemuir,Kelty Hearts,2,0,1,,H,1.48,3.7,6.0,1.48,4.1,6.5
+SC2,27/03/2026,Inverness C,Queen of Sth,1,1,,1,D,1.48,3.8,5.5,1.48,4.2,6.2
+SC2,28/03/2026,East Fife,Stenhousemuir,2,2,,1,D,4.1,3.4,1.73,4.5,3.4,1.77
+SC2,28/03/2026,Alloa,Peterhead,1,2,1,,A,1.91,3.4,3.4,2.0,3.5,3.4
+SC2,28/03/2026,Hamilton,Kelty Hearts,1,2,1,1,A,1.75,3.5,3.9,1.83,3.6,4.0
+SC2,04/04/2026,Cove Rangers,Alloa,0,1,,,A,2.4,3.25,2.55,2.5,3.35,2.6
+SC2,04/04/2026,Kelty Hearts,Queen of Sth,1,1,,,D,3.9,3.4,1.8,3.95,3.6,1.88
+SC2,04/04/2026,Montrose,East Fife,1,0,,,H,1.95,3.6,3.2,2.05,3.6,3.4
+SC2,04/04/2026,Stenhousemuir,Hamilton,3,0,2,,H,1.62,3.6,4.75,1.65,3.75,5.0
+SC2,07/04/2026,Montrose,Cove Rangers,2,3,,1,A,2.15,3.4,2.75,2.35,3.6,2.8
+SC2,11/04/2026,East Fife,Peterhead,2,1,1,,H,2.4,3.4,2.5,2.45,3.6,2.6
+SC2,11/04/2026,Hamilton,Alloa,1,0,,,H,2.7,3.3,2.25,2.8,3.4,2.25
+SC2,11/04/2026,Kelty Hearts,Montrose,3,1,,,H,2.55,3.3,2.35,2.63,3.3,2.45
+SC2,11/04/2026,Queen of Sth,Cove Rangers,2,0,,,H,1.75,3.5,3.9,1.83,3.75,3.9
+SC2,11/04/2026,Stenhousemuir,Inverness C,1,1,,1,D,3.6,3.3,1.85,3.8,3.6,1.94
+SC2,14/04/2026,Peterhead,Inverness C,0,2,,1,A,7.0,4.0,1.38,7.0,4.5,1.53
+SC2,18/04/2026,Alloa,East Fife,2,0,1,,H,1.7,3.6,4.1,1.73,4.0,4.2
+SC2,18/04/2026,Cove Rangers,Stenhousemuir,2,0,1,,H,3.2,3.25,2.0,3.2,3.4,2.1
+SC2,18/04/2026,Inverness C,Kelty Hearts,1,0,,,H,1.18,6.0,12.0,1.2,7.5,13.0
+SC2,18/04/2026,Montrose,Hamilton,0,2,,1,A,2.2,3.5,2.7,2.3,3.75,2.75
+SC2,18/04/2026,Peterhead,Queen of Sth,1,1,,,D,3.4,3.5,1.9,3.4,3.6,1.95
+SC2,25/04/2026,East Fife,Inverness C,1,1,,,D,6.5,4.1,1.4,7.0,4.6,1.44
+SC2,25/04/2026,Hamilton,Peterhead,3,1,1,,H,1.55,3.9,4.75,1.65,4.33,5.0
+SC2,25/04/2026,Kelty Hearts,Cove Rangers,0,2,,2,A,2.88,3.4,2.1,3.0,3.4,2.2
+SC2,25/04/2026,Queen of Sth,Montrose,2,2,,1,D,1.53,4.1,4.75,1.53,4.2,5.25
+SC2,25/04/2026,Stenhousemuir,Alloa,1,0,,,H,1.95,3.3,3.4,1.95,3.5,3.55
+SC2,02/05/2026,Alloa,Queen of Sth,1,4,1,1,A,2.15,3.4,2.8,2.33,3.6,2.88
+SC2,02/05/2026,Cove Rangers,East Fife,0,0,,,D,2.15,3.0,3.2,2.15,3.4,3.25
+SC2,02/05/2026,Inverness C,Hamilton,2,1,2,,H,1.38,4.1,7.5,1.41,5.0,7.5
+SC2,02/05/2026,Montrose,Stenhousemuir,0,2,,1,A,4.1,3.9,1.65,4.5,4.5,1.74
+SC2,02/05/2026,Peterhead,Kelty Hearts,0,2,,,A,1.83,3.6,3.5,1.85,3.8,3.9

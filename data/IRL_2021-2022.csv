@@ -1,0 +1,199 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+IRL,05/07/2021,Derry City,Longford,1,1,,,D,1.85,3.24,4.5,2.03,3.49,5.12
+IRL,05/07/2021,Dundalk,Sligo Rovers,0,1,,,A,1.95,3.34,3.85,2.03,3.5,4.25
+IRL,08/07/2021,Waterford,Bohemians,1,0,,,H,4.72,3.6,1.73,5.14,3.88,1.83
+IRL,08/07/2021,Sligo Rovers,Finn Harps,0,1,,,A,1.82,3.39,4.49,1.89,3.52,5.0
+IRL,11/07/2021,Bohemians,Drogheda,2,1,,,H,1.54,4.06,5.76,1.58,4.3,6.29
+IRL,11/07/2021,Dundalk,Longford,2,0,,,H,1.21,6.06,13.23,1.24,6.5,17.0
+IRL,11/07/2021,Galway,Bray,0,1,,,A,2.0,3.38,3.42,2.1,3.6,3.75
+IRL,11/07/2021,UC Dublin,Treaty United,1,2,,,A,1.73,3.65,4.22,1.82,3.88,4.65
+IRL,16/07/2021,Derry City,Shamrock Rovers,2,4,,,A,4.5,3.31,1.84,5.0,3.53,1.91
+IRL,16/07/2021,St. Patricks,Drogheda,2,0,,,H,1.74,3.55,4.65,1.83,3.75,5.0
+IRL,17/07/2021,Dundalk,Finn Harps,1,0,,,H,1.58,3.9,5.59,1.61,4.15,6.05
+IRL,18/07/2021,Bohemians,Longford,1,1,,,D,1.36,4.52,8.59,1.41,5.0,10.3
+IRL,18/07/2021,Waterford,Sligo Rovers,1,0,,,H,4.75,3.48,1.75,5.0,3.7,1.81
+IRL,30/07/2021,Drogheda,Waterford,1,2,,,A,1.76,3.54,4.52,1.83,3.73,5.0
+IRL,30/07/2021,Shamrock Rovers,St. Patricks,3,1,,,H,2.13,2.98,3.77,2.2,3.16,4.04
+IRL,31/07/2021,Longford,Derry City,0,2,,,A,3.91,3.18,2.0,4.16,3.34,2.1
+IRL,05/08/2021,Bohemians,Finn Harps,4,0,,,H,1.88,3.24,4.32,1.97,3.45,4.91
+IRL,05/08/2021,St. Patricks,Shamrock Rovers,1,2,,,A,3.39,2.95,2.29,3.65,3.2,2.37
+IRL,05/08/2021,Waterford,Drogheda,0,7,,,A,15.73,4.34,1.3,17.61,4.73,1.33
+IRL,08/08/2021,Dundalk,St. Patricks,1,4,,,A,2.44,3.26,2.84,2.61,3.44,3.0
+IRL,08/08/2021,Shamrock Rovers,Longford,1,0,,,H,1.25,5.57,11.96,1.29,6.02,15.0
+IRL,10/08/2021,Dundalk,Shamrock Rovers,1,0,,,H,3.69,3.61,1.92,3.98,3.8,1.97
+IRL,13/08/2021,St. Patricks,Waterford,2,1,,,H,1.45,4.21,6.96,1.5,4.56,8.0
+IRL,14/08/2021,Longford,Finn Harps,0,3,,,A,3.16,3.06,2.35,3.34,3.3,2.46
+IRL,15/08/2021,Bohemians,Sligo Rovers,1,0,,,H,1.96,3.29,3.92,2.1,3.59,4.36
+IRL,15/08/2021,Derry City,Dundalk,1,0,,,H,3.14,3.33,2.21,3.35,3.54,2.3
+IRL,15/08/2021,Drogheda,Shamrock Rovers,0,1,,,A,7.29,4.03,1.46,8.14,4.36,1.55
+IRL,20/08/2021,Dundalk,Drogheda,1,2,,,A,1.51,4.4,5.74,1.54,4.68,6.04
+IRL,20/08/2021,Waterford,Longford,4,1,,,H,1.7,3.71,4.78,1.9,3.93,5.25
+IRL,20/08/2021,Finn Harps,St. Patricks,3,1,,,H,3.69,3.2,2.07,4.05,3.4,2.17
+IRL,21/08/2021,Sligo Rovers,Derry City,1,2,,,A,2.27,3.07,3.35,2.36,3.3,3.56
+IRL,04/09/2021,St. Patricks,Derry City,2,0,,,H,1.81,3.27,4.69,1.87,3.43,5.03
+IRL,04/09/2021,Dundalk,Bohemians,0,1,,,A,1.85,3.38,4.25,1.92,3.57,4.75
+IRL,07/09/2021,Finn Harps,Waterford,0,1,,,A,1.62,3.71,5.44,1.7,3.93,5.99
+IRL,07/09/2021,St. Patricks,Derry City,1,0,,,H,1.74,3.46,4.89,1.81,3.65,5.4
+IRL,13/09/2021,Finn Harps,Bohemians,1,2,,,A,4.25,3.55,1.81,4.6,3.75,1.88
+IRL,14/09/2021,Sligo Rovers,Dundalk,2,1,,,H,2.15,3.26,3.38,2.28,3.48,3.7
+IRL,18/09/2021,Sligo Rovers,Shamrock Rovers,0,1,,,A,3.34,3.05,2.27,3.57,3.25,2.36
+IRL,20/09/2021,Bohemians,Derry City,3,3,,,D,1.62,3.9,5.23,1.71,4.16,5.78
+IRL,24/09/2021,Bohemians,Finn Harps,1,2,,,A,1.49,4.26,6.18,1.7,4.53,7.0
+IRL,24/09/2021,Derry City,Longford,3,0,,,H,1.33,4.96,8.78,1.44,5.5,10.0
+IRL,24/09/2021,Dundalk,Sligo Rovers,4,1,,,H,2.24,3.29,3.13,2.35,3.51,3.44
+IRL,24/09/2021,St. Patricks,Shamrock Rovers,0,1,,,A,3.39,3.13,2.21,3.68,3.32,2.65
+IRL,24/09/2021,Waterford,Drogheda,1,0,,,H,2.28,3.2,3.16,2.65,3.31,3.4
+IRL,27/09/2021,Dundalk,Bohemians,2,1,,,H,2.63,3.59,2.45,2.8,3.79,2.7
+IRL,04/10/2021,Finn Harps,Waterford,2,1,,,H,2.08,3.04,3.81,2.18,3.26,4.16
+IRL,04/10/2021,Longford,Drogheda,0,4,,,A,3.09,3.09,2.36,3.31,3.23,2.46
+IRL,04/10/2021,Sligo Rovers,Shamrock Rovers,1,1,,,D,4.31,3.12,1.93,4.77,3.39,2.04
+IRL,07/10/2021,Longford,Drogheda,1,1,,,D,4.58,3.63,1.73,4.87,3.91,1.77
+IRL,09/10/2021,Derry City,Finn Harps,2,2,,,D,2.03,3.16,3.89,2.29,3.35,4.23
+IRL,09/10/2021,Drogheda,Bohemians,3,2,,,H,4.77,3.69,1.71,5.5,3.9,2.03
+IRL,09/10/2021,Sligo Rovers,St. Patricks,2,0,,,H,2.45,3.04,3.04,2.93,3.22,3.45
+IRL,09/10/2021,Shamrock Rovers,Waterford,2,0,,,H,1.41,4.42,7.5,1.46,5.1,10.3
+IRL,15/10/2021,Bohemians,Dundalk,1,1,,,D,2.12,3.63,3.09,2.2,3.83,3.65
+IRL,15/10/2021,Derry City,St. Patricks,1,0,,,H,2.35,3.15,3.1,2.85,3.3,3.48
+IRL,15/10/2021,Drogheda,Longford,2,0,,,H,1.53,4.17,5.71,1.61,4.4,7.0
+IRL,15/10/2021,Waterford,Finn Harps,4,1,,,H,2.47,3.2,2.83,2.55,3.4,3.04
+IRL,15/10/2021,Shamrock Rovers,Sligo Rovers,2,0,,,H,1.63,3.59,5.68,1.72,3.9,6.5
+IRL,18/10/2021,Shamrock Rovers,Bohemians,1,1,,,D,1.64,3.76,5.18,1.67,3.98,5.89
+IRL,23/10/2021,Finn Harps,Sligo Rovers,2,2,,,D,2.68,3.07,2.71,2.88,3.27,2.88
+IRL,23/10/2021,Longford,Shamrock Rovers,0,1,,,A,16.39,7.07,1.16,22.0,8.0,1.24
+IRL,24/10/2021,Drogheda,Derry City,1,0,,,H,2.89,3.1,2.5,3.1,3.28,2.78
+IRL,25/10/2021,Bohemians,Waterford,1,2,,,A,1.43,4.58,6.66,1.5,5.01,8.0
+IRL,25/10/2021,St. Patricks,Dundalk,1,0,,,H,2.15,3.3,3.32,2.25,3.52,3.6
+IRL,29/10/2021,Longford,St. Patricks,1,4,,,A,8.34,4.53,1.37,9.03,4.83,1.41
+IRL,29/10/2021,Derry City,Bohemians,1,1,,,D,2.5,3.4,2.66,2.65,3.6,2.86
+IRL,29/10/2021,Dundalk,Waterford,1,0,,,H,1.47,4.41,6.12,1.57,4.97,6.78
+IRL,29/10/2021,Shamrock Rovers,Finn Harps,3,0,,,H,1.32,4.83,9.62,1.34,5.5,11.5
+IRL,29/10/2021,Sligo Rovers,Drogheda,2,0,,,H,1.86,3.29,4.37,1.91,3.49,4.73
+IRL,06/11/2021,Derry City,Bohemians,1,1,,,D,3.53,3.21,2.09,3.74,3.4,2.17
+IRL,06/11/2021,Dundalk,Waterford,1,3,,,A,1.18,6.75,13.03,1.21,7.51,15.43
+IRL,06/11/2021,Shamrock Rovers,Finn Harps,1,1,,,D,1.37,4.31,8.9,1.42,4.51,10.36
+IRL,09/11/2021,Longford,Dundalk,1,0,,,H,8.34,4.52,1.38,9.5,4.76,1.5
+IRL,13/11/2021,Longford,Waterford,1,1,,,D,4.81,3.92,1.65,5.16,4.22,1.71
+IRL,19/11/2021,Bray,UC Dublin,0,2,,,A,2.86,3.22,2.3,3.0,3.4,2.41
+IRL,19/11/2021,Dundalk,Derry City,1,2,,,A,2.25,3.37,3.07,2.38,3.6,3.6
+IRL,19/11/2021,Finn Harps,Longford,5,0,,,H,1.42,4.45,7.23,1.46,4.69,7.97
+IRL,19/11/2021,Shamrock Rovers,Drogheda,2,1,,,H,1.46,4.39,6.51,1.62,5.05,9.0
+IRL,19/11/2021,Sligo Rovers,Bohemians,1,1,,,D,4.06,3.73,1.81,4.4,3.94,2.0
+IRL,19/11/2021,Waterford,St. Patricks,0,0,,,D,2.37,3.27,2.95,2.95,3.41,3.15
+IRL,26/11/2021,Waterford,UC Dublin,1,2,,,A,2.45,3.34,2.73,2.69,3.67,3.6
+IRL,06/12/2021,Longford,St. Patricks,1,3,,,A,7.03,4.01,1.47,7.96,4.27,1.57
+IRL,06/12/2021,Sligo Rovers,Drogheda,1,2,,,A,2.17,3.09,3.5,2.28,3.3,3.81
+IRL,11/12/2021,Bohemians,Shamrock Rovers,3,1,,,H,3.26,3.26,2.21,3.6,3.41,2.32
+IRL,11/12/2021,Derry City,Sligo Rovers,2,0,,,H,1.71,3.74,4.63,1.76,4.0,5.03
+IRL,11/12/2021,St. Patricks,Finn Harps,2,2,,,D,2.29,3.19,3.16,2.37,3.4,3.4
+IRL,04/01/2022,Bohemians,Derry City,1,2,,,A,2.58,3.08,2.83,2.88,3.27,3.1
+IRL,04/01/2022,Dundalk,UC Dublin,2,0,,,H,1.45,4.4,6.81,1.52,4.84,8.1
+IRL,04/01/2022,Sligo Rovers,Shelbourne,0,1,,,A,1.83,3.25,4.7,1.89,3.4,5.17
+IRL,04/01/2022,St. Patricks,Drogheda,1,1,,,D,1.4,4.47,7.86,1.44,4.82,9.19
+IRL,04/01/2022,Finn Harps,Shamrock Rovers,0,3,,,A,4.94,3.43,1.74,5.42,3.62,1.81
+IRL,07/01/2022,Bohemians,Derry City,2,3,,,A,2.58,3.28,2.63,2.75,3.45,2.81
+IRL,07/01/2022,Dundalk,UC Dublin,3,0,,,H,1.25,5.76,10.65,1.28,6.41,12.0
+IRL,07/01/2022,St. Patricks,Drogheda,3,0,,,H,1.44,4.3,6.82,1.48,4.52,7.85
+IRL,07/01/2022,Finn Harps,Shamrock Rovers,0,1,,,A,6.2,4.01,1.51,7.0,4.2,1.57
+IRL,08/01/2022,Drogheda,UC Dublin,1,1,,,D,1.71,3.69,4.63,1.75,3.97,5.13
+IRL,10/01/2022,Sligo Rovers,Shamrock Rovers,1,3,,,A,4.37,3.36,1.83,4.8,3.54,1.88
+IRL,07/02/2022,Sligo Rovers,Shelbourne,3,1,,,H,2.3,2.89,3.44,2.4,3.1,3.64
+IRL,09/02/2022,Bohemians,Shamrock Rovers,1,0,,,H,4.16,3.48,1.84,4.5,3.64,1.96
+IRL,09/02/2022,Derry City,UC Dublin,3,0,,,H,1.16,7.08,14.31,1.18,7.98,17.0
+IRL,09/02/2022,Dundalk,Shelbourne,0,0,,,D,1.81,3.38,4.53,1.85,3.54,4.97
+IRL,09/02/2022,St. Patricks,Finn Harps,2,1,,,H,1.36,4.94,7.59,1.39,5.55,9.05
+IRL,18/02/2022,Dundalk,Derry City,2,2,,,D,2.16,3.26,3.4,2.6,3.44,3.7
+IRL,18/02/2022,Shelbourne,St. Patricks,0,3,,,A,3.59,3.07,2.17,3.9,3.25,2.24
+IRL,18/02/2022,Shamrock Rovers,UC Dublin,3,0,,,H,1.17,6.63,16.82,1.3,7.5,19.68
+IRL,25/02/2022,Bohemians,Dundalk,2,2,,,D,2.23,3.34,3.11,2.3,3.52,3.31
+IRL,25/02/2022,Derry City,Shamrock Rovers,2,1,,,H,3.81,3.24,2.02,4.11,3.4,2.12
+IRL,25/02/2022,Drogheda,Shelbourne,0,2,,,A,3.15,3.12,2.33,3.41,3.32,2.56
+IRL,25/02/2022,St. Patricks,Sligo Rovers,1,2,,,A,1.86,3.31,4.38,1.93,3.5,4.78
+IRL,25/02/2022,UC Dublin,Finn Harps,0,0,,,D,3.15,3.25,2.26,3.4,3.58,2.35
+IRL,28/02/2022,Bohemians,St. Patricks,1,0,,,H,2.46,3.29,2.81,2.56,3.48,2.95
+IRL,28/02/2022,Derry City,Sligo Rovers,0,0,,,D,2.08,3.15,3.71,2.14,3.34,3.95
+IRL,28/02/2022,Dundalk,Finn Harps,3,0,,,H,1.76,3.61,4.52,1.81,3.8,4.89
+IRL,28/02/2022,UC Dublin,Shelbourne,0,0,,,D,3.48,3.31,2.1,4.2,3.46,2.2
+IRL,28/02/2022,Shamrock Rovers,Drogheda,3,1,,,H,1.22,5.94,13.3,1.25,6.5,15.63
+IRL,09/03/2022,Sligo Rovers,Drogheda,2,0,,,H,1.71,3.71,4.69,1.8,4.08,5.4
+IRL,10/03/2022,Shelbourne,St. Patricks,4,4,,,D,3.25,2.97,2.33,3.5,3.13,2.48
+IRL,14/03/2022,Bohemians,Shelbourne,1,1,,,D,1.91,3.17,4.41,1.98,3.36,4.69
+IRL,14/03/2022,Derry City,Drogheda,2,0,,,H,1.45,4.27,6.99,1.48,4.5,7.77
+IRL,14/03/2022,Dundalk,Shamrock Rovers,0,0,,,D,4.4,3.51,1.8,4.62,3.71,1.85
+IRL,14/03/2022,Sligo Rovers,Finn Harps,3,1,,,H,2.05,3.14,3.85,2.12,3.3,4.37
+IRL,14/03/2022,St. Patricks,UC Dublin,2,0,,,H,1.42,4.49,7.18,1.47,4.9,8.0
+IRL,18/03/2022,UC Dublin,Bohemians,1,1,,,D,5.1,3.74,1.66,5.75,3.9,1.75
+IRL,18/03/2022,Derry City,St. Patricks,2,1,,,H,2.2,3.17,3.39,2.27,3.36,3.62
+IRL,18/03/2022,Drogheda,Dundalk,1,0,,,H,4.72,3.64,1.72,4.99,3.83,1.77
+IRL,18/03/2022,Shelbourne,Finn Harps,0,3,,,A,2.23,2.98,3.54,2.42,3.28,3.75
+IRL,18/03/2022,Shamrock Rovers,Sligo Rovers,2,2,,,D,1.65,3.55,5.54,1.72,3.8,6.0
+IRL,03/04/2022,Drogheda,UC Dublin,4,2,,,H,2.08,3.26,3.57,2.15,3.47,3.82
+IRL,03/04/2022,Shelbourne,Derry City,0,1,,,A,3.63,3.22,2.08,3.85,3.37,2.25
+IRL,03/04/2022,St. Patricks,Shamrock Rovers,1,0,,,H,3.99,3.23,1.98,4.34,3.47,2.15
+IRL,03/04/2022,Finn Harps,Bohemians,1,1,,,D,3.22,3.11,2.3,3.36,3.3,2.43
+IRL,04/04/2022,UC Dublin,Derry City,0,2,,,A,8.91,4.64,1.35,10.0,5.02,1.4
+IRL,04/04/2022,Finn Harps,Drogheda,2,2,,,D,2.2,3.21,3.31,2.26,3.37,3.5
+IRL,15/04/2022,Bohemians,Finn Harps,2,2,,,D,1.75,3.57,4.65,1.85,3.76,5.14
+IRL,15/04/2022,Derry City,Shelbourne,1,2,,,A,1.53,3.8,6.63,1.58,4.3,8.64
+IRL,15/04/2022,Dundalk,Sligo Rovers,2,1,,,H,2.06,3.25,3.65,2.14,3.41,4.02
+IRL,15/04/2022,UC Dublin,Drogheda,0,2,,,A,2.76,3.26,2.5,3.18,3.46,2.6
+IRL,15/04/2022,Shamrock Rovers,St. Patricks,1,0,,,H,1.72,3.52,4.98,1.78,3.8,6.0
+IRL,18/04/2022,Shelbourne,Bohemians,1,4,,,A,3.8,3.09,2.08,4.25,3.2,2.19
+IRL,18/04/2022,UC Dublin,St. Patricks,1,2,,,A,9.43,5.05,1.32,11.5,5.5,1.47
+IRL,18/04/2022,Finn Harps,Sligo Rovers,0,1,,,A,2.72,2.94,2.77,3.15,3.04,2.93
+IRL,18/04/2022,Shamrock Rovers,Dundalk,1,0,,,H,1.44,4.29,7.19,1.53,4.83,9.19
+IRL,18/04/2022,Drogheda,Derry City,1,1,,,D,5.77,3.81,1.59,6.3,4.0,1.64
+IRL,22/04/2022,Bohemians,Shamrock Rovers,1,3,,,A,4.51,3.41,1.81,5.01,3.66,2.05
+IRL,22/04/2022,Derry City,UC Dublin,7,1,,,H,1.15,7.56,16.7,1.21,8.94,23.0
+IRL,22/04/2022,Dundalk,Shelbourne,2,1,,,H,1.89,3.21,4.39,1.97,3.4,4.8
+IRL,22/04/2022,St. Patricks,Finn Harps,2,0,,,H,1.69,3.61,4.99,1.76,3.9,5.5
+IRL,23/04/2022,Sligo Rovers,Drogheda,3,2,,,H,1.66,3.54,5.48,1.73,3.72,5.98
+IRL,29/04/2022,Bohemians,UC Dublin,3,0,,,H,1.22,6.29,11.38,1.26,6.8,15.0
+IRL,29/04/2022,Dundalk,Drogheda,4,1,,,H,1.59,3.91,5.46,1.64,4.12,6.0
+IRL,29/04/2022,Sligo Rovers,Shamrock Rovers,1,1,,,D,5.23,3.57,1.68,5.84,3.8,1.79
+IRL,29/04/2022,St. Patricks,Derry City,0,4,,,A,2.97,3.09,2.46,3.1,3.25,2.57
+IRL,29/04/2022,Finn Harps,Shelbourne,1,0,,,H,2.49,2.91,3.12,2.58,3.05,3.35
+IRL,03/05/2022,Sligo Rovers,Dundalk,0,0,,,D,2.88,3.2,2.45,3.09,3.4,2.55
+IRL,04/05/2022,Sligo Rovers,Bohemians,0,1,,,A,2.35,3.1,3.13,2.47,3.31,3.3
+IRL,08/05/2022,Dundalk,Derry City,1,1,,,D,2.33,3.19,3.04,2.45,3.3,3.36
+IRL,08/05/2022,Finn Harps,Drogheda,3,0,,,H,2.22,3.36,3.09,2.35,3.6,3.43
+IRL,13/05/2022,Dundalk,Bohemians,3,1,,,H,2.43,3.39,2.76,2.6,3.58,2.91
+IRL,13/05/2022,Shamrock Rovers,Derry City,1,0,,,H,1.98,3.26,3.93,2.12,3.45,4.34
+IRL,13/05/2022,Shelbourne,Drogheda,1,0,,,H,1.77,3.33,4.96,1.84,3.5,5.5
+IRL,13/05/2022,Finn Harps,UC Dublin,0,1,,,A,1.73,3.74,4.52,1.8,3.92,4.8
+IRL,14/05/2022,Sligo Rovers,St. Patricks,1,1,,,D,2.67,3.06,2.75,2.96,3.24,3.06
+IRL,19/05/2022,UC Dublin,Shamrock Rovers,0,3,,,A,17.04,7.4,1.15,19.0,8.5,1.17
+IRL,20/05/2022,Bohemians,Sligo Rovers,2,1,,,H,1.94,3.46,3.79,2.01,3.78,4.28
+IRL,20/05/2022,Derry City,Dundalk,1,2,,,A,1.55,4.09,5.59,1.58,4.42,6.0
+IRL,20/05/2022,Drogheda,Finn Harps,3,1,,,H,2.93,3.02,2.53,3.2,3.16,2.7
+IRL,20/05/2022,St. Patricks,Shelbourne,1,2,,,A,1.92,3.1,4.48,2.0,3.35,4.94
+IRL,23/05/2022,Drogheda,Shamrock Rovers,1,0,,,H,12.69,5.67,1.23,15.0,6.21,1.25
+IRL,23/05/2022,Shelbourne,UC Dublin,2,0,,,H,1.45,3.94,8.13,1.52,4.5,8.9
+IRL,23/05/2022,Sligo Rovers,Derry City,2,1,,,H,4.55,3.43,1.79,4.85,3.65,1.87
+IRL,23/05/2022,St. Patricks,Bohemians,3,0,,,H,2.8,3.23,2.48,2.95,3.45,2.65
+IRL,23/05/2022,Finn Harps,Dundalk,0,1,,,A,3.88,3.32,1.95,4.2,3.5,2.04
+IRL,27/05/2022,Bohemians,Drogheda,1,1,,,D,1.43,4.49,6.52,1.49,4.84,7.4
+IRL,27/05/2022,Derry City,Finn Harps,2,2,,,D,1.4,4.57,7.41,1.47,5.55,10.5
+IRL,27/05/2022,Dundalk,St. Patricks,1,0,,,H,1.96,3.41,3.73,2.0,3.62,4.01
+IRL,27/05/2022,UC Dublin,Sligo Rovers,1,1,,,D,5.2,3.75,1.63,5.62,4.0,1.67
+IRL,27/05/2022,Shamrock Rovers,Shelbourne,2,0,,,H,1.54,3.67,6.84,1.6,4.35,8.9
+IRL,05/06/2022,Derry City,Bohemians,1,1,,,D,1.63,3.97,4.97,1.67,4.32,5.5
+IRL,05/06/2022,Drogheda,St. Patricks,0,4,,,A,4.83,3.59,1.72,5.35,3.92,1.84
+IRL,05/06/2022,Shelbourne,Sligo Rovers,2,1,,,H,2.8,2.84,2.8,2.99,2.98,2.93
+IRL,05/06/2022,UC Dublin,Dundalk,2,2,,,D,6.68,4.59,1.43,7.5,4.85,1.47
+IRL,05/06/2022,Shamrock Rovers,Finn Harps,3,1,,,H,1.2,5.93,15.43,1.23,6.5,18.0
+IRL,11/06/2022,Bohemians,Sligo Rovers,3,1,,,H,2.12,3.31,3.33,2.55,3.5,3.62
+IRL,11/06/2022,Derry City,Dundalk,0,1,,,A,1.35,4.67,8.28,1.38,4.97,10.0
+IRL,11/06/2022,Drogheda,Finn Harps,2,0,,,H,2.14,3.48,3.14,2.2,3.69,3.29
+IRL,11/06/2022,St. Patricks,Shelbourne,4,0,,,H,2.24,3.24,3.15,2.34,3.47,3.61
+IRL,11/06/2022,UC Dublin,Shamrock Rovers,0,2,,,A,13.85,6.4,1.19,17.0,7.06,1.22
+IRL,17/06/2022,Bohemians,Shelbourne,1,0,,,H,2.07,3.14,3.7,2.2,3.3,4.06
+IRL,17/06/2022,Derry City,Drogheda,1,1,,,D,1.19,6.64,12.94,1.23,7.25,17.0
+IRL,17/06/2022,Dundalk,Shamrock Rovers,1,0,,,H,3.66,3.22,2.06,4.01,3.42,2.13
+IRL,17/06/2022,St. Patricks,UC Dublin,2,1,,,H,1.29,5.25,9.72,1.32,5.69,11.0
+IRL,18/06/2022,Sligo Rovers,Finn Harps,3,0,,,H,2.01,3.27,3.75,2.06,3.5,4.1
+IRL,24/06/2022,Drogheda,Sligo Rovers,0,0,,,D,3.57,3.39,2.02,3.8,3.55,2.12
+IRL,24/06/2022,Shamrock Rovers,Bohemians,1,0,,,H,1.58,3.92,5.53,1.62,4.21,6.0
+IRL,24/06/2022,Shelbourne,Dundalk,0,0,,,D,3.19,3.0,2.36,3.36,3.17,2.52
+IRL,24/06/2022,UC Dublin,Derry City,0,1,,,A,8.66,4.95,1.33,10.0,5.3,1.37
+IRL,24/06/2022,Finn Harps,St. Patricks,2,2,,,D,3.51,3.33,2.06,4.01,3.6,2.15
+IRL,27/06/2022,St. Patricks,Shamrock Rovers,1,2,,,A,3.79,3.16,2.04,4.13,3.42,2.11

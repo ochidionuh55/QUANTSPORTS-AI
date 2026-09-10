@@ -1,0 +1,338 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+ROM,02/07/2020,Astra,Chindia Targoviste,1,2,,,A,1.74,3.35,4.88,1.88,3.61,5.85
+ROM,03/07/2020,Academica Clinceni,Viitorul Constanta,2,3,,,A,3.92,3.32,1.92,4.5,3.64,2.01
+ROM,03/07/2020,Poli Iasi,Din. Bucuresti,1,0,,,H,2.83,3.02,2.53,3.0,3.22,2.68
+ROM,11/07/2020,FC Voluntari,Poli Iasi,4,0,,,H,2.05,3.19,3.55,2.17,3.42,3.97
+ROM,11/07/2020,Sepsi Sf. Gheorghe,FC Hermannstadt,1,1,,,D,1.78,3.27,4.69,1.84,3.5,5.37
+ROM,11/07/2020,FCSB,FC Botosani,4,1,,,H,1.4,4.37,7.23,1.43,4.75,8.5
+ROM,12/07/2020,Astra,Chindia Targoviste,0,0,,,D,2.31,2.96,3.22,2.43,3.2,3.53
+ROM,12/07/2020,U Craiova,Gaz Metan Medias,3,1,,,H,1.47,4.11,6.2,1.52,4.53,6.99
+ROM,13/07/2020,Sepsi Sf. Gheorghe,Chindia Targoviste,2,0,,,H,1.58,3.67,5.72,1.62,3.83,6.5
+ROM,13/07/2020,CFR Cluj,Gaz Metan Medias,2,0,,,H,1.18,6.25,13.96,1.21,6.85,17.0
+ROM,17/07/2020,Academica Clinceni,FC Voluntari,2,1,,,H,3.24,3.1,2.2,3.5,3.32,2.28
+ROM,17/07/2020,Gaz Metan Medias,Astra,0,4,,,A,4.07,3.47,1.82,4.5,3.75,1.92
+ROM,18/07/2020,FC Hermannstadt,Sepsi Sf. Gheorghe,2,2,,,D,2.97,2.83,2.53,3.16,2.95,2.73
+ROM,19/07/2020,FC Botosani,U Craiova,0,2,,,A,3.45,3.49,1.97,3.8,3.8,2.08
+ROM,20/07/2020,Poli Iasi,Viitorul Constanta,1,1,,,D,3.64,3.52,1.91,4.14,3.75,2.03
+ROM,25/07/2020,Viitorul Constanta,Chindia Targoviste,4,1,,,H,1.39,4.48,7.08,1.44,4.92,8.5
+ROM,25/07/2020,Gaz Metan Medias,FCSB,0,1,,,A,3.24,3.22,2.15,3.51,3.38,2.26
+ROM,26/07/2020,Academica Clinceni,Poli Iasi,3,0,,,H,3.08,2.99,2.32,3.47,3.14,2.42
+ROM,26/07/2020,FC Voluntari,Sepsi Sf. Gheorghe,2,0,,,H,2.67,2.83,2.8,2.93,3.08,3.1
+ROM,28/07/2020,CFR Cluj,FC Botosani,1,0,,,H,1.38,4.36,7.9,1.4,4.71,9.19
+ROM,29/07/2020,Chindia Targoviste,Academica Clinceni,3,1,,,H,2.51,3.08,2.76,2.63,3.2,2.88
+ROM,29/07/2020,FC Hermannstadt,Viitorul Constanta,2,0,,,H,3.22,3.2,2.17,3.45,3.31,2.27
+ROM,30/07/2020,Poli Iasi,FC Voluntari,2,1,,,H,3.05,3.18,2.27,3.15,3.34,2.49
+ROM,31/07/2020,FCSB,CFR Cluj,0,2,,,A,6.52,3.71,1.51,7.79,4.15,1.56
+ROM,02/08/2020,Gaz Metan Medias,CFR Cluj,0,0,,,D,4.55,3.3,1.8,5.0,3.48,1.86
+ROM,03/08/2020,Chindia Targoviste,Sepsi Sf. Gheorghe,1,1,,,D,3.38,2.95,2.26,3.74,3.02,2.51
+ROM,03/08/2020,FCSB,U Craiova,4,1,,,H,1.99,3.3,3.68,2.11,3.44,4.0
+ROM,11/08/2020,FC Arges,CFR Cluj,0,2,,,A,6.58,3.71,1.52,7.8,4.0,1.57
+ROM,11/08/2020,Viitorul Constanta,Din. Bucuresti,2,1,,,H,2.6,3.17,2.62,2.77,3.39,2.85
+ROM,21/08/2020,FC Arges,FC Botosani,2,3,,,A,3.93,3.23,1.93,4.21,3.42,2.02
+ROM,22/08/2020,Viitorul Constanta,UTA Arad,1,1,,,D,1.39,4.54,7.1,1.45,4.89,8.5
+ROM,22/08/2020,Sepsi Sf. Gheorghe,U Craiova,0,1,,,A,3.63,3.21,2.02,4.0,3.42,2.13
+ROM,22/08/2020,Astra,FCSB,0,3,,,A,3.92,3.41,1.88,4.5,3.62,1.95
+ROM,23/08/2020,Poli Iasi,Chindia Targoviste,1,0,,,H,2.31,3.03,3.13,2.49,3.22,3.5
+ROM,23/08/2020,Academica Clinceni,CFR Cluj,1,2,,,A,8.74,4.35,1.36,10.5,4.74,1.44
+ROM,24/08/2020,FC Voluntari,Gaz Metan Medias,2,1,,,H,2.05,3.18,3.62,2.15,3.38,4.2
+ROM,24/08/2020,Din. Bucuresti,FC Hermannstadt,1,1,,,D,2.49,3.02,2.85,2.6,3.2,3.05
+ROM,28/08/2020,Gaz Metan Medias,FC Arges,2,0,,,H,2.06,3.17,3.59,2.21,3.36,3.9
+ROM,28/08/2020,UTA Arad,FC Voluntari,0,0,,,D,2.34,3.17,2.96,2.47,3.31,3.2
+ROM,29/08/2020,FC Hermannstadt,Academica Clinceni,2,2,,,D,1.79,3.31,4.57,1.87,3.6,5.0
+ROM,29/08/2020,CFR Cluj,Sepsi Sf. Gheorghe,0,0,,,D,1.68,3.35,5.31,1.75,3.74,6.0
+ROM,30/08/2020,FC Botosani,Poli Iasi,4,0,,,H,1.51,3.78,6.46,1.57,4.0,15.25
+ROM,30/08/2020,U Craiova,Astra,2,0,,,H,1.57,3.8,5.52,1.63,3.96,6.0
+ROM,30/08/2020,FCSB,Viitorul Constanta,3,0,,,H,1.8,3.47,4.24,1.87,3.68,5.0
+ROM,31/08/2020,Chindia Targoviste,Din. Bucuresti,1,0,,,H,5.2,3.82,1.6,5.75,4.1,1.65
+ROM,02/09/2020,Sepsi Sf. Gheorghe,Poli Iasi,1,0,,,H,1.75,3.41,4.66,1.81,3.62,5.1
+ROM,02/09/2020,FC Voluntari,Din. Bucuresti,2,1,,,H,3.76,3.33,1.95,4.16,3.54,2.02
+ROM,02/09/2020,Viitorul Constanta,U Craiova,1,2,,,A,2.28,3.14,3.09,2.37,3.25,3.27
+ROM,03/09/2020,FC Voluntari,FC Hermannstadt,1,1,,,D,2.35,2.93,3.22,2.44,3.1,3.45
+ROM,03/09/2020,Gaz Metan Medias,CFR Cluj,0,0,,,D,5.12,3.4,1.7,5.8,3.6,1.79
+ROM,08/09/2020,Chindia Targoviste,Mioveni,2,0,,,H,2.01,3.2,3.57,2.1,3.4,3.8
+ROM,11/09/2020,UTA Arad,Gaz Metan Medias,1,3,,,A,2.28,3.06,3.18,2.38,3.24,3.4
+ROM,13/09/2020,Astra,Sepsi Sf. Gheorghe,2,2,,,D,2.77,3.02,2.55,3.02,3.25,2.72
+ROM,13/09/2020,CFR Cluj,FC Hermannstadt,1,0,,,H,1.47,3.93,6.79,1.52,4.3,8.0
+ROM,14/09/2020,Viitorul Constanta,U Craiova,1,4,,,A,2.9,3.13,2.41,3.12,3.33,2.58
+ROM,18/09/2020,Chindia Targoviste,FC Hermannstadt,1,3,,,A,2.81,2.95,2.61,3.04,3.2,2.81
+ROM,18/09/2020,Astra,CFR Cluj,0,2,,,A,6.27,3.93,1.5,7.5,4.32,1.57
+ROM,19/09/2020,Sepsi Sf. Gheorghe,Viitorul Constanta,1,1,,,D,2.34,3.05,3.08,2.43,3.28,3.37
+ROM,19/09/2020,U Craiova,FC Voluntari,2,1,,,H,1.58,3.88,5.31,1.61,4.26,6.28
+ROM,20/09/2020,FC Botosani,Academica Clinceni,0,0,,,D,1.75,3.48,4.5,1.8,3.76,4.93
+ROM,20/09/2020,UTA Arad,Poli Iasi,2,3,,,A,2.18,3.11,3.35,2.29,3.39,4.35
+ROM,20/09/2020,FCSB,FC Arges,3,0,,,H,1.88,4.18,3.4,2.2,5.0,3.8
+ROM,21/09/2020,Gaz Metan Medias,Din. Bucuresti,1,3,,,A,3.68,3.24,2.01,4.0,3.4,2.13
+ROM,25/09/2020,FC Voluntari,Sepsi Sf. Gheorghe,1,2,,,A,2.76,3.04,2.57,2.95,3.22,2.74
+ROM,25/09/2020,FC Arges,U Craiova,1,2,,,A,6.72,4.24,1.44,7.65,4.54,1.48
+ROM,26/09/2020,Academica Clinceni,Gaz Metan Medias,2,0,,,H,2.44,3.0,2.97,2.6,3.22,3.33
+ROM,26/09/2020,Viitorul Constanta,Astra,4,1,,,H,1.7,3.64,4.62,1.76,3.87,5.4
+ROM,27/09/2020,CFR Cluj,Chindia Targoviste,0,0,,,D,1.32,4.5,10.01,1.35,4.86,12.43
+ROM,27/09/2020,Poli Iasi,FCSB,5,2,,,H,2.84,3.38,2.32,3.0,3.7,2.4
+ROM,28/09/2020,FC Hermannstadt,FC Botosani,2,1,,,H,3.3,3.15,2.18,3.88,3.4,2.41
+ROM,28/09/2020,Din. Bucuresti,UTA Arad,0,1,,,A,1.51,3.83,6.43,1.57,4.2,7.64
+ROM,02/10/2020,FC Botosani,FC Hermannstadt,2,1,,,H,1.57,3.58,6.08,1.65,3.8,6.82
+ROM,02/10/2020,FCSB,Academica Clinceni,0,0,,,D,1.19,6.3,12.99,1.24,7.5,17.0
+ROM,07/10/2020,FC Botosani,Astra,0,0,,,D,2.09,3.24,3.4,2.15,3.44,3.8
+ROM,16/10/2020,FC Arges,Astra,1,0,,,H,2.49,3.21,2.71,2.7,3.39,3.0
+ROM,17/10/2020,Chindia Targoviste,Gaz Metan Medias,1,0,,,H,2.86,3.02,2.52,3.0,3.24,2.84
+ROM,17/10/2020,Poli Iasi,Sepsi Sf. Gheorghe,1,4,,,A,3.71,3.23,2.02,4.1,3.4,2.11
+ROM,17/10/2020,CFR Cluj,FC Botosani,2,1,,,H,1.15,6.66,19.35,1.2,8.0,27.26
+ROM,18/10/2020,FC Hermannstadt,UTA Arad,1,1,,,D,1.8,3.34,4.44,1.97,3.65,5.24
+ROM,18/10/2020,Din. Bucuresti,U Craiova,0,1,,,A,2.33,3.25,2.89,2.51,3.48,3.13
+ROM,19/10/2020,FC Voluntari,Viitorul Constanta,0,2,,,A,3.45,3.42,2.01,3.7,3.72,2.13
+ROM,19/10/2020,Academica Clinceni,FCSB,0,2,,,A,5.26,3.8,1.6,6.0,4.12,1.65
+ROM,23/10/2020,Gaz Metan Medias,FC Botosani,1,2,,,A,3.27,2.93,2.3,3.65,3.25,2.45
+ROM,23/10/2020,U Craiova,Academica Clinceni,0,1,,,A,1.54,3.74,6.12,1.58,3.94,7.4
+ROM,24/10/2020,UTA Arad,Chindia Targoviste,1,0,,,H,2.49,2.87,3.02,2.64,3.15,3.27
+ROM,24/10/2020,Astra,Poli Iasi,4,0,,,H,2.15,3.43,3.08,2.24,3.7,3.32
+ROM,24/10/2020,Sepsi Sf. Gheorghe,Din. Bucuresti,2,0,,,H,2.54,3.07,2.76,2.66,3.28,2.97
+ROM,25/10/2020,Viitorul Constanta,FC Arges,2,2,,,D,1.47,4.1,6.46,1.52,4.33,7.63
+ROM,25/10/2020,FC Voluntari,CFR Cluj,0,1,,,A,4.99,3.53,1.68,5.75,3.88,1.77
+ROM,26/10/2020,FCSB,FC Hermannstadt,5,0,,,H,1.45,4.13,6.56,1.51,4.48,7.61
+ROM,30/10/2020,FC Arges,FC Voluntari,2,1,,,H,3.08,3.13,2.3,3.38,3.33,2.41
+ROM,31/10/2020,Academica Clinceni,Sepsi Sf. Gheorghe,2,0,,,H,3.88,3.14,1.99,4.34,3.3,2.06
+ROM,31/10/2020,FC Botosani,UTA Arad,2,3,,,A,1.75,3.34,4.77,1.85,3.47,5.5
+ROM,31/10/2020,FC Hermannstadt,U Craiova,0,1,,,A,3.59,3.27,2.03,3.9,3.44,2.15
+ROM,07/11/2020,Viitorul Constanta,Academica Clinceni,5,0,,,H,1.33,4.85,7.72,1.43,5.3,9.0
+ROM,07/11/2020,FC Hermannstadt,FC Voluntari,2,1,,,H,2.37,2.98,3.08,2.47,3.14,3.26
+ROM,09/11/2020,FC Arges,UTA Arad,1,1,,,D,2.58,2.97,2.8,2.81,3.1,3.04
+ROM,09/11/2020,Din. Bucuresti,FC Botosani,1,1,,,D,2.5,3.1,2.77,2.65,3.32,3.0
+ROM,12/11/2020,FC Botosani,Astra,1,1,,,D,2.35,3.07,3.02,2.45,3.24,3.31
+ROM,12/11/2020,Din. Bucuresti,Poli Iasi,4,1,,,H,1.74,3.53,4.47,1.83,3.77,5.01
+ROM,14/11/2020,Din. Bucuresti,Astra,1,1,,,D,1.73,3.53,4.52,1.81,3.7,4.95
+ROM,20/11/2020,Poli Iasi,FC Arges,1,1,,,D,2.29,3.05,3.18,2.41,3.25,3.52
+ROM,20/11/2020,Din. Bucuresti,FC Voluntari,3,0,,,H,2.18,3.25,3.19,2.31,3.47,3.51
+ROM,21/11/2020,Academica Clinceni,Viitorul Constanta,1,0,,,H,4.17,3.46,1.81,4.65,3.82,1.99
+ROM,21/11/2020,FC Botosani,U Craiova,0,0,,,D,5.04,3.47,1.68,6.0,3.62,1.75
+ROM,22/11/2020,FC Hermannstadt,Astra,0,1,,,A,2.68,3.14,2.57,2.84,3.32,2.74
+ROM,22/11/2020,CFR Cluj,UTA Arad,0,1,,,A,1.39,4.16,8.3,1.43,4.75,10.09
+ROM,23/11/2020,Chindia Targoviste,Sepsi Sf. Gheorghe,1,2,,,A,4.02,3.0,2.0,4.5,3.15,2.17
+ROM,23/11/2020,Gaz Metan Medias,FCSB,2,3,,,A,6.62,4.13,1.45,7.5,4.5,1.52
+ROM,07/12/2020,Din. Bucuresti,Poli Iasi,1,1,,,D,2.01,3.34,3.51,2.1,3.52,3.82
+ROM,07/12/2020,U Craiova,FCSB,2,1,,,H,1.81,3.77,3.8,1.89,4.05,4.07
+ROM,08/12/2020,Mioveni,Chindia Targoviste,1,1,,,D,2.86,3.07,2.42,3.02,3.23,2.52
+ROM,09/12/2020,Academica Clinceni,Chindia Targoviste,0,0,,,D,2.38,3.04,3.01,2.47,3.24,3.19
+ROM,09/12/2020,Poli Iasi,Gaz Metan Medias,1,4,,,A,2.45,2.96,3.0,2.57,3.2,3.25
+ROM,09/12/2020,FC Voluntari,FCSB,2,1,,,H,6.88,4.31,1.42,8.0,4.6,1.56
+ROM,12/12/2020,Gaz Metan Medias,Sepsi Sf. Gheorghe,0,3,,,A,3.59,3.15,2.06,4.0,3.36,2.17
+ROM,12/12/2020,Chindia Targoviste,Viitorul Constanta,1,1,,,D,4.51,3.29,1.8,5.15,3.5,1.91
+ROM,13/12/2020,Academica Clinceni,FC Arges,1,0,,,H,2.02,3.22,3.65,2.13,3.42,4.07
+ROM,13/12/2020,FC Hermannstadt,FC Voluntari,3,2,,,H,3.65,3.3,1.96,4.2,3.5,2.1
+ROM,13/12/2020,CFR Cluj,FCSB,2,0,,,H,2.45,2.94,3.0,2.59,3.07,3.24
+ROM,14/12/2020,UTA Arad,U Craiova,1,2,,,A,5.48,3.51,1.63,6.0,3.72,1.7
+ROM,15/12/2020,Astra,Gaz Metan Medias,3,0,,,H,2.27,3.13,3.1,2.38,3.35,3.42
+ROM,15/12/2020,Viitorul Constanta,FC Botosani,1,2,,,A,1.93,3.38,3.7,2.02,3.56,4.33
+ROM,16/12/2020,Poli Iasi,Academica Clinceni,0,0,,,D,2.86,3.06,2.47,3.01,3.29,2.62
+ROM,16/12/2020,FC Arges,FC Hermannstadt,2,2,,,D,2.57,2.95,2.84,2.84,3.15,3.02
+ROM,16/12/2020,FC Voluntari,Chindia Targoviste,0,2,,,A,2.74,3.07,2.57,2.95,3.25,2.7
+ROM,17/12/2020,Sepsi Sf. Gheorghe,UTA Arad,3,0,,,H,1.49,3.86,6.53,1.56,4.05,8.0
+ROM,17/12/2020,Din. Bucuresti,CFR Cluj,0,2,,,A,4.34,3.21,1.85,4.77,3.44,1.94
+ROM,18/12/2020,U Craiova,FCSB,0,2,,,A,3.12,3.09,2.29,3.4,3.27,2.4
+ROM,19/12/2020,Chindia Targoviste,FC Arges,2,2,,,D,2.03,3.02,3.91,2.13,3.29,4.28
+ROM,19/12/2020,Gaz Metan Medias,Viitorul Constanta,1,0,,,H,4.53,3.7,1.7,4.95,3.96,1.75
+ROM,20/12/2020,FC Hermannstadt,Poli Iasi,0,1,,,A,2.35,3.05,3.05,2.5,3.25,3.38
+ROM,20/12/2020,FC Botosani,FC Voluntari,1,1,,,D,1.67,3.73,4.7,1.82,4.02,5.09
+ROM,20/12/2020,Academica Clinceni,Din. Bucuresti,1,1,,,D,3.27,3.14,2.2,3.5,3.34,2.3
+ROM,21/12/2020,UTA Arad,Astra,0,6,,,A,2.8,2.85,2.69,2.95,3.01,2.83
+ROM,21/12/2020,FCSB,Sepsi Sf. Gheorghe,1,1,,,D,1.69,3.59,4.79,1.75,3.98,5.5
+ROM,22/12/2020,CFR Cluj,U Craiova,0,0,,,D,1.76,3.27,4.92,1.85,3.42,5.6
+ROM,02/01/2021,Chindia Targoviste,CFR Cluj,0,1,,,A,4.81,3.04,1.84,5.26,3.38,1.94
+ROM,03/01/2021,Poli Iasi,FC Voluntari,0,2,,,A,2.67,3.0,2.69,2.86,3.21,2.9
+ROM,03/01/2021,CFR Cluj,FC Arges,5,0,,,H,1.4,4.03,8.79,1.43,4.3,10.33
+ROM,05/01/2021,UTA Arad,Chindia Targoviste,0,1,,,A,2.36,2.84,3.29,2.55,3.12,3.65
+ROM,05/01/2021,FC Botosani,Sepsi Sf. Gheorghe,2,1,,,H,3.05,2.85,2.49,3.28,2.96,2.6
+ROM,08/01/2021,Univ. Craiova,FC Botosani,1,2,,,A,1.74,3.34,5.01,1.83,3.54,5.78
+ROM,08/01/2021,UTA Arad,FCSB,1,1,,,D,3.98,3.25,1.93,4.43,3.45,2.0
+ROM,10/01/2021,Mioveni,FC Arges,0,0,,,D,2.91,2.78,2.68,3.1,3.0,2.84
+ROM,10/01/2021,Chindia Targoviste,FCSB,0,1,,,A,4.91,3.12,1.82,5.5,3.3,1.88
+ROM,11/01/2021,UTA Arad,Chindia Targoviste,0,2,,,A,1.91,2.96,4.64,1.97,3.15,5.29
+ROM,11/01/2021,FC Rapid Bucuresti,U Craiova 1948,0,0,,,D,2.13,2.97,3.71,2.2,3.2,4.09
+ROM,13/01/2021,Chindia Targoviste,Poli Iasi,1,1,,,D,2.36,2.92,3.17,2.51,3.1,3.47
+ROM,13/01/2021,FC Hermannstadt,Din. Bucuresti,0,2,,,A,2.7,3.04,2.62,2.95,3.2,2.9
+ROM,14/01/2021,FC Botosani,FC Arges,0,1,,,A,1.61,3.61,5.51,1.69,3.96,6.12
+ROM,14/01/2021,CFR Cluj,Academica Clinceni,3,1,,,H,1.45,3.88,7.37,1.52,4.19,8.58
+ROM,15/01/2021,UTA Arad,Viitorul Constanta,0,0,,,D,4.16,3.47,1.81,4.51,3.75,1.89
+ROM,15/01/2021,FCSB,Astra,3,0,,,H,1.42,4.33,6.94,1.48,4.62,8.0
+ROM,16/01/2021,Din. Bucuresti,Chindia Targoviste,0,1,,,A,2.15,3.11,3.41,2.25,3.4,3.75
+ROM,17/01/2021,FC Arges,Gaz Metan Medias,1,1,,,D,2.5,2.91,2.95,2.66,3.15,3.15
+ROM,17/01/2021,Sepsi Sf. Gheorghe,CFR Cluj,0,1,,,A,3.22,2.89,2.35,3.45,3.07,2.45
+ROM,17/01/2021,Academica Clinceni,FC Hermannstadt,0,0,,,D,2.19,3.14,3.25,2.32,3.3,3.51
+ROM,18/01/2021,Poli Iasi,FC Botosani,0,1,,,A,3.0,3.15,2.32,3.21,3.34,2.41
+ROM,18/01/2021,Astra,U Craiova,1,1,,,D,3.98,3.23,1.92,4.31,3.44,2.01
+ROM,19/01/2021,FC Voluntari,UTA Arad,0,1,,,A,2.65,2.94,2.74,2.76,3.15,2.94
+ROM,19/01/2021,Viitorul Constanta,FCSB,2,2,,,D,3.57,3.42,1.97,4.12,3.88,2.13
+ROM,22/01/2021,Chindia Targoviste,Academica Clinceni,2,1,,,H,2.58,2.77,3.0,2.7,2.9,3.2
+ROM,22/01/2021,FCSB,FC Voluntari,2,1,,,H,1.18,6.49,13.28,1.21,7.34,17.0
+ROM,23/01/2021,Sepsi Sf. Gheorghe,Astra,4,1,,,H,1.92,3.17,4.13,2.06,3.37,4.55
+ROM,23/01/2021,UTA Arad,FC Arges,1,2,,,A,2.06,2.92,3.96,2.18,3.0,4.46
+ROM,23/01/2021,U Craiova,Viitorul Constanta,1,1,,,D,1.99,3.23,3.71,2.05,3.51,4.0
+ROM,24/01/2021,Gaz Metan Medias,Poli Iasi,2,1,,,H,2.08,3.01,3.74,2.23,3.34,4.22
+ROM,24/01/2021,FC Botosani,Din. Bucuresti,4,0,,,H,1.97,3.18,3.86,2.07,3.3,4.77
+ROM,25/01/2021,FC Hermannstadt,CFR Cluj,1,3,,,A,6.67,3.56,1.54,7.52,3.92,1.6
+ROM,26/01/2021,Viitorul Constanta,Sepsi Sf. Gheorghe,3,3,,,D,2.28,3.07,3.15,2.38,3.3,3.42
+ROM,26/01/2021,FC Voluntari,U Craiova,1,1,,,D,5.9,3.78,1.55,6.71,4.07,1.65
+ROM,26/01/2021,FC Arges,FCSB,0,0,,,D,7.68,4.2,1.4,9.07,4.54,1.44
+ROM,27/01/2021,Academica Clinceni,FC Botosani,2,1,,,H,3.26,3.03,2.25,3.56,3.22,2.38
+ROM,27/01/2021,Poli Iasi,UTA Arad,1,2,,,A,2.72,2.89,2.72,2.96,3.06,2.85
+ROM,27/01/2021,Din. Bucuresti,Gaz Metan Medias,2,1,,,H,2.11,3.11,3.5,2.24,3.38,4.06
+ROM,28/01/2021,FC Hermannstadt,Chindia Targoviste,1,1,,,D,2.67,2.8,2.87,2.81,3.31,3.07
+ROM,28/01/2021,CFR Cluj,Astra,1,1,,,D,1.41,4.0,8.13,1.49,4.66,10.0
+ROM,29/01/2021,U Craiova,FC Arges,1,1,,,D,1.49,3.77,6.87,1.56,4.03,7.66
+ROM,30/01/2021,Gaz Metan Medias,Academica Clinceni,1,1,,,D,2.35,3.08,3.03,2.63,3.26,3.32
+ROM,30/01/2021,Sepsi Sf. Gheorghe,FC Voluntari,2,2,,,D,1.51,3.74,6.55,1.57,4.15,7.96
+ROM,30/01/2021,FCSB,Poli Iasi,3,1,,,H,1.21,5.81,11.84,1.25,6.5,15.69
+ROM,31/01/2021,FC Botosani,FC Hermannstadt,1,0,,,H,1.71,3.28,5.2,1.77,3.53,5.95
+ROM,31/01/2021,Astra,Viitorul Constanta,1,1,,,D,3.54,3.34,2.01,3.87,3.61,2.14
+ROM,31/01/2021,UTA Arad,Din. Bucuresti,0,1,,,A,2.47,2.97,2.94,2.87,3.12,3.2
+ROM,02/02/2021,Poli Iasi,U Craiova,0,3,,,A,6.36,3.77,1.52,7.42,4.05,1.56
+ROM,04/02/2021,Academica Clinceni,Poli Iasi,2,1,,,H,1.62,3.52,5.69,1.7,4.0,7.0
+ROM,04/02/2021,Gaz Metan Medias,Astra,0,0,,,D,3.07,2.92,2.44,3.31,3.09,2.55
+ROM,05/02/2021,Astra,Poli Iasi,1,2,,,A,1.6,3.63,5.68,1.66,3.9,6.2
+ROM,05/02/2021,FC Voluntari,FC Hermannstadt,0,1,,,A,2.64,2.94,2.76,2.8,3.1,2.94
+ROM,05/02/2021,Viitorul Constanta,Din. Bucuresti,1,2,,,A,1.94,3.29,3.89,2.28,3.45,4.3
+ROM,05/02/2021,Academica Clinceni,Univ. Craiova,1,0,,,H,6.6,3.45,1.57,7.72,3.7,1.63
+ROM,06/02/2021,FC Hermannstadt,Mioveni,1,2,,,A,1.56,3.76,5.8,1.66,4.15,6.7
+ROM,08/02/2021,Sepsi Sf. Gheorghe,Mioveni,1,2,,,A,1.63,3.47,5.72,1.7,3.72,6.77
+ROM,08/02/2021,Din. Bucuresti,Academica Clinceni,3,1,,,H,2.68,3.04,2.66,3.09,3.21,2.89
+ROM,10/02/2021,Din. Bucuresti,UTA Arad,2,2,,,D,5.09,3.41,1.71,5.7,3.6,1.78
+ROM,10/02/2021,Sepsi Sf. Gheorghe,FC Rapid Bucuresti,2,2,,,D,1.86,3.26,4.34,1.93,3.51,4.86
+ROM,13/02/2021,Chindia Targoviste,UTA Arad,1,1,,,D,2.32,2.82,3.4,2.43,3.0,3.65
+ROM,13/02/2021,Din. Bucuresti,Sepsi Sf. Gheorghe,0,0,,,D,2.93,3.11,2.39,3.07,3.25,2.54
+ROM,14/02/2021,Poli Iasi,Astra,2,3,,,A,3.1,3.19,2.25,3.4,3.38,2.35
+ROM,14/02/2021,Academica Clinceni,Univ. Craiova,0,0,,,D,4.87,3.51,1.7,5.45,3.75,1.87
+ROM,14/02/2021,FC Hermannstadt,FCSB,1,0,,,H,8.31,4.62,1.34,9.63,4.92,1.39
+ROM,15/02/2021,FC Botosani,Gaz Metan Medias,2,1,,,H,1.83,3.31,4.35,1.89,3.52,4.95
+ROM,15/02/2021,CFR Cluj,FC Voluntari,0,0,,,D,1.29,4.79,10.4,1.33,5.25,13.46
+ROM,16/02/2021,FC Arges,Sepsi Sf. Gheorghe,1,1,,,D,3.59,2.75,2.28,4.0,3.01,2.4
+ROM,19/02/2021,FC Voluntari,FC Arges,0,1,,,A,2.92,2.86,2.57,3.13,3.06,2.75
+ROM,19/02/2021,Univ. Craiova,FC Hermannstadt,1,0,,,H,1.43,4.03,7.47,1.47,4.3,8.51
+ROM,20/02/2021,Sepsi Sf. Gheorghe,Academica Clinceni,0,0,,,D,1.89,3.2,4.2,1.95,3.36,4.58
+ROM,20/02/2021,FCSB,Chindia Targoviste,1,0,,,H,1.48,3.95,6.56,1.53,4.37,7.69
+ROM,21/02/2021,Gaz Metan Medias,CFR Cluj,0,1,,,A,6.51,3.66,1.53,7.51,3.85,1.6
+ROM,21/02/2021,Astra,Din. Bucuresti,2,0,,,H,2.86,3.04,2.48,3.04,3.26,2.75
+ROM,22/02/2021,UTA Arad,FC Botosani,0,0,,,D,3.39,3.1,2.16,3.82,3.32,2.3
+ROM,26/02/2021,Din. Bucuresti,Viitorul Constanta,0,5,,,A,2.96,3.03,2.43,3.1,3.24,2.73
+ROM,27/02/2021,Gaz Metan Medias,UTA Arad,1,2,,,A,2.34,3.03,3.08,2.49,3.25,3.39
+ROM,27/02/2021,Academica Clinceni,Astra,1,1,,,D,2.67,2.9,2.77,2.83,3.1,3.02
+ROM,27/02/2021,Chindia Targoviste,Univ. Craiova,1,0,,,H,4.15,3.1,1.94,4.67,3.4,2.01
+ROM,28/02/2021,FC Hermannstadt,Sepsi Sf. Gheorghe,1,2,,,A,3.58,2.99,2.14,3.83,3.25,2.27
+ROM,28/02/2021,FC Botosani,FCSB,0,2,,,A,3.76,3.27,1.96,4.19,3.44,2.06
+ROM,02/03/2021,FC Hermannstadt,Gaz Metan Medias,1,1,,,D,2.96,3.0,2.44,3.23,3.24,2.58
+ROM,02/03/2021,FC Voluntari,Astra,1,3,,,A,3.17,3.19,2.22,3.4,3.37,2.34
+ROM,02/03/2021,Din. Bucuresti,FCSB,0,1,,,A,6.84,4.1,1.45,8.0,4.46,1.52
+ROM,04/03/2021,FC Hermannstadt,FC Arges,4,1,,,H,2.5,2.8,3.12,2.64,2.98,3.55
+ROM,05/03/2021,FCSB,CFR Cluj,1,1,,,D,2.88,2.94,2.55,3.04,3.13,2.69
+ROM,06/03/2021,FC Voluntari,Calarasi,4,0,,,H,1.24,5.48,11.42,1.3,6.3,19.0
+ROM,10/03/2021,FC Voluntari,Farul Constanta,1,0,,,H,3.61,2.98,2.16,4.0,3.3,2.29
+ROM,10/03/2021,CFR Cluj,Gaz Metan Medias,2,1,,,H,1.34,4.34,10.56,1.36,4.75,14.54
+ROM,10/03/2021,U Craiova 1948,Univ. Craiova,0,2,,,A,4.69,3.55,1.91,5.61,4.0,5.0
+ROM,12/03/2021,Academica Clinceni,Din. Bucuresti,1,0,,,H,3.89,3.19,1.98,4.33,3.4,2.07
+ROM,13/03/2021,Academica Clinceni,FC Voluntari,0,1,,,A,2.14,3.0,3.62,2.24,3.2,3.89
+ROM,13/03/2021,FC Hermannstadt,Viitorul Constanta,0,0,,,D,3.49,3.04,2.15,3.75,3.2,2.23
+ROM,13/03/2021,UTA Arad,FCSB,0,1,,,A,5.76,3.71,1.57,6.57,3.9,1.64
+ROM,14/03/2021,Chindia Targoviste,Astra,0,1,,,A,2.38,2.82,3.28,2.55,3.0,3.5
+ROM,14/03/2021,CFR Cluj,Poli Iasi,4,0,,,H,1.19,5.88,16.34,1.24,7.05,24.08
+ROM,15/03/2021,FC Botosani,Sepsi Sf. Gheorghe,1,2,,,A,2.46,2.78,3.21,2.66,2.9,3.4
+ROM,15/03/2021,Din. Bucuresti,FC Arges,1,2,,,A,2.56,2.78,3.04,2.77,2.91,3.32
+ROM,16/03/2021,Univ. Craiova,UTA Arad,2,0,,,H,1.48,3.77,7.23,1.52,4.04,8.07
+ROM,17/03/2021,Viitorul Constanta,Chindia Targoviste,0,0,,,D,1.88,3.06,4.5,1.96,3.21,5.34
+ROM,18/03/2021,Astra,FC Botosani,1,1,,,D,2.91,2.86,2.59,3.15,2.95,2.7
+ROM,19/03/2021,FC Voluntari,FC Hermannstadt,1,0,,,H,2.97,2.81,2.6,3.14,3.09,2.84
+ROM,19/03/2021,FCSB,CFR Cluj,3,0,,,H,2.71,2.83,2.81,2.85,2.99,3.08
+ROM,20/03/2021,FC Arges,Academica Clinceni,1,1,,,D,2.52,2.91,2.96,2.7,3.11,3.32
+ROM,20/03/2021,Poli Iasi,Din. Bucuresti,1,0,,,H,3.73,3.18,2.02,4.2,3.45,2.12
+ROM,21/03/2021,Sepsi Sf. Gheorghe,Gaz Metan Medias,1,1,,,D,1.76,3.32,4.78,1.87,3.56,5.4
+ROM,02/04/2021,Academica Clinceni,UTA Arad,0,3,,,A,2.37,2.9,3.17,2.55,3.05,3.5
+ROM,02/04/2021,Chindia Targoviste,FC Botosani,2,3,,,A,2.85,2.9,2.6,3.1,3.1,2.76
+ROM,02/04/2021,CFR Cluj,Viitorul Constanta,2,1,,,H,1.6,3.51,5.76,1.68,3.83,6.53
+ROM,04/04/2021,FC Botosani,Viitorul Constanta,1,0,,,H,2.03,3.15,3.75,2.17,3.68,3.94
+ROM,04/04/2021,UTA Arad,Sepsi Sf. Gheorghe,2,0,,,H,3.59,2.9,2.19,3.96,3.1,2.3
+ROM,04/04/2021,FCSB,Univ. Craiova,0,0,,,D,2.15,3.03,3.54,2.25,3.21,3.84
+ROM,05/04/2021,Chindia Targoviste,Gaz Metan Medias,1,1,,,D,2.35,2.69,3.54,2.45,2.9,3.79
+ROM,10/04/2021,Academica Clinceni,FC Botosani,1,1,,,D,3.5,3.22,2.08,3.75,3.4,2.18
+ROM,11/04/2021,Farul Constanta,FCSB,0,1,,,A,3.27,3.19,2.18,3.43,3.36,2.45
+ROM,12/04/2021,Chindia Targoviste,CFR Cluj,0,1,,,A,6.21,3.13,1.68,7.1,3.35,1.73
+ROM,12/04/2021,Farul Constanta,FC Rapid Bucuresti,2,0,,,H,1.82,3.27,4.57,1.9,3.45,5.09
+ROM,16/04/2021,UTA Arad,Viitorul Constanta,1,0,,,H,2.52,3.09,2.8,2.79,3.27,3.04
+ROM,16/04/2021,Astra,Din. Bucuresti,0,0,,,D,2.54,2.82,3.03,2.73,3.01,3.22
+ROM,17/04/2021,Chindia Targoviste,FC Hermannstadt,2,0,,,H,2.36,2.86,3.29,2.48,3.1,3.5
+ROM,17/04/2021,Gaz Metan Medias,FC Voluntari,1,1,,,D,2.49,2.89,3.03,2.64,3.05,3.2
+ROM,17/04/2021,Univ. Craiova,Sepsi Sf. Gheorghe,0,0,,,D,1.8,3.09,5.11,1.88,3.3,5.74
+ROM,18/04/2021,FC Arges,Poli Iasi,0,0,,,D,1.86,3.31,4.23,2.03,3.59,4.83
+ROM,18/04/2021,CFR Cluj,Academica Clinceni,3,0,,,H,1.36,4.23,9.11,1.44,4.54,10.67
+ROM,18/04/2021,FCSB,FC Botosani,2,1,,,H,1.7,3.58,4.83,1.79,3.8,5.51
+ROM,20/04/2021,FC Hermannstadt,Astra,1,3,,,A,2.5,2.81,3.11,2.67,3.0,3.44
+ROM,20/04/2021,Viitorul Constanta,Gaz Metan Medias,1,0,,,H,1.9,3.2,4.16,2.0,3.4,4.77
+ROM,20/04/2021,Din. Bucuresti,UTA Arad,0,1,,,A,2.34,2.93,3.21,2.47,3.07,3.37
+ROM,21/04/2021,FC Arges,Chindia Targoviste,0,1,,,A,2.55,2.64,3.23,2.65,2.76,3.5
+ROM,21/04/2021,FC Botosani,Univ. Craiova,1,1,,,D,3.66,2.92,2.17,4.02,3.06,2.23
+ROM,21/04/2021,Sepsi Sf. Gheorghe,CFR Cluj,0,1,,,A,4.45,3.22,1.85,4.95,3.36,1.98
+ROM,22/04/2021,Poli Iasi,FC Voluntari,0,1,,,A,3.09,3.0,2.37,3.37,3.19,2.52
+ROM,22/04/2021,Academica Clinceni,FCSB,0,2,,,A,6.39,3.79,1.52,7.45,4.0,1.58
+ROM,23/04/2021,UTA Arad,FC Hermannstadt,0,1,,,A,2.39,2.97,3.12,2.55,3.2,3.46
+ROM,23/04/2021,Gaz Metan Medias,Din. Bucuresti,4,1,,,H,2.83,2.82,2.69,3.02,2.96,2.8
+ROM,24/04/2021,Astra,FC Arges,0,1,,,A,2.71,2.82,2.85,2.92,2.95,3.37
+ROM,24/04/2021,CFR Cluj,Univ. Craiova,1,2,,,A,1.94,2.99,4.39,2.0,3.3,4.78
+ROM,25/04/2021,Chindia Targoviste,Poli Iasi,2,0,,,H,1.71,3.23,5.47,1.76,3.58,6.25
+ROM,25/04/2021,FC Botosani,Academica Clinceni,2,1,,,H,1.89,3.15,4.35,2.1,3.25,5.21
+ROM,25/04/2021,FCSB,Sepsi Sf. Gheorghe,1,2,,,A,1.97,3.04,4.16,2.07,3.32,4.69
+ROM,26/04/2021,FC Voluntari,Viitorul Constanta,1,0,,,H,2.95,2.83,2.59,3.22,3.0,2.7
+ROM,27/04/2021,FC Hermannstadt,Gaz Metan Medias,1,2,,,A,2.58,2.69,3.13,2.75,2.85,3.32
+ROM,27/04/2021,FC Arges,UTA Arad,4,1,,,H,2.2,2.96,3.48,2.3,3.08,3.8
+ROM,28/04/2021,Chindia Targoviste,Astra,0,0,,,D,2.52,2.59,3.38,2.64,2.7,3.6
+ROM,28/04/2021,Sepsi Sf. Gheorghe,Academica Clinceni,1,0,,,H,1.68,3.37,5.38,1.75,3.65,6.3
+ROM,28/04/2021,CFR Cluj,FC Botosani,2,0,,,H,1.47,3.91,7.07,1.51,4.18,8.02
+ROM,29/04/2021,Poli Iasi,Viitorul Constanta,0,3,,,A,4.06,3.33,1.88,4.52,3.45,1.95
+ROM,29/04/2021,Din. Bucuresti,FC Voluntari,2,0,,,H,2.33,2.99,3.18,2.42,3.27,3.49
+ROM,29/04/2021,Univ. Craiova,FCSB,2,0,,,H,2.45,3.08,2.9,2.56,3.26,3.06
+ROM,30/04/2021,Gaz Metan Medias,FC Arges,1,1,,,D,2.9,2.8,2.66,3.07,2.89,2.78
+ROM,02/05/2021,Sepsi Sf. Gheorghe,Poli Iasi,3,3,,,D,1.5,4.04,6.08,1.58,4.5,7.5
+ROM,03/05/2021,Sepsi Sf. Gheorghe,Chindia Targoviste,0,1,,,A,1.97,2.89,4.46,2.08,3.1,4.88
+ROM,03/05/2021,Viitorul Constanta,Academica Clinceni,1,1,,,D,1.81,3.33,4.45,1.88,3.52,5.03
+ROM,04/05/2021,Chindia Targoviste,FC Voluntari,1,0,,,H,1.96,2.97,4.36,2.21,3.13,4.86
+ROM,04/05/2021,CFR Cluj,Din. Bucuresti,1,0,,,H,1.33,4.58,9.54,1.37,5.25,11.56
+ROM,05/05/2021,Astra,UTA Arad,1,2,,,A,2.5,2.99,2.9,2.69,3.17,3.14
+ROM,05/05/2021,FC Hermannstadt,Viitorul Constanta,0,0,,,D,2.78,2.88,2.7,2.95,3.11,2.86
+ROM,05/05/2021,Poli Iasi,Din. Bucuresti,1,2,,,A,4.92,3.55,1.68,5.32,3.8,1.74
+ROM,05/05/2021,Sepsi Sf. Gheorghe,Univ. Craiova,2,0,,,H,2.9,2.86,2.6,3.15,3.04,2.79
+ROM,11/05/2021,Chindia Targoviste,Gaz Metan Medias,0,1,,,A,2.49,2.62,3.39,2.59,2.8,3.75
+ROM,11/05/2021,FC Arges,FC Botosani,0,1,,,A,3.09,2.71,2.59,3.28,2.88,2.74
+ROM,12/05/2021,Mioveni,Sepsi Sf. Gheorghe,0,2,,,A,3.87,2.94,2.1,4.4,3.13,2.2
+ROM,12/05/2021,U Craiova 1948,FC Voluntari,0,2,,,A,2.61,2.8,2.97,2.78,2.99,3.21
+ROM,12/05/2021,FCSB,UTA Arad,2,1,,,H,1.8,3.34,4.51,1.9,3.6,5.12
+ROM,14/05/2021,Academica Clinceni,FC Botosani,4,3,,,H,3.86,3.21,1.98,4.18,3.41,2.04
+ROM,14/05/2021,Chindia Targoviste,Viitorul Constanta,0,2,,,A,4.2,2.97,1.99,4.5,3.15,2.08
+ROM,15/05/2021,Poli Iasi,FC Hermannstadt,0,1,,,A,3.6,3.24,2.04,3.89,3.5,2.13
+ROM,15/05/2021,Astra,FC Voluntari,0,3,,,A,2.28,3.08,3.19,2.37,3.23,3.38
+ROM,15/05/2021,Univ. Craiova,CFR Cluj,1,3,,,A,3.38,2.88,2.31,3.75,3.1,2.51
+ROM,16/05/2021,UTA Arad,Gaz Metan Medias,1,0,,,H,2.04,3.17,3.69,2.1,3.41,4.0
+ROM,16/05/2021,FC Arges,Din. Bucuresti,1,2,,,A,3.06,2.78,2.57,3.35,3.0,2.85
+ROM,16/05/2021,Sepsi Sf. Gheorghe,FCSB,2,2,,,D,3.01,3.05,2.4,3.15,3.19,2.54
+ROM,18/05/2021,FC Botosani,CFR Cluj,0,1,,,A,6.16,3.99,1.51,7.0,4.34,1.58
+ROM,19/05/2021,Din. Bucuresti,Chindia Targoviste,0,0,,,D,1.75,3.39,4.78,1.81,3.6,5.28
+ROM,19/05/2021,FC Hermannstadt,FC Arges,1,0,,,H,2.25,3.05,3.28,2.38,3.21,3.54
+ROM,19/05/2021,FC Voluntari,UTA Arad,0,0,,,D,2.07,3.41,3.34,2.2,3.66,3.85
+ROM,19/05/2021,Gaz Metan Medias,Poli Iasi,4,2,,,H,1.23,5.47,12.65,1.29,6.12,15.14
+ROM,19/05/2021,Viitorul Constanta,Astra,1,0,,,H,2.01,3.29,3.64,2.16,3.5,4.48
+ROM,19/05/2021,FCSB,Univ. Craiova,0,1,,,A,4.99,3.6,1.7,6.3,3.9,2.4
+ROM,20/05/2021,Academica Clinceni,Sepsi Sf. Gheorghe,2,1,,,H,6.32,4.11,1.48,7.37,4.5,1.56
+ROM,25/05/2021,CFR Cluj,FCSB,2,0,,,H,1.28,5.34,9.26,1.32,5.77,10.4
+ROM,26/05/2021,Univ. Craiova,Academica Clinceni,0,0,,,D,1.65,3.78,4.89,1.73,4.05,5.68
+ROM,27/05/2021,Sepsi Sf. Gheorghe,FC Botosani,1,0,,,H,2.0,3.51,3.4,2.15,3.77,3.73
+ROM,27/05/2021,Chindia Targoviste,Viitorul Constanta,2,3,,,A,3.12,2.74,2.57,3.71,3.17,2.76
+ROM,29/05/2021,Mioveni,FC Hermannstadt,0,0,,,D,2.9,2.92,2.54,3.55,3.11,2.7
+ROM,29/05/2021,Calarasi,FC Voluntari,1,2,,,A,4.0,3.27,1.89,4.5,3.5,1.98
+ROM,30/05/2021,Sepsi Sf. Gheorghe,Viitorul Constanta,1,0,,,H,1.74,3.34,4.96,1.78,3.55,5.58
+ROM,02/06/2021,Astra,FC Arges,0,2,,,A,2.21,3.11,3.28,2.37,3.39,4.35
+ROM,02/06/2021,U Craiova,Din. Bucuresti,1,0,,,H,1.52,3.89,6.07,1.59,4.2,7.09
+ROM,03/06/2021,Univ. Craiova,FC Botosani,1,0,,,H,2.01,3.12,3.85,2.07,3.28,4.23
+ROM,03/06/2021,UTA Arad,CFR Cluj,0,1,,,A,6.3,3.69,1.54,7.21,4.02,1.59
+ROM,05/06/2021,FC Arges,FC Voluntari,3,0,,,H,2.21,2.92,3.51,2.33,3.18,3.81
+ROM,05/06/2021,Academica Clinceni,CFR Cluj,0,1,,,A,9.78,4.72,1.31,11.5,5.2,1.36
+ROM,05/06/2021,FC Botosani,FCSB,1,3,,,A,4.34,3.26,1.85,5.22,3.41,1.93
+ROM,08/06/2021,FC Botosani,UTA Arad,2,1,,,H,2.25,3.04,3.29,2.42,3.24,3.52
+ROM,08/06/2021,Mioveni,CFR Cluj,0,1,,,A,5.31,3.33,1.7,6.5,3.6,1.77
+ROM,11/06/2021,Mioveni,UTA Arad,0,0,,,D,4.24,3.13,1.92,4.75,3.35,1.98
+ROM,11/06/2021,U Craiova 1948,Sepsi Sf. Gheorghe,1,1,,,D,3.66,2.88,2.19,4.07,3.1,2.33
+ROM,12/06/2021,FC Arges,Gaz Metan Medias,1,2,,,A,1.83,3.02,5.04,2.0,3.3,5.91
+ROM,12/06/2021,FC Botosani,Univ. Craiova,2,2,,,D,3.04,3.12,2.34,3.25,3.3,2.52

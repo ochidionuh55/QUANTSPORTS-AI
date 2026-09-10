@@ -1,0 +1,90 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+RUS,04/07/2024,CSKA Moscow,Fakel Voronezh,4,1,,,H,1.75,3.52,5.27,1.78,3.78,5.6
+RUS,04/07/2024,Akhmat Grozny,Lokomotiv Moscow,0,2,,,A,2.56,3.24,2.87,2.62,3.49,2.98
+RUS,04/07/2024,Zenit,Baltika,1,0,,,H,1.33,5.02,10.42,1.35,5.74,12.5
+RUS,04/07/2024,Dynamo Moscow,Spartak Moscow,1,2,,,A,2.41,3.55,2.89,2.5,3.57,2.99
+RUS,20/07/2024,Lokomotiv Moscow,Akron Togliatti,3,2,,,H,1.59,4.16,5.4,1.63,4.33,5.6
+RUS,20/07/2024,Krylya Sovetov,Zenit,0,4,,,A,4.25,3.58,1.86,4.59,3.73,1.92
+RUS,20/07/2024,Dynamo Moscow,Fakel Voronezh,3,1,,,H,1.68,3.68,5.41,1.71,3.91,6.0
+RUS,20/07/2024,FK Rostov,CSKA Moscow,0,0,,,D,2.67,3.28,2.67,2.77,3.49,2.8
+RUS,21/07/2024,Orenburg,Spartak Moscow,2,0,,,H,3.28,3.69,2.1,3.45,3.8,2.25
+RUS,21/07/2024,Akhmat Grozny,Krasnodar,1,1,,,D,2.49,3.5,2.73,2.96,3.67,2.87
+RUS,21/07/2024,Khimki,Dynamo Makhachkala,1,1,,,D,2.09,3.2,3.82,2.21,3.31,4.13
+RUS,22/07/2024,Pari NN,Rubin Kazan,2,4,,,A,2.71,3.14,2.74,2.82,3.23,2.82
+RUS,26/07/2024,Krylya Sovetov,FK Rostov,1,3,,,A,3.11,3.41,2.3,3.3,3.49,2.38
+RUS,27/07/2024,Pari NN,CSKA Moscow,0,3,,,A,5.94,4.25,1.54,6.43,4.53,1.56
+RUS,27/07/2024,Dynamo Moscow,Lokomotiv Moscow,3,1,,,H,2.21,3.72,3.04,2.31,3.97,3.33
+RUS,27/07/2024,Rubin Kazan,Zenit,0,4,,,A,4.92,3.77,1.71,5.73,3.92,1.77
+RUS,27/07/2024,Fakel Voronezh,Akron Togliatti,0,2,,,A,2.06,3.17,3.98,2.15,3.33,4.25
+RUS,28/07/2024,Khimki,Spartak Moscow,1,3,,,A,3.25,3.41,2.22,3.61,3.53,2.31
+RUS,28/07/2024,Orenburg,Akhmat Grozny,0,0,,,D,2.22,3.64,3.05,2.31,3.72,3.25
+RUS,28/07/2024,Krasnodar,Dynamo Makhachkala,0,0,,,D,1.46,4.32,7.26,1.49,4.67,7.7
+RUS,03/08/2024,Krylya Sovetov,CSKA Moscow,0,2,,,A,3.09,3.35,2.35,3.21,3.56,2.42
+RUS,03/08/2024,FK Rostov,Krasnodar,2,1,,,H,2.71,3.16,2.76,2.81,3.31,2.85
+RUS,04/08/2024,Orenburg,Rubin Kazan,3,0,,,H,2.23,3.19,3.49,2.27,3.43,3.68
+RUS,17/08/2024,Dynamo Moscow,Krylya Sovetov,1,0,,,H,1.55,4.58,5.31,1.56,4.78,5.57
+RUS,17/08/2024,FK Rostov,Orenburg,3,2,,,H,1.66,4.13,4.75,1.73,4.37,5.14
+RUS,18/08/2024,Khimki,Zenit,1,1,,,D,7.78,4.91,1.39,9.08,5.28,1.43
+RUS,18/08/2024,CSKA Moscow,Lokomotiv Moscow,0,1,,,A,2.13,3.65,3.22,2.17,3.74,3.33
+RUS,18/08/2024,Spartak Moscow,Fakel Voronezh,3,0,,,H,1.29,5.32,11.5,1.33,5.61,12.98
+RUS,18/08/2024,Krasnodar,Pari NN,2,1,,,H,1.32,4.97,10.39,1.36,5.4,12.0
+RUS,19/08/2024,Akron Togliatti,Rubin Kazan,1,2,,,A,3.21,3.33,2.26,3.37,3.43,2.35
+RUS,19/08/2024,Dynamo Makhachkala,Akhmat Grozny,1,0,,,H,3.06,2.92,2.61,3.25,3.0,2.67
+RUS,23/08/2024,Rubin Kazan,Dynamo Makhachkala,2,0,,,H,1.95,3.35,4.14,2.0,3.46,4.36
+RUS,24/08/2024,CSKA Moscow,Akron Togliatti,4,0,,,H,1.34,5.28,8.3,1.38,5.8,8.9
+RUS,24/08/2024,Fakel Voronezh,Orenburg,1,0,,,H,2.77,3.24,2.61,2.83,3.42,2.71
+RUS,24/08/2024,Zenit,Spartak Moscow,0,0,,,D,1.85,3.62,4.2,1.9,3.74,4.48
+RUS,24/08/2024,Akhmat Grozny,Khimki,3,3,,,D,2.11,3.49,3.46,2.31,3.62,3.85
+RUS,25/08/2024,Krylya Sovetov,Pari NN,3,1,,,H,1.76,3.75,4.56,1.87,3.96,5.05
+RUS,25/08/2024,Dynamo Moscow,Krasnodar,0,1,,,A,2.28,3.75,2.9,2.4,3.86,3.04
+RUS,25/08/2024,Lokomotiv Moscow,FK Rostov,3,2,,,H,2.06,3.71,3.37,2.15,3.8,3.56
+RUS,31/08/2024,Khimki,CSKA Moscow,0,2,,,A,4.51,3.81,1.75,4.8,3.93,1.8
+RUS,31/08/2024,Pari NN,Zenit,0,3,,,A,9.99,5.15,1.31,11.5,5.58,1.33
+RUS,31/08/2024,Spartak Moscow,Rubin Kazan,1,0,,,H,1.49,4.41,6.25,1.53,4.6,6.7
+RUS,31/08/2024,Akhmat Grozny,Akron Togliatti,0,0,,,D,1.93,3.59,3.87,2.0,3.71,4.1
+RUS,03/09/2024,Ural,Zenit,1,4,,,A,5.76,3.64,1.67,6.03,3.97,1.69
+RUS,03/09/2024,Rubin Kazan,Pari NN,0,1,,,A,2.15,2.99,4.06,2.33,3.21,4.4
+RUS,03/09/2024,Dynamo Moscow,Akhmat Grozny,2,0,,,H,1.87,3.85,3.98,1.94,4.03,4.47
+RUS,08/09/2024,Pari NN,Khimki,1,0,,,H,2.7,3.33,2.61,2.88,3.44,2.72
+RUS,08/09/2024,FK Rostov,Rubin Kazan,1,1,,,D,1.97,3.57,3.77,2.01,3.78,3.96
+RUS,13/09/2024,Rubin Kazan,Krylya Sovetov,0,2,,,A,2.11,3.42,3.49,2.21,3.58,3.73
+RUS,14/09/2024,Orenburg,Lokomotiv Moscow,2,4,,,A,3.43,3.93,1.98,3.64,4.07,2.08
+RUS,14/09/2024,Fakel Voronezh,Pari NN,0,0,,,D,1.99,3.07,4.42,2.05,3.17,4.85
+RUS,14/09/2024,CSKA Moscow,Zenit,0,1,,,A,3.12,3.17,2.4,3.25,3.38,2.58
+RUS,14/09/2024,Krasnodar,FK Rostov,2,0,,,H,2.01,3.38,3.85,2.06,3.52,4.06
+RUS,15/09/2024,Dynamo Moscow,Akhmat Grozny,4,2,,,H,1.54,4.46,5.57,1.57,4.6,5.95
+RUS,15/09/2024,Akron Togliatti,Khimki,3,0,,,H,2.88,3.45,2.42,3.18,3.58,2.6
+RUS,15/09/2024,Dynamo Makhachkala,Spartak Moscow,1,1,,,D,6.0,3.69,1.61,6.5,3.86,1.66
+RUS,21/09/2024,Akron Togliatti,Krasnodar,2,5,,,A,5.11,3.87,1.67,5.51,4.06,1.7
+RUS,21/09/2024,Zenit,Fakel Voronezh,3,1,,,H,1.18,6.94,16.63,1.19,7.7,21.0
+RUS,21/09/2024,Rubin Kazan,CSKA Moscow,1,1,,,D,3.41,3.31,2.2,3.57,3.53,2.26
+RUS,22/09/2024,Khimki,Orenburg,0,0,,,D,2.24,3.8,2.9,2.29,3.96,3.09
+RUS,22/09/2024,FK Rostov,Dynamo Makhachkala,0,0,,,D,1.52,4.15,6.5,1.55,4.33,6.84
+RUS,22/09/2024,Spartak Moscow,Dynamo Moscow,2,2,,,D,1.96,3.71,3.69,2.02,3.9,3.99
+RUS,22/09/2024,Pari NN,Lokomotiv Moscow,1,3,,,A,7.58,4.94,1.39,7.98,5.2,1.44
+RUS,23/09/2024,Akhmat Grozny,Krylya Sovetov,1,1,,,D,2.5,3.4,2.79,2.59,3.59,2.97
+RUS,27/09/2024,Orenburg,Pari NN,1,2,,,A,1.5,4.44,6.11,1.6,4.6,6.53
+RUS,27/09/2024,Fakel Voronezh,Rubin Kazan,0,0,,,D,3.28,2.91,2.47,3.5,2.98,2.61
+RUS,28/09/2024,CSKA Moscow,Akhmat Grozny,3,0,,,H,1.49,4.35,6.42,1.53,4.4,6.87
+RUS,28/09/2024,Lokomotiv Moscow,Spartak Moscow,3,1,,,H,2.59,3.4,2.7,2.81,3.55,2.82
+RUS,28/09/2024,Krasnodar,Zenit,2,0,,,H,3.28,3.15,2.35,3.47,3.25,2.42
+RUS,28/09/2024,FK Rostov,Akron Togliatti,0,2,,,A,1.51,4.45,5.9,1.55,4.62,6.23
+RUS,29/09/2024,Krylya Sovetov,Khimki,0,0,,,D,1.96,3.58,3.81,2.0,3.77,4.01
+RUS,29/09/2024,Dynamo Makhachkala,Dynamo Moscow,0,1,,,A,4.38,3.62,1.82,4.88,3.77,1.88
+RUS,03/10/2024,Orenburg,Baltika,1,0,,,H,2.1,3.37,3.66,2.16,3.52,3.87
+RUS,03/10/2024,Lokomotiv Moscow,Sochi,2,2,,,D,1.79,3.77,4.43,1.83,3.98,4.65
+RUS,03/10/2024,Spartak Moscow,Fakel Voronezh,0,2,,,A,1.73,3.68,5.16,1.77,3.94,5.49
+RUS,05/10/2024,Krylya Sovetov,Akhmat Grozny,0,2,,,A,2.28,3.59,3.01,2.37,3.78,3.19
+RUS,08/10/2024,Lokomotiv Moscow,Dynamo Makhachkala,2,0,,,H,1.48,4.39,6.62,1.53,4.6,7.43
+RUS,08/10/2024,Orenburg,Akron Togliatti,2,2,,,D,1.75,4.02,4.3,1.8,4.17,4.5
+RUS,08/10/2024,Zenit,Dynamo Moscow,1,0,,,H,1.49,4.69,5.84,1.56,4.95,6.67
+RUS,08/10/2024,Krasnodar,CSKA Moscow,2,1,,,H,2.69,3.27,2.66,2.81,3.4,2.75
+RUS,05/11/2024,Rubin Kazan,FK Rostov,3,1,,,H,2.83,3.19,2.61,2.93,3.41,2.77
+RUS,05/11/2024,Spartak Moscow,Krasnodar,1,0,,,H,2.38,3.56,2.88,2.47,3.8,3.0
+RUS,05/11/2024,Zenit,CSKA Moscow,0,1,,,A,1.58,3.98,5.99,1.65,4.27,6.34
+RUS,05/11/2024,Baltika,Dynamo Moscow,2,3,,,A,3.11,3.63,2.23,3.41,3.9,2.52
+RUS,08/11/2024,Krylya Sovetov,Fakel Voronezh,2,0,,,H,1.89,3.33,4.61,2.04,3.49,4.9
+RUS,08/11/2024,Spartak Moscow,Akhmat Grozny,0,0,,,D,1.48,4.58,6.25,1.53,5.04,7.0
+RUS,05/12/2024,Orenburg,Lokomotiv Moscow,0,2,,,A,2.3,3.71,2.89,2.36,3.95,3.06
+RUS,05/12/2024,Fakel Voronezh,Ural,0,0,,,D,2.8,2.85,2.98,2.96,2.94,3.1
+RUS,05/12/2024,Sochi,Pari NN,6,1,,,H,1.93,3.38,4.16,1.99,3.53,4.45

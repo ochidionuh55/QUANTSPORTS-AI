@@ -1,0 +1,229 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+CHN,15/07/2021,Henan Songshan Longmen,Guangzhou FC,1,1,,,D,12.06,5.35,1.25,15.0,5.95,1.3
+CHN,16/07/2021,Beijing Guoan,Hebei,2,1,,,H,2.22,3.0,3.44,2.32,3.25,3.68
+CHN,18/07/2021,Guangzhou FC,Chongqing Liangjiang Athletic,3,1,,,H,1.34,4.89,8.41,1.4,5.25,10.14
+CHN,18/07/2021,Henan Songshan Longmen,Qingdao FC,2,0,,,H,2.05,3.18,3.71,2.16,3.43,3.95
+CHN,18/07/2021,Shandong Taishan,Guangzhou City,0,0,,,D,1.76,3.67,4.32,1.83,3.87,4.8
+CHN,18/07/2021,Shenzhen,Cangzhou,2,1,,,H,1.66,3.74,5.03,1.75,4.1,5.5
+CHN,19/07/2021,Beijing Guoan,Tianjin Jinmen Tiger,0,0,,,D,1.42,4.2,7.61,1.49,4.68,8.9
+CHN,19/07/2021,Wuhan FC,Shanghai Port,0,0,,,D,5.48,3.83,1.59,6.2,4.1,1.66
+CHN,19/07/2021,Shanghai Shenhua,Dalian Pro,3,2,,,H,1.26,5.42,10.92,1.3,5.8,13.0
+CHN,19/07/2021,Hebei,Changchun Yatai,2,1,,,H,3.89,3.25,1.98,4.2,3.48,2.11
+CHN,21/07/2021,Cangzhou,Shandong Taishan,0,2,,,A,7.85,4.61,1.37,8.66,4.92,1.41
+CHN,21/07/2021,Qingdao FC,Guangzhou FC,0,6,,,A,10.9,5.67,1.25,13.0,6.0,1.27
+CHN,21/07/2021,Chongqing Liangjiang Athletic,Shenzhen,0,3,,,A,8.23,4.76,1.35,9.5,5.1,1.39
+CHN,21/07/2021,Guangzhou City,Henan Songshan Longmen,1,1,,,D,2.51,3.22,2.74,2.73,3.5,2.92
+CHN,22/07/2021,Changchun Yatai,Beijing Guoan,2,0,,,H,2.98,3.27,2.31,3.29,3.54,2.46
+CHN,22/07/2021,Tianjin Jinmen Tiger,Shanghai Shenhua,1,3,,,A,11.45,5.38,1.25,14.39,5.8,1.31
+CHN,22/07/2021,Shanghai Port,Hebei,1,0,,,H,1.57,3.92,5.53,1.63,4.3,6.16
+CHN,22/07/2021,Dalian Pro,Wuhan FC,1,1,,,D,4.86,3.57,1.71,5.5,3.79,1.83
+CHN,24/07/2021,Shandong Taishan,Chongqing Liangjiang Athletic,3,1,,,H,1.33,4.63,9.86,1.4,5.25,13.0
+CHN,24/07/2021,Shenzhen,Henan Songshan Longmen,0,0,,,D,1.58,3.88,5.5,1.68,4.18,6.15
+CHN,24/07/2021,Cangzhou,Qingdao FC,2,0,,,H,2.04,3.29,3.61,2.14,3.5,3.93
+CHN,24/07/2021,Guangzhou City,Guangzhou FC,3,3,,,D,9.86,5.36,1.28,12.0,6.03,1.34
+CHN,27/07/2021,Chongqing Liangjiang Athletic,Guangzhou City,4,0,,,H,4.46,3.66,1.73,4.9,3.86,1.82
+CHN,27/07/2021,Qingdao FC,Shenzhen,1,4,,,A,11.73,5.07,1.26,15.0,5.65,1.32
+CHN,27/07/2021,Guangzhou FC,Shandong Taishan,2,1,,,H,2.05,3.37,3.47,2.13,3.6,3.94
+CHN,27/07/2021,Henan Songshan Longmen,Cangzhou,2,1,,,H,2.39,2.96,3.17,2.54,3.2,3.48
+CHN,28/07/2021,Beijing Guoan,Shanghai Port,1,1,,,D,3.29,3.24,2.17,3.51,3.46,2.26
+CHN,28/07/2021,Hebei,Dalian Pro,1,0,,,H,2.31,3.06,3.19,2.42,3.31,3.44
+CHN,28/07/2021,Tianjin Jinmen Tiger,Changchun Yatai,1,4,,,A,8.1,4.19,1.41,11.0,4.6,1.47
+CHN,28/07/2021,Shanghai Shenhua,Wuhan FC,0,0,,,D,1.42,4.31,7.31,1.48,4.7,8.1
+CHN,30/07/2021,Guangzhou City,Qingdao FC,4,2,,,H,1.49,4.18,6.14,1.53,4.38,7.0
+CHN,30/07/2021,Shandong Taishan,Henan Songshan Longmen,2,0,,,H,1.56,3.56,6.56,1.61,3.75,7.41
+CHN,30/07/2021,Cangzhou,Chongqing Liangjiang Athletic,1,1,,,D,2.62,3.22,2.62,2.75,3.44,2.75
+CHN,30/07/2021,Shenzhen,Guangzhou FC,2,1,,,H,4.44,3.86,1.7,4.8,4.17,1.77
+CHN,31/07/2021,Wuhan FC,Changchun Yatai,2,2,,,D,4.11,3.42,1.86,4.5,3.61,1.96
+CHN,31/07/2021,Dalian Pro,Beijing Guoan,0,1,,,A,8.23,4.28,1.39,9.5,4.6,1.44
+CHN,31/07/2021,Hebei,Tianjin Jinmen Tiger,2,1,,,H,1.76,3.5,4.61,1.85,3.81,5.3
+CHN,31/07/2021,Shanghai Port,Shanghai Shenhua,1,0,,,H,2.2,3.14,3.32,2.34,3.32,3.73
+CHN,05/08/2021,Shandong Taishan,Qingdao FC,2,0,,,H,1.38,4.44,8.13,1.42,5.71,11.56
+CHN,05/08/2021,Guangzhou City,Shenzhen,2,4,,,A,3.88,3.74,1.83,4.21,4.16,2.0
+CHN,08/08/2021,Cangzhou,Shenzhen,2,1,,,H,3.83,3.39,1.94,4.3,4.0,2.06
+CHN,08/08/2021,Guangzhou City,Shandong Taishan,1,3,,,A,6.66,4.5,1.43,8.0,4.9,1.51
+CHN,08/08/2021,Chongqing Liangjiang Athletic,Guangzhou FC,1,5,,,A,18.43,7.73,1.13,26.0,11.0,1.16
+CHN,08/08/2021,Qingdao FC,Henan Songshan Longmen,0,1,,,A,7.77,3.99,1.44,9.5,4.2,1.48
+CHN,15/08/2021,Changchun Yatai,Dalian Pro,3,1,,,H,1.36,4.54,8.11,1.4,4.91,9.5
+CHN,15/08/2021,Beijing Guoan,Shanghai Shenhua,4,2,,,H,2.8,3.3,2.38,3.0,3.55,2.5
+CHN,15/08/2021,Shanghai Port,Tianjin Jinmen Tiger,5,0,,,H,1.31,4.86,9.69,1.37,5.42,12.73
+CHN,15/08/2021,Wuhan FC,Hebei,1,1,,,D,2.95,3.09,2.42,3.1,3.32,2.61
+CHN,05/09/2021,Chongqing Liangjiang Athletic,Henan Songshan Longmen,3,2,,,H,3.49,3.15,2.14,4.0,3.6,2.36
+CHN,05/09/2021,Cangzhou,Guangzhou FC,0,2,,,A,7.86,4.64,1.37,10.0,4.94,1.42
+CHN,08/09/2021,Dalian Pro,Shanghai Shenhua,2,4,,,A,9.5,4.49,1.35,11.5,4.9,1.38
+CHN,08/09/2021,Tianjin Jinmen Tiger,Beijing Guoan,3,1,,,H,9.16,4.64,1.34,11.0,4.98,1.37
+CHN,08/09/2021,Changchun Yatai,Hebei,3,0,,,H,2.31,3.13,3.11,2.45,3.43,3.35
+CHN,08/09/2021,Shanghai Port,Wuhan FC,3,0,,,H,1.39,4.35,8.01,1.46,4.8,10.0
+CHN,05/10/2021,Hebei,Shanghai Shenhua,1,1,,,D,4.0,3.4,1.9,4.34,3.78,1.99
+CHN,05/10/2021,Wuhan FC,Beijing Guoan,0,2,,,A,3.71,3.33,2.0,4.21,3.62,2.1
+CHN,05/11/2021,Dalian Pro,Tianjin Jinmen Tiger,1,0,,,H,2.9,2.87,2.64,3.04,3.31,2.85
+CHN,05/11/2021,Shanghai Port,Changchun Yatai,0,0,,,D,1.54,4.24,5.43,1.58,4.5,7.48
+CHN,08/11/2021,Guangzhou FC,Qingdao FC,5,0,,,H,1.11,8.86,19.47,1.13,10.0,24.0
+CHN,08/11/2021,Shenzhen,Chongqing Liangjiang Athletic,2,1,,,H,1.61,3.66,5.66,1.66,3.9,6.4
+CHN,08/11/2021,Henan Songshan Longmen,Guangzhou City,1,1,,,D,2.63,3.0,2.79,2.8,3.23,3.05
+CHN,08/11/2021,Shandong Taishan,Cangzhou,2,1,,,H,1.38,4.64,7.74,1.43,5.0,10.0
+CHN,08/12/2021,Hebei,Shanghai Port,1,0,,,H,5.56,3.64,1.62,6.2,4.0,1.69
+CHN,08/12/2021,Wuhan FC,Dalian Pro,2,1,,,H,2.01,3.1,3.95,2.06,3.26,4.24
+CHN,08/12/2021,Beijing Guoan,Changchun Yatai,2,1,,,H,2.43,3.35,2.76,2.55,3.58,2.93
+CHN,08/12/2021,Shanghai Shenhua,Tianjin Jinmen Tiger,1,0,,,H,1.12,8.37,19.86,1.15,10.25,29.0
+CHN,12/12/2021,Shanghai Shenhua,Qingdao FC,3,0,,,H,1.9,3.46,3.91,1.95,3.71,4.4
+CHN,12/12/2021,Wuhan FC,Cangzhou,4,2,,,H,2.65,2.97,2.8,2.8,3.21,2.93
+CHN,12/12/2021,Dalian Pro,Henan Songshan Longmen,1,0,,,H,3.08,3.02,2.41,3.28,3.25,2.55
+CHN,12/12/2021,Tianjin Jinmen Tiger,Chongqing Liangjiang Athletic,1,1,,,D,1.76,3.42,4.79,1.81,3.62,5.2
+CHN,13/12/2021,Guangzhou City,Changchun Yatai,0,2,,,A,5.02,4.1,1.6,5.5,4.5,1.64
+CHN,13/12/2021,Shenzhen,Shanghai Port,1,3,,,A,3.94,3.52,1.88,4.7,3.74,1.97
+CHN,13/12/2021,Beijing Guoan,Guangzhou FC,1,0,,,H,2.07,3.44,3.38,2.22,3.67,3.68
+CHN,13/12/2021,Hebei,Shandong Taishan,0,5,,,A,18.55,8.03,1.13,23.0,10.0,1.18
+CHN,15/12/2021,Chongqing Liangjiang Athletic,Dalian Pro,0,1,,,A,7.29,4.1,1.45,8.5,4.5,1.5
+CHN,15/12/2021,Henan Songshan Longmen,Tianjin Jinmen Tiger,1,1,,,D,2.24,3.08,3.3,2.35,3.3,3.57
+CHN,15/12/2021,Cangzhou,Shanghai Shenhua,1,1,,,D,5.8,4.34,1.5,6.5,4.65,1.56
+CHN,15/12/2021,Qingdao FC,Wuhan FC,2,5,,,A,8.8,4.69,1.34,11.0,5.2,1.42
+CHN,16/12/2021,Guangzhou FC,Hebei,1,1,,,D,1.52,3.99,6.15,1.59,4.75,7.17
+CHN,16/12/2021,Shandong Taishan,Beijing Guoan,2,1,,,H,1.58,4.01,5.31,1.63,4.25,5.8
+CHN,16/12/2021,Changchun Yatai,Shenzhen,1,1,,,D,2.37,3.28,2.88,2.48,3.53,3.09
+CHN,16/12/2021,Shanghai Port,Guangzhou City,1,0,,,H,1.17,7.06,13.77,1.19,7.7,17.0
+CHN,18/12/2021,Dalian Pro,Cangzhou,1,2,,,A,2.31,3.0,3.3,2.43,3.24,3.8
+CHN,18/12/2021,Tianjin Jinmen Tiger,Qingdao FC,1,2,,,A,1.81,3.58,4.27,1.93,3.94,5.3
+CHN,18/12/2021,Shanghai Shenhua,Chongqing Liangjiang Athletic,4,1,,,H,1.06,11.24,31.47,1.1,13.0,51.0
+CHN,18/12/2021,Wuhan FC,Henan Songshan Longmen,1,1,,,D,3.19,3.17,2.26,3.37,3.39,2.35
+CHN,19/12/2021,Changchun Yatai,Guangzhou FC,0,2,,,A,2.81,2.99,2.63,3.32,3.16,2.73
+CHN,19/12/2021,Shanghai Port,Shandong Taishan,0,2,,,A,3.23,3.23,2.22,3.6,3.46,2.36
+CHN,19/12/2021,Guangzhou City,Beijing Guoan,5,0,,,H,5.61,3.9,1.57,6.4,4.23,1.62
+CHN,19/12/2021,Shenzhen,Hebei,3,0,,,H,1.16,6.98,15.19,1.3,8.0,19.0
+CHN,21/12/2021,Chongqing Liangjiang Athletic,Wuhan FC,0,0,,,D,3.66,3.45,1.96,3.95,3.66,2.09
+CHN,21/12/2021,Henan Songshan Longmen,Shanghai Shenhua,2,0,,,H,3.38,3.19,2.16,3.71,3.5,2.34
+CHN,21/12/2021,Cangzhou,Tianjin Jinmen Tiger,2,1,,,H,2.18,3.11,3.41,2.29,3.28,3.71
+CHN,21/12/2021,Qingdao FC,Dalian Pro,1,2,,,A,6.97,4.71,1.4,7.8,5.25,1.45
+CHN,22/12/2021,Beijing Guoan,Shenzhen,2,2,,,D,2.79,3.48,2.35,3.06,3.75,2.55
+CHN,22/12/2021,Hebei,Guangzhou City,1,1,,,D,2.53,3.29,2.68,2.86,3.56,2.94
+CHN,22/12/2021,Guangzhou FC,Shanghai Port,0,0,,,D,5.48,3.91,1.58,6.2,4.2,1.63
+CHN,22/12/2021,Shandong Taishan,Changchun Yatai,2,1,,,H,1.31,4.96,9.61,1.34,5.5,11.17
+CHN,25/12/2021,Cangzhou,Wuhan FC,2,0,,,H,2.67,3.02,2.73,2.81,3.24,3.05
+CHN,25/12/2021,Qingdao FC,Shanghai Shenhua,0,1,,,A,1.69,3.51,5.33,2.42,4.0,6.25
+CHN,25/12/2021,Chongqing Liangjiang Athletic,Tianjin Jinmen Tiger,0,1,,,A,2.7,2.97,2.73,2.9,3.1,3.0
+CHN,25/12/2021,Henan Songshan Longmen,Dalian Pro,1,0,,,H,1.95,3.18,4.09,2.1,3.4,4.75
+CHN,26/12/2021,Changchun Yatai,Guangzhou City,2,1,,,H,1.75,3.62,4.52,1.84,3.84,5.1
+CHN,26/12/2021,Shanghai Port,Shenzhen,3,1,,,H,1.56,3.99,5.62,1.6,4.25,6.2
+CHN,26/12/2021,Guangzhou FC,Beijing Guoan,1,0,,,H,2.07,3.32,3.5,2.32,3.6,4.02
+CHN,26/12/2021,Shandong Taishan,Hebei,2,0,,,H,1.04,12.35,41.4,1.09,19.0,75.0
+CHN,28/12/2021,Dalian Pro,Chongqing Liangjiang Athletic,0,1,,,A,1.62,3.59,5.68,1.7,3.82,6.61
+CHN,28/12/2021,Tianjin Jinmen Tiger,Henan Songshan Longmen,0,0,,,D,3.55,2.98,2.21,4.08,3.3,2.58
+CHN,28/12/2021,Shanghai Shenhua,Cangzhou,1,1,,,D,2.76,3.0,2.65,3.39,3.3,2.89
+CHN,28/12/2021,Wuhan FC,Qingdao FC,1,1,,,D,1.62,3.99,5.05,1.73,4.79,9.9
+CHN,29/12/2021,Beijing Guoan,Shandong Taishan,1,1,,,D,2.94,3.1,2.44,3.2,3.3,2.71
+CHN,29/12/2021,Hebei,Guangzhou FC,0,2,,,A,4.16,3.04,1.99,4.75,3.31,2.05
+CHN,29/12/2021,Guangzhou City,Shanghai Port,1,2,,,A,8.84,4.85,1.33,10.16,5.2,1.37
+CHN,29/12/2021,Shenzhen,Changchun Yatai,0,1,,,A,3.26,3.38,2.14,3.55,3.62,2.29
+CHN,31/12/2021,Cangzhou,Dalian Pro,2,0,,,H,3.63,3.12,2.09,4.0,3.26,2.2
+CHN,31/12/2021,Chongqing Liangjiang Athletic,Shanghai Shenhua,0,0,,,D,3.0,2.94,2.49,3.16,3.2,2.65
+CHN,31/12/2021,Qingdao FC,Tianjin Jinmen Tiger,0,1,,,A,6.32,3.58,1.57,8.0,3.88,1.63
+CHN,31/12/2021,Henan Songshan Longmen,Wuhan FC,1,0,,,H,2.47,2.8,3.19,2.7,3.08,3.45
+CHN,01/01/2022,Guangzhou FC,Changchun Yatai,2,0,,,H,2.94,2.84,2.63,3.27,3.2,2.9
+CHN,01/01/2022,Shandong Taishan,Shanghai Port,2,2,,,D,1.8,3.3,4.71,1.85,3.5,5.09
+CHN,01/01/2022,Beijing Guoan,Guangzhou City,1,1,,,D,2.43,3.33,2.76,2.56,3.6,2.95
+CHN,01/01/2022,Hebei,Shenzhen,0,1,,,A,7.46,4.61,1.39,8.52,5.25,1.47
+CHN,09/01/2022,Cangzhou,Shanghai Port,0,0,,,D,5.4,3.58,1.65,6.25,3.85,1.71
+CHN,09/01/2022,Changchun Yatai,Chengdu Rongcheng,0,1,,,A,2.81,3.24,2.44,2.94,3.41,2.64
+CHN,09/01/2022,Dalian Pro,Shenzhen,5,1,,,H,1.79,3.74,4.03,1.88,4.0,4.4
+CHN,09/01/2022,Zhejiang Professional,Guangzhou FC,3,0,,,H,1.46,4.27,6.56,1.5,4.55,7.51
+CHN,12/01/2022,Chengdu Rongcheng,Guangzhou FC,2,0,,,H,1.46,4.43,6.21,1.55,4.9,7.22
+CHN,12/01/2022,Meizhou Hakka,Shanghai Shenhua,0,1,,,A,1.75,3.73,4.32,1.87,4.31,4.64
+CHN,01/03/2022,Dalian Pro,Qingdao FC,4,1,,,H,1.28,5.18,10.21,1.35,5.7,12.0
+CHN,01/03/2022,Tianjin Jinmen Tiger,Cangzhou,1,0,,,H,2.22,3.13,3.28,2.45,3.35,3.7
+CHN,01/03/2022,Wuhan FC,Chongqing Liangjiang Athletic,1,2,,,A,2.92,2.9,2.58,3.18,3.2,2.69
+CHN,01/03/2022,Shanghai Shenhua,Henan Songshan Longmen,3,0,,,H,1.84,3.08,4.86,2.0,3.35,6.0
+CHN,06/03/2022,Guangzhou FC,Shanghai Shenhua,0,1,,,A,5.7,3.98,1.55,7.0,4.3,1.62
+CHN,06/03/2022,Hebei,Wuhan Three Towns,0,4,,,A,18.68,9.64,1.1,25.0,11.5,1.13
+CHN,06/03/2022,Shandong Taishan,Zhejiang Professional,1,0,,,H,1.68,3.87,4.61,1.77,4.24,5.3
+CHN,07/03/2022,Meizhou Hakka,Shenzhen,1,0,,,H,1.41,4.66,6.61,1.46,5.25,7.5
+CHN,07/03/2022,Dalian Pro,Changchun Yatai,2,2,,,D,3.97,3.26,1.94,4.65,3.68,2.06
+CHN,07/03/2022,Tianjin Jinmen Tiger,Beijing Guoan,1,2,,,A,2.72,3.19,2.52,2.83,3.43,2.7
+CHN,07/03/2022,Shandong Taishan,Guangzhou City,2,0,,,H,1.08,9.86,22.02,1.11,12.0,31.0
+CHN,07/03/2022,Wuhan Three Towns,Shanghai Shenhua,4,2,,,H,1.76,3.71,4.22,1.85,3.92,4.6
+CHN,07/03/2022,Zhejiang Professional,Henan Songshan Longmen,0,1,,,A,3.32,3.17,2.18,3.6,3.42,2.25
+CHN,09/03/2022,Guangzhou City,Tianjin Jinmen Tiger,2,0,,,H,4.83,3.83,1.65,5.25,4.15,1.79
+CHN,11/03/2022,Changchun Yatai,Shanghai Shenhua,0,0,,,D,3.03,3.03,2.42,3.34,3.3,2.57
+CHN,11/03/2022,Shandong Taishan,Tianjin Jinmen Tiger,4,1,,,H,1.16,7.09,14.71,1.2,7.75,18.12
+CHN,11/03/2022,Zhejiang Professional,Shenzhen,0,2,,,A,1.46,4.42,6.24,1.52,4.76,7.0
+CHN,11/03/2022,Chengdu Rongcheng,Hebei,6,0,,,H,1.03,14.17,39.02,1.05,23.0,61.0
+CHN,11/03/2022,Wuhan Three Towns,Guangzhou City,4,1,,,H,1.05,12.34,33.58,1.06,15.0,46.0
+CHN,01/04/2022,Changchun Yatai,Shandong Taishan,1,1,,,D,3.14,3.24,2.23,3.42,3.5,2.33
+CHN,01/04/2022,Guangzhou City,Hebei,2,1,,,H,2.25,3.12,3.24,2.41,3.38,3.9
+CHN,01/04/2022,Shanghai Port,Guangzhou FC,1,0,,,H,1.59,3.73,5.98,1.89,4.13,7.6
+CHN,01/04/2022,Shenzhen,Beijing Guoan,0,1,,,A,1.37,4.78,7.53,1.45,5.4,8.6
+CHN,06/04/2022,Shanghai Port,Wuhan FC,0,1,,,A,2.09,2.94,3.95,2.17,3.32,4.23
+CHN,06/04/2022,Shenzhen,Chengdu Rongcheng,2,0,,,H,2.42,3.21,2.9,2.5,3.45,3.15
+CHN,06/04/2022,Changchun Yatai,Guangzhou City,4,1,,,H,1.3,5.14,9.69,1.5,5.75,12.0
+CHN,06/04/2022,Meizhou Hakka,Tianjin Jinmen Tiger,1,1,,,D,2.31,3.03,3.25,2.68,3.26,3.56
+CHN,06/04/2022,Henan Songshan Longmen,Dalian Pro,2,2,,,D,1.1,8.75,23.81,1.15,11.0,36.56
+CHN,07/04/2022,Wuhan FC,Guangzhou FC,2,1,,,H,2.39,2.97,3.11,2.59,3.22,3.35
+CHN,07/04/2022,Shanghai Port,Hebei,2,1,,,H,1.18,6.55,14.91,1.2,7.25,19.0
+CHN,07/04/2022,Chengdu Rongcheng,Cangzhou,1,1,,,D,1.52,3.91,6.25,1.57,4.2,6.8
+CHN,10/04/2022,Hebei,Cangzhou,0,5,,,A,14.49,7.08,1.16,17.5,8.15,1.21
+CHN,10/04/2022,Dalian Pro,Tianjin Jinmen Tiger,0,2,,,A,2.23,3.35,3.07,2.36,3.51,3.47
+CHN,10/04/2022,Guangzhou City,Shenzhen,1,1,,,D,2.8,3.18,2.49,3.0,3.36,2.63
+CHN,10/04/2022,Shanghai Shenhua,Henan Songshan Longmen,1,0,,,H,3.04,2.93,2.48,3.29,3.1,2.67
+CHN,10/04/2022,Zhejiang Professional,Wuhan Three Towns,2,1,,,H,3.66,3.87,1.85,4.01,4.15,1.92
+CHN,11/04/2022,Shanghai Port,Dalian Pro,2,1,,,H,1.1,9.47,19.96,1.14,11.01,26.0
+CHN,11/04/2022,Guangzhou FC,Cangzhou,3,3,,,D,9.29,5.57,1.27,11.0,6.2,1.31
+CHN,11/04/2022,Beijing Guoan,Henan Songshan Longmen,2,1,,,H,2.51,3.2,2.75,2.66,3.47,3.0
+CHN,11/04/2022,Wuhan FC,Meizhou Hakka,0,0,,,D,5.47,4.24,1.53,6.0,4.5,1.67
+CHN,12/04/2022,Cangzhou,Wuhan Three Towns,0,4,,,A,9.75,6.8,1.21,11.0,7.97,1.26
+CHN,12/04/2022,Guangzhou City,Shanghai Port,1,2,,,A,31.37,10.92,1.06,44.94,13.0,1.08
+CHN,12/04/2022,Wuhan FC,Changchun Yatai,1,1,,,D,2.17,3.51,3.01,2.36,3.73,3.29
+CHN,06/05/2022,Beijing Guoan,Cangzhou,1,2,,,A,1.53,3.99,6.04,1.59,4.33,8.0
+CHN,08/05/2022,Shanghai Shenhua,Changchun Yatai,0,0,,,D,2.51,3.24,2.73,2.8,3.51,2.9
+CHN,08/05/2022,Hebei,Chengdu Rongcheng,0,1,,,A,10.88,4.76,1.3,14.5,5.25,1.36
+CHN,08/05/2022,Shenzhen,Zhejiang Professional,0,2,,,A,4.92,3.8,1.65,6.3,4.1,1.77
+CHN,10/05/2022,Changchun Yatai,Guangzhou FC,0,0,,,D,1.68,3.59,5.06,1.73,3.86,5.9
+CHN,10/05/2022,Meizhou Hakka,Shandong Taishan,1,2,,,A,4.9,3.46,1.72,5.4,3.75,1.78
+CHN,10/05/2022,Shanghai Port,Beijing Guoan,0,1,,,A,1.76,3.71,4.23,1.81,3.89,4.6
+CHN,10/05/2022,Wuhan FC,Chengdu Rongcheng,0,1,,,A,6.49,4.16,1.48,8.0,4.61,1.58
+CHN,12/05/2022,Beijing Guoan,Dalian Pro,1,3,,,A,1.59,3.98,5.13,1.69,4.38,5.83
+CHN,12/05/2022,Hebei,Meizhou Hakka,0,4,,,A,10.09,6.35,1.22,14.0,7.5,1.32
+CHN,12/05/2022,Tianjin Jinmen Tiger,Guangzhou FC,0,0,,,D,1.58,4.0,5.14,1.64,4.25,5.7
+CHN,12/05/2022,Henan Songshan Longmen,Chengdu Rongcheng,0,1,,,A,2.18,3.43,3.06,2.25,3.6,3.25
+CHN,12/05/2022,Shanghai Shenhua,Zhejiang Professional,0,2,,,A,4.72,3.75,1.67,5.09,3.93,1.72
+CHN,07/06/2022,Zhejiang Professional,Dalian Pro,2,0,,,H,2.1,3.29,3.42,2.2,3.5,3.9
+CHN,07/06/2022,Changchun Yatai,Shandong Taishan,1,2,,,A,5.61,3.9,1.57,6.5,4.2,1.65
+CHN,08/06/2022,Dalian Pro,Shanghai Port,1,1,,,D,5.03,3.94,1.61,5.7,4.35,1.66
+CHN,08/06/2022,Guangzhou City,Wuhan Three Towns,0,3,,,A,12.85,5.98,1.21,17.0,6.6,1.26
+CHN,08/06/2022,Tianjin Jinmen Tiger,Shandong Taishan,0,1,,,A,4.98,3.67,1.67,6.3,4.0,1.77
+CHN,09/06/2022,Beijing Guoan,Zhejiang Professional,2,2,,,D,2.64,3.29,2.56,2.78,3.5,2.7
+CHN,13/06/2022,Beijing Guoan,Tianjin Jinmen Tiger,1,0,,,H,1.64,3.65,5.22,1.69,3.85,5.92
+CHN,13/06/2022,Shenzhen,Meizhou Hakka,1,2,,,A,2.58,3.07,2.78,2.75,3.23,3.15
+CHN,15/06/2022,Shanghai Port,Guangzhou FC,1,0,,,H,1.22,5.79,12.28,1.27,6.22,14.5
+CHN,15/06/2022,Guangzhou City,Henan Songshan Longmen,0,3,,,A,14.3,6.22,1.19,17.5,6.9,1.24
+CHN,15/06/2022,Wuhan FC,Wuhan Three Towns,1,3,,,A,4.71,3.59,1.72,5.1,3.86,1.82
+CHN,16/06/2022,Hebei,Shanghai Shenhua,1,3,,,A,17.6,6.19,1.17,21.0,7.0,1.2
+CHN,16/06/2022,Tianjin Jinmen Tiger,Chengdu Rongcheng,1,1,,,D,3.39,2.76,2.41,3.79,3.0,2.54
+CHN,16/06/2022,Dalian Pro,Zhejiang Professional,1,1,,,D,3.21,3.06,2.3,3.89,3.23,2.47
+CHN,16/06/2022,Shandong Taishan,Changchun Yatai,4,0,,,H,2.01,3.29,3.68,2.12,3.55,4.01
+CHN,17/06/2022,Shenzhen,Cangzhou,1,0,,,H,1.99,3.26,3.81,2.1,3.53,4.22
+CHN,17/06/2022,Meizhou Hakka,Beijing Guoan,2,2,,,D,2.82,3.14,2.51,2.95,3.4,2.63
+CHN,19/06/2022,Wuhan Three Towns,Shanghai Port,2,1,,,H,1.83,3.53,4.19,1.94,3.88,4.9
+CHN,19/06/2022,Guangzhou FC,Hebei,1,0,,,H,1.91,3.22,4.18,2.0,3.45,4.65
+CHN,20/06/2022,Changchun Yatai,Henan Songshan Longmen,0,0,,,D,2.57,3.16,2.72,2.75,3.44,2.88
+CHN,20/06/2022,Chengdu Rongcheng,Meizhou Hakka,0,0,,,D,3.95,3.39,1.91,4.6,3.6,2.05
+CHN,20/06/2022,Guangzhou City,Zhejiang Professional,2,4,,,A,8.53,3.96,1.43,10.0,4.25,1.48
+CHN,20/06/2022,Shanghai Shenhua,Wuhan FC,2,0,,,H,1.93,3.3,3.95,2.08,3.54,4.3
+CHN,21/06/2022,Beijing Guoan,Shenzhen,4,1,,,H,2.26,3.26,3.08,2.36,3.55,3.31
+CHN,21/06/2022,Cangzhou,Tianjin Jinmen Tiger,0,2,,,A,3.44,2.98,2.24,3.8,3.26,2.36
+CHN,21/06/2022,Shandong Taishan,Dalian Pro,3,0,,,H,1.32,5.06,8.89,1.4,5.5,10.0
+CHN,24/06/2022,Guangzhou City,Changchun Yatai,1,3,,,A,8.99,5.01,1.32,12.63,6.06,1.42
+CHN,24/06/2022,Dalian Pro,Henan Songshan Longmen,0,2,,,A,10.23,5.28,1.28,11.12,6.0,1.34
+CHN,25/06/2022,Cangzhou,Beijing Guoan,1,1,,,D,6.19,4.0,1.52,7.5,4.3,1.58
+CHN,25/06/2022,Tianjin Jinmen Tiger,Meizhou Hakka,1,0,,,H,3.5,3.1,2.16,3.98,3.24,2.25
+CHN,25/06/2022,Wuhan FC,Shanghai Port,1,2,,,A,7.29,3.97,1.47,9.0,4.33,1.6
+CHN,25/06/2022,Zhejiang Professional,Shandong Taishan,2,0,,,H,5.39,3.95,1.59,6.3,4.15,1.66
+CHN,26/06/2022,Wuhan Three Towns,Hebei,5,0,,,H,1.07,10.13,31.74,1.1,12.49,46.09
+CHN,26/06/2022,Shanghai Shenhua,Guangzhou FC,2,1,,,H,1.27,5.01,11.94,1.29,5.55,14.0
+CHN,26/06/2022,Chengdu Rongcheng,Shenzhen,2,2,,,D,2.35,3.04,3.17,2.6,3.21,3.57
+CHN,28/06/2022,Shandong Taishan,Henan Songshan Longmen,2,0,,,H,1.7,3.74,4.57,1.78,4.1,5.0
+CHN,28/06/2022,Guangzhou City,Dalian Pro,0,3,,,A,3.41,3.24,2.12,3.61,3.48,2.2
+CHN,29/06/2022,Shanghai Port,Shanghai Shenhua,1,1,,,D,2.35,3.02,3.15,2.48,3.24,3.4
+CHN,29/06/2022,Meizhou Hakka,Cangzhou,4,1,,,H,2.22,3.02,3.43,2.29,3.15,3.71
+CHN,29/06/2022,Shenzhen,Tianjin Jinmen Tiger,2,3,,,A,3.33,3.21,2.17,3.76,3.5,2.3
+CHN,29/06/2022,Changchun Yatai,Zhejiang Professional,1,1,,,D,1.9,3.32,4.09,1.95,3.5,4.6
+CHN,30/06/2022,Guangzhou FC,Wuhan Three Towns,1,2,,,A,34.6,13.09,1.04,51.0,21.0,1.06
+CHN,30/06/2022,Beijing Guoan,Chengdu Rongcheng,0,0,,,D,2.19,3.32,3.18,2.38,3.5,3.54
+CHN,30/06/2022,Hebei,Wuhan FC,2,1,,,H,8.35,4.47,1.37,9.5,4.75,1.41

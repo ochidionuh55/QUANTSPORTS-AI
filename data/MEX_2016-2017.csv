@@ -1,0 +1,334 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+MEX,02/07/2016,Monterrey,Dorados de Sinaloa,3,0,,,H,1.35,4.72,8.22,1.4,5.2,10.52
+MEX,02/07/2016,Puebla,Atlas,4,1,,,H,3.0,3.13,2.37,3.32,3.34,2.9
+MEX,02/07/2016,Club Leon,Monarcas,1,2,,,A,1.89,3.6,3.71,2.0,3.88,4.1
+MEX,02/07/2016,Guadalajara Chivas,Toluca,1,1,,,D,2.36,3.21,2.93,2.48,3.4,3.2
+MEX,02/07/2016,U.N.A.M.- Pumas,Pachuca,1,1,,,D,2.42,3.34,2.75,2.55,3.67,2.9
+MEX,05/07/2016,Veracruz,Monarcas,1,2,,,A,2.42,3.25,2.81,2.7,3.56,3.1
+MEX,05/07/2016,Santos Laguna,Guadalajara Chivas,0,1,,,A,2.13,3.28,3.3,2.25,3.56,3.54
+MEX,05/07/2016,Cruz Azul,U.A.N.L.- Tigres,0,3,,,A,2.65,3.14,2.63,2.89,3.3,2.8
+MEX,08/07/2016,Monarcas,Atlas,3,2,,,H,2.37,3.2,2.91,2.5,3.43,3.22
+MEX,08/07/2016,U.A.N.L.- Tigres,Chiapas,1,0,,,H,1.38,4.51,7.98,1.44,4.95,9.71
+MEX,08/07/2016,Club Leon,Monterrey,0,3,,,A,2.14,3.43,3.19,2.25,3.87,3.45
+MEX,08/07/2016,Guadalajara Chivas,Queretaro,0,0,,,D,2.04,3.35,3.5,2.13,3.65,3.85
+MEX,08/07/2016,Necaxa,U.N.A.M.- Pumas,2,2,,,D,2.24,3.16,3.22,2.38,3.4,3.48
+MEX,08/07/2016,Veracruz,Club America,2,4,,,A,3.65,3.35,2.01,4.16,3.55,2.1
+MEX,08/07/2016,Toluca,Pachuca,2,0,,,H,2.51,3.2,2.76,2.74,3.42,2.94
+MEX,11/07/2016,Santos Laguna,Chiapas,2,0,,,H,1.48,4.18,6.33,1.73,4.69,7.5
+MEX,16/07/2016,Club Tijuana,Monarcas,2,0,,,H,2.01,3.37,3.54,2.1,3.6,3.88
+MEX,16/07/2016,Queretaro,Veracruz,2,0,,,H,1.84,3.46,4.1,1.96,3.73,4.55
+MEX,17/07/2016,Atlas,Toluca,1,1,,,D,2.32,3.15,3.07,2.5,3.34,3.32
+MEX,17/07/2016,Monterrey,Puebla,1,1,,,D,1.49,4.17,6.09,1.53,4.65,6.79
+MEX,17/07/2016,Pachuca,Club Leon,5,1,,,H,1.98,3.46,3.52,2.06,3.79,3.88
+MEX,17/07/2016,Club America,Chiapas,2,0,,,H,1.28,5.27,9.85,1.33,5.97,12.0
+MEX,17/07/2016,Necaxa,Cruz Azul,0,0,,,D,3.01,3.2,2.32,3.32,3.52,2.48
+MEX,17/07/2016,U.N.A.M.- Pumas,Guadalajara Chivas,1,0,,,H,2.7,3.09,2.62,2.92,3.27,2.8
+MEX,18/07/2016,Santos Laguna,U.A.N.L.- Tigres,0,0,,,D,2.83,3.14,2.49,3.01,3.37,2.68
+MEX,23/07/2016,Veracruz,Santos Laguna,2,0,,,H,2.81,3.21,2.45,3.02,3.56,2.67
+MEX,23/07/2016,Chiapas,Pachuca,0,2,,,A,3.13,3.45,2.15,3.3,3.83,2.27
+MEX,23/07/2016,Cruz Azul,U.N.A.M.- Pumas,0,0,,,D,1.95,3.44,3.72,2.05,3.7,4.06
+MEX,24/07/2016,Monarcas,Queretaro,2,2,,,D,2.5,3.21,2.77,2.67,3.4,3.0
+MEX,24/07/2016,U.A.N.L.- Tigres,Atlas,0,0,,,D,1.55,3.83,6.01,1.6,4.15,6.94
+MEX,24/07/2016,Club Leon,Necaxa,0,0,,,D,1.75,3.68,4.32,1.88,4.0,5.5
+MEX,24/07/2016,Club America,Toluca,3,1,,,H,1.57,3.97,5.48,1.62,4.36,6.19
+MEX,24/07/2016,Guadalajara Chivas,Monterrey,1,0,,,H,2.23,3.27,3.14,2.3,3.52,3.52
+MEX,25/07/2016,Puebla,Club Tijuana,3,2,,,H,2.36,3.17,2.99,2.45,3.4,3.24
+MEX,30/07/2016,Club Tijuana,Guadalajara Chivas,4,0,,,H,2.23,3.2,3.18,2.34,3.4,3.42
+MEX,30/07/2016,Queretaro,Puebla,2,1,,,H,1.94,3.33,3.82,2.02,3.54,4.15
+MEX,31/07/2016,Atlas,Veracruz,1,0,,,H,1.97,3.3,3.79,2.07,3.57,4.36
+MEX,31/07/2016,Monterrey,Cruz Azul,1,1,,,D,2.08,3.31,3.45,2.24,3.6,3.95
+MEX,31/07/2016,Pachuca,Necaxa,1,0,,,H,1.92,3.33,3.93,2.01,3.56,4.4
+MEX,31/07/2016,Club America,U.A.N.L.- Tigres,0,3,,,A,2.14,3.27,3.28,2.26,3.5,3.6
+MEX,31/07/2016,U.N.A.M.- Pumas,Club Leon,1,0,,,H,2.46,3.33,2.73,2.61,3.62,3.07
+MEX,31/07/2016,Chiapas,Toluca,1,0,,,H,2.46,3.25,2.79,2.6,3.48,2.99
+MEX,05/08/2016,Monterrey,Toluca,1,2,,,A,1.74,3.82,4.2,1.85,4.45,4.96
+MEX,05/08/2016,Pachuca,Chiapas,2,1,,,H,1.31,5.06,8.78,1.36,5.53,11.5
+MEX,05/08/2016,Atlas,Club Tijuana,0,0,,,D,2.12,3.43,3.2,2.24,3.74,3.45
+MEX,05/08/2016,Dorados de Sinaloa,Club Leon,0,1,,,A,3.69,3.52,1.92,4.33,3.9,2.05
+MEX,05/08/2016,U.N.A.M.- Pumas,Club America,1,1,,,D,2.88,3.4,2.29,3.1,3.68,2.47
+MEX,05/08/2016,Puebla,Queretaro,3,1,,,H,2.49,3.19,2.76,2.65,3.38,2.97
+MEX,08/08/2016,Puebla,Santos Laguna,0,0,,,D,2.23,3.32,3.08,2.46,3.58,3.3
+MEX,13/08/2016,Club Tijuana,Club Leon,2,0,,,H,1.77,3.69,4.2,1.86,4.1,4.75
+MEX,13/08/2016,Queretaro,Cruz Azul,0,0,,,D,2.65,3.17,2.62,2.78,3.4,2.82
+MEX,14/08/2016,Atlas,Puebla,3,2,,,H,2.06,3.25,3.53,2.15,3.44,3.95
+MEX,14/08/2016,Monterrey,Necaxa,2,1,,,H,1.66,3.75,4.87,1.75,4.01,5.8
+MEX,14/08/2016,Pachuca,U.N.A.M.- Pumas,3,0,,,H,2.06,3.29,3.54,2.32,3.54,3.97
+MEX,14/08/2016,Club America,Monarcas,1,1,,,D,1.45,4.35,6.3,1.55,4.87,8.0
+MEX,14/08/2016,Toluca,U.A.N.L.- Tigres,0,0,,,D,3.03,3.2,2.31,3.36,3.42,2.5
+MEX,14/08/2016,Chiapas,Veracruz,1,1,,,D,2.14,3.29,3.28,2.28,3.51,3.65
+MEX,15/08/2016,Santos Laguna,Guadalajara Chivas,0,1,,,A,2.46,3.16,2.84,2.59,3.32,3.02
+MEX,20/08/2016,Veracruz,Toluca,2,2,,,D,2.77,3.18,2.5,2.98,3.39,2.65
+MEX,20/08/2016,Cruz Azul,Santos Laguna,3,1,,,H,1.66,3.66,5.12,1.75,4.04,5.9
+MEX,21/08/2016,Monarcas,Chiapas,3,2,,,H,1.76,3.62,4.37,1.85,3.93,5.0
+MEX,21/08/2016,U.A.N.L.- Tigres,Pachuca,4,2,,,H,1.86,3.4,4.14,1.95,3.64,4.66
+MEX,21/08/2016,Club Leon,Queretaro,2,1,,,H,2.12,3.39,3.27,2.24,3.67,3.6
+MEX,21/08/2016,Necaxa,Club Tijuana,1,1,,,D,2.11,3.29,3.38,2.3,3.5,3.87
+MEX,21/08/2016,Guadalajara Chivas,Atlas,2,2,,,D,2.0,3.23,3.75,2.11,3.44,4.5
+MEX,21/08/2016,U.N.A.M.- Pumas,Monterrey,5,3,,,H,2.66,3.28,2.55,2.79,3.58,2.7
+MEX,22/08/2016,Puebla,Club America,2,2,,,D,3.5,3.44,2.01,3.98,3.69,2.18
+MEX,27/08/2016,Club Tijuana,U.N.A.M.- Pumas,1,0,,,H,1.97,3.54,3.49,2.08,3.98,3.96
+MEX,27/08/2016,Queretaro,Necaxa,1,2,,,A,2.26,3.19,3.16,2.38,3.4,3.35
+MEX,28/08/2016,Atlas,Cruz Azul,1,1,,,D,2.56,3.13,2.75,2.8,3.35,3.03
+MEX,28/08/2016,U.A.N.L.- Tigres,Veracruz,1,1,,,D,1.33,4.74,9.01,1.38,5.29,11.63
+MEX,28/08/2016,Pachuca,Monterrey,1,1,,,D,2.02,3.55,3.37,2.15,3.87,3.8
+MEX,28/08/2016,Club America,Guadalajara Chivas,0,3,,,A,1.7,3.61,4.8,1.8,3.97,5.4
+MEX,28/08/2016,Toluca,Monarcas,2,2,,,D,2.03,3.41,3.48,2.14,3.67,3.9
+MEX,28/08/2016,Chiapas,Puebla,0,3,,,A,2.14,3.32,3.26,2.4,3.6,3.59
+MEX,29/08/2016,Santos Laguna,Club Leon,1,0,,,H,2.33,3.33,2.9,2.48,3.59,3.2
+MEX,01/09/2016,Queretaro,Atlas,1,3,,,A,1.98,3.25,3.8,2.1,3.56,4.1
+MEX,01/09/2016,Club Tijuana,Pachuca,1,1,,,D,2.18,3.4,3.12,2.29,3.61,3.4
+MEX,01/09/2016,Club America,Puebla,0,0,,,D,1.69,3.69,4.74,1.77,4.1,5.2
+MEX,04/09/2016,Queretaro,Toluca,0,0,,,D,2.53,3.22,2.69,2.76,3.42,2.85
+MEX,04/09/2016,Santos Laguna,Veracruz,2,0,,,H,1.51,3.99,6.12,1.56,4.3,7.12
+MEX,04/09/2016,Club America,Club Tijuana,6,1,,,H,1.47,4.24,6.36,1.52,4.61,7.37
+MEX,17/09/2016,Veracruz,Monarcas,1,3,,,A,2.33,3.28,2.9,2.48,3.48,3.19
+MEX,17/09/2016,Toluca,Guadalajara Chivas,2,1,,,H,2.39,3.14,2.9,2.5,3.32,3.1
+MEX,17/09/2016,Queretaro,Monterrey,1,0,,,H,2.67,3.27,2.53,2.81,3.49,2.7
+MEX,18/09/2016,Atlas,Necaxa,0,0,,,D,2.3,3.07,3.17,2.5,3.29,3.46
+MEX,18/09/2016,Chiapas,Cruz Azul,0,3,,,A,3.14,3.22,2.23,3.42,3.38,2.4
+MEX,18/09/2016,U.A.N.L.- Tigres,Puebla,2,1,,,H,1.39,4.38,7.82,1.44,4.75,9.37
+MEX,18/09/2016,Pachuca,Club Tijuana,2,2,,,D,1.66,3.72,5.04,1.85,4.24,6.16
+MEX,18/09/2016,Club America,Club Leon,0,2,,,A,1.76,3.74,4.18,1.85,4.07,4.84
+MEX,19/09/2016,Santos Laguna,U.N.A.M.- Pumas,3,1,,,H,2.11,3.38,3.27,2.23,3.62,3.74
+MEX,21/09/2016,Cruz Azul,Toluca,0,1,,,A,1.94,3.34,3.83,2.05,3.67,4.3
+MEX,21/09/2016,Guadalajara Chivas,U.A.N.L.- Tigres,0,1,,,A,2.72,3.02,2.65,2.94,3.3,2.87
+MEX,21/09/2016,Monarcas,Pachuca,1,5,,,A,2.78,3.39,2.38,2.91,3.73,2.58
+MEX,21/09/2016,Puebla,Veracruz,3,2,,,H,2.04,3.3,3.53,2.15,3.58,3.8
+MEX,21/09/2016,Necaxa,Club America,1,1,,,D,2.77,3.24,2.46,3.0,3.5,2.68
+MEX,22/09/2016,Club Leon,Chiapas,0,0,,,D,1.45,4.43,6.33,1.5,4.9,7.21
+MEX,22/09/2016,U.N.A.M.- Pumas,Atlas,2,0,,,H,1.94,3.37,3.82,2.08,3.6,4.25
+MEX,22/09/2016,Monterrey,Santos Laguna,5,2,,,H,1.71,3.77,4.49,1.79,4.1,5.1
+MEX,22/09/2016,Club Tijuana,Queretaro,2,1,,,H,1.76,3.6,4.34,1.86,3.91,5.05
+MEX,24/09/2016,Veracruz,Guadalajara Chivas,0,1,,,A,2.91,3.13,2.42,3.15,3.37,2.51
+MEX,24/09/2016,Chiapas,Necaxa,2,2,,,D,2.74,3.16,2.52,2.89,3.38,2.71
+MEX,25/09/2016,Atlas,Monterrey,3,1,,,H,3.18,3.26,2.21,3.47,3.49,2.38
+MEX,25/09/2016,Monarcas,Puebla,2,3,,,A,1.96,3.52,3.57,2.08,3.82,4.0
+MEX,25/09/2016,U.A.N.L.- Tigres,Cruz Azul,0,0,,,D,1.7,3.57,4.85,1.77,3.77,5.46
+MEX,25/09/2016,Pachuca,Queretaro,2,0,,,H,1.52,4.04,5.84,1.58,4.5,6.75
+MEX,25/09/2016,Club America,U.N.A.M.- Pumas,2,1,,,H,1.81,3.7,4.03,1.93,4.0,4.96
+MEX,25/09/2016,Toluca,Club Leon,1,1,,,D,2.2,3.34,3.12,2.28,3.66,3.37
+MEX,26/09/2016,Santos Laguna,Club Tijuana,1,2,,,A,2.17,3.34,3.19,2.4,3.62,3.55
+MEX,01/10/2016,Monterrey,U.N.A.M.- Pumas,1,0,,,H,1.86,3.63,3.81,1.93,3.98,4.25
+MEX,01/10/2016,Club Leon,Santos Laguna,2,0,,,H,2.24,3.36,3.02,2.36,3.6,3.3
+MEX,01/10/2016,Monarcas,Cruz Azul,2,2,,,D,2.36,3.15,2.99,2.6,3.4,3.25
+MEX,01/10/2016,Chiapas,Dorados de Sinaloa,1,0,,,H,1.74,3.55,4.57,1.81,3.85,5.1
+MEX,01/10/2016,Toluca,U.A.N.L.- Tigres,1,0,,,H,2.77,3.1,2.54,3.0,3.3,2.7
+MEX,01/10/2016,Guadalajara Chivas,Veracruz,2,2,,,D,2.03,3.21,3.68,2.12,3.4,3.95
+MEX,04/10/2016,Monterrey,Chiapas,6,0,,,H,1.48,4.27,6.21,1.55,4.69,7.5
+MEX,04/10/2016,Pachuca,U.A.N.L.- Tigres,2,1,,,H,2.42,3.21,2.83,2.57,3.46,3.01
+MEX,04/10/2016,Atlas,Monarcas,1,2,,,A,2.22,3.22,3.17,2.37,3.46,3.43
+MEX,04/10/2016,Dorados de Sinaloa,Cruz Azul,3,0,,,H,3.32,3.28,2.13,3.54,3.5,2.23
+MEX,04/10/2016,Puebla,Guadalajara Chivas,0,3,,,A,2.89,3.05,2.48,3.1,3.3,2.64
+MEX,09/10/2016,Veracruz,Pachuca,1,0,,,H,3.11,3.32,2.21,3.27,3.64,2.32
+MEX,09/10/2016,Cruz Azul,Club America,3,4,,,A,2.5,3.19,2.76,2.63,3.33,2.99
+MEX,15/10/2016,Veracruz,Club Leon,2,3,,,A,3.24,3.36,2.14,3.55,3.63,2.25
+MEX,15/10/2016,Chiapas,Monterrey,1,4,,,A,4.2,3.65,1.78,4.66,3.97,1.95
+MEX,16/10/2016,Atlas,Queretaro,2,1,,,H,2.2,3.18,3.27,2.3,3.35,3.62
+MEX,16/10/2016,Monarcas,Cruz Azul,1,1,,,D,3.09,3.3,2.24,3.42,3.58,2.4
+MEX,16/10/2016,U.A.N.L.- Tigres,Necaxa,0,2,,,A,1.61,3.66,5.54,1.67,3.94,6.36
+MEX,16/10/2016,Pachuca,Santos Laguna,3,0,,,H,1.57,3.89,5.55,1.65,4.28,6.5
+MEX,16/10/2016,Club America,Club Tijuana,1,0,,,H,1.7,3.74,4.6,1.77,4.06,5.3
+MEX,16/10/2016,Toluca,U.N.A.M.- Pumas,2,1,,,H,2.16,3.28,3.28,2.26,3.5,3.65
+MEX,17/10/2016,Puebla,Guadalajara Chivas,0,2,,,A,3.04,3.25,2.29,3.3,3.52,2.39
+MEX,22/10/2016,Club Tijuana,Chiapas,2,0,,,H,1.35,4.76,8.02,1.45,5.5,10.0
+MEX,22/10/2016,Cruz Azul,Puebla,1,2,,,A,1.59,3.88,5.38,1.66,4.21,6.15
+MEX,23/10/2016,Monterrey,Toluca,1,1,,,D,1.66,3.86,4.68,1.75,4.22,5.2
+MEX,23/10/2016,Queretaro,Club America,1,1,,,D,3.29,3.32,2.13,3.6,3.55,2.23
+MEX,23/10/2016,Club Leon,Monarcas,3,1,,,H,1.64,3.96,4.74,1.73,4.35,5.41
+MEX,23/10/2016,Necaxa,Veracruz,3,2,,,H,1.59,3.78,5.55,1.68,4.07,6.39
+MEX,23/10/2016,U.N.A.M.- Pumas,U.A.N.L.- Tigres,1,3,,,A,2.4,3.11,2.97,2.59,3.3,3.2
+MEX,24/10/2016,Santos Laguna,Atlas,2,2,,,D,2.1,3.31,3.37,2.23,3.5,3.7
+MEX,24/10/2016,Guadalajara Chivas,Pachuca,1,2,,,A,2.31,3.23,3.01,2.42,3.49,3.23
+MEX,29/10/2016,Veracruz,U.N.A.M.- Pumas,1,4,,,A,3.03,3.37,2.23,3.27,3.65,2.4
+MEX,29/10/2016,Chiapas,Queretaro,1,2,,,A,2.43,3.12,2.88,2.75,3.3,3.34
+MEX,30/10/2016,Monarcas,Necaxa,2,1,,,H,2.59,3.07,2.74,3.07,3.4,3.12
+MEX,30/10/2016,U.A.N.L.- Tigres,Monterrey,1,1,,,D,2.02,3.33,3.54,2.48,4.16,4.04
+MEX,30/10/2016,Pachuca,Atlas,3,2,,,H,1.51,4.07,6.09,1.64,4.49,7.0
+MEX,30/10/2016,Club America,Santos Laguna,3,1,,,H,1.52,4.07,5.78,1.6,4.52,6.64
+MEX,30/10/2016,Guadalajara Chivas,Cruz Azul,3,2,,,H,2.05,3.19,3.63,2.15,3.35,4.16
+MEX,30/10/2016,Toluca,Club Tijuana,0,1,,,A,2.16,3.27,3.28,2.45,3.49,3.72
+MEX,31/10/2016,Puebla,Club Leon,2,2,,,D,2.91,3.33,2.31,3.15,3.6,2.46
+MEX,04/11/2016,U.N.A.M.- Pumas,Club Leon,1,2,,,A,2.3,3.36,2.9,2.46,3.6,3.1
+MEX,09/11/2016,Monarcas,U.A.N.L.- Tigres,0,2,,,A,3.15,3.25,2.23,3.42,3.48,2.3
+MEX,09/11/2016,Monterrey,Club Tijuana,0,0,,,D,1.77,3.69,4.22,1.88,4.05,5.0
+MEX,09/11/2016,Club Leon,Atlas,4,1,,,H,1.88,3.51,3.91,2.01,3.84,4.65
+MEX,09/11/2016,Necaxa,Santos Laguna,2,1,,,H,2.26,3.19,3.16,2.45,3.38,3.67
+MEX,09/11/2016,Guadalajara Chivas,Chiapas,2,0,,,H,1.61,3.82,5.32,1.65,4.1,6.5
+MEX,09/11/2016,U.N.A.M.- Pumas,Queretaro,4,1,,,H,2.04,3.38,3.48,2.14,3.55,3.81
+MEX,19/11/2016,Veracruz,Club Tijuana,2,1,,,H,3.56,3.4,2.01,4.05,3.72,2.1
+MEX,19/11/2016,Chiapas,Atlas,1,0,,,H,2.65,3.3,2.54,2.8,3.52,2.66
+MEX,19/11/2016,Cruz Azul,Club Leon,2,3,,,A,2.63,3.34,2.53,2.94,3.6,2.63
+MEX,20/11/2016,Monarcas,Monterrey,1,2,,,A,3.76,3.83,1.83,4.2,4.3,1.91
+MEX,20/11/2016,U.A.N.L.- Tigres,Queretaro,1,2,,,A,1.44,4.26,7.03,1.48,4.7,8.8
+MEX,20/11/2016,Pachuca,Club America,3,3,,,D,1.94,3.49,3.69,2.02,3.71,4.05
+MEX,20/11/2016,Guadalajara Chivas,Necaxa,1,1,,,D,2.02,3.16,3.83,2.19,3.4,4.5
+MEX,20/11/2016,Toluca,Santos Laguna,1,2,,,A,1.49,4.09,6.35,1.55,4.49,7.44
+MEX,21/11/2016,Puebla,U.N.A.M.- Pumas,0,3,,,A,3.34,3.5,2.05,3.6,3.82,2.15
+MEX,24/11/2016,Club Leon,Club Tijuana,3,0,,,H,1.92,3.4,3.82,2.02,3.67,4.25
+MEX,24/11/2016,U.N.A.M.- Pumas,U.A.N.L.- Tigres,2,2,,,D,2.43,3.13,2.91,2.55,3.3,3.22
+MEX,25/11/2016,Necaxa,Pachuca,2,1,,,H,2.68,3.11,2.63,2.86,3.28,2.87
+MEX,25/11/2016,Club America,Guadalajara Chivas,1,1,,,D,2.48,3.01,3.0,2.8,3.35,3.5
+MEX,27/11/2016,U.A.N.L.- Tigres,U.N.A.M.- Pumas,5,0,,,H,1.75,3.58,4.49,1.85,3.82,5.3
+MEX,27/11/2016,Club Tijuana,Club Leon,3,2,,,H,1.93,3.65,3.56,1.98,4.06,4.0
+MEX,28/11/2016,Guadalajara Chivas,Club America,0,1,,,A,2.23,3.16,3.23,2.4,3.35,3.6
+MEX,28/11/2016,Pachuca,Necaxa,0,0,,,D,1.66,3.65,5.09,1.75,3.93,6.5
+MEX,03/12/2016,Santos Laguna,Pachuca,3,2,,,H,2.22,3.22,3.16,2.37,3.41,3.47
+MEX,03/12/2016,Veracruz,Atlas,3,2,,,H,2.07,3.22,3.53,2.16,3.35,3.95
+MEX,03/12/2016,Cruz Azul,Puebla,1,1,,,D,1.56,3.82,5.82,1.62,4.12,7.16
+MEX,05/12/2016,U.A.N.L.- Tigres,Monterrey,1,3,,,A,2.1,3.28,3.36,2.2,3.6,4.0
+MEX,05/12/2016,Monarcas,Club Leon,1,1,,,D,2.96,3.32,2.28,3.32,3.7,2.4
+MEX,09/12/2016,Puebla,Toluca,0,2,,,A,2.49,3.27,2.72,2.59,3.52,2.94
+MEX,23/12/2016,Club America,U.A.N.L.- Tigres,1,1,,,D,2.59,2.99,2.82,2.76,3.2,3.05
+MEX,26/12/2016,U.A.N.L.- Tigres,Club America,0,0,,,D,1.88,3.28,4.23,2.0,3.5,5.3
+MEX,04/01/2017,Veracruz,Cruz Azul,3,1,,,H,4.08,3.38,1.88,4.64,3.68,2.0
+MEX,05/01/2017,Puebla,Necaxa,0,1,,,A,2.14,3.11,3.47,2.27,3.3,3.9
+MEX,10/01/2017,U.A.N.L.- Tigres,Guadalajara Chivas,1,0,,,H,1.74,3.45,4.75,1.81,3.65,5.42
+MEX,10/01/2017,Pachuca,Necaxa,0,0,,,D,1.8,3.55,4.23,2.0,3.8,4.75
+MEX,10/01/2017,Toluca,Club America,1,2,,,A,2.78,3.13,2.49,3.04,3.3,2.84
+MEX,10/01/2017,U.N.A.M.- Pumas,Cruz Azul,1,4,,,A,3.99,3.41,1.89,4.4,3.6,2.0
+MEX,12/01/2017,Monarcas,Monterrey,0,1,,,A,3.52,3.28,2.07,3.88,3.48,2.18
+MEX,14/01/2017,Club Tijuana,Puebla,6,2,,,H,1.65,3.74,4.97,1.69,4.1,5.58
+MEX,14/01/2017,Queretaro,Monarcas,0,0,,,D,1.91,3.51,3.78,2.02,3.87,4.2
+MEX,15/01/2017,Atlas,U.A.N.L.- Tigres,2,0,,,H,3.46,3.17,2.13,3.87,3.36,2.25
+MEX,15/01/2017,Monterrey,Guadalajara Chivas,2,2,,,D,1.97,3.48,3.56,2.08,3.77,4.0
+MEX,15/01/2017,Pachuca,Chiapas,1,0,,,H,1.35,4.86,7.78,1.38,5.5,9.51
+MEX,15/01/2017,Necaxa,Club Leon,0,1,,,A,2.26,3.32,3.03,2.38,3.58,3.3
+MEX,15/01/2017,U.N.A.M.- Pumas,Cruz Azul,1,0,,,H,2.54,3.28,2.66,2.76,3.5,2.88
+MEX,15/01/2017,Toluca,Club America,2,1,,,H,2.45,3.26,2.79,2.66,3.5,2.95
+MEX,16/01/2017,Santos Laguna,Veracruz,2,1,,,H,1.57,3.86,5.55,1.62,4.2,6.5
+MEX,21/01/2017,Veracruz,Atlas,1,0,,,H,2.58,3.14,2.72,2.75,3.35,3.01
+MEX,21/01/2017,Cruz Azul,Monterrey,2,2,,,D,2.28,3.36,2.96,2.45,3.66,3.27
+MEX,22/01/2017,Monarcas,Santos Laguna,1,1,,,D,2.4,3.27,2.85,2.56,3.52,3.1
+MEX,22/01/2017,U.A.N.L.- Tigres,Club America,4,2,,,H,1.97,3.27,3.82,2.1,3.44,4.35
+MEX,22/01/2017,Club Leon,U.N.A.M.- Pumas,0,1,,,A,1.92,3.5,3.73,2.05,3.75,4.3
+MEX,22/01/2017,Necaxa,Pachuca,1,0,,,H,3.0,3.21,2.33,3.3,3.44,2.46
+MEX,22/01/2017,Guadalajara Chivas,Club Tijuana,0,1,,,A,1.78,3.41,4.56,1.85,3.68,5.3
+MEX,22/01/2017,Toluca,Chiapas,0,1,,,A,1.39,4.57,7.11,1.44,5.2,8.4
+MEX,23/01/2017,Puebla,Queretaro,0,0,,,D,2.51,3.21,2.74,2.75,3.42,2.94
+MEX,28/01/2017,Club Tijuana,Cruz Azul,1,0,,,H,2.32,3.18,3.03,2.5,3.44,3.3
+MEX,28/01/2017,Queretaro,Guadalajara Chivas,0,1,,,A,2.93,3.03,2.47,3.14,3.2,2.62
+MEX,29/01/2017,Atlas,Monarcas,3,1,,,H,2.17,3.27,3.27,2.26,3.5,3.54
+MEX,29/01/2017,Monterrey,Club Leon,0,0,,,D,1.63,4.02,4.75,1.8,4.39,6.0
+MEX,29/01/2017,Pachuca,Toluca,0,0,,,D,1.84,3.57,3.96,1.96,3.82,4.4
+MEX,29/01/2017,Club America,Veracruz,1,0,,,H,1.41,4.46,7.12,1.47,4.89,8.39
+MEX,29/01/2017,U.N.A.M.- Pumas,Necaxa,3,1,,,H,1.94,3.3,3.92,2.06,3.52,4.46
+MEX,29/01/2017,Chiapas,U.A.N.L.- Tigres,1,0,,,H,4.09,3.41,1.87,4.59,3.65,1.97
+MEX,30/01/2017,Santos Laguna,Puebla,2,0,,,H,1.76,3.63,4.36,1.85,3.85,5.11
+MEX,04/02/2017,Chiapas,U.N.A.M.- Pumas,0,3,,,A,2.78,3.35,2.4,2.96,3.67,2.51
+MEX,04/02/2017,Atlas,Club Tijuana,3,3,,,D,2.44,3.18,2.86,2.59,3.32,3.1
+MEX,04/02/2017,Monarcas,Guadalajara Chivas,0,0,,,D,3.13,3.23,2.25,3.42,3.52,2.42
+MEX,04/02/2017,U.A.N.L.- Tigres,Club Leon,0,1,,,A,1.64,3.8,5.04,1.73,4.06,6.0
+MEX,04/02/2017,Pachuca,Puebla,0,0,,,D,1.58,3.84,5.52,1.65,4.15,6.5
+MEX,04/02/2017,Club America,Monterrey,1,0,,,H,2.63,3.28,2.57,2.8,3.53,2.7
+MEX,04/02/2017,Toluca,Necaxa,2,0,,,H,1.73,3.62,4.6,1.78,3.92,5.2
+MEX,10/02/2017,Santos Laguna,Puebla,0,0,,,D,1.89,3.49,3.86,2.02,3.75,4.6
+MEX,11/02/2017,Atlas,U.A.N.L.- Tigres,1,1,,,D,3.59,3.34,2.01,3.9,3.62,2.15
+MEX,13/02/2017,Santos Laguna,Cruz Azul,2,2,,,D,2.51,3.16,2.77,2.75,3.37,2.96
+MEX,18/02/2017,Veracruz,U.A.N.L.- Tigres,0,3,,,A,3.62,3.22,2.05,4.0,3.52,2.16
+MEX,18/02/2017,Cruz Azul,Atlas,0,1,,,A,1.56,3.77,6.01,1.65,4.05,7.0
+MEX,19/02/2017,Monarcas,Toluca,1,2,,,A,2.97,3.24,2.32,3.22,3.44,2.45
+MEX,19/02/2017,Monterrey,Pachuca,1,0,,,H,1.8,3.49,4.34,1.94,3.77,5.31
+MEX,19/02/2017,Club Leon,Santos Laguna,2,2,,,D,1.92,3.54,3.67,2.0,3.86,4.0
+MEX,19/02/2017,Necaxa,Queretaro,1,4,,,A,2.09,3.17,3.56,2.22,3.38,3.98
+MEX,19/02/2017,Guadalajara Chivas,Club America,1,0,,,H,2.18,3.12,3.39,2.28,3.3,3.75
+MEX,19/02/2017,U.N.A.M.- Pumas,Club Tijuana,3,3,,,D,1.94,3.41,3.79,2.05,3.7,4.19
+MEX,19/02/2017,Puebla,Chiapas,3,0,,,H,2.05,3.32,3.52,2.18,3.58,3.8
+MEX,25/02/2017,Club Tijuana,Monterrey,2,0,,,H,2.93,3.16,2.38,3.2,3.35,2.62
+MEX,25/02/2017,Queretaro,U.N.A.M.- Pumas,4,3,,,H,2.41,3.14,2.93,2.56,3.35,3.15
+MEX,26/02/2017,Atlas,Club Leon,2,0,,,H,2.63,3.26,2.58,2.76,3.57,2.74
+MEX,26/02/2017,U.A.N.L.- Tigres,Monarcas,1,1,,,D,1.54,3.99,5.7,1.6,4.33,6.5
+MEX,26/02/2017,Pachuca,Veracruz,1,0,,,H,1.39,4.42,7.68,1.44,4.95,9.91
+MEX,26/02/2017,Club America,Cruz Azul,2,0,,,H,2.65,3.12,2.66,2.92,3.34,2.85
+MEX,26/02/2017,Toluca,Puebla,1,3,,,A,1.74,3.5,4.69,1.83,3.82,5.3
+MEX,26/02/2017,Chiapas,Guadalajara Chivas,4,3,,,H,3.71,3.34,1.98,4.09,3.5,2.06
+MEX,27/02/2017,Santos Laguna,Necaxa,2,2,,,D,1.88,3.43,4.0,1.95,3.7,4.47
+MEX,04/03/2017,Santos Laguna,Queretaro,1,0,,,H,1.84,3.58,4.0,1.95,3.87,4.5
+MEX,12/03/2017,U.A.N.L.- Tigres,Club America,3,0,,,H,2.0,3.29,3.69,2.09,3.58,4.7
+MEX,18/03/2017,Club Tijuana,Santos Laguna,1,1,,,D,1.98,3.39,3.64,2.08,3.7,4.0
+MEX,18/03/2017,Cruz Azul,U.A.N.L.- Tigres,0,0,,,D,2.27,3.13,3.18,2.52,3.3,3.39
+MEX,18/03/2017,Queretaro,Pachuca,3,0,,,H,2.85,3.25,2.41,3.04,3.44,2.6
+MEX,19/03/2017,Monterrey,Atlas,2,0,,,H,1.44,4.35,6.77,1.5,4.8,8.0
+MEX,19/03/2017,Club Leon,Toluca,2,3,,,A,1.99,3.51,3.5,2.08,3.75,3.75
+MEX,19/03/2017,Necaxa,Chiapas,2,2,,,D,1.89,3.45,3.94,1.98,3.7,4.33
+MEX,19/03/2017,Guadalajara Chivas,Veracruz,2,0,,,H,1.36,4.5,8.64,1.4,4.95,10.5
+MEX,19/03/2017,U.N.A.M.- Pumas,Club America,2,3,,,A,2.31,3.36,2.91,2.46,3.62,3.06
+MEX,20/03/2017,Puebla,Monarcas,0,1,,,A,2.13,3.37,3.26,2.33,3.6,3.54
+MEX,02/04/2017,Puebla,Atlas,1,1,,,D,2.61,3.16,2.67,2.78,3.36,2.85
+MEX,02/04/2017,Veracruz,Chiapas,2,0,,,H,2.2,3.23,3.2,2.29,3.47,3.47
+MEX,02/04/2017,Cruz Azul,Queretaro,1,1,,,D,1.65,3.71,5.05,1.73,4.2,6.0
+MEX,03/04/2017,Club Tijuana,Pachuca,2,3,,,A,2.31,3.17,3.05,2.45,3.4,3.3
+MEX,03/04/2017,Cruz Azul,Chiapas,2,0,,,H,1.48,4.08,6.62,1.56,4.46,8.5
+MEX,11/04/2017,Monarcas,Cruz Azul,1,2,,,A,3.03,3.23,2.29,3.3,3.42,2.45
+MEX,11/04/2017,Club Tijuana,Club Leon,2,1,,,H,2.15,3.43,3.15,2.28,3.68,3.44
+MEX,11/04/2017,Lobos BUAP,Monterrey,2,1,,,H,3.49,3.54,1.98,3.8,3.78,2.05
+MEX,12/04/2017,Monterrey,Monarcas,4,0,,,H,1.54,4.07,5.56,1.6,4.45,6.33
+MEX,13/04/2017,Queretaro,Club Tijuana,0,1,,,A,2.36,3.1,3.04,2.58,3.28,3.42
+MEX,13/04/2017,Santos Laguna,Monterrey,2,2,,,D,3.07,3.25,2.27,3.3,3.46,2.41
+MEX,13/04/2017,Club America,Necaxa,1,0,,,H,1.64,3.75,5.08,1.73,4.45,6.3
+MEX,13/04/2017,Pachuca,Monarcas,0,0,,,D,1.66,3.76,4.89,1.73,4.18,5.4
+MEX,13/04/2017,Atlas,U.N.A.M.- Pumas,1,1,,,D,2.36,3.26,2.91,2.43,3.49,3.15
+MEX,14/04/2017,Toluca,Cruz Azul,0,2,,,A,2.34,3.12,3.05,2.5,3.32,3.42
+MEX,15/04/2017,Chiapas,Club Tijuana,1,2,,,A,2.67,3.25,2.55,2.94,3.4,2.73
+MEX,16/04/2017,Atlas,Santos Laguna,1,1,,,D,2.53,3.2,2.73,2.7,3.45,2.82
+MEX,16/04/2017,Monarcas,Club Leon,1,2,,,A,2.71,3.3,2.49,2.83,3.57,2.6
+MEX,16/04/2017,U.A.N.L.- Tigres,U.N.A.M.- Pumas,4,0,,,H,1.54,3.9,6.01,1.62,4.2,7.4
+MEX,16/04/2017,Veracruz,Necaxa,0,1,,,A,2.29,3.17,3.09,2.41,3.4,3.32
+MEX,16/04/2017,Pachuca,Guadalajara Chivas,0,0,,,D,2.23,3.16,3.22,2.33,3.35,3.47
+MEX,16/04/2017,Club America,Queretaro,1,0,,,H,1.79,3.46,4.48,1.85,3.68,5.23
+MEX,16/04/2017,Toluca,Monterrey,1,1,,,D,2.75,3.26,2.47,2.93,3.47,2.6
+MEX,17/04/2017,Puebla,Cruz Azul,2,1,,,H,3.3,3.14,2.21,3.62,3.3,2.35
+MEX,22/04/2017,Club Tijuana,Toluca,2,0,,,H,2.13,3.11,3.51,2.23,3.25,3.98
+MEX,22/04/2017,Cruz Azul,Guadalajara Chivas,2,1,,,H,2.02,3.16,3.82,2.15,3.32,4.22
+MEX,22/04/2017,Queretaro,Chiapas,2,2,,,D,1.95,3.41,3.73,2.04,3.6,4.15
+MEX,23/04/2017,Atlas,Pachuca,1,0,,,H,2.24,3.23,3.17,2.65,3.5,3.42
+MEX,23/04/2017,Monterrey,U.A.N.L.- Tigres,1,0,,,H,2.19,3.25,3.26,2.36,3.55,4.05
+MEX,23/04/2017,Club Leon,Puebla,1,0,,,H,1.59,3.9,5.29,1.67,4.29,5.9
+MEX,23/04/2017,Necaxa,Monarcas,2,1,,,H,2.49,3.0,2.93,2.69,3.25,3.12
+MEX,23/04/2017,U.N.A.M.- Pumas,Veracruz,0,2,,,A,1.53,4.09,5.65,1.62,4.46,6.57
+MEX,24/04/2017,Santos Laguna,Club America,2,1,,,H,2.11,3.21,3.45,2.23,3.45,3.88
+MEX,29/04/2017,Veracruz,Monterrey,1,0,,,H,3.76,3.44,1.94,4.11,3.7,2.05
+MEX,29/04/2017,Chiapas,Santos Laguna,2,2,,,D,3.05,3.37,2.21,3.24,3.65,2.29
+MEX,30/04/2017,Monarcas,U.N.A.M.- Pumas,4,0,,,H,2.05,3.33,3.47,2.19,3.5,3.8
+MEX,30/04/2017,U.A.N.L.- Tigres,Club Tijuana,3,0,,,H,1.62,3.81,5.15,1.7,4.2,6.0
+MEX,30/04/2017,Guadalajara Chivas,Club Leon,1,1,,,D,2.08,3.43,3.28,2.19,3.7,3.6
+MEX,30/04/2017,Pachuca,Cruz Azul,2,2,,,D,2.38,3.19,2.93,2.52,3.4,3.2
+MEX,30/04/2017,Club America,Atlas,1,2,,,A,1.8,3.33,4.63,1.9,3.55,5.49
+MEX,30/04/2017,Toluca,Queretaro,1,2,,,A,1.65,3.69,5.13,1.73,3.97,6.0
+MEX,02/05/2017,Monarcas,Club America,0,2,,,A,2.86,3.3,2.36,3.1,3.6,2.45
+MEX,02/05/2017,U.A.N.L.- Tigres,Toluca,0,1,,,A,1.75,3.53,4.62,1.81,3.84,5.05
+MEX,02/05/2017,Club Leon,Club Tijuana,2,4,,,A,1.75,3.67,4.4,1.85,4.08,5.12
+MEX,02/05/2017,Necaxa,Monterrey,1,1,,,D,3.01,3.25,2.3,3.2,3.49,2.44
+MEX,02/05/2017,U.N.A.M.- Pumas,Pachuca,1,1,,,D,2.82,3.29,2.41,3.16,3.54,2.7
+MEX,02/05/2017,Guadalajara Chivas,Santos Laguna,1,1,,,D,1.75,3.45,4.76,1.83,3.68,5.75
+MEX,03/05/2017,Monarcas,Veracruz,1,0,,,H,1.83,3.5,4.1,1.93,3.83,4.5
+MEX,03/05/2017,Monterrey,Queretaro,4,1,,,H,1.45,4.17,6.85,1.59,4.61,8.2
+MEX,03/05/2017,Club Leon,Club America,1,1,,,D,2.37,3.3,2.86,2.58,3.51,3.2
+MEX,03/05/2017,Necaxa,Atlas,1,1,,,D,2.32,3.19,3.04,2.43,3.42,3.27
+MEX,03/05/2017,Guadalajara Chivas,Toluca,2,0,,,H,1.96,3.28,3.83,2.1,3.44,4.22
+MEX,03/05/2017,Puebla,U.A.N.L.- Tigres,0,2,,,A,3.09,3.19,2.29,3.42,3.4,2.44
+MEX,03/05/2017,U.N.A.M.- Pumas,Santos Laguna,2,1,,,H,2.12,3.42,3.24,2.25,3.69,3.5
+MEX,08/05/2017,Monarcas,Santos Laguna,1,1,,,D,2.58,3.2,2.64,2.9,3.43,2.85
+MEX,08/05/2017,Club Tijuana,Monterrey,0,3,,,A,3.3,3.27,2.14,3.57,3.49,2.31
+MEX,08/05/2017,Lobos BUAP,Pachuca,3,2,,,H,3.28,3.39,2.11,3.97,3.73,2.22
+MEX,11/05/2017,Pachuca,Queretaro,0,1,,,A,1.7,3.72,4.75,2.8,4.33,5.4
+MEX,11/05/2017,Club America,Puebla,1,1,,,D,1.75,3.51,4.63,1.83,3.72,5.21
+MEX,11/05/2017,Guadalajara Chivas,Atlas,1,2,,,A,2.26,3.13,3.19,2.42,3.36,3.9
+MEX,11/05/2017,U.N.A.M.- Pumas,Santos Laguna,2,2,,,D,2.75,3.48,2.36,2.89,3.84,2.49
+MEX,14/05/2017,Monterrey,U.A.N.L.- Tigres,0,2,,,A,1.86,3.66,3.8,2.05,3.91,4.1
+MEX,14/05/2017,Toluca,Santos Laguna,1,3,,,A,2.28,3.35,2.98,2.42,3.52,3.2
+MEX,15/05/2017,Guadalajara Chivas,Atlas,1,0,,,H,1.65,3.51,5.5,1.77,3.67,6.63
+MEX,15/05/2017,Club Tijuana,Monarcas,2,0,,,H,1.58,3.71,5.81,1.75,3.98,6.89
+MEX,19/05/2017,Toluca,Guadalajara Chivas,1,1,,,D,2.09,3.26,3.44,2.15,3.55,3.73
+MEX,19/05/2017,U.A.N.L.- Tigres,Club Tijuana,2,0,,,H,1.57,3.7,6.03,1.65,3.93,7.0
+MEX,22/05/2017,Guadalajara Chivas,Toluca,1,1,,,D,2.05,3.21,3.58,2.15,3.54,3.92
+MEX,22/05/2017,Club Tijuana,U.A.N.L.- Tigres,0,2,,,A,2.84,3.22,2.4,3.05,3.5,2.54
+MEX,26/05/2017,U.A.N.L.- Tigres,Guadalajara Chivas,2,2,,,D,1.74,3.26,5.16,1.81,3.6,5.94
+MEX,29/05/2017,Guadalajara Chivas,U.A.N.L.- Tigres,2,1,,,H,2.94,2.98,2.48,3.28,3.24,2.69
+MEX,05/06/2017,Queretaro,U.A.N.L.- Tigres,1,5,,,A,5.13,3.56,1.67,6.0,3.87,1.75
+MEX,08/06/2017,U.A.N.L.- Tigres,Queretaro,1,1,,,D,1.38,4.48,8.09,1.44,4.9,9.66
+MEX,08/06/2017,Club Leon,Cruz Azul,2,2,,,D,2.54,3.22,2.71,2.7,3.49,2.9
+MEX,08/06/2017,Club America,U.N.A.M.- Pumas,2,1,,,H,1.96,3.33,3.83,2.06,3.5,4.2
+MEX,08/06/2017,Guadalajara Chivas,Necaxa,2,2,,,D,1.92,3.23,4.13,2.01,3.35,4.75
+MEX,08/06/2017,Toluca,Atlas,3,2,,,H,1.92,3.38,3.87,2.02,3.6,4.25
+MEX,11/06/2017,U.A.N.L.- Tigres,Necaxa,1,0,,,H,1.61,3.67,5.59,1.68,3.89,6.4
+MEX,11/06/2017,Veracruz,Toluca,0,1,,,A,3.23,3.34,2.15,3.45,3.59,2.27

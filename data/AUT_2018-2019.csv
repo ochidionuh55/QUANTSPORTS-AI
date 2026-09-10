@@ -1,0 +1,196 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+AUT,04/07/2018,Sturm Graz,Austria Vienna,0,2,,,A,1.67,3.93,4.8,1.85,4.5,5.17
+AUT,04/07/2018,Wolfsberger AC,Mattersburg,0,2,,,A,2.91,3.23,2.43,3.1,3.4,2.56
+AUT,04/07/2018,Altach,Admira,1,2,,,A,1.93,3.49,3.85,2.1,3.7,4.23
+AUT,04/07/2018,SK Rapid,St. Polten,2,1,,,H,1.26,5.79,10.46,1.3,6.31,12.16
+AUT,10/07/2018,SK Rapid,Mattersburg,1,0,,,H,1.67,3.92,4.84,1.77,4.1,5.5
+AUT,10/07/2018,Wacker Innsbruck,LASK,1,0,,,H,4.91,4.11,1.63,5.25,4.49,1.72
+AUT,10/07/2018,Sturm Graz,Salzburg,1,2,,,A,5.82,4.22,1.53,6.5,4.4,1.61
+AUT,27/07/2018,Austria Vienna,Wacker Innsbruck,2,1,,,H,1.59,4.01,5.31,1.65,4.25,6.1
+AUT,28/07/2018,Altach,Mattersburg,2,3,,,A,2.38,3.27,2.94,2.6,3.44,3.18
+AUT,28/07/2018,Sturm Graz,Hartberg,3,2,,,H,1.5,4.24,6.17,1.6,4.44,7.01
+AUT,29/07/2018,Admira,SK Rapid,0,3,,,A,6.84,4.89,1.4,8.0,5.31,1.53
+AUT,29/07/2018,Salzburg,LASK,3,1,,,H,1.46,4.2,7.15,1.52,4.5,8.75
+AUT,29/07/2018,St. Polten,Wolfsberger AC,4,3,,,H,2.7,3.2,2.61,2.82,3.4,2.85
+AUT,04/08/2018,LASK,Salzburg,1,0,,,H,3.1,3.13,2.36,3.4,3.3,2.6
+AUT,12/08/2018,Wolfsberger AC,LASK,1,1,,,D,3.31,3.39,2.14,3.52,3.58,2.28
+AUT,12/08/2018,Admira,Salzburg,2,2,,,D,16.73,8.17,1.14,29.0,9.2,1.22
+AUT,12/08/2018,St. Polten,Altach,2,1,,,H,2.38,3.13,3.06,2.54,3.4,3.35
+AUT,18/08/2018,Mattersburg,Wolfsberger AC,0,6,,,A,2.28,3.4,3.02,2.43,3.62,3.25
+AUT,18/08/2018,Salzburg,Hartberg,2,0,,,H,1.21,6.56,12.1,1.24,7.2,15.72
+AUT,18/08/2018,Wacker Innsbruck,St. Polten,0,2,,,A,1.96,3.5,3.74,2.11,3.7,4.5
+AUT,19/08/2018,Austria Vienna,Admira,4,0,,,H,1.42,4.74,6.73,1.5,5.16,7.5
+AUT,19/08/2018,LASK,SK Rapid,2,1,,,H,2.14,3.36,3.36,2.4,3.55,3.74
+AUT,19/08/2018,Sturm Graz,Altach,1,1,,,D,1.65,3.94,4.93,1.7,4.2,5.34
+AUT,25/08/2018,Wolfsberger AC,Sturm Graz,1,1,,,D,2.64,3.33,2.6,2.76,3.5,2.76
+AUT,25/08/2018,Altach,Salzburg,2,3,,,A,6.46,3.95,1.53,7.53,4.2,1.7
+AUT,25/08/2018,St. Polten,Austria Vienna,0,0,,,D,3.37,3.56,2.06,3.52,3.78,2.3
+AUT,26/08/2018,Admira,Mattersburg,0,0,,,D,3.06,3.65,2.17,3.3,3.82,2.28
+AUT,26/08/2018,Hartberg,LASK,0,1,,,A,4.06,3.68,1.84,4.4,3.89,1.93
+AUT,26/08/2018,SK Rapid,Wacker Innsbruck,2,1,,,H,1.46,4.6,6.23,1.52,4.92,6.92
+AUT,12/09/2018,Hartberg,Wacker Innsbruck,2,2,,,D,1.95,3.68,3.57,2.02,3.89,3.75
+AUT,12/09/2018,Mattersburg,Austria Vienna,2,1,,,H,2.57,3.31,2.68,2.71,3.46,2.83
+AUT,12/09/2018,SK Rapid,Sturm Graz,0,0,,,D,2.22,3.52,3.02,2.3,3.73,3.21
+AUT,15/09/2018,Admira,Sturm Graz,2,3,,,A,4.19,3.8,1.79,4.4,4.0,1.86
+AUT,15/09/2018,Hartberg,Altach,2,1,,,H,2.24,3.49,3.03,2.55,3.7,3.2
+AUT,15/09/2018,St. Polten,Salzburg,1,3,,,A,9.18,5.12,1.32,10.5,5.7,1.4
+AUT,16/09/2018,Wolfsberger AC,Wacker Innsbruck,3,1,,,H,1.88,3.5,4.1,1.97,3.68,4.45
+AUT,16/09/2018,Mattersburg,LASK,1,3,,,A,3.24,3.26,2.24,3.4,3.38,2.33
+AUT,16/09/2018,SK Rapid,Austria Vienna,0,1,,,A,1.99,3.57,3.61,2.1,3.75,4.0
+AUT,22/09/2018,Altach,Wolfsberger AC,0,1,,,A,2.86,3.26,2.46,3.0,3.4,2.61
+AUT,22/09/2018,St. Polten,Hartberg,3,0,,,H,2.23,3.49,3.07,2.38,3.7,3.45
+AUT,22/09/2018,Sturm Graz,Mattersburg,1,2,,,A,1.86,3.52,4.22,1.96,3.75,4.72
+AUT,23/09/2018,Austria Vienna,LASK,0,3,,,A,2.57,3.25,2.73,2.7,3.38,2.84
+AUT,23/09/2018,Wacker Innsbruck,Admira,1,3,,,A,1.83,3.81,3.99,1.91,4.04,4.34
+AUT,23/09/2018,Salzburg,SK Rapid,2,1,,,H,1.21,6.73,12.89,1.5,7.84,18.0
+AUT,29/09/2018,Wolfsberger AC,Salzburg,1,4,,,A,6.93,4.57,1.43,7.84,5.25,1.51
+AUT,29/09/2018,Admira,Altach,2,4,,,A,2.61,3.41,2.59,2.77,3.64,3.0
+AUT,29/09/2018,SK Rapid,St. Polten,0,2,,,A,1.5,4.5,5.81,1.65,5.03,7.0
+AUT,30/09/2018,Hartberg,Austria Vienna,0,1,,,A,3.25,3.54,2.12,3.6,3.75,2.2
+AUT,30/09/2018,Mattersburg,Wacker Innsbruck,2,1,,,H,1.91,3.72,3.69,1.98,3.97,3.9
+AUT,30/09/2018,LASK,Sturm Graz,0,0,,,D,1.83,3.59,4.22,1.94,3.8,4.7
+AUT,02/10/2018,Altach,Salzburg,0,1,,,A,7.8,4.33,1.41,9.17,4.74,1.5
+AUT,02/10/2018,Austria Vienna,LASK,1,3,,,A,2.61,3.34,2.6,2.8,3.66,2.9
+AUT,02/10/2018,St. Polten,Mattersburg,0,3,,,A,3.07,3.24,2.3,3.3,3.4,2.5
+AUT,02/10/2018,Sturm Graz,Wolfsberger AC,0,1,,,A,1.65,3.62,5.44,1.7,4.0,6.25
+AUT,03/10/2018,Altach,SK Rapid,0,0,,,D,3.79,3.51,1.94,4.25,3.74,2.05
+AUT,03/10/2018,Wolfsberger AC,LASK,0,3,,,A,3.92,3.14,2.03,4.2,3.32,2.2
+AUT,03/10/2018,Admira,Sturm Graz,2,4,,,A,4.34,3.68,1.78,5.0,3.98,2.0
+AUT,03/10/2018,Austria Vienna,St. Polten,4,0,,,H,1.57,4.08,5.44,1.63,4.3,6.1
+AUT,11/10/2018,LASK,Admira,5,1,,,H,1.28,5.47,9.77,1.33,6.0,11.5
+AUT,11/10/2018,Sturm Graz,St. Polten,0,0,,,D,1.6,3.83,5.59,1.66,4.0,6.29
+AUT,11/10/2018,Wacker Innsbruck,Altach,1,0,,,H,2.56,3.26,2.73,2.68,3.4,2.87
+AUT,20/10/2018,Hartberg,SK Rapid,3,0,,,H,5.08,4.49,1.56,6.0,4.91,1.67
+AUT,20/10/2018,LASK,Altach,1,1,,,D,1.39,4.64,7.83,1.42,5.0,9.0
+AUT,20/10/2018,Salzburg,Wacker Innsbruck,1,1,,,D,1.1,9.36,21.32,1.15,12.4,32.35
+AUT,21/10/2018,Admira,Wolfsberger AC,0,0,,,D,3.51,3.68,1.98,3.8,3.92,2.04
+AUT,21/10/2018,Mattersburg,St. Polten,2,0,,,H,2.09,3.45,3.38,2.24,3.6,3.64
+AUT,21/10/2018,Austria Vienna,Sturm Graz,1,1,,,D,2.36,3.38,2.92,2.48,3.5,3.1
+AUT,27/10/2018,Hartberg,Sturm Graz,2,0,,,H,3.78,3.71,1.89,4.04,3.95,2.0
+AUT,27/10/2018,Mattersburg,Altach,1,1,,,D,1.9,3.63,3.84,1.98,3.8,4.04
+AUT,27/10/2018,Wacker Innsbruck,Austria Vienna,0,0,,,D,3.03,3.4,2.28,3.16,3.57,2.38
+AUT,28/10/2018,Wolfsberger AC,St. Polten,1,0,,,H,1.7,3.81,4.75,1.75,4.15,5.06
+AUT,28/10/2018,SK Rapid,Admira,2,0,,,H,1.31,5.53,8.45,1.45,6.05,9.5
+AUT,28/10/2018,LASK,Salzburg,3,3,,,D,4.46,3.55,1.79,4.75,3.75,1.84
+AUT,02/11/2018,Admira,SK Rapid,2,1,,,H,6.74,4.81,1.41,7.87,5.36,1.8
+AUT,03/11/2018,Mattersburg,Salzburg,2,2,,,D,3.9,3.53,1.91,4.58,3.72,2.0
+AUT,08/11/2018,Altach,Wacker Innsbruck,1,2,,,A,2.0,3.46,3.65,2.06,3.6,3.88
+AUT,08/11/2018,Hartberg,Mattersburg,4,2,,,H,3.0,3.45,2.26,3.3,3.7,2.39
+AUT,08/11/2018,Salzburg,Austria Vienna,2,0,,,H,1.26,5.76,11.11,1.35,6.44,13.37
+AUT,11/11/2018,Wolfsberger AC,SK Rapid,3,1,,,H,2.49,3.43,2.7,2.66,3.59,2.87
+AUT,11/11/2018,Mattersburg,Hartberg,1,2,,,A,2.03,3.55,3.48,2.1,3.69,3.74
+AUT,11/11/2018,Austria Vienna,Salzburg,0,2,,,A,7.9,4.89,1.36,8.7,5.3,1.42
+AUT,24/11/2018,Wolfsberger AC,Mattersburg,2,2,,,D,1.77,3.7,4.29,1.86,3.9,4.62
+AUT,24/11/2018,Admira,Austria Vienna,1,2,,,A,3.89,3.67,1.87,4.5,3.88,1.99
+AUT,24/11/2018,Hartberg,Salzburg,0,4,,,A,9.61,5.91,1.26,11.0,6.4,1.33
+AUT,25/11/2018,Altach,Sturm Graz,0,2,,,A,3.18,3.45,2.16,3.35,3.66,2.25
+AUT,25/11/2018,St. Polten,Wacker Innsbruck,2,0,,,H,2.1,3.45,3.34,2.17,3.62,3.6
+AUT,25/11/2018,SK Rapid,LASK,0,1,,,A,2.65,3.45,2.51,2.81,3.65,2.6
+AUT,05/12/2018,Sturm Graz,LASK,3,1,,,H,2.37,3.21,3.0,2.46,3.4,3.22
+AUT,05/12/2018,Admira,Mattersburg,1,1,,,D,2.66,3.54,2.46,2.78,3.84,2.65
+AUT,05/12/2018,Altach,St. Polten,1,3,,,A,1.78,3.63,4.41,1.85,4.0,5.4
+AUT,08/12/2018,Admira,LASK,0,1,,,A,3.49,3.41,2.07,3.9,3.54,2.15
+AUT,08/12/2018,SK Rapid,Wolfsberger AC,0,0,,,D,1.48,4.34,6.39,1.54,4.62,7.5
+AUT,08/12/2018,St. Polten,Sturm Graz,2,0,,,H,3.5,3.46,2.05,3.8,3.61,2.15
+AUT,15/12/2018,LASK,Mattersburg,2,1,,,H,1.42,4.33,7.45,1.46,4.6,8.15
+AUT,15/12/2018,Sturm Graz,Admira,3,0,,,H,1.34,4.92,8.51,1.39,5.4,10.0
+AUT,15/12/2018,Wacker Innsbruck,Wolfsberger AC,0,0,,,D,3.66,3.35,2.03,3.9,3.52,2.14
+AUT,16/12/2018,Altach,Hartberg,6,1,,,H,2.03,3.52,3.47,2.14,3.72,3.7
+AUT,16/12/2018,Salzburg,St. Polten,5,1,,,H,1.17,6.92,15.62,1.2,8.5,23.0
+AUT,16/12/2018,Austria Vienna,SK Rapid,6,1,,,H,3.33,2.14,3.05,3.46,2.29,3.23
+AUT,09/01/2019,Altach,Sturm Graz,1,2,,,A,2.75,3.29,2.48,3.0,3.46,2.65
+AUT,09/01/2019,Austria Vienna,SK Rapid,1,3,,,A,2.73,3.71,2.31,2.9,4.02,2.5
+AUT,09/01/2019,St. Polten,Hartberg,1,3,,,A,2.21,3.56,2.97,2.31,3.76,3.3
+AUT,12/01/2019,Admira,Salzburg,1,1,,,D,13.31,7.65,1.16,17.0,9.0,1.19
+AUT,12/01/2019,Altach,Wolfsberger AC,2,1,,,H,4.05,3.94,1.76,4.33,4.18,1.86
+AUT,12/01/2019,LASK,SK Rapid,0,4,,,A,1.72,3.76,4.5,1.77,4.0,4.87
+AUT,03/02/2019,Altach,Admira,0,1,,,A,1.86,3.61,3.92,1.94,3.86,4.2
+AUT,03/02/2019,Salzburg,Wolfsberger AC,3,0,,,H,1.3,5.2,9.06,1.35,5.65,10.5
+AUT,03/02/2019,St. Polten,SK Rapid,0,4,,,A,3.76,3.53,1.92,4.1,3.8,2.04
+AUT,06/02/2019,Sturm Graz,SK Rapid,0,1,,,A,2.99,3.58,2.18,3.16,3.78,2.3
+AUT,11/02/2019,Mattersburg,Salzburg,0,3,,,A,14.67,8.78,1.13,19.0,10.0,1.18
+AUT,11/02/2019,SK Rapid,St. Polten,0,1,,,A,1.25,5.78,10.12,1.29,6.5,11.63
+AUT,11/02/2019,Sturm Graz,Wolfsberger AC,0,4,,,A,2.74,3.44,2.41,2.88,3.73,2.65
+AUT,22/02/2019,LASK,Austria Vienna,2,0,,,H,1.57,4.0,5.42,1.62,4.31,5.9
+AUT,23/02/2019,Wolfsberger AC,Altach,0,0,,,D,1.79,3.56,4.39,1.83,3.78,4.75
+AUT,23/02/2019,Admira,Wacker Innsbruck,3,0,,,H,2.21,3.35,3.15,2.3,3.46,3.3
+AUT,24/02/2019,Hartberg,St. Polten,1,1,,,D,2.4,3.43,2.77,2.52,3.63,2.88
+AUT,24/02/2019,Mattersburg,Sturm Graz,1,1,,,D,2.84,3.18,2.49,3.03,3.38,2.59
+AUT,24/02/2019,SK Rapid,Salzburg,2,0,,,H,5.53,4.18,1.54,6.0,4.41,1.58
+AUT,03/03/2019,Austria Vienna,Hartberg,4,2,,,H,1.64,3.95,4.79,1.74,4.13,5.39
+AUT,03/03/2019,Sturm Graz,LASK,0,3,,,A,3.3,3.27,2.17,3.5,3.52,2.25
+AUT,03/03/2019,Wacker Innsbruck,Mattersburg,0,1,,,A,2.82,3.21,2.47,2.99,3.4,2.65
+AUT,08/03/2019,Altach,Tirol,3,2,,,H,1.83,3.62,4.01,2.05,3.95,4.39
+AUT,08/03/2019,Austria Vienna,LASK,0,3,,,A,3.74,3.64,1.9,4.1,3.95,2.15
+AUT,08/03/2019,Hartberg,Admira,4,1,,,H,2.18,3.49,3.08,2.25,3.7,3.27
+AUT,11/03/2019,Admira,Hartberg,0,1,,,A,2.14,3.65,3.06,2.4,3.94,3.8
+AUT,11/03/2019,Tirol,Altach,0,4,,,A,2.51,3.45,2.61,2.6,3.7,2.75
+AUT,11/03/2019,LASK,Austria Vienna,2,0,,,H,1.3,5.54,8.18,1.37,5.96,9.4
+AUT,17/03/2019,Wolfsberger AC,Admira,2,2,,,D,1.68,3.57,5.23,1.72,3.8,5.69
+AUT,17/03/2019,Altach,LASK,1,2,,,A,4.74,3.5,1.75,5.25,3.85,1.82
+AUT,17/03/2019,SK Rapid,Hartberg,2,2,,,D,1.25,5.99,9.97,1.3,6.65,13.0
+AUT,17/03/2019,St. Polten,Mattersburg,0,1,,,A,2.69,3.31,2.53,2.9,3.5,2.68
+AUT,17/03/2019,Sturm Graz,Austria Vienna,1,0,,,H,2.14,3.08,3.65,2.25,3.3,4.5
+AUT,17/03/2019,Wacker Innsbruck,Salzburg,0,2,,,A,13.12,6.33,1.2,16.18,6.92,1.24
+AUT,30/03/2019,Altach,Mattersburg,2,1,,,H,2.15,3.37,3.23,2.28,3.63,3.45
+AUT,30/03/2019,Hartberg,Wacker Innsbruck,0,2,,,A,2.14,3.58,3.06,2.29,3.75,3.3
+AUT,30/03/2019,SK Rapid,Admira,3,0,,,H,1.42,4.5,6.84,1.46,4.78,7.5
+AUT,31/03/2019,Wolfsberger AC,LASK,0,3,,,A,3.88,3.35,1.95,4.25,3.6,2.01
+AUT,31/03/2019,Sturm Graz,St. Polten,0,1,,,A,1.66,3.72,5.01,1.73,4.0,5.37
+AUT,31/03/2019,Salzburg,Austria Vienna,5,1,,,H,1.19,6.69,12.78,1.25,7.35,15.0
+AUT,05/04/2019,Admira,SK Rapid,3,4,,,A,5.0,4.28,1.57,5.55,4.89,1.65
+AUT,05/04/2019,Mattersburg,Altach,0,0,,,D,2.17,3.27,3.29,2.28,3.45,3.5
+AUT,05/04/2019,Wacker Innsbruck,Hartberg,1,0,,,H,1.97,3.76,3.36,2.08,4.1,3.6
+AUT,08/04/2019,Wolfsberger AC,Sturm Graz,0,1,,,A,2.24,3.43,2.99,2.38,3.65,3.25
+AUT,08/04/2019,Salzburg,Mattersburg,4,1,,,H,1.13,8.02,17.48,1.2,9.4,23.0
+AUT,08/04/2019,St. Polten,SK Rapid,2,2,,,D,5.56,4.43,1.5,6.0,4.71,1.56
+AUT,13/04/2019,Hartberg,Altach,0,1,,,A,3.05,3.35,2.25,3.25,3.53,2.4
+AUT,13/04/2019,SK Rapid,Mattersburg,2,1,,,H,1.44,4.48,6.53,1.5,4.89,7.2
+AUT,13/04/2019,Wacker Innsbruck,Admira,1,3,,,A,2.25,3.25,3.14,2.38,3.4,3.28
+AUT,14/04/2019,Wolfsberger AC,Austria Vienna,1,1,,,D,2.06,3.33,3.51,2.4,3.51,3.75
+AUT,14/04/2019,LASK,St. Polten,0,0,,,D,1.18,6.51,14.7,1.22,7.23,22.0
+AUT,14/04/2019,Salzburg,Sturm Graz,3,1,,,H,1.22,5.99,11.55,1.27,6.6,16.0
+AUT,20/04/2019,Admira,Hartberg,2,1,,,H,1.75,3.73,4.34,1.85,3.95,5.0
+AUT,20/04/2019,Altach,SK Rapid,2,2,,,D,3.06,3.32,2.25,3.3,3.4,2.37
+AUT,20/04/2019,Mattersburg,Wacker Innsbruck,3,1,,,H,1.9,3.54,3.84,1.95,3.72,4.5
+AUT,21/04/2019,St. Polten,Salzburg,1,1,,,D,14.79,7.34,1.16,19.0,8.0,1.2
+AUT,21/04/2019,Sturm Graz,Wolfsberger AC,1,2,,,A,2.23,3.24,3.17,2.35,3.44,3.6
+AUT,21/04/2019,Austria Vienna,LASK,2,2,,,D,3.68,3.37,1.99,4.33,3.51,2.08
+AUT,23/04/2019,Admira,Mattersburg,0,2,,,A,2.3,3.37,2.93,2.42,3.55,3.13
+AUT,23/04/2019,Hartberg,SK Rapid,2,4,,,A,6.35,4.95,1.4,7.5,5.35,1.5
+AUT,23/04/2019,Wacker Innsbruck,Altach,0,4,,,A,3.26,3.41,2.12,3.75,3.55,2.24
+AUT,24/04/2019,Austria Vienna,St. Polten,2,2,,,D,1.84,3.54,4.07,1.92,3.7,4.5
+AUT,24/04/2019,LASK,Sturm Graz,1,2,,,A,1.58,3.85,5.54,1.65,4.02,6.0
+AUT,24/04/2019,Salzburg,Wolfsberger AC,3,1,,,H,1.23,5.92,10.97,1.27,6.5,13.5
+AUT,27/04/2019,Altach,Wacker Innsbruck,1,4,,,A,1.87,3.62,3.83,1.95,3.95,4.2
+AUT,27/04/2019,Mattersburg,Admira,1,1,,,D,1.92,3.52,3.77,1.99,3.9,4.33
+AUT,27/04/2019,SK Rapid,Hartberg,3,4,,,A,1.28,5.78,8.57,1.33,6.5,9.6
+AUT,28/04/2019,Wolfsberger AC,Salzburg,2,1,,,H,5.85,4.33,1.49,6.6,4.67,1.55
+AUT,28/04/2019,St. Polten,Austria Vienna,1,2,,,A,2.9,3.26,2.38,3.1,3.42,2.5
+AUT,28/04/2019,Sturm Graz,LASK,2,3,,,A,3.5,3.4,2.04,3.76,3.6,2.3
+AUT,05/05/2019,LASK,Wolfsberger AC,3,0,,,H,1.64,3.81,5.07,1.69,4.0,6.0
+AUT,05/05/2019,St. Polten,Sturm Graz,0,1,,,A,3.4,3.38,2.07,3.6,3.62,2.15
+AUT,05/05/2019,Austria Vienna,Salzburg,1,2,,,A,4.3,3.82,1.74,4.75,4.2,1.82
+AUT,10/05/2019,Admira,Tirol,3,1,,,H,2.6,3.44,2.53,2.73,3.6,2.6
+AUT,10/05/2019,Mattersburg,SK Rapid,2,3,,,A,4.77,4.22,1.6,5.25,4.6,1.66
+AUT,10/05/2019,Salzburg,Altach,6,0,,,H,1.14,8.18,14.11,1.18,10.0,17.0
+AUT,18/05/2019,Admira,Wacker Innsbruck,3,2,,,H,2.35,3.63,2.71,2.41,3.97,3.0
+AUT,18/05/2019,Altach,Hartberg,3,1,,,H,1.93,3.63,3.62,2.06,3.8,3.9
+AUT,18/05/2019,Mattersburg,SK Rapid,1,0,,,H,3.81,3.91,1.81,4.0,4.21,1.87
+AUT,19/05/2019,Austria Vienna,Wolfsberger AC,2,0,,,H,2.23,3.41,3.04,2.3,3.67,3.25
+AUT,19/05/2019,St. Polten,LASK,0,1,,,A,6.04,4.3,1.49,7.0,4.69,1.54
+AUT,19/05/2019,Sturm Graz,Salzburg,1,2,,,A,3.8,3.72,1.86,4.35,4.0,1.95
+AUT,25/05/2019,Hartberg,Admira,3,1,,,H,1.56,4.47,4.84,1.63,5.02,5.75
+AUT,25/05/2019,SK Rapid,Altach,1,2,,,A,1.87,3.73,3.67,1.98,3.93,4.4
+AUT,25/05/2019,Wacker Innsbruck,Mattersburg,4,0,,,H,1.45,4.64,5.88,1.49,4.94,6.5
+AUT,26/05/2019,Wolfsberger AC,Sturm Graz,2,1,,,H,1.99,3.56,3.47,2.08,3.87,3.8
+AUT,26/05/2019,LASK,Austria Vienna,5,2,,,H,2.48,3.38,2.67,2.62,3.6,2.8
+AUT,26/05/2019,Salzburg,St. Polten,7,0,,,H,1.08,10.22,23.93,1.12,13.0,34.0
+AUT,28/05/2019,SK Rapid,Mattersburg,2,0,,,H,1.43,4.5,6.59,1.5,4.8,7.5
+AUT,30/05/2019,SK Rapid,Sturm Graz,1,2,,,A,1.65,3.9,4.84,1.75,4.2,5.5
+AUT,04/06/2019,Admira,Altach,1,1,,,D,2.68,3.17,2.62,2.78,3.4,2.78
+AUT,04/06/2019,Mattersburg,Hartberg,3,0,,,H,1.91,3.65,3.67,2.03,4.0,4.0
+AUT,04/06/2019,Wacker Innsbruck,SK Rapid,0,2,,,A,4.28,3.74,1.76,4.5,3.97,1.83
+AUT,10/06/2019,Hartberg,LASK,1,2,,,A,6.64,5.07,1.38,7.5,5.61,1.44
+AUT,10/06/2019,Wolfsberger AC,St. Polten,4,0,,,H,1.29,5.75,8.31,1.32,6.36,10.0
+AUT,10/06/2019,Austria Vienna,Sturm Graz,1,0,,,H,2.74,3.52,2.38,2.86,3.72,2.45

@@ -1,0 +1,426 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+BRA,01/07/2021,Bragantino,Sao Paulo,4,2,,,H,2.89,3.13,2.51,3.0,3.34,2.66
+BRA,01/07/2021,Flamengo RJ,Fluminense,1,2,,,A,1.46,4.38,6.76,1.52,4.65,8.0
+BRA,01/07/2021,Ceara,Internacional,0,2,,,A,2.86,2.96,2.65,3.01,3.08,2.84
+BRA,02/07/2021,Atletico GO,Santos,1,1,,,D,2.44,3.17,2.93,2.52,3.33,3.1
+BRA,02/07/2021,Bragantino,Flamengo RJ,1,1,,,D,3.12,3.58,2.13,3.32,3.79,2.26
+BRA,06/07/2021,Sport Recife,Atletico-MG,0,1,,,A,4.23,3.33,1.9,4.75,3.5,2.01
+BRA,07/07/2021,Bahia,Juventude,1,0,,,H,1.74,3.42,5.05,1.81,3.65,5.6
+BRA,07/07/2021,Bragantino,Cuiaba,1,1,,,D,1.62,3.63,5.84,1.69,4.0,6.75
+BRA,07/07/2021,Fortaleza,America MG,4,0,,,H,1.83,3.35,4.54,1.91,3.53,4.9
+BRA,07/07/2021,Atletico-MG,Flamengo RJ,2,1,,,H,2.98,3.15,2.43,3.2,3.41,2.53
+BRA,07/07/2021,Palmeiras,Gremio,2,0,,,H,1.99,3.33,3.87,2.06,3.5,4.38
+BRA,07/07/2021,Atletico GO,Sport Recife,1,1,,,D,1.92,3.1,4.59,2.02,3.34,4.9
+BRA,08/07/2021,Athletico-PR,Sao Paulo,1,2,,,A,2.82,2.97,2.69,2.94,3.1,2.81
+BRA,10/07/2021,Bragantino,Flamengo RJ,1,1,,,D,3.1,3.31,2.27,3.42,3.6,2.35
+BRA,10/07/2021,America MG,Palmeiras,2,1,,,H,2.67,3.02,2.76,2.9,3.25,2.95
+BRA,10/07/2021,Fluminense,Fortaleza,0,2,,,A,2.37,3.03,3.15,2.47,3.18,3.31
+BRA,10/07/2021,Gremio,Cuiaba,2,2,,,D,1.53,3.73,6.85,1.62,3.91,7.88
+BRA,10/07/2021,Sao Paulo,Santos,1,1,,,D,1.7,3.52,5.2,1.8,3.75,6.15
+BRA,11/07/2021,Fluminense,Sport Recife,1,0,,,H,1.72,3.27,5.74,1.77,3.57,6.25
+BRA,11/07/2021,Atletico-MG,America MG,1,0,,,H,1.65,3.68,5.49,1.71,3.89,6.5
+BRA,11/07/2021,Bragantino,Athletico-PR,0,2,,,A,2.15,3.15,3.61,2.22,3.4,4.0
+BRA,11/07/2021,Santos,Palmeiras,0,2,,,A,3.73,3.25,2.08,4.1,3.5,2.19
+BRA,11/07/2021,Bahia,Sao Paulo,1,0,,,H,2.98,3.06,2.52,3.3,3.24,2.64
+BRA,11/07/2021,Ceara,Cuiaba,1,0,,,H,1.94,3.14,4.49,1.99,3.32,5.03
+BRA,12/07/2021,Chapecoense-SC,Sport Recife,0,1,,,A,3.0,3.09,2.48,3.15,3.35,2.81
+BRA,17/07/2021,Ceara,Athletico-PR,1,0,,,H,2.04,3.18,3.9,2.15,3.42,4.23
+BRA,17/07/2021,Sao Paulo,Fortaleza,0,1,,,A,2.12,3.0,3.84,2.25,3.14,4.23
+BRA,17/07/2021,Corinthians,Atletico-MG,1,2,,,A,2.67,2.94,2.88,2.83,3.2,3.1
+BRA,18/07/2021,Fluminense,Gremio,0,1,,,A,2.62,2.96,2.92,2.72,3.1,3.34
+BRA,18/07/2021,Chapecoense-SC,Cuiaba,2,3,,,A,2.54,2.91,3.06,2.63,3.1,3.39
+BRA,18/07/2021,Atletico GO,Palmeiras,0,3,,,A,4.11,3.32,1.93,4.62,3.75,2.01
+BRA,18/07/2021,Bahia,Flamengo RJ,0,5,,,A,5.08,3.84,1.65,5.44,4.1,1.71
+BRA,19/07/2021,Bragantino,Santos,2,2,,,D,1.86,3.49,4.18,1.93,3.69,4.7
+BRA,19/07/2021,Internacional,Juventude,1,0,,,H,1.72,3.33,5.53,1.8,3.56,6.0
+BRA,20/07/2021,America MG,Sport Recife,0,1,,,A,1.75,3.28,5.43,1.83,3.49,6.02
+BRA,21/07/2021,Cuiaba,Atletico GO,2,1,,,H,2.53,2.9,3.09,2.72,3.0,3.33
+BRA,24/07/2021,Gremio,America MG,1,1,,,D,1.92,3.26,4.28,2.01,3.53,4.68
+BRA,24/07/2021,Palmeiras,Fluminense,1,0,,,H,1.58,3.68,6.32,1.65,4.05,7.23
+BRA,25/07/2021,Atletico-MG,Bahia,3,0,,,H,1.64,3.78,5.36,1.71,4.0,6.43
+BRA,25/07/2021,Flamengo RJ,Sao Paulo,5,1,,,H,1.61,3.81,5.59,1.7,4.1,6.2
+BRA,25/07/2021,Fortaleza,Bragantino,1,0,,,H,2.69,3.04,2.76,2.85,3.2,2.9
+BRA,25/07/2021,Athletico-PR,Internacional,2,1,,,H,2.46,3.05,3.02,2.63,3.3,3.2
+BRA,25/07/2021,Santos,Atletico GO,0,1,,,A,1.8,3.33,4.83,1.92,3.47,5.26
+BRA,26/07/2021,Sport Recife,Ceara,0,0,,,D,3.43,2.87,2.36,3.84,3.1,2.58
+BRA,26/07/2021,Juventude,Chapecoense-SC,1,0,,,H,2.2,2.92,3.78,2.28,3.1,4.44
+BRA,27/07/2021,Cuiaba,Corinthians,1,2,,,A,3.09,2.77,2.65,3.32,2.9,2.81
+BRA,31/07/2021,Sao Paulo,Palmeiras,0,0,,,D,2.86,2.93,2.69,3.2,3.1,2.81
+BRA,01/08/2021,Atletico GO,Vasco,0,0,,,D,2.11,3.05,3.82,2.2,3.24,4.05
+BRA,02/08/2021,Botafogo RJ,Gremio,2,5,,,A,6.34,4.15,1.5,7.0,4.5,1.57
+BRA,07/08/2021,Fluminense,Ceara,0,0,,,D,2.24,2.95,3.57,2.34,3.1,3.78
+BRA,07/08/2021,Internacional,Sao Paulo,0,2,,,A,2.78,3.0,2.7,2.87,3.19,2.87
+BRA,08/08/2021,Cuiaba,Bahia,1,1,,,D,2.45,3.0,3.11,2.68,3.2,3.27
+BRA,08/08/2021,Palmeiras,Fortaleza,2,3,,,A,1.72,3.45,5.23,1.83,3.61,5.71
+BRA,08/08/2021,America MG,Fluminense,1,0,,,H,2.86,2.89,2.71,3.01,3.11,2.86
+BRA,08/08/2021,Juventude,Atletico-MG,1,2,,,A,4.11,2.99,2.06,4.5,3.2,2.15
+BRA,08/08/2021,Santos,Corinthians,0,0,,,D,2.67,2.91,2.91,2.88,3.1,3.14
+BRA,08/08/2021,Ceara,Atletico GO,0,0,,,D,1.77,3.39,4.87,1.84,3.56,5.4
+BRA,08/08/2021,Flamengo RJ,Internacional,0,4,,,A,1.46,4.28,6.96,1.53,4.7,8.64
+BRA,09/08/2021,Chapecoense-SC,Fluminense,1,2,,,A,4.16,3.08,2.0,4.85,3.33,2.1
+BRA,09/08/2021,Corinthians,Juventude,1,1,,,D,1.63,3.29,6.94,1.73,3.46,7.7
+BRA,11/08/2021,Chapecoense-SC,Flamengo RJ,2,2,,,D,8.18,4.87,1.36,9.0,5.2,1.41
+BRA,14/08/2021,Bragantino,Juventude,1,2,,,A,1.9,3.17,4.44,1.98,3.45,5.5
+BRA,14/08/2021,Atletico-MG,Palmeiras,2,0,,,H,2.06,3.22,3.69,2.2,3.48,4.0
+BRA,15/08/2021,Sao Paulo,Gremio,2,1,,,H,2.36,2.87,3.39,2.51,3.17,3.53
+BRA,15/08/2021,Corinthians,Ceara,3,1,,,H,2.24,2.9,3.6,2.36,3.2,3.91
+BRA,15/08/2021,Flamengo RJ,Sport Recife,2,0,,,H,1.3,5.3,9.16,1.36,5.75,10.5
+BRA,15/08/2021,Bahia,Atletico GO,1,2,,,A,2.04,3.21,3.77,2.13,3.51,4.16
+BRA,15/08/2021,Cuiaba,Athletico-PR,1,0,,,H,2.18,3.03,3.57,2.3,3.4,3.8
+BRA,15/08/2021,Fortaleza,Santos,1,1,,,D,1.8,3.45,4.53,1.88,3.72,4.95
+BRA,16/08/2021,Internacional,Fluminense,4,2,,,H,1.93,3.15,4.35,2.03,3.35,4.83
+BRA,17/08/2021,Chapecoense-SC,America MG,1,1,,,D,3.49,3.17,2.14,3.64,3.38,2.21
+BRA,18/08/2021,Cuiaba,Gremio,0,1,,,A,3.31,3.0,2.32,3.5,3.14,2.49
+BRA,21/08/2021,Atletico GO,Chapecoense-SC,1,1,,,D,1.84,3.26,4.67,1.91,3.44,5.06
+BRA,21/08/2021,Gremio,Bahia,2,0,,,H,1.92,3.29,4.14,2.05,3.45,4.5
+BRA,22/08/2021,Juventude,Fortaleza,1,1,,,D,3.75,2.96,2.17,4.05,3.08,2.23
+BRA,22/08/2021,Palmeiras,Cuiaba,0,2,,,A,1.45,4.1,7.58,1.51,4.31,8.5
+BRA,22/08/2021,Athletico-PR,Corinthians,0,1,,,A,2.47,2.98,3.09,2.56,3.2,3.32
+BRA,22/08/2021,Ceara,Flamengo RJ,1,1,,,D,4.3,3.56,1.81,4.75,3.8,1.88
+BRA,22/08/2021,Santos,Internacional,2,2,,,D,3.39,3.11,2.24,3.7,3.32,2.4
+BRA,23/08/2021,Sport Recife,Sao Paulo,0,1,,,A,4.59,3.16,1.88,5.0,3.4,1.96
+BRA,24/08/2021,America MG,Bragantino,0,2,,,A,3.02,3.19,2.38,3.2,3.35,2.45
+BRA,24/08/2021,Fluminense,Atletico-MG,1,1,,,D,4.21,3.19,1.96,4.55,3.35,2.06
+BRA,28/08/2021,Sport Recife,Chapecoense-SC,0,0,,,D,1.98,3.14,4.19,2.03,3.4,4.6
+BRA,28/08/2021,Santos,Flamengo RJ,0,4,,,A,5.79,4.45,1.5,6.26,4.75,1.55
+BRA,29/08/2021,Gremio,Corinthians,0,1,,,A,2.23,2.9,3.67,2.4,3.12,4.22
+BRA,29/08/2021,Palmeiras,Athletico-PR,2,1,,,H,1.64,3.83,5.27,1.71,4.25,5.87
+BRA,29/08/2021,America MG,Ceara,2,0,,,H,2.52,2.92,3.07,2.65,3.19,3.24
+BRA,29/08/2021,Juventude,Sao Paulo,1,1,,,D,4.39,2.97,2.01,4.96,3.2,2.1
+BRA,29/08/2021,Atletico GO,Internacional,0,0,,,D,3.68,3.27,2.06,4.04,3.43,2.14
+BRA,30/08/2021,Bragantino,Atletico-MG,1,1,,,D,3.59,3.29,2.09,3.94,3.45,2.25
+BRA,30/08/2021,Fluminense,Bahia,2,0,,,H,2.1,3.14,3.71,2.2,3.34,4.0
+BRA,31/08/2021,Fortaleza,Cuiaba,0,0,,,D,1.61,3.61,6.12,1.66,3.88,6.84
+BRA,01/09/2021,Coritiba,Athletico-PR,0,0,,,D,3.33,2.95,2.35,3.5,3.12,2.42
+BRA,01/09/2021,Sport Recife,Palmeiras,0,1,,,A,3.82,3.25,2.02,4.2,3.52,2.09
+BRA,07/09/2021,Chapecoense-SC,Corinthians,0,1,,,A,4.23,3.1,1.98,4.53,3.25,2.04
+BRA,10/09/2021,Atletico-MG,Ceara,3,1,,,H,1.49,3.96,7.18,1.54,4.3,7.81
+BRA,10/09/2021,Fluminense,Atletico GO,0,0,,,D,1.92,3.12,4.52,2.0,3.25,4.9
+BRA,10/09/2021,Sport Recife,Corinthians,1,0,,,H,4.02,2.83,2.17,4.34,3.03,2.26
+BRA,10/09/2021,Athletico-PR,Bahia,0,2,,,A,1.66,3.67,5.26,1.75,3.89,5.53
+BRA,10/09/2021,Fortaleza,Flamengo RJ,0,3,,,A,3.0,3.11,2.46,3.15,3.38,2.58
+BRA,13/09/2021,Fluminense,Sao Paulo,2,1,,,H,3.21,2.91,2.44,3.34,3.1,2.55
+BRA,14/09/2021,Sport Recife,Internacional,0,1,,,A,3.69,3.02,2.16,3.94,3.25,2.23
+BRA,18/09/2021,Chapecoense-SC,Palmeiras,0,2,,,A,5.84,3.88,1.57,6.76,4.12,1.63
+BRA,18/09/2021,Athletico-PR,Juventude,2,1,,,H,2.07,3.03,3.96,2.15,3.25,4.33
+BRA,18/09/2021,Atletico-MG,Sport Recife,3,0,,,H,1.25,5.38,12.78,1.37,5.9,15.0
+BRA,19/09/2021,Bahia,Bragantino,1,1,,,D,2.33,3.2,3.11,2.55,3.5,3.5
+BRA,19/09/2021,Ceara,Santos,0,0,,,D,2.3,2.99,3.41,2.4,3.33,3.77
+BRA,19/09/2021,Internacional,Fortaleza,1,0,,,H,2.0,3.34,3.78,2.1,3.6,4.05
+BRA,19/09/2021,Sao Paulo,Atletico GO,2,1,,,H,1.57,3.83,6.24,1.7,4.1,7.5
+BRA,19/09/2021,Corinthians,America MG,1,1,,,D,2.0,3.13,4.09,2.06,3.31,4.4
+BRA,20/09/2021,Flamengo RJ,Gremio,0,1,,,A,1.46,4.33,6.88,1.51,4.75,8.1
+BRA,21/09/2021,Cuiaba,Fluminense,2,2,,,D,3.36,2.8,2.45,3.65,3.04,2.53
+BRA,23/09/2021,Sao Paulo,America MG,0,0,,,D,2.02,3.26,3.81,2.13,3.46,4.03
+BRA,25/09/2021,Ceara,Chapecoense-SC,1,0,,,H,1.79,3.37,4.88,1.85,3.6,5.5
+BRA,25/09/2021,Corinthians,Palmeiras,2,1,,,H,3.15,2.94,2.48,3.34,3.13,2.64
+BRA,26/09/2021,Sao Paulo,Atletico-MG,0,0,,,D,3.38,3.05,2.29,3.7,3.3,2.39
+BRA,26/09/2021,America MG,Flamengo RJ,1,1,,,D,3.74,3.39,2.0,4.5,3.62,2.11
+BRA,26/09/2021,Fluminense,Bragantino,2,1,,,H,1.74,3.45,5.07,1.87,3.66,5.71
+BRA,26/09/2021,Internacional,Bahia,2,0,,,H,1.74,3.59,4.77,1.91,3.78,5.25
+BRA,26/09/2021,Juventude,Santos,3,0,,,H,2.91,2.9,2.66,3.04,3.06,2.83
+BRA,26/09/2021,Athletico-PR,Gremio,4,2,,,H,3.05,2.94,2.52,3.21,3.16,2.75
+BRA,26/09/2021,Sport Recife,Fortaleza,0,1,,,A,3.9,3.1,2.07,4.25,3.26,2.13
+BRA,27/09/2021,Atletico GO,Cuiaba,0,0,,,D,2.36,2.85,3.48,2.48,2.97,3.77
+BRA,01/10/2021,Fortaleza,Gremio,0,0,,,D,3.5,2.99,2.25,3.8,3.24,2.4
+BRA,01/10/2021,Flamengo RJ,Ceara,0,2,,,A,1.37,4.98,7.64,1.4,5.5,9.0
+BRA,01/10/2021,Sao Paulo,Santos,0,1,,,A,1.45,4.19,7.23,1.5,4.5,8.0
+BRA,01/10/2021,Atletico GO,Bahia,1,1,,,D,2.34,3.07,3.21,2.44,3.24,3.45
+BRA,01/10/2021,Internacional,Goias,1,0,,,H,1.46,4.16,7.17,1.52,4.61,8.5
+BRA,01/10/2021,Vasco,Botafogo RJ,3,0,,,H,2.2,3.11,3.47,2.3,3.3,3.74
+BRA,02/10/2021,Internacional,Sport Recife,1,2,,,A,1.48,3.91,7.29,1.53,4.52,8.57
+BRA,02/10/2021,Fortaleza,Vasco,3,0,,,H,2.01,2.94,4.36,2.11,3.14,4.85
+BRA,07/10/2021,Gremio,Internacional,0,0,,,D,2.32,3.03,3.34,2.46,3.2,3.51
+BRA,07/10/2021,Palmeiras,Santos,3,2,,,H,1.53,4.0,6.46,1.6,4.2,7.72
+BRA,07/10/2021,Athletico-PR,Bragantino,2,2,,,D,2.55,3.18,2.83,2.71,3.4,3.05
+BRA,07/10/2021,America MG,Atletico-MG,0,1,,,A,4.01,3.23,1.99,4.2,3.38,2.06
+BRA,07/10/2021,Sao Paulo,Bahia,1,0,,,H,1.9,3.31,4.28,1.99,3.63,4.6
+BRA,07/10/2021,Sport Recife,Fluminense,1,2,,,A,2.75,2.83,2.9,3.06,3.0,3.01
+BRA,08/10/2021,Gremio,Chapecoense-SC,2,1,,,H,1.47,3.92,7.78,1.51,4.2,8.7
+BRA,10/10/2021,Juventude,America MG,1,1,,,D,3.03,2.78,2.68,3.2,3.0,2.8
+BRA,10/10/2021,Palmeiras,Bragantino,2,4,,,A,1.82,3.54,4.35,1.93,3.72,4.86
+BRA,10/10/2021,Internacional,Chapecoense-SC,5,2,,,H,1.4,4.55,7.82,1.44,4.87,9.1
+BRA,10/10/2021,Santos,Gremio,1,0,,,H,2.65,3.01,2.82,2.75,3.16,2.94
+BRA,11/10/2021,Gremio,Fluminense,1,0,,,H,2.36,2.92,3.4,2.55,3.1,3.7
+BRA,11/10/2021,Athletico-PR,Ceara,2,1,,,H,1.81,3.38,4.7,1.87,3.65,5.14
+BRA,11/10/2021,Atletico-MG,Corinthians,3,0,,,H,1.55,3.65,7.1,1.61,3.92,8.4
+BRA,11/10/2021,Santos,Bragantino,2,0,,,H,2.53,3.13,2.9,2.95,3.3,3.08
+BRA,11/10/2021,Palmeiras,Atletico GO,4,0,,,H,1.36,4.69,8.9,1.41,5.25,11.0
+BRA,12/10/2021,America MG,Sao Paulo,2,0,,,H,1.98,3.29,4.02,2.12,3.64,4.4
+BRA,12/10/2021,Atletico GO,Flamengo RJ,2,0,,,H,1.73,3.87,4.49,1.8,4.12,4.9
+BRA,12/10/2021,Bragantino,Internacional,1,0,,,H,1.89,3.61,3.95,2.05,4.05,4.3
+BRA,12/10/2021,Fluminense,Chapecoense-SC,3,0,,,H,1.19,6.7,15.66,1.21,7.5,17.0
+BRA,12/10/2021,Fortaleza,Bahia,2,1,,,H,2.45,3.2,2.94,2.7,3.38,3.11
+BRA,12/10/2021,Gremio,Atletico-MG,4,3,,,H,1.52,4.33,5.77,1.58,4.6,6.21
+BRA,12/10/2021,Juventude,Corinthians,1,0,,,H,2.25,3.06,3.46,2.37,3.2,3.7
+BRA,12/10/2021,Palmeiras,Ceara,1,0,,,H,4.0,3.73,1.85,4.23,3.95,1.95
+BRA,12/10/2021,Santos,Cuiaba,1,1,,,D,2.07,3.01,4.09,2.14,3.24,4.45
+BRA,12/10/2021,Sport Recife,Athletico-PR,1,1,,,D,1.71,3.57,5.19,1.75,3.76,5.6
+BRA,13/10/2021,Bahia,Palmeiras,0,0,,,D,3.07,3.24,2.31,3.25,3.4,2.42
+BRA,13/10/2021,Atletico-MG,Santos,3,1,,,H,1.43,4.27,7.51,1.48,4.85,10.25
+BRA,13/10/2021,Chapecoense-SC,Athletico-PR,1,1,,,D,3.92,3.29,1.97,4.8,3.65,2.07
+BRA,13/10/2021,Flamengo RJ,Juventude,3,1,,,H,1.35,4.68,8.95,1.4,5.5,10.5
+BRA,14/10/2021,Fortaleza,Gremio,1,0,,,H,1.84,3.34,4.44,1.91,3.5,5.0
+BRA,14/10/2021,Corinthians,Fluminense,1,0,,,H,1.94,3.12,4.38,2.02,3.35,4.79
+BRA,14/10/2021,Internacional,America MG,3,1,,,H,1.92,3.32,4.02,2.0,3.51,4.35
+BRA,14/10/2021,Cuiaba,Sport Recife,1,0,,,H,2.11,2.92,4.03,2.2,3.1,4.35
+BRA,14/10/2021,Sao Paulo,Ceara,1,1,,,D,1.68,3.45,5.38,1.75,3.64,6.09
+BRA,16/10/2021,Chapecoense-SC,Fortaleza,1,2,,,A,4.89,3.58,1.72,5.5,3.76,1.78
+BRA,17/10/2021,America MG,Bahia,0,0,,,D,2.01,3.26,3.8,2.12,3.46,4.23
+BRA,17/10/2021,Athletico-PR,Fluminense,0,1,,,A,2.46,2.94,3.11,2.56,3.15,3.3
+BRA,17/10/2021,Palmeiras,Internacional,1,0,,,H,1.75,3.61,4.65,1.85,3.86,5.15
+BRA,17/10/2021,Atletico GO,Atletico-MG,2,1,,,H,4.89,3.36,1.77,5.36,3.6,1.83
+BRA,17/10/2021,Ceara,Bragantino,2,2,,,D,2.15,3.17,3.51,2.27,3.34,3.84
+BRA,17/10/2021,Gremio,Juventude,3,2,,,H,1.73,3.3,5.42,1.8,3.45,6.0
+BRA,18/10/2021,Flamengo RJ,Cuiaba,0,0,,,D,1.26,5.62,10.94,1.31,6.5,14.0
+BRA,18/10/2021,Sport Recife,Santos,0,0,,,D,2.55,2.89,3.02,2.7,3.08,3.2
+BRA,19/10/2021,Sao Paulo,Corinthians,1,0,,,H,2.09,3.02,3.94,2.3,3.22,4.23
+BRA,20/10/2021,Ceara,Palmeiras,1,2,,,A,3.05,3.13,2.39,3.27,3.37,2.55
+BRA,22/10/2021,Internacional,Bragantino,1,1,,,D,1.84,3.48,4.26,1.9,3.8,4.65
+BRA,23/10/2021,Juventude,Ceara,0,0,,,D,2.75,2.86,2.83,2.96,3.05,3.2
+BRA,23/10/2021,Santos,America MG,0,2,,,A,2.37,3.03,3.18,2.5,3.38,3.55
+BRA,23/10/2021,Fluminense,Flamengo RJ,3,1,,,H,4.69,3.28,1.83,5.5,3.5,1.92
+BRA,23/10/2021,Fortaleza,Athletico-PR,3,0,,,H,1.55,3.77,6.38,1.59,4.0,7.3
+BRA,24/10/2021,Atletico-MG,Cuiaba,2,1,,,H,1.27,5.28,11.18,1.37,5.91,13.5
+BRA,24/10/2021,Internacional,Corinthians,2,2,,,D,2.13,3.06,3.71,2.24,3.32,4.1
+BRA,24/10/2021,Bragantino,Sao Paulo,1,0,,,H,2.68,3.06,2.7,3.0,3.35,2.82
+BRA,25/10/2021,Bahia,Chapecoense-SC,3,0,,,H,1.46,4.27,6.82,1.52,4.54,7.75
+BRA,26/10/2021,Atletico GO,Gremio,2,0,,,H,2.77,3.0,2.68,2.93,3.15,2.91
+BRA,26/10/2021,Palmeiras,Sport Recife,2,1,,,H,1.36,4.64,8.6,1.4,4.92,9.9
+BRA,27/10/2021,Bahia,Ceara,1,1,,,D,2.05,3.21,3.75,2.13,3.45,4.09
+BRA,27/10/2021,Santos,Fluminense,2,0,,,H,2.54,2.93,3.03,2.75,3.12,3.2
+BRA,28/10/2021,Bragantino,Sport Recife,3,0,,,H,1.47,4.12,7.11,1.52,4.4,8.0
+BRA,30/10/2021,Athletico-PR,Santos,0,1,,,A,1.8,3.38,4.65,1.9,3.55,5.14
+BRA,30/10/2021,Flamengo RJ,Atletico-MG,1,0,,,H,2.25,3.25,3.23,2.5,3.5,3.44
+BRA,30/10/2021,Juventude,Bahia,0,0,,,D,2.42,2.9,3.27,2.65,3.09,3.57
+BRA,31/10/2021,America MG,Fortaleza,2,1,,,H,2.08,2.99,3.7,2.2,3.35,4.13
+BRA,31/10/2021,Ceara,Fluminense,1,0,,,H,2.3,2.99,3.39,2.49,3.2,3.73
+BRA,31/10/2021,Gremio,Palmeiras,1,3,,,A,2.85,3.19,2.5,3.0,3.35,2.61
+BRA,31/10/2021,Sao Paulo,Internacional,1,0,,,H,1.75,3.52,4.88,1.85,3.7,5.38
+BRA,31/10/2021,Sport Recife,Atletico GO,2,0,,,H,2.43,2.85,3.27,2.55,3.01,3.48
+BRA,01/11/2021,Bragantino,Atletico-MG,2,2,,,D,3.12,3.42,2.22,3.4,3.6,2.3
+BRA,02/11/2021,Sao Paulo,Ceara,1,1,,,D,1.69,3.67,4.96,1.77,4.05,5.32
+BRA,02/11/2021,Corinthians,Athletico-PR,3,3,,,D,1.97,3.24,3.98,2.06,3.4,4.41
+BRA,02/11/2021,Fluminense,Atletico-MG,0,0,,,D,3.42,3.2,2.16,3.65,3.4,2.29
+BRA,07/11/2021,Juventude,Atletico GO,1,1,,,D,2.55,2.85,3.15,2.72,3.1,3.35
+BRA,07/11/2021,Cuiaba,Ceara,2,2,,,D,2.87,2.83,2.79,3.16,3.0,2.93
+BRA,07/11/2021,Flamengo RJ,Chapecoense-SC,2,1,,,H,1.2,6.41,15.15,1.22,7.0,21.0
+BRA,09/11/2021,America MG,Athletico-PR,2,0,,,H,2.41,3.09,3.07,2.58,3.29,3.32
+BRA,09/11/2021,Juventude,Cuiaba,1,2,,,A,2.41,2.8,3.45,2.49,3.1,3.68
+BRA,09/11/2021,Bragantino,Chapecoense-SC,1,2,,,A,1.58,3.85,5.94,1.65,4.27,8.5
+BRA,11/11/2021,Fortaleza,Sao Paulo,1,1,,,D,2.62,2.97,2.91,2.75,3.18,3.06
+BRA,11/11/2021,Juventude,Internacional,2,1,,,H,2.67,2.8,3.04,2.77,3.0,3.15
+BRA,11/11/2021,Sport Recife,America MG,2,3,,,A,2.97,3.03,2.54,3.08,3.2,2.67
+BRA,11/11/2021,Flamengo RJ,Bahia,3,0,,,H,1.58,4.03,5.48,1.64,4.24,6.0
+BRA,13/11/2021,Atletico GO,Santos,0,0,,,D,2.09,3.17,3.77,2.3,3.32,4.1
+BRA,13/11/2021,America MG,Gremio,3,1,,,H,2.09,3.21,3.69,2.17,3.4,3.9
+BRA,13/11/2021,Bragantino,Fortaleza,3,0,,,H,2.04,3.25,3.83,2.25,3.4,4.15
+BRA,13/11/2021,Internacional,Athletico-PR,2,1,,,H,2.15,3.06,3.75,2.23,3.39,4.05
+BRA,14/11/2021,Corinthians,Cuiaba,3,2,,,H,1.59,3.53,6.93,1.66,3.69,8.3
+BRA,14/11/2021,Sao Paulo,Flamengo RJ,0,4,,,A,2.72,3.3,2.59,2.87,3.56,2.72
+BRA,14/11/2021,Fluminense,Palmeiras,2,1,,,H,3.16,3.11,2.36,3.32,3.35,2.51
+BRA,14/11/2021,Ceara,Sport Recife,2,1,,,H,1.77,3.35,5.05,1.93,3.54,5.56
+BRA,14/11/2021,Chapecoense-SC,Juventude,0,2,,,A,3.31,3.1,2.3,3.5,3.24,2.44
+BRA,16/11/2021,Athletico-PR,Atletico-MG,0,1,,,A,6.48,4.07,1.51,7.0,4.33,1.56
+BRA,16/11/2021,Gremio,Bragantino,3,0,,,H,1.54,4.15,5.88,1.6,4.5,6.62
+BRA,17/11/2021,America MG,Atletico GO,0,0,,,D,1.6,3.88,5.67,1.65,4.1,6.2
+BRA,17/11/2021,Cuiaba,Internacional,1,0,,,H,2.6,2.98,2.97,2.75,3.14,3.19
+BRA,17/11/2021,Santos,Chapecoense-SC,2,0,,,H,1.36,4.61,9.19,1.41,4.85,11.0
+BRA,17/11/2021,Fortaleza,Ceara,0,4,,,A,2.42,2.97,3.2,2.5,3.15,3.5
+BRA,17/11/2021,Juventude,Fluminense,1,0,,,H,2.8,2.7,3.01,3.0,2.85,3.3
+BRA,17/11/2021,Palmeiras,Sao Paulo,0,2,,,A,2.14,3.27,3.51,2.28,3.46,3.8
+BRA,18/11/2021,Flamengo RJ,Corinthians,1,0,,,H,1.9,3.35,4.31,1.98,4.0,6.5
+BRA,19/11/2021,Sport Recife,Bahia,1,0,,,H,2.79,2.97,2.74,2.9,3.15,2.85
+BRA,20/11/2021,Atletico-MG,Juventude,2,0,,,H,1.32,4.93,9.82,1.37,5.5,12.0
+BRA,20/11/2021,Chapecoense-SC,Gremio,1,3,,,A,5.95,4.04,1.55,6.5,4.31,1.6
+BRA,20/11/2021,Fortaleza,Palmeiras,1,0,,,H,2.62,3.08,2.82,2.85,3.36,2.93
+BRA,21/11/2021,Atletico GO,Ceara,1,1,,,D,2.27,3.07,3.36,2.38,3.26,3.7
+BRA,21/11/2021,Internacional,Flamengo RJ,1,2,,,A,3.83,3.4,1.99,4.15,3.7,2.08
+BRA,21/11/2021,Corinthians,Santos,2,0,,,H,1.74,3.29,5.56,1.83,3.6,6.29
+BRA,21/11/2021,Fluminense,America MG,2,0,,,H,2.17,3.12,3.54,2.35,3.35,3.82
+BRA,21/11/2021,Bahia,Cuiaba,0,0,,,D,1.86,3.23,4.65,1.97,3.46,5.12
+BRA,23/11/2021,Atletico GO,Juventude,1,1,,,D,2.13,3.0,3.89,2.27,3.2,4.3
+BRA,24/11/2021,Gremio,Flamengo RJ,2,2,,,D,2.03,3.51,3.5,2.12,3.65,3.75
+BRA,24/11/2021,Palmeiras,Atletico-MG,2,2,,,D,4.59,3.54,1.78,5.25,3.8,1.85
+BRA,25/11/2021,Fluminense,Internacional,1,0,,,H,2.37,3.02,3.22,2.45,3.2,3.46
+BRA,25/11/2021,Sao Paulo,Athletico-PR,0,0,,,D,1.84,3.22,4.79,1.92,3.35,5.25
+BRA,25/11/2021,Santos,Fortaleza,2,0,,,H,2.74,2.98,2.78,2.98,3.1,3.0
+BRA,25/11/2021,Ceara,Corinthians,2,1,,,H,2.36,3.05,3.22,2.43,3.21,3.49
+BRA,26/11/2021,Bahia,Gremio,3,1,,,H,2.59,3.07,2.85,2.8,3.21,3.0
+BRA,27/11/2021,Bragantino,America MG,1,1,,,D,1.95,3.35,4.02,2.0,3.5,4.3
+BRA,28/11/2021,Sao Paulo,Sport Recife,2,0,,,H,1.48,4.06,7.08,1.52,4.23,7.83
+BRA,28/11/2021,Atletico-MG,Fluminense,2,1,,,H,1.37,4.54,9.06,1.42,4.9,10.5
+BRA,28/11/2021,Corinthians,Athletico-PR,1,0,,,H,2.0,3.07,4.24,2.05,3.25,4.65
+BRA,28/11/2021,Internacional,Santos,1,1,,,D,1.56,3.91,6.08,1.62,4.2,6.95
+BRA,29/11/2021,Atletico GO,Bahia,2,1,,,H,2.54,2.99,3.0,2.61,3.2,3.17
+BRA,30/11/2021,Juventude,Bragantino,1,0,,,H,2.42,2.95,3.23,2.54,3.13,3.5
+BRA,30/11/2021,Flamengo RJ,Ceara,2,1,,,H,1.43,4.57,6.88,1.47,4.9,7.5
+BRA,06/12/2021,Palmeiras,Corinthians,1,1,,,D,1.88,3.3,4.36,1.99,3.55,5.0
+BRA,06/12/2021,Santos,Juventude,0,0,,,D,1.63,3.73,5.51,1.68,4.0,6.32
+BRA,07/12/2021,Fortaleza,Corinthians,1,0,,,H,2.32,2.95,3.41,2.44,3.16,3.6
+BRA,09/12/2021,Santos,Bahia,0,0,,,D,2.27,3.2,3.22,2.4,3.38,3.45
+BRA,09/12/2021,Gremio,Ceara,2,0,,,H,2.11,3.07,3.77,2.19,3.3,4.06
+BRA,09/12/2021,Fortaleza,Atletico-MG,0,2,,,A,3.23,3.05,2.36,3.44,3.25,2.55
+BRA,09/12/2021,Palmeiras,Flamengo RJ,1,3,,,A,2.32,3.42,2.94,2.43,3.6,3.3
+BRA,09/12/2021,Atletico GO,Corinthians,1,1,,,D,3.06,2.75,2.68,3.3,3.0,2.86
+BRA,10/12/2021,Cuiaba,Sao Paulo,0,0,,,D,3.67,2.97,2.19,3.96,3.19,2.33
+BRA,10/12/2021,Bragantino,Atletico GO,1,0,,,H,1.74,3.46,4.87,1.82,3.62,5.3
+BRA,05/01/2022,Botafogo RJ,Juventude,1,1,,,D,1.93,3.29,4.26,2.02,3.55,4.73
+BRA,05/01/2022,Corinthians,Fortaleza,1,0,,,H,1.81,3.37,4.81,1.91,3.66,5.2
+BRA,05/01/2022,Coritiba,Fluminense,3,2,,,H,2.5,2.94,3.14,2.7,3.13,3.34
+BRA,05/01/2022,Internacional,Avai,0,0,,,D,1.52,3.9,6.93,1.56,4.14,8.0
+BRA,10/01/2022,Atletico-MG,Fluminense,2,0,,,H,1.73,3.53,5.05,1.84,3.72,5.6
+BRA,10/01/2022,Ceara,America MG,1,2,,,A,2.01,3.25,3.92,2.06,3.46,4.26
+BRA,10/01/2022,Internacional,Santos,1,0,,,H,1.72,3.53,5.18,1.79,3.78,5.6
+BRA,10/01/2022,Athletico-PR,Juventude,2,0,,,H,1.45,4.26,7.18,1.5,4.75,8.04
+BRA,10/01/2022,Avai,Atletico GO,1,2,,,A,2.19,3.16,3.47,2.26,3.35,3.75
+BRA,10/01/2022,Flamengo RJ,Bragantino,4,1,,,H,1.43,4.44,7.25,1.47,4.63,8.07
+BRA,10/01/2022,Goias,Fortaleza,0,1,,,A,2.83,3.0,2.66,3.0,3.27,2.8
+BRA,11/01/2022,Botafogo RJ,Cuiaba,0,2,,,A,1.86,3.28,4.64,1.93,3.4,5.3
+BRA,06/02/2022,Fortaleza,Ceara,0,1,,,A,2.47,2.93,3.18,2.7,3.09,3.4
+BRA,07/02/2022,Fluminense,Corinthians,4,0,,,H,1.62,3.48,6.6,1.69,3.66,7.8
+BRA,07/02/2022,Juventude,Atletico-MG,1,2,,,A,4.5,3.3,1.87,4.82,3.45,1.91
+BRA,07/02/2022,Ceara,Internacional,1,1,,,D,2.11,3.15,3.72,2.17,3.25,4.12
+BRA,07/02/2022,Santos,Flamengo RJ,1,2,,,A,2.91,3.13,2.51,3.05,3.25,2.59
+BRA,08/02/2022,Santos,Fluminense,2,2,,,D,3.01,3.1,2.47,3.22,3.24,2.61
+BRA,10/02/2022,Corinthians,Cuiaba,2,0,,,H,1.67,3.42,5.92,1.72,3.55,6.57
+BRA,11/02/2022,Sao Paulo,Atletico-MG,2,2,,,D,2.5,2.96,3.13,2.72,3.18,3.27
+BRA,11/02/2022,America MG,Internacional,1,0,,,H,2.39,3.21,3.05,2.45,3.35,3.16
+BRA,11/02/2022,Athletico-PR,Goias,3,2,,,H,1.58,3.96,5.76,1.64,4.2,6.1
+BRA,11/02/2022,Atletico GO,Santos,2,3,,,A,1.97,3.33,3.99,2.05,3.54,4.3
+BRA,11/02/2022,Avai,Bragantino,1,2,,,A,3.35,3.24,2.21,3.67,3.55,2.36
+BRA,11/02/2022,Juventude,Coritiba,0,1,,,A,2.54,3.15,2.88,2.69,3.3,2.98
+BRA,05/03/2022,Sao Paulo,Santos,2,1,,,H,1.63,3.66,5.92,1.7,4.0,6.35
+BRA,07/03/2022,Palmeiras,Athletico-PR,0,2,,,A,1.33,5.2,8.68,1.39,5.75,9.9
+BRA,07/03/2022,Avai,Cuiaba,1,2,,,A,2.24,2.96,3.61,2.32,3.1,3.81
+BRA,07/03/2022,Atletico GO,Sao Paulo,1,2,,,A,2.66,3.11,2.75,2.75,3.28,2.96
+BRA,07/03/2022,America MG,Goias,1,0,,,H,1.8,3.39,4.72,1.86,3.65,5.2
+BRA,07/03/2022,Coritiba,Fortaleza,2,1,,,H,2.39,3.15,3.06,2.51,3.3,3.25
+BRA,09/03/2022,Juventude,Avai,1,1,,,D,2.24,3.08,3.48,2.32,3.24,3.74
+BRA,09/03/2022,Athletico-PR,Fluminense,1,0,,,H,3.14,3.27,2.31,3.5,3.45,2.45
+BRA,09/03/2022,Bragantino,Palmeiras,2,2,,,D,2.63,3.02,2.87,2.85,3.24,3.02
+BRA,11/03/2022,Flamengo RJ,Corinthians,1,2,,,A,1.7,3.63,5.12,1.77,3.94,5.54
+BRA,11/03/2022,Palmeiras,Fortaleza,4,0,,,H,1.45,4.55,6.85,1.57,4.85,7.65
+BRA,06/04/2022,America MG,Cuiaba,2,1,,,H,1.8,3.19,5.22,1.91,3.3,5.77
+BRA,06/04/2022,Athletico-PR,Santos,2,2,,,D,2.09,3.19,3.72,2.2,3.32,4.03
+BRA,06/04/2022,Avai,Sao Paulo,1,1,,,D,4.09,3.04,2.06,4.4,3.2,2.16
+BRA,06/04/2022,Ceara,Coritiba,1,1,,,D,1.59,3.83,5.89,1.68,4.07,6.5
+BRA,09/04/2022,America MG,Coritiba,2,0,,,H,1.67,3.58,5.56,1.72,3.78,6.5
+BRA,09/04/2022,Flamengo RJ,Ceara,1,1,,,D,1.35,4.78,9.07,1.41,5.1,10.17
+BRA,09/04/2022,Corinthians,Internacional,2,2,,,D,2.39,2.94,3.38,2.53,3.18,3.9
+BRA,09/04/2022,Fortaleza,Botafogo RJ,1,3,,,A,1.7,3.47,5.44,1.73,3.6,6.2
+BRA,09/04/2022,Atletico GO,Atletico-MG,0,2,,,A,4.31,3.39,1.88,4.65,3.55,1.95
+BRA,09/04/2022,Cuiaba,Sao Paulo,1,1,,,D,2.32,2.81,3.69,2.5,2.99,4.04
+BRA,10/04/2022,Botafogo RJ,Palmeiras,1,3,,,A,4.95,3.52,1.75,5.96,3.7,1.85
+BRA,16/04/2022,Goias,Palmeiras,1,1,,,D,6.15,3.84,1.57,7.0,4.09,1.63
+BRA,16/04/2022,America MG,Juventude,4,1,,,H,2.05,2.99,4.27,2.11,3.27,4.8
+BRA,16/04/2022,Corinthians,Avai,3,0,,,H,1.5,3.84,7.7,1.57,4.4,10.31
+BRA,17/04/2022,Cuiaba,Fluminense,0,1,,,A,2.98,2.84,2.71,3.11,3.03,2.85
+BRA,17/04/2022,Santos,Coritiba,2,1,,,H,1.97,3.33,4.01,2.02,3.44,4.27
+BRA,17/04/2022,Flamengo RJ,Sao Paulo,3,1,,,H,1.74,3.68,4.76,1.8,3.92,5.3
+BRA,17/04/2022,Athletico-PR,Atletico-MG,0,1,,,A,3.64,3.14,2.17,3.93,3.55,2.28
+BRA,17/04/2022,Bragantino,Atletico GO,4,0,,,H,1.86,3.41,4.43,2.0,3.66,5.5
+BRA,17/04/2022,Internacional,Fortaleza,2,1,,,H,2.37,3.07,3.26,2.55,3.68,4.8
+BRA,17/04/2022,Ceara,Botafogo RJ,1,3,,,A,1.75,3.56,4.92,1.85,3.8,5.6
+BRA,20/04/2022,Flamengo RJ,Palmeiras,0,0,,,D,2.06,3.38,3.6,2.14,3.62,3.86
+BRA,23/04/2022,Athletico-PR,Flamengo RJ,1,0,,,H,3.59,3.36,2.07,4.0,3.53,2.17
+BRA,23/04/2022,Bragantino,Sao Paulo,1,1,,,D,3.31,3.11,2.32,3.5,3.42,2.49
+BRA,23/04/2022,Fluminense,Internacional,0,1,,,A,1.85,3.25,4.78,2.0,3.5,5.25
+BRA,23/04/2022,Palmeiras,Corinthians,3,0,,,H,1.9,3.29,4.44,2.18,3.62,4.8
+BRA,24/04/2022,Atletico-MG,Coritiba,2,2,,,D,1.23,5.79,14.05,1.27,6.15,20.0
+BRA,24/04/2022,Santos,America MG,3,0,,,H,2.24,3.06,3.54,2.38,3.22,3.85
+BRA,24/04/2022,Juventude,Cuiaba,0,1,,,A,2.05,3.01,4.26,2.15,3.14,4.7
+BRA,24/04/2022,Atletico GO,Botafogo RJ,1,1,,,D,2.24,3.27,3.27,2.3,3.5,3.5
+BRA,26/04/2022,Avai,Goias,3,2,,,H,2.22,2.92,3.79,2.35,3.1,4.2
+BRA,30/04/2022,America MG,Athletico-PR,1,0,,,H,1.98,3.2,4.19,2.05,3.36,4.6
+BRA,30/04/2022,Ceara,Bragantino,0,1,,,A,2.04,3.27,3.85,2.15,3.44,4.2
+BRA,30/04/2022,Goias,Atletico-MG,2,2,,,D,7.35,4.16,1.47,8.19,4.5,1.53
+BRA,30/04/2022,Cuiaba,Atletico GO,1,1,,,D,2.27,2.95,3.58,2.37,3.15,3.93
+BRA,06/05/2022,Atletico GO,Corinthians,0,1,,,A,2.44,3.05,3.1,2.55,3.2,3.4
+BRA,06/05/2022,Juventude,Fluminense,1,0,,,H,2.67,2.94,2.89,2.78,3.05,3.13
+BRA,06/05/2022,Flamengo RJ,Fortaleza,1,2,,,A,1.5,4.18,6.53,1.55,4.45,7.5
+BRA,06/05/2022,Palmeiras,Atletico-MG,0,0,,,D,2.14,3.3,3.48,2.3,3.45,3.78
+BRA,06/05/2022,Bragantino,Internacional,0,2,,,A,2.31,3.06,3.34,2.4,3.15,3.67
+BRA,07/05/2022,Bragantino,Botafogo RJ,0,1,,,A,1.69,3.56,5.32,1.76,3.75,5.8
+BRA,10/05/2022,Juventude,Corinthians,2,2,,,D,4.45,3.27,1.9,5.12,3.45,1.98
+BRA,10/05/2022,Atletico GO,Fluminense,3,2,,,H,3.14,3.2,2.34,3.45,3.36,2.44
+BRA,10/05/2022,Bragantino,Cuiaba,2,1,,,H,1.95,3.17,4.36,2.05,3.34,4.72
+BRA,10/05/2022,Ceara,Goias,1,1,,,D,1.67,3.62,5.45,1.71,3.83,5.83
+BRA,10/05/2022,Athletico-PR,Fortaleza,1,1,,,D,2.03,3.23,3.94,2.14,3.61,4.33
+BRA,11/05/2022,Fluminense,Sao Paulo,3,1,,,H,2.06,3.48,3.56,2.14,3.7,3.85
+BRA,11/05/2022,Santos,Avai,1,1,,,D,1.38,4.56,8.85,1.43,4.85,10.15
+BRA,11/05/2022,Bragantino,America MG,1,4,,,A,2.0,3.49,3.69,2.05,3.65,4.0
+BRA,11/05/2022,Goias,Juventude,1,0,,,H,1.68,3.75,5.15,1.76,3.98,6.0
+BRA,11/05/2022,Corinthians,Ceara,1,0,,,H,1.87,3.26,4.56,1.96,3.43,5.02
+BRA,14/05/2022,Ceara,Flamengo RJ,2,2,,,D,3.86,3.41,1.97,4.26,3.62,2.03
+BRA,14/05/2022,Palmeiras,Bragantino,2,0,,,H,1.33,5.24,8.86,1.39,5.8,10.0
+BRA,14/05/2022,Atletico-MG,Atletico GO,2,0,,,H,1.25,5.93,11.0,1.28,6.5,12.0
+BRA,14/05/2022,Internacional,Corinthians,2,2,,,D,2.24,3.12,3.46,2.36,3.25,3.88
+BRA,15/05/2022,Fluminense,Athletico-PR,2,1,,,H,2.05,3.06,4.08,2.13,3.22,4.33
+BRA,15/05/2022,Sao Paulo,Cuiaba,2,1,,,H,1.47,4.05,7.57,1.5,4.26,8.5
+BRA,15/05/2022,Coritiba,America MG,1,0,,,H,2.17,3.11,3.61,2.26,3.28,3.79
+BRA,15/05/2022,Avai,Juventude,1,2,,,A,2.28,2.99,3.49,2.4,3.18,3.67
+BRA,15/05/2022,Botafogo RJ,Fortaleza,3,1,,,H,2.29,3.09,3.36,2.35,3.26,3.56
+BRA,15/05/2022,Goias,Santos,1,0,,,H,3.08,3.05,2.46,3.25,3.22,2.55
+BRA,21/05/2022,Atletico GO,Coritiba,2,0,,,H,2.12,3.24,3.6,2.3,3.4,4.05
+BRA,21/05/2022,Flamengo RJ,Goias,1,0,,,H,1.17,7.26,16.02,1.2,7.75,19.51
+BRA,21/05/2022,Santos,Ceara,0,0,,,D,2.31,3.1,3.3,2.46,3.35,3.65
+BRA,21/05/2022,Juventude,Palmeiras,0,3,,,A,4.68,3.37,1.83,5.25,3.6,1.9
+BRA,22/05/2022,America MG,Botafogo RJ,1,1,,,D,2.67,3.03,2.82,2.8,3.2,2.97
+BRA,22/05/2022,Cuiaba,Internacional,1,1,,,D,2.89,2.88,2.73,3.05,3.04,2.86
+BRA,22/05/2022,Corinthians,Sao Paulo,1,1,,,D,2.49,2.86,3.28,2.63,3.05,3.58
+BRA,22/05/2022,Fortaleza,Fluminense,0,1,,,A,2.03,3.21,3.97,2.15,3.4,4.23
+BRA,22/05/2022,Athletico-PR,Avai,2,1,,,H,1.6,3.67,6.2,1.65,3.93,6.84
+BRA,28/05/2022,Goias,Bragantino,1,1,,,D,2.87,2.92,2.71,3.2,3.06,2.95
+BRA,28/05/2022,Sao Paulo,Ceara,2,2,,,D,1.72,3.46,5.29,1.79,3.67,5.99
+BRA,29/05/2022,Fortaleza,Juventude,1,1,,,D,1.58,3.77,6.26,1.63,3.95,6.8
+BRA,29/05/2022,Coritiba,Botafogo RJ,1,0,,,H,2.74,3.0,2.76,2.9,3.1,3.0
+BRA,29/05/2022,Santos,Palmeiras,0,1,,,A,4.05,3.36,1.95,4.44,3.5,2.08
+BRA,29/05/2022,Corinthians,America MG,1,1,,,D,1.63,3.61,5.89,1.69,3.84,6.3
+BRA,29/05/2022,Cuiaba,Athletico-PR,0,1,,,A,2.57,2.79,3.22,2.65,2.88,3.35
+BRA,29/05/2022,Fluminense,Flamengo RJ,1,2,,,A,4.12,3.34,1.94,4.41,3.55,2.02
+BRA,29/05/2022,Atletico-MG,Avai,2,1,,,H,1.21,6.21,14.43,1.24,6.7,17.0
+BRA,31/05/2022,Internacional,Atletico GO,1,1,,,D,1.59,3.73,6.07,1.65,3.9,6.54
+BRA,08/06/2022,Botafogo RJ,Ceara,1,1,,,D,2.36,3.05,3.25,2.45,3.17,3.5
+BRA,08/06/2022,Juventude,America MG,0,1,,,A,2.38,3.16,3.12,2.5,3.3,3.3
+BRA,08/06/2022,Atletico GO,Bragantino,2,1,,,H,3.02,3.16,2.43,3.25,3.29,2.69
+BRA,08/06/2022,Avai,Corinthians,1,1,,,D,3.15,2.93,2.5,3.45,3.05,2.62
+BRA,09/06/2022,Santos,Goias,1,2,,,A,1.59,3.83,5.85,1.65,4.0,6.6
+BRA,10/06/2022,Flamengo RJ,Internacional,0,0,,,D,1.39,4.73,7.94,1.46,5.05,9.6
+BRA,10/06/2022,Santos,Atletico-MG,1,2,,,A,3.21,3.04,2.41,3.39,3.26,2.51
+BRA,10/06/2022,Palmeiras,Coritiba,4,0,,,H,1.23,6.25,12.04,1.25,7.11,14.0
+BRA,11/06/2022,Internacional,Athletico-PR,2,0,,,H,1.9,3.45,4.21,2.0,3.68,4.63
+BRA,11/06/2022,Coritiba,Flamengo RJ,1,0,,,H,3.5,3.28,2.14,3.76,3.43,2.2
+BRA,11/06/2022,Fortaleza,Atletico GO,1,1,,,D,1.68,3.81,5.07,1.73,4.0,6.12
+BRA,11/06/2022,Cuiaba,Palmeiras,1,1,,,D,3.68,3.38,2.04,3.94,3.6,2.11
+BRA,13/06/2022,Botafogo RJ,Avai,0,1,,,A,1.84,3.38,4.53,1.91,3.55,4.9
+BRA,15/06/2022,Juventude,Santos,1,2,,,A,2.32,2.97,3.42,2.41,3.13,3.69
+BRA,15/06/2022,Bragantino,Coritiba,4,2,,,H,1.54,3.84,6.76,1.58,4.05,7.7
+BRA,15/06/2022,Ceara,Atletico-MG,0,0,,,D,3.46,3.14,2.21,3.75,3.32,2.35
+BRA,16/06/2022,Flamengo RJ,Cuiaba,2,0,,,H,1.32,5.18,9.18,1.37,5.6,11.0
+BRA,16/06/2022,Goias,Internacional,1,2,,,A,3.42,3.09,2.26,3.65,3.23,2.38
+BRA,16/06/2022,America MG,Fluminense,0,0,,,D,2.33,3.02,3.36,2.5,3.2,3.66
+BRA,16/06/2022,Athletico-PR,Corinthians,1,1,,,D,2.36,3.03,3.29,2.57,3.16,3.52
+BRA,16/06/2022,Botafogo RJ,Sao Paulo,1,0,,,H,3.38,2.99,2.32,3.62,3.18,2.44
+BRA,16/06/2022,Palmeiras,Atletico GO,4,2,,,H,1.42,4.57,7.35,1.47,4.75,9.0
+BRA,16/06/2022,Avai,Fortaleza,3,2,,,H,3.12,3.11,2.39,3.35,3.2,2.46
+BRA,18/06/2022,Cuiaba,Ceara,0,0,,,D,2.78,2.86,2.86,3.0,3.02,3.06
+BRA,19/06/2022,Santos,Bragantino,2,2,,,D,2.09,3.2,3.72,2.25,3.35,3.98
+BRA,19/06/2022,Atletico-MG,Flamengo RJ,2,0,,,H,1.96,3.47,3.85,2.04,3.68,4.2
+BRA,19/06/2022,Corinthians,Goias,1,0,,,H,1.52,3.87,7.02,1.56,4.1,8.02
+BRA,19/06/2022,Coritiba,Athletico-PR,0,1,,,A,2.6,2.92,3.0,2.74,3.15,3.16
+BRA,19/06/2022,Atletico GO,Juventude,3,1,,,H,1.69,3.63,5.21,1.8,3.84,5.8
+BRA,19/06/2022,Fortaleza,America MG,1,0,,,H,1.74,3.58,4.87,1.82,3.82,5.4
+BRA,19/06/2022,Internacional,Botafogo RJ,2,3,,,A,1.55,3.88,6.4,1.59,4.1,7.5
+BRA,19/06/2022,Fluminense,Avai,2,0,,,H,1.66,3.55,5.69,1.71,3.8,6.05
+BRA,21/06/2022,Sao Paulo,Palmeiras,1,2,,,A,3.02,3.04,2.52,3.14,3.28,2.64
+BRA,25/06/2022,Internacional,Coritiba,3,0,,,H,1.76,3.57,4.7,1.83,3.7,5.25
+BRA,25/06/2022,Athletico-PR,Bragantino,4,2,,,H,3.19,3.06,2.39,3.35,3.22,2.48
+BRA,25/06/2022,Corinthians,Santos,0,0,,,D,2.25,2.96,3.64,2.33,3.08,4.0
+BRA,25/06/2022,Flamengo RJ,America MG,3,0,,,H,1.51,4.17,6.39,1.58,4.5,7.1
+BRA,26/06/2022,Atletico-MG,Fortaleza,3,2,,,H,1.82,3.25,4.99,1.92,3.5,5.85
+BRA,26/06/2022,Avai,Palmeiras,2,2,,,D,4.86,3.27,1.83,5.4,3.53,1.9
+BRA,26/06/2022,Botafogo RJ,Fluminense,0,1,,,A,3.03,3.04,2.51,3.19,3.25,2.62
+BRA,26/06/2022,Ceara,Atletico GO,1,1,,,D,1.99,3.25,4.02,2.07,3.41,4.5
+BRA,26/06/2022,Goias,Cuiaba,1,0,,,H,2.42,2.94,3.29,2.62,3.12,3.7
+BRA,26/06/2022,Sao Paulo,Juventude,0,0,,,D,1.56,3.78,6.59,1.6,4.0,7.5

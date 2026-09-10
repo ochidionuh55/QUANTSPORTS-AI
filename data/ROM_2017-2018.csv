@@ -1,0 +1,281 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+ROM,04/07/2017,Pandurii,Poli Timisoara,1,3,,,A,2.52,2.91,2.91,2.81,3.1,3.1
+ROM,05/07/2017,FC Botosani,Gaz Metan Medias,0,0,,,D,2.0,3.22,3.67,2.12,3.41,4.3
+ROM,05/07/2017,U Craiova,Viitorul Constanta,0,1,,,A,7.89,4.34,1.38,9.06,5.0,1.46
+ROM,08/07/2017,Din. Bucuresti,Gaz Metan Medias,3,1,,,H,1.31,4.65,10.13,1.38,5.4,12.5
+ROM,14/07/2017,U Craiova,Poli Iasi,2,0,,,H,1.63,3.56,5.44,1.69,3.8,6.1
+ROM,15/07/2017,Concordia,Poli Timisoara,0,1,,,A,2.61,3.0,2.72,2.95,3.2,2.99
+ROM,15/07/2017,Daco-Getica Bucuresti,Din. Bucuresti,0,3,,,A,5.75,3.69,1.58,7.2,3.87,1.66
+ROM,16/07/2017,Astra,Sepsi Sf. Gheorghe,1,0,,,H,1.65,3.59,5.14,1.75,3.92,6.0
+ROM,16/07/2017,FCSB,FC Voluntari,2,1,,,H,1.36,4.53,8.1,1.41,4.9,10.02
+ROM,17/07/2017,Viitorul Constanta,Gaz Metan Medias,3,0,,,H,1.61,3.61,5.54,1.65,3.82,6.3
+ROM,17/07/2017,FC Botosani,CFR Cluj,1,1,,,D,4.75,3.31,1.76,5.9,3.54,1.9
+ROM,21/07/2017,Sepsi Sf. Gheorghe,Daco-Getica Bucuresti,2,1,,,H,2.84,3.08,2.45,3.13,3.25,2.68
+ROM,21/07/2017,Poli Timisoara,FCSB,0,1,,,A,3.86,3.27,1.94,4.55,3.55,2.08
+ROM,22/07/2017,U Craiova,Concordia,1,1,,,D,1.45,3.94,7.37,1.51,4.25,9.55
+ROM,22/07/2017,CFR Cluj,Viitorul Constanta,2,0,,,H,2.13,3.15,3.39,2.28,3.3,3.76
+ROM,23/07/2017,Poli Iasi,Gaz Metan Medias,0,0,,,D,2.46,2.98,2.96,2.72,3.13,3.2
+ROM,23/07/2017,Din. Bucuresti,FC Botosani,0,1,,,A,1.43,4.18,7.22,1.48,4.65,9.0
+ROM,24/07/2017,FC Voluntari,Astra,3,1,,,H,2.63,3.1,2.62,2.8,3.3,2.8
+ROM,28/07/2017,FC Botosani,Sepsi Sf. Gheorghe,5,1,,,H,1.68,3.46,5.08,1.75,3.66,5.9
+ROM,28/07/2017,Concordia,Poli Iasi,0,1,,,A,1.91,3.11,4.23,1.98,3.31,4.8
+ROM,29/07/2017,Daco-Getica Bucuresti,FC Voluntari,0,0,,,D,3.12,3.15,2.26,3.6,3.34,2.36
+ROM,29/07/2017,Gaz Metan Medias,CFR Cluj,0,3,,,A,4.91,3.43,1.71,5.75,3.75,1.82
+ROM,30/07/2017,Viitorul Constanta,Din. Bucuresti,0,1,,,A,2.53,3.07,2.76,2.81,3.2,3.18
+ROM,30/07/2017,FCSB,U Craiova,1,1,,,D,1.68,3.5,5.16,1.86,4.08,7.27
+ROM,31/07/2017,Astra,Poli Timisoara,3,0,,,H,2.09,3.16,3.48,2.15,3.4,3.89
+ROM,04/08/2017,FC Voluntari,Targu Mures,2,1,,,H,1.47,3.79,7.41,1.51,4.15,8.92
+ROM,04/08/2017,Poli Iasi,FC Botosani,2,1,,,H,2.59,2.99,2.76,2.81,3.15,3.0
+ROM,05/08/2017,Poli Iasi,Pandurii,3,0,,,H,1.52,3.71,6.56,1.6,4.0,8.03
+ROM,05/08/2017,Astra,FCSB,0,1,,,A,5.3,3.54,1.64,6.8,3.98,1.73
+ROM,08/08/2017,FC Botosani,Poli Timisoara,1,0,,,H,1.88,3.31,4.08,1.92,3.58,4.75
+ROM,08/08/2017,Viitorul Constanta,FC Voluntari,0,0,,,D,1.75,3.5,4.42,1.94,3.8,5.3
+ROM,09/08/2017,FC Botosani,Astra,1,3,,,A,2.41,3.01,3.0,2.62,3.2,3.22
+ROM,12/08/2017,Daco-Getica Bucuresti,Astra,0,1,,,A,5.77,3.64,1.58,7.0,3.91,1.67
+ROM,13/08/2017,U Craiova,FC Botosani,1,0,,,H,1.96,3.19,3.89,2.08,3.35,4.44
+ROM,13/08/2017,Poli Iasi,Din. Bucuresti,2,1,,,H,4.64,3.4,1.75,5.8,3.71,1.82
+ROM,14/08/2017,FC Voluntari,Gaz Metan Medias,2,1,,,H,2.1,3.2,3.44,2.21,3.4,4.0
+ROM,14/08/2017,Sepsi Sf. Gheorghe,CFR Cluj,0,2,,,A,6.63,3.87,1.49,8.1,4.3,1.55
+ROM,18/08/2017,Astra,Poli Iasi,0,0,,,D,1.96,3.21,3.91,2.05,3.45,4.55
+ROM,19/08/2017,Gaz Metan Medias,Poli Timisoara,0,2,,,A,2.56,3.04,2.76,2.8,3.19,3.04
+ROM,19/08/2017,Daco-Getica Bucuresti,FCSB,1,2,,,A,5.03,3.63,1.65,6.0,4.03,1.72
+ROM,20/08/2017,Viitorul Constanta,U Craiova,0,2,,,A,2.55,2.95,2.84,2.77,3.12,3.04
+ROM,20/08/2017,CFR Cluj,FC Voluntari,2,0,,,H,1.41,4.28,7.47,1.45,4.75,9.5
+ROM,21/08/2017,FC Botosani,Concordia,2,1,,,H,1.78,3.37,4.59,1.95,3.84,5.5
+ROM,21/08/2017,Din. Bucuresti,Sepsi Sf. Gheorghe,1,0,,,H,1.24,5.13,12.87,1.28,5.8,17.0
+ROM,25/08/2017,Astra,Daco-Getica Bucuresti,2,0,,,H,1.65,3.59,5.14,1.74,4.1,6.42
+ROM,25/08/2017,U Craiova,Gaz Metan Medias,2,0,,,H,1.49,3.81,7.03,1.54,4.1,8.5
+ROM,26/08/2017,Poli Timisoara,CFR Cluj,4,3,,,H,4.47,3.28,1.81,5.12,3.46,1.91
+ROM,26/08/2017,FC Voluntari,Din. Bucuresti,1,3,,,A,4.42,3.44,1.78,5.25,3.7,1.85
+ROM,27/08/2017,Concordia,Viitorul Constanta,1,2,,,A,2.51,2.96,2.88,2.72,3.1,3.17
+ROM,27/08/2017,FCSB,FC Botosani,2,0,,,H,1.43,4.15,7.21,1.48,4.4,9.0
+ROM,28/08/2017,Poli Iasi,Sepsi Sf. Gheorghe,0,2,,,A,1.63,3.36,5.91,1.73,3.6,7.2
+ROM,04/09/2017,CFR Cluj,Viitorul Constanta,0,0,,,D,2.32,3.13,3.03,2.57,3.31,3.5
+ROM,04/09/2017,U Craiova,FCSB,0,1,,,A,3.46,3.11,2.12,4.15,3.25,2.28
+ROM,08/09/2017,Astra,Concordia,1,0,,,H,1.75,3.48,4.49,1.84,3.78,5.3
+ROM,08/09/2017,Daco-Getica Bucuresti,U Craiova,0,1,,,A,4.17,3.29,1.87,4.64,3.48,1.96
+ROM,08/09/2017,FCSB,Poli Iasi,1,1,,,D,1.27,4.9,11.58,1.31,6.0,16.2
+ROM,09/09/2017,Daco-Getica Bucuresti,Poli Iasi,2,2,,,D,2.63,2.9,2.8,2.85,3.1,3.06
+ROM,09/09/2017,Viitorul Constanta,FCSB,1,0,,,H,4.79,3.35,1.75,5.75,3.6,1.88
+ROM,12/09/2017,Viitorul Constanta,Concordia,3,0,,,H,1.49,3.94,6.58,1.55,4.19,7.76
+ROM,12/09/2017,CFR Cluj,Poli Timisoara,1,0,,,H,1.31,4.75,9.67,1.38,5.23,12.87
+ROM,15/09/2017,Daco-Getica Bucuresti,FC Botosani,0,2,,,A,3.0,3.14,2.34,3.26,3.32,2.47
+ROM,15/09/2017,Poli Iasi,FC Voluntari,2,1,,,H,2.25,3.12,3.19,2.36,3.26,3.52
+ROM,16/09/2017,Poli Timisoara,Sepsi Sf. Gheorghe,0,0,,,D,1.58,3.58,6.08,1.7,3.78,7.5
+ROM,16/09/2017,U Craiova,Din. Bucuresti,2,2,,,D,2.54,2.97,2.86,2.71,3.1,3.1
+ROM,17/09/2017,Concordia,CFR Cluj,0,1,,,A,5.05,3.45,1.69,6.0,3.75,1.81
+ROM,17/09/2017,FCSB,Gaz Metan Medias,4,0,,,H,1.25,5.23,11.74,1.31,6.0,15.0
+ROM,18/09/2017,Astra,Viitorul Constanta,3,1,,,H,2.08,3.21,3.47,2.18,3.4,3.88
+ROM,19/09/2017,FC Voluntari,Poli Timisoara,1,0,,,H,2.26,3.18,3.11,2.38,3.3,3.4
+ROM,19/09/2017,Sepsi Sf. Gheorghe,U Craiova,2,3,,,A,5.07,3.32,1.72,5.75,3.6,1.8
+ROM,20/09/2017,FC Botosani,Poli Iasi,3,3,,,D,2.01,3.12,3.84,2.1,3.28,4.38
+ROM,21/09/2017,Viitorul Constanta,Daco-Getica Bucuresti,3,0,,,H,1.53,3.93,5.9,1.59,4.3,7.08
+ROM,21/09/2017,Gaz Metan Medias,Astra,0,0,,,D,3.99,3.15,1.96,4.75,3.4,2.11
+ROM,21/09/2017,CFR Cluj,FCSB,1,1,,,D,2.45,2.94,3.03,2.64,3.1,3.31
+ROM,22/09/2017,U Craiova,FC Voluntari,1,1,,,D,1.54,3.78,6.05,1.61,4.07,7.5
+ROM,23/09/2017,Concordia,Sepsi Sf. Gheorghe,2,1,,,H,1.87,3.21,4.28,1.95,3.4,4.88
+ROM,24/09/2017,Daco-Getica Bucuresti,Gaz Metan Medias,1,1,,,D,2.34,3.08,3.04,2.59,3.21,3.28
+ROM,24/09/2017,Poli Iasi,Poli Timisoara,1,1,,,D,2.32,3.03,3.15,2.45,3.2,3.47
+ROM,24/09/2017,FCSB,Din. Bucuresti,1,0,,,H,1.87,3.38,4.08,1.97,3.6,4.7
+ROM,25/09/2017,FC Botosani,Viitorul Constanta,1,0,,,H,2.35,3.2,2.94,2.49,3.38,3.25
+ROM,25/09/2017,Astra,CFR Cluj,2,3,,,A,3.02,3.03,2.39,3.29,3.17,2.5
+ROM,27/09/2017,Din. Bucuresti,Concordia,2,3,,,A,1.45,4.19,6.77,1.5,4.55,7.73
+ROM,29/09/2017,Gaz Metan Medias,FC Botosani,1,0,,,H,3.16,3.11,2.27,3.53,3.27,2.4
+ROM,29/09/2017,Poli Timisoara,U Craiova,0,2,,,A,3.56,3.09,2.11,3.86,3.25,2.2
+ROM,30/09/2017,Viitorul Constanta,Poli Iasi,5,2,,,H,1.63,3.42,5.83,1.85,3.65,7.09
+ROM,30/09/2017,Din. Bucuresti,Astra,1,1,,,D,1.87,3.31,4.14,2.07,3.6,4.7
+ROM,02/10/2017,Targu Mures,Poli Timisoara,0,0,,,D,3.16,3.02,2.28,3.6,3.15,2.52
+ROM,03/10/2017,FC Botosani,Poli Timisoara,1,2,,,A,1.78,3.43,4.34,2.04,3.75,4.96
+ROM,04/10/2017,Concordia,Gaz Metan Medias,1,1,,,D,2.58,2.91,2.83,2.84,3.08,3.2
+ROM,04/10/2017,Astra,Din. Bucuresti,1,2,,,A,2.02,3.26,3.52,2.16,3.47,4.0
+ROM,05/10/2017,Concordia,Poli Timisoara,3,1,,,H,1.83,3.28,4.24,1.95,3.5,4.78
+ROM,08/10/2017,Gaz Metan Medias,Sepsi Sf. Gheorghe,2,1,,,H,2.08,3.13,3.56,2.15,3.25,4.16
+ROM,08/10/2017,CFR Cluj,Din. Bucuresti,1,0,,,H,1.98,3.2,3.8,2.05,3.35,4.32
+ROM,09/10/2017,Sepsi Sf. Gheorghe,FC Voluntari,0,3,,,A,3.35,2.94,2.28,3.84,3.2,2.41
+ROM,09/10/2017,CFR Cluj,U Craiova,2,1,,,H,1.9,3.13,4.35,1.97,3.3,5.0
+ROM,12/10/2017,Gaz Metan Medias,U Craiova,0,0,,,D,5.14,3.42,1.69,6.0,3.76,1.79
+ROM,12/10/2017,FC Botosani,FCSB,0,3,,,A,5.06,3.38,1.71,5.73,3.66,1.8
+ROM,13/10/2017,FC Voluntari,FCSB,0,0,,,D,5.17,3.63,1.63,6.13,4.0,1.73
+ROM,14/10/2017,Gaz Metan Medias,Viitorul Constanta,0,1,,,A,3.17,3.08,2.26,3.8,3.29,2.44
+ROM,14/10/2017,Poli Iasi,U Craiova,1,2,,,A,3.52,3.03,2.14,4.0,3.17,2.28
+ROM,15/10/2017,Sepsi Sf. Gheorghe,Astra,0,0,,,D,3.82,3.22,1.96,4.33,3.42,2.07
+ROM,15/10/2017,CFR Cluj,FC Botosani,0,0,,,D,1.45,4.08,6.95,1.51,5.0,8.5
+ROM,16/10/2017,Poli Timisoara,Concordia,0,3,,,A,2.17,3.04,3.42,2.28,3.2,3.81
+ROM,16/10/2017,Din. Bucuresti,Daco-Getica Bucuresti,3,0,,,H,1.55,3.92,5.48,1.63,4.4,6.51
+ROM,20/10/2017,Gaz Metan Medias,Poli Iasi,0,2,,,A,2.48,2.93,2.97,2.66,3.1,3.18
+ROM,20/10/2017,Concordia,U Craiova,1,2,,,A,4.03,3.13,1.95,4.75,3.27,2.03
+ROM,21/10/2017,Daco-Getica Bucuresti,Sepsi Sf. Gheorghe,2,1,,,H,2.12,3.04,3.54,2.26,3.2,3.94
+ROM,21/10/2017,Viitorul Constanta,CFR Cluj,1,0,,,H,3.93,3.27,1.93,4.34,3.43,2.03
+ROM,22/10/2017,Astra,FC Voluntari,2,3,,,A,1.77,3.27,4.81,1.86,3.5,5.7
+ROM,22/10/2017,FCSB,Poli Timisoara,7,0,,,H,1.33,4.69,9.02,1.4,5.08,12.0
+ROM,23/10/2017,FC Botosani,Din. Bucuresti,0,0,,,D,2.65,3.11,2.6,3.0,3.28,2.78
+ROM,27/10/2017,Poli Iasi,Concordia,3,1,,,H,2.18,3.0,3.46,2.28,3.13,3.8
+ROM,28/10/2017,FC Voluntari,Daco-Getica Bucuresti,0,0,,,D,2.08,3.17,3.55,2.19,3.32,4.55
+ROM,28/10/2017,Poli Timisoara,Astra,2,1,,,H,3.05,3.06,2.34,3.3,3.24,2.47
+ROM,29/10/2017,CFR Cluj,Gaz Metan Medias,0,0,,,D,1.3,4.87,9.88,1.37,5.73,14.77
+ROM,29/10/2017,U Craiova,FCSB,2,5,,,A,3.16,3.01,2.32,3.5,3.2,2.47
+ROM,30/10/2017,Sepsi Sf. Gheorghe,FC Botosani,0,2,,,A,3.73,3.15,2.01,4.19,3.3,2.11
+ROM,30/10/2017,Din. Bucuresti,Viitorul Constanta,0,4,,,A,2.19,3.2,3.21,2.39,3.35,3.6
+ROM,02/11/2017,FC Botosani,U Craiova,1,0,,,H,3.29,3.2,2.14,3.59,3.41,2.26
+ROM,02/11/2017,Gaz Metan Medias,CFR Cluj,1,2,,,A,3.0,3.02,2.39,3.33,3.2,2.5
+ROM,03/11/2017,Poli Iasi,Concordia,3,1,,,H,2.08,3.08,3.58,2.21,3.3,4.15
+ROM,03/11/2017,Astra,U Craiova,0,0,,,D,1.8,3.33,4.32,1.93,3.54,4.96
+ROM,08/11/2017,Poli Timisoara,Viitorul Constanta,0,0,,,D,2.79,3.09,2.51,3.08,3.3,2.65
+ROM,09/11/2017,Gaz Metan Medias,Concordia,1,2,,,A,2.26,3.02,3.29,2.55,3.17,3.64
+ROM,09/11/2017,Din. Bucuresti,Poli Timisoara,1,2,,,A,1.49,3.99,6.38,1.53,4.27,7.5
+ROM,12/11/2017,Sepsi Sf. Gheorghe,Poli Iasi,2,1,,,H,2.93,2.99,2.47,3.25,3.16,2.68
+ROM,12/11/2017,Din. Bucuresti,FC Voluntari,2,0,,,H,1.35,4.58,8.52,1.4,5.1,10.6
+ROM,17/11/2017,Poli Timisoara,FC Botosani,1,1,,,D,2.67,2.98,2.69,2.86,3.13,2.9
+ROM,17/11/2017,Poli Iasi,FCSB,1,0,,,H,5.79,3.55,1.61,6.7,3.8,1.67
+ROM,18/11/2017,Sepsi Sf. Gheorghe,Gaz Metan Medias,0,0,,,D,2.53,2.92,2.93,2.71,3.1,3.18
+ROM,18/11/2017,U Craiova,Daco-Getica Bucuresti,3,1,,,H,1.31,4.79,9.4,1.4,5.49,13.5
+ROM,19/11/2017,Concordia,Astra,1,2,,,A,3.41,3.07,2.17,3.69,3.2,2.3
+ROM,19/11/2017,Din. Bucuresti,CFR Cluj,0,2,,,A,3.45,3.09,2.14,3.76,3.25,2.28
+ROM,20/11/2017,FC Voluntari,Viitorul Constanta,0,0,,,D,3.81,3.23,1.98,4.59,3.39,2.08
+ROM,24/11/2017,Daco-Getica Bucuresti,Concordia,0,5,,,A,2.76,2.97,2.63,3.06,3.14,2.85
+ROM,24/11/2017,FC Botosani,U Craiova,1,0,,,H,3.09,2.97,2.38,3.4,3.2,2.5
+ROM,25/11/2017,Viitorul Constanta,Poli Timisoara,1,1,,,D,1.65,3.67,4.95,1.7,3.93,6.1
+ROM,25/11/2017,Din. Bucuresti,Poli Iasi,2,1,,,H,1.81,3.36,4.32,1.93,3.55,5.08
+ROM,26/11/2017,Gaz Metan Medias,FC Voluntari,1,1,,,D,2.7,2.89,2.74,2.9,3.06,2.93
+ROM,26/11/2017,Astra,FCSB,2,0,,,H,4.24,3.19,1.89,4.8,3.39,2.0
+ROM,27/11/2017,CFR Cluj,Sepsi Sf. Gheorghe,2,0,,,H,1.19,6.1,13.6,1.25,7.11,19.0
+ROM,02/12/2017,FCSB,FC Voluntari,2,2,,,D,1.36,4.42,8.38,1.44,5.0,11.0
+ROM,03/12/2017,FC Voluntari,Pandurii,1,1,,,D,1.44,4.03,6.94,1.51,4.5,8.51
+ROM,03/12/2017,FCSB,CFR Cluj,2,0,,,H,2.04,3.18,3.58,2.25,3.44,4.36
+ROM,05/12/2017,Gaz Metan Medias,FC Voluntari,4,1,,,H,2.44,3.08,2.85,2.65,3.25,3.18
+ROM,06/12/2017,Poli Timisoara,UTA Arad,2,1,,,H,1.27,4.97,10.32,1.33,5.5,12.63
+ROM,08/12/2017,Concordia,Daco-Getica Bucuresti,1,1,,,D,2.53,3.08,2.79,2.8,3.3,3.8
+ROM,08/12/2017,FCSB,Astra,1,1,,,D,1.67,3.5,5.1,1.8,3.75,6.03
+ROM,15/12/2017,Astra,FC Botosani,2,1,,,H,1.81,3.3,4.47,1.87,3.5,5.0
+ROM,16/12/2017,Concordia,Gaz Metan Medias,1,1,,,D,1.95,3.13,4.03,2.06,3.29,4.55
+ROM,16/12/2017,U Craiova,CFR Cluj,2,1,,,H,2.83,2.94,2.56,3.16,3.1,2.76
+ROM,17/12/2017,Poli Iasi,Daco-Getica Bucuresti,3,1,,,H,1.23,5.46,12.23,1.28,6.31,16.25
+ROM,17/12/2017,FCSB,Viitorul Constanta,2,0,,,H,1.66,3.63,4.99,1.75,3.96,5.8
+ROM,18/12/2017,FC Voluntari,Sepsi Sf. Gheorghe,3,0,,,H,1.88,3.21,4.21,2.02,3.4,5.08
+ROM,18/12/2017,Poli Timisoara,Din. Bucuresti,0,0,,,D,4.05,3.27,1.89,4.75,3.47,2.01
+ROM,04/01/2018,Astra,Viitorul Constanta,0,2,,,A,2.51,2.93,2.94,2.69,3.04,3.22
+ROM,04/01/2018,FCSB,Poli Iasi,1,0,,,H,1.34,4.54,9.05,1.39,4.86,12.0
+ROM,06/01/2018,Din. Bucuresti,Sepsi Sf. Gheorghe,0,0,,,D,1.67,3.68,4.77,1.73,3.9,5.56
+ROM,09/01/2018,FC Hermannstadt,Gaz Metan Medias,0,1,,,A,2.89,2.95,2.56,3.14,3.05,2.72
+ROM,09/01/2018,Astra,FC Voluntari,0,0,,,D,1.58,3.79,5.62,1.64,4.04,6.85
+ROM,09/01/2018,U Craiova,Din. Bucuresti,3,0,,,H,2.11,3.28,3.37,2.21,3.41,3.9
+ROM,10/01/2018,Concordia,Calarasi,1,1,,,D,2.47,2.99,2.99,2.57,3.1,3.23
+ROM,10/01/2018,CFR Cluj,U Craiova,0,0,,,D,1.74,3.38,4.89,1.81,3.5,5.33
+ROM,12/01/2018,FC Hermannstadt,Concordia,2,1,,,H,1.98,3.07,4.03,2.07,3.3,4.33
+ROM,12/01/2018,Viitorul Constanta,Din. Bucuresti,4,1,,,H,2.05,3.17,3.64,2.15,3.3,4.0
+ROM,02/02/2018,Sepsi Sf. Gheorghe,Poli Timisoara,1,0,,,H,2.78,2.86,2.67,3.0,3.0,2.9
+ROM,02/02/2018,Viitorul Constanta,Astra,1,1,,,D,2.46,3.07,2.86,2.6,3.2,3.2
+ROM,04/02/2018,Poli Timisoara,Sepsi Sf. Gheorghe,2,2,,,D,2.54,2.86,2.96,2.76,3.0,3.16
+ROM,06/02/2018,FC Botosani,Gaz Metan Medias,2,0,,,H,2.05,3.11,3.74,2.19,3.3,4.45
+ROM,06/02/2018,Concordia,Poli Timisoara,0,1,,,A,1.74,3.42,4.73,1.82,3.6,5.38
+ROM,06/02/2018,Daco-Getica Bucuresti,FC Voluntari,2,2,,,D,7.68,4.46,1.38,9.0,4.9,1.44
+ROM,09/02/2018,CFR Cluj,Viitorul Constanta,1,2,,,A,1.69,3.56,4.96,1.83,3.81,5.5
+ROM,09/02/2018,FCSB,FC Botosani,2,2,,,D,1.42,4.29,7.36,1.47,4.9,8.65
+ROM,11/02/2018,Poli Iasi,U Craiova,0,3,,,A,3.36,3.05,2.22,3.68,3.2,2.31
+ROM,12/02/2018,U Craiova,Calarasi,1,0,,,H,1.38,4.28,8.39,1.47,4.55,10.15
+ROM,12/02/2018,FCSB,Gaz Metan Medias,2,1,,,H,1.74,3.27,5.01,1.82,3.5,5.76
+ROM,16/02/2018,Gaz Metan Medias,Daco-Getica Bucuresti,0,0,,,D,1.52,3.66,6.98,1.65,3.9,8.3
+ROM,16/02/2018,FC Voluntari,U Craiova,0,1,,,A,4.04,3.32,1.88,5.0,3.54,1.99
+ROM,17/02/2018,Sepsi Sf. Gheorghe,Concordia,1,1,,,D,2.35,2.86,3.24,2.5,3.01,3.58
+ROM,17/02/2018,CFR Cluj,Astra,2,0,,,H,1.45,3.73,8.56,1.61,4.0,10.97
+ROM,18/02/2018,Poli Timisoara,Poli Iasi,1,2,,,A,3.53,3.0,2.16,4.2,3.1,2.3
+ROM,18/02/2018,Din. Bucuresti,FCSB,2,2,,,D,3.02,3.07,2.37,3.3,3.23,2.53
+ROM,19/02/2018,Viitorul Constanta,FC Botosani,2,1,,,H,1.68,3.52,5.09,1.87,3.88,6.5
+ROM,23/02/2018,U Craiova,Poli Timisoara,1,1,,,D,1.32,4.66,9.51,1.36,5.25,12.29
+ROM,24/02/2018,FC Botosani,Gaz Metan Medias,1,0,,,H,1.72,3.26,5.15,1.88,3.5,6.51
+ROM,24/02/2018,Astra,Din. Bucuresti,2,0,,,H,4.44,3.37,1.8,5.21,3.67,1.91
+ROM,24/02/2018,Poli Iasi,Viitorul Constanta,0,1,,,A,2.93,2.96,2.5,3.14,3.1,2.69
+ROM,25/02/2018,Daco-Getica Bucuresti,CFR Cluj,0,2,,,A,13.98,4.85,1.25,17.15,5.47,1.29
+ROM,25/02/2018,FCSB,Sepsi Sf. Gheorghe,2,0,,,H,1.26,5.13,11.14,1.32,5.66,14.0
+ROM,27/02/2018,Concordia,FC Voluntari,3,1,,,H,2.75,3.05,2.57,3.1,3.27,2.79
+ROM,02/03/2018,FC Voluntari,Poli Iasi,0,4,,,A,2.5,2.97,2.86,2.67,3.13,3.05
+ROM,02/03/2018,Gaz Metan Medias,FCSB,1,2,,,A,8.82,4.08,1.39,10.5,4.4,1.44
+ROM,04/03/2018,FC Botosani,Din. Bucuresti,0,1,,,A,2.7,2.97,2.69,2.9,3.16,2.93
+ROM,08/03/2018,U Craiova,FC Botosani,2,2,,,D,2.09,3.11,3.63,2.21,3.25,4.06
+ROM,09/03/2018,Poli Iasi,Concordia,3,0,,,H,2.13,3.14,3.52,2.23,3.26,3.82
+ROM,11/03/2018,Sepsi Sf. Gheorghe,FC Hermannstadt,1,3,,,A,2.05,3.02,3.89,2.15,3.15,4.35
+ROM,11/03/2018,FC Botosani,CFR Cluj,1,5,,,A,3.51,3.03,2.16,3.9,3.2,2.31
+ROM,12/03/2018,Astra,FC Botosani,1,1,,,D,2.19,3.08,3.38,2.45,3.27,3.75
+ROM,16/03/2018,Daco-Getica Bucuresti,Poli Timisoara,1,0,,,H,2.93,2.86,2.56,3.11,3.0,2.83
+ROM,16/03/2018,Viitorul Constanta,U Craiova,0,0,,,D,3.18,2.98,2.33,3.5,3.1,2.49
+ROM,17/03/2018,Gaz Metan Medias,Concordia,2,1,,,H,2.09,3.0,3.74,2.2,3.15,4.2
+ROM,18/03/2018,CFR Cluj,FCSB,1,1,,,D,2.08,2.95,3.88,2.18,3.13,4.26
+ROM,19/03/2018,Sepsi Sf. Gheorghe,FC Voluntari,2,2,,,D,2.58,2.85,2.9,2.74,3.0,3.15
+ROM,30/03/2018,Concordia,FC Botosani,0,0,,,D,2.78,3.0,2.58,3.0,3.16,2.76
+ROM,30/03/2018,Din. Bucuresti,Daco-Getica Bucuresti,1,2,,,A,1.33,4.71,8.67,1.39,5.08,10.5
+ROM,31/03/2018,FC Voluntari,Gaz Metan Medias,1,2,,,A,2.13,3.07,3.52,2.22,3.3,3.89
+ROM,31/03/2018,U Craiova,CFR Cluj,0,0,,,D,2.88,2.88,2.6,3.05,3.0,2.8
+ROM,02/04/2018,FC Botosani,Daco-Getica Bucuresti,0,0,,,D,1.18,5.89,16.28,1.44,7.0,22.85
+ROM,02/04/2018,Din. Bucuresti,U Craiova,2,2,,,D,2.36,2.98,3.09,2.88,3.15,3.37
+ROM,05/04/2018,Poli Timisoara,FC Voluntari,2,3,,,A,2.44,3.05,2.92,2.56,3.3,3.16
+ROM,05/04/2018,Viitorul Constanta,Astra,1,1,,,D,1.97,3.36,3.68,2.08,3.55,4.1
+ROM,08/04/2018,Astra,Sepsi Sf. Gheorghe,1,1,,,D,1.93,3.19,4.14,2.02,3.34,4.68
+ROM,08/04/2018,CFR Cluj,Concordia,2,1,,,H,1.36,4.52,8.61,1.5,5.27,11.0
+ROM,11/04/2018,Calarasi,Viitorul Constanta,0,1,,,A,3.71,3.28,1.99,3.95,3.5,2.1
+ROM,11/04/2018,FCSB,Astra,1,0,,,H,1.61,3.73,5.39,1.66,4.0,6.5
+ROM,12/04/2018,FC Voluntari,FC Hermannstadt,2,0,,,H,3.15,3.02,2.34,3.36,3.2,2.48
+ROM,12/04/2018,Din. Bucuresti,CFR Cluj,0,3,,,A,4.03,3.23,1.92,4.5,3.48,2.02
+ROM,13/04/2018,FC Voluntari,Din. Bucuresti,2,4,,,A,3.4,3.2,2.1,3.77,3.38,2.21
+ROM,14/04/2018,Sepsi Sf. Gheorghe,Gaz Metan Medias,2,1,,,H,2.24,2.94,3.41,2.41,3.1,3.8
+ROM,14/04/2018,U Craiova,Poli Iasi,4,1,,,H,1.54,3.7,6.26,1.6,3.95,7.85
+ROM,15/04/2018,Concordia,Daco-Getica Bucuresti,2,1,,,H,1.71,3.42,4.97,1.77,3.65,5.75
+ROM,15/04/2018,Viitorul Constanta,CFR Cluj,1,2,,,A,3.91,3.08,2.01,4.46,3.27,2.18
+ROM,16/04/2018,Poli Timisoara,FC Botosani,0,1,,,A,2.24,3.0,3.33,2.39,3.2,3.64
+ROM,16/04/2018,Astra,FCSB,0,3,,,A,5.45,3.84,1.58,6.22,4.25,1.63
+ROM,20/04/2018,Din. Bucuresti,Poli Timisoara,1,0,,,H,1.51,3.91,6.17,1.54,4.2,7.21
+ROM,21/04/2018,Concordia,FC Voluntari,0,1,,,A,2.7,3.11,2.57,2.93,3.3,2.76
+ROM,21/04/2018,Viitorul Constanta,FCSB,2,2,,,D,5.38,3.65,1.62,6.17,3.9,1.71
+ROM,22/04/2018,Daco-Getica Bucuresti,Gaz Metan Medias,0,3,,,A,3.01,2.93,2.45,3.28,3.2,2.61
+ROM,22/04/2018,Poli Iasi,CFR Cluj,1,1,,,D,7.89,4.01,1.43,9.17,4.27,1.48
+ROM,23/04/2018,FC Botosani,Sepsi Sf. Gheorghe,2,2,,,D,2.06,3.02,3.83,2.18,3.2,4.3
+ROM,23/04/2018,Astra,U Craiova,1,0,,,H,3.68,3.23,2.01,4.1,3.4,2.14
+ROM,26/04/2018,Poli Iasi,Astra,0,3,,,A,2.49,3.08,2.84,2.6,3.26,3.1
+ROM,27/04/2018,FC Voluntari,Daco-Getica Bucuresti,0,1,,,A,1.49,3.96,6.31,1.55,4.25,7.5
+ROM,28/04/2018,Poli Timisoara,Concordia,1,0,,,H,2.21,3.12,3.25,2.38,3.29,3.6
+ROM,28/04/2018,U Craiova,Viitorul Constanta,3,3,,,D,2.11,3.17,3.45,2.23,3.31,4.0
+ROM,29/04/2018,Gaz Metan Medias,FC Botosani,2,1,,,H,2.39,2.93,3.11,2.5,3.1,3.42
+ROM,29/04/2018,FCSB,CFR Cluj,1,1,,,D,2.39,3.0,3.05,2.52,3.2,3.3
+ROM,30/04/2018,Sepsi Sf. Gheorghe,Din. Bucuresti,2,0,,,H,3.22,3.16,2.22,3.5,3.31,2.36
+ROM,30/04/2018,Astra,Poli Iasi,3,0,,,H,1.75,3.48,4.56,1.82,3.74,5.05
+ROM,02/05/2018,CFR Cluj,Concordia,2,0,,,H,1.21,5.43,14.59,1.26,6.0,20.95
+ROM,05/05/2018,Daco-Getica Bucuresti,FC Botosani,0,3,,,A,3.55,2.87,2.23,3.99,3.15,2.44
+ROM,05/05/2018,CFR Cluj,U Craiova,1,0,,,H,1.56,3.66,6.1,1.62,3.88,6.91
+ROM,08/05/2018,FC Hermannstadt,Calarasi,1,1,,,D,2.3,3.03,3.21,2.39,3.16,3.48
+ROM,08/05/2018,FCSB,Poli Iasi,4,0,,,H,1.4,4.3,7.73,1.49,4.84,9.3
+ROM,10/05/2018,Poli Iasi,Viitorul Constanta,1,2,,,A,3.32,3.0,2.26,3.6,3.12,2.4
+ROM,11/05/2018,Concordia,Gaz Metan Medias,0,0,,,D,3.77,3.14,2.03,4.2,3.3,2.13
+ROM,11/05/2018,FC Voluntari,Din. Bucuresti,0,1,,,A,4.26,3.54,1.8,4.55,3.79,1.85
+ROM,12/05/2018,Gaz Metan Medias,Viitorul Constanta,2,2,,,D,3.31,3.01,2.26,3.8,3.15,2.48
+ROM,12/05/2018,Sepsi Sf. Gheorghe,FCSB,4,2,,,H,4.01,3.2,1.93,4.36,3.36,2.03
+ROM,13/05/2018,Concordia,Gaz Metan Medias,0,0,,,D,2.41,2.99,3.03,2.58,3.2,3.3
+ROM,13/05/2018,Astra,CFR Cluj,0,2,,,A,6.66,4.18,1.45,7.5,4.5,1.51
+ROM,14/05/2018,U Craiova,FCSB,0,1,,,A,3.85,3.46,1.9,4.24,3.75,2.0
+ROM,15/05/2018,Sepsi Sf. Gheorghe,Poli Timisoara,3,0,,,H,1.94,3.23,3.91,2.03,3.4,4.3
+ROM,15/05/2018,Daco-Getica Bucuresti,Din. Bucuresti,0,2,,,A,4.67,3.72,1.67,5.18,4.05,1.74
+ROM,16/05/2018,FC Botosani,Concordia,0,1,,,A,1.92,3.28,3.94,2.04,3.6,5.0
+ROM,17/05/2018,Gaz Metan Medias,FC Voluntari,1,0,,,H,2.19,3.23,3.18,2.33,3.38,3.48
+ROM,18/05/2018,Sepsi Sf. Gheorghe,Daco-Getica Bucuresti,2,1,,,H,1.62,3.5,5.7,1.69,3.75,6.75
+ROM,19/05/2018,Concordia,Din. Bucuresti,0,4,,,A,2.33,3.3,2.88,2.47,3.65,3.08
+ROM,20/05/2018,FC Voluntari,FC Botosani,1,1,,,D,2.44,3.06,2.9,2.55,3.25,3.18
+ROM,20/05/2018,CFR Cluj,Viitorul Constanta,1,0,,,H,1.36,4.38,9.25,1.4,4.91,12.0
+ROM,20/05/2018,FCSB,Astra,1,0,,,H,1.24,5.31,12.37,1.27,6.02,16.0
+ROM,20/05/2018,Poli Iasi,U Craiova,1,2,,,A,4.53,3.42,1.78,5.01,3.61,1.84
+ROM,21/05/2018,Poli Timisoara,Gaz Metan Medias,0,0,,,D,2.97,3.08,2.39,3.2,3.27,2.66
+ROM,22/05/2018,Daco-Getica Bucuresti,Concordia,1,3,,,A,5.59,3.84,1.56,6.27,4.18,1.63
+ROM,23/05/2018,Din. Bucuresti,FC Voluntari,2,0,,,H,2.15,3.54,2.98,2.48,3.85,3.33
+ROM,24/05/2018,Gaz Metan Medias,Sepsi Sf. Gheorghe,1,1,,,D,1.82,3.32,4.37,1.95,3.5,4.88
+ROM,24/05/2018,FC Botosani,Poli Timisoara,0,0,,,D,1.74,3.43,4.63,1.82,3.73,5.12
+ROM,26/05/2018,FC Voluntari,Concordia,2,2,,,D,2.31,3.07,3.12,2.41,3.2,3.38
+ROM,27/05/2018,Sepsi Sf. Gheorghe,FC Botosani,0,1,,,A,2.54,3.13,2.72,2.68,3.3,2.96
+ROM,28/05/2018,Gaz Metan Medias,Daco-Getica Bucuresti,3,0,,,H,1.24,5.24,11.99,1.29,5.77,15.25
+ROM,28/05/2018,Poli Timisoara,Din. Bucuresti,1,3,,,A,2.93,3.18,2.34,3.19,3.47,2.45
+ROM,04/06/2018,Poli Iasi,Viitorul Constanta,0,2,,,A,3.42,3.03,2.19,3.76,3.17,2.3
+ROM,05/06/2018,Gaz Metan Medias,Din. Bucuresti,2,3,,,A,2.88,3.08,2.43,3.22,3.28,2.61
+ROM,08/06/2018,Viitorul Constanta,FC Voluntari,2,0,,,H,1.47,4.04,6.82,1.53,4.35,7.84
+ROM,08/06/2018,Gaz Metan Medias,Din. Bucuresti,3,2,,,H,2.85,3.22,2.4,3.05,3.36,2.51
+ROM,10/06/2018,U Craiova,FC Hermannstadt,1,1,,,D,1.59,3.56,6.07,1.69,3.75,6.91
+ROM,10/06/2018,Astra,CFR Cluj,1,2,,,A,3.62,3.04,2.13,3.88,3.16,2.21
+ROM,12/06/2018,Calarasi,Astra,1,2,,,A,3.15,2.96,2.38,3.35,3.1,2.55
+ROM,12/06/2018,FC Botosani,Poli Iasi,1,2,,,A,2.2,3.11,3.32,2.32,3.25,3.6
+ROM,12/06/2018,Concordia,U Craiova,1,3,,,A,4.85,3.4,1.74,6.25,3.75,1.89
+ROM,13/06/2018,Chindia Targoviste,FC Voluntari,1,0,,,H,3.34,3.26,2.1,3.8,3.44,2.22

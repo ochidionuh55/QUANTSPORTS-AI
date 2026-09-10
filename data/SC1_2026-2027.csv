@@ -1,0 +1,21 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+SC1,01/08/2026,Ayr,Arbroath,2,0,1,,H,2.4,3.0,2.7,2.55,3.0,2.88
+SC1,01/08/2026,Inverness C,Dunfermline,0,0,,,D,2.25,3.25,2.75,2.6,3.3,2.75
+SC1,01/08/2026,Livingston,Queens Park,2,0,,,H,1.42,3.9,6.25,1.46,4.1,7.0
+SC1,01/08/2026,Morton,Partick,0,1,,,A,4.75,3.75,1.55,5.25,4.0,1.57
+SC1,01/08/2026,Raith Rvs,Stenhousemuir,1,1,1,1,D,1.44,3.8,6.5,1.62,3.8,6.5
+SC1,07/08/2026,Partick,Livingston,2,0,2,,H,2.3,3.0,3.0,2.3,3.3,3.0
+SC1,08/08/2026,Arbroath,Inverness C,0,0,,,D,2.88,3.3,2.15,3.0,3.3,2.25
+SC1,08/08/2026,Dunfermline,Ayr,1,1,1,1,D,2.05,3.25,3.1,2.05,3.3,3.7
+SC1,08/08/2026,Queens Park,Raith Rvs,1,2,,1,A,3.5,3.25,1.9,3.85,3.4,1.93
+SC1,08/08/2026,Stenhousemuir,Morton,2,0,,,H,1.95,3.25,3.3,2.02,3.4,3.45
+SC1,21/08/2026,Inverness C,Partick,1,1,,1,D,2.38,3.4,2.45,2.5,3.45,2.65
+SC1,22/08/2026,Livingston,Dunfermline,2,0,1,,H,1.73,3.6,4.0,1.78,3.75,4.5
+SC1,22/08/2026,Morton,Arbroath,1,2,,1,A,3.2,3.1,2.1,3.4,3.3,2.1
+SC1,22/08/2026,Queens Park,Stenhousemuir,0,2,,,A,2.15,3.25,2.9,2.25,3.25,3.2
+SC1,22/08/2026,Raith Rvs,Ayr,2,0,2,,H,1.85,3.3,3.7,1.95,3.5,3.8
+SC1,28/08/2026,Dunfermline,Raith Rvs,1,0,,,H,2.45,3.2,2.5,2.6,3.5,2.65
+SC1,29/08/2026,Arbroath,Livingston,1,0,,,H,3.1,3.2,2.1,3.35,3.5,2.1
+SC1,29/08/2026,Ayr,Morton,1,1,1,,D,1.65,3.6,4.75,1.71,3.6,4.8
+SC1,29/08/2026,Partick,Queens Park,0,0,,,D,1.3,4.33,8.0,1.35,5.25,9.2
+SC1,29/08/2026,Stenhousemuir,Inverness C,3,1,1,,H,3.2,3.3,2.0,3.6,3.4,2.02

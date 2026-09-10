@@ -1,0 +1,609 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+ARG,03/07/2022,Velez Sarsfield,Estudiantes L.P.,1,1,,,D,2.41,2.89,3.16,2.61,3.11,3.66
+ARG,03/07/2022,Godoy Cruz,Independiente,3,3,,,D,2.04,3.26,3.58,2.35,3.57,4.0
+ARG,03/07/2022,Arsenal Sarandi,Lanus,2,2,,,D,3.06,3.19,2.3,3.35,3.38,2.42
+ARG,05/07/2022,Barracas Central,Godoy Cruz,3,1,,,H,4.72,3.65,1.71,5.49,3.92,1.75
+ARG,05/07/2022,Aldosivi,Arsenal Sarandi,1,2,,,A,2.31,3.21,3.05,2.54,3.4,3.3
+ARG,05/07/2022,Independiente,Huracan,3,0,,,H,2.43,2.96,3.09,2.52,3.15,3.24
+ARG,05/07/2022,Tigre,Boca Juniors,0,2,,,A,2.44,2.88,3.16,2.55,3.15,3.42
+ARG,05/07/2022,Rosario Central,Estudiantes L.P.,3,1,,,H,1.77,3.59,4.36,1.91,3.92,4.85
+ARG,06/07/2022,Argentinos Jrs,Aldosivi,2,1,,,H,1.6,3.83,5.63,1.65,4.25,6.5
+ARG,08/07/2022,Boca Juniors,Platense,2,1,,,H,1.68,3.41,5.85,1.73,3.51,6.66
+ARG,08/07/2022,Aldosivi,Huracan,0,1,,,A,4.19,3.22,1.94,4.6,3.35,2.02
+ARG,08/07/2022,San Lorenzo,Estudiantes L.P.,0,0,,,D,1.9,3.32,4.28,1.96,3.55,4.62
+ARG,08/07/2022,Independiente,River Plate,0,1,,,A,3.76,3.27,2.03,4.05,3.4,2.1
+ARG,15/07/2022,Central Cordoba,Patronato,1,3,,,A,2.19,3.25,3.37,2.35,3.41,3.7
+ARG,15/07/2022,Sarmiento Junin,Defensa y Justicia,2,0,,,H,2.85,3.06,2.59,3.01,3.22,2.7
+ARG,16/07/2022,Aldosivi,Atl. Tucuman,0,1,,,A,3.21,3.04,2.36,3.5,3.22,2.43
+ARG,16/07/2022,Arsenal Sarandi,Platense,1,1,,,D,2.45,3.02,3.08,2.55,3.2,3.36
+ARG,16/07/2022,Barracas Central,Argentinos Jrs,1,3,,,A,4.13,3.25,1.96,4.5,3.6,2.07
+ARG,16/07/2022,Gimnasia L.P.,Colon Santa Fe,0,0,,,D,1.96,3.43,3.82,2.05,3.75,4.2
+ARG,16/07/2022,Independiente,Rosario Central,0,0,,,D,1.81,3.46,4.53,1.93,3.8,5.27
+ARG,16/07/2022,Newells Old Boys,Racing Club,0,0,,,D,3.07,3.19,2.36,3.3,3.32,2.46
+ARG,17/07/2022,Boca Juniors,Talleres Cordoba,1,0,,,H,1.75,3.29,5.25,1.8,3.44,5.9
+ARG,17/07/2022,Godoy Cruz,Lanus,2,1,,,H,1.73,3.63,4.79,1.87,4.0,5.14
+ARG,17/07/2022,Union de Santa Fe,Huracan,0,0,,,D,2.57,2.98,2.94,2.82,3.11,3.12
+ARG,17/07/2022,Banfield,San Lorenzo,1,1,,,D,2.23,3.02,3.55,2.3,3.3,3.8
+ARG,17/07/2022,Tigre,Estudiantes L.P.,2,1,,,H,2.24,3.18,3.31,2.33,3.3,3.57
+ARG,18/07/2022,Velez Sarsfield,River Plate,2,2,,,D,2.6,3.08,2.83,3.15,3.3,3.06
+ARG,19/07/2022,Colon Santa Fe,Aldosivi,1,1,,,D,1.48,4.37,6.35,1.57,4.75,7.18
+ARG,19/07/2022,Platense,Central Cordoba,2,0,,,H,2.12,3.09,3.74,2.22,3.28,4.13
+ARG,19/07/2022,Atl. Tucuman,Sarmiento Junin,1,0,,,H,1.83,3.25,4.81,1.93,3.45,5.5
+ARG,19/07/2022,Racing Club,Arsenal Sarandi,1,1,,,D,1.76,3.52,4.73,1.9,4.0,6.5
+ARG,20/07/2022,Argentinos Jrs,Boca Juniors,2,0,,,H,2.87,2.85,2.74,3.17,3.1,2.89
+ARG,20/07/2022,San Lorenzo,Union de Santa Fe,2,2,,,D,2.23,3.12,3.38,2.32,3.25,3.65
+ARG,20/07/2022,Patronato,Tigre,1,0,,,H,2.81,3.07,2.62,2.95,3.23,2.71
+ARG,20/07/2022,Defensa y Justicia,Independiente,2,1,,,H,2.56,3.08,2.87,2.67,3.2,3.15
+ARG,20/07/2022,Estudiantes L.P.,Barracas Central,3,1,,,H,1.5,4.14,6.48,1.56,4.42,7.41
+ARG,21/07/2022,Huracan,Godoy Cruz,0,0,,,D,2.45,3.08,3.01,2.58,3.25,3.2
+ARG,21/07/2022,Lanus,Velez Sarsfield,2,2,,,D,3.42,3.06,2.25,3.61,3.25,2.33
+ARG,21/07/2022,Rosario Central,Newells Old Boys,1,0,,,H,2.65,2.96,2.86,2.75,3.15,3.0
+ARG,21/07/2022,Talleres Cordoba,Banfield,1,0,,,H,2.04,3.07,4.03,2.44,3.27,4.5
+ARG,22/07/2022,River Plate,Gimnasia L.P.,1,0,,,H,1.67,3.83,4.97,1.73,4.05,5.5
+ARG,23/07/2022,Sarmiento Junin,Colon Santa Fe,1,3,,,A,2.44,3.07,3.04,2.62,3.24,3.4
+ARG,24/07/2022,Central Cordoba,Racing Club,1,3,,,A,3.58,3.44,2.01,4.1,3.6,2.11
+ARG,24/07/2022,Independiente,Atl. Tucuman,0,1,,,A,2.77,2.89,2.84,2.99,3.05,3.04
+ARG,24/07/2022,Tigre,Platense,3,0,,,H,1.9,3.25,4.35,1.95,3.4,4.7
+ARG,24/07/2022,Aldosivi,River Plate,0,3,,,A,6.65,4.45,1.45,7.4,4.6,1.5
+ARG,24/07/2022,Gimnasia L.P.,Lanus,1,0,,,H,2.05,3.21,3.78,2.13,3.34,4.22
+ARG,25/07/2022,Boca Juniors,Estudiantes L.P.,3,1,,,H,1.98,3.22,4.06,2.05,3.4,4.45
+ARG,25/07/2022,San Lorenzo,Talleres Cordoba,1,1,,,D,2.77,2.97,2.75,2.95,3.1,2.9
+ARG,25/07/2022,Banfield,Argentinos Jrs,1,1,,,D,2.65,2.95,2.86,2.85,3.15,3.0
+ARG,25/07/2022,Newells Old Boys,Defensa y Justicia,1,2,,,A,2.15,3.13,3.57,2.26,3.28,4.0
+ARG,26/07/2022,Union de Santa Fe,Godoy Cruz,2,1,,,H,2.73,3.24,2.56,2.86,3.48,2.7
+ARG,26/07/2022,Velez Sarsfield,Huracan,1,1,,,D,2.16,3.05,3.64,2.25,3.21,3.93
+ARG,27/07/2022,Arsenal Sarandi,Rosario Central,0,3,,,A,2.49,3.03,3.0,2.6,3.15,3.16
+ARG,27/07/2022,Barracas Central,Patronato,2,1,,,H,3.01,3.2,2.39,3.17,3.38,2.6
+ARG,30/07/2022,Godoy Cruz,Velez Sarsfield,1,1,,,D,1.99,3.29,3.92,2.05,3.5,4.3
+ARG,30/07/2022,Argentinos Jrs,San Lorenzo,0,1,,,A,1.96,3.24,4.12,2.1,3.45,4.8
+ARG,30/07/2022,Estudiantes L.P.,Banfield,0,0,,,D,2.0,3.3,3.86,2.07,3.5,4.26
+ARG,31/07/2022,Atl. Tucuman,Newells Old Boys,2,0,,,H,2.28,2.94,3.55,2.38,3.1,3.97
+ARG,31/07/2022,Huracan,Gimnasia L.P.,0,1,,,A,2.1,3.16,3.73,2.16,3.3,4.0
+ARG,31/07/2022,Lanus,Aldosivi,0,1,,,A,1.89,3.39,4.16,1.95,3.5,4.65
+ARG,31/07/2022,Platense,Barracas Central,0,0,,,D,1.89,3.36,4.23,1.97,3.51,4.8
+ARG,31/07/2022,Racing Club,Tigre,3,3,,,D,1.98,3.4,3.77,2.05,3.5,4.11
+ARG,31/07/2022,Patronato,Boca Juniors,3,0,,,H,3.97,3.25,1.99,4.46,3.4,2.06
+ARG,03/08/2022,Tigre,Colon Santa FE,1,0,,,H,2.58,3.02,2.79,2.8,3.22,2.98
+ARG,04/08/2022,Arsenal Sarandi,Godoy Cruz,3,3,,,D,3.07,3.13,2.34,3.35,3.39,2.8
+ARG,04/08/2022,Atl. Tucuman,Gimnasia L.P.,1,2,,,A,2.73,3.04,2.64,2.86,3.21,2.8
+ARG,05/08/2022,Argentinos Jrs,Union de Santa Fe,2,1,,,H,1.65,3.43,5.76,1.75,3.6,6.67
+ARG,05/08/2022,Defensa y Justicia,Patronato,1,0,,,H,1.55,4.0,5.58,1.61,4.4,6.5
+ARG,05/08/2022,Gimnasia L.P.,Newells Old Boys,3,1,,,H,2.04,3.25,3.63,2.15,3.44,4.0
+ARG,05/08/2022,Talleres Cordoba,Sarmiento Junin,1,0,,,H,1.84,3.34,4.35,1.95,3.54,4.73
+ARG,08/08/2022,Newells Old Boys,Colon Santa Fe,0,0,,,D,2.08,3.17,3.77,2.19,3.35,4.3
+ARG,08/08/2022,Central Cordoba,Defensa y Justicia,1,0,,,H,2.37,3.27,2.98,2.45,3.5,3.21
+ARG,09/08/2022,Independiente,Aldosivi,3,0,,,H,1.62,3.6,6.11,1.67,3.75,6.6
+ARG,10/08/2022,Barracas Central,Sarmiento Junin,1,1,,,D,2.51,3.11,2.93,2.65,3.23,3.25
+ARG,10/08/2022,San Lorenzo,Velez Sarsfield,1,0,,,H,2.46,2.8,3.37,2.7,2.93,3.62
+ARG,10/08/2022,Union de Santa Fe,Arsenal Sarandi,1,0,,,H,2.2,3.03,3.65,2.25,3.18,3.91
+ARG,13/08/2022,Patronato,San Lorenzo,3,2,,,H,2.68,3.09,2.72,2.87,3.25,3.15
+ARG,13/08/2022,Defensa y Justicia,Tigre,0,0,,,D,3.05,3.15,2.41,3.36,3.3,2.48
+ARG,13/08/2022,Rosario Central,Barracas Central,3,1,,,H,2.28,3.07,3.38,2.4,3.29,4.0
+ARG,13/08/2022,Lanus,Independiente,1,1,,,D,2.82,2.97,2.72,3.0,3.16,2.99
+ARG,14/08/2022,River Plate,Newells Old Boys,4,1,,,H,1.43,4.35,7.57,1.47,4.62,8.64
+ARG,14/08/2022,Velez Sarsfield,Gimnasia L.P.,1,1,,,D,1.9,3.3,4.29,1.99,3.45,4.5
+ARG,14/08/2022,Argentinos Jrs,Union de Santa Fe,2,0,,,H,1.99,3.2,4.05,2.07,3.41,4.5
+ARG,14/08/2022,Estudiantes L.P.,Talleres Cordoba,1,0,,,H,2.2,3.14,3.46,2.27,3.3,3.69
+ARG,15/08/2022,Racing Club,Boca Juniors,0,0,,,D,2.43,3.15,2.99,2.54,3.4,3.12
+ARG,16/08/2022,Central Cordoba,Colon Santa Fe,3,0,,,H,2.43,3.23,2.92,2.53,3.46,3.13
+ARG,16/08/2022,Sarmiento Junin,Godoy Cruz,1,2,,,A,3.19,3.29,2.25,3.3,3.57,2.32
+ARG,16/08/2022,San Lorenzo,Platense,2,0,,,H,2.21,2.93,3.76,2.27,3.09,4.04
+ARG,17/08/2022,Independiente,Huracan,1,1,,,D,2.87,2.78,2.82,3.04,2.97,3.02
+ARG,17/08/2022,Newells Old Boys,Lanus,2,0,,,H,2.3,2.96,3.45,2.38,3.14,3.77
+ARG,17/08/2022,Tigre,Atl. Tucuman,0,0,,,D,2.11,3.21,3.61,2.2,3.36,3.88
+ARG,17/08/2022,Arsenal Sarandi,River Plate,0,0,,,D,5.43,3.85,1.62,6.15,4.09,1.65
+ARG,18/08/2022,Boca Juniors,Rosario Central,0,0,,,D,1.57,3.89,6.03,1.6,4.2,6.7
+ARG,18/08/2022,Barracas Central,Defensa y Justicia,3,1,,,H,3.21,3.09,2.34,3.43,3.22,2.46
+ARG,18/08/2022,Aldosivi,Velez Sarsfield,3,2,,,H,3.75,3.22,2.07,3.99,3.38,2.14
+ARG,18/08/2022,Talleres Cordoba,Patronato,3,3,,,D,1.86,3.43,4.27,1.95,3.65,4.85
+ARG,18/08/2022,Union de Santa Fe,Gimnasia L.P.,0,2,,,A,2.18,3.19,3.45,2.3,3.35,3.84
+ARG,19/08/2022,Argentinos Jrs,Estudiantes L.P.,1,0,,,H,2.29,3.16,3.25,2.37,3.35,3.6
+ARG,19/08/2022,Banfield,Racing Club,0,2,,,A,3.18,3.1,2.36,3.46,3.25,2.42
+ARG,20/08/2022,Colon Santa Fe,Tigre,2,1,,,H,2.68,3.18,2.68,2.88,3.45,2.85
+ARG,21/08/2022,Huracan,Newells Old Boys,1,0,,,H,1.99,3.08,4.27,2.05,3.24,4.6
+ARG,21/08/2022,Lanus,Arsenal Sarandi,1,0,,,H,2.14,3.14,3.63,2.23,3.4,4.01
+ARG,21/08/2022,Godoy Cruz,Independiente,1,1,,,D,2.08,3.27,3.69,2.19,3.53,4.1
+ARG,21/08/2022,River Plate,Central Cordoba,3,0,,,H,1.34,5.26,8.2,1.38,5.8,9.0
+ARG,22/08/2022,Defensa y Justicia,Boca Juniors,0,1,,,A,2.91,3.0,2.62,3.06,3.19,2.78
+ARG,22/08/2022,Estudiantes L.P.,Union de Santa Fe,1,0,,,H,2.06,3.35,3.63,2.13,3.57,3.91
+ARG,22/08/2022,Rosario Central,Banfield,0,1,,,A,2.36,2.89,3.43,2.45,3.05,3.7
+ARG,22/08/2022,Racing Club,San Lorenzo,1,2,,,A,1.83,3.49,4.38,1.9,3.69,4.9
+ARG,23/08/2022,Platense,Talleres Cordoba,0,0,,,D,2.95,2.74,2.8,3.1,2.88,2.92
+ARG,23/08/2022,Velez Sarsfield,Sarmiento Junin,1,1,,,D,1.73,3.51,5.11,1.85,3.75,5.54
+ARG,23/08/2022,Patronato,Argentinos Jrs,0,0,,,D,3.02,3.12,2.43,3.2,3.28,2.53
+ARG,24/08/2022,Atl. Tucuman,Barracas Central,4,0,,,H,1.6,3.68,6.05,1.66,3.85,7.01
+ARG,24/08/2022,Gimnasia L.P.,Aldosivi,0,0,,,D,1.75,3.51,4.86,1.8,3.62,5.46
+ARG,26/08/2022,Central Cordoba,Lanus,2,2,,,D,2.33,3.17,3.14,2.45,3.39,3.31
+ARG,27/08/2022,Arsenal Sarandi,Huracan,1,1,,,D,3.55,2.98,2.24,3.97,3.14,2.33
+ARG,27/08/2022,San Lorenzo,Rosario Central,1,1,,,D,1.97,3.17,4.21,2.06,3.38,4.6
+ARG,27/08/2022,Banfield,Defensa y Justicia,1,2,,,A,2.29,3.08,3.34,2.49,3.3,3.71
+ARG,27/08/2022,Newells Old Boys,Godoy Cruz,1,2,,,A,2.59,3.05,2.89,2.7,3.18,3.05
+ARG,27/08/2022,Argentinos Jrs,Platense,0,2,,,A,1.91,3.1,4.64,1.98,3.25,5.13
+ARG,27/08/2022,Talleres Cordoba,Racing Club,1,1,,,D,2.56,3.08,2.88,2.7,3.22,3.06
+ARG,28/08/2022,Tigre,River Plate,1,1,,,D,3.22,3.35,2.22,3.59,3.48,2.28
+ARG,28/08/2022,Barracas Central,Colon Santa Fe,1,0,,,H,3.03,3.24,2.38,3.29,3.53,2.47
+ARG,28/08/2022,Sarmiento Junin,Gimnasia L.P.,0,0,,,D,2.67,2.91,2.92,2.81,3.11,3.05
+ARG,28/08/2022,Independiente,Velez Sarsfield,1,1,,,D,2.23,2.92,3.71,2.32,3.13,3.96
+ARG,28/08/2022,Boca Juniors,Atl. Tucuman,2,1,,,H,1.98,3.11,4.25,2.08,3.31,5.08
+ARG,29/08/2022,Estudiantes L.P.,Patronato,1,0,,,H,2.0,3.35,3.83,2.06,3.54,4.2
+ARG,29/08/2022,Union de Santa Fe,Aldosivi,0,0,,,D,1.68,3.63,5.28,1.74,3.85,6.45
+ARG,04/09/2022,Rosario Central,Colon Santa FE,2,2,,,D,2.33,3.22,3.0,2.63,3.42,3.37
+ARG,04/09/2022,Sarmiento Junin,San Lorenzo,2,1,,,H,2.98,2.96,2.5,3.3,3.19,2.65
+ARG,04/09/2022,Union de Santa Fe,Newells Old Boys,1,0,,,H,2.3,3.04,3.22,2.57,3.24,3.49
+ARG,04/09/2022,Talleres Cordoba,Defensa y Justicia,1,5,,,A,3.06,3.17,2.32,3.23,3.3,2.7
+ARG,04/09/2022,Independiente,Tigre,1,1,,,D,3.17,2.85,2.45,3.35,2.97,2.56
+ARG,05/09/2022,River Plate,Platense,2,1,,,H,1.44,4.5,6.41,1.49,4.75,7.3
+ARG,05/09/2022,Central Cordoba,Lanus,3,3,,,D,2.2,3.23,3.26,2.3,3.45,3.5
+ARG,05/09/2022,Colon Santa FE,Velez Sarsfield,1,2,,,A,2.27,3.08,3.26,2.42,3.26,3.6
+ARG,07/09/2022,Rosario Central,Sarmiento Junin,1,0,,,H,2.23,3.15,3.36,2.35,3.32,3.65
+ARG,07/09/2022,Patronato,Arsenal Sarandi,0,1,,,A,2.34,3.08,3.2,2.45,3.3,3.54
+ARG,07/09/2022,San Lorenzo,Boca Juniors,2,1,,,H,4.4,3.08,1.96,4.71,3.3,2.09
+ARG,07/09/2022,Banfield,Union de Santa Fe,2,3,,,A,1.89,3.15,4.57,1.95,3.32,4.97
+ARG,08/09/2022,Tigre,Rosario Central,3,1,,,H,1.5,4.11,6.52,1.57,4.33,7.5
+ARG,09/09/2022,Argentinos Jrs,Rosario Central,2,1,,,H,2.01,3.08,4.14,2.1,3.22,4.6
+ARG,09/09/2022,Union de Santa Fe,Sarmiento Junin,1,0,,,H,1.93,3.33,4.09,2.0,3.5,4.4
+ARG,09/09/2022,Barracas Central,Lanus,2,0,,,H,2.96,3.06,2.51,3.21,3.24,2.62
+ARG,09/09/2022,Patronato,Platense,1,0,,,H,2.37,3.02,3.24,2.47,3.15,3.42
+ARG,10/09/2022,Platense,Colon Santa Fe,1,2,,,A,2.32,3.14,3.23,2.57,3.28,4.0
+ARG,10/09/2022,Tigre,Independiente,2,1,,,H,2.06,3.17,3.85,2.12,3.28,4.1
+ARG,10/09/2022,Banfield,Gimnasia L.P.,0,2,,,A,2.83,2.97,2.69,2.95,3.18,2.94
+ARG,10/09/2022,Talleres Cordoba,Godoy Cruz,3,1,,,H,2.15,3.19,3.56,2.23,3.37,3.8
+ARG,10/09/2022,Boca Juniors,Aldosivi,2,1,,,H,1.31,4.93,10.59,1.35,5.25,11.9
+ARG,13/09/2022,Godoy Cruz,Tigre,1,1,,,D,2.25,3.19,3.25,2.35,3.38,3.46
+ARG,13/09/2022,Huracan,Barracas Central,1,1,,,D,1.5,4.01,6.75,1.54,4.2,7.3
+ARG,14/09/2022,Platense,Union de Santa Fe,1,0,,,H,2.54,2.91,3.05,2.7,3.1,3.28
+ARG,14/09/2022,Racing Club,Patronato,1,0,,,H,1.64,3.81,5.24,1.8,4.1,6.0
+ARG,14/09/2022,Aldosivi,Newells Old Boys,1,2,,,A,2.64,3.09,2.79,3.31,3.33,2.94
+ARG,14/09/2022,Colon Santa Fe,San Lorenzo,0,0,,,D,2.83,3.02,2.64,2.99,3.29,2.75
+ARG,14/09/2022,River Plate,Banfield,1,2,,,A,1.41,4.38,7.99,1.45,4.7,9.22
+ARG,15/09/2022,Lanus,Boca Juniors,0,1,,,A,3.35,2.78,2.48,3.9,3.0,2.57
+ARG,15/09/2022,Defensa y Justicia,Argentinos Jrs,2,1,,,H,3.0,2.83,2.66,3.24,2.99,2.81
+ARG,15/09/2022,Rosario Central,Estudiantes L.P.,1,1,,,D,2.59,2.92,3.0,2.73,3.06,3.18
+ARG,16/09/2022,Atl. Tucuman,Talleres Cordoba,1,1,,,D,2.06,3.15,3.86,2.16,3.28,4.3
+ARG,16/09/2022,Gimnasia L.P.,Arsenal Sarandi,2,0,,,H,2.23,3.01,3.56,2.32,3.14,3.88
+ARG,17/09/2022,Barracas Central,Godoy Cruz,3,1,,,H,3.0,3.05,2.51,3.17,3.2,2.59
+ARG,18/09/2022,Newells Old Boys,Sarmiento Junin,0,1,,,A,2.16,3.17,3.54,2.23,3.44,3.75
+ARG,18/09/2022,Tigre,Velez Sarsfield,2,0,,,H,2.03,3.28,3.79,2.1,3.46,4.1
+ARG,18/09/2022,San Lorenzo,River Plate,0,1,,,A,3.47,3.07,2.24,3.85,3.26,2.31
+ARG,18/09/2022,Banfield,Lanus,1,2,,,A,2.29,2.93,3.56,2.35,3.14,3.93
+ARG,19/09/2022,Platense,Racing Club,0,1,,,A,3.33,2.91,2.4,3.67,3.04,2.49
+ARG,19/09/2022,Talleres Cordoba,Colon Santa Fe,2,0,,,H,2.07,3.31,3.66,2.17,3.56,4.4
+ARG,19/09/2022,Arsenal Sarandi,Aldosivi,3,0,,,H,1.75,3.38,5.19,1.79,3.54,5.8
+ARG,19/09/2022,Boca Juniors,Huracan,0,0,,,D,2.51,2.86,3.21,2.6,3.0,3.88
+ARG,19/09/2022,Union de Santa Fe,Independiente,0,1,,,A,2.61,2.93,2.97,2.86,3.08,3.16
+ARG,20/09/2022,Argentinos Jrs,Atl. Tucuman,1,2,,,A,2.27,2.98,3.5,2.34,3.14,3.79
+ARG,20/09/2022,Estudiantes L.P.,Defensa y Justicia,1,2,,,A,1.93,3.25,4.31,2.0,3.53,4.71
+ARG,20/09/2022,Patronato,Rosario Central,0,0,,,D,2.23,3.1,3.44,2.3,3.24,3.91
+ARG,21/09/2022,Central Cordoba,Gimnasia L.P.,1,0,,,H,2.7,3.1,2.72,2.95,3.33,2.86
+ARG,23/09/2022,Godoy Cruz,Boca Juniors,0,1,,,A,2.45,2.96,3.19,2.75,3.17,3.51
+ARG,23/09/2022,Huracan,Banfield,3,1,,,H,1.94,3.13,4.45,2.0,3.29,4.91
+ARG,24/09/2022,Defensa y Justicia,Patronato,2,1,,,H,2.22,3.24,3.31,2.33,3.57,3.61
+ARG,24/09/2022,Sarmiento Junin,Arsenal Sarandi,2,0,,,H,2.58,2.95,2.97,2.67,3.14,3.17
+ARG,24/09/2022,Lanus,San Lorenzo,2,0,,,H,2.96,2.78,2.75,3.18,2.95,2.86
+ARG,24/09/2022,River Plate,Talleres Cordoba,0,1,,,A,1.58,3.93,5.84,1.64,4.1,6.4
+ARG,25/09/2022,Independiente,Newells Old Boys,1,0,,,H,2.14,3.0,3.84,2.3,3.15,4.12
+ARG,25/09/2022,Gimnasia L.P.,Tigre,0,1,,,A,2.59,3.12,2.82,2.69,3.3,3.06
+ARG,25/09/2022,Rosario Central,Platense,1,1,,,D,2.31,2.85,3.58,2.42,3.02,3.79
+ARG,25/09/2022,Racing Club,Union de Santa Fe,2,1,,,H,1.79,3.56,4.5,1.84,3.76,5.16
+ARG,26/09/2022,Atl. Tucuman,Estudiantes L.P.,3,1,,,H,2.44,2.97,3.19,2.53,3.12,3.54
+ARG,26/09/2022,Velez Sarsfield,Barracas Central,1,0,,,H,1.86,3.44,4.28,1.95,3.69,4.7
+ARG,26/09/2022,Aldosivi,Central Cordoba,0,3,,,A,2.77,3.14,2.63,3.01,3.33,2.75
+ARG,26/09/2022,Colon Santa Fe,Argentinos Jrs,0,4,,,A,3.29,3.17,2.27,3.57,3.37,2.38
+ARG,29/09/2022,Barracas Central,Gimnasia L.P.,1,1,,,D,2.71,3.04,2.77,2.89,3.18,2.85
+ARG,30/09/2022,Estudiantes L.P.,Colon Santa Fe,2,4,,,A,1.71,3.68,4.92,1.81,3.86,5.95
+ARG,30/09/2022,Tigre,Aldosivi,3,0,,,H,1.3,5.15,10.02,1.37,5.5,11.67
+ARG,02/10/2022,Patronato,Argentinos Jrs,0,1,,,A,2.75,2.88,2.74,2.88,3.08,2.94
+ARG,02/10/2022,Sarmiento Junin,Atl. Tucuman,1,0,,,H,2.18,3.31,3.19,2.28,3.49,3.5
+ARG,04/10/2022,Velez Sarsfield,Boca Juniors,0,0,,,D,3.34,2.95,2.29,3.59,3.25,2.45
+ARG,04/10/2022,Estudiantes L.P.,Central Cordoba,5,0,,,H,2.11,3.19,3.49,2.17,3.35,3.75
+ARG,04/10/2022,Patronato,Banfield,0,1,,,A,2.38,2.92,3.2,2.51,3.2,3.6
+ARG,04/10/2022,Platense,Racing Club,0,1,,,A,4.06,3.5,1.84,4.5,3.75,1.95
+ARG,04/10/2022,River Plate,Argentinos Jrs,4,2,,,H,1.68,3.61,4.98,1.73,3.87,5.5
+ARG,05/10/2022,Banfield,Atl. Tucuman,1,1,,,D,1.98,3.23,3.87,2.11,3.46,4.2
+ARG,05/10/2022,Racing Club,Aldosivi,5,0,,,H,1.4,4.53,7.04,1.45,4.9,7.8
+ARG,06/10/2022,Newells Old Boys,San Lorenzo,0,0,,,D,1.99,3.23,4.02,2.1,3.4,4.48
+ARG,06/10/2022,Gimnasia L.P.,Patronato,2,0,,,H,1.8,3.44,4.58,1.88,3.75,5.25
+ARG,06/10/2022,Aldosivi,Estudiantes L.P.,0,1,,,A,4.44,3.52,1.8,5.25,3.68,1.85
+ARG,06/10/2022,Lanus,Defensa y Justicia,1,1,,,D,3.29,3.08,2.3,3.66,3.23,2.46
+ARG,07/10/2022,Platense,Newells Old Boys,1,1,,,D,2.62,2.97,2.89,2.8,3.1,3.02
+ARG,07/10/2022,Talleres Cordoba,Barracas Central,0,2,,,A,1.64,3.64,5.61,1.72,3.9,6.05
+ARG,07/10/2022,Estudiantes L.P.,Central Cordoba,2,2,,,D,1.71,3.6,4.96,1.8,3.87,5.6
+ARG,07/10/2022,Racing Club,Independiente,1,0,,,H,1.94,3.29,4.08,2.0,3.5,4.51
+ARG,07/10/2022,Atl. Tucuman,Gimnasia L.P.,2,0,,,H,2.31,2.97,3.4,2.59,3.14,4.0
+ARG,07/10/2022,Lanus,Huracan,2,3,,,A,2.95,2.91,2.62,3.13,3.05,2.72
+ARG,09/10/2022,Estudiantes L.P.,Racing Club,1,0,,,H,2.89,3.15,2.51,3.04,3.3,2.7
+ARG,09/10/2022,Tigre,Huracan,1,1,,,D,2.69,2.91,2.9,2.9,3.09,3.12
+ARG,09/10/2022,Central Cordoba,Godoy Cruz,3,0,,,H,2.86,3.21,2.49,3.08,3.39,2.63
+ARG,09/10/2022,San Lorenzo,Atl. Tucuman,1,1,,,D,2.46,2.94,3.19,2.55,3.1,3.45
+ARG,10/10/2022,Patronato,River Plate,0,1,,,A,4.34,3.79,1.77,4.75,4.08,1.83
+ARG,10/10/2022,Argentinos Jrs,Huracan,1,1,,,D,2.71,2.72,3.06,2.8,2.85,3.2
+ARG,10/10/2022,Rosario Central,Defensa y Justicia,0,0,,,D,1.94,3.34,4.06,2.08,3.5,4.62
+ARG,10/10/2022,Estudiantes L.P.,Lanus,3,1,,,H,1.98,3.27,4.03,2.1,3.45,4.87
+ARG,10/10/2022,Racing Club,Atl. Tucuman,2,0,,,H,1.95,3.41,3.92,2.03,3.59,4.2
+ARG,13/10/2022,River Plate,Platense,2,1,,,H,1.36,4.77,8.63,1.4,5.09,10.0
+ARG,13/10/2022,Velez Sarsfield,Talleres Cordoba,2,1,,,H,2.24,2.94,3.66,2.3,3.11,4.0
+ARG,13/10/2022,Godoy Cruz,Argentinos Jrs,0,0,,,D,3.1,2.96,2.49,3.35,3.2,2.65
+ARG,13/10/2022,Lanus,Patronato,0,1,,,A,2.2,3.24,3.36,2.3,3.35,3.75
+ARG,14/10/2022,Atl. Tucuman,Rosario Central,1,1,,,D,1.84,3.35,4.55,1.9,3.49,5.25
+ARG,14/10/2022,Newells Old Boys,Tigre,0,2,,,A,3.36,3.08,2.27,3.7,3.3,2.45
+ARG,14/10/2022,Colon Santa Fe,Racing Club,0,2,,,A,3.2,3.61,2.13,3.35,3.85,2.2
+ARG,14/10/2022,Huracan,Estudiantes L.P.,3,1,,,H,1.79,3.31,5.0,1.87,3.44,5.64
+ARG,14/10/2022,Defensa y Justicia,Union de Santa Fe,1,0,,,H,2.17,3.18,3.5,2.3,3.4,3.78
+ARG,15/10/2022,Arsenal Sarandi,Central Cordoba,2,0,,,H,2.01,3.04,4.24,2.15,3.27,4.85
+ARG,16/10/2022,Aldosivi,Talleres Cordoba,1,3,,,A,3.08,3.16,2.38,3.45,3.27,2.51
+ARG,16/10/2022,Newells Old Boys,Boca Juniors,2,0,,,H,3.04,2.76,2.71,3.4,2.92,2.92
+ARG,16/10/2022,Independiente,Banfield,1,0,,,H,2.1,3.05,3.88,2.17,3.26,4.06
+ARG,16/10/2022,Godoy Cruz,Patronato,0,1,,,A,1.92,3.5,3.92,2.0,3.63,4.27
+ARG,17/10/2022,River Plate,Rosario Central,1,2,,,A,1.47,4.27,6.82,1.51,4.7,9.0
+ARG,17/10/2022,Arsenal Sarandi,Barracas Central,1,2,,,A,2.21,3.05,3.54,2.3,3.17,3.91
+ARG,17/10/2022,Gimnasia L.P.,Argentinos Jrs,0,0,,,D,3.52,2.96,2.28,3.87,3.1,2.4
+ARG,17/10/2022,Velez Sarsfield,Estudiantes L.P.,4,0,,,H,2.27,3.14,3.32,2.32,3.25,3.8
+ARG,18/10/2022,Sarmiento Junin,San Lorenzo,2,4,,,A,3.25,2.86,2.48,3.55,2.98,2.58
+ARG,18/10/2022,Atl. Tucuman,Union de Santa Fe,1,1,,,D,1.65,3.68,5.49,1.71,3.8,7.16
+ARG,18/10/2022,Colon Santa Fe,Defensa y Justicia,1,2,,,A,2.33,3.4,2.97,2.4,3.51,3.16
+ARG,18/10/2022,Lanus,Racing Club,0,1,,,A,5.17,3.6,1.69,5.95,3.81,1.75
+ARG,19/10/2022,Huracan,Platense,2,0,,,H,1.63,3.5,6.19,1.65,3.65,6.75
+ARG,19/10/2022,Central Cordoba,Tigre,1,2,,,A,3.06,3.16,2.38,3.23,3.3,2.5
+ARG,20/10/2022,Talleres Cordoba,Union de Santa Fe,2,2,,,D,1.81,3.44,4.59,2.0,3.6,5.21
+ARG,20/10/2022,Gimnasia L.P.,Boca Juniors,1,2,,,A,3.29,2.9,2.45,3.7,3.0,2.55
+ARG,22/10/2022,Union de Santa Fe,Central Cordoba,1,4,,,A,1.98,3.22,4.1,2.05,3.35,4.6
+ARG,22/10/2022,Defensa y Justicia,Atl. Tucuman,3,1,,,H,2.73,3.13,2.65,2.89,3.22,2.78
+ARG,22/10/2022,Estudiantes L.P.,Godoy Cruz,2,0,,,H,1.91,3.4,4.12,1.95,3.59,4.45
+ARG,22/10/2022,San Lorenzo,Aldosivi,3,0,,,H,1.19,6.14,16.79,1.22,6.6,21.0
+ARG,22/10/2022,Argentinos Jrs,Velez Sarsfield,2,0,,,H,1.83,3.37,4.61,1.96,3.6,5.55
+ARG,23/10/2022,Banfield,Sarmiento Junin,0,0,,,D,2.92,3.16,2.5,3.09,3.3,2.65
+ARG,23/10/2022,Talleres Cordoba,Gimnasia L.P.,2,1,,,H,3.44,3.08,2.25,3.65,3.2,2.35
+ARG,23/10/2022,Boca Juniors,Independiente,2,2,,,D,1.38,4.27,9.48,1.42,4.55,11.0
+ARG,23/10/2022,Patronato,Huracan,3,2,,,H,6.0,3.96,1.56,6.65,4.14,1.6
+ARG,23/10/2022,Racing Club,River Plate,1,2,,,A,1.88,3.6,3.97,1.95,3.77,4.3
+ARG,24/10/2022,Barracas Central,Newells Old Boys,1,1,,,D,2.69,3.06,2.76,2.81,3.29,2.88
+ARG,24/10/2022,Rosario Central,Colon Santa Fe,1,1,,,D,2.19,3.38,3.23,2.26,3.57,3.4
+ARG,25/10/2022,Tigre,Arsenal Sarandi,1,4,,,A,1.46,4.11,7.45,1.55,4.39,8.0
+ARG,25/10/2022,Velez Sarsfield,Central Cordoba,3,1,,,H,1.94,3.37,3.97,2.0,3.6,4.3
+ARG,26/10/2022,Platense,Lanus,1,1,,,D,2.56,2.97,2.98,2.84,3.1,3.4
+ARG,02/11/2022,Central Cordoba,Barracas Central,3,1,,,H,1.49,4.08,6.22,1.54,4.3,7.5
+ARG,02/11/2022,Newells Old Boys,Defensa y Justicia,1,0,,,H,2.51,3.12,2.81,2.62,3.28,3.0
+ARG,02/11/2022,Arsenal Sarandi,Rosario Central,1,1,,,D,2.94,3.14,2.41,3.14,3.3,2.54
+ARG,02/11/2022,Godoy Cruz,Tigre,1,1,,,D,2.29,3.15,3.13,2.43,3.36,3.4
+ARG,02/11/2022,Velez Sarsfield,Aldosivi,2,0,,,H,1.45,4.12,6.98,1.49,4.49,7.61
+ARG,03/11/2022,Arsenal Sarandi,Velez Sarsfield,0,0,,,D,3.51,2.94,2.22,3.8,3.15,2.34
+ARG,04/11/2022,Huracan,Barracas Central,1,2,,,A,1.65,3.5,5.55,1.7,3.65,6.4
+ARG,05/11/2022,Boca Juniors,Defensa y Justicia,2,0,,,H,1.93,3.39,3.87,2.03,3.72,4.33
+ARG,05/11/2022,Estudiantes L.P.,Argentinos Jrs,1,1,,,D,2.28,3.19,3.12,2.41,3.38,3.39
+ARG,06/11/2022,Huracan,Rosario Central,2,0,,,H,1.99,3.3,3.89,2.05,3.48,4.33
+ARG,06/11/2022,Independiente,Talleres Cordoba,1,0,,,H,2.16,3.08,3.64,2.26,3.35,3.85
+ARG,06/11/2022,Arsenal Sarandi,Banfield,0,0,,,D,2.79,2.84,2.83,2.9,2.92,3.0
+ARG,06/11/2022,Tigre,Barracas Central,1,1,,,D,1.52,3.96,6.55,1.56,4.19,7.48
+ARG,06/11/2022,Sarmiento Junin,Argentinos Jrs,1,0,,,H,3.49,3.15,2.18,3.75,3.28,2.26
+ARG,07/11/2022,River Plate,Godoy Cruz,0,2,,,A,1.55,4.11,5.69,1.61,4.4,6.0
+ARG,07/11/2022,Colon Santa Fe,Velez Sarsfield,2,1,,,H,3.52,3.09,2.19,3.77,3.28,2.4
+ARG,07/11/2022,Defensa y Justicia,Aldosivi,3,2,,,H,1.65,3.7,5.28,1.7,3.92,6.1
+ARG,08/11/2022,Godoy Cruz,Aldosivi,2,0,,,H,1.42,4.72,6.9,1.47,5.07,8.0
+ARG,09/11/2022,Banfield,Colon Santa Fe,2,1,,,H,2.25,3.1,3.39,2.34,3.26,3.67
+ARG,09/11/2022,Arsenal Sarandi,Velez Sarsfield,2,2,,,D,3.16,2.98,2.44,3.46,3.18,2.56
+ARG,09/11/2022,Newells Old Boys,Gimnasia L.P.,2,0,,,H,2.7,2.94,2.85,2.83,3.16,2.96
+ARG,09/11/2022,Boca Juniors,River Plate,1,0,,,H,3.47,3.0,2.27,3.75,3.18,2.35
+ARG,10/11/2022,Central Cordoba,Newells Old Boys,0,3,,,A,2.61,2.93,2.99,2.84,3.02,3.35
+ARG,02/12/2022,Banfield,San Lorenzo,0,0,,,D,2.18,3.0,3.53,2.32,3.2,3.85
+ARG,02/12/2022,Huracan,Lanus,1,0,,,H,2.26,3.22,3.12,2.4,3.49,3.31
+ARG,02/12/2022,Union de Santa Fe,River Plate,1,0,,,H,4.01,3.35,1.9,4.5,3.69,2.0
+ARG,03/12/2022,Platense,Patronato,1,2,,,A,2.31,2.99,3.23,2.48,3.2,3.5
+ARG,03/12/2022,Aldosivi,Tigre,1,0,,,H,3.56,3.21,2.06,3.87,3.4,2.19
+ARG,03/12/2022,Huracan,Godoy Cruz,1,3,,,A,1.98,3.34,3.67,2.11,3.59,4.2
+ARG,03/12/2022,Rosario Central,Barracas Central,1,3,,,A,1.29,5.33,8.86,1.33,6.0,10.0
+ARG,03/12/2022,Sarmiento Junin,Newells Old Boys,2,2,,,D,2.7,3.02,2.67,2.85,3.25,2.81
+ARG,04/12/2022,Lanus,Aldosivi,1,2,,,A,1.79,3.53,4.3,1.88,3.68,4.75
+ARG,05/12/2022,River Plate,Tigre,1,2,,,A,1.47,4.21,6.43,1.5,4.47,7.0
+ARG,06/12/2022,River Plate,Atl. Tucuman,0,0,,,D,1.24,6.06,11.09,1.29,6.5,15.0
+ARG,06/12/2022,Colon Santa FE,Union de Santa Fe,2,2,,,D,2.35,3.11,3.18,2.45,3.25,3.35
+ARG,06/12/2022,Godoy Cruz,Racing Club,2,0,,,H,2.54,3.21,2.78,2.65,3.33,2.91
+ARG,06/12/2022,Velez Sarsfield,Platense,0,1,,,A,1.66,3.57,5.6,1.73,3.75,6.14
+ARG,07/12/2022,Argentinos Jrs,Tigre,2,1,,,H,2.4,2.96,3.22,2.5,3.14,3.5
+ARG,08/12/2022,Atl. Tucuman,Central Cordoba,1,0,,,H,1.87,3.36,4.39,1.95,3.65,4.85
+ARG,08/12/2022,Colon Santa Fe,Arsenal Sarandi,1,1,,,D,2.01,3.33,3.81,2.1,3.52,4.13
+ARG,08/12/2022,Huracan,Sarmiento Junin,4,1,,,H,1.72,3.36,5.49,1.76,3.52,5.76
+ARG,08/12/2022,Platense,Banfield,3,1,,,H,2.74,2.77,2.97,2.87,2.91,3.14
+ARG,09/12/2022,Talleres Cordoba,Defensa y Justicia,1,0,,,H,1.92,3.26,4.3,2.03,3.4,4.7
+ARG,09/12/2022,Sarmiento Junin,Independiente,1,2,,,A,2.97,2.9,2.62,3.12,3.06,2.71
+ARG,10/12/2022,Aldosivi,Banfield,0,1,,,A,2.86,3.12,2.56,3.02,3.31,2.79
+ARG,10/12/2022,Sarmiento Junin,Boca Juniors,0,1,,,A,3.8,3.01,2.14,4.37,3.21,2.2
+ARG,10/12/2022,Gimnasia L.P.,San Lorenzo,0,1,,,A,2.6,2.75,3.19,2.74,3.0,3.57
+ARG,10/12/2022,Independiente,Barracas Central,2,2,,,D,1.81,3.27,4.9,1.9,3.51,5.65
+ARG,04/01/2023,River Plate,Union de Santa Fe,1,0,,,H,1.38,4.58,8.37,1.44,4.9,9.71
+ARG,04/01/2023,Barracas Central,Boca Juniors,0,3,,,A,4.05,3.24,1.97,4.57,3.42,2.05
+ARG,04/01/2023,San Lorenzo,Independiente,0,0,,,D,2.22,2.84,3.82,2.31,3.05,4.34
+ARG,04/01/2023,Racing Club,Huracan,2,1,,,H,2.17,3.1,3.55,2.25,3.4,3.75
+ARG,05/01/2023,Talleres Cordoba,Rosario Central,3,1,,,H,1.93,3.28,4.13,2.01,3.49,4.4
+ARG,07/01/2023,Atl. Tucuman,Union de Santa Fe,1,0,,,H,2.26,3.07,3.43,2.33,3.2,3.7
+ARG,07/01/2023,Velez Sarsfield,Arsenal Sarandi,1,0,,,H,1.79,3.2,5.3,1.91,3.4,6.4
+ARG,07/01/2023,Barracas Central,River Plate,2,1,,,H,5.05,3.72,1.7,7.5,4.61,1.76
+ARG,07/01/2023,San Lorenzo,Rosario Central,1,0,,,H,1.8,3.19,5.26,1.98,3.35,5.9
+ARG,07/01/2023,Estudiantes L.P.,Central Cordoba,1,1,,,D,1.59,3.72,6.07,1.65,4.0,7.07
+ARG,10/01/2023,Banfield,Lanus,1,0,,,H,2.38,2.81,3.36,2.54,2.98,3.65
+ARG,10/01/2023,Boca Juniors,River Plate,0,2,,,A,4.12,3.21,1.94,4.59,3.34,2.14
+ARG,10/01/2023,Colon Santa Fe,Union de Santa Fe,0,0,,,D,2.16,2.98,3.67,2.3,3.18,4.2
+ARG,10/01/2023,Estudiantes L.P.,Gimnasia L.P.,0,0,,,D,1.79,3.32,4.77,1.96,3.64,5.5
+ARG,10/01/2023,Talleres Cordoba,Belgrano,0,0,,,D,1.89,3.15,4.44,1.95,3.31,4.96
+ARG,11/01/2023,Central Cordoba,Union de Santa Fe,2,0,,,H,2.8,2.77,2.8,2.99,2.88,3.02
+ARG,11/01/2023,Defensa y Justicia,Racing Club,2,2,,,D,2.75,3.33,2.43,2.88,3.6,2.65
+ARG,12/01/2023,Gimnasia L.P.,Colon Santa Fe,1,0,,,H,3.62,2.97,2.2,3.85,3.1,2.34
+ARG,27/01/2023,Rosario Central,Argentinos Jrs,1,0,,,H,3.16,2.93,2.47,3.36,3.11,2.57
+ARG,28/01/2023,Defensa y Justicia,Huracan,2,4,,,A,3.15,2.93,2.47,3.35,3.17,2.56
+ARG,28/01/2023,San Lorenzo,Arsenal Sarandi,1,0,,,H,1.73,3.18,5.81,1.8,3.49,6.5
+ARG,28/01/2023,Estudiantes L.P.,Tigre,1,2,,,A,2.54,3.12,2.87,2.78,3.33,3.12
+ARG,28/01/2023,Talleres Cordoba,Independiente,0,1,,,A,2.21,2.96,3.64,2.3,3.16,3.89
+ARG,29/01/2023,Central Cordoba,River Plate,0,2,,,A,5.07,3.63,1.7,5.66,3.91,1.73
+ARG,29/01/2023,Platense,Newells Old Boys,2,2,,,D,2.95,2.8,2.74,3.17,2.98,3.05
+ARG,29/01/2023,Colon Santa Fe,Lanus,1,2,,,A,2.36,3.1,3.17,2.45,3.32,3.46
+ARG,29/01/2023,Instituto,Sarmiento Junin,0,0,,,D,2.08,3.07,3.88,2.19,3.3,4.36
+ARG,29/01/2023,Racing Club,Belgrano,0,0,,,D,1.59,3.75,5.87,1.65,3.95,6.71
+ARG,30/01/2023,Boca Juniors,Atl. Tucuman,1,0,,,H,1.78,3.3,5.0,1.83,3.57,5.56
+ARG,30/01/2023,Barracas Central,Godoy Cruz,0,1,,,A,2.65,3.07,2.78,2.8,3.24,2.94
+ARG,30/01/2023,Banfield,Union de Santa Fe,0,0,,,D,2.52,2.94,3.07,2.6,3.18,3.27
+ARG,30/01/2023,Velez Sarsfield,Gimnasia L.P.,3,1,,,H,1.54,3.74,6.93,1.71,3.93,7.63
+ARG,04/02/2023,Tigre,Lanus,2,1,,,H,2.23,3.22,3.27,2.34,3.45,3.5
+ARG,04/02/2023,Instituto,Talleres Cordoba,0,3,,,A,2.95,3.0,2.55,3.08,3.2,2.7
+ARG,04/02/2023,Colon Santa Fe,Atl. Tucuman,0,0,,,D,2.42,3.08,3.06,2.52,3.26,3.37
+ARG,06/02/2023,Sarmiento Junin,Newells Old Boys,0,0,,,D,2.71,2.71,3.08,2.98,2.89,3.27
+ARG,06/02/2023,Arsenal Sarandi,Boca Juniors,1,0,,,H,5.74,3.29,1.71,6.55,3.45,1.77
+ARG,06/02/2023,Estudiantes L.P.,Barracas Central,5,2,,,H,1.51,3.97,6.74,1.59,4.2,7.5
+ARG,07/02/2023,Talleres Cordoba,Godoy Cruz,1,1,,,D,1.81,3.39,4.66,1.92,3.59,5.2
+ARG,07/02/2023,Independiente,Huracan,1,0,,,H,2.49,2.79,3.31,2.61,2.89,3.84
+ARG,07/02/2023,Colon Santa Fe,Racing Club,0,4,,,A,2.68,2.99,2.82,2.89,3.13,2.99
+ARG,07/02/2023,Instituto,Belgrano,1,0,,,H,2.37,2.89,3.36,2.54,3.0,3.61
+ARG,07/02/2023,Banfield,Argentinos Jrs,1,0,,,H,3.33,2.91,2.39,3.65,3.08,2.55
+ARG,07/02/2023,Defensa y Justicia,Tigre,1,0,,,H,2.09,3.27,3.59,2.2,3.45,4.59
+ARG,09/02/2023,Central Cordoba,Platense,3,2,,,H,2.83,2.68,2.89,3.03,2.89,3.05
+ARG,09/02/2023,Gimnasia L.P.,Independiente,1,2,,,A,2.79,2.9,2.72,3.03,3.06,2.88
+ARG,09/02/2023,Lanus,Godoy Cruz,2,2,,,D,2.03,3.16,3.79,2.13,3.35,4.32
+ARG,09/02/2023,Belgrano,Newells Old Boys,1,1,,,D,2.75,2.61,3.07,2.88,2.79,3.25
+ARG,09/02/2023,Huracan,Colon Santa Fe,2,1,,,H,2.08,2.87,4.13,2.25,3.1,4.75
+ARG,10/02/2023,Barracas Central,Sarmiento Junin,1,1,,,D,2.06,3.02,3.9,2.19,3.2,4.25
+ARG,10/02/2023,Godoy Cruz,Instituto,1,1,,,D,2.54,2.87,3.09,3.25,3.01,3.54
+ARG,12/02/2023,Huracan,Platense,1,1,,,D,2.4,2.68,3.61,2.56,2.89,3.9
+ARG,13/02/2023,Instituto,Huracan,0,0,,,D,2.69,2.91,2.89,2.99,3.07,3.03
+ARG,13/02/2023,Racing Club,Tigre,2,2,,,D,2.15,3.41,3.33,2.26,3.55,3.7
+ARG,13/02/2023,Barracas Central,Union de Santa Fe,1,1,,,D,2.83,3.05,2.63,2.95,3.27,2.78
+ARG,13/02/2023,Estudiantes L.P.,Lanus,0,2,,,A,2.19,3.28,3.36,2.28,3.45,3.7
+ARG,17/02/2023,Gimnasia L.P.,Instituto,2,0,,,H,3.21,2.83,2.53,3.54,3.03,2.68
+ARG,18/02/2023,Arsenal Sarandi,Racing Club,0,3,,,A,6.06,3.76,1.59,7.0,4.0,1.63
+ARG,18/02/2023,Huracan,Barracas Central,2,0,,,H,1.53,3.97,6.44,1.55,4.2,7.2
+ARG,18/02/2023,Lanus,Rosario Central,3,0,,,H,2.19,3.0,3.71,2.27,3.17,4.13
+ARG,18/02/2023,Tigre,River Plate,0,1,,,A,3.02,3.29,2.34,3.26,3.52,2.48
+ARG,18/02/2023,Argentinos Jrs,Belgrano,3,0,,,H,1.8,3.29,4.93,1.9,3.45,6.0
+ARG,18/02/2023,Godoy Cruz,Estudiantes L.P.,0,1,,,A,2.41,3.12,3.07,2.51,3.35,3.29
+ARG,19/02/2023,Newells Old Boys,Banfield,2,0,,,H,2.29,2.94,3.5,2.41,3.1,3.81
+ARG,19/02/2023,Union de Santa Fe,Colon Santa Fe,1,1,,,D,2.17,3.08,3.64,2.27,3.31,4.42
+ARG,19/02/2023,Boca Juniors,Platense,3,1,,,H,1.78,3.32,5.11,1.83,3.47,5.83
+ARG,20/02/2023,Independiente,Defensa y Justicia,0,2,,,A,2.09,3.11,3.82,2.15,3.32,4.1
+ARG,20/02/2023,Talleres Cordoba,Central Cordoba,2,0,,,H,1.6,3.7,6.07,1.65,3.98,7.0
+ARG,20/02/2023,Sarmiento Junin,San Lorenzo,0,1,,,A,3.78,2.98,2.17,4.17,3.17,2.42
+ARG,21/02/2023,Atl. Tucuman,Velez Sarsfield,1,1,,,D,2.45,2.86,3.3,2.59,3.04,3.5
+ARG,25/02/2023,Belgrano,Tigre,0,2,,,A,2.83,3.1,2.59,2.97,3.25,2.73
+ARG,25/02/2023,Rosario Central,Godoy Cruz,1,0,,,H,2.44,2.99,3.15,2.54,3.17,3.38
+ARG,25/02/2023,San Lorenzo,Union de Santa Fe,1,0,,,H,2.23,2.95,3.65,2.3,3.1,4.13
+ARG,25/02/2023,Estudiantes L.P.,Sarmiento Junin,1,1,,,D,1.71,3.53,5.25,1.77,3.7,6.0
+ARG,25/02/2023,Platense,Talleres Cordoba,2,4,,,A,3.49,3.05,2.24,3.92,3.18,2.38
+ARG,26/02/2023,Velez Sarsfield,Boca Juniors,1,2,,,A,2.48,2.86,3.24,2.57,3.0,3.47
+ARG,26/02/2023,Colon Santa Fe,Huracan,1,1,,,D,2.4,3.03,3.17,2.5,3.2,3.45
+ARG,26/02/2023,Defensa y Justicia,Atl. Tucuman,3,0,,,H,2.08,3.22,3.71,2.15,3.35,4.01
+ARG,26/02/2023,River Plate,Arsenal Sarandi,1,2,,,A,1.2,6.43,14.15,1.23,7.2,17.0
+ARG,27/02/2023,Banfield,Independiente,0,0,,,D,2.25,2.95,3.6,2.32,3.05,3.91
+ARG,27/02/2023,Instituto,Newells Old Boys,3,1,,,H,2.45,2.81,3.38,2.58,3.08,3.63
+ARG,27/02/2023,Barracas Central,Gimnasia L.P.,1,0,,,H,2.49,3.0,3.08,2.62,3.14,3.27
+ARG,27/02/2023,Racing Club,Lanus,2,1,,,H,1.85,3.52,4.24,1.95,3.65,4.7
+ARG,28/02/2023,Central Cordoba,Argentinos Jrs,1,0,,,H,4.47,3.28,1.88,4.9,3.41,1.95
+ARG,02/03/2023,Newells Old Boys,Velez Sarsfield,1,0,,,H,2.71,2.92,2.85,2.9,3.07,2.98
+ARG,02/03/2023,Tigre,Rosario Central,2,2,,,D,1.67,3.65,5.33,1.77,3.84,5.99
+ARG,03/03/2023,Sarmiento Junin,Rosario Central,4,1,,,H,2.73,2.96,2.77,2.92,3.16,2.91
+ARG,03/03/2023,Union de Santa Fe,Estudiantes L.P.,2,0,,,H,2.39,2.99,3.21,2.51,3.14,3.45
+ARG,04/03/2023,Banfield,Platense,0,2,,,A,1.94,3.18,4.24,2.01,3.4,4.86
+ARG,06/03/2023,Argentinos Jrs,Platense,1,0,,,H,1.63,3.57,5.96,1.7,3.78,6.5
+ARG,06/03/2023,Tigre,Talleres Cordoba,1,3,,,A,3.32,3.1,2.28,3.55,3.3,2.43
+ARG,06/03/2023,Belgrano,Velez Sarsfield,2,0,,,H,2.49,2.84,3.24,2.61,3.07,3.48
+ARG,06/03/2023,Central Cordoba,Huracan,2,0,,,H,2.45,3.02,3.09,2.53,3.3,3.3
+ARG,06/03/2023,Rosario Central,Instituto,4,1,,,H,2.26,3.04,3.46,2.42,3.18,3.8
+ARG,07/03/2023,Boca Juniors,Sarmiento Junin,2,0,,,H,1.74,3.29,5.48,1.81,3.58,6.55
+ARG,09/03/2023,Velez Sarsfield,River Plate,2,0,,,H,3.97,3.27,1.95,4.35,3.45,2.06
+ARG,09/03/2023,Defensa y Justicia,Sarmiento Junin,1,1,,,D,2.28,3.11,3.2,2.41,3.36,3.79
+ARG,09/03/2023,Instituto,Banfield,0,1,,,A,2.42,2.71,3.46,2.6,2.84,3.85
+ARG,09/03/2023,Argentinos Jrs,Atl. Tucuman,2,2,,,D,1.73,3.35,5.13,1.85,3.57,6.5
+ARG,09/03/2023,Rosario Central,Talleres Cordoba,2,0,,,H,3.19,3.1,2.29,3.38,3.28,2.5
+ARG,09/03/2023,Boca Juniors,Tigre,0,1,,,A,2.06,3.01,3.92,2.15,3.22,4.3
+ARG,10/03/2023,Atl. Tucuman,Central Cordoba,0,0,,,D,1.87,3.12,4.6,1.97,3.28,5.03
+ARG,10/03/2023,Platense,Argentinos Jrs,0,0,,,D,3.16,2.85,2.47,3.38,3.1,2.63
+ARG,11/03/2023,Arsenal Sarandi,Gimnasia L.P.,0,0,,,D,3.25,3.05,2.31,3.52,3.25,2.45
+ARG,12/03/2023,Godoy Cruz,Banfield,0,0,,,D,2.59,2.71,3.2,2.74,2.96,3.44
+ARG,12/03/2023,River Plate,Belgrano,2,1,,,H,1.55,3.74,6.17,1.63,3.94,6.73
+ARG,13/03/2023,Banfield,Boca Juniors,1,0,,,H,3.08,2.93,2.5,3.31,3.08,2.73
+ARG,13/03/2023,Rosario Central,Union de Santa Fe,1,1,,,D,2.74,3.02,2.68,2.87,3.2,2.86
+ARG,14/03/2023,Colon Santa Fe,Newells Old Boys,1,1,,,D,2.92,2.99,2.59,3.27,3.18,2.87
+ARG,14/03/2023,Velez Sarsfield,Platense,1,1,,,D,1.67,3.43,5.82,1.73,3.62,6.56
+ARG,18/03/2023,Union de Santa Fe,Racing Club,1,3,,,A,2.74,3.16,2.6,2.98,3.43,2.72
+ARG,18/03/2023,Arsenal Sarandi,Tigre,2,0,,,H,4.15,3.34,1.91,4.65,3.54,1.99
+ARG,18/03/2023,Independiente,Colon Santa Fe,2,2,,,D,2.12,3.13,3.65,2.21,3.42,4.15
+ARG,18/03/2023,Platense,Defensa y Justicia,1,0,,,H,2.99,3.11,2.44,3.29,3.3,2.58
+ARG,19/03/2023,Atl. Tucuman,Barracas Central,1,1,,,D,1.7,3.62,5.0,1.84,3.92,5.5
+ARG,19/03/2023,Godoy Cruz,Belgrano,3,1,,,H,2.06,3.0,4.05,2.16,3.18,4.59
+ARG,19/03/2023,Gimnasia L.P.,Estudiantes L.P.,2,1,,,H,3.2,3.09,2.33,3.46,3.29,2.42
+ARG,19/03/2023,Boca Juniors,Instituto,2,3,,,A,1.85,3.28,4.52,1.94,3.53,5.11
+ARG,20/03/2023,Sarmiento Junin,River Plate,0,2,,,A,5.48,3.73,1.63,7.16,4.1,1.73
+ARG,20/03/2023,Talleres Cordoba,Banfield,0,1,,,A,1.74,3.34,5.31,1.86,3.55,6.3
+ARG,20/03/2023,Newells Old Boys,San Lorenzo,1,0,,,H,2.55,2.78,3.19,2.7,2.98,3.47
+ARG,21/03/2023,Huracan,Rosario Central,0,2,,,A,1.73,3.27,5.58,1.8,3.4,6.52
+ARG,21/03/2023,Lanus,Argentinos Jrs,0,0,,,D,2.99,2.89,2.6,3.2,3.1,2.83
+ARG,22/03/2023,Velez Sarsfield,Central Cordoba,4,0,,,H,1.8,3.22,5.02,1.87,3.44,5.59
+ARG,31/03/2023,Defensa y Justicia,Velez Sarsfield,0,0,,,D,2.61,2.99,2.89,2.75,3.17,3.13
+ARG,31/03/2023,Argentinos Jrs,Godoy Cruz,3,0,,,H,1.61,3.55,6.16,1.8,3.8,6.75
+ARG,31/03/2023,Estudiantes L.P.,Newells Old Boys,3,0,,,H,2.36,2.96,3.3,2.48,3.1,3.53
+ARG,31/03/2023,Rosario Central,Gimnasia L.P.,3,1,,,H,2.24,3.04,3.47,2.34,3.2,3.72
+ARG,02/04/2023,Arsenal Sarandi,Estudiantes L.P.,1,1,,,D,3.65,3.08,2.16,3.92,3.25,2.33
+ARG,02/04/2023,Sarmiento Junin,Barracas Central,3,5,,,A,1.9,3.24,4.46,2.0,3.45,5.0
+ARG,02/04/2023,Belgrano,River Plate,2,1,,,H,4.29,3.38,1.88,4.75,3.6,1.95
+ARG,03/04/2023,Gimnasia L.P.,Colon Santa Fe,0,0,,,D,2.4,3.02,3.15,2.51,3.18,3.37
+ARG,03/04/2023,Platense,Central Cordoba,1,1,,,D,2.12,3.08,3.71,2.2,3.25,3.94
+ARG,03/04/2023,Lanus,River Plate,0,2,,,A,3.93,3.25,1.99,4.42,3.48,2.05
+ARG,04/04/2023,Belgrano,Sarmiento Junin,0,0,,,D,2.1,3.0,3.94,2.17,3.18,4.33
+ARG,04/04/2023,Central Cordoba,Arsenal Sarandi,1,0,,,H,2.03,3.18,3.91,2.2,3.3,4.3
+ARG,06/04/2023,Racing Club,Banfield,2,0,,,H,2.0,3.22,3.95,2.09,3.37,4.35
+ARG,06/04/2023,Union de Santa Fe,Gimnasia L.P.,2,0,,,H,2.25,3.14,3.34,2.37,3.34,3.59
+ARG,06/04/2023,San Lorenzo,Colon Santa Fe,0,0,,,D,1.79,3.26,5.08,1.99,3.41,5.6
+ARG,06/04/2023,Godoy Cruz,Independiente,2,1,,,H,2.19,3.05,3.59,2.29,3.18,3.95
+ARG,07/04/2023,Newells Old Boys,Gimnasia L.P.,2,2,,,D,1.85,3.14,4.93,2.03,3.31,5.73
+ARG,09/04/2023,Racing Club,Estudiantes L.P.,2,1,,,H,2.53,2.98,2.92,2.65,3.1,3.13
+ARG,09/04/2023,Barracas Central,Arsenal Sarandi,2,1,,,H,2.23,2.87,3.63,2.31,3.0,3.9
+ARG,11/04/2023,River Plate,Huracan,1,2,,,A,1.45,4.14,7.2,1.53,4.35,8.0
+ARG,11/04/2023,Argentinos Jrs,Instituto,1,2,,,A,1.84,3.24,4.65,1.97,3.4,5.0
+ARG,12/04/2023,Racing Club,Rosario Central,2,2,,,D,1.94,3.25,4.09,2.01,3.51,4.62
+ARG,13/04/2023,Estudiantes L.P.,Atl. Tucuman,0,0,,,D,1.87,3.29,4.44,1.97,3.45,4.88
+ARG,13/04/2023,Rosario Central,Independiente,1,0,,,H,2.08,3.02,3.94,2.16,3.25,4.39
+ARG,13/04/2023,Arsenal Sarandi,Godoy Cruz,2,3,,,A,2.79,2.85,2.82,3.07,3.0,2.97
+ARG,13/04/2023,Colon Santa Fe,Talleres Cordoba,2,2,,,D,3.01,3.16,2.4,3.28,3.34,2.5
+ARG,13/04/2023,River Plate,Gimnasia L.P.,3,0,,,H,1.16,7.41,16.44,1.19,8.25,21.0
+ARG,14/04/2023,Tigre,Sarmiento Junin,1,0,,,H,1.8,3.39,4.71,1.89,3.8,5.3
+ARG,15/04/2023,Defensa y Justicia,Instituto,1,0,,,H,2.14,3.09,3.66,2.24,3.25,4.25
+ARG,15/04/2023,Boca Juniors,Estudiantes L.P.,0,1,,,A,2.45,3.02,3.09,2.56,3.19,3.4
+ARG,16/04/2023,Gimnasia L.P.,Belgrano,0,2,,,A,2.76,2.98,2.72,3.01,3.13,2.85
+ARG,16/04/2023,Huracan,Argentinos Jrs,0,0,,,D,3.08,2.92,2.51,3.34,3.14,2.63
+ARG,16/04/2023,Union de Santa Fe,Tigre,0,0,,,D,2.35,3.17,3.07,2.49,3.36,3.23
+ARG,16/04/2023,Velez Sarsfield,Barracas Central,0,0,,,D,1.55,3.69,6.74,1.61,4.1,7.46
+ARG,16/04/2023,Independiente,Racing Club,1,1,,,D,3.28,3.02,2.33,3.5,3.15,2.42
+ARG,16/04/2023,Newells Old Boys,River Plate,0,1,,,A,4.19,3.19,1.95,4.85,3.4,2.05
+ARG,17/04/2023,Talleres Cordoba,San Lorenzo,0,0,,,D,2.12,2.95,3.92,2.24,3.1,4.35
+ARG,17/04/2023,Platense,Colon Santa Fe,0,0,,,D,2.49,3.05,2.99,2.66,3.24,3.17
+ARG,17/04/2023,Banfield,Central Cordoba,1,0,,,H,2.18,3.0,3.67,2.25,3.2,4.0
+ARG,17/04/2023,Sarmiento Junin,Arsenal Sarandi,1,0,,,H,1.99,3.14,4.09,2.06,3.3,4.5
+ARG,18/04/2023,Atl. Tucuman,Rosario Central,2,2,,,D,2.23,3.09,3.41,2.33,3.25,3.8
+ARG,18/04/2023,Godoy Cruz,Lanus,4,4,,,D,2.6,2.92,2.97,2.71,3.06,3.1
+ARG,22/04/2023,Colon Santa Fe,Velez Sarsfield,2,1,,,H,2.1,3.13,3.78,2.44,3.45,4.3
+ARG,22/04/2023,Arsenal Sarandi,Union de Santa Fe,2,1,,,H,2.95,3.0,2.55,3.13,3.18,2.7
+ARG,22/04/2023,Lanus,Sarmiento Junin,2,1,,,H,1.78,3.33,4.97,1.9,3.59,5.61
+ARG,23/04/2023,Belgrano,Newells Old Boys,1,0,,,H,2.42,2.83,3.35,2.51,2.96,3.55
+ARG,23/04/2023,Central Cordoba,Godoy Cruz,0,2,,,A,2.46,3.02,3.06,2.61,3.1,3.25
+ARG,23/04/2023,San Lorenzo,Platense,1,0,,,H,1.96,2.97,4.58,2.04,3.2,5.14
+ARG,23/04/2023,Rosario Central,Boca Juniors,2,2,,,D,2.76,2.98,2.72,2.89,3.2,2.85
+ARG,23/04/2023,Instituto,Banfield,1,1,,,D,2.13,3.0,3.85,2.43,3.15,4.34
+ARG,23/04/2023,Estudiantes L.P.,Talleres Cordoba,1,0,,,H,2.3,3.03,3.34,2.5,3.18,3.85
+ARG,24/04/2023,River Plate,Independiente,2,0,,,H,1.32,5.09,9.29,1.35,5.6,11.0
+ARG,24/04/2023,Barracas Central,Defensa y Justicia,0,2,,,A,3.42,3.22,2.17,3.92,3.45,2.33
+ARG,24/04/2023,Racing Club,Atl. Tucuman,1,3,,,A,1.77,3.51,4.71,1.95,3.75,5.3
+ARG,25/04/2023,Argentinos Jrs,Gimnasia L.P.,2,4,,,A,1.39,4.57,8.13,1.5,4.9,10.0
+ARG,25/04/2023,Tigre,Huracan,1,0,,,H,2.38,2.99,3.34,2.46,3.06,3.74
+ARG,28/04/2023,Platense,Estudiantes L.P.,1,2,,,A,3.55,2.85,2.31,3.75,3.0,2.54
+ARG,28/04/2023,Sarmiento Junin,Godoy Cruz,1,1,,,D,2.32,3.02,3.29,2.45,3.16,3.5
+ARG,28/04/2023,Huracan,Arsenal Sarandi,2,1,,,H,1.73,3.48,5.07,1.8,3.8,5.6
+ARG,28/04/2023,Newells Old Boys,Argentinos Jrs,0,0,,,D,2.57,2.91,3.09,3.15,3.06,3.8
+ARG,29/04/2023,Atl. Tucuman,River Plate,1,1,,,D,3.43,3.35,2.11,4.2,3.68,2.25
+ARG,29/04/2023,Velez Sarsfield,San Lorenzo,0,0,,,D,2.82,2.72,2.91,3.01,2.88,3.17
+ARG,29/04/2023,Gimnasia L.P.,Tigre,1,1,,,D,2.97,3.21,2.41,3.26,3.37,2.58
+ARG,29/04/2023,Banfield,Barracas Central,0,0,,,D,1.88,3.31,4.33,1.98,3.7,4.8
+ARG,29/04/2023,Instituto,Central Cordoba,0,2,,,A,1.9,3.27,4.26,1.99,3.47,4.69
+ARG,30/04/2023,Boca Juniors,Racing Club,3,1,,,H,2.59,3.13,2.8,2.75,3.29,3.15
+ARG,30/04/2023,Defensa y Justicia,Colon Santa Fe,2,0,,,H,2.01,3.41,3.67,2.3,3.59,3.98
+ARG,30/04/2023,Independiente,Belgrano,2,0,,,H,2.49,2.9,3.14,2.65,3.08,3.43
+ARG,02/05/2023,Argentinos Jrs,Racing Club,1,0,,,H,2.68,2.99,2.82,2.99,3.22,2.96
+ARG,02/05/2023,Lanus,San Lorenzo,2,1,,,H,2.85,2.7,2.94,3.05,2.89,3.1
+ARG,02/05/2023,Independiente,Platense,1,2,,,A,2.04,3.04,4.12,2.1,3.17,4.42
+ARG,02/05/2023,Boca Juniors,Central Cordoba,0,0,,,D,1.52,3.91,6.84,1.56,4.1,8.23
+ARG,03/05/2023,Atl. Tucuman,Banfield,1,0,,,H,2.42,2.93,3.2,2.51,3.1,3.41
+ARG,03/05/2023,Newells Old Boys,Barracas Central,1,0,,,H,1.71,3.4,5.43,1.75,3.56,6.2
+ARG,03/05/2023,Independiente,Instituto,2,2,,,D,2.36,2.93,3.34,2.45,3.26,3.55
+ARG,03/05/2023,Huracan,San Lorenzo,1,1,,,D,2.34,2.78,3.58,2.45,3.0,3.89
+ARG,05/05/2023,Barracas Central,Instituto,3,0,,,H,3.09,3.0,2.47,3.28,3.13,2.56
+ARG,05/05/2023,Godoy Cruz,Union de Santa Fe,0,0,,,D,2.13,3.22,3.54,2.25,3.35,3.92
+ARG,06/05/2023,Lanus,Atl. Tucuman,2,1,,,H,1.83,3.29,4.73,2.01,3.5,5.3
+ARG,07/05/2023,Lanus,Velez Sarsfield,0,1,,,A,2.0,3.04,4.3,2.23,3.32,5.43
+ARG,07/05/2023,Godoy Cruz,Platense,2,1,,,H,1.85,3.17,4.83,1.95,3.3,5.4
+ARG,07/05/2023,Tigre,Banfield,1,2,,,A,2.63,3.02,2.84,2.76,3.16,3.07
+ARG,07/05/2023,Rosario Central,Estudiantes L.P.,0,0,,,D,3.08,2.98,2.46,3.3,3.1,2.67
+ARG,07/05/2023,Racing Club,San Lorenzo,1,1,,,D,2.64,2.71,3.15,2.82,2.82,3.51
+ARG,09/05/2023,Union de Santa Fe,San Lorenzo,1,1,,,D,2.53,2.64,3.32,2.8,2.8,3.7
+ARG,11/05/2023,Atl. Tucuman,Independiente,1,2,,,A,3.06,2.66,2.75,3.32,2.85,2.96
+ARG,11/05/2023,Velez Sarsfield,Talleres Cordoba,1,1,,,D,2.26,2.97,3.49,2.5,3.15,3.87
+ARG,11/05/2023,Union de Santa Fe,Lanus,0,0,,,D,2.46,2.9,3.15,2.59,3.06,3.46
+ARG,11/05/2023,Racing Club,Central Cordoba,1,1,,,D,1.59,3.78,5.72,1.65,3.96,6.28
+ARG,11/05/2023,Estudiantes L.P.,Defensa y Justicia,2,1,,,H,1.87,3.36,4.23,1.95,3.5,4.85
+ARG,13/05/2023,Huracan,Godoy Cruz,0,0,,,D,2.16,3.0,3.68,2.25,3.17,4.03
+ARG,13/05/2023,Atl. Tucuman,Argentinos Jrs,1,2,,,A,3.11,3.04,2.42,3.31,3.2,2.6
+ARG,13/05/2023,Independiente,Tigre,2,1,,,H,2.67,3.05,2.77,2.84,3.28,2.89
+ARG,13/05/2023,Banfield,San Lorenzo,1,2,,,A,2.98,2.78,2.72,3.21,3.01,2.89
+ARG,14/05/2023,Instituto,Colon Santa Fe,1,0,,,H,2.33,3.1,3.21,2.51,3.29,3.43
+ARG,14/05/2023,Newells Old Boys,Arsenal Sarandi,2,0,,,H,1.65,3.45,5.97,1.79,3.88,6.8
+ARG,14/05/2023,Defensa y Justicia,Estudiantes L.P.,1,1,,,D,3.01,3.03,2.49,3.2,3.15,2.73
+ARG,14/05/2023,Platense,Racing Club,3,0,,,H,3.21,3.03,2.38,3.5,3.23,2.47
+ARG,14/05/2023,Boca Juniors,Belgrano,2,0,,,H,1.72,3.46,5.27,1.9,3.67,6.25
+ARG,15/05/2023,Talleres Cordoba,River Plate,2,1,,,H,3.24,3.31,2.21,3.46,3.47,2.33
+ARG,15/05/2023,Barracas Central,Central Cordoba,2,2,,,D,2.34,3.06,3.25,2.43,3.25,3.46
+ARG,15/05/2023,Union de Santa Fe,Sarmiento Junin,0,2,,,A,2.16,3.15,3.58,2.3,3.32,3.85
+ARG,15/05/2023,Gimnasia L.P.,Lanus,1,0,,,H,3.25,2.96,2.4,3.47,3.1,2.5
+ARG,16/05/2023,Velez Sarsfield,Rosario Central,0,0,,,D,2.18,3.01,3.71,2.28,3.16,4.15
+ARG,19/05/2023,Arsenal Sarandi,Independiente,2,1,,,H,4.01,3.2,2.01,4.47,3.37,2.25
+ARG,19/05/2023,Godoy Cruz,Gimnasia L.P.,2,0,,,H,1.89,3.34,4.31,2.0,3.55,4.63
+ARG,19/05/2023,Central Cordoba,Union de Santa Fe,0,1,,,A,2.05,3.19,3.88,2.19,3.32,4.2
+ARG,19/05/2023,Estudiantes L.P.,Banfield,1,0,,,H,1.72,3.4,5.39,1.83,3.55,6.0
+ARG,19/05/2023,Rosario Central,Defensa y Justicia,2,1,,,H,2.29,3.17,3.23,2.42,3.35,3.8
+ARG,20/05/2023,Argentinos Jrs,Boca Juniors,0,1,,,A,2.29,3.08,3.34,2.45,3.2,3.57
+ARG,20/05/2023,San Lorenzo,Instituto,2,0,,,H,1.99,2.94,4.53,2.06,3.13,4.9
+ARG,21/05/2023,Lanus,Newells Old Boys,1,0,,,H,2.12,2.87,4.15,2.28,3.09,4.5
+ARG,21/05/2023,Tigre,Atl. Tucuman,0,0,,,D,1.88,3.45,4.13,1.98,3.64,4.55
+ARG,21/05/2023,Belgrano,Talleres Cordoba,1,1,,,D,3.62,3.01,2.2,3.86,3.18,2.28
+ARG,21/05/2023,Colon Santa Fe,Barracas Central,1,1,,,D,1.9,3.33,4.26,2.0,3.5,4.7
+ARG,21/05/2023,Sarmiento Junin,Huracan,0,0,,,D,2.75,2.88,2.85,2.95,3.09,3.06
+ARG,22/05/2023,River Plate,Platense,2,1,,,H,1.28,5.25,11.0,1.35,5.75,13.0
+ARG,27/05/2023,Atl. Tucuman,Arsenal Sarandi,1,0,,,H,1.85,3.39,4.44,1.92,3.65,4.8
+ARG,27/05/2023,Gimnasia L.P.,Sarmiento Junin,0,0,,,D,2.37,3.09,3.16,2.48,3.38,3.41
+ARG,27/05/2023,Platense,Belgrano,1,0,,,H,2.31,2.87,3.56,2.4,3.05,3.88
+ARG,28/05/2023,Independiente,Lanus,1,1,,,D,2.75,2.86,2.87,2.96,3.09,3.0
+ARG,28/05/2023,Barracas Central,San Lorenzo,1,0,,,H,3.63,2.93,2.25,4.11,3.05,2.35
+ARG,28/05/2023,Defensa y Justicia,Racing Club,1,1,,,D,2.2,3.33,3.25,2.37,3.57,3.55
+ARG,28/05/2023,Talleres Cordoba,Argentinos Jrs,1,0,,,H,2.15,3.18,3.53,2.26,3.34,3.8
+ARG,28/05/2023,Boca Juniors,Tigre,1,0,,,H,2.0,3.26,3.9,2.08,3.65,4.14
+ARG,29/05/2023,Newells Old Boys,Godoy Cruz,2,0,,,H,2.17,2.86,3.99,2.26,3.09,4.37
+ARG,29/05/2023,Colon Santa Fe,Central Cordoba,2,2,,,D,2.09,3.29,3.57,2.16,3.53,3.86
+ARG,29/05/2023,Banfield,Rosario Central,2,0,,,H,2.16,3.08,3.64,2.29,3.28,3.93
+ARG,29/05/2023,Huracan,Union de Santa Fe,0,1,,,A,2.01,3.16,4.06,2.11,3.35,4.6
+ARG,30/05/2023,Instituto,Estudiantes L.P.,0,0,,,D,3.37,2.85,2.41,3.68,2.97,2.56
+ARG,30/05/2023,Velez Sarsfield,River Plate,2,2,,,D,4.62,3.46,1.8,5.19,3.7,1.87
+ARG,02/06/2023,Atl. Tucuman,Talleres Cordoba,0,2,,,A,2.64,2.93,2.93,2.81,3.08,3.21
+ARG,02/06/2023,Godoy Cruz,Colon Santa Fe,1,0,,,H,2.07,3.31,3.64,2.15,3.53,4.06
+ARG,02/06/2023,Union de Santa Fe,Instituto,0,2,,,A,2.38,3.03,3.22,2.48,3.3,3.56
+ARG,02/06/2023,Gimnasia L.P.,Defensa y Justicia,0,2,,,A,2.78,3.11,2.64,3.01,3.27,2.78
+ARG,03/06/2023,Talleres Cordoba,Velez Sarsfield,1,2,,,A,1.9,3.17,4.52,2.06,3.45,5.4
+ARG,03/06/2023,Tigre,Argentinos Jrs,0,1,,,A,2.62,3.09,2.78,2.74,3.23,3.03
+ARG,03/06/2023,Arsenal Sarandi,Belgrano,0,1,,,A,2.8,2.94,2.72,3.1,3.1,2.9
+ARG,03/06/2023,Godoy Cruz,Racing Club,2,0,,,H,3.04,3.08,2.44,3.34,3.24,2.55
+ARG,05/06/2023,Lanus,Huracan,1,0,,,H,2.31,2.93,3.45,2.41,3.13,3.81
+ARG,05/06/2023,Belgrano,Atl. Tucuman,1,0,,,H,2.37,2.98,3.29,2.48,3.16,3.73
+ARG,05/06/2023,Colon Santa Fe,Banfield,2,0,,,H,2.18,3.12,3.52,2.25,3.25,3.79
+ARG,07/06/2023,River Plate,Colon Santa Fe,2,0,,,H,1.22,6.32,11.95,1.26,7.4,14.0
+ARG,07/06/2023,Arsenal Sarandi,Defensa y Justicia,1,2,,,A,3.36,3.1,2.27,3.63,3.33,2.36
+ARG,07/06/2023,Union de Santa Fe,Boca Juniors,0,0,,,D,2.91,2.84,2.73,3.24,3.01,2.9
+ARG,07/06/2023,Argentinos Jrs,Instituto,0,0,,,D,1.67,3.54,5.53,1.74,3.83,6.5
+ARG,07/06/2023,Sarmiento Junin,Talleres Cordoba,0,1,,,A,3.39,3.23,2.2,4.22,3.36,2.28
+ARG,11/06/2023,Newells Old Boys,Sarmiento Junin,0,1,,,A,1.69,3.37,5.63,1.74,3.55,6.05
+ARG,11/06/2023,Barracas Central,Rosario Central,1,1,,,D,2.34,2.94,3.32,2.45,3.14,3.61
+ARG,11/06/2023,Godoy Cruz,Platense,2,0,,,H,1.81,3.13,5.08,1.95,3.27,5.7
+ARG,13/06/2023,Instituto,Racing Club,1,1,,,D,2.26,2.97,3.55,2.4,3.13,3.87
+ARG,13/06/2023,Velez Sarsfield,Argentinos Jrs,0,1,,,A,2.84,2.79,2.85,3.09,2.93,3.01
+ARG,13/06/2023,Colon Santa Fe,Estudiantes L.P.,1,0,,,H,3.52,3.1,2.2,3.92,3.28,2.3
+ARG,13/06/2023,Defensa y Justicia,Belgrano,2,0,,,H,1.72,3.5,5.18,1.78,3.75,5.5
+ARG,14/06/2023,Atl. Tucuman,Godoy Cruz,2,1,,,H,2.28,2.96,3.52,2.5,3.13,3.85
+ARG,14/06/2023,Gimnasia L.P.,Huracan,1,0,,,H,2.87,2.76,2.85,3.02,2.91,3.13
+ARG,17/06/2023,Union de Santa Fe,Lanus,1,1,,,D,2.74,2.99,2.8,3.03,3.16,2.96
+ARG,17/06/2023,Racing Club,Velez Sarsfield,2,1,,,H,2.25,2.94,3.62,2.41,3.08,4.12
+ARG,18/06/2023,River Plate,Defensa y Justicia,1,0,,,H,1.45,4.52,6.57,1.51,4.9,8.5
+ARG,21/06/2023,Estudiantes L.P.,San Lorenzo,1,1,,,D,2.19,2.81,4.0,2.26,2.96,4.54
+ARG,22/06/2023,Central Cordoba,Gimnasia L.P.,0,0,,,D,2.2,3.03,3.59,2.34,3.2,3.87
+ARG,22/06/2023,Tigre,Velez Sarsfield,2,1,,,H,2.51,2.87,3.18,2.8,3.1,3.76
+ARG,22/06/2023,Racing Club,Barracas Central,1,1,,,D,1.83,3.41,4.44,1.91,3.69,4.84
+ARG,22/06/2023,River Plate,Instituto,3,1,,,H,1.27,5.54,10.98,1.32,6.0,13.0
+ARG,23/06/2023,Godoy Cruz,Boca Juniors,4,0,,,H,2.69,2.81,2.98,3.02,2.93,3.19
+ARG,23/06/2023,Huracan,Newells Old Boys,1,1,,,D,2.75,2.68,3.09,3.11,2.8,3.26
+ARG,24/06/2023,Argentinos Jrs,Defensa y Justicia,3,1,,,H,1.76,3.5,4.87,2.04,3.7,5.75
+ARG,24/06/2023,Union de Santa Fe,Independiente,3,0,,,H,2.35,2.95,3.35,2.43,3.06,3.69
+ARG,25/06/2023,Lanus,Talleres Cordoba,2,1,,,H,2.9,2.81,2.76,3.28,2.95,2.9
+ARG,25/06/2023,Arsenal Sarandi,Platense,0,2,,,A,3.08,2.74,2.68,3.29,2.87,2.9
+ARG,25/06/2023,Rosario Central,Colon Santa Fe,1,1,,,D,1.99,3.31,3.88,2.05,3.43,4.2
+ARG,26/06/2023,Sarmiento Junin,Atl. Tucuman,4,1,,,H,2.49,2.92,3.15,2.61,3.13,3.45
+ARG,27/06/2023,Belgrano,Banfield,3,1,,,H,2.31,3.0,3.38,2.42,3.12,3.85
+ARG,30/06/2023,Platense,Lanus,0,1,,,A,2.99,2.79,2.75,3.22,2.97,2.89

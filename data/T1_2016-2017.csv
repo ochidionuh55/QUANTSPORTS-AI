@@ -1,0 +1,307 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+T1,19/08/2016,Adanaspor,Bursaspor,1,2,1,,A,4.2,3.6,1.83,4.5,3.73,2.45
+T1,20/08/2016,Besiktas,Alanyaspor,4,1,2,,H,1.36,4.75,8.5,1.46,5.18,8.99
+T1,20/08/2016,Rizespor,Konyaspor,1,1,,,D,3.0,3.2,2.4,3.23,3.2,2.67
+T1,20/08/2016,Trabzonspor,Kasimpasa,2,0,1,,H,2.2,3.3,3.3,2.4,3.44,3.44
+T1,21/08/2016,Antalyaspor,Osmanlispor,0,0,,,D,2.45,3.3,2.8,2.69,3.4,2.95
+T1,21/08/2016,Buyuksehyr,Fenerbahce,1,0,1,,H,3.25,3.25,2.2,3.38,3.45,2.3
+T1,21/08/2016,Genclerbirligi,Gaziantepspor,2,0,1,,H,1.85,3.5,4.2,2.0,3.5,4.5
+T1,21/08/2016,Kayserispor,Akhisar Belediyespor,0,2,,,A,2.0,3.3,3.8,2.13,3.4,4.15
+T1,22/08/2016,Galatasaray,Karabukspor,1,0,,,H,1.62,3.75,5.5,1.68,4.2,6.0
+T1,26/08/2016,Alanyaspor,Antalyaspor,2,1,,1,H,3.1,3.3,2.3,3.31,3.42,2.55
+T1,26/08/2016,Konyaspor,Besiktas,2,2,1,1,D,3.3,3.4,2.15,3.5,3.42,2.3
+T1,27/08/2016,Akhisar Belediyespor,Galatasaray,1,3,1,1,A,2.88,3.2,2.5,3.2,3.42,2.51
+T1,27/08/2016,Gaziantepspor,Trabzonspor,1,0,,,H,3.2,3.25,2.25,3.24,3.47,2.4
+T1,27/08/2016,Kasimpasa,Adanaspor,1,1,1,,D,1.67,3.75,5.0,1.8,3.92,5.38
+T1,28/08/2016,Bursaspor,Buyuksehyr,0,2,,1,A,2.1,3.4,3.4,2.2,3.42,3.7
+T1,28/08/2016,Fenerbahce,Kayserispor,3,3,2,2,D,1.4,4.33,8.5,1.45,5.0,9.27
+T1,28/08/2016,Karabukspor,Rizespor,3,0,1,,H,2.0,3.3,3.8,2.14,3.4,4.11
+T1,28/08/2016,Osmanlispor,Genclerbirligi,2,2,2,1,D,1.91,3.4,4.0,2.0,3.6,4.27
+T1,10/09/2016,Adanaspor,Gaziantepspor,0,0,,,D,2.3,3.25,3.1,2.55,3.4,3.17
+T1,10/09/2016,Besiktas,Karabukspor,3,1,2,,H,1.4,4.5,8.0,1.5,5.03,8.0
+T1,10/09/2016,Buyuksehyr,Kasimpasa,3,1,,1,H,1.73,3.5,5.0,1.9,3.75,5.27
+T1,10/09/2016,Genclerbirligi,Alanyaspor,0,0,,,D,1.73,3.6,4.75,1.79,3.86,5.11
+T1,10/09/2016,Kayserispor,Galatasaray,1,1,1,1,D,3.3,3.4,2.15,3.48,3.45,2.4
+T1,11/09/2016,Antalyaspor,Konyaspor,1,3,,,A,2.63,3.2,2.7,2.86,3.25,2.77
+T1,11/09/2016,Fenerbahce,Bursaspor,0,1,,1,A,1.44,4.33,7.0,1.52,4.96,7.2
+T1,11/09/2016,Rizespor,Akhisar Belediyespor,1,0,,,H,2.7,3.25,2.6,2.9,3.3,2.75
+T1,11/09/2016,Trabzonspor,Osmanlispor,0,2,,1,A,2.15,3.2,3.5,2.27,3.45,3.55
+T1,16/09/2016,Bursaspor,Kayserispor,3,1,1,1,H,2.0,3.5,3.6,2.17,3.59,3.8
+T1,16/09/2016,Karabukspor,Antalyaspor,3,2,,,H,2.1,3.4,3.4,2.24,3.43,3.6
+T1,17/09/2016,Alanyaspor,Trabzonspor,3,0,,,H,3.0,3.2,2.4,3.13,3.43,2.47
+T1,17/09/2016,Galatasaray,Rizespor,2,0,1,,H,1.36,4.33,9.5,1.45,5.03,9.5
+T1,18/09/2016,Akhisar Belediyespor,Besiktas,0,2,,2,A,3.5,3.4,2.05,3.8,3.68,2.09
+T1,18/09/2016,Gaziantepspor,Buyuksehyr,0,1,,,A,5.0,3.4,1.75,5.03,3.64,1.85
+T1,18/09/2016,Konyaspor,Genclerbirligi,1,1,,1,D,2.0,3.3,3.8,2.08,3.4,4.17
+T1,18/09/2016,Osmanlispor,Adanaspor,1,0,,,H,1.5,3.8,7.5,1.64,4.31,7.5
+T1,19/09/2016,Kasimpasa,Fenerbahce,1,5,,3,A,4.75,3.6,1.75,5.25,3.86,1.81
+T1,23/09/2016,Antalyaspor,Akhisar Belediyespor,0,0,,,D,2.4,3.1,3.1,2.54,3.3,3.25
+T1,24/09/2016,Besiktas,Galatasaray,2,2,,2,D,1.91,3.5,4.0,2.1,3.87,4.12
+T1,24/09/2016,Buyuksehyr,Osmanlispor,2,2,,1,D,2.05,3.4,3.6,2.2,3.42,3.72
+T1,24/09/2016,Trabzonspor,Konyaspor,1,0,,,H,2.25,3.25,3.2,2.37,3.37,3.3
+T1,25/09/2016,Bursaspor,Kasimpasa,1,0,,,H,1.65,3.5,5.75,1.75,4.09,6.0
+T1,25/09/2016,Fenerbahce,Gaziantepspor,2,1,1,,H,1.2,6.5,13.0,1.26,7.05,16.0
+T1,25/09/2016,Genclerbirligi,Karabukspor,2,0,,,H,2.05,3.2,3.8,2.18,3.45,3.8
+T1,25/09/2016,Kayserispor,Rizespor,2,1,2,,H,1.73,3.5,5.0,1.84,3.63,5.11
+T1,26/09/2016,Adanaspor,Alanyaspor,3,2,2,1,H,2.75,3.3,2.5,2.85,3.35,2.7
+T1,30/09/2016,Akhisar Belediyespor,Genclerbirligi,0,0,,,D,2.45,3.2,2.88,2.7,3.2,3.1
+T1,01/10/2016,Gaziantepspor,Bursaspor,3,2,1,1,H,3.75,3.4,2.0,3.78,3.56,2.1
+T1,01/10/2016,Karabukspor,Trabzonspor,4,0,,,H,2.7,3.1,2.7,2.9,3.3,2.73
+T1,01/10/2016,Kasimpasa,Kayserispor,3,1,,1,H,2.63,3.4,2.55,2.85,3.48,2.7
+T1,01/10/2016,Rizespor,Besiktas,0,1,,,A,7.0,4.0,1.5,7.0,4.4,1.63
+T1,02/10/2016,Alanyaspor,Buyuksehyr,0,5,,1,A,3.5,3.3,2.1,3.6,3.47,2.22
+T1,02/10/2016,Galatasaray,Antalyaspor,3,1,,1,H,1.4,4.5,7.5,1.5,5.03,7.77
+T1,02/10/2016,Konyaspor,Adanaspor,1,0,,,H,1.5,3.75,7.5,1.58,4.34,7.6
+T1,02/10/2016,Osmanlispor,Fenerbahce,1,1,1,,D,2.9,3.25,2.4,3.2,3.4,2.45
+T1,15/10/2016,Adanaspor,Karabukspor,1,2,,2,A,2.88,3.4,2.38,3.0,3.4,2.6
+T1,15/10/2016,Genclerbirligi,Galatasaray,0,1,,1,A,3.0,3.4,2.3,3.02,3.52,2.48
+T1,15/10/2016,Kasimpasa,Gaziantepspor,0,0,,,D,1.91,3.6,3.8,2.06,3.6,4.1
+T1,15/10/2016,Kayserispor,Besiktas,0,1,,,A,4.33,4.0,1.7,5.2,4.0,1.8
+T1,16/10/2016,Bursaspor,Osmanlispor,0,0,,,D,2.88,3.3,2.4,3.14,3.41,2.6
+T1,16/10/2016,Buyuksehyr,Konyaspor,1,1,,,D,1.91,3.4,4.0,2.01,3.43,4.85
+T1,16/10/2016,Fenerbahce,Alanyaspor,1,1,1,,D,1.25,6.0,10.0,1.33,6.5,12.94
+T1,16/10/2016,Trabzonspor,Akhisar Belediyespor,0,0,,,D,2.0,3.4,3.75,2.13,3.47,3.96
+T1,17/10/2016,Antalyaspor,Rizespor,1,1,,,D,2.0,3.3,3.8,2.15,3.5,3.88
+T1,21/10/2016,Gaziantepspor,Kayserispor,1,2,1,,A,2.38,3.4,2.88,2.56,3.4,3.15
+T1,21/10/2016,Rizespor,Genclerbirligi,2,1,1,,H,3.1,3.3,2.3,3.32,3.38,2.42
+T1,22/10/2016,Akhisar Belediyespor,Adanaspor,1,0,1,,H,1.62,3.4,6.5,1.74,3.77,6.5
+T1,22/10/2016,Alanyaspor,Bursaspor,0,2,,,A,2.3,3.3,3.1,2.4,3.55,3.19
+T1,22/10/2016,Galatasaray,Trabzonspor,0,1,,1,A,1.57,4.0,5.5,1.68,4.48,5.53
+T1,23/10/2016,Besiktas,Antalyaspor,3,0,1,,H,1.36,4.75,8.0,1.45,5.32,8.5
+T1,23/10/2016,Karabukspor,Buyuksehyr,0,2,,2,A,2.9,3.5,2.3,3.05,3.5,2.5
+T1,23/10/2016,Osmanlispor,Kasimpasa,1,2,,,A,1.53,4.0,6.0,1.61,4.35,6.5
+T1,24/10/2016,Konyaspor,Fenerbahce,0,1,,1,A,4.0,3.3,1.95,4.3,3.52,2.05
+T1,28/10/2016,Genclerbirligi,Besiktas,1,1,1,,D,3.4,3.4,2.1,3.7,3.45,2.26
+T1,29/10/2016,Adanaspor,Galatasaray,0,1,,,A,5.75,4.0,1.55,6.74,4.23,1.64
+T1,29/10/2016,Bursaspor,Konyaspor,2,0,,,H,2.15,3.1,3.6,2.42,3.36,3.6
+T1,29/10/2016,Gaziantepspor,Osmanlispor,3,1,1,1,H,3.8,3.3,2.0,4.09,3.43,2.2
+T1,30/10/2016,Buyuksehyr,Akhisar Belediyespor,5,1,4,1,H,1.55,3.6,7.0,1.65,3.99,7.35
+T1,30/10/2016,Fenerbahce,Karabukspor,5,0,2,,H,1.4,4.75,7.0,1.5,5.0,7.75
+T1,30/10/2016,Trabzonspor,Rizespor,2,2,1,1,D,1.65,3.6,5.5,1.77,3.9,5.59
+T1,31/10/2016,Kasimpasa,Alanyaspor,2,1,2,1,H,2.1,3.25,3.5,2.26,3.53,3.7
+T1,31/10/2016,Kayserispor,Antalyaspor,0,1,,1,A,2.05,3.3,3.6,2.17,3.51,3.94
+T1,04/11/2016,Galatasaray,Buyuksehyr,1,2,1,1,A,2.1,3.4,3.4,2.2,3.53,3.75
+T1,05/11/2016,Alanyaspor,Gaziantepspor,4,3,1,2,H,1.95,3.0,4.5,2.1,3.4,4.5
+T1,05/11/2016,Antalyaspor,Genclerbirligi,1,0,1,,H,2.6,3.0,2.9,2.74,3.28,2.97
+T1,05/11/2016,Besiktas,Trabzonspor,2,1,2,1,H,1.44,4.33,7.0,1.5,4.77,7.5
+T1,05/11/2016,Karabukspor,Bursaspor,0,0,,,D,2.25,3.2,3.3,2.45,3.5,3.3
+T1,06/11/2016,Akhisar Belediyespor,Fenerbahce,1,3,,1,A,6.5,3.75,1.55,6.76,3.89,1.65
+T1,06/11/2016,Konyaspor,Kasimpasa,2,1,2,,H,1.85,3.3,4.5,1.93,3.51,4.67
+T1,06/11/2016,Osmanlispor,Kayserispor,1,1,,,D,1.62,3.6,6.0,1.8,3.91,6.0
+T1,06/11/2016,Rizespor,Adanaspor,2,2,1,1,D,1.73,3.4,5.25,1.85,3.67,5.5
+T1,19/11/2016,Adanaspor,Besiktas,1,2,,2,A,8.5,4.6,1.36,10.84,5.13,1.45
+T1,19/11/2016,Bursaspor,Akhisar Belediyespor,0,0,,,D,1.85,3.5,4.2,1.97,3.66,4.5
+T1,19/11/2016,Gaziantepspor,Konyaspor,0,3,,1,A,2.6,3.1,2.8,2.87,3.3,2.97
+T1,19/11/2016,Osmanlispor,Alanyaspor,2,0,2,,H,1.62,3.8,5.5,1.71,4.23,5.81
+T1,20/11/2016,Fenerbahce,Galatasaray,2,0,1,,H,1.7,3.6,5.0,1.85,3.87,5.25
+T1,20/11/2016,Kasimpasa,Karabukspor,2,2,1,2,D,2.25,3.2,3.25,2.38,3.45,3.4
+T1,20/11/2016,Kayserispor,Genclerbirligi,0,2,,,A,2.45,3.0,3.1,2.61,3.3,3.2
+T1,21/11/2016,Buyuksehyr,Rizespor,2,1,1,1,H,1.45,4.33,7.0,1.5,4.74,8.39
+T1,21/11/2016,Trabzonspor,Antalyaspor,0,1,,1,A,1.73,3.5,5.0,1.92,3.8,5.0
+T1,25/11/2016,Alanyaspor,Kayserispor,3,0,,,H,2.1,3.4,3.4,2.25,3.7,3.75
+T1,25/11/2016,Galatasaray,Bursaspor,3,1,1,1,H,1.7,3.8,4.75,1.78,4.05,5.0
+T1,26/11/2016,Akhisar Belediyespor,Kasimpasa,1,0,1,,H,2.25,3.1,3.4,2.34,3.3,3.55
+T1,26/11/2016,Antalyaspor,Adanaspor,1,0,1,,H,1.57,3.6,6.5,1.67,4.1,6.5
+T1,26/11/2016,Besiktas,Buyuksehyr,1,1,,1,D,1.75,3.6,4.75,1.82,3.97,4.9
+T1,26/11/2016,Karabukspor,Gaziantepspor,2,0,2,,H,1.95,3.1,4.33,2.1,3.4,4.33
+T1,27/11/2016,Genclerbirligi,Trabzonspor,0,0,,,D,2.0,3.25,3.9,2.11,3.45,4.08
+T1,27/11/2016,Rizespor,Fenerbahce,1,5,1,3,A,7.0,3.75,1.53,7.08,4.26,1.63
+T1,28/11/2016,Konyaspor,Osmanlispor,1,1,,1,D,2.6,3.0,2.9,2.78,3.15,3.01
+T1,03/12/2016,Buyuksehyr,Antalyaspor,2,2,1,1,D,1.5,4.2,6.25,1.59,4.37,6.77
+T1,03/12/2016,Fenerbahce,Besiktas,0,0,,,D,1.85,3.6,4.0,2.03,3.6,4.18
+T1,04/12/2016,Adanaspor,Genclerbirligi,0,2,,1,A,4.33,3.5,1.83,5.4,3.65,1.88
+T1,04/12/2016,Alanyaspor,Konyaspor,2,3,,2,A,2.6,3.2,2.75,2.8,3.4,2.85
+T1,04/12/2016,Gaziantepspor,Akhisar Belediyespor,1,2,1,,A,2.4,3.1,3.1,2.63,3.3,3.15
+T1,04/12/2016,Kasimpasa,Galatasaray,1,2,,1,A,3.8,3.6,1.91,4.26,3.8,2.01
+T1,04/12/2016,Osmanlispor,Karabukspor,2,1,2,1,H,1.75,3.5,4.75,1.82,3.9,5.02
+T1,05/12/2016,Bursaspor,Rizespor,2,1,,,H,1.67,3.6,5.25,1.8,4.06,5.25
+T1,05/12/2016,Kayserispor,Trabzonspor,0,1,,1,A,2.3,3.25,3.1,2.5,3.4,3.3
+T1,09/12/2016,Trabzonspor,Adanaspor,4,1,1,1,H,1.4,4.5,7.5,1.52,4.75,8.0
+T1,10/12/2016,Besiktas,Bursaspor,2,1,,,H,1.45,4.33,7.0,1.6,4.5,7.0
+T1,10/12/2016,Genclerbirligi,Buyuksehyr,0,0,,,D,2.9,3.2,2.45,3.08,3.3,2.67
+T1,10/12/2016,Rizespor,Kasimpasa,0,1,,1,A,2.3,3.2,3.1,2.45,3.4,3.2
+T1,11/12/2016,Akhisar Belediyespor,Osmanlispor,1,2,,1,A,3.0,3.2,2.38,3.28,3.3,2.51
+T1,11/12/2016,Galatasaray,Gaziantepspor,3,1,1,,H,1.33,5.0,8.5,1.39,5.5,11.0
+T1,11/12/2016,Karabukspor,Alanyaspor,0,2,,1,A,1.91,3.4,4.0,2.02,3.82,4.03
+T1,11/12/2016,Konyaspor,Kayserispor,1,0,1,,H,1.91,3.3,4.2,2.0,3.5,4.63
+T1,12/12/2016,Antalyaspor,Fenerbahce,1,0,,,H,5.25,3.5,1.7,5.67,3.8,1.78
+T1,17/12/2016,Buyuksehyr,Trabzonspor,1,0,,,H,1.75,3.75,4.33,1.85,3.87,4.7
+T1,17/12/2016,Kasimpasa,Besiktas,2,1,,1,H,7.0,4.33,1.45,7.0,4.45,1.6
+T1,18/12/2016,Adanaspor,Kayserispor,2,1,,1,H,3.1,3.3,2.3,3.23,3.4,2.48
+T1,18/12/2016,Alanyaspor,Akhisar Belediyespor,0,0,,,D,2.2,3.2,3.4,2.38,3.4,3.47
+T1,18/12/2016,Gaziantepspor,Rizespor,1,2,1,1,A,2.6,3.2,2.75,2.7,3.3,2.95
+T1,18/12/2016,Karabukspor,Konyaspor,1,1,,1,D,2.3,3.2,3.2,2.4,3.3,3.44
+T1,18/12/2016,Osmanlispor,Galatasaray,2,2,1,1,D,2.5,3.2,2.8,2.65,3.4,2.95
+T1,19/12/2016,Bursaspor,Antalyaspor,2,1,2,1,H,2.05,3.4,3.6,2.19,3.6,3.9
+T1,19/12/2016,Fenerbahce,Genclerbirligi,3,0,1,,H,1.44,4.2,7.5,1.5,4.6,8.88
+T1,24/12/2016,Adanaspor,Buyuksehyr,1,1,,1,D,6.0,4.0,1.53,7.2,4.5,1.61
+T1,24/12/2016,Besiktas,Gaziantepspor,1,0,1,,H,1.2,6.5,13.0,1.27,7.5,16.5
+T1,25/12/2016,Akhisar Belediyespor,Konyaspor,1,0,,,H,2.5,3.1,2.9,2.78,3.1,3.2
+T1,25/12/2016,Antalyaspor,Kasimpasa,2,1,,,H,1.95,3.5,3.75,2.08,3.6,4.05
+T1,25/12/2016,Galatasaray,Alanyaspor,5,1,2,1,H,1.44,4.5,6.5,1.52,5.1,7.4
+T1,25/12/2016,Kayserispor,Karabukspor,2,0,1,,H,2.38,3.2,3.0,2.58,3.3,3.2
+T1,25/12/2016,Rizespor,Osmanlispor,0,1,,,A,3.5,3.4,2.05,3.82,3.5,2.2
+T1,26/12/2016,Genclerbirligi,Bursaspor,3,1,1,1,H,2.05,3.4,3.5,2.2,3.5,3.86
+T1,26/12/2016,Trabzonspor,Fenerbahce,0,3,,2,A,3.8,3.6,1.91,4.4,3.8,1.98
+T1,13/01/2017,Bursaspor,Trabzonspor,1,2,1,2,A,2.4,3.3,2.9,2.52,3.5,3.3
+T1,14/01/2017,Alanyaspor,Rizespor,2,3,,2,A,2.15,3.3,3.4,2.32,3.5,3.4
+T1,14/01/2017,Buyuksehyr,Kayserispor,5,0,2,,H,1.4,4.33,8.5,1.48,4.9,9.76
+T1,14/01/2017,Karabukspor,Akhisar Belediyespor,1,0,,,H,2.3,3.1,3.3,2.4,3.3,3.37
+T1,14/01/2017,Konyaspor,Galatasaray,0,1,,,A,2.63,3.25,2.63,3.1,3.3,2.86
+T1,15/01/2017,Fenerbahce,Adanaspor,2,2,1,2,D,1.17,7.0,15.0,1.2,8.14,21.0
+T1,15/01/2017,Gaziantepspor,Antalyaspor,0,3,,2,A,3.25,3.2,2.25,3.25,3.4,2.5
+T1,15/01/2017,Kasimpasa,Genclerbirligi,3,0,3,,H,2.63,3.2,2.7,2.77,3.35,2.89
+T1,16/01/2017,Osmanlispor,Besiktas,0,2,,1,A,3.1,3.2,2.3,3.22,3.4,2.45
+T1,21/01/2017,Akhisar Belediyespor,Kayserispor,0,0,,,D,1.91,3.4,4.0,2.07,3.4,4.37
+T1,21/01/2017,Bursaspor,Adanaspor,0,1,,,A,1.55,4.33,5.25,1.67,4.4,6.1
+T1,21/01/2017,Karabukspor,Galatasaray,2,1,1,1,H,3.75,3.4,2.0,3.75,3.7,2.14
+T1,21/01/2017,Konyaspor,Rizespor,2,1,1,1,H,1.91,3.4,4.0,2.0,3.5,4.43
+T1,22/01/2017,Fenerbahce,Buyuksehyr,1,0,1,,H,1.95,3.5,3.75,2.04,3.5,4.25
+T1,22/01/2017,Kasimpasa,Trabzonspor,0,1,,1,A,2.8,3.3,2.45,2.92,3.4,2.64
+T1,22/01/2017,Osmanlispor,Antalyaspor,1,2,1,,A,1.7,3.6,5.0,1.8,3.8,5.33
+T1,23/01/2017,Alanyaspor,Besiktas,1,4,,2,A,6.5,4.5,1.44,7.69,4.71,1.56
+T1,28/01/2017,Antalyaspor,Alanyaspor,2,1,1,1,H,1.62,4.0,5.0,1.75,4.19,5.29
+T1,28/01/2017,Galatasaray,Akhisar Belediyespor,6,0,4,,H,1.45,4.33,7.0,1.53,4.6,7.82
+T1,28/01/2017,Rizespor,Karabukspor,1,0,1,,H,2.38,3.25,3.0,2.49,3.48,3.12
+T1,29/01/2017,Buyuksehyr,Bursaspor,1,0,,,H,1.44,4.33,7.0,1.56,4.45,7.2
+T1,29/01/2017,Genclerbirligi,Osmanlispor,1,1,1,,D,2.45,3.25,2.9,2.72,3.3,3.02
+T1,29/01/2017,Kayserispor,Fenerbahce,4,1,1,1,H,5.5,4.0,1.57,6.8,4.06,1.63
+T1,29/01/2017,Trabzonspor,Gaziantepspor,4,0,2,,H,1.45,4.2,7.5,1.53,4.63,7.73
+T1,30/01/2017,Adanaspor,Kasimpasa,2,0,1,,H,2.55,3.3,2.7,2.73,3.4,2.9
+T1,30/01/2017,Besiktas,Konyaspor,5,1,2,,H,1.36,4.75,8.0,1.45,5.0,8.81
+T1,10/02/2017,Karabukspor,Besiktas,2,1,,,H,5.0,3.6,1.7,5.15,3.86,1.83
+T1,11/02/2017,Alanyaspor,Genclerbirligi,3,0,2,,H,2.8,3.25,2.5,2.93,3.4,2.7
+T1,11/02/2017,Bursaspor,Fenerbahce,1,1,,1,D,4.33,3.6,1.8,4.47,3.82,1.96
+T1,11/02/2017,Osmanlispor,Trabzonspor,0,1,,1,A,2.0,3.3,3.75,2.2,3.42,3.88
+T1,12/02/2017,Akhisar Belediyespor,Rizespor,1,0,1,,H,2.05,3.4,3.5,2.24,3.4,3.7
+T1,12/02/2017,Galatasaray,Kayserispor,1,2,,2,A,1.5,4.33,6.0,1.59,4.79,7.0
+T1,12/02/2017,Kasimpasa,Buyuksehyr,4,0,2,,H,4.33,3.6,1.8,4.68,3.8,1.9
+T1,12/02/2017,Konyaspor,Antalyaspor,1,1,,1,D,2.45,3.25,2.88,2.62,3.33,3.1
+T1,13/02/2017,Gaziantepspor,Adanaspor,1,0,,,H,2.38,3.25,3.0,2.5,3.4,3.3
+T1,17/02/2017,Kayserispor,Bursaspor,2,0,,,H,2.1,3.2,3.6,2.3,3.4,3.77
+T1,18/02/2017,Antalyaspor,Karabukspor,1,0,,,H,2.05,3.2,3.8,2.15,3.65,3.81
+T1,18/02/2017,Buyuksehyr,Gaziantepspor,0,0,,,D,1.3,5.0,10.0,1.37,5.85,13.0
+T1,18/02/2017,Rizespor,Galatasaray,1,1,,1,D,4.0,3.6,1.85,4.46,3.85,1.98
+T1,19/02/2017,Adanaspor,Osmanlispor,1,5,,2,A,3.4,3.2,2.2,3.55,3.4,2.31
+T1,19/02/2017,Besiktas,Akhisar Belediyespor,3,1,2,,H,1.36,4.75,8.0,1.42,5.15,10.83
+T1,19/02/2017,Fenerbahce,Kasimpasa,0,0,,,D,1.36,4.5,9.0,1.45,5.3,9.0
+T1,19/02/2017,Genclerbirligi,Konyaspor,2,0,1,,H,2.05,3.2,3.8,2.24,3.3,4.0
+T1,20/02/2017,Trabzonspor,Alanyaspor,0,0,,,D,1.6,3.8,5.75,1.7,4.16,5.86
+T1,24/02/2017,Kasimpasa,Bursaspor,4,0,1,,H,1.95,3.4,3.9,2.04,3.55,4.33
+T1,24/02/2017,Rizespor,Kayserispor,2,4,1,2,A,2.1,3.2,3.6,2.3,3.3,3.89
+T1,25/02/2017,Akhisar Belediyespor,Antalyaspor,3,0,1,,H,2.45,3.25,2.88,2.62,3.28,3.1
+T1,25/02/2017,Alanyaspor,Adanaspor,4,1,2,,H,1.95,3.5,3.8,2.11,3.67,3.86
+T1,25/02/2017,Konyaspor,Trabzonspor,1,1,,,D,2.9,3.1,2.5,3.16,3.22,2.7
+T1,26/02/2017,Gaziantepspor,Fenerbahce,1,1,1,1,D,4.75,3.6,1.73,5.1,3.78,1.83
+T1,26/02/2017,Karabukspor,Genclerbirligi,1,0,1,,H,2.3,3.2,2.9,2.5,3.31,3.3
+T1,26/02/2017,Osmanlispor,Buyuksehyr,0,1,,1,A,2.5,3.2,2.8,2.76,3.3,2.9
+T1,27/02/2017,Galatasaray,Besiktas,0,1,,,A,2.88,3.3,2.4,3.07,3.4,2.65
+T1,03/03/2017,Trabzonspor,Karabukspor,1,0,,,H,1.8,3.6,4.33,1.95,3.6,5.05
+T1,04/03/2017,Besiktas,Rizespor,1,0,1,,H,1.3,5.0,10.0,1.38,5.55,10.0
+T1,04/03/2017,Bursaspor,Gaziantepspor,2,1,1,1,H,1.91,3.5,3.9,2.06,3.62,4.2
+T1,05/03/2017,Adanaspor,Konyaspor,0,1,,1,A,2.9,3.25,2.45,3.05,3.3,2.67
+T1,05/03/2017,Buyuksehyr,Alanyaspor,2,1,1,,H,1.45,4.33,7.0,1.56,4.72,7.6
+T1,05/03/2017,Fenerbahce,Osmanlispor,1,0,,,H,1.83,3.6,4.2,1.93,3.72,4.7
+T1,05/03/2017,Kayserispor,Kasimpasa,2,2,1,1,D,2.15,3.4,3.3,2.31,3.4,3.51
+T1,06/03/2017,Antalyaspor,Galatasaray,2,3,1,2,A,3.1,3.4,2.25,3.2,3.5,2.45
+T1,06/03/2017,Genclerbirligi,Akhisar Belediyespor,2,0,1,,H,2.2,3.1,3.5,2.3,3.2,3.87
+T1,10/03/2017,Alanyaspor,Fenerbahce,2,3,2,2,A,4.0,3.5,1.91,4.4,3.8,1.96
+T1,11/03/2017,Galatasaray,Genclerbirligi,3,2,2,1,H,1.65,3.5,5.75,1.77,4.0,6.1
+T1,11/03/2017,Gaziantepspor,Kasimpasa,0,2,,,A,2.25,3.1,3.3,2.6,3.4,3.3
+T1,11/03/2017,Karabukspor,Adanaspor,2,0,1,,H,1.62,3.6,6.0,1.7,4.15,6.11
+T1,11/03/2017,Osmanlispor,Bursaspor,1,1,,1,D,1.57,3.8,6.0,1.67,4.2,6.47
+T1,12/03/2017,Besiktas,Kayserispor,2,2,,,D,1.36,4.75,8.5,1.43,5.25,10.06
+T1,12/03/2017,Konyaspor,Buyuksehyr,0,3,,1,A,3.3,3.2,2.25,3.65,3.3,2.35
+T1,12/03/2017,Rizespor,Antalyaspor,1,2,,2,A,2.5,3.3,2.8,2.59,3.4,3.03
+T1,13/03/2017,Akhisar Belediyespor,Trabzonspor,1,3,1,,A,2.88,3.2,2.5,3.28,3.2,2.59
+T1,17/03/2017,Fenerbahce,Konyaspor,2,3,1,2,A,1.44,4.2,7.5,1.53,4.4,9.55
+T1,18/03/2017,Adanaspor,Akhisar Belediyespor,2,1,1,1,H,2.7,3.2,2.6,2.95,3.3,2.73
+T1,18/03/2017,Kasimpasa,Osmanlispor,3,2,2,2,H,2.7,3.4,2.5,2.9,3.45,2.75
+T1,18/03/2017,Kayserispor,Gaziantepspor,3,4,2,2,A,1.83,3.5,4.33,1.93,3.75,4.7
+T1,18/03/2017,Trabzonspor,Galatasaray,2,0,1,,H,2.2,3.4,3.2,2.4,3.5,3.3
+T1,19/03/2017,Antalyaspor,Besiktas,0,0,,,D,4.33,3.6,1.8,4.33,3.95,1.94
+T1,19/03/2017,Bursaspor,Alanyaspor,1,3,1,1,A,2.05,3.6,3.3,2.2,3.7,3.5
+T1,19/03/2017,Buyuksehyr,Karabukspor,3,3,1,1,D,1.62,3.8,5.5,1.7,4.05,6.01
+T1,19/03/2017,Genclerbirligi,Rizespor,1,0,,,H,1.85,3.3,4.5,2.01,3.5,4.55
+T1,01/04/2017,Akhisar Belediyespor,Buyuksehyr,2,1,,,H,3.8,3.2,2.05,3.93,3.43,2.16
+T1,01/04/2017,Alanyaspor,Kasimpasa,3,1,2,,H,2.1,3.5,3.3,2.23,3.75,3.6
+T1,01/04/2017,Antalyaspor,Kayserispor,2,1,1,,H,2.1,3.4,3.4,2.3,3.67,3.55
+T1,01/04/2017,Karabukspor,Fenerbahce,0,1,,,A,3.6,3.2,2.1,3.6,3.47,2.3
+T1,02/04/2017,Besiktas,Genclerbirligi,3,0,1,,H,1.44,4.33,7.0,1.51,4.93,7.96
+T1,02/04/2017,Konyaspor,Bursaspor,2,0,1,,H,1.75,3.4,5.0,1.92,3.6,5.0
+T1,02/04/2017,Osmanlispor,Gaziantepspor,0,2,,1,A,1.62,3.6,5.75,1.73,4.05,5.75
+T1,02/04/2017,Rizespor,Trabzonspor,0,1,,1,A,3.0,3.4,2.3,3.15,3.6,2.42
+T1,03/04/2017,Galatasaray,Adanaspor,4,0,1,,H,1.36,5.0,7.5,1.42,5.35,9.5
+T1,07/04/2017,Bursaspor,Karabukspor,3,0,,,H,2.15,3.3,3.4,2.32,3.4,3.63
+T1,08/04/2017,Gaziantepspor,Alanyaspor,2,3,,1,A,2.38,3.2,3.0,2.48,3.5,3.23
+T1,08/04/2017,Genclerbirligi,Antalyaspor,1,1,1,1,D,2.05,3.3,3.6,2.25,3.4,3.7
+T1,08/04/2017,Trabzonspor,Besiktas,3,4,1,1,A,2.88,3.3,2.4,3.1,3.49,2.54
+T1,09/04/2017,Adanaspor,Rizespor,1,3,,1,A,2.5,3.25,2.8,2.67,3.44,2.9
+T1,09/04/2017,Fenerbahce,Akhisar Belediyespor,3,1,1,,H,1.36,4.33,10.0,1.42,4.92,10.0
+T1,09/04/2017,Kayserispor,Osmanlispor,1,4,1,2,A,2.45,3.25,2.88,2.65,3.42,2.98
+T1,10/04/2017,Buyuksehyr,Galatasaray,4,0,2,,H,2.15,3.3,3.4,2.4,3.52,3.4
+T1,10/04/2017,Kasimpasa,Konyaspor,1,1,,1,D,2.1,3.25,3.6,2.23,3.4,3.72
+T1,12/04/2017,Gaziantepspor,Genclerbirligi,0,1,,,A,3.1,3.1,2.4,3.15,3.4,2.55
+T1,21/04/2017,Karabukspor,Kasimpasa,0,0,,,D,2.15,3.4,3.25,2.3,3.53,3.5
+T1,21/04/2017,Konyaspor,Gaziantepspor,1,2,1,1,A,1.91,3.3,4.2,1.97,3.71,4.29
+T1,22/04/2017,Alanyaspor,Osmanlispor,0,1,,,A,2.38,3.5,2.8,2.45,3.63,3.0
+T1,22/04/2017,Antalyaspor,Trabzonspor,0,3,,,A,3.0,3.1,2.45,3.05,3.56,2.5
+T1,22/04/2017,Genclerbirligi,Kayserispor,2,1,2,1,H,2.05,3.2,3.8,2.23,3.49,3.8
+T1,22/04/2017,Rizespor,Buyuksehyr,3,3,1,1,D,4.0,3.2,2.0,4.0,3.63,2.1
+T1,23/04/2017,Akhisar Belediyespor,Bursaspor,5,1,4,1,H,2.0,3.2,4.0,2.16,3.5,4.0
+T1,23/04/2017,Galatasaray,Fenerbahce,0,1,,,A,2.63,3.1,2.75,2.74,3.5,2.8
+T1,24/04/2017,Besiktas,Adanaspor,3,2,1,1,H,1.17,6.5,17.0,1.25,7.5,17.0
+T1,28/04/2017,Gaziantepspor,Karabukspor,0,0,,,D,2.05,3.4,3.5,2.12,3.66,4.05
+T1,29/04/2017,Kayserispor,Alanyaspor,3,0,1,,H,2.0,3.5,3.6,2.09,3.72,4.0
+T1,29/04/2017,Trabzonspor,Genclerbirligi,0,0,,,D,1.57,4.0,5.5,1.69,4.0,6.46
+T1,30/04/2017,Adanaspor,Antalyaspor,2,5,,3,A,3.2,3.3,2.25,3.2,3.68,2.36
+T1,30/04/2017,Buyuksehyr,Besiktas,3,1,3,,H,3.4,3.5,2.05,3.72,3.62,2.15
+T1,30/04/2017,Fenerbahce,Rizespor,2,1,1,1,H,1.36,4.75,8.5,1.4,5.5,10.3
+T1,30/04/2017,Kasimpasa,Akhisar Belediyespor,0,2,,,A,1.91,3.5,4.0,2.1,3.7,4.0
+T1,01/05/2017,Bursaspor,Galatasaray,0,5,,2,A,3.75,3.4,2.0,3.75,3.91,2.11
+T1,01/05/2017,Osmanlispor,Konyaspor,0,0,,,D,1.65,3.8,5.25,1.75,3.8,5.84
+T1,05/05/2017,Antalyaspor,Buyuksehyr,0,1,,,A,3.3,3.5,2.1,3.32,3.77,2.3
+T1,06/05/2017,Galatasaray,Kasimpasa,1,3,,1,A,1.44,4.33,7.0,1.5,5.06,7.85
+T1,06/05/2017,Genclerbirligi,Adanaspor,0,1,,1,A,1.5,4.33,6.0,1.56,4.4,7.06
+T1,06/05/2017,Konyaspor,Alanyaspor,2,3,1,1,A,2.0,3.3,3.75,2.15,3.71,3.8
+T1,06/05/2017,Trabzonspor,Kayserispor,2,3,2,2,A,1.62,3.75,5.5,1.7,4.05,6.0
+T1,07/05/2017,Besiktas,Fenerbahce,1,1,1,,D,1.8,3.6,4.33,2.0,3.8,4.52
+T1,07/05/2017,Rizespor,Bursaspor,6,0,4,,H,1.8,3.6,4.33,1.95,3.8,4.5
+T1,08/05/2017,Akhisar Belediyespor,Gaziantepspor,6,0,1,,H,2.0,3.4,3.75,2.08,3.6,3.92
+T1,08/05/2017,Karabukspor,Osmanlispor,1,0,,,H,2.63,3.4,2.55,2.88,3.4,2.66
+T1,12/05/2017,Kasimpasa,Rizespor,4,2,,,H,2.8,3.7,2.3,3.4,3.8,2.41
+T1,12/05/2017,Kayserispor,Konyaspor,2,1,1,1,H,1.44,4.5,6.5,1.55,4.68,8.1
+T1,13/05/2017,Adanaspor,Trabzonspor,1,1,1,1,D,5.5,3.8,1.62,5.5,4.5,1.65
+T1,13/05/2017,Buyuksehyr,Genclerbirligi,2,1,,1,H,1.3,4.75,12.0,1.37,5.4,12.6
+T1,13/05/2017,Fenerbahce,Antalyaspor,0,1,,,A,1.53,4.33,5.5,1.63,4.45,5.92
+T1,14/05/2017,Alanyaspor,Karabukspor,4,2,1,1,H,1.75,3.75,4.5,1.9,4.0,4.76
+T1,14/05/2017,Gaziantepspor,Galatasaray,1,2,,1,A,4.0,3.75,1.83,4.2,4.24,2.0
+T1,14/05/2017,Osmanlispor,Akhisar Belediyespor,0,4,,1,A,1.91,3.4,4.0,2.1,3.65,4.5
+T1,15/05/2017,Bursaspor,Besiktas,0,2,,,A,13.0,5.25,1.25,13.0,6.55,1.31
+T1,19/05/2017,Galatasaray,Osmanlispor,2,0,2,,H,1.4,4.5,6.5,1.48,5.05,7.3
+T1,20/05/2017,Antalyaspor,Bursaspor,2,1,1,,H,1.33,5.0,8.5,1.4,5.55,9.28
+T1,20/05/2017,Besiktas,Kasimpasa,4,1,2,1,H,1.14,7.5,17.0,1.2,8.7,22.0
+T1,20/05/2017,Kayserispor,Adanaspor,1,1,1,,D,1.3,4.75,9.0,1.4,5.45,10.33
+T1,20/05/2017,Rizespor,Gaziantepspor,2,0,1,,H,1.62,4.0,5.0,1.75,4.28,5.22
+T1,21/05/2017,Konyaspor,Karabukspor,3,0,2,,H,2.1,3.2,3.25,2.23,3.5,3.53
+T1,21/05/2017,Trabzonspor,Buyuksehyr,0,0,,,D,2.8,3.4,2.4,3.1,3.55,2.5
+T1,22/05/2017,Akhisar Belediyespor,Alanyaspor,3,0,1,,H,1.91,3.4,4.0,2.0,3.92,4.0
+T1,22/05/2017,Genclerbirligi,Fenerbahce,1,2,1,,A,4.0,3.4,1.91,4.24,3.7,2.0
+T1,27/05/2017,Buyuksehyr,Adanaspor,2,1,1,1,H,1.2,6.0,15.0,1.27,6.75,15.25
+T1,27/05/2017,Fenerbahce,Trabzonspor,1,1,1,,D,1.8,3.4,4.75,1.96,3.9,5.03
+T1,27/05/2017,Kasimpasa,Antalyaspor,0,3,,1,A,3.25,3.75,2.05,3.35,3.92,2.2
+T1,27/05/2017,Konyaspor,Akhisar Belediyespor,0,3,,2,A,3.4,3.25,2.15,3.4,3.53,2.29
+T1,28/05/2017,Bursaspor,Genclerbirligi,1,2,1,,A,1.57,4.2,5.25,1.73,4.2,5.33
+T1,28/05/2017,Gaziantepspor,Besiktas,0,4,,2,A,16.0,8.0,1.14,26.0,9.0,1.2
+T1,28/05/2017,Karabukspor,Kayserispor,2,2,,1,D,2.05,3.75,3.2,2.25,3.8,3.27
+T1,28/05/2017,Osmanlispor,Rizespor,1,2,1,1,A,3.0,3.4,2.3,3.0,3.75,2.44
+T1,29/05/2017,Alanyaspor,Galatasaray,2,3,1,3,A,4.75,4.0,1.65,4.85,4.4,1.77
+T1,02/06/2017,Akhisar Belediyespor,Karabukspor,2,3,1,,A,1.33,5.0,8.5,1.4,5.51,8.5
+T1,02/06/2017,Antalyaspor,Gaziantepspor,4,1,2,1,H,1.36,5.0,7.5,1.43,5.51,7.6
+T1,02/06/2017,Genclerbirligi,Kasimpasa,1,0,1,,H,1.91,3.75,3.6,2.05,4.23,3.68
+T1,03/06/2017,Adanaspor,Fenerbahce,1,3,1,2,A,8.5,5.5,1.3,9.25,5.85,1.37
+T1,03/06/2017,Besiktas,Osmanlispor,4,0,2,,H,1.22,6.25,11.0,1.3,6.75,11.0
+T1,03/06/2017,Galatasaray,Konyaspor,2,1,1,,H,1.2,7.0,11.0,1.3,7.09,11.5
+T1,03/06/2017,Kayserispor,Buyuksehyr,0,1,,,A,2.88,3.6,2.3,3.15,3.8,2.38
+T1,03/06/2017,Rizespor,Alanyaspor,1,0,1,,H,1.29,6.0,8.0,1.36,6.31,9.1
+T1,03/06/2017,Trabzonspor,Bursaspor,1,2,,,A,2.9,3.5,2.3,2.91,3.9,2.5

@@ -1,0 +1,137 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+BRA,07/07/2024,Flamengo RJ,Cuiaba,1,1,,,D,1.41,4.29,8.12,1.46,4.61,9.0
+BRA,07/07/2024,Sao Paulo,Bragantino,2,0,,,H,1.95,3.27,4.08,2.02,3.45,4.4
+BRA,07/07/2024,Cruzeiro,Corinthians,3,0,,,H,1.79,3.54,4.53,1.84,3.81,5.15
+BRA,07/07/2024,Fortaleza,Fluminense,1,0,,,H,1.72,3.55,5.05,1.77,3.67,5.44
+BRA,07/07/2024,Juventude,Gremio,3,0,,,H,2.59,3.14,2.81,2.73,3.31,2.93
+BRA,07/07/2024,Internacional,Vasco,1,2,,,A,1.67,3.57,5.54,1.74,3.8,6.5
+BRA,07/07/2024,Atletico GO,Athletico-PR,1,2,,,A,1.94,3.36,4.02,2.01,3.5,4.45
+BRA,07/07/2024,Palmeiras,Bahia,2,0,,,H,1.66,4.07,4.72,1.69,4.3,5.0
+BRA,07/07/2024,Vitoria,Criciuma,2,1,,,H,2.17,3.15,3.55,2.28,3.25,3.78
+BRA,13/07/2024,Bahia,Cuiaba,1,2,,,A,1.65,3.59,5.71,1.71,3.72,6.23
+BRA,13/07/2024,Cruzeiro,Bragantino,2,1,,,H,2.08,3.32,3.62,2.2,3.4,3.9
+BRA,16/07/2024,Juventude,Atletico-MG,1,1,,,D,3.98,3.48,1.93,4.16,3.61,2.1
+BRA,17/07/2024,Corinthians,Criciuma,2,1,,,H,1.78,3.54,4.68,1.81,3.68,5.02
+BRA,17/07/2024,Atletico GO,Vasco,0,1,,,A,2.22,3.2,3.38,2.3,3.38,3.55
+BRA,18/07/2024,Sao Paulo,Gremio,1,0,,,H,1.56,3.78,6.54,1.6,3.9,7.08
+BRA,18/07/2024,Botafogo RJ,Palmeiras,1,0,,,H,2.79,3.23,2.56,2.91,3.33,2.65
+BRA,18/07/2024,Fortaleza,Vitoria,3,1,,,H,1.62,3.75,5.66,1.68,3.9,6.2
+BRA,20/07/2024,Flamengo RJ,Criciuma,2,1,,,H,1.4,4.58,7.9,1.42,4.81,8.39
+BRA,20/07/2024,Botafogo RJ,Internacional,1,0,,,H,1.91,3.26,4.43,2.0,3.37,4.95
+BRA,21/07/2024,Palmeiras,Cruzeiro,2,0,,,H,1.71,3.69,4.93,1.74,3.79,5.26
+BRA,21/07/2024,Gremio,Vitoria,2,0,,,H,1.79,3.4,4.9,1.85,3.58,5.47
+BRA,21/07/2024,Atletico-MG,Vasco,2,0,,,H,1.7,3.77,4.92,1.81,4.02,5.46
+BRA,21/07/2024,Bahia,Corinthians,0,1,,,A,1.68,3.79,5.07,1.73,4.0,5.52
+BRA,21/07/2024,Bragantino,Athletico-PR,1,0,,,H,1.97,3.38,3.92,2.13,3.5,4.4
+BRA,21/07/2024,Fortaleza,Atletico GO,3,1,,,H,1.72,3.61,5.03,1.75,3.84,5.59
+BRA,21/07/2024,Juventude,Sao Paulo,0,0,,,D,3.64,3.25,2.1,4.26,3.35,2.22
+BRA,22/07/2024,Cuiaba,Fluminense,0,1,,,A,2.52,2.96,3.11,2.65,3.16,3.31
+BRA,24/07/2024,Criciuma,Fortaleza,1,1,,,D,2.67,3.1,2.76,2.86,3.2,2.91
+BRA,24/07/2024,Cruzeiro,Juventude,2,0,,,H,1.46,4.23,7.31,1.53,4.4,8.13
+BRA,24/07/2024,Sao Paulo,Botafogo RJ,2,2,,,D,2.23,2.96,3.68,2.33,3.03,3.89
+BRA,25/07/2024,Vitoria,Flamengo RJ,1,2,,,A,4.97,3.65,1.72,5.52,3.75,1.76
+BRA,25/07/2024,Atletico GO,Bahia,1,1,,,D,3.03,3.21,2.4,3.26,3.28,2.5
+BRA,25/07/2024,Fluminense,Palmeiras,1,0,,,H,3.08,3.17,2.41,3.4,3.27,2.51
+BRA,26/07/2024,Corinthians,Gremio,2,2,,,D,1.99,3.21,4.11,2.05,3.34,4.36
+BRA,27/07/2024,Juventude,Criciuma,1,2,,,A,2.27,3.1,3.41,2.35,3.16,3.56
+BRA,27/07/2024,Palmeiras,Vitoria,0,2,,,A,1.46,4.42,6.93,1.52,4.77,7.5
+BRA,28/07/2024,Bahia,Internacional,1,1,,,D,1.99,3.34,3.93,2.06,3.45,4.29
+BRA,28/07/2024,Botafogo RJ,Cruzeiro,0,3,,,A,2.1,3.26,3.65,2.16,3.39,4.0
+BRA,28/07/2024,Fortaleza,Sao Paulo,1,0,,,H,2.3,2.89,3.63,2.37,3.0,3.91
+BRA,28/07/2024,Bragantino,Fluminense,0,1,,,A,2.35,3.16,3.17,2.5,3.25,3.38
+BRA,28/07/2024,Flamengo RJ,Atletico GO,2,0,,,H,1.29,5.45,10.47,1.33,5.8,11.6
+BRA,28/07/2024,Atletico-MG,Corinthians,2,1,,,H,1.69,3.56,5.37,1.75,3.75,5.81
+BRA,28/07/2024,Cuiaba,Athletico-PR,1,2,,,A,2.37,3.07,3.24,2.5,3.14,3.45
+BRA,28/07/2024,Gremio,Vasco,1,0,,,H,2.04,3.26,3.83,2.15,3.39,4.18
+BRA,07/08/2024,Botafogo RJ,Atletico-MG,3,0,,,H,1.96,3.4,3.88,2.05,3.64,4.1
+BRA,14/08/2024,Internacional,Juventude,2,1,,,H,1.57,4.16,5.59,1.61,4.42,6.0
+BRA,17/08/2024,Atletico-MG,Cuiaba,1,1,,,D,1.85,3.21,4.93,1.96,3.45,6.0
+BRA,17/08/2024,Gremio,Bahia,0,2,,,A,2.71,3.18,2.69,2.82,3.28,3.0
+BRA,17/08/2024,Bragantino,Fortaleza,1,2,,,A,2.55,3.17,2.87,2.68,3.25,3.0
+BRA,18/08/2024,Fluminense,Corinthians,0,0,,,D,2.53,2.88,3.17,2.7,2.95,3.35
+BRA,18/08/2024,Atletico GO,Internacional,1,0,,,H,3.0,3.1,2.49,3.2,3.2,2.57
+BRA,18/08/2024,Criciuma,Vasco,2,2,,,D,2.06,3.25,3.77,2.13,3.4,3.93
+BRA,18/08/2024,Palmeiras,Sao Paulo,2,1,,,H,1.7,3.45,5.58,1.76,3.57,6.0
+BRA,18/08/2024,Athletico-PR,Juventude,1,2,,,A,1.68,3.92,4.87,1.74,4.2,5.6
+BRA,18/08/2024,Botafogo RJ,Flamengo RJ,4,1,,,H,2.38,3.11,3.19,2.59,3.25,3.39
+BRA,20/08/2024,Vitoria,Cruzeiro,2,2,,,D,2.79,2.9,2.82,2.87,3.0,2.9
+BRA,24/08/2024,Atletico GO,Juventude,2,1,,,H,1.82,3.49,4.54,1.9,3.62,4.93
+BRA,24/08/2024,Palmeiras,Cuiaba,5,0,,,H,1.44,4.31,7.7,1.49,4.5,8.29
+BRA,25/08/2024,Atletico-MG,Fluminense,0,2,,,A,1.92,3.16,4.55,2.02,3.25,4.81
+BRA,25/08/2024,Bahia,Botafogo RJ,0,0,,,D,2.22,3.4,3.21,2.29,3.54,3.34
+BRA,25/08/2024,Criciuma,Gremio,0,1,,,A,2.75,3.21,2.64,2.87,3.35,2.88
+BRA,25/08/2024,Fortaleza,Corinthians,1,0,,,H,1.97,3.22,4.21,2.08,3.4,5.0
+BRA,25/08/2024,Sao Paulo,Vitoria,2,1,,,H,1.73,3.53,5.09,1.78,3.67,5.57
+BRA,25/08/2024,Internacional,Cruzeiro,1,0,,,H,2.0,3.15,4.18,2.06,3.35,4.4
+BRA,26/08/2024,Flamengo RJ,Bragantino,2,1,,,H,1.61,3.76,5.87,1.65,4.0,6.57
+BRA,27/08/2024,Vasco,Athletico-PR,2,1,,,H,2.18,3.23,3.48,2.25,3.32,3.62
+BRA,28/08/2024,Criciuma,Bragantino,1,0,,,H,2.38,3.19,3.12,2.47,3.38,3.3
+BRA,28/08/2024,Cruzeiro,Internacional,0,0,,,D,2.26,3.13,3.4,2.35,3.32,3.56
+BRA,31/08/2024,Cuiaba,Criciuma,2,1,,,H,2.0,3.25,4.02,2.05,3.34,4.29
+BRA,06/09/2024,Criciuma,Cuiaba,2,5,,,A,2.13,3.06,3.76,2.2,3.26,4.0
+BRA,10/09/2024,Atletico-MG,Gremio,2,1,,,H,1.81,3.55,4.43,1.95,3.8,4.92
+BRA,14/09/2024,Atletico GO,Vitoria,0,2,,,A,1.96,3.3,4.09,2.01,3.45,4.32
+BRA,14/09/2024,Athletico-PR,Fortaleza,1,1,,,D,1.9,3.58,3.99,2.05,3.79,4.25
+BRA,15/09/2024,Botafogo RJ,Corinthians,2,1,,,H,1.59,3.86,5.89,1.63,4.0,6.5
+BRA,15/09/2024,Bragantino,Gremio,2,2,,,D,2.43,3.34,2.88,2.56,3.6,3.0
+BRA,15/09/2024,Juventude,Fluminense,2,1,,,H,2.95,3.2,2.46,3.06,3.55,2.54
+BRA,15/09/2024,Palmeiras,Criciuma,5,0,,,H,1.28,5.56,10.48,1.31,6.1,12.0
+BRA,15/09/2024,Bahia,Atletico-MG,3,0,,,H,1.93,3.46,3.99,1.98,3.65,4.24
+BRA,15/09/2024,Cruzeiro,Sao Paulo,0,1,,,A,1.84,3.22,4.94,1.87,3.4,5.31
+BRA,15/09/2024,Flamengo RJ,Vasco,1,1,,,D,1.71,3.64,5.0,1.76,3.75,5.57
+BRA,17/09/2024,Internacional,Cuiaba,3,0,,,H,1.45,4.02,8.06,1.51,4.3,8.7
+BRA,21/09/2024,Corinthians,Atletico GO,3,0,,,H,1.58,3.83,6.13,1.62,4.0,6.6
+BRA,21/09/2024,Vitoria,Juventude,1,0,,,H,2.01,3.25,3.97,2.09,3.5,4.13
+BRA,21/09/2024,Fluminense,Botafogo RJ,0,1,,,A,3.41,3.13,2.25,3.63,3.28,2.35
+BRA,22/09/2024,Fortaleza,Bahia,4,1,,,H,2.59,3.2,2.79,2.66,3.35,2.95
+BRA,22/09/2024,Atletico-MG,Bragantino,3,0,,,H,2.18,3.28,3.42,2.27,3.46,3.63
+BRA,22/09/2024,Vasco,Palmeiras,0,1,,,A,4.23,3.78,1.8,4.4,3.94,1.82
+BRA,22/09/2024,Cuiaba,Cruzeiro,0,0,,,D,2.8,2.87,2.84,2.93,2.95,2.99
+BRA,22/09/2024,Gremio,Flamengo RJ,3,2,,,H,1.81,3.57,4.4,1.87,3.73,4.6
+BRA,22/09/2024,Sao Paulo,Internacional,1,3,,,A,2.84,2.87,2.8,2.92,2.95,2.94
+BRA,23/09/2024,Criciuma,Athletico-PR,0,0,,,D,2.22,3.31,3.28,2.32,3.5,3.42
+BRA,25/09/2024,Bragantino,Internacional,2,2,,,D,3.2,3.24,2.31,3.39,3.38,2.43
+BRA,25/09/2024,Gremio,Criciuma,1,2,,,A,1.69,3.81,4.88,1.74,4.05,5.1
+BRA,28/09/2024,Palmeiras,Atletico-MG,2,1,,,H,1.7,3.65,5.14,1.75,3.8,5.5
+BRA,29/09/2024,Botafogo RJ,Gremio,0,0,,,D,1.67,3.89,4.89,1.71,4.1,5.2
+BRA,29/09/2024,Juventude,Bragantino,1,1,,,D,2.58,3.15,2.83,2.68,3.25,3.0
+BRA,29/09/2024,Atletico GO,Fluminense,1,0,,,H,2.49,3.11,2.99,2.7,3.26,3.24
+BRA,29/09/2024,Fortaleza,Cuiaba,1,0,,,H,1.72,3.54,5.2,1.77,3.78,5.8
+BRA,29/09/2024,Sao Paulo,Corinthians,3,1,,,H,2.59,2.9,3.08,2.67,2.97,3.2
+BRA,29/09/2024,Bahia,Criciuma,1,0,,,H,1.61,4.02,5.26,1.65,4.25,6.0
+BRA,29/09/2024,Cruzeiro,Vasco,1,1,,,D,1.78,3.51,4.69,1.87,3.6,5.1
+BRA,29/09/2024,Internacional,Vitoria,3,1,,,H,1.38,4.74,8.25,1.41,5.1,9.0
+BRA,30/09/2024,Flamengo RJ,Athletico-PR,1,0,,,H,1.67,3.76,5.14,1.72,3.88,5.58
+BRA,07/10/2024,Gremio,Cruzeiro,0,2,,,A,2.52,3.18,2.88,2.6,3.38,3.0
+BRA,07/10/2024,Athletico-PR,Bahia,1,3,,,A,2.29,3.31,3.16,2.4,3.45,3.3
+BRA,07/10/2024,Vasco,Corinthians,2,0,,,H,2.28,3.13,3.35,2.42,3.25,3.66
+BRA,08/10/2024,Fortaleza,Criciuma,1,0,,,H,1.79,3.39,4.91,1.86,3.61,5.46
+BRA,08/10/2024,Cuiaba,Gremio,1,3,,,A,2.53,2.96,3.09,2.7,3.27,3.81
+BRA,17/10/2024,Fortaleza,Atletico-MG,1,1,,,D,1.71,3.5,5.48,1.78,3.6,6.0
+BRA,17/10/2024,Sao Paulo,Vasco,3,0,,,H,1.8,3.48,4.7,1.88,3.6,5.0
+BRA,18/10/2024,Corinthians,Athletico-PR,5,2,,,H,1.62,3.93,5.45,1.65,4.04,6.07
+BRA,18/10/2024,Flamengo RJ,Fluminense,0,2,,,A,1.72,3.34,5.69,1.79,3.4,6.35
+BRA,05/11/2024,Flamengo RJ,Corinthians,2,0,,,H,1.59,3.8,6.03,1.65,4.2,6.5
+BRA,06/11/2024,Atletico GO,Corinthians,2,2,,,D,2.59,3.02,2.91,2.7,3.23,3.06
+BRA,06/11/2024,Juventude,Vitoria,1,1,,,D,1.97,3.14,4.25,2.04,3.25,4.62
+BRA,07/11/2024,Palmeiras,Atletico GO,3,1,,,H,1.37,4.77,8.59,1.41,4.95,10.0
+BRA,08/11/2024,Corinthians,Bragantino,1,1,,,D,2.16,3.06,3.75,2.25,3.2,4.0
+BRA,08/11/2024,Cruzeiro,Atletico-MG,0,0,,,D,2.31,3.0,3.44,2.37,3.3,3.75
+BRA,08/11/2024,Vasco,Fluminense,2,0,,,H,2.68,2.99,2.86,2.88,3.18,3.02
+BRA,08/11/2024,Juventude,Botafogo RJ,3,2,,,H,3.78,3.34,2.02,4.2,3.48,2.25
+BRA,08/11/2024,Bahia,Vitoria,2,0,,,H,1.64,3.63,5.75,1.69,3.76,6.33
+BRA,08/11/2024,Flamengo RJ,Palmeiras,1,1,,,D,1.73,3.56,5.04,1.98,3.69,5.5
+BRA,08/11/2024,Sao Paulo,Atletico GO,1,0,,,H,1.89,3.31,4.44,2.0,3.85,6.28
+BRA,08/11/2024,Internacional,Athletico-PR,2,2,,,D,1.92,3.26,4.32,2.0,3.37,4.6
+BRA,09/11/2024,Internacional,Fortaleza,2,1,,,H,2.0,3.3,3.97,2.06,3.42,4.3
+BRA,05/12/2024,Atletico GO,Cruzeiro,0,1,,,A,2.98,3.11,2.48,3.14,3.3,2.8
+BRA,05/12/2024,Fortaleza,Botafogo RJ,1,1,,,D,1.96,3.38,3.97,2.11,3.5,4.28
+BRA,05/12/2024,Palmeiras,Athletico-PR,0,2,,,A,1.7,3.67,4.96,1.75,3.86,5.26
+BRA,05/12/2024,Bahia,Bragantino,1,0,,,H,1.79,3.7,4.33,1.92,3.87,4.65
+BRA,05/12/2024,Vasco,Vitoria,2,1,,,H,1.73,3.6,4.89,1.79,3.74,5.18
+BRA,06/12/2024,Botafogo RJ,Fluminense,1,0,,,H,1.96,3.29,4.06,2.05,3.4,4.33
+BRA,06/12/2024,Bragantino,Atletico-MG,1,2,,,A,2.29,3.12,3.27,2.36,3.26,3.47
+BRA,07/12/2024,Criciuma,Fluminense,1,1,,,D,2.0,3.28,3.98,2.08,3.41,4.4
+BRA,07/12/2024,Flamengo RJ,Fortaleza,1,2,,,A,1.6,3.8,5.89,1.65,4.0,6.35
+BRA,07/12/2024,Atletico-MG,Sao Paulo,2,1,,,H,2.48,3.07,3.06,2.6,3.2,3.17
+BRA,07/12/2024,Vitoria,Botafogo RJ,0,1,,,A,3.09,3.0,2.51,3.35,3.09,2.62

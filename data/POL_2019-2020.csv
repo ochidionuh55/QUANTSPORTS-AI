@@ -1,0 +1,255 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+POL,04/07/2019,Pogon Szczecin,Arka Gdynia,3,3,,,D,1.81,3.37,4.57,1.89,3.65,5.02
+POL,04/07/2019,Gornik Z.,Legia,1,2,,,A,3.95,3.47,1.9,4.32,3.75,1.95
+POL,12/07/2019,Jagiellonia,Zaglebie,0,1,,,A,1.89,3.65,3.72,2.0,3.84,3.9
+POL,12/07/2019,Lech Poznan,LKS Lodz,2,0,,,H,1.56,4.17,5.25,1.63,4.45,5.95
+POL,12/07/2019,Lechia Gdansk,Wisla Plock,2,0,,,H,1.71,3.68,4.68,1.83,3.88,5.04
+POL,19/07/2019,Arka Gdynia,Jagiellonia,0,3,,,A,2.49,3.12,2.88,2.65,3.4,3.05
+POL,19/07/2019,LKS Lodz,Lechia Gdansk,0,0,,,D,2.41,3.23,2.89,2.65,3.4,3.06
+POL,20/07/2019,Rakow,Korona Kielce,0,1,,,A,2.21,3.35,3.14,2.32,3.53,3.5
+POL,20/07/2019,Wisla,Slask Wroclaw,0,1,,,A,3.04,3.37,2.27,3.26,3.65,2.5
+POL,20/07/2019,Piast Gliwice,Lech Poznan,1,1,,,D,2.35,3.16,3.07,2.65,3.4,3.28
+POL,21/07/2019,Zaglebie,Cracovia,1,1,,,D,2.25,3.36,3.07,2.33,3.5,3.4
+POL,21/07/2019,Legia,Pogon Szczecin,1,2,,,A,2.0,3.43,3.63,2.05,3.75,4.55
+POL,22/07/2019,Wisla Plock,Gornik Z.,1,1,,,D,2.68,3.29,2.54,2.83,3.65,2.8
+POL,26/07/2019,Gornik Z.,Zaglebie,1,0,,,H,2.25,3.33,3.09,2.45,3.52,3.25
+POL,26/07/2019,Lech Poznan,Wisla Plock,4,0,,,H,1.74,3.58,4.69,1.85,3.73,5.25
+POL,27/07/2019,Cracovia,LKS Lodz,1,2,,,A,1.96,3.28,3.94,2.05,3.6,4.25
+POL,27/07/2019,Jagiellonia,Rakow,0,1,,,A,2.1,3.24,3.52,2.2,3.6,3.82
+POL,28/07/2019,Korona Kielce,Legia,1,2,,,A,3.03,3.25,2.32,3.2,3.5,2.55
+POL,28/07/2019,Lechia Gdansk,Wisla,0,0,,,D,1.66,3.91,4.73,1.75,4.12,5.25
+POL,28/07/2019,Slask Wroclaw,Piast Gliwice,2,1,,,H,2.4,3.13,3.0,2.46,3.4,3.2
+POL,29/07/2019,Pogon Szczecin,Arka Gdynia,2,0,,,H,1.7,3.62,4.94,1.77,3.75,5.45
+POL,02/08/2019,Legnica,Jagiellonia,0,3,,,A,2.8,3.28,2.45,2.92,3.5,2.58
+POL,02/08/2019,Lech Poznan,Zaglebie,1,2,,,A,1.77,3.5,4.6,1.86,3.65,5.1
+POL,03/08/2019,Gornik Z.,Piast Gliwice,0,2,,,A,2.83,3.16,2.48,3.0,3.3,2.61
+POL,03/08/2019,Slask Wroclaw,Jagiellonia,2,0,,,H,2.27,3.17,3.18,2.5,3.4,3.38
+POL,04/08/2019,Wisla Plock,Slask Wroclaw,2,0,,,H,2.74,3.26,2.52,2.87,3.44,2.65
+POL,11/08/2019,LKS Lodz,Slask Wroclaw,0,1,,,A,2.69,3.33,2.51,2.8,3.52,2.7
+POL,11/08/2019,Piast Gliwice,Jagiellonia,3,1,,,H,2.27,3.22,3.12,2.4,3.5,3.36
+POL,12/08/2019,Cracovia,Rakow,3,0,,,H,1.92,3.35,4.0,2.0,3.81,4.81
+POL,12/08/2019,Pogon Szczecin,Piast Gliwice,1,0,,,H,2.12,3.37,3.29,2.3,3.5,3.6
+POL,12/08/2019,Slask Wroclaw,Legia,0,3,,,A,3.98,3.48,1.88,4.4,3.78,2.01
+POL,16/08/2019,Wisla,LKS Lodz,4,0,,,H,2.62,3.35,2.56,2.75,3.56,2.7
+POL,17/08/2019,Slask Wroclaw,Cracovia,2,1,,,H,2.39,3.04,3.08,2.47,3.24,3.27
+POL,17/08/2019,Arka Gdynia,Lech Poznan,0,0,,,D,3.33,3.28,2.15,3.6,3.48,2.25
+POL,17/08/2019,Jagiellonia,Gornik Z.,3,1,,,H,1.98,3.43,3.67,2.06,3.64,3.95
+POL,18/08/2019,Piast Gliwice,Wisla Plock,1,0,,,H,1.75,3.68,4.42,1.9,3.88,4.75
+POL,18/08/2019,Legia,Zaglebie,1,0,,,H,1.62,3.89,5.1,1.7,4.11,6.0
+POL,18/08/2019,Rakow,Lechia Gdansk,2,1,,,H,2.53,3.21,2.73,2.65,3.34,2.86
+POL,19/08/2019,Korona Kielce,Pogon Szczecin,0,1,,,A,2.51,3.19,2.78,2.8,3.4,2.92
+POL,23/08/2019,Jagiellonia,Wisla,3,2,,,H,1.89,3.62,3.76,1.97,3.83,3.95
+POL,24/08/2019,Cracovia,Arka Gdynia,3,1,,,H,1.74,3.57,4.67,1.85,3.75,5.03
+POL,24/08/2019,Lechia Gdansk,Slask Wroclaw,1,1,,,D,2.11,3.31,3.4,2.25,3.5,3.69
+POL,24/08/2019,Rakow,Lech Poznan,2,3,,,A,2.96,3.31,2.33,3.16,3.48,2.55
+POL,25/08/2019,Gornik Z.,Korona Kielce,3,0,,,H,2.34,3.28,2.95,2.4,3.48,3.1
+POL,25/08/2019,LKS Lodz,Legia,2,3,,,A,3.04,3.24,2.32,3.2,3.4,2.5
+POL,25/08/2019,Zaglebie,Piast Gliwice,0,3,,,A,2.3,3.16,3.13,2.4,3.42,3.25
+POL,26/08/2019,Pogon Szczecin,Wisla Plock,1,2,,,A,1.84,3.45,4.22,1.95,3.65,4.75
+POL,30/08/2019,Arka Gdynia,Gornik Z.,1,0,,,H,2.88,3.18,2.44,3.05,3.35,2.75
+POL,30/08/2019,Korona Kielce,Jagiellonia,0,2,,,A,2.44,3.27,2.82,2.75,3.48,3.0
+POL,31/08/2019,Wisla Plock,LKS Lodz,2,1,,,H,2.54,3.29,2.68,2.65,3.46,3.0
+POL,31/08/2019,Piast Gliwice,Lechia Gdansk,1,2,,,A,2.16,3.24,3.34,2.4,3.44,3.61
+POL,31/08/2019,Wisla,Zaglebie,4,2,,,H,2.3,3.44,2.91,2.5,3.64,3.0
+POL,02/09/2019,Slask Wroclaw,Zaglebie Sosnowiec,2,0,,,H,1.79,3.66,4.2,1.86,4.0,4.5
+POL,02/09/2019,Cracovia,Piast Gliwice,2,1,,,H,2.36,3.09,3.1,2.44,3.3,3.27
+POL,02/09/2019,Lechia Gdansk,Pogon Szczecin,2,1,,,H,2.34,3.24,2.98,2.47,3.4,3.3
+POL,03/09/2019,Cracovia,Zaglebie Sosnowiec,2,1,,,H,1.69,3.69,4.8,1.72,3.88,5.14
+POL,03/09/2019,Korona Kielce,Wisla,2,6,,,A,2.14,3.16,3.46,2.24,3.5,3.75
+POL,03/09/2019,Arka Gdynia,Legia,1,2,,,A,4.06,3.4,1.89,4.5,3.6,2.0
+POL,08/09/2019,Lech Poznan,Slask Wroclaw,1,3,,,A,1.91,3.39,3.97,1.97,3.56,4.24
+POL,11/09/2019,Wisla Plock,Cracovia,0,0,,,D,2.99,3.23,2.35,3.15,3.4,2.55
+POL,11/09/2019,Legia,Gornik Z.,5,1,,,H,1.37,4.65,8.07,1.48,5.09,9.5
+POL,11/09/2019,Wisla,Arka Gdynia,0,1,,,A,2.28,3.41,2.97,2.4,3.66,3.3
+POL,13/09/2019,Zaglebie,Wisla Plock,5,0,,,H,2.03,3.4,3.5,2.13,3.61,3.75
+POL,13/09/2019,Jagiellonia,Legia,0,0,,,D,3.3,3.21,2.19,3.54,3.4,2.31
+POL,14/09/2019,Rakow,Arka Gdynia,2,0,,,H,2.05,3.3,3.56,2.2,3.52,3.87
+POL,14/09/2019,Lechia Gdansk,Lech Poznan,2,1,,,H,2.27,3.29,3.05,2.35,3.47,3.21
+POL,14/09/2019,Korona Kielce,Wisla,1,1,,,D,2.28,3.4,2.96,2.4,3.6,3.1
+POL,15/09/2019,Pogon Szczecin,LKS Lodz,1,0,,,H,1.67,3.88,4.72,1.77,4.18,5.25
+POL,15/09/2019,Gornik Z.,Slask Wroclaw,0,0,,,D,2.36,3.17,3.02,2.51,3.38,3.3
+POL,16/09/2019,Cracovia,Piast Gliwice,2,0,,,H,2.42,3.2,2.9,2.56,3.45,3.0
+POL,18/09/2019,Wisla Plock,Legia,1,0,,,H,4.95,3.79,1.65,5.4,4.12,1.75
+POL,20/09/2019,Piast Gliwice,Rakow,2,1,,,H,2.19,3.29,3.23,2.28,3.6,3.55
+POL,20/09/2019,Lech Poznan,Jagiellonia,1,1,,,D,2.11,3.46,3.26,2.15,3.7,3.42
+POL,21/09/2019,LKS Lodz,Arka Gdynia,1,4,,,A,2.13,3.39,3.28,2.3,3.58,3.6
+POL,21/09/2019,Lechia Gdansk,Korona Kielce,2,0,,,H,1.86,3.47,4.06,1.93,3.7,4.5
+POL,21/09/2019,Slask Wroclaw,Zaglebie,4,4,,,D,2.04,3.35,3.55,2.13,3.6,3.75
+POL,22/09/2019,Wisla Plock,Wisla,2,1,,,H,2.46,3.4,2.71,2.55,3.6,2.95
+POL,22/09/2019,Pogon Szczecin,Gornik Z.,1,1,,,D,2.09,3.29,3.52,2.21,3.5,4.0
+POL,22/09/2019,Cracovia,Legia,1,2,,,A,3.34,3.14,2.21,3.59,3.45,2.27
+POL,27/09/2019,Korona Kielce,Slask Wroclaw,1,0,,,H,3.35,3.32,2.14,3.63,3.48,2.25
+POL,28/09/2019,Rakow,Wisla Plock,1,2,,,A,1.96,3.49,3.64,2.12,3.65,3.85
+POL,28/09/2019,Legia,Lechia Gdansk,1,2,,,A,1.73,3.64,4.6,1.8,3.85,5.1
+POL,28/09/2019,Gornik Z.,Lech Poznan,1,3,,,A,2.57,3.3,2.63,2.66,3.48,2.75
+POL,29/09/2019,Arka Gdynia,Piast Gliwice,0,0,,,D,2.67,3.22,2.58,2.8,3.34,2.68
+POL,29/09/2019,Jagiellonia,Pogon Szczecin,2,3,,,A,2.18,3.27,3.26,2.25,3.5,3.5
+POL,29/09/2019,Wisla,Cracovia,0,1,,,A,2.93,3.36,2.31,3.3,3.54,2.42
+POL,30/09/2019,Zaglebie,LKS Lodz,3,1,,,H,1.85,3.66,3.87,1.9,3.85,4.17
+POL,02/10/2019,Arka Gdynia,Korona Kielce,1,2,,,A,2.34,3.2,3.03,2.45,3.35,3.2
+POL,02/10/2019,Wisla Plock,Legia,0,1,,,A,3.75,3.33,1.99,4.0,3.56,2.1
+POL,03/10/2019,Pogon Szczecin,Zaglebie,0,3,,,A,1.67,3.84,4.77,1.8,4.13,5.25
+POL,03/10/2019,Legnica,Lech Poznan,3,2,,,H,3.02,3.28,2.3,3.2,3.5,2.38
+POL,05/10/2019,Arka Gdynia,Zaglebie Sosnowiec,2,0,,,H,1.44,4.52,6.44,1.5,4.8,7.22
+POL,05/10/2019,Wisla,Korona Kielce,1,0,,,H,2.58,3.5,2.53,2.7,3.73,2.62
+POL,08/10/2019,Pogon Szczecin,Wisla,1,0,,,H,1.73,3.66,4.51,1.78,3.84,4.94
+POL,08/10/2019,Zaglebie,Arka Gdynia,2,0,,,H,2.07,3.24,3.59,2.21,3.44,3.75
+POL,08/10/2019,Gornik Z.,Rakow,1,0,,,H,2.39,3.16,2.97,2.51,3.26,3.1
+POL,11/10/2019,Zaglebie,Rakow,2,2,,,D,1.98,3.36,3.74,2.12,3.66,4.09
+POL,11/10/2019,Lech Poznan,Korona Kielce,0,0,,,D,1.6,3.79,5.53,1.67,4.08,6.34
+POL,11/10/2019,Lechia Gdansk,Pogon Szczecin,0,1,,,A,2.15,3.31,3.3,2.21,3.52,3.6
+POL,18/10/2019,Zaglebie,Pogon Szczecin,0,1,,,A,2.33,3.33,2.93,2.42,3.52,3.2
+POL,18/10/2019,Wisla,Piast Gliwice,1,2,,,A,2.75,3.37,2.44,2.9,3.6,2.53
+POL,19/10/2019,Korona Kielce,Wisla Plock,0,1,,,A,2.17,3.28,3.29,2.3,3.5,3.6
+POL,19/10/2019,Legia,Lech Poznan,2,1,,,H,1.92,3.4,3.89,2.05,3.62,4.5
+POL,19/10/2019,Jagiellonia,Cracovia,3,2,,,H,2.28,3.33,3.03,2.36,3.52,3.4
+POL,20/10/2019,Arka Gdynia,Lechia Gdansk,2,2,,,D,3.22,3.23,2.22,3.5,3.34,2.35
+POL,20/10/2019,Gornik Z.,LKS Lodz,1,1,,,D,2.05,3.44,3.42,2.14,3.75,3.75
+POL,21/10/2019,Rakow,Slask Wroclaw,1,0,,,H,2.56,3.13,2.76,2.75,3.4,2.93
+POL,25/10/2019,Cracovia,Pogon Szczecin,2,0,,,H,2.22,3.25,3.2,2.32,3.5,3.3
+POL,25/10/2019,Lech Poznan,Zaglebie,1,2,,,A,1.93,3.63,3.62,2.0,3.82,3.8
+POL,26/10/2019,LKS Lodz,Rakow,2,0,,,H,2.44,3.25,2.81,2.62,3.41,2.91
+POL,26/10/2019,Piast Gliwice,Korona Kielce,1,0,,,H,1.72,3.7,4.58,1.78,4.0,5.0
+POL,26/10/2019,Lechia Gdansk,Gornik Z.,1,1,,,D,1.79,3.63,4.2,1.9,3.8,4.56
+POL,27/10/2019,Wisla Plock,Jagiellonia,3,1,,,H,2.83,3.29,2.42,3.0,3.5,2.65
+POL,27/10/2019,Slask Wroclaw,Arka Gdynia,2,1,,,H,1.77,3.59,4.43,1.87,3.81,4.78
+POL,27/10/2019,Legia,Wisla,7,0,,,H,1.35,4.79,7.97,1.45,5.13,9.5
+POL,02/11/2019,Gornik Z.,Wisla,2,0,,,H,2.27,3.35,2.99,2.35,3.6,3.1
+POL,03/11/2019,Lechia Gdansk,Wisla Plock,1,1,,,D,1.69,3.61,4.98,1.74,3.75,5.5
+POL,05/11/2019,Slask Wroclaw,Wisla Plock,2,1,,,H,1.84,3.5,4.18,2.0,3.83,4.53
+POL,05/11/2019,Legnica,Gornik Z.,0,1,,,A,2.52,3.17,2.8,2.65,3.4,3.06
+POL,05/11/2019,Cracovia,Lech Poznan,1,0,,,H,1.83,3.5,4.25,1.9,3.85,4.75
+POL,08/11/2019,LKS Lodz,Piast Gliwice,0,1,,,A,2.69,3.31,2.51,2.88,3.52,2.63
+POL,08/11/2019,Cracovia,Korona Kielce,1,0,,,H,2.17,3.23,3.31,2.25,3.33,3.52
+POL,22/11/2019,Gornik Z.,Wisla Plock,2,2,,,D,2.06,3.3,3.55,2.2,3.57,3.94
+POL,22/11/2019,Lech Poznan,Piast Gliwice,3,0,,,H,2.01,3.51,3.46,2.15,3.7,3.72
+POL,23/11/2019,Korona Kielce,Rakow,3,0,,,H,2.6,3.14,2.73,2.7,3.45,2.86
+POL,23/11/2019,Pogon Szczecin,Legia,3,1,,,H,3.61,3.3,2.03,3.9,3.6,2.11
+POL,23/11/2019,Lechia Gdansk,LKS Lodz,3,1,,,H,1.66,3.87,4.82,1.73,4.09,5.27
+POL,24/11/2019,Jagiellonia,Arka Gdynia,2,0,,,H,1.73,3.7,4.46,1.79,3.88,4.8
+POL,24/11/2019,Slask Wroclaw,Wisla,2,1,,,H,1.6,3.89,5.26,1.66,4.2,5.78
+POL,25/11/2019,Cracovia,Zaglebie,2,0,,,H,2.02,3.42,3.49,2.09,3.6,3.75
+POL,29/11/2019,Zaglebie,Gornik Z.,2,0,,,H,2.16,3.46,3.14,2.26,3.68,3.55
+POL,29/11/2019,Wisla Plock,Lech Poznan,0,2,,,A,3.32,3.4,2.1,3.6,3.61,2.3
+POL,30/11/2019,Arka Gdynia,Pogon Szczecin,1,1,,,D,3.25,3.26,2.19,3.5,3.5,2.35
+POL,30/11/2019,Piast Gliwice,Slask Wroclaw,0,3,,,A,2.27,3.2,3.14,2.36,3.5,3.37
+POL,30/11/2019,Legia,Korona Kielce,4,0,,,H,1.32,5.01,9.0,1.41,5.5,10.08
+POL,05/12/2019,Piast Gliwice,Jagiellonia,2,1,,,H,1.74,3.63,4.59,1.8,3.9,5.0
+POL,05/12/2019,Legia,Pogon Szczecin,1,1,,,D,1.37,4.84,7.45,1.45,5.2,9.0
+POL,05/12/2019,Lechia Gdansk,Zaglebie,1,1,,,D,2.17,3.35,3.23,2.25,3.52,3.39
+POL,08/12/2019,Lechia Gdansk,Jagiellonia,1,1,,,D,2.13,3.33,3.32,2.23,3.48,3.5
+POL,13/12/2019,Arka Gdynia,Zaglebie,2,1,,,H,3.07,3.31,2.25,3.24,3.5,2.31
+POL,13/12/2019,Wisla,Pogon Szczecin,1,0,,,H,3.05,3.41,2.22,3.46,3.6,2.3
+POL,14/12/2019,Rakow,Gornik Z.,2,1,,,H,2.41,3.26,2.85,2.53,3.6,3.0
+POL,14/12/2019,Slask Wroclaw,Lech Poznan,1,1,,,D,2.68,3.27,2.55,2.84,3.5,2.7
+POL,14/12/2019,Legia,Wisla Plock,3,1,,,H,1.26,5.54,10.16,1.33,6.01,11.05
+POL,15/12/2019,Piast Gliwice,LKS Lodz,2,1,,,H,1.73,3.68,4.55,1.77,3.9,5.0
+POL,15/12/2019,Korona Kielce,Cracovia,1,0,,,H,2.98,3.11,2.41,3.11,3.4,2.5
+POL,15/12/2019,Jagiellonia,Lechia Gdansk,3,0,,,H,2.38,3.29,2.87,2.49,3.5,3.0
+POL,19/12/2019,LKS Lodz,Wisla,2,4,,,A,2.12,3.4,3.27,2.25,3.6,3.5
+POL,19/12/2019,Lech Poznan,Arka Gdynia,1,1,,,D,1.59,4.0,5.14,1.66,4.25,5.78
+POL,20/12/2019,Cracovia,Slask Wroclaw,2,0,,,H,2.4,3.17,2.94,2.56,3.5,3.13
+POL,20/12/2019,Pogon Szczecin,Korona Kielce,0,1,,,A,1.9,3.24,4.23,2.06,3.7,5.0
+POL,20/12/2019,Zaglebie,Legia,2,1,,,H,3.72,3.59,1.91,4.05,3.75,2.01
+POL,21/12/2019,Lechia Gdansk,Rakow,0,3,,,A,1.79,3.6,4.28,1.87,3.9,4.54
+POL,21/12/2019,Wisla Plock,Piast Gliwice,2,1,,,H,2.73,3.26,2.51,2.85,3.5,2.75
+POL,21/12/2019,Gornik Z.,Jagiellonia,3,0,,,H,2.58,3.32,2.61,2.7,3.54,2.8
+POL,03/01/2020,Korona Kielce,Lechia Gdansk,1,2,,,A,2.56,3.08,2.81,2.75,3.4,3.0
+POL,03/01/2020,Arka Gdynia,LKS Lodz,1,1,,,D,2.59,3.22,2.67,2.71,3.4,2.88
+POL,03/01/2020,Zaglebie,Slask Wroclaw,3,1,,,H,2.31,3.18,3.09,2.5,3.4,3.28
+POL,10/02/2020,Rakow,Wisla Plock,3,0,,,H,1.66,3.74,4.96,1.74,3.9,5.41
+POL,10/02/2020,Slask Wroclaw,Cracovia,3,1,,,H,2.25,3.38,3.05,2.4,3.63,3.3
+POL,11/02/2020,Warta Poznan,Legia,0,3,,,A,7.53,4.2,1.44,8.72,4.5,1.52
+POL,12/02/2020,Wisla Plock,Pogon Szczecin,0,0,,,D,3.43,3.08,2.21,3.75,3.23,2.37
+POL,14/02/2020,Gornik Z.,Arka Gdynia,2,0,,,H,1.82,3.48,4.27,1.9,3.75,4.57
+POL,14/02/2020,Lechia Gdansk,Piast Gliwice,1,0,,,H,2.79,3.14,2.54,3.09,3.4,2.89
+POL,15/02/2020,LKS Lodz,Wisla Plock,0,0,,,D,2.3,3.23,3.05,2.5,3.5,3.18
+POL,15/02/2020,Pogon Szczecin,Slask Wroclaw,0,0,,,D,2.15,3.13,3.47,2.21,3.4,3.8
+POL,15/02/2020,Rakow,Legia,2,2,,,D,4.47,3.92,1.69,5.0,4.27,1.78
+POL,16/02/2020,Jagiellonia,Korona Kielce,0,0,,,D,1.7,3.65,4.75,1.75,3.9,5.31
+POL,16/02/2020,Zaglebie,Wisla,0,1,,,A,1.95,3.46,3.72,2.05,3.78,4.07
+POL,16/02/2020,Cracovia,Lech Poznan,2,1,,,H,2.31,3.14,3.13,2.45,3.5,3.23
+POL,21/02/2020,LKS Lodz,Pogon Szczecin,0,0,,,D,3.12,3.24,2.26,3.3,3.6,2.34
+POL,21/02/2020,Slask Wroclaw,Gornik Z.,2,1,,,H,2.0,3.31,3.7,2.08,3.6,4.0
+POL,22/02/2020,Arka Gdynia,Rakow,3,2,,,H,2.59,3.17,2.7,2.69,3.5,2.95
+POL,22/02/2020,Legia,Jagiellonia,4,0,,,H,1.42,4.48,6.95,1.47,4.7,7.63
+POL,22/02/2020,Piast Gliwice,Cracovia,1,0,,,H,2.25,3.12,3.28,2.4,3.4,3.49
+POL,23/02/2020,Wisla Plock,Zaglebie,1,1,,,D,2.93,3.2,2.4,3.09,3.45,2.6
+POL,23/02/2020,Wisla,Korona Kielce,2,0,,,H,1.93,3.36,3.91,2.03,3.65,4.4
+POL,23/02/2020,Lech Poznan,Lechia Gdansk,2,0,,,H,1.67,3.84,4.73,1.75,4.09,5.09
+POL,28/02/2020,Rakow,Piast Gliwice,2,0,,,H,2.64,3.05,2.74,2.76,3.35,2.87
+POL,28/02/2020,Jagiellonia,Lech Poznan,1,1,,,D,3.28,3.35,2.15,3.64,3.6,2.3
+POL,29/02/2020,Wisla,Wisla Plock,2,2,,,D,1.77,3.57,4.42,1.88,3.75,4.76
+POL,29/02/2020,Gornik Z.,Pogon Szczecin,3,1,,,H,2.24,3.16,3.25,2.3,3.45,3.5
+POL,29/02/2020,Legia,Cracovia,2,1,,,H,1.49,4.11,6.41,1.55,4.37,7.02
+POL,03/03/2020,Lech Poznan,Gornik Z.,4,1,,,H,1.67,3.84,4.74,1.75,4.15,5.33
+POL,03/03/2020,Wisla Plock,Rakow,0,2,,,A,3.11,3.34,2.22,3.3,3.5,2.42
+POL,03/03/2020,Cracovia,Wisla,0,2,,,A,1.82,3.48,4.26,1.93,3.67,4.5
+POL,03/03/2020,Pogon Szczecin,Jagiellonia,1,2,,,A,2.14,3.2,3.43,2.24,3.5,3.65
+POL,07/03/2020,LKS Lodz,Wisla,1,2,,,A,3.71,3.54,1.93,4.1,3.75,2.05
+POL,07/03/2020,Korona Kielce,Arka Gdynia,1,1,,,D,2.17,3.29,3.26,2.4,3.43,3.54
+POL,10/03/2020,Podbeskidzie,Stal Mielec,1,0,,,H,2.31,3.44,2.89,2.41,3.7,3.16
+POL,10/03/2020,Zaglebie,Gornik Z.,2,0,,,H,2.18,3.36,3.19,2.34,3.62,3.41
+POL,03/04/2020,LKS Lodz,Zaglebie,3,2,,,H,2.84,3.21,2.45,3.0,3.4,2.6
+POL,03/04/2020,Slask Wroclaw,Korona Kielce,2,1,,,H,1.68,3.58,5.11,1.76,3.8,5.58
+POL,03/04/2020,Lechia Gdansk,Legia,0,2,,,A,4.87,3.86,1.65,5.39,4.1,1.72
+POL,03/04/2020,Piast Gliwice,Arka Gdynia,1,0,,,H,1.63,3.75,5.25,1.68,3.93,5.75
+POL,07/04/2020,Rakow,Zaglebie,1,2,,,A,2.11,3.68,3.09,2.2,3.87,3.24
+POL,07/04/2020,Lech Poznan,Legia,2,1,,,H,2.89,3.24,2.4,3.03,3.4,2.6
+POL,07/04/2020,Lechia Gdansk,Cracovia,0,3,,,A,2.39,3.34,2.83,2.47,3.5,3.15
+POL,10/04/2020,Piast Gliwice,Lech Poznan,1,4,,,A,2.9,3.39,2.33,3.03,3.56,2.47
+POL,12/04/2020,Cracovia,Wisla,1,1,,,D,2.5,3.22,2.8,2.61,3.48,3.01
+POL,06/05/2020,Korona Kielce,Piast Gliwice,1,2,,,A,3.28,3.05,2.3,3.45,3.35,2.4
+POL,06/05/2020,Gornik Z.,Lechia Gdansk,2,2,,,D,1.96,3.58,3.6,2.05,3.8,4.01
+POL,07/05/2020,Pogon Szczecin,Jagiellonia,2,2,,,D,2.38,3.23,2.92,2.6,3.48,3.09
+POL,07/05/2020,Piast Gliwice,Slask Wroclaw,1,0,,,H,1.91,3.43,3.9,2.05,3.63,4.14
+POL,12/05/2020,Jagiellonia,Warta Poznan,4,3,,,H,2.05,3.27,3.64,2.18,3.46,4.01
+POL,12/05/2020,Slask Wroclaw,Rakow,1,0,,,H,4.1,3.71,1.79,4.55,4.12,1.9
+POL,12/05/2020,Legia,Lechia Gdansk,2,0,,,H,1.54,4.0,5.82,1.6,4.26,6.5
+POL,29/05/2020,Slask Wroclaw,Rakow,1,1,,,D,2.66,3.06,2.73,2.86,3.45,3.0
+POL,29/05/2020,Pogon Szczecin,Zaglebie,0,3,,,A,2.57,3.18,2.73,2.7,3.5,2.83
+POL,30/05/2020,LKS Lodz,Gornik Z.,0,1,,,A,2.71,3.17,2.58,2.91,3.3,2.7
+POL,30/05/2020,Piast Gliwice,Wisla,4,0,,,H,1.95,3.34,3.87,2.04,3.63,4.15
+POL,30/05/2020,Lech Poznan,Legia,0,1,,,A,3.02,3.28,2.29,3.16,3.45,2.41
+POL,31/05/2020,Wisla Plock,Korona Kielce,1,4,,,A,2.55,3.07,2.85,2.7,3.35,3.45
+POL,31/05/2020,Cracovia,Jagiellonia,0,1,,,A,2.19,3.28,3.23,2.34,3.5,3.6
+POL,31/05/2020,Lechia Gdansk,Arka Gdynia,4,3,,,H,1.98,3.37,3.71,2.08,3.63,4.5
+POL,03/06/2020,Gornik Z.,Cracovia,3,2,,,H,2.06,3.4,3.42,2.27,3.63,3.7
+POL,06/06/2020,Jagiellonia,Wisla Plock,2,2,,,D,1.71,3.69,4.72,1.83,3.9,5.0
+POL,06/06/2020,Zaglebie,Lech Poznan,3,3,,,D,2.77,3.48,2.37,2.91,3.74,2.65
+POL,06/06/2020,Pogon Szczecin,Cracovia,1,0,,,H,2.54,2.97,2.95,2.72,3.21,3.11
+POL,07/06/2020,Wisla Plock,Gornik Z.,1,0,,,H,2.67,3.12,2.66,2.8,3.35,2.8
+POL,12/06/2020,Piast Gliwice,Zaglebie,1,1,,,D,1.92,3.48,3.83,2.03,3.82,4.12
+POL,12/06/2020,Lech Poznan,Podbeskidzie,4,0,,,H,1.26,5.89,9.72,1.3,6.25,11.25
+POL,14/06/2020,Arka Gdynia,Wisla,0,0,,,D,2.65,3.29,2.58,2.8,3.52,2.7
+POL,14/06/2020,Cracovia,Wisla Plock,1,1,,,D,1.72,3.66,4.66,1.85,3.97,5.03
+POL,14/06/2020,Gornik Z.,Legia,2,0,,,H,5.14,4.13,1.58,5.81,4.5,1.63
+POL,14/06/2020,Jagiellonia,Piast Gliwice,0,2,,,A,2.53,3.17,2.79,2.68,3.42,2.99
+POL,14/06/2020,Korona Kielce,Lech Poznan,0,3,,,A,4.55,3.95,1.68,4.87,4.23,1.79
+POL,14/06/2020,Pogon Szczecin,Lechia Gdansk,1,1,,,D,2.28,3.29,3.06,2.5,3.41,3.31
+POL,14/06/2020,Rakow,Zaglebie,2,1,,,H,2.19,3.49,3.06,2.38,3.72,3.3
+POL,14/06/2020,Slask Wroclaw,LKS Lodz,4,0,,,H,1.81,3.59,4.22,1.91,3.79,4.74
+POL,19/06/2020,Zaglebie,LKS Lodz,1,0,,,H,1.57,4.2,5.15,1.63,4.4,6.14
+POL,19/06/2020,Gornik Z.,Korona Kielce,3,2,,,H,1.92,3.6,3.7,2.02,3.75,4.36
+POL,20/06/2020,Wisla Plock,Arka Gdynia,0,0,,,D,1.75,3.67,4.42,1.86,4.04,4.82
+POL,20/06/2020,Piast Gliwice,Lech Poznan,0,2,,,A,2.68,3.22,2.6,2.88,3.34,2.75
+POL,20/06/2020,Rakow,Wisla,3,1,,,H,2.21,3.28,3.19,2.35,3.44,3.4
+POL,21/06/2020,Pogon Szczecin,Lechia Gdansk,0,1,,,A,2.31,3.26,3.02,2.39,3.45,3.16
+POL,21/06/2020,Cracovia,Jagiellonia,1,2,,,A,1.99,3.4,3.66,2.08,3.6,3.94
+POL,21/06/2020,Legia,Slask Wroclaw,2,0,,,H,1.28,5.37,9.58,1.32,5.73,11.93
+POL,23/06/2020,Arka Gdynia,Zaglebie,3,2,,,H,2.89,3.42,2.32,3.01,3.64,2.43
+POL,23/06/2020,Korona Kielce,Rakow,0,1,,,A,2.99,3.2,2.36,3.19,3.3,2.51
+POL,23/06/2020,LKS Lodz,Gornik Z.,1,3,,,A,2.97,3.44,2.26,3.13,3.67,2.34
+POL,23/06/2020,Wisla,Wisla Plock,1,0,,,H,1.94,3.5,3.74,2.04,3.75,3.99
+POL,24/06/2020,Lechia Gdansk,Piast Gliwice,1,0,,,H,3.38,3.31,2.12,3.61,3.5,2.23
+POL,24/06/2020,Jagiellonia,Legia,0,0,,,D,5.13,4.1,1.59,5.6,4.4,1.64
+POL,24/06/2020,Lech Poznan,Pogon Szczecin,0,0,,,D,1.48,4.15,6.47,1.53,4.43,7.0
+POL,25/06/2020,Slask Wroclaw,Cracovia,3,2,,,H,2.22,3.09,3.39,2.29,3.23,3.6
+POL,26/06/2020,Rakow,Arka Gdynia,3,2,,,H,1.74,3.62,4.55,1.84,3.8,5.0
+POL,26/06/2020,Zaglebie,Korona Kielce,2,1,,,H,1.75,3.8,4.3,1.83,4.0,4.75
+POL,27/06/2020,Wisla Plock,LKS Lodz,2,0,,,H,1.71,3.83,4.51,1.77,4.05,5.0
+POL,27/06/2020,Legia,Piast Gliwice,1,1,,,D,1.63,3.69,5.38,1.72,3.93,5.8
+POL,27/06/2020,Gornik Z.,Wisla,0,1,,,A,2.0,3.48,3.55,2.08,3.65,3.8
+POL,28/06/2020,Jagiellonia,Lechia Gdansk,1,2,,,A,2.07,3.44,3.38,2.17,3.64,3.6
+POL,28/06/2020,Slask Wroclaw,Lech Poznan,2,2,,,D,3.32,3.32,2.14,3.54,3.45,2.22
+POL,29/06/2020,Cracovia,Pogon Szczecin,2,1,,,H,2.09,3.16,3.66,2.18,3.4,4.1

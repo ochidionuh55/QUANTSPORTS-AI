@@ -1,0 +1,93 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+CHN,07/07/2024,Nantong Zhiyun,Chengdu Rongcheng,0,1,,,A,7.66,4.39,1.38,8.23,4.75,1.42
+CHN,07/07/2024,Beijing Guoan,Wuhan Three Towns,1,2,,,A,1.73,3.6,4.43,1.78,3.75,5.18
+CHN,07/07/2024,Qingdao Hainiu,Qingdao West Coast,3,1,,,H,1.97,3.55,3.43,2.1,3.7,3.8
+CHN,07/07/2024,Zhejiang Professional,Meizhou Hakka,4,0,,,H,1.21,6.64,9.98,1.23,7.03,12.0
+CHN,13/07/2024,Qingdao West Coast,Zhejiang Professional,5,2,,,H,3.45,3.9,1.91,3.75,4.1,2.03
+CHN,13/07/2024,Meizhou Hakka,Nantong Zhiyun,2,1,,,H,2.39,2.99,3.08,2.46,3.1,3.25
+CHN,13/07/2024,Shandong Taishan,Qingdao Hainiu,1,1,,,D,1.45,4.83,5.5,1.49,5.1,6.0
+CHN,13/07/2024,Shanghai Shenhua,Changchun Yatai,3,2,,,H,1.19,6.85,11.03,1.23,7.7,13.0
+CHN,13/07/2024,Shenzhen Xinpengcheng,Henan Songshan Longmen,0,0,,,D,4.98,3.23,1.76,5.7,3.41,1.9
+CHN,20/07/2024,Wuhan Three Towns,Chengdu Rongcheng,1,1,,,D,4.6,3.57,1.73,4.8,3.75,1.82
+CHN,21/07/2024,Qingdao West Coast,Meizhou Hakka,3,3,,,D,1.83,3.63,3.9,1.89,3.8,4.18
+CHN,21/07/2024,Nantong Zhiyun,Shandong Taishan,0,2,,,A,5.7,3.79,1.56,6.35,4.43,1.62
+CHN,21/07/2024,Beijing Guoan,Tianjin Jinmen Tiger,2,0,,,H,1.76,3.8,4.05,1.88,4.08,4.35
+CHN,21/07/2024,Henan Songshan Longmen,Zhejiang Professional,2,1,,,H,1.95,3.82,3.3,2.27,4.1,3.6
+CHN,21/07/2024,Shanghai Port,Qingdao Hainiu,5,0,,,H,1.06,11.44,21.77,1.09,16.1,29.0
+CHN,21/07/2024,Shenzhen Xinpengcheng,Changchun Yatai,2,1,,,H,2.9,3.28,2.35,3.22,3.47,2.71
+CHN,22/07/2024,Cangzhou,Shanghai Shenhua,0,5,,,A,10.77,5.64,1.24,12.0,6.0,1.26
+CHN,26/07/2024,Shanghai Port,Nantong Zhiyun,8,1,,,H,1.04,14.14,26.62,1.05,19.45,41.0
+CHN,26/07/2024,Shenzhen Xinpengcheng,Beijing Guoan,1,0,,,H,3.34,3.21,2.13,3.47,3.34,2.21
+CHN,27/07/2024,Changchun Yatai,Cangzhou,1,0,,,H,1.35,4.83,7.68,1.39,5.2,9.0
+CHN,27/07/2024,Tianjin Jinmen Tiger,Qingdao West Coast,2,1,,,H,1.51,4.49,5.16,1.63,4.84,5.86
+CHN,28/07/2024,Qingdao Hainiu,Meizhou Hakka,4,2,,,H,2.18,3.53,2.96,2.3,3.65,3.25
+CHN,28/07/2024,Zhejiang Professional,Chengdu Rongcheng,1,3,,,A,2.97,3.96,2.05,3.18,4.22,2.16
+CHN,28/07/2024,Henan Songshan Longmen,Shandong Taishan,1,0,,,H,2.21,3.17,3.23,2.3,3.3,3.4
+CHN,29/07/2024,Wuhan Three Towns,Shanghai Shenhua,0,2,,,A,5.65,4.35,1.5,6.2,4.5,1.54
+CHN,03/08/2024,Qingdao Hainiu,Changchun Yatai,0,1,,,A,2.28,3.45,2.87,2.37,3.69,3.07
+CHN,03/08/2024,Shanghai Shenhua,Qingdao West Coast,2,0,,,H,1.24,5.62,11.27,1.28,6.58,13.0
+CHN,16/08/2024,Henan Songshan Longmen,Cangzhou,0,2,,,A,2.68,3.27,2.51,2.84,3.46,2.64
+CHN,16/08/2024,Tianjin Jinmen Tiger,Wuhan Three Towns,1,0,,,H,1.98,3.57,3.45,2.17,3.73,3.8
+CHN,16/08/2024,Beijing Guoan,Zhejiang Professional,0,0,,,D,1.74,4.33,3.67,1.86,4.6,4.2
+CHN,16/08/2024,Nantong Zhiyun,Qingdao West Coast,0,3,,,A,2.1,3.47,3.18,2.16,3.6,3.42
+CHN,17/08/2024,Qingdao Hainiu,Shenzhen Xinpengcheng,1,0,,,H,2.5,3.32,2.65,2.62,3.45,2.71
+CHN,17/08/2024,Meizhou Hakka,Changchun Yatai,2,1,,,H,2.04,3.73,3.13,2.1,3.9,3.29
+CHN,17/08/2024,Shanghai Shenhua,Shanghai Port,3,1,,,H,3.39,3.83,1.91,3.61,4.05,1.99
+CHN,17/08/2024,Shandong Taishan,Chengdu Rongcheng,3,0,,,H,6.75,4.61,1.4,7.6,4.95,1.46
+CHN,03/09/2024,Henan Songshan Longmen,Meizhou Hakka,2,2,,,D,1.69,3.76,4.58,1.74,4.0,5.0
+CHN,03/09/2024,Shandong Taishan,Beijing Guoan,0,0,,,D,2.85,3.34,2.34,3.1,3.6,2.41
+CHN,03/09/2024,Zhejiang Professional,Shanghai Port,0,0,,,D,2.5,3.54,2.54,2.74,3.75,2.67
+CHN,03/09/2024,Nantong Zhiyun,Wuhan Three Towns,1,3,,,A,2.71,3.38,2.44,2.93,3.5,2.63
+CHN,04/09/2024,Nantong Zhiyun,Shanghai Port,0,3,,,A,6.23,4.55,1.43,6.8,4.94,1.47
+CHN,04/09/2024,Beijing Guoan,Shenzhen Xinpengcheng,1,2,,,A,1.76,3.57,4.4,1.89,3.91,4.9
+CHN,04/09/2024,Shandong Taishan,Henan Songshan Longmen,2,2,,,D,1.5,4.49,5.42,1.54,5.0,5.8
+CHN,04/09/2024,Shanghai Shenhua,Wuhan Three Towns,4,1,,,H,1.39,4.62,6.97,1.47,4.9,7.8
+CHN,08/09/2024,Cangzhou,Shandong Taishan,3,1,,,H,4.08,3.48,1.84,4.43,3.66,1.91
+CHN,08/09/2024,Shanghai Port,Meizhou Hakka,7,2,,,H,1.02,16.06,37.96,1.03,23.0,71.0
+CHN,08/09/2024,Shenzhen Xinpengcheng,Chengdu Rongcheng,0,3,,,A,6.06,4.11,1.49,7.0,4.33,1.53
+CHN,13/09/2024,Shanghai Port,Shenzhen Xinpengcheng,2,0,,,H,1.07,10.6,21.85,1.09,12.0,26.0
+CHN,13/09/2024,Zhejiang Professional,Shanghai Shenhua,3,4,,,A,2.71,3.66,2.29,2.88,3.79,2.38
+CHN,13/09/2024,Shandong Taishan,Qingdao West Coast,0,1,,,A,1.9,3.68,3.58,2.1,3.9,3.95
+CHN,14/09/2024,Changchun Yatai,Nantong Zhiyun,3,2,,,H,1.69,3.67,4.72,1.75,3.8,5.32
+CHN,14/09/2024,Chengdu Rongcheng,Beijing Guoan,2,2,,,D,1.32,5.11,7.87,1.35,5.5,8.5
+CHN,14/09/2024,Tianjin Jinmen Tiger,Henan Songshan Longmen,1,0,,,H,2.31,3.21,2.99,2.44,3.4,3.25
+CHN,14/09/2024,Cangzhou,Meizhou Hakka,2,1,,,H,2.82,3.32,2.37,2.95,3.45,2.46
+CHN,15/09/2024,Qingdao Hainiu,Wuhan Three Towns,1,1,,,D,3.22,3.29,2.16,3.5,3.5,2.25
+CHN,20/09/2024,Meizhou Hakka,Beijing Guoan,1,3,,,A,2.73,3.55,2.33,2.94,3.7,2.43
+CHN,21/09/2024,Changchun Yatai,Shanghai Port,3,4,,,A,11.11,7.3,1.18,13.0,8.1,1.24
+CHN,21/09/2024,Henan Songshan Longmen,Chengdu Rongcheng,2,0,,,H,5.08,3.96,1.6,5.5,4.2,1.7
+CHN,21/09/2024,Shandong Taishan,Wuhan Three Towns,0,0,,,D,2.65,3.5,2.42,2.71,3.64,2.87
+CHN,21/09/2024,Shanghai Shenhua,Tianjin Jinmen Tiger,2,1,,,H,1.18,6.77,11.82,1.23,7.5,14.36
+CHN,22/09/2024,Qingdao West Coast,Shenzhen Xinpengcheng,3,2,,,H,2.46,3.39,2.66,2.88,3.5,2.78
+CHN,22/09/2024,Nantong Zhiyun,Qingdao Hainiu,2,1,,,H,2.17,3.36,3.12,2.3,3.45,3.28
+CHN,22/09/2024,Zhejiang Professional,Cangzhou,2,2,,,D,1.45,4.73,5.63,1.6,5.01,6.25
+CHN,28/09/2024,Qingdao Hainiu,Shanghai Shenhua,0,1,,,A,8.5,5.6,1.28,9.7,6.26,1.33
+CHN,28/09/2024,Shanghai Port,Qingdao West Coast,2,1,,,H,1.13,9.05,13.13,1.14,10.5,17.0
+CHN,28/09/2024,Beijing Guoan,Changchun Yatai,8,1,,,H,1.58,3.96,5.2,1.62,4.29,5.7
+CHN,28/09/2024,Nantong Zhiyun,Zhejiang Professional,3,2,,,H,3.16,3.87,1.99,3.38,4.1,2.11
+CHN,28/09/2024,Shenzhen Xinpengcheng,Shandong Taishan,1,4,,,A,2.03,3.34,3.47,2.1,3.6,3.66
+CHN,29/09/2024,Chengdu Rongcheng,Meizhou Hakka,2,0,,,H,1.21,6.58,9.98,1.23,7.0,11.0
+CHN,29/09/2024,Tianjin Jinmen Tiger,Cangzhou,3,2,,,H,1.55,4.06,5.24,1.59,4.33,5.53
+CHN,29/09/2024,Wuhan Three Towns,Henan Songshan Longmen,1,0,,,H,1.88,3.44,3.92,1.94,3.6,4.15
+CHN,03/10/2024,Cangzhou,Chengdu Rongcheng,1,0,,,H,4.12,3.52,1.81,4.5,3.6,1.89
+CHN,03/10/2024,Shenzhen Xinpengcheng,Tianjin Jinmen Tiger,0,4,,,A,3.07,3.13,2.32,3.25,3.4,2.54
+CHN,04/10/2024,Qingdao West Coast,Tianjin Jinmen Tiger,1,3,,,A,3.48,3.45,2.01,3.91,3.6,2.1
+CHN,04/10/2024,Cangzhou,Changchun Yatai,2,0,,,H,2.0,3.47,3.47,2.09,3.65,3.75
+CHN,04/10/2024,Chengdu Rongcheng,Zhejiang Professional,3,0,,,H,1.66,3.88,4.59,1.74,4.05,5.2
+CHN,04/10/2024,Meizhou Hakka,Qingdao Hainiu,0,0,,,D,3.13,3.04,2.32,3.35,3.2,2.4
+CHN,05/10/2024,Qingdao Hainiu,Nantong Zhiyun,2,2,,,D,2.23,3.07,3.28,2.41,3.25,3.51
+CHN,05/10/2024,Chengdu Rongcheng,Henan Songshan Longmen,4,2,,,H,1.46,4.37,6.09,1.53,4.98,7.55
+CHN,05/10/2024,Shanghai Port,Changchun Yatai,5,2,,,H,1.12,8.59,15.39,1.16,10.0,19.0
+CHN,08/10/2024,Qingdao Hainiu,Henan Songshan Longmen,0,2,,,A,1.72,3.81,4.27,1.79,4.17,4.5
+CHN,08/10/2024,Changchun Yatai,Wuhan Three Towns,2,0,,,H,2.36,3.41,2.78,2.46,3.7,2.9
+CHN,08/10/2024,Shanghai Shenhua,Nantong Zhiyun,5,1,,,H,1.09,9.24,19.66,1.12,12.16,29.05
+CHN,05/11/2024,Tianjin Jinmen Tiger,Shanghai Shenhua,0,0,,,D,5.27,4.08,1.56,6.08,4.4,1.65
+CHN,05/11/2024,Wuhan Three Towns,Shandong Taishan,1,2,,,A,3.72,3.16,2.04,4.28,3.6,2.2
+CHN,05/11/2024,Beijing Guoan,Meizhou Hakka,3,2,,,H,1.23,5.75,11.16,1.28,6.3,12.45
+CHN,08/11/2024,Qingdao West Coast,Beijing Guoan,2,2,,,D,3.32,3.6,2.01,3.67,4.0,2.12
+CHN,08/11/2024,Tianjin Jinmen Tiger,Zhejiang Professional,3,2,,,H,3.01,3.91,2.06,3.25,4.12,3.25
+CHN,05/12/2024,Cangzhou,Zhejiang Professional,0,1,,,A,4.11,4.14,1.68,4.5,4.41,1.9
+CHN,05/12/2024,Shenzhen Xinpengcheng,Qingdao West Coast,1,2,,,A,2.14,3.49,3.1,2.2,3.65,3.76
+CHN,07/12/2024,Cangzhou,Wuhan Three Towns,1,1,,,D,2.98,3.52,2.2,3.28,3.68,2.38
+CHN,07/12/2024,Shanghai Port,Beijing Guoan,5,1,,,H,1.28,6.03,7.87,1.3,6.6,9.0
+CHN,07/12/2024,Chengdu Rongcheng,Tianjin Jinmen Tiger,2,1,,,H,1.27,5.66,8.67,1.32,6.0,9.6

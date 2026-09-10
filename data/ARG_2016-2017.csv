@@ -1,0 +1,457 @@
+Div,Date,HomeTeam,AwayTeam,FTHG,FTAG,HTHG,HTAG,FTR,AvgCH,AvgCD,AvgCA,MaxCH,MaxCD,MaxCA
+ARG,02/07/2016,Temperley,Boca Juniors,0,0,,,D,6.25,3.52,1.59,7.42,3.82,1.77
+ARG,02/07/2016,Defensa y Justicia,Union de Santa Fe,2,2,,,D,2.09,3.08,3.67,2.16,3.23,4.12
+ARG,02/07/2016,Independiente,Belgrano,1,0,,,H,1.89,3.14,4.4,2.05,3.28,5.09
+ARG,02/07/2016,Colon Santa FE,Arsenal Sarandi,2,1,,,H,1.98,3.08,4.12,2.15,3.25,4.74
+ARG,03/07/2016,Union de Santa Fe,Racing Club,3,6,,,A,2.47,3.01,2.97,2.8,3.15,3.23
+ARG,03/07/2016,Tigre,Atl. Tucuman,5,0,,,H,3.18,3.04,2.33,3.54,3.3,2.5
+ARG,05/07/2016,Quilmes,Godoy Cruz,1,3,,,A,3.25,3.11,2.26,3.56,3.28,2.4
+ARG,05/07/2016,Newells Old Boys,Defensa y Justicia,0,1,,,A,2.4,3.0,3.08,2.58,3.18,3.4
+ARG,05/07/2016,San Martin S.J.,Temperley,2,0,,,H,2.07,3.08,3.77,2.26,3.2,4.15
+ARG,05/07/2016,Velez Sarsfield,Colon Santa FE,2,0,,,H,2.22,3.06,3.37,2.38,3.2,3.9
+ARG,05/07/2016,San Lorenzo,River Plate,2,1,,,H,1.9,3.23,4.24,1.95,3.41,5.1
+ARG,11/07/2016,Aldosivi,Defensa y Justicia,0,0,,,D,2.87,2.94,2.59,3.09,3.12,2.81
+ARG,02/08/2016,Atl. Tucuman,Racing Club,2,1,,,H,2.6,2.96,2.84,3.0,3.14,3.03
+ARG,02/08/2016,Estudiantes L.P.,Lanus,0,1,,,A,2.6,2.9,2.88,2.73,3.1,3.1
+ARG,02/08/2016,River Plate,Quilmes,5,1,,,H,1.42,3.97,8.68,1.45,4.33,10.26
+ARG,03/08/2016,Godoy Cruz,Patronato,3,1,,,H,1.89,3.25,4.25,2.0,3.45,4.95
+ARG,05/08/2016,Racing Club,Estudiantes L.P.,0,0,,,D,2.61,3.03,2.78,2.82,3.25,3.0
+ARG,05/08/2016,Arsenal Sarandi,Rosario Central,1,0,,,H,2.14,3.1,3.56,2.29,3.25,4.15
+ARG,05/08/2016,Lanus,Aldosivi,2,0,,,H,1.47,4.06,6.98,1.51,4.6,8.8
+ARG,05/08/2016,Atl. Tucuman,Belgrano,2,1,,,H,1.8,3.33,4.63,1.87,3.74,5.5
+ARG,05/08/2016,Boca Juniors,Huracan,0,0,,,D,2.07,3.18,3.65,2.18,3.33,3.93
+ARG,26/08/2016,Sarmiento Junin,Arsenal Sarandi,1,0,,,H,2.33,2.99,3.23,2.48,3.12,3.6
+ARG,27/08/2016,Godoy Cruz,Huracan,1,0,,,H,2.19,3.08,3.42,2.3,3.32,3.77
+ARG,27/08/2016,Gimnasia L.P.,Velez Sarsfield,2,0,,,H,1.96,3.16,4.06,2.07,3.3,4.72
+ARG,27/08/2016,Rosario Central,Defensa y Justicia,0,0,,,D,1.8,3.34,4.56,1.95,3.55,5.3
+ARG,27/08/2016,Racing Club,Talleres Cordoba,1,1,,,D,1.64,3.54,5.62,1.8,3.87,6.54
+ARG,27/08/2016,Atl. Tucuman,Atl. Rafaela,1,0,,,H,1.53,3.82,6.51,1.65,4.24,7.95
+ARG,28/08/2016,San Lorenzo,San Martin S.J.,2,2,,,D,1.53,3.83,6.45,1.7,4.23,7.93
+ARG,28/08/2016,Tigre,Estudiantes L.P.,0,3,,,A,2.6,2.91,2.89,2.82,3.1,3.08
+ARG,28/08/2016,Quilmes,Newells Old Boys,0,1,,,A,3.27,3.04,2.28,3.52,3.23,2.45
+ARG,28/08/2016,Belgrano,Independiente,0,1,,,A,3.3,2.89,2.36,3.57,3.05,2.6
+ARG,28/08/2016,Union de Santa Fe,Olimpo Bahia Blanca,1,0,,,H,2.14,3.1,3.54,2.28,3.32,4.0
+ARG,28/08/2016,River Plate,Banfield,4,1,,,H,1.63,3.55,5.69,1.68,3.82,6.5
+ARG,29/08/2016,Lanus,Boca Juniors,1,0,,,H,2.47,3.01,2.98,2.65,3.16,3.18
+ARG,29/08/2016,Aldosivi,Colon Santa FE,0,2,,,A,2.32,3.05,3.17,2.43,3.2,3.42
+ARG,30/08/2016,Temperley,Patronato,1,0,,,H,2.49,2.85,3.12,2.65,3.0,3.42
+ARG,02/09/2016,Sarmiento Junin,Velez Sarsfield,1,0,,,H,2.26,2.93,3.42,2.38,3.06,3.8
+ARG,04/09/2016,Colon Santa FE,Patronato,2,2,,,D,2.11,3.2,3.51,2.19,3.39,3.9
+ARG,04/09/2016,Godoy Cruz,San Lorenzo,0,1,,,A,2.58,3.14,2.72,2.81,3.31,3.0
+ARG,04/09/2016,Huracan,San Martin S.J.,4,3,,,H,2.06,3.23,3.61,2.16,3.42,4.08
+ARG,04/09/2016,Defensa y Justicia,Temperley,2,1,,,H,1.61,3.57,5.84,1.7,3.78,7.13
+ARG,04/09/2016,River Plate,Sarmiento Junin,2,2,,,D,1.57,3.7,6.09,1.63,4.0,7.0
+ARG,05/09/2016,Atl. Rafaela,Tigre,0,0,,,D,2.54,3.08,2.81,2.82,3.25,3.0
+ARG,05/09/2016,Gimnasia L.P.,Independiente,3,3,,,D,2.48,2.95,3.01,2.65,3.2,3.22
+ARG,05/09/2016,Olimpo Bahia Blanca,Banfield,1,1,,,D,2.3,3.01,3.27,2.51,3.17,3.48
+ARG,09/09/2016,Patronato,Gimnasia L.P.,0,1,,,A,2.62,2.94,2.85,2.78,3.1,3.15
+ARG,11/09/2016,Atl. Tucuman,Union de Santa Fe,1,1,,,D,1.95,3.18,4.17,2.01,3.37,4.64
+ARG,12/09/2016,Aldosivi,Patronato,1,1,,,D,2.27,3.01,3.33,2.4,3.15,3.69
+ARG,12/09/2016,Sarmiento Junin,Tigre,2,0,,,H,2.62,3.01,2.77,2.85,3.22,2.98
+ARG,13/09/2016,Atl. Rafaela,Temperley,1,0,,,H,2.33,2.95,3.28,2.48,3.09,3.54
+ARG,17/09/2016,Colon Santa FE,Talleres Cordoba,1,0,,,H,2.12,2.99,3.72,2.27,3.2,4.2
+ARG,17/09/2016,Lanus,Union de Santa Fe,0,1,,,A,1.64,3.48,5.63,1.76,3.76,6.34
+ARG,17/09/2016,San Lorenzo,Velez Sarsfield,2,1,,,H,1.73,3.37,4.95,1.82,3.62,5.75
+ARG,17/09/2016,Rosario Central,Patronato,2,1,,,H,1.59,3.51,6.28,1.64,3.78,7.13
+ARG,17/09/2016,Aldosivi,Banfield,1,3,,,A,2.34,3.11,3.07,2.45,3.3,3.37
+ARG,17/09/2016,Quilmes,Independiente,1,1,,,D,3.64,3.1,2.1,4.16,3.23,2.25
+ARG,18/09/2016,Sarmiento Junin,Newells Old Boys,1,1,,,D,2.88,2.9,2.62,3.14,3.1,2.78
+ARG,18/09/2016,Atl. Tucuman,Estudiantes L.P.,0,2,,,A,2.51,2.88,3.04,2.74,3.04,3.22
+ARG,18/09/2016,Temperley,Arsenal Sarandi,1,1,,,D,2.35,2.9,3.28,2.5,3.11,3.68
+ARG,18/09/2016,Belgrano,Olimpo Bahia Blanca,0,0,,,D,2.42,2.89,3.17,2.56,3.06,3.42
+ARG,18/09/2016,Godoy Cruz,Boca Juniors,1,1,,,D,3.07,2.98,2.42,3.35,3.12,2.56
+ARG,18/09/2016,River Plate,San Martin S.J.,1,1,,,D,1.36,4.42,9.01,1.44,4.92,11.5
+ARG,19/09/2016,Racing Club,Defensa y Justicia,1,1,,,D,1.8,3.3,4.66,1.87,3.57,5.35
+ARG,19/09/2016,Tigre,Huracan,1,1,,,D,2.38,3.02,3.09,2.52,3.22,3.39
+ARG,20/09/2016,Gimnasia L.P.,Atl. Rafaela,0,1,,,A,1.64,3.52,5.59,1.72,3.75,6.55
+ARG,24/09/2016,Olimpo Bahia Blanca,Godoy Cruz,3,0,,,H,2.26,2.93,3.44,2.37,3.1,3.75
+ARG,24/09/2016,Newells Old Boys,Atl. Tucuman,3,1,,,H,2.11,3.05,3.7,2.21,3.2,4.2
+ARG,24/09/2016,Atl. Rafaela,Rosario Central,0,0,,,D,3.8,3.13,2.04,4.26,3.32,2.15
+ARG,24/09/2016,Velez Sarsfield,Racing Club,0,3,,,A,3.15,3.01,2.35,3.46,3.24,2.6
+ARG,25/09/2016,Independiente,Tigre,1,1,,,D,1.76,3.41,4.68,2.0,3.77,5.25
+ARG,25/09/2016,Huracan,Sarmiento Junin,0,0,,,D,2.03,3.05,3.91,2.14,3.2,4.4
+ARG,25/09/2016,Estudiantes L.P.,Temperley,3,0,,,H,1.54,3.59,6.86,1.62,3.9,8.0
+ARG,25/09/2016,Union de Santa Fe,Belgrano,0,2,,,A,1.82,3.18,4.77,1.94,3.38,5.25
+ARG,25/09/2016,Talleres Cordoba,Banfield,0,0,,,D,2.19,3.0,3.52,2.35,3.15,3.87
+ARG,25/09/2016,Patronato,San Lorenzo,1,1,,,D,2.53,3.01,2.88,2.75,3.2,3.03
+ARG,25/09/2016,Boca Juniors,Quilmes,4,1,,,H,1.39,4.36,8.26,1.44,4.76,10.0
+ARG,25/09/2016,Lanus,Aldosivi,0,0,,,D,1.65,3.48,5.69,1.76,3.8,7.53
+ARG,26/09/2016,Defensa y Justicia,River Plate,3,3,,,D,3.13,3.07,2.33,3.48,3.22,2.47
+ARG,26/09/2016,Arsenal Sarandi,Gimnasia L.P.,2,2,,,D,2.86,2.94,2.6,3.08,3.12,2.76
+ARG,27/09/2016,San Martin S.J.,Colon Santa FE,0,0,,,D,2.25,3.04,3.34,2.38,3.19,3.58
+ARG,30/09/2016,Quilmes,Olimpo Bahia Blanca,2,1,,,H,2.74,2.82,2.82,2.98,3.0,3.0
+ARG,04/10/2016,Independiente,Olimpo Bahia Blanca,0,0,,,D,1.64,3.55,5.54,1.7,3.86,7.3
+ARG,04/10/2016,Banfield,Lanus,0,2,,,A,3.1,3.11,2.33,3.45,3.4,2.45
+ARG,04/10/2016,Argentinos Jrs,Newells Old Boys,0,0,,,D,2.69,3.08,2.66,2.93,3.24,2.95
+ARG,04/10/2016,Aldosivi,Racing Club,2,1,,,H,3.02,3.21,2.32,3.24,3.44,2.44
+ARG,04/10/2016,Rosario Central,Velez Sarsfield,2,3,,,A,1.53,3.75,6.61,1.57,4.1,7.58
+ARG,05/10/2016,Sarmiento Junin,Patronato,1,0,,,H,2.17,3.07,3.47,2.26,3.38,3.96
+ARG,09/10/2016,Huracan,Quilmes,1,1,,,D,1.75,3.52,4.67,1.8,3.77,5.42
+ARG,09/10/2016,Olimpo Bahia Blanca,Lanus,0,0,,,D,3.15,2.92,2.42,3.44,3.06,2.56
+ARG,09/10/2016,Banfield,Colon Santa FE,0,0,,,D,3.09,2.99,2.42,3.32,3.14,2.56
+ARG,09/10/2016,San Martin S.J.,Racing Club,0,2,,,A,2.81,3.04,2.58,2.98,3.18,2.74
+ARG,09/10/2016,Union de Santa Fe,Aldosivi,0,0,,,D,1.98,3.16,3.97,2.05,3.3,4.5
+ARG,09/10/2016,Defensa y Justicia,San Lorenzo,0,2,,,A,2.44,3.01,3.02,2.66,3.15,3.2
+ARG,12/10/2016,Temperley,Godoy Cruz,1,0,,,H,2.43,2.99,3.04,2.61,3.12,3.46
+ARG,12/10/2016,San Lorenzo,Union de Santa Fe,3,2,,,H,1.7,3.52,4.99,1.78,3.75,5.5
+ARG,12/10/2016,Talleres Cordoba,Newells Old Boys,1,1,,,D,2.14,3.02,3.63,2.4,3.18,4.08
+ARG,12/10/2016,Velez Sarsfield,Atl. Rafaela,2,0,,,H,2.17,3.05,3.53,2.34,3.18,4.08
+ARG,12/10/2016,Gimnasia L.P.,Belgrano,1,1,,,D,2.16,2.92,3.71,2.26,3.05,4.25
+ARG,12/10/2016,Racing Club,Olimpo Bahia Blanca,0,2,,,A,1.59,3.56,6.22,1.65,3.87,7.8
+ARG,14/10/2016,Defensa y Justicia,Banfield,1,0,,,H,2.13,3.13,3.51,2.4,3.28,4.0
+ARG,15/10/2016,Belgrano,Aldosivi,0,0,,,D,1.91,3.11,4.38,2.0,3.27,4.99
+ARG,15/10/2016,Velez Sarsfield,Colon Santa FE,2,1,,,H,2.33,2.93,3.29,2.48,3.07,3.62
+ARG,15/10/2016,Atl. Rafaela,Racing Club,3,2,,,H,3.42,3.13,2.16,3.9,3.3,2.3
+ARG,15/10/2016,Huracan,Temperley,1,2,,,A,1.94,3.08,4.28,2.04,3.2,5.25
+ARG,15/10/2016,Estudiantes L.P.,Rosario Central,3,2,,,H,2.41,2.9,3.18,2.67,3.05,3.7
+ARG,15/10/2016,San Martin S.J.,Talleres Cordoba,1,3,,,A,2.4,2.9,3.2,2.54,3.05,3.5
+ARG,16/10/2016,Independiente,Atl. Tucuman,0,2,,,A,1.56,3.65,6.34,1.66,4.02,8.1
+ARG,16/10/2016,Lanus,Godoy Cruz,3,0,,,H,1.54,3.71,6.57,1.74,4.03,8.32
+ARG,16/10/2016,Boca Juniors,Sarmiento Junin,2,0,,,H,1.4,4.19,8.71,1.44,4.65,11.5
+ARG,16/10/2016,Olimpo Bahia Blanca,Tigre,1,4,,,A,2.24,2.96,3.45,2.37,3.12,3.77
+ARG,16/10/2016,Newells Old Boys,Gimnasia L.P.,1,0,,,H,2.15,2.99,3.64,2.25,3.1,4.15
+ARG,16/10/2016,Arsenal Sarandi,San Lorenzo,1,3,,,A,4.1,3.23,1.92,4.65,3.47,2.15
+ARG,17/10/2016,Patronato,River Plate,2,1,,,H,4.55,3.36,1.8,5.5,3.62,1.95
+ARG,18/10/2016,Union de Santa Fe,Quilmes,1,1,,,D,1.7,3.52,4.95,1.79,3.72,5.95
+ARG,21/10/2016,Sarmiento Junin,Olimpo Bahia Blanca,1,1,,,D,2.4,2.84,3.27,2.5,3.0,3.64
+ARG,22/10/2016,Talleres Cordoba,Defensa y Justicia,2,0,,,H,2.43,2.86,3.18,2.63,3.0,3.47
+ARG,22/10/2016,Quilmes,Lanus,1,0,,,H,4.39,3.18,1.88,5.0,3.32,1.95
+ARG,22/10/2016,Godoy Cruz,Belgrano,2,0,,,H,2.38,2.94,3.18,2.58,3.1,3.44
+ARG,22/10/2016,Temperley,Independiente,0,1,,,A,4.05,2.95,2.05,4.65,3.15,2.14
+ARG,22/10/2016,Colon Santa FE,Patronato,0,1,,,A,2.24,2.96,3.45,2.4,3.1,3.8
+ARG,22/10/2016,Racing Club,Arsenal Sarandi,1,0,,,H,1.48,3.87,7.08,1.53,4.12,8.89
+ARG,23/10/2016,River Plate,Atl. Rafaela,1,0,,,H,1.4,4.26,8.06,1.46,4.76,9.71
+ARG,23/10/2016,Gimnasia L.P.,Huracan,1,0,,,H,2.01,3.07,3.98,2.1,3.2,4.46
+ARG,23/10/2016,Banfield,Velez Sarsfield,1,0,,,H,2.07,3.14,3.67,2.16,3.3,4.14
+ARG,23/10/2016,Rosario Central,Newells Old Boys,0,1,,,A,1.97,3.09,4.14,2.07,3.22,4.67
+ARG,23/10/2016,Tigre,Union de Santa Fe,3,1,,,H,1.7,3.51,4.99,1.8,3.85,5.81
+ARG,23/10/2016,San Lorenzo,Estudiantes L.P.,1,2,,,A,2.13,3.11,3.54,2.33,3.32,4.05
+ARG,24/10/2016,Atl. Tucuman,Boca Juniors,2,2,,,D,3.35,3.09,2.21,3.68,3.27,2.37
+ARG,25/10/2016,Aldosivi,San Martin S.J.,1,2,,,A,2.07,3.13,3.68,2.15,3.27,4.2
+ARG,28/10/2016,Olimpo Bahia Blanca,Atl. Tucuman,2,1,,,H,2.24,2.98,3.43,2.36,3.1,3.77
+ARG,29/10/2016,Patronato,Banfield,2,0,,,H,2.43,2.88,3.17,2.6,3.0,3.5
+ARG,29/10/2016,Velez Sarsfield,Talleres Cordoba,0,2,,,A,2.41,2.91,3.15,2.62,3.02,3.4
+ARG,29/10/2016,Belgrano,Quilmes,0,0,,,D,1.7,3.28,5.55,1.76,3.45,6.6
+ARG,29/10/2016,Boca Juniors,Temperley,4,0,,,H,1.4,4.11,8.59,1.44,4.55,11.0
+ARG,29/10/2016,Independiente,Gimnasia L.P.,0,0,,,D,1.72,3.35,5.18,1.8,3.5,6.0
+ARG,29/10/2016,Huracan,Rosario Central,1,1,,,D,2.46,2.95,3.01,2.64,3.12,3.32
+ARG,30/10/2016,Estudiantes L.P.,Racing Club,2,1,,,H,2.18,3.0,3.54,2.27,3.2,3.98
+ARG,30/10/2016,Lanus,Tigre,1,1,,,D,1.79,3.42,4.5,1.85,3.65,5.25
+ARG,30/10/2016,Godoy Cruz,Aldosivi,3,1,,,H,2.02,3.18,3.78,2.12,3.35,4.33
+ARG,30/10/2016,Newells Old Boys,San Lorenzo,2,2,,,D,1.93,3.17,4.12,2.04,3.32,4.85
+ARG,30/10/2016,Atl. Rafaela,Colon Santa FE,0,2,,,A,2.16,3.01,3.6,2.28,3.17,4.1
+ARG,30/10/2016,Arsenal Sarandi,River Plate,2,2,,,D,5.03,3.44,1.71,6.0,3.72,1.8
+ARG,31/10/2016,Defensa y Justicia,San Martin S.J.,0,0,,,D,1.83,3.32,4.44,1.91,3.5,5.1
+ARG,03/11/2016,Racing Club,Lanus,2,1,,,H,2.37,3.04,3.1,2.53,3.3,3.58
+ARG,04/11/2016,Belgrano,Gimnasia L.P.,3,0,,,H,2.43,3.06,2.97,2.58,3.23,3.2
+ARG,04/11/2016,Tigre,Boca Juniors,2,0,,,H,3.18,3.17,2.25,3.52,3.31,2.45
+ARG,04/11/2016,Atl. Rafaela,Union de Santa Fe,1,1,,,D,2.57,3.17,2.71,2.72,3.38,2.88
+ARG,04/11/2016,Quilmes,Arsenal Sarandi,1,4,,,A,2.23,3.15,3.24,2.34,3.36,3.5
+ARG,09/11/2016,Independiente,Godoy Cruz,2,0,,,H,1.65,3.52,5.5,1.73,3.84,6.47
+ARG,09/11/2016,Newells Old Boys,Tigre,1,0,,,H,1.93,3.19,4.16,2.0,3.37,4.86
+ARG,09/11/2016,Velez Sarsfield,Rosario Central,2,0,,,H,3.33,3.02,2.27,3.67,3.18,2.38
+ARG,09/11/2016,Estudiantes L.P.,Sarmiento Junin,1,0,,,H,1.65,3.37,5.94,1.77,3.75,7.0
+ARG,09/11/2016,Boca Juniors,Belgrano,3,0,,,H,1.5,3.75,7.34,1.57,4.0,8.92
+ARG,12/11/2016,River Plate,Boca Juniors,2,4,,,A,2.63,2.96,2.82,2.79,3.1,3.07
+ARG,12/11/2016,Banfield,Huracan,1,0,,,H,1.98,3.13,3.98,2.06,3.34,4.46
+ARG,12/11/2016,San Martin S.J.,Estudiantes L.P.,3,2,,,H,3.58,3.04,2.15,4.06,3.17,2.28
+ARG,12/11/2016,Colon Santa FE,Independiente,0,2,,,A,3.06,2.94,2.45,3.32,3.09,2.62
+ARG,12/11/2016,Rosario Central,Lanus,1,2,,,A,3.72,3.03,2.11,4.1,3.2,2.22
+ARG,13/11/2016,Velez Sarsfield,Defensa y Justicia,2,1,,,H,2.98,2.92,2.54,3.22,3.03,2.75
+ARG,19/11/2016,Arsenal Sarandi,Banfield,1,3,,,A,2.93,2.94,2.53,3.3,3.12,2.87
+ARG,19/11/2016,Estudiantes L.P.,Colon Santa FE,1,0,,,H,1.59,3.52,6.28,1.66,3.92,7.73
+ARG,19/11/2016,Godoy Cruz,Tigre,2,1,,,H,2.28,3.09,3.2,2.45,3.25,3.47
+ARG,19/11/2016,Lanus,Atl. Tucuman,1,0,,,H,1.62,3.63,5.61,1.7,3.86,6.7
+ARG,19/11/2016,Union de Santa Fe,Temperley,2,1,,,H,1.99,3.04,4.13,2.11,3.2,4.85
+ARG,19/11/2016,Huracan,Racing Club,1,1,,,D,3.32,3.09,2.22,3.66,3.25,2.35
+ARG,20/11/2016,Belgrano,Sarmiento Junin,1,2,,,A,1.76,3.25,5.1,1.85,3.45,5.85
+ARG,20/11/2016,Independiente,San Lorenzo,1,2,,,A,1.62,3.63,5.62,1.7,3.85,6.69
+ARG,20/11/2016,Quilmes,Aldosivi,1,0,,,H,2.2,3.03,3.46,2.3,3.2,3.86
+ARG,20/11/2016,Boca Juniors,Rosario Central,1,1,,,D,1.59,3.61,5.98,1.63,3.98,7.47
+ARG,20/11/2016,Atl. Rafaela,Talleres Cordoba,0,1,,,A,2.34,2.98,3.23,2.5,3.12,3.5
+ARG,20/11/2016,Newells Old Boys,River Plate,1,0,,,H,2.83,2.99,2.59,3.1,3.15,2.76
+ARG,21/11/2016,Olimpo Bahia Blanca,Gimnasia L.P.,0,0,,,D,2.28,2.86,3.52,2.38,2.98,3.9
+ARG,22/11/2016,Patronato,San Martin S.J.,3,0,,,H,2.15,3.05,3.57,2.25,3.27,3.98
+ARG,25/11/2016,Temperley,Lanus,1,3,,,A,4.22,3.09,1.95,4.85,3.27,2.05
+ARG,26/11/2016,Talleres Cordoba,Arsenal Sarandi,0,0,,,D,1.6,3.65,5.77,1.67,3.97,7.13
+ARG,26/11/2016,Colon Santa FE,Newells Old Boys,1,2,,,A,2.83,2.88,2.67,3.05,3.0,2.8
+ARG,26/11/2016,Tigre,Quilmes,3,0,,,H,1.79,3.34,4.63,1.88,3.58,5.3
+ARG,26/11/2016,Banfield,Estudiantes L.P.,3,2,,,H,3.18,2.93,2.4,3.6,3.07,2.58
+ARG,26/11/2016,Atl. Tucuman,Belgrano,0,0,,,D,1.97,3.08,4.13,2.06,3.22,4.85
+ARG,26/11/2016,Rosario Central,Olimpo Bahia Blanca,1,1,,,D,2.35,2.85,3.37,2.48,3.0,3.67
+ARG,27/11/2016,Aldosivi,Velez Sarsfield,0,0,,,D,2.23,2.98,3.44,2.36,3.15,3.78
+ARG,27/11/2016,River Plate,Huracan,1,0,,,H,1.61,3.7,5.57,1.68,3.95,6.5
+ARG,27/11/2016,Sarmiento Junin,Godoy Cruz,2,2,,,D,2.48,2.94,3.02,2.63,3.11,3.3
+ARG,27/11/2016,San Lorenzo,Boca Juniors,1,2,,,A,2.61,3.01,2.79,2.8,3.17,3.06
+ARG,27/11/2016,Racing Club,Independiente,3,0,,,H,2.42,2.93,3.13,2.54,3.02,3.48
+ARG,28/11/2016,Defensa y Justicia,Patronato,1,2,,,A,1.89,3.2,4.32,2.0,3.4,4.88
+ARG,28/11/2016,Gimnasia L.P.,Union de Santa Fe,1,1,,,D,2.52,2.94,2.96,2.7,3.09,3.22
+ARG,29/11/2016,San Martin S.J.,Atl. Rafaela,0,3,,,A,2.05,3.19,3.69,2.12,3.4,4.3
+ARG,02/12/2016,Arsenal Sarandi,Banfield,3,1,,,H,2.67,2.98,2.74,2.82,3.14,2.89
+ARG,02/12/2016,Union de Santa Fe,Temperley,3,0,,,H,1.9,3.11,4.37,1.96,3.3,4.92
+ARG,03/12/2016,Newells Old Boys,Atl. Rafaela,1,1,,,D,1.66,3.59,5.31,1.72,3.79,6.29
+ARG,03/12/2016,Defensa y Justicia,Huracan,0,2,,,A,1.71,3.5,5.0,1.77,3.72,5.6
+ARG,03/12/2016,Olimpo Bahia Blanca,Belgrano,2,0,,,H,2.37,2.92,3.24,2.7,3.08,3.56
+ARG,03/12/2016,Banfield,Independiente,1,3,,,A,3.16,2.99,2.36,3.4,3.14,2.5
+ARG,03/12/2016,San Martin S.J.,Tigre,1,0,,,H,2.11,3.14,3.54,2.2,3.3,4.0
+ARG,03/12/2016,San Lorenzo,Arsenal Sarandi,0,2,,,A,1.77,3.36,4.77,1.83,3.5,5.68
+ARG,04/12/2016,Estudiantes L.P.,Atl. Tucuman,3,2,,,H,1.83,3.31,4.48,1.91,3.55,5.12
+ARG,09/12/2016,Talleres Cordoba,River Plate,0,1,,,A,3.67,3.17,2.06,4.06,3.36,2.17
+ARG,09/12/2016,Arsenal Sarandi,Atl. Tucuman,1,3,,,A,2.39,2.93,3.21,2.53,3.07,3.47
+ARG,12/12/2016,Atl. Tucuman,Quilmes,3,0,,,H,1.66,3.51,5.42,1.72,3.75,6.5
+ARG,13/12/2016,Defensa y Justicia,Arsenal Sarandi,2,0,,,H,1.62,3.54,5.76,1.67,3.82,6.9
+ARG,16/12/2016,Huracan,Talleres Cordoba,1,0,,,H,2.82,2.93,2.64,3.1,3.07,2.8
+ARG,17/12/2016,Godoy Cruz,Gimnasia L.P.,0,3,,,A,2.22,3.02,3.43,2.32,3.17,3.86
+ARG,17/12/2016,Estudiantes L.P.,Defensa y Justicia,1,2,,,A,1.82,3.24,4.67,1.92,3.42,5.6
+ARG,17/12/2016,Sarmiento Junin,Aldosivi,0,2,,,A,2.18,3.04,3.51,2.32,3.2,3.99
+ARG,17/12/2016,Union de Santa Fe,Racing Club,1,0,,,H,2.52,3.11,2.82,2.7,3.28,3.06
+ARG,17/12/2016,Atl. Rafaela,Patronato,3,0,,,H,2.03,3.16,3.76,2.15,3.35,4.17
+ARG,17/12/2016,Independiente,Banfield,0,1,,,A,1.66,3.47,5.58,1.73,3.72,6.53
+ARG,18/12/2016,Belgrano,Rosario Central,0,2,,,A,2.15,2.98,3.68,2.24,3.1,4.17
+ARG,18/12/2016,Lanus,San Lorenzo,2,2,,,D,2.12,3.15,3.53,2.2,3.3,3.98
+ARG,18/12/2016,Arsenal Sarandi,Velez Sarsfield,2,1,,,H,2.88,2.97,2.57,3.13,3.1,2.74
+ARG,18/12/2016,Boca Juniors,Colon Santa FE,4,1,,,H,1.35,4.77,8.36,1.4,5.4,10.4
+ARG,18/12/2016,Newells Old Boys,San Martin S.J.,6,1,,,H,1.64,3.59,5.44,1.7,3.92,6.34
+ARG,18/12/2016,Olimpo Bahia Blanca,River Plate,1,2,,,A,2.92,2.99,2.52,3.17,3.17,2.68
+ARG,19/12/2016,Quilmes,Temperley,1,0,,,H,2.47,2.9,3.09,2.62,3.07,3.47
+ARG,20/12/2016,Tigre,Atl. Tucuman,0,0,,,D,2.1,3.25,3.47,2.16,3.47,3.84
+ARG,04/01/2017,Atl. Tucuman,Gimnasia L.P.,0,1,,,A,2.12,3.09,3.6,2.22,3.25,4.1
+ARG,04/01/2017,Independiente,Velez Sarsfield,1,1,,,D,1.7,3.4,5.33,1.78,3.64,6.34
+ARG,04/01/2017,Newells Old Boys,Atl. Rafaela,1,0,,,H,1.82,3.32,4.54,1.88,3.55,5.3
+ARG,04/01/2017,Temperley,Aldosivi,1,0,,,H,2.4,2.97,3.14,2.54,3.1,3.4
+ARG,04/01/2017,Quilmes,Racing Club,2,3,,,A,4.68,3.37,1.78,5.4,3.62,1.88
+ARG,04/01/2017,Belgrano,Colon Santa FE,0,1,,,A,2.11,3.06,3.69,2.18,3.25,4.0
+ARG,06/01/2017,Atl. Tucuman,River Plate,0,3,,,A,3.88,3.41,1.93,4.44,3.64,2.04
+ARG,06/01/2017,Arsenal Sarandi,Olimpo Bahia Blanca,1,0,,,H,2.4,3.0,3.12,2.84,3.18,3.79
+ARG,10/01/2017,Argentinos Jrs,Racing Club,2,0,,,H,3.01,3.13,2.38,3.2,3.35,2.48
+ARG,10/01/2017,Talleres Cordoba,Patronato,1,0,,,H,1.54,3.74,6.55,1.66,4.12,8.0
+ARG,10/01/2017,San Martin S.J.,Rosario Central,3,1,,,H,2.78,2.97,2.67,2.91,3.13,2.85
+ARG,10/01/2017,Independiente,Velez Sarsfield,1,0,,,H,1.76,3.37,4.92,1.86,3.54,5.46
+ARG,10/01/2017,Boca Juniors,Chacarita Juniors,1,0,,,H,1.23,5.76,12.89,1.27,6.7,17.15
+ARG,12/01/2017,Union de Santa Fe,Belgrano,1,1,,,D,2.01,3.04,4.11,2.1,3.21,4.55
+ARG,12/01/2017,Defensa y Justicia,Godoy Cruz,3,2,,,H,1.71,3.47,5.08,1.79,3.75,5.75
+ARG,04/02/2017,Boca Juniors,Defensa y Justicia,1,0,,,H,1.65,3.62,5.28,1.72,3.95,6.2
+ARG,04/02/2017,Estudiantes L.P.,Arsenal Sarandi,2,0,,,H,1.41,4.23,7.92,1.45,4.6,9.34
+ARG,04/02/2017,Lanus,Banfield,4,2,,,H,1.91,3.2,4.2,2.03,3.4,5.01
+ARG,04/02/2017,Sarmiento Junin,Rosario Central,2,2,,,D,3.2,2.93,2.38,3.52,3.03,2.52
+ARG,04/02/2017,Tigre,San Lorenzo,4,3,,,H,2.66,3.21,2.6,2.9,3.44,2.82
+ARG,04/02/2017,Huracan,Patronato,0,0,,,D,2.03,3.2,3.73,2.1,3.33,4.2
+ARG,05/02/2017,Belgrano,Defensa y Justicia,0,1,,,A,2.93,2.95,2.55,3.14,3.1,2.68
+ARG,06/02/2017,Sarmiento Junin,Defensa y Justicia,1,0,,,H,6.13,3.94,1.53,7.0,4.15,1.6
+ARG,10/02/2017,Tigre,River Plate,1,1,,,D,4.5,3.71,1.74,5.13,4.03,1.87
+ARG,10/02/2017,Banfield,Arsenal Sarandi,1,2,,,A,1.56,3.77,6.14,1.63,4.15,7.46
+ARG,12/02/2017,Huracan,Patronato,1,1,,,D,1.53,3.7,6.9,1.6,4.0,8.5
+ARG,12/02/2017,Argentinos Jrs,Temperley,2,2,,,D,1.75,3.29,5.18,1.81,3.75,5.9
+ARG,12/02/2017,Olimpo Bahia Blanca,Chacarita Juniors,2,0,,,H,2.15,3.01,3.68,2.22,3.15,4.03
+ARG,04/03/2017,Godoy Cruz,River Plate,1,2,,,A,3.65,3.21,2.05,4.2,3.42,2.15
+ARG,04/03/2017,Olimpo Bahia Blanca,San Martin S.J.,0,0,,,D,1.77,3.34,4.8,1.84,3.57,5.4
+ARG,05/03/2017,Lanus,Velez Sarsfield,2,0,,,H,1.98,3.19,3.98,2.08,3.32,4.5
+ARG,06/03/2017,Godoy Cruz,Atl. Rafaela,0,2,,,A,2.02,3.36,3.59,2.11,3.62,3.85
+ARG,06/03/2017,Tigre,Velez Sarsfield,0,3,,,A,2.26,3.16,3.22,2.4,3.32,3.6
+ARG,06/03/2017,Temperley,Talleres Cordoba,2,1,,,H,3.8,3.21,2.01,4.0,3.48,2.09
+ARG,06/03/2017,Rosario Central,Colon Santa FE,0,0,,,D,1.74,3.45,4.83,1.86,3.8,5.77
+ARG,06/03/2017,Union de Santa Fe,Newells Old Boys,2,1,,,H,2.71,2.94,2.75,2.97,3.11,3.01
+ARG,10/03/2017,Newells Old Boys,Godoy Cruz,0,0,,,D,2.16,3.08,3.54,2.32,3.3,3.92
+ARG,11/03/2017,Chacarita Juniors,Gimnasia L.P.,2,0,,,H,3.01,3.01,2.46,3.21,3.18,2.56
+ARG,12/03/2017,Newells Old Boys,Racing Club,2,2,,,D,2.44,2.94,3.14,2.54,3.11,3.39
+ARG,12/03/2017,Talleres Cordoba,Estudiantes L.P.,0,1,,,A,1.97,3.04,4.33,2.06,3.18,4.8
+ARG,12/03/2017,Tigre,San Lorenzo,1,2,,,A,2.87,3.04,2.56,3.2,3.2,2.78
+ARG,12/03/2017,Boca Juniors,Arsenal Sarandi,2,0,,,H,1.25,5.49,12.06,1.29,6.14,15.25
+ARG,13/03/2017,Atl. Tucuman,Sarmiento Junin,2,1,,,H,1.9,3.18,4.29,1.96,3.33,4.8
+ARG,13/03/2017,Aldosivi,Atl. Rafaela,1,0,,,H,2.3,2.99,3.27,2.42,3.23,3.52
+ARG,14/03/2017,Colon Santa FE,Olimpo Bahia Blanca,1,1,,,D,2.02,3.05,3.98,2.15,3.2,4.5
+ARG,18/03/2017,Quilmes,Rosario Central,0,1,,,A,3.51,3.01,2.19,3.95,3.24,2.4
+ARG,18/03/2017,Union de Santa Fe,Colon Santa FE,0,2,,,A,1.98,3.07,4.14,2.1,3.25,4.64
+ARG,18/03/2017,Newells Old Boys,Velez Sarsfield,3,0,,,H,1.87,3.19,4.41,1.96,3.38,5.0
+ARG,18/03/2017,Tigre,Gimnasia L.P.,0,1,,,A,2.14,3.13,3.49,2.22,3.32,3.85
+ARG,18/03/2017,Independiente,San Martin S.J.,0,0,,,D,1.5,3.81,6.84,1.55,4.07,8.0
+ARG,18/03/2017,Huracan,Defensa y Justicia,2,0,,,H,2.93,2.93,2.54,3.14,3.09,2.8
+ARG,19/03/2017,Belgrano,Racing Club,2,0,,,H,3.41,3.05,2.21,3.75,3.18,2.36
+ARG,19/03/2017,Sarmiento Junin,Temperley,2,1,,,H,2.2,2.91,3.63,2.3,3.08,4.0
+ARG,19/03/2017,Estudiantes L.P.,Patronato,1,0,,,H,1.56,3.64,6.46,1.6,4.0,7.7
+ARG,19/03/2017,Godoy Cruz,San Lorenzo,2,0,,,H,2.86,3.06,2.5,3.1,3.22,2.68
+ARG,19/03/2017,Olimpo Bahia Blanca,Banfield,1,0,,,H,2.36,2.99,3.14,2.5,3.17,3.5
+ARG,19/03/2017,Boca Juniors,Talleres Cordoba,1,2,,,A,1.56,3.69,6.24,1.62,4.15,7.7
+ARG,20/03/2017,Arsenal Sarandi,Atl. Rafaela,1,2,,,A,2.92,2.97,2.52,3.22,3.17,2.68
+ARG,21/03/2017,Atl. Tucuman,Aldosivi,0,0,,,D,1.85,3.23,4.51,1.92,3.42,5.3
+ARG,22/03/2017,Lanus,River Plate,1,3,,,A,2.37,3.06,3.09,2.46,3.28,3.36
+ARG,25/03/2017,Patronato,Newells Old Boys,1,1,,,D,2.92,2.97,2.53,3.18,3.18,2.66
+ARG,25/03/2017,Banfield,Union de Santa Fe,3,1,,,H,2.15,3.04,3.58,2.27,3.22,4.0
+ARG,25/03/2017,Rosario Central,Tigre,1,0,,,H,1.89,3.29,4.15,1.99,3.51,4.6
+ARG,25/03/2017,San Lorenzo,Quilmes,3,0,,,H,1.57,3.82,5.77,1.63,4.3,6.6
+ARG,25/03/2017,Gimnasia L.P.,Sarmiento Junin,1,0,,,H,1.88,3.2,4.38,1.98,3.38,5.2
+ARG,25/03/2017,Racing Club,Godoy Cruz,2,1,,,H,1.62,3.6,5.63,1.7,3.89,6.5
+ARG,25/03/2017,Atl. Rafaela,Estudiantes L.P.,2,2,,,D,2.71,3.03,2.65,3.0,3.22,2.86
+ARG,26/03/2017,Colon Santa FE,Lanus,1,0,,,H,2.86,2.97,2.58,3.02,3.18,2.76
+ARG,26/03/2017,San Martin S.J.,Boca Juniors,1,2,,,A,5.04,3.68,1.66,5.6,4.0,1.73
+ARG,26/03/2017,River Plate,Belgrano,2,1,,,H,1.57,3.76,5.97,1.62,4.15,7.33
+ARG,26/03/2017,Temperley,Atl. Tucuman,2,2,,,D,2.74,2.92,2.71,2.96,3.12,2.88
+ARG,27/03/2017,Aldosivi,Arsenal Sarandi,2,1,,,H,1.84,3.28,4.46,1.91,3.49,5.25
+ARG,27/03/2017,Velez Sarsfield,Huracan,1,1,,,D,2.04,3.12,3.81,2.1,3.32,4.45
+ARG,28/03/2017,Talleres Cordoba,Olimpo Bahia Blanca,1,0,,,H,1.66,3.33,6.0,1.78,3.57,7.16
+ARG,04/04/2017,Union de Santa Fe,Talleres Cordoba,4,2,,,H,2.59,2.88,2.94,2.8,3.0,3.11
+ARG,06/04/2017,Lanus,Estudiantes L.P.,1,0,,,H,2.21,3.05,3.43,2.29,3.18,3.78
+ARG,06/04/2017,San Lorenzo,River Plate,2,1,,,H,2.65,3.14,2.66,2.88,3.75,2.85
+ARG,06/04/2017,Gimnasia L.P.,Banfield,1,2,,,A,2.88,2.98,2.56,3.22,3.1,2.69
+ARG,06/04/2017,Belgrano,Arsenal Sarandi,1,2,,,A,1.98,3.19,3.97,2.06,3.38,4.4
+ARG,06/04/2017,Olimpo Bahia Blanca,Huracan,3,1,,,H,2.24,3.08,3.34,2.34,3.3,3.62
+ARG,06/04/2017,Atl. Tucuman,San Martin S.J.,1,2,,,A,1.75,3.48,4.76,1.8,3.73,5.4
+ARG,06/04/2017,Boca Juniors,Independiente,3,0,,,H,2.26,3.07,3.32,2.44,3.25,3.78
+ARG,11/04/2017,Godoy Cruz,Huracan,2,1,,,H,2.27,3.16,3.18,2.4,3.36,3.5
+ARG,11/04/2017,Colon Santa FE,San Martin S.J.,3,3,,,D,1.9,3.24,4.28,1.97,3.38,4.71
+ARG,11/04/2017,Lanus,Olimpo Bahia Blanca,0,2,,,A,1.73,3.36,5.17,1.81,3.55,5.8
+ARG,11/04/2017,San Lorenzo,Banfield,0,1,,,A,1.9,3.23,4.27,2.0,3.45,4.67
+ARG,11/04/2017,Rosario Central,Atl. Tucuman,0,1,,,A,1.6,3.82,5.54,1.7,4.15,6.41
+ARG,12/04/2017,Gimnasia L.P.,River Plate,2,1,,,H,3.93,3.3,1.97,4.45,3.51,2.75
+ARG,12/04/2017,Lanus,Velez Sarsfield,0,0,,,D,2.06,3.04,3.91,2.16,3.2,4.4
+ARG,12/04/2017,Atl. Tucuman,Colon Santa FE,2,0,,,H,2.66,3.05,2.75,2.8,3.18,2.94
+ARG,14/04/2017,Huracan,Arsenal Sarandi,1,2,,,A,1.73,3.48,4.91,1.8,3.7,5.72
+ARG,15/04/2017,Lanus,San Martin S.J.,0,0,,,D,1.45,4.08,7.43,1.5,4.45,8.5
+ARG,15/04/2017,Newells Old Boys,Estudiantes L.P.,0,0,,,D,2.08,3.09,3.73,2.2,3.26,4.07
+ARG,15/04/2017,Belgrano,Talleres Cordoba,1,1,,,D,3.01,2.9,2.53,3.38,3.01,2.74
+ARG,15/04/2017,Independiente,Atl. Rafaela,1,1,,,D,1.6,3.63,5.88,1.72,3.95,7.0
+ARG,15/04/2017,Olimpo Bahia Blanca,Velez Sarsfield,0,1,,,A,2.22,3.04,3.42,2.32,3.18,3.66
+ARG,16/04/2017,Sarmiento Junin,Racing Club,1,2,,,A,3.63,3.34,2.01,3.98,3.57,2.11
+ARG,16/04/2017,Godoy Cruz,Banfield,3,1,,,H,2.48,3.07,2.91,2.7,3.2,3.1
+ARG,16/04/2017,Atl. Tucuman,San Lorenzo,1,0,,,H,2.65,3.1,2.7,2.78,3.3,2.86
+ARG,16/04/2017,Boca Juniors,Patronato,1,1,,,D,1.29,5.02,10.44,1.33,5.65,12.87
+ARG,16/04/2017,Quilmes,Colon Santa FE,0,1,,,A,2.97,2.98,2.49,3.32,3.4,2.75
+ARG,17/04/2017,Tigre,River Plate,0,2,,,A,3.23,3.37,2.16,3.62,3.68,2.75
+ARG,17/04/2017,Union de Santa Fe,Defensa y Justicia,0,2,,,A,2.44,2.96,3.09,2.66,3.13,3.32
+ARG,17/04/2017,Temperley,Rosario Central,1,2,,,A,3.3,3.03,2.28,3.62,3.15,2.45
+ARG,18/04/2017,Gimnasia L.P.,Aldosivi,1,0,,,H,1.92,3.16,4.29,2.07,3.42,5.0
+ARG,19/04/2017,Racing Club,Tigre,4,1,,,H,1.77,3.58,4.28,1.91,3.85,5.55
+ARG,20/04/2017,Talleres Cordoba,Independiente,0,2,,,A,2.31,2.9,3.41,2.41,3.0,3.86
+ARG,22/04/2017,San Lorenzo,Temperley,0,1,,,A,1.48,3.95,6.94,1.55,4.45,8.22
+ARG,22/04/2017,Aldosivi,Newells Old Boys,0,3,,,A,3.02,3.0,2.45,3.21,3.17,2.6
+ARG,22/04/2017,Racing Club,Atl. Tucuman,4,3,,,H,1.49,4.01,6.68,1.55,4.36,7.5
+ARG,22/04/2017,Banfield,Quilmes,2,0,,,H,1.6,3.7,5.62,1.7,3.91,6.5
+ARG,22/04/2017,Defensa y Justicia,Lanus,1,0,,,H,2.03,3.05,3.95,2.17,3.2,4.59
+ARG,22/04/2017,Velez Sarsfield,Union de Santa Fe,2,1,,,H,2.25,3.0,3.41,2.37,3.19,3.79
+ARG,23/04/2017,Rosario Central,Gimnasia L.P.,2,1,,,H,1.9,3.16,4.4,1.99,3.3,5.1
+ARG,23/04/2017,Estudiantes L.P.,Huracan,1,1,,,D,1.55,3.67,6.55,1.65,4.05,7.7
+ARG,23/04/2017,Atl. Rafaela,Boca Juniors,0,0,,,D,3.73,3.31,1.99,4.15,3.52,2.07
+ARG,23/04/2017,San Martin S.J.,Belgrano,2,1,,,H,2.52,2.87,3.06,2.7,3.05,3.28
+ARG,23/04/2017,River Plate,Sarmiento Junin,1,1,,,D,1.3,5.07,9.63,1.35,5.62,11.78
+ARG,23/04/2017,Talleres Cordoba,Godoy Cruz,1,0,,,H,1.62,3.51,5.94,1.68,3.74,7.0
+ARG,24/04/2017,Arsenal Sarandi,Independiente,0,2,,,A,4.62,3.32,1.81,5.3,3.58,1.9
+ARG,24/04/2017,Patronato,Olimpo Bahia Blanca,3,4,,,A,2.1,3.01,3.81,2.17,3.25,4.35
+ARG,25/04/2017,Colon Santa FE,Tigre,2,1,,,H,2.11,3.19,3.54,2.2,3.4,4.05
+ARG,28/04/2017,Quilmes,Talleres Cordoba,1,0,,,H,3.38,3.1,2.2,3.8,3.28,2.32
+ARG,29/04/2017,Independiente,Estudiantes L.P.,2,2,,,D,2.05,3.13,3.78,2.17,3.28,4.15
+ARG,29/04/2017,Gimnasia L.P.,San Lorenzo,0,1,,,A,1.9,3.21,4.29,1.99,3.38,4.9
+ARG,29/04/2017,Huracan,Newells Old Boys,0,1,,,A,3.07,2.97,2.44,3.3,3.11,2.6
+ARG,29/04/2017,Sarmiento Junin,Colon Santa FE,0,4,,,A,2.56,3.01,2.86,2.8,3.16,3.0
+ARG,29/04/2017,Tigre,Banfield,0,1,,,A,2.26,3.25,3.09,2.45,3.54,3.4
+ARG,30/04/2017,Temperley,Racing Club,3,0,,,H,3.91,3.35,1.94,4.51,3.62,2.05
+ARG,30/04/2017,Union de Santa Fe,Patronato,0,0,,,D,1.89,3.25,4.32,1.95,3.44,4.83
+ARG,30/04/2017,Godoy Cruz,San Martin S.J.,0,0,,,D,1.99,3.24,3.87,2.05,3.46,4.5
+ARG,30/04/2017,Rosario Central,Aldosivi,2,0,,,H,1.59,3.65,6.01,1.65,3.94,7.09
+ARG,30/04/2017,Boca Juniors,Arsenal Sarandi,3,0,,,H,1.28,5.33,10.07,1.32,6.3,15.25
+ARG,30/04/2017,Olimpo Bahia Blanca,Atl. Rafaela,1,2,,,A,2.44,2.91,3.15,2.6,3.0,3.42
+ARG,06/05/2017,Quilmes,Patronato,0,1,,,A,2.32,2.96,3.32,2.46,3.3,3.7
+ARG,11/05/2017,Racing Club,Talleres Cordoba,1,1,,,D,2.49,3.09,2.89,2.71,3.3,3.15
+ARG,11/05/2017,Temperley,Defensa y Justicia,1,4,,,A,4.15,3.25,1.92,4.5,3.4,2.03
+ARG,11/05/2017,Belgrano,Independiente,0,0,,,D,3.22,2.99,2.36,3.6,3.13,2.59
+ARG,11/05/2017,Estudiantes L.P.,Argentinos Jrs,1,0,,,H,1.97,3.13,4.12,2.08,3.3,4.61
+ARG,11/05/2017,River Plate,Boca Juniors,1,2,,,A,2.49,3.12,2.86,2.65,3.35,3.07
+ARG,12/05/2017,San Martin S.J.,Banfield,2,1,,,H,2.3,3.0,3.32,2.44,3.14,3.52
+ARG,13/05/2017,San Martin S.J.,Godoy Cruz,1,2,,,A,2.37,3.01,3.17,2.5,3.25,3.5
+ARG,13/05/2017,Estudiantes L.P.,Gimnasia L.P.,1,0,,,H,1.98,3.02,4.32,2.06,3.22,4.89
+ARG,13/05/2017,Talleres Cordoba,Belgrano,1,1,,,D,1.94,3.09,4.32,2.03,3.3,4.8
+ARG,13/05/2017,Banfield,Lanus,1,0,,,H,2.5,3.02,2.93,2.67,3.15,3.2
+ARG,13/05/2017,Atl. Rafaela,Atl. Tucuman,1,0,,,H,1.94,3.36,3.88,2.0,3.58,4.15
+ARG,13/05/2017,Huracan,San Lorenzo,0,1,,,A,3.18,3.11,2.29,3.45,3.32,2.45
+ARG,13/05/2017,Olimpo Bahia Blanca,Aldosivi,2,0,,,H,1.94,3.22,4.09,2.0,3.4,4.55
+ARG,14/05/2017,Colon Santa FE,Union de Santa Fe,1,1,,,D,2.03,3.17,3.82,2.16,3.4,4.45
+ARG,14/05/2017,Newells Old Boys,Rosario Central,1,3,,,A,2.6,2.97,2.86,2.8,3.09,3.16
+ARG,14/05/2017,Boca Juniors,River Plate,1,3,,,A,2.02,3.3,3.65,2.11,3.45,4.08
+ARG,14/05/2017,Independiente,Racing Club,2,0,,,H,2.03,3.23,3.69,2.13,3.4,4.04
+ARG,14/05/2017,Patronato,Sarmiento Junin,2,2,,,D,2.07,3.17,3.65,2.19,3.38,4.2
+ARG,15/05/2017,Arsenal Sarandi,Temperley,2,0,,,H,2.33,3.11,3.12,2.49,3.3,3.38
+ARG,15/05/2017,Defensa y Justicia,Quilmes,2,0,,,H,1.43,4.08,8.15,1.48,4.55,9.4
+ARG,16/05/2017,Velez Sarsfield,Tigre,2,1,,,H,2.03,3.26,3.71,2.1,3.45,4.2
+ARG,20/05/2017,Atl. Tucuman,Banfield,3,0,,,H,2.65,3.0,2.77,2.9,3.15,2.99
+ARG,20/05/2017,Belgrano,Patronato,1,1,,,D,1.93,3.15,4.22,2.0,3.28,4.95
+ARG,20/05/2017,Lanus,Atl. Rafaela,2,0,,,H,2.48,3.07,2.91,2.7,3.21,3.3
+ARG,20/05/2017,Sarmiento Junin,Talleres Cordoba,1,4,,,A,3.3,3.1,2.24,3.6,3.25,2.31
+ARG,20/05/2017,Boca Juniors,Newells Old Boys,1,0,,,H,1.56,3.72,6.23,1.62,4.09,7.15
+ARG,20/05/2017,Tigre,San Martin S.J.,1,1,,,D,1.91,3.32,4.05,1.99,3.57,4.55
+ARG,21/05/2017,Union de Santa Fe,Arsenal Sarandi,0,1,,,A,1.94,3.25,4.02,2.02,3.4,4.51
+ARG,21/05/2017,Independiente,Huracan,2,1,,,H,1.51,3.79,6.98,1.56,4.04,8.0
+ARG,21/05/2017,Godoy Cruz,Velez Sarsfield,3,0,,,H,2.31,3.07,3.21,2.47,3.2,3.41
+ARG,21/05/2017,San Lorenzo,Aldosivi,0,1,,,A,1.42,4.23,7.73,1.48,4.7,10.02
+ARG,21/05/2017,Temperley,Colon Santa FE,3,0,,,H,2.96,3.0,2.49,3.2,3.13,2.63
+ARG,21/05/2017,Quilmes,Defensa y Justicia,0,2,,,A,4.55,3.24,1.84,5.08,3.4,1.91
+ARG,22/05/2017,Rosario Central,Racing Club,4,1,,,H,2.05,3.28,3.6,2.18,3.46,4.0
+ARG,22/05/2017,Olimpo Bahia Blanca,Estudiantes L.P.,3,1,,,H,2.9,3.0,2.53,3.13,3.26,2.64
+ARG,23/05/2017,Gimnasia L.P.,River Plate,0,3,,,A,4.83,3.49,1.73,5.6,3.78,1.8
+ARG,26/05/2017,Aldosivi,Independiente,0,0,,,D,5.26,3.45,1.69,5.9,3.72,1.75
+ARG,27/05/2017,Colon Santa FE,Gimnasia L.P.,1,2,,,A,1.88,3.16,4.51,1.95,3.4,5.1
+ARG,27/05/2017,Banfield,Temperley,3,1,,,H,1.63,3.6,5.56,1.7,3.9,6.6
+ARG,27/05/2017,Newells Old Boys,Olimpo Bahia Blanca,3,2,,,H,1.85,3.15,4.7,1.95,3.32,5.4
+ARG,27/05/2017,Huracan,Boca Juniors,1,1,,,D,3.9,3.26,1.97,4.45,3.48,2.07
+ARG,27/05/2017,San Martin S.J.,Sarmiento Junin,4,2,,,H,1.95,3.34,3.86,2.03,3.54,4.33
+ARG,28/05/2017,Racing Club,San Lorenzo,2,1,,,H,2.38,3.23,2.92,2.47,3.43,3.06
+ARG,28/05/2017,Defensa y Justicia,Tigre,1,0,,,H,1.79,3.44,4.51,1.86,3.68,5.1
+ARG,28/05/2017,Arsenal Sarandi,Lanus,0,2,,,A,3.5,3.12,2.15,3.83,3.25,2.3
+ARG,28/05/2017,Talleres Cordoba,Atl. Tucuman,2,1,,,H,1.46,4.01,7.31,1.55,4.46,9.08
+ARG,28/05/2017,River Plate,Rosario Central,0,0,,,D,1.71,3.62,4.74,1.79,3.98,5.56
+ARG,28/05/2017,Atl. Rafaela,Belgrano,1,2,,,A,1.89,3.25,4.26,1.98,3.49,4.69
+ARG,29/05/2017,Patronato,Godoy Cruz,0,3,,,A,2.53,3.09,2.82,2.8,3.2,3.0
+ARG,29/05/2017,Estudiantes L.P.,Union de Santa Fe,2,0,,,H,1.61,3.6,5.82,1.67,3.92,6.89
+ARG,30/05/2017,Velez Sarsfield,Quilmes,0,0,,,D,1.62,3.65,5.61,1.69,3.92,6.2
+ARG,05/06/2017,San Martin S.J.,Quilmes,1,0,,,H,1.93,3.19,4.18,2.01,3.36,4.75
+ARG,05/06/2017,Talleres Cordoba,Tigre,1,2,,,A,1.74,3.44,4.89,1.8,3.7,5.45
+ARG,05/06/2017,Patronato,Lanus,0,2,,,A,3.55,3.08,2.14,4.1,3.25,2.35
+ARG,05/06/2017,Racing Club,Gimnasia L.P.,1,0,,,H,1.55,3.74,6.45,1.6,3.99,8.5
+ARG,05/06/2017,Atl. Rafaela,Union de Santa Fe,3,0,,,H,1.94,3.14,4.23,2.0,3.25,4.83
+ARG,06/06/2017,Racing Club,Aldosivi,1,1,,,D,1.46,4.17,7.01,1.5,4.75,8.6
+ARG,11/06/2017,Arsenal Sarandi,Tigre,0,0,,,D,2.7,3.06,2.68,2.83,3.28,2.87
+ARG,11/06/2017,Patronato,Newells Old Boys,0,0,,,D,2.87,2.97,2.6,3.0,3.12,2.78
+ARG,15/06/2017,Defensa y Justicia,Independiente,1,2,,,A,2.56,2.9,2.97,2.76,3.04,3.3
+ARG,16/06/2017,Colon Santa FE,San Lorenzo,2,1,,,H,2.61,3.08,2.75,2.79,3.24,2.93
+ARG,16/06/2017,San Martin S.J.,Temperley,0,1,,,A,1.86,3.44,4.15,1.91,3.69,4.8
+ARG,16/06/2017,Huracan,Union de Santa Fe,1,0,,,H,1.87,3.21,4.44,1.95,3.38,5.1
+ARG,17/06/2017,Talleres Cordoba,Gimnasia L.P.,0,1,,,A,1.59,3.6,5.99,1.65,3.96,7.03
+ARG,17/06/2017,Banfield,Rosario Central,3,1,,,H,2.28,3.09,3.23,2.41,3.3,3.55
+ARG,17/06/2017,Arsenal Sarandi,Godoy Cruz,1,2,,,A,2.31,3.21,3.06,2.45,3.49,3.25
+ARG,17/06/2017,Estudiantes L.P.,Belgrano,2,0,,,H,1.51,3.77,6.85,1.57,4.05,7.7
+ARG,17/06/2017,Atl. Rafaela,Quilmes,1,1,,,D,1.56,3.87,5.77,1.61,4.25,6.42
+ARG,17/06/2017,Aldosivi,Boca Juniors,0,4,,,A,5.64,3.65,1.61,6.5,4.05,1.68
+ARG,17/06/2017,Velez Sarsfield,Sarmiento Junin,5,1,,,H,1.49,3.95,6.77,1.57,4.4,7.6
+ARG,18/06/2017,Newells Old Boys,Lanus,1,1,,,D,2.82,3.0,2.6,3.01,3.17,2.8
+ARG,18/06/2017,Patronato,Tigre,0,2,,,A,2.43,3.11,2.94,2.56,3.27,3.15
+ARG,18/06/2017,Independiente,Olimpo Bahia Blanca,1,1,,,D,1.49,3.9,6.94,1.55,4.25,8.2
+ARG,18/06/2017,Defensa y Justicia,Atl. Tucuman,3,0,,,H,1.53,3.89,6.26,1.6,4.2,7.21
+ARG,18/06/2017,River Plate,Racing Club,2,3,,,A,1.55,3.95,5.84,1.6,4.45,7.0
+ARG,20/06/2017,San Lorenzo,Banfield,1,0,,,H,2.1,3.39,3.34,2.2,3.65,3.68
+ARG,20/06/2017,Gimnasia L.P.,San Martin S.J.,2,0,,,H,1.73,3.48,4.83,1.8,3.66,5.33
+ARG,21/06/2017,Rosario Central,Talleres Cordoba,3,3,,,D,1.89,3.29,4.16,1.95,3.4,4.82
+ARG,21/06/2017,Quilmes,Arsenal Sarandi,2,2,,,D,5.63,3.62,1.62,6.34,3.79,1.69
+ARG,21/06/2017,Temperley,Defensa y Justicia,2,3,,,A,3.63,3.23,2.05,4.1,3.4,2.16
+ARG,21/06/2017,Racing Club,Colon Santa FE,1,0,,,H,1.74,3.71,4.44,1.81,3.9,5.2
+ARG,21/06/2017,Olimpo Bahia Blanca,Boca Juniors,2,2,,,D,2.66,3.21,2.58,2.93,3.5,2.73
+ARG,22/06/2017,River Plate,Aldosivi,1,0,,,H,1.25,5.6,11.37,1.29,6.56,13.69
+ARG,22/06/2017,Belgrano,Newells Old Boys,2,1,,,H,3.62,3.08,2.12,3.91,3.22,2.24
+ARG,22/06/2017,Lanus,Huracan,2,0,,,H,1.88,3.21,4.42,1.97,3.4,5.25
+ARG,22/06/2017,Sarmiento Junin,Patronato,1,3,,,A,2.9,3.05,2.5,3.24,3.14,2.68
+ARG,22/06/2017,Godoy Cruz,Estudiantes L.P.,0,2,,,A,2.89,3.05,2.5,3.13,3.23,2.6
+ARG,22/06/2017,Tigre,Atl. Rafaela,1,0,,,H,1.81,3.53,4.31,1.89,3.75,4.8
+ARG,23/06/2017,Atl. Tucuman,Velez Sarsfield,1,1,,,D,2.48,3.14,2.85,2.64,3.31,3.0
+ARG,23/06/2017,Union de Santa Fe,Independiente,0,3,,,A,4.84,3.43,1.75,5.74,3.78,1.85
+ARG,24/06/2017,Defensa y Justicia,Gimnasia L.P.,1,0,,,H,1.58,3.69,6.04,1.63,3.96,6.7
+ARG,24/06/2017,San Martin S.J.,Rosario Central,1,1,,,D,2.9,3.22,2.4,3.25,3.36,2.56
+ARG,25/06/2017,Boca Juniors,Union de Santa Fe,2,1,,,H,1.22,5.86,12.79,1.25,6.7,18.0
+ARG,25/06/2017,Atl. Rafaela,Sarmiento Junin,2,3,,,A,1.67,3.76,4.83,1.73,4.07,5.4
+ARG,25/06/2017,Banfield,Racing Club,1,3,,,A,2.11,3.33,3.36,2.2,3.58,3.7
+ARG,26/06/2017,Colon Santa FE,River Plate,0,0,,,D,3.02,3.32,2.27,3.28,3.66,2.41
+ARG,26/06/2017,Arsenal Sarandi,Tigre,2,1,,,H,2.44,3.16,2.89,2.63,3.3,3.1
+ARG,26/06/2017,Patronato,Atl. Tucuman,1,1,,,D,2.39,3.15,2.96,2.49,3.33,3.2
+ARG,27/06/2017,Aldosivi,Olimpo Bahia Blanca,0,3,,,A,2.56,2.95,2.91,2.75,3.1,3.17
+ARG,27/06/2017,Huracan,Belgrano,0,0,,,D,1.91,3.03,4.63,1.97,3.18,5.3
+ARG,27/06/2017,Velez Sarsfield,Temperley,0,0,,,D,2.51,3.09,2.87,2.7,3.75,4.33
+ARG,27/06/2017,Estudiantes L.P.,Quilmes,1,0,,,H,1.17,6.67,15.77,1.2,8.03,20.0
+ARG,27/06/2017,Newells Old Boys,Godoy Cruz,0,2,,,A,1.91,3.43,3.93,1.98,3.6,4.47
+ARG,28/06/2017,Independiente,Lanus,1,1,,,D,1.55,3.75,6.46,1.59,4.1,7.09
+ARG,28/06/2017,Talleres Cordoba,San Lorenzo,1,1,,,D,3.12,3.29,2.24,3.65,3.5,2.45
