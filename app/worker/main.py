@@ -17,6 +17,7 @@ from collections.abc import Awaitable, Callable
 from datetime import UTC, datetime, timedelta
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.date import DateTrigger
 from apscheduler.triggers.interval import IntervalTrigger
 
 from app.core.config import ServiceRole, Settings, get_settings
@@ -30,6 +31,7 @@ from app.services.daily_scan import DailyScanService
 from app.services.highlights import HighlightService
 from app.services.settlement import SettlementService
 from app.utils.lifecycle import run_until_shutdown
+from app.worker.bootstrap import bootstrap
 
 logger = get_logger(__name__)
 
@@ -90,6 +92,20 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
             components={c.name: str(c.status) for c in report.components},
         )
 
+    async def first_run() -> None:
+        """Load the data the product needs, once, on first start.
+
+        Runs before the first scan so a fresh deployment fills itself in
+        without anyone opening a console. Cheap on every subsequent start,
+        because each stage checks whether its work is already done.
+        """
+        set_correlation_id(None)
+        try:
+            report = await bootstrap(database)
+            logger.info("bootstrap.summary", summary=report.summary())
+        except Exception as exc:
+            logger.exception("bootstrap.failed", error_type=type(exc).__name__)
+
     async def daily_scan() -> None:
         """Analyse every upcoming fixture and store the results.
 
@@ -117,6 +133,20 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
         except Exception as exc:
             logger.exception("scan.failed", error_type=type(exc).__name__)
 
+    # Bootstrap first, and only once: a second worker starting must not begin
+    # a parallel ingestion, which the Redis lock prevents.
+    scheduler.add_job(
+        with_lock,
+        trigger=DateTrigger(run_date=datetime.now(UTC) + timedelta(seconds=5)),
+        args=[redis, "bootstrap-data", first_run],
+        id="bootstrap_data",
+        name="First-run data bootstrap",
+        max_instances=1,
+        coalesce=True,
+        misfire_grace_time=3600,
+        replace_existing=True,
+    )
+
     scheduler.add_job(
         with_lock,
         trigger=IntervalTrigger(seconds=SCAN_INTERVAL_SECONDS),
@@ -127,7 +157,7 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
         coalesce=True,
         misfire_grace_time=600,
         replace_existing=True,
-        next_run_time=datetime.now(UTC) + timedelta(seconds=20),
+        next_run_time=datetime.now(UTC) + timedelta(minutes=2),
     )
 
     async def settle_finished() -> None:

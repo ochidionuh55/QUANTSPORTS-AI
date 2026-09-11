@@ -19,6 +19,3 @@ data/
 
 # Historical CSV data is not redistributable.
 # Bundled sample seasons are kept; add your own alongside them.
-
-railway ssh
-railway ssh.pub
