@@ -15,11 +15,7 @@ coverage.xml
 .idea/
 .vscode/
 *.log
-# Bundled season files ship with the image. The repository is private, so
-# this is not redistribution.
-data/*
-!data/*.csv
-!data/README.md
+data/
 
 # Historical CSV data is not redistributable.
 # Bundled sample seasons are kept; add your own alongside them.

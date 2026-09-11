@@ -20,6 +20,7 @@ from aiogram.types import (
 from sqlalchemy import select
 
 from app.bot.formatting import (
+    format_admin_dashboard,
     format_board,
     format_breakdown,
     format_fixture_list,
@@ -62,6 +63,7 @@ from app.providers.base import OddsProvider
 from app.providers.live import live_odds_provider
 from app.services.activity import ActivityService
 from app.services.aliases import AliasReviewService
+from app.services.analytics import AnalyticsService
 from app.services.boards import TRACK_DESCRIPTIONS, TRACK_LABELS
 from app.services.daily_scan import AnalysisRepository
 from app.services.highlights import (
@@ -1054,6 +1056,16 @@ async def handle_performance_breakdown(callback: CallbackQuery, session: object)
     )
 
 
+async def handle_stats(message: Message, user: User, session: object) -> None:
+    """Admin: operator dashboard."""
+    if not user.is_admin:
+        await message.answer("That command is not available.")
+        return
+
+    snapshot = await AnalyticsService(session).snapshot()  # type: ignore[arg-type]
+    await message.answer(format_admin_dashboard(snapshot))
+
+
 async def handle_review(message: Message, user: User, session: object) -> None:
     """Admin: list team names awaiting a mapping decision."""
     if not user.is_admin:
@@ -1232,6 +1244,7 @@ def build_router() -> Router:
     router.message.register(handle_saved, Command("saved"))
     router.message.register(handle_find, Command("find"))
     router.callback_query.register(handle_save, F.data.startswith("save:"))
+    router.message.register(handle_stats, Command("stats"))
     router.message.register(handle_review, Command("review"))
     router.message.register(handle_link, Command("link"))
     router.message.register(handle_reject_alias, Command("rejectalias"))

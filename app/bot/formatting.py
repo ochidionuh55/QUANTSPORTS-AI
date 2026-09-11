@@ -997,3 +997,96 @@ def format_my_quantsport(record: object, followed: list[object], saved_count: in
         "<i>Your record, not ours. QUANTSPORT's published track record is " "under Performance.</i>"
     )
     return "\n".join(lines)
+
+
+def format_admin_dashboard(snapshot: object) -> str:
+    """Render the operator dashboard.
+
+    Retention leads, not total users. Totals only ever rise and so always look
+    like growth; the share of last week's users who came back is what says
+    whether the product is worth opening twice.
+    """
+    lines = ["<b>📊 QUANTSPORT operations</b>", ""]
+
+    returning = getattr(snapshot, "returning_rate", None)
+    if returning is not None:
+        lines.append(f"<b>Weekly retention: {returning:.0%}</b>")
+        lines.append("<i>of last week's users who came back. The number that matters.</i>")
+    else:
+        lines.append("<b>Weekly retention:</b> too few users last week to measure.")
+    lines.append("")
+
+    lines.append("<b>Users</b>")
+    lines.append(f"Total: {snapshot.total_users:,}")  # type: ignore[attr-defined]
+    rate = getattr(snapshot, "acceptance_rate", None)
+    if rate is not None:
+        lines.append(f"Passed age gate: {snapshot.accepted_terms:,} ({rate:.0%})")  # type: ignore[attr-defined]
+    lines.append(
+        f"Active — today {snapshot.active_today} · "  # type: ignore[attr-defined]
+        f"week {snapshot.active_week} · month {snapshot.active_month}"  # type: ignore[attr-defined]
+    )
+    lines.append(
+        f"New — today {snapshot.new_today} · week {snapshot.new_week}"  # type: ignore[attr-defined]
+    )
+    lines.append("")
+
+    lines.append("<b>Engagement</b>")
+    lines.append(
+        f"Fixture views — today {snapshot.views_today} · "  # type: ignore[attr-defined]
+        f"week {snapshot.views_week} · all {snapshot.views_all:,}"  # type: ignore[attr-defined]
+    )
+    depth = getattr(snapshot, "views_per_active_user", None)
+    if depth is not None:
+        lines.append(f"Views per active user this week: {depth:.1f}")
+    lines.append(
+        f"Saved: {snapshot.saved_fixtures} · Following: {snapshot.follows}"  # type: ignore[attr-defined]
+    )
+
+    total_feedback = getattr(snapshot, "feedback_total", 0)
+    if total_feedback:
+        satisfaction = getattr(snapshot, "satisfaction", None)
+        line = f"Feedback: 👍 {snapshot.feedback_up} 👎 {snapshot.feedback_down}"  # type: ignore[attr-defined]
+        if satisfaction is not None:
+            line += f" ({satisfaction:.0%} positive)"
+        else:
+            line += " (too few to rate)"
+        lines.append(line)
+    lines.append("")
+
+    lines.append("<b>Content</b>")
+    lines.append(f"Upcoming fixtures: {snapshot.fixtures_upcoming}")  # type: ignore[attr-defined]
+    coverage = getattr(snapshot, "coverage", {}) or {}
+    if coverage:
+        parts = []
+        for grade, badge in (
+            ("fully_modelled", "🟢"),
+            ("partially_modelled", "🟡"),
+            ("data_only", "🔵"),
+            ("unsupported", "⚪"),
+        ):
+            if coverage.get(grade):
+                parts.append(f"{badge} {coverage[grade]}")
+        lines.append(" · ".join(parts))
+    lines.append(f"Highlights today: {snapshot.highlights_today}")  # type: ignore[attr-defined]
+
+    last_scan = getattr(snapshot, "last_scan", None)
+    if last_scan:
+        lines.append(f"Last scan: {last_scan:%d %b %H:%M} UTC")
+    lines.append("")
+
+    daily = getattr(snapshot, "daily_active", []) or []
+    if any(count for _, count in daily):
+        lines.append("<b>Daily active (14 days)</b>")
+        peak = max(count for _, count in daily) or 1
+        for day, count in daily[-7:]:
+            bar = "█" * max(0, round(count / peak * 12))
+            lines.append(f"{day:%d %b}  {bar} {count}")
+        lines.append("")
+
+    competitions = getattr(snapshot, "top_competitions", []) or []
+    if competitions:
+        lines.append("<b>Most viewed competitions this week</b>")
+        for name, count in competitions[:5]:
+            lines.append(f"{name}: {count}")
+
+    return "\n".join(lines)
