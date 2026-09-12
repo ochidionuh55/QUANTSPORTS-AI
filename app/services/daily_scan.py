@@ -201,6 +201,12 @@ class DailyScanService:
         record.market_probabilities = _serialise(analysis.market_probabilities)
         record.home_stats = _stats(analysis, home=True)
         record.away_stats = _stats(analysis, home=False)
+        record.model_probabilities = {
+            key: str(value) for key, value in (analysis.model_probabilities or {}).items()
+        }
+        record.component_views = [
+            {key: str(value) for key, value in view.items()} for view in analysis.component_views
+        ]
         record.components_used = list(analysis.components_used)
         record.components_dropped = list(analysis.components_dropped)
         record.provenance = {
@@ -211,6 +217,13 @@ class DailyScanService:
             "coverage_reason": analysis.unavailable_reason,
             "home_matches": analysis.home.matches,
             "away_matches": analysis.away.matches,
+            "model_probabilities": {
+                key: str(value) for key, value in (analysis.model_probabilities or {}).items()
+            },
+            "component_views": [
+                {key: str(value) for key, value in view.items()}
+                for view in analysis.component_views
+            ],
             "components_used": list(analysis.components_used),
             "components_dropped": list(analysis.components_dropped),
             "computed_at": moment.isoformat(),

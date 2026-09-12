@@ -110,6 +110,14 @@ SERVICES: Final[tuple[ServiceDefinition, ...]] = (
 
 SERVICES_BY_KEY: Final[dict[str, ServiceDefinition]] = {s.key: s for s in SERVICES}
 
+MODEL_ONLY_VERSION: Final[str] = "model-only-v1"
+"""Version recorded against published selections.
+
+Deliberately distinct from the ensemble version used elsewhere, which names
+the market prior. A selection produced without any bookmaker input must not
+carry a version string implying one was used.
+"""
+
 MIN_SAMPLE: Final[int] = 15
 """Matches each side needs before a fixture is eligible at all.
 

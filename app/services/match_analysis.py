@@ -129,6 +129,21 @@ class MatchAnalysis:
 
     components_used: tuple[str, ...] = ()
     components_dropped: tuple[str, ...] = ()
+
+    model_probabilities: dict[str, Decimal] = field(default_factory=dict)
+    """Result probabilities from our models alone, with no bookmaker input.
+
+    Kept separate from ``probabilities``, which is the published posterior and
+    equals the market prior wherever odds exist. Confusing the two would let a
+    market-derived number be presented as a model finding.
+    """
+
+    component_views: tuple[dict[str, Decimal], ...] = ()
+    """Each component's own result estimate, for measuring agreement.
+
+    Averaging hides disagreement, and disagreement is the honest signal that a
+    fixture is hard to call — so the individual views are kept.
+    """
     unavailable_reason: str | None = None
 
     def build_markets(self) -> None:
@@ -387,6 +402,18 @@ class MatchAnalysisService:
         form_estimate = self._form(analysis, home_matches, away_matches, moment)
         if form_estimate is not None:
             components.append(form_estimate)
+
+        # The model-only view, recorded before any market blending. This is
+        # what the Best of the Day services rank on.
+        if components:
+            blended = {
+                key: sum((c.probabilities[key] for c in components), Decimal(0)) / len(components)
+                for key in ("home", "draw", "away")
+            }
+            total = sum(blended.values())
+            if total > 0:
+                analysis.model_probabilities = {k: v / total for k, v in blended.items()}
+            analysis.component_views = tuple(dict(c.probabilities) for c in components)
 
         prior = self._market_prior(analysis)
 

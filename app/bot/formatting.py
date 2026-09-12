@@ -1090,3 +1090,218 @@ def format_admin_dashboard(snapshot: object) -> str:
             lines.append(f"{name}: {count}")
 
     return "\n".join(lines)
+
+
+RESULT_BADGE = {"won": "✅ WON", "lost": "❌ LOST", "void": "⚪ VOID", "pending": "⏳ PENDING"}
+
+METHOD_NOTE = (
+    "<i>Best means the highest-ranked qualifying selection under our published "
+    "methodology — probability, model agreement, sample size and coverage — "
+    "not simply the highest percentage.</i>"
+)
+
+EVIDENCE_NOTE = (
+    "⚠️ Statistical analysis only. Our models are calibrated but have not been "
+    "shown to beat bookmaker prices. No outcome is guaranteed. 18+."
+)
+
+
+def format_best_today(selections: list[object], snapshot: object | None) -> str:
+    """Render the Best of Today screen."""
+    lines = ["<b>🔥 BEST OF TODAY</b>", ""]
+
+    if snapshot is not None:
+        available = getattr(snapshot, "fixtures_available", 0)
+        modelled = getattr(snapshot, "fixtures_modelled", 0)
+        lines.append(f"<i>{modelled} of {available} fixtures modelled today.</i>")
+        lines.append("")
+
+    if not selections:
+        lines.append(
+            "<b>No qualifying selection today.</b>\n\n"
+            "Nothing on today's card cleared the bar for any service. That is a "
+            "real answer — we never publish a selection to fill a slot."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    for selection in selections:
+        lines.append(format_selection_card(selection))
+        lines.append("")
+
+    lines.append(METHOD_NOTE)
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_selection_card(selection: object, show_service: bool = True) -> str:
+    """Render one published selection compactly."""
+    badge = COVERAGE_BADGE.get(getattr(selection, "coverage", ""), "⚪")
+    status = getattr(selection, "status", "pending")
+    kickoff = getattr(selection, "kickoff", None)
+    when = f"{kickoff:%H:%M}" if kickoff else ""
+
+    head = f"<b>{selection.service_label}</b>\n" if show_service else ""  # type: ignore[attr-defined]
+    card = (
+        f"{head}"
+        f"{badge} <b>{selection.home_name} v {selection.away_name}</b>\n"  # type: ignore[attr-defined]
+        f"{when} · {getattr(selection, 'competition', None) or 'Unknown league'}\n"
+        f"<b>{selection.outcome} — {selection.probability * 100:.0f}%</b>"  # type: ignore[attr-defined]
+    )
+
+    if status != "pending":
+        home_goals = getattr(selection, "home_goals", None)
+        away_goals = getattr(selection, "away_goals", None)
+        score = f" ({home_goals}-{away_goals})" if home_goals is not None else ""
+        card += f"\n{RESULT_BADGE.get(status, status)}{score}"
+    return card
+
+
+def format_why_selection(selection: object) -> str:
+    """Explain a selection from its stored evidence only."""
+    labels = {
+        "probability": "Model probability",
+        "margin": "Margin over threshold",
+        "agreement": "Model agreement",
+        "evidence": "Sample depth",
+        "coverage": "Data coverage",
+    }
+    factors = getattr(selection, "factors", {}) or {}
+
+    lines = [
+        "<b>🔎 WHY THIS PICK</b>",
+        "",
+        f"<b>{selection.home_name} v {selection.away_name}</b>",  # type: ignore[attr-defined]
+        f"{getattr(selection, 'competition', None) or 'Unknown league'}",
+        "",
+        f"<b>{selection.market}: {selection.outcome}</b>",  # type: ignore[attr-defined]
+        f"Model probability: <b>{selection.probability * 100:.1f}%</b>",  # type: ignore[attr-defined]
+        f"Coverage: {COVERAGE_BADGE.get(getattr(selection, 'coverage', ''), '⚪')} "
+        f"{getattr(selection, 'coverage', '').replace('_', ' ')}",
+        "",
+    ]
+
+    scored = [(labels[k], v) for k, v in factors.items() if k in labels]
+    if scored:
+        lines.append("<b>Ranking breakdown</b>")
+        for label, value in scored:
+            bar = "█" * max(1, round(float(value) * 10))
+            lines.append(f"{label}: {float(value):.2f}  {bar}")
+        lines.append("")
+
+    components = getattr(selection, "components_used", []) or []
+    if components:
+        lines.append("<b>Models that ran</b>")
+        lines.append(", ".join(str(c) for c in components))
+        lines.append("")
+
+    sample = getattr(selection, "sample_size", 0)
+    if sample:
+        lines.append(f"History behind the thinner side: {sample} matches")
+
+    published = getattr(selection, "published_at", None)
+    kickoff = getattr(selection, "kickoff", None)
+    if published and kickoff:
+        lines.append(f"Published {published:%d %b %H:%M} UTC, before kickoff at {kickoff:%H:%M}.")
+    lines.append(f"Model version: {getattr(selection, 'model_version', 'unknown')}")
+
+    status = getattr(selection, "status", "pending")
+    if status != "pending":
+        lines.append("")
+        lines.append(f"Result: <b>{RESULT_BADGE.get(status, status)}</b>")
+
+    lines.append("")
+    lines.append(METHOD_NOTE)
+    return "\n".join(lines)
+
+
+def format_history_day(view: object) -> str:
+    """Render one historical day exactly as it was published."""
+    day = getattr(view, "day", None)
+    selections = getattr(view, "selections", []) or []
+    snapshot = getattr(view, "snapshot", None)
+
+    lines = [f"<b>📅 QUANTSPORT — {day:%A %d %B %Y}</b>" if day else "<b>📅 History</b>", ""]
+
+    if snapshot is not None:
+        lines.append(
+            f"<i>{getattr(snapshot, 'fixtures_modelled', 0)} of "
+            f"{getattr(snapshot, 'fixtures_available', 0)} fixtures modelled; "
+            f"{getattr(snapshot, 'services_qualified', 0)} services qualified.</i>"
+        )
+        lines.append("")
+
+    if not selections:
+        lines.append(
+            "Nothing was published on this date. Either no fixture cleared a "
+            "service threshold, or the day predates this record."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    settled = getattr(view, "settled", 0)
+    won = getattr(view, "won", 0)
+    if settled:
+        lines.append(f"<b>Settled: {won}/{settled} won</b>")
+        lines.append("")
+
+    for selection in selections:
+        lines.append(format_selection_card(selection))
+        lines.append("")
+
+    lines.append("<i>Published before kickoff and never edited since.</i>")
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_service_record(records: list[object]) -> str:
+    """Render live performance per service."""
+    lines = [
+        "<b>📈 TRACK RECORD</b>",
+        "",
+        "<i>Live selections, published before kickoff. Rates are shown only "
+        "once a service has enough settled selections to mean something.</i>",
+        "",
+    ]
+
+    any_settled = False
+    for record in records:
+        settled = getattr(record, "settled", 0)
+        label = getattr(record, "label", "")
+        status = " · under observation" if getattr(record, "status", "") == "observed" else ""
+
+        if not settled:
+            pending = getattr(record, "pending", 0)
+            lines.append(f"{label}{status}\n  no settled selections ({pending} pending)")
+            continue
+
+        any_settled = True
+        if not getattr(record, "meaningful", False):
+            lines.append(
+                f"{label}{status}\n  {record.won}/{settled} — too few to rate yet"  # type: ignore[attr-defined]
+            )
+            continue
+
+        actual = getattr(record, "actual_rate", None) or 0.0
+        expected = getattr(record, "expected_rate", None) or 0.0
+        gap = getattr(record, "gap", None) or 0.0
+        lines.append(
+            f"{label}{status}\n  <b>{record.won}/{settled} ({actual:.1%})</b> · "  # type: ignore[attr-defined]
+            f"said {expected:.1%} · gap {gap:+.1%}"
+        )
+
+    if any_settled:
+        lines.append("")
+        lines.append(
+            "<i>A gap near zero means the service knows itself. Winning at the "
+            "rate it predicts is calibration, not profit — at market prices "
+            "that still loses money.</i>"
+        )
+
+    lines.append("")
+    lines.append(FOOTER)
+    return "\n".join(lines)

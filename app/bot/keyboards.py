@@ -58,10 +58,16 @@ def menu_features(features: FeatureFlags) -> list[MenuFeature]:
         features: Runtime feature flags.
     """
     return [
-        MenuFeature("⭐ Today's highlights", "menu:highlights", phase=12, available=True),
+        MenuFeature("🔥 Best of today", "menu:best", phase=13, available=True),
+        MenuFeature("📊 Market explorer", "menu:markets", phase=13, available=True),
+        MenuFeature("👥 Team intelligence", "menu:teams", phase=13, available=True),
+        MenuFeature("🏆 Competitions", "menu:competitions", phase=13, available=True),
+        MenuFeature("📚 History", "menu:history", phase=13, available=True),
+        MenuFeature("📈 Track record", "menu:record", phase=13, available=True),
+        MenuFeature("⭐ Following", "menu:mine", phase=12, available=True),
         MenuFeature("⚽ Today's analysis", "menu:today", phase=12, available=True),
         MenuFeature("🔍 Explore", "menu:explore", phase=12, available=True),
-        MenuFeature("👤 My QUANTSPORT", "menu:mine", phase=12, available=True),
+        MenuFeature("🎯 Daily boards", "menu:highlights", phase=12, available=True),
         MenuFeature("📊 League coverage", "menu:leagues", phase=12, available=True),
         MenuFeature("📈 Model performance", "menu:performance", phase=12, available=True),
         MenuFeature("📖 How it works", "menu:how_it_works", phase=3, available=True),

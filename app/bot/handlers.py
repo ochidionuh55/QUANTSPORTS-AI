@@ -7,7 +7,7 @@ booking codes — those arrive with their phases and are not hinted at here.
 from __future__ import annotations
 
 from collections.abc import Sequence
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 
 from aiogram import F, Router
 from aiogram.filters import Command, CommandStart
@@ -21,21 +21,25 @@ from sqlalchemy import select
 
 from app.bot.formatting import (
     format_admin_dashboard,
+    format_best_today,
     format_board,
     format_breakdown,
     format_fixture_list,
     format_highlight,
+    format_history_day,
     format_home,
     format_league_profile,
     format_market_menu,
     format_my_quantsport,
     format_performance,
     format_search_results,
+    format_service_record,
     format_stored_detail,
     format_summary_line,
     format_team_profile,
     format_track_record,
     format_why,
+    format_why_selection,
 )
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
 from app.core.config import Settings
@@ -81,6 +85,7 @@ from app.services.queries import (
     FixtureQueryService,
     probability_for,
 )
+from app.services.selections import SelectionService
 from app.services.settlement import PerformanceService
 from app.services.user_service import UserService, has_valid_acceptance
 
@@ -420,6 +425,176 @@ async def handle_highlights(
     await callback.message.edit_text(
         format_home(coverage, counts),
         reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
+    )
+
+
+def _back(*rows: list[InlineKeyboardButton]) -> InlineKeyboardMarkup:
+    """Build a keyboard, always ending at home."""
+    keyboard = [list(row) for row in rows]
+    keyboard.append([InlineKeyboardButton(text="🏠 Home", callback_data="menu:main")])
+    return InlineKeyboardMarkup(inline_keyboard=keyboard)
+
+
+async def handle_best_today(callback: CallbackQuery, session: object) -> None:
+    """Show today's published Best of the Day selections."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    service = SelectionService(session)  # type: ignore[arg-type]
+    selections = await service.today()
+    view = await service.day_view(datetime.now(UTC).date())
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for selection in selections[:10]:
+        rows.append(
+            [
+                InlineKeyboardButton(
+                    text=f"🔎 {selection.service_label}",
+                    callback_data=f"sel:{selection.id}:today",
+                )
+            ]
+        )
+    rows.append(
+        [
+            InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
+            InlineKeyboardButton(text="📈 Track record", callback_data="sel:record"),
+        ]
+    )
+
+    await callback.message.edit_text(
+        format_best_today(list(selections), view.snapshot), reply_markup=_back(*rows)
+    )
+
+
+async def handle_selection_detail(callback: CallbackQuery, session: object) -> None:
+    """Show the evidence behind one published selection."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    parts = (callback.data or "").split(":")
+    if len(parts) < 3 or not parts[1].isdigit():
+        return
+    origin = parts[2]
+
+    service = SelectionService(session)  # type: ignore[arg-type]
+    selection = await service.selection(int(parts[1]))
+    if selection is None:
+        await callback.message.edit_text(
+            "That selection is no longer available.", reply_markup=back_to_menu()
+        )
+        return
+
+    # Back returns where the user came from, not the root menu.
+    back = (
+        [InlineKeyboardButton(text="⬅️ Back to today", callback_data="menu:best")]
+        if origin == "today"
+        else [InlineKeyboardButton(text="⬅️ Back to that day", callback_data=f"hist:day:{origin}")]
+    )
+
+    await callback.message.edit_text(format_why_selection(selection), reply_markup=_back(back))
+
+
+async def handle_history_days(callback: CallbackQuery, session: object) -> None:
+    """List the dates with published selections."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    days = await SelectionService(session).available_days(limit=30)  # type: ignore[arg-type]
+    if not days:
+        await callback.message.edit_text(
+            "<b>📚 HISTORY</b>\n\nNothing has been published yet. Selections "
+            "appear here the day after they are made.",
+            reply_markup=_back(),
+        )
+        return
+
+    rows = [
+        [
+            InlineKeyboardButton(
+                text=f"{day:%a %d %b %Y}", callback_data=f"hist:day:{day.isoformat()}"
+            )
+        ]
+        for day in days[:14]
+    ]
+    await callback.message.edit_text(
+        "<b>📚 HISTORY</b>\n\nEvery selection below was published before "
+        "kickoff and has not been edited since. Open any date to see exactly "
+        "what QUANTSPORT said and what happened.",
+        reply_markup=_back(*rows),
+    )
+
+
+async def handle_history_day(callback: CallbackQuery, session: object) -> None:
+    """Show one historical day, read from storage."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    raw = (callback.data or "").split(":", 2)[-1]
+    try:
+        day = date.fromisoformat(raw)
+    except ValueError:
+        return
+
+    service = SelectionService(session)  # type: ignore[arg-type]
+    view = await service.day_view(day)
+    days = await service.available_days(limit=60)
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for selection in view.selections[:10]:
+        rows.append(
+            [
+                InlineKeyboardButton(
+                    text=f"🔎 {selection.service_label}",
+                    callback_data=f"sel:{selection.id}:{day.isoformat()}",
+                )
+            ]
+        )
+
+    # Day-to-day navigation across whatever exists, not a fixed window.
+    ordered = sorted(days)
+    if day in ordered:
+        index = ordered.index(day)
+        navigation: list[InlineKeyboardButton] = []
+        if index > 0:
+            navigation.append(
+                InlineKeyboardButton(
+                    text="◀️ Previous",
+                    callback_data=f"hist:day:{ordered[index - 1].isoformat()}",
+                )
+            )
+        if index < len(ordered) - 1:
+            navigation.append(
+                InlineKeyboardButton(
+                    text="Next ▶️",
+                    callback_data=f"hist:day:{ordered[index + 1].isoformat()}",
+                )
+            )
+        if navigation:
+            rows.append(navigation)
+
+    rows.append([InlineKeyboardButton(text="⬅️ All dates", callback_data="hist:days")])
+    await callback.message.edit_text(format_history_day(view), reply_markup=_back(*rows))
+
+
+async def handle_service_record(callback: CallbackQuery, session: object) -> None:
+    """Show live performance for every published service."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    records = await SelectionService(session).track_record()  # type: ignore[arg-type]
+    await callback.message.edit_text(
+        format_service_record(list(records)),
+        reply_markup=_back(
+            [
+                InlineKeyboardButton(text="⬅️ Back to today", callback_data="menu:best"),
+                InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
+            ]
+        ),
     )
 
 
@@ -1224,15 +1399,27 @@ def build_router() -> Router:
     router.callback_query.register(handle_explore, F.data == "menu:explore")
     router.callback_query.register(handle_why, F.data.startswith("why:"))
     router.callback_query.register(handle_board, F.data.startswith("board:"))
+    router.callback_query.register(handle_best_today, F.data == "menu:best")
+    router.callback_query.register(handle_service_record, F.data.in_({"sel:record", "menu:record"}))
+    router.callback_query.register(handle_history_days, F.data.in_({"hist:days", "menu:history"}))
+
+    router.callback_query.register(handle_history_day, F.data.startswith("hist:day:"))
+    router.callback_query.register(handle_selection_detail, F.data.startswith("sel:"))
     router.callback_query.register(handle_follow, F.data.startswith("follow:"))
     router.callback_query.register(handle_my_quantsport, F.data == "menu:mine")
     router.callback_query.register(handle_track_record, F.data == "hl:record")
     router.callback_query.register(handle_highlight_history, F.data == "hl:history")
-    router.callback_query.register(handle_markets_menu, F.data == "markets:menu")
+    router.callback_query.register(
+        handle_markets_menu, F.data.in_({"markets:menu", "menu:markets"})
+    )
     router.callback_query.register(handle_market_browse, F.data.startswith("market:"))
-    router.callback_query.register(handle_explore_teams, F.data == "explore:teams")
+    router.callback_query.register(
+        handle_explore_teams, F.data.in_({"explore:teams", "menu:teams"})
+    )
     router.callback_query.register(handle_explore_search, F.data == "explore:search")
-    router.callback_query.register(handle_explore_leagues, F.data == "explore:leagues")
+    router.callback_query.register(
+        handle_explore_leagues, F.data.in_({"explore:leagues", "menu:competitions"})
+    )
     router.callback_query.register(handle_league_profile, F.data.startswith("league:"))
     router.callback_query.register(handle_team_button, F.data.startswith("team:"))
     router.message.register(handle_team, Command("team"))

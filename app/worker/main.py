@@ -29,6 +29,7 @@ from app.infrastructure.redis import RedisClient
 from app.providers.live import live_odds_provider
 from app.services.daily_scan import DailyScanService
 from app.services.highlights import HighlightService
+from app.services.selections import SelectionService
 from app.services.settlement import SettlementService
 from app.utils.lifecycle import run_until_shutdown
 from app.worker.bootstrap import bootstrap
@@ -130,6 +131,13 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
             async with database.session() as session:
                 chosen = await HighlightService(session).record_daily()
             logger.info("highlight.recorded", summary=chosen.summary())
+
+            # Best of the Day is published straight after the scan, from
+            # fixtures that have not kicked off. Publishing at selection time
+            # is what makes the track record a record rather than a claim.
+            async with database.session() as session:
+                published = await SelectionService(session).publish()
+            logger.info("selections.stored", summary=published.summary())
         except Exception as exc:
             logger.exception("scan.failed", error_type=type(exc).__name__)
 

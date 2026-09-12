@@ -19,6 +19,11 @@ from app.database.models.historical import HistoricalMatch, ModelVersion
 from app.database.models.ingestion import DatasetIngestion
 from app.database.models.match import Market, Match, OddsSnapshot, Outcome
 from app.database.models.scan import BookingCode, Prediction, Scan
+from app.database.models.selections import (
+    DailySnapshot,
+    SelectionAudit,
+    ServiceSelection,
+)
 from app.database.models.team import Competition, Team, TeamAlias
 from app.database.models.tracking import SettledPrediction, UserFeedback
 from app.database.models.user import User, WalletTransaction
@@ -27,6 +32,7 @@ __all__ = [
     "Base",
     "BookingCode",
     "Competition",
+    "DailySnapshot",
     "DatasetIngestion",
     "FixtureView",
     "HighlightFollow",
@@ -40,6 +46,8 @@ __all__ = [
     "Prediction",
     "SavedFixture",
     "Scan",
+    "SelectionAudit",
+    "ServiceSelection",
     "SettledPrediction",
     "StoredAnalysis",
     "Team",

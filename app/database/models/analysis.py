@@ -79,6 +79,22 @@ class StoredAnalysis(IntPrimaryKeyMixin, TimestampMixin, Base):
     market_odds: Mapped[dict[str, object] | None] = mapped_column(JSONType)
     market_probabilities: Mapped[dict[str, object] | None] = mapped_column(JSONType)
 
+    model_probabilities: Mapped[dict[str, object]] = mapped_column(
+        JSONType, nullable=False, default=dict, server_default=text("'{}'")
+    )
+    """Result probabilities from our models alone, with no bookmaker input.
+
+    Stored apart from ``market_probabilities`` and from ``markets``, both of
+    which carry the market prior wherever odds exist. The Best of the Day
+    services rank on this column and nothing else, so a market-derived number
+    can never be presented as a model finding.
+    """
+
+    component_views: Mapped[list[dict[str, object]]] = mapped_column(
+        JSONType, nullable=False, default=list, server_default=text("'[]'")
+    )
+    """Each model component's own view, kept so agreement can be measured."""
+
     home_stats: Mapped[dict[str, object]] = mapped_column(
         JSONType, nullable=False, default=dict, server_default=text("'{}'")
     )
