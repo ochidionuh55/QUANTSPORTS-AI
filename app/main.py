@@ -19,6 +19,7 @@ from app.core.config import ServiceRole, Settings, get_settings
 from app.core.logging import configure_logging, get_correlation_id, get_logger
 from app.core.version import APP_PHASE, APP_VERSION
 from app.infrastructure.database import Database
+from app.infrastructure.migrations import ensure_schema
 from app.infrastructure.redis import RedisClient
 
 logger = get_logger(__name__)
@@ -39,6 +40,12 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
 
     await database.connect()
     await redis.connect()
+
+    # The schema is the application's own responsibility. Leaving it to a
+    # deployment step means a missed migration fails silently: the service
+    # starts, reports healthy, and every screen touching a new column breaks
+    # with nothing shown to the user.
+    await ensure_schema(settings, database, redis, required=True)
     app.state.database = database
     app.state.redis = redis
 

@@ -25,6 +25,7 @@ from app.core.health import build_health_report
 from app.core.logging import configure_logging, get_logger, set_correlation_id
 from app.infrastructure.database import Database
 from app.infrastructure.heartbeat import HeartbeatWriter
+from app.infrastructure.migrations import ensure_schema
 from app.infrastructure.redis import RedisClient
 from app.providers.live import live_odds_provider
 from app.services.daily_scan import DailyScanService
@@ -225,6 +226,7 @@ async def run_worker(settings: Settings) -> None:
         nonlocal scheduler
         await database.connect()
         await redis.connect()
+        await ensure_schema(settings, database, redis, required=True)
         if not await redis.ping():
             raise RuntimeError("Redis is unreachable; the worker cannot start.")
         await heartbeat.start()

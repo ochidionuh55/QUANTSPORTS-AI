@@ -22,12 +22,14 @@ from app.bot.middleware import (
     AcceptanceMiddleware,
     ContextMiddleware,
     DatabaseMiddleware,
+    ErrorMiddleware,
     UserMiddleware,
 )
 from app.core.config import ServiceRole, Settings, get_settings
 from app.core.logging import configure_logging, get_correlation_id, get_logger
 from app.infrastructure.database import Database
 from app.infrastructure.heartbeat import HeartbeatWriter
+from app.infrastructure.migrations import ensure_schema
 from app.infrastructure.redis import RedisClient
 from app.utils.lifecycle import run_until_shutdown
 
@@ -49,6 +51,11 @@ def build_dispatcher(database: Database, settings: Settings) -> Dispatcher:
     dispatcher["settings"] = settings
 
     for observer in (dispatcher.message, dispatcher.callback_query):
+        # Outermost, so a failure anywhere inside still reaches the user as an
+        # answer. A button that silently does nothing is the worst outcome:
+        # indistinguishable from a slow one, and invisible to whoever could fix
+        # it.
+        observer.middleware(ErrorMiddleware())
         observer.middleware(ContextMiddleware())
         observer.middleware(DatabaseMiddleware(database))
         observer.middleware(UserMiddleware())
@@ -103,6 +110,7 @@ async def run_bot(settings: Settings) -> None:
         nonlocal polling_task
         await database.connect()
         await redis.connect()
+        await ensure_schema(settings, database, redis, required=False)
         if not await redis.ping():
             raise RuntimeError("Redis is unreachable; the bot cannot start.")
         await heartbeat.start()

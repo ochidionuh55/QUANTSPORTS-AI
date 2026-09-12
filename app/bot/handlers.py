@@ -1038,19 +1038,57 @@ async def handle_market_browse(callback: CallbackQuery, session: object) -> None
     )
 
 
-async def handle_explore_teams(callback: CallbackQuery) -> None:
-    """Prompt for a club name."""
+async def handle_explore_teams(callback: CallbackQuery, session: object) -> None:
+    """Offer the clubs playing today, rather than asking for typing.
+
+    A screen whose only instruction is "type a command" puts the work on the
+    user and hides the fact that hundreds of clubs are available. Showing the
+    sides actually playing today makes the feature discoverable in one tap,
+    and typing still works for anyone who knows the club they want.
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
-    await callback.message.edit_text(
-        "<b>Teams</b>\n\n"
-        "Send <code>/team Arsenal</code> for a club's full record: results, "
-        "goals, home and away splits, over/under and BTTS rates, recent form "
-        "and head-to-head.\n\n"
-        "All counted from matches on record — no forecast involved.",
-        reply_markup=back_to_menu(),
-    )
+
+    records = await AnalysisRepository(session).upcoming(limit=40)  # type: ignore[arg-type]
+
+    # Each club once, in kickoff order, so the list reads as today's football.
+    seen: set[str] = set()
+    clubs: list[str] = []
+    for record in records:
+        for name in (record.home_name, record.away_name):
+            if name and name not in seen:
+                seen.add(name)
+                clubs.append(name)
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for index in range(0, min(len(clubs), 16), 2):
+        pair = clubs[index : index + 2]
+        rows.append(
+            [InlineKeyboardButton(text=name, callback_data=f"team:{name[:56]}") for name in pair]
+        )
+
+    if clubs:
+        body = (
+            "<b>👥 TEAM INTELLIGENCE</b>\n\n"
+            "Tap any club playing today for its full record — results, goals, "
+            "home and away splits, over/under and BTTS rates, recent form and "
+            "head-to-head.\n\n"
+            "Any other club: send <code>/team Arsenal</code>.\n\n"
+            "<i>All counted from matches on record. No forecast involved.</i>"
+        )
+    else:
+        body = (
+            "<b>👥 TEAM INTELLIGENCE</b>\n\n"
+            "No fixtures are loaded right now, so there are no clubs to list.\n\n"
+            "Send <code>/team Arsenal</code> for any club in our records: "
+            "results, goals, home and away splits, over/under and BTTS rates, "
+            "recent form and head-to-head.\n\n"
+            "<i>All counted from matches on record. No forecast involved.</i>"
+        )
+
+    rows.append([InlineKeyboardButton(text="🏠 Home", callback_data="menu:main")])
+    await callback.message.edit_text(body, reply_markup=InlineKeyboardMarkup(inline_keyboard=rows))
 
 
 async def handle_explore_search(callback: CallbackQuery) -> None:

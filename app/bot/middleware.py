@@ -167,3 +167,57 @@ __all__ = [
     "Update",
     "UserMiddleware",
 ]
+
+
+class ErrorMiddleware(BaseMiddleware):
+    """Turns an unexpected failure into an answer rather than silence.
+
+    A handler raising inside Telegram produces the worst possible experience:
+    the button appears to do nothing, the user taps again, and nothing happens
+    again. They cannot tell a broken feature from a slow one, and there is no
+    signal that anything went wrong.
+
+    Every failure is therefore caught here, logged with its correlation id, and
+    answered with a short apology. The internal detail stays in the logs — a
+    stack trace is information about our systems, not something a user needs or
+    should see.
+    """
+
+    def __init__(self) -> None:
+        self._logger = get_logger(__name__)
+
+    async def __call__(self, handler: Handler, event: TelegramObject, data: dict[str, Any]) -> Any:
+        """Run the handler, answering rather than failing silently."""
+        try:
+            return await handler(event, data)
+        except Exception as exc:
+            self._logger.exception(
+                "bot.handler_failed",
+                error_type=type(exc).__name__,
+                event_type=type(event).__name__,
+            )
+            await self._apologise(event)
+            return None
+
+    async def _apologise(self, event: TelegramObject) -> None:
+        """Tell the user something went wrong, without internal detail."""
+        message = (
+            "Something went wrong on our side handling that. It has been "
+            "logged and we are looking at it. Please try again shortly."
+        )
+        answer = getattr(event, "answer", None)
+        if not callable(answer):
+            return
+
+        try:
+            if isinstance(event, CallbackQuery) or hasattr(event, "message"):
+                # Answering a callback clears the button's loading state, so
+                # the interface does not appear frozen.
+                await answer("Something went wrong. Please try again.", show_alert=True)
+                target = getattr(event, "message", None)
+                if isinstance(target, Message):
+                    await target.answer(message)
+            else:
+                await answer(message)
+        except Exception:  # noqa: BLE001 - a failure to apologise must not raise
+            self._logger.warning("bot.apology_failed")
