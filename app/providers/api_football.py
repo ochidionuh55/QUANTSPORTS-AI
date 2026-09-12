@@ -99,6 +99,43 @@ _MATCH_WINNER_BET_ID: Final[int] = 1
 """The vendor's id for the 1X2 market."""
 
 
+MIN_REQUEST_INTERVAL_SECONDS = 6.5
+"""Spacing between requests.
+
+The free plan allows ten requests a minute, and exceeding it returns an error
+rather than a queue — so a burst does not merely wait, it loses the data. Six
+and a half seconds keeps roughly nine requests a minute with margin for clock
+drift, which costs a little time and saves every fixture's prices.
+"""
+
+
+class RequestPacer:
+    """Spaces outgoing requests to respect a per-minute ceiling.
+
+    Waiting is better than failing here. A refused request returns nothing and
+    the fixture is analysed without prices; a delayed one returns the data.
+    """
+
+    def __init__(self, interval: float = MIN_REQUEST_INTERVAL_SECONDS) -> None:
+        self._interval = interval
+        self._last: float | None = None
+        self._lock = asyncio.Lock()
+
+    async def wait(self) -> None:
+        """Block until the next request may be sent."""
+        if self._interval <= 0:
+            return
+        async with self._lock:
+            loop = asyncio.get_running_loop()
+            now = loop.time()
+            if self._last is not None:
+                elapsed = now - self._last
+                if elapsed < self._interval:
+                    await asyncio.sleep(self._interval - elapsed)
+                    now = loop.time()
+            self._last = now
+
+
 class RequestBudget:
     """Tracks daily request usage against a quota.
 
@@ -171,6 +208,7 @@ class ApiFootballProvider(OddsProvider):
         daily_limit: int = FREE_TIER_DAILY_REQUESTS,
         max_days_ahead: int = FREE_TIER_MAX_DAYS_AHEAD,
         client: httpx.AsyncClient | None = None,
+        request_interval: float = MIN_REQUEST_INTERVAL_SECONDS,
     ) -> None:
         """Create the provider.
 
@@ -183,6 +221,8 @@ class ApiFootballProvider(OddsProvider):
             daily_limit: Plan request allowance.
             max_days_ahead: How many days beyond today the plan permits.
             client: Injected HTTP client, for tests.
+            request_interval: Seconds between requests. Zero disables pacing,
+                which suits tests and any plan without a per-minute ceiling.
         """
         self._name = name
         self._api_key = api_key
@@ -192,6 +232,7 @@ class ApiFootballProvider(OddsProvider):
         self._client = client
         self._max_days_ahead = max_days_ahead
         self.budget = RequestBudget(daily_limit)
+        self._pacer = RequestPacer(request_interval)
 
     @classmethod
     def from_config(cls, config: ProviderConfig) -> ApiFootballProvider:
@@ -204,6 +245,9 @@ class ApiFootballProvider(OddsProvider):
             timeout_seconds=config.timeout_seconds,
             daily_limit=int(config.options.get("daily_limit", FREE_TIER_DAILY_REQUESTS)),
             max_days_ahead=int(config.options.get("max_days_ahead", FREE_TIER_MAX_DAYS_AHEAD)),
+            request_interval=float(
+                config.options.get("request_interval", MIN_REQUEST_INTERVAL_SECONDS)
+            ),
         )
 
     @property
@@ -248,6 +292,8 @@ class ApiFootballProvider(OddsProvider):
                 provider_name=self._name,
                 operation=path,
             )
+
+        await self._pacer.wait()
 
         self.budget.spend()
         client = self._client or httpx.AsyncClient(timeout=self._timeout)

@@ -10,6 +10,7 @@ what stops a bad key from being retried into a lockout.
 
 from __future__ import annotations
 
+import asyncio
 from datetime import UTC, datetime, timedelta
 from decimal import Decimal
 from typing import Any
@@ -20,8 +21,10 @@ import pytest
 from app.providers.api_football import (
     FREE_TIER_DAILY_REQUESTS,
     LEAGUE_IDS,
+    MIN_REQUEST_INTERVAL_SECONDS,
     ApiFootballProvider,
     RequestBudget,
+    RequestPacer,
 )
 from app.providers.errors import (
     ProviderAuthenticationError,
@@ -89,6 +92,7 @@ def _odds_payload() -> dict[str, Any]:
 def _provider(handler: Any, **kwargs: Any) -> ApiFootballProvider:
     """Build a provider backed by a mock transport."""
     client = httpx.AsyncClient(transport=httpx.MockTransport(handler))
+    kwargs.setdefault("request_interval", 0.0)
     return ApiFootballProvider(api_key="test-key", client=client, **kwargs)
 
 
@@ -393,14 +397,14 @@ class TestHealthAndConfig:
         assert "No API key" in (health.detail or "")
 
     async def test_exhausted_quota_is_unhealthy(self) -> None:
-        provider = ApiFootballProvider(api_key="k", daily_limit=1)
+        provider = ApiFootballProvider(api_key="k", daily_limit=1, request_interval=0.0)
         provider.budget.spend(NOW)
         health = await provider.health_check()
         assert health.healthy is False
         assert "quota" in (health.detail or "").lower()
 
     async def test_healthy_reports_remaining_quota(self) -> None:
-        health = await ApiFootballProvider(api_key="k").health_check()
+        health = await ApiFootballProvider(api_key="k", request_interval=0.0).health_check()
         assert health.healthy is True
         assert str(FREE_TIER_DAILY_REQUESTS) in (health.detail or "")
 
@@ -432,3 +436,57 @@ class TestHealthAndConfig:
         assert LEAGUE_IDS == REGISTRY
         assert set(LEAGUE_IDS) <= set(CSV_COMPETITIONS)
         assert len(LEAGUE_IDS) > 30
+
+
+class TestRequestPacing:
+    """Spacing requests under the plan's per-minute ceiling.
+
+    The free plan refuses a burst rather than queuing it, so an unpaced scan
+    does not merely run slowly — it silently loses every fixture's prices and
+    the card fills with market-less analyses.
+    """
+
+    async def test_first_request_is_not_delayed(self) -> None:
+        """Nothing is owed before anything has been sent."""
+        pacer = RequestPacer(interval=10.0)
+        started = asyncio.get_running_loop().time()
+        await pacer.wait()
+
+        assert asyncio.get_running_loop().time() - started < 0.5
+
+    async def test_second_request_waits(self) -> None:
+        pacer = RequestPacer(interval=0.2)
+        await pacer.wait()
+
+        started = asyncio.get_running_loop().time()
+        await pacer.wait()
+        elapsed = asyncio.get_running_loop().time() - started
+
+        assert elapsed >= 0.15
+
+    async def test_zero_interval_disables_pacing(self) -> None:
+        """Paid plans and tests should not pay for a ceiling they do not have."""
+        pacer = RequestPacer(interval=0.0)
+        started = asyncio.get_running_loop().time()
+        for _ in range(5):
+            await pacer.wait()
+
+        assert asyncio.get_running_loop().time() - started < 0.5
+
+    async def test_concurrent_callers_are_serialised(self) -> None:
+        """Ten tasks starting at once must not become ten simultaneous calls."""
+        pacer = RequestPacer(interval=0.05)
+        started = asyncio.get_running_loop().time()
+        await asyncio.gather(*(pacer.wait() for _ in range(4)))
+        elapsed = asyncio.get_running_loop().time() - started
+
+        assert elapsed >= 0.1
+
+    async def test_default_interval_stays_under_the_free_ceiling(self) -> None:
+        """Ten a minute is the limit, so the gap must exceed six seconds."""
+        assert MIN_REQUEST_INTERVAL_SECONDS > 60 / 10
+
+    async def test_provider_paces_by_default(self) -> None:
+        """A provider built without argument must not burst."""
+        provider = ApiFootballProvider(api_key="k")
+        assert provider._pacer._interval == MIN_REQUEST_INTERVAL_SECONDS
