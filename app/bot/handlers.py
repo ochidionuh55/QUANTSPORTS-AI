@@ -22,9 +22,12 @@ from sqlalchemy import select
 
 from app.bot.charts import ServiceBar, track_record_chart
 from app.bot.formatting import (
-    BASKETBALL_STATUS,
+    HOW_IT_WORKS as HOW_IT_WORKS_GUIDE,
+)
+from app.bot.formatting import (
     SPORT_PICKER,
     format_admin_dashboard,
+    format_basketball_status,
     format_board,
     format_breakdown,
     format_fixture_list,
@@ -47,10 +50,8 @@ from app.bot.formatting import (
     format_why,
     format_why_selection,
 )
-from app.bot.formatting import (
-    HOW_IT_WORKS as HOW_IT_WORKS_GUIDE,
-)
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
+from app.core.basketball_competitions import BASKETBALL_COMPETITIONS
 from app.core.config import Settings
 from app.core.logging import get_logger
 from app.core.terms import (
@@ -465,7 +466,7 @@ async def handle_basketball(callback: CallbackQuery) -> None:
     if not isinstance(callback.message, Message):
         return
     await callback.message.edit_text(
-        BASKETBALL_STATUS,
+        format_basketball_status(list(BASKETBALL_COMPETITIONS.values())),
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text="⚽ Use football", callback_data="menu:main")],

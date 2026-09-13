@@ -1564,3 +1564,58 @@ HOW_IT_WORKS = (
     "winners is either mistaken or lying, and the maths does not care which.\n\n"
     "⚠️ 18+. Analytical information only. No outcome is guaranteed."
 )
+
+
+def format_basketball_status(competitions: list[object]) -> str:
+    """Render every basketball competition and where it stands.
+
+    Listing the unready leagues is deliberate. Showing only the one that works
+    would imply the others were never considered; showing all of them with an
+    honest status says what exists, what is coming, and what is blocking it.
+    """
+    lines = [
+        "<b>🏀 BASKETBALL</b>",
+        "",
+        "<i>The model is built and tested. Each competition is added only once "
+        "its own numbers have been measured.</i>",
+        "",
+    ]
+
+    live = [c for c in competitions if getattr(c, "publishable", False)]
+    pending = [c for c in competitions if not getattr(c, "publishable", False)]
+
+    if live:
+        lines.append("<b>Live</b>")
+        for entry in live:
+            lines.append(
+                f"✅ <b>{entry.name}</b> · {entry.country}\n"  # type: ignore[attr-defined]
+                f"   {entry.status_line}\n"  # type: ignore[attr-defined]
+                f"   Season: {entry.season_months}"  # type: ignore[attr-defined]
+            )
+        lines.append("")
+
+    if pending:
+        lines.append("<b>Not yet published</b>")
+        for entry in pending:
+            lines.append(
+                f"⏳ <b>{entry.name}</b> · {entry.country}\n"  # type: ignore[attr-defined]
+                f"   {entry.status_line}"  # type: ignore[attr-defined]
+            )
+        lines.append("")
+
+    lines.append(
+        "<b>Why not just switch them on?</b>\n"
+        "An NBA game totals around 225 points; a WNBA or EuroLeague game around "
+        "160. The model's structure carries across competitions but its numbers "
+        "do not, so borrowing one league's settings for another would produce "
+        "figures that look confident and are wrong.\n\n"
+        "Each competition needs its own history, its own fitted parameters and "
+        "its own measured calibration before it publishes anything."
+    )
+    lines.append("")
+    lines.append(
+        "<i>On the NBA: fitted on 2011-2022, tested on 2022-2026. Calibrated, "
+        "with no demonstrated edge over closing prices. We will not claim one "
+        "we cannot show.</i>"
+    )
+    return "\n".join(lines)
