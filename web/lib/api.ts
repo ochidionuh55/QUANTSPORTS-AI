@@ -1,0 +1,102 @@
+/**
+ * The QUANTSPORT intelligence layer.
+ *
+ * Every figure the website shows comes from here. Nothing is computed in the
+ * frontend — not a probability, not a rate, not a count — so the site and the
+ * Telegram bot can never disagree about what was published.
+ */
+
+const API = process.env.QUANTSPORT_API ?? "http://localhost:8000";
+
+export type PlatformSummary = {
+  matches: number;
+  competitions: number;
+  teams: number;
+  services: number;
+  fixtures_today: number;
+  fixtures_modelled_today: number;
+  selections_today: number;
+  updated_at: string;
+};
+
+export type ServiceStatus = {
+  key: string;
+  label: string;
+  market: string;
+  outcome: string;
+  status: "validated" | "observation" | "withheld";
+  published: boolean;
+  selections_today: number;
+};
+
+export type SelectionCard = {
+  id: number;
+  service_key: string;
+  service_label: string;
+  home_name: string;
+  away_name: string;
+  competition: string | null;
+  kickoff: string;
+  market: string;
+  outcome: string;
+  probability: number;
+  coverage: string;
+  status: string;
+  home_goals: number | null;
+  away_goals: number | null;
+  published_at: string;
+  model_version: string;
+  rationale: string;
+};
+
+export type FixtureCard = {
+  fixture_id: string;
+  home_name: string;
+  away_name: string;
+  competition: string | null;
+  kickoff: string;
+  coverage: string;
+  strongest_market: string | null;
+  strongest_probability: number | null;
+  services: string[];
+};
+
+/**
+ * Fetch from the intelligence layer.
+ *
+ * Failures return null rather than throwing. A page that cannot reach the API
+ * should say the data is unavailable, not collapse into an error screen — the
+ * rest of the page is still worth reading.
+ */
+async function get<T>(path: string, revalidate = 300): Promise<T | null> {
+  try {
+    const response = await fetch(`${API}${path}`, {
+      next: { revalidate },
+      headers: { accept: "application/json" },
+    });
+    if (!response.ok) return null;
+    return (await response.json()) as T;
+  } catch {
+    return null;
+  }
+}
+
+export const getSummary = () => get<PlatformSummary>("/api/v1/summary", 900);
+export const getServices = () => get<ServiceStatus[]>("/api/v1/services", 300);
+export const getToday = () => get<FixtureCard[]>("/api/v1/today", 300);
+export const getBestOfToday = () =>
+  get<SelectionCard[]>("/api/v1/best-of-today", 300);
+
+/** Format a probability the way the product speaks about one. */
+export function asPercent(value: number | null | undefined): string {
+  if (value === null || value === undefined) return "—";
+  return `${Math.round(value * 100)}%`;
+}
+
+/** Coverage grades, shared with the bot so the two never diverge. */
+export const COVERAGE: Record<string, { badge: string; label: string }> = {
+  fully_modelled: { badge: "🟢", label: "Full model" },
+  partially_modelled: { badge: "🟡", label: "Partial" },
+  data_only: { badge: "🔵", label: "Market view" },
+  unsupported: { badge: "⚪", label: "Insufficient data" },
+};

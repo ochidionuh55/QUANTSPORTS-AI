@@ -14,7 +14,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from app.api.middleware import CorrelationIdMiddleware, RequestLoggingMiddleware
-from app.api.routes import health, system
+from app.api.routes import health, public, system
 from app.core.config import ServiceRole, Settings, get_settings
 from app.core.logging import configure_logging, get_correlation_id, get_logger
 from app.core.version import APP_PHASE, APP_VERSION
@@ -102,6 +102,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
     app.include_router(health.router)
     app.include_router(system.router)
+    app.include_router(public.router)
 
     @app.exception_handler(Exception)
     async def unhandled_exception_handler(request: Request, exc: Exception) -> JSONResponse:

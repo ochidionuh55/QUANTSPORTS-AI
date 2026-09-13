@@ -6,9 +6,11 @@ fakes by overriding these dependencies rather than patching module globals.
 
 from __future__ import annotations
 
+from collections.abc import AsyncIterator
 from typing import Annotated
 
 from fastapi import Depends, Request
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import Settings
 from app.infrastructure.database import Database
@@ -33,3 +35,16 @@ def get_redis(request: Request) -> RedisClient:
 SettingsDep = Annotated[Settings, Depends(get_settings_dep)]
 DatabaseDep = Annotated[Database, Depends(get_database)]
 RedisDep = Annotated[RedisClient, Depends(get_redis)]
+
+
+async def get_session(database: DatabaseDep) -> AsyncIterator[AsyncSession]:
+    """Yield a database session for the life of one request.
+
+    Committed on success and rolled back on failure, so a handler that raises
+    cannot leave a partial write behind.
+    """
+    async with database.session() as session:
+        yield session
+
+
+SessionDep = Annotated[AsyncSession, Depends(get_session)]
