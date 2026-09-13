@@ -12,6 +12,7 @@ from datetime import UTC, date, datetime
 from aiogram import F, Router
 from aiogram.filters import Command, CommandStart
 from aiogram.types import (
+    BufferedInputFile,
     CallbackQuery,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -19,7 +20,10 @@ from aiogram.types import (
 )
 from sqlalchemy import select
 
+from app.bot.charts import ServiceBar, track_record_chart
 from app.bot.formatting import (
+    BASKETBALL_STATUS,
+    SPORT_PICKER,
     format_admin_dashboard,
     format_board,
     format_breakdown,
@@ -42,6 +46,9 @@ from app.bot.formatting import (
     format_track_record,
     format_why,
     format_why_selection,
+)
+from app.bot.formatting import (
+    HOW_IT_WORKS as HOW_IT_WORKS_GUIDE,
 )
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
 from app.core.config import Settings
@@ -115,25 +122,6 @@ NO_PROVIDER = (
     "nothing to show for today. Historical analysis is unaffected."
 )
 
-HOW_IT_WORKS = (
-    "<b>How it works</b>\n\n"
-    "QUANTSPORT AI compares statistical estimates of match outcomes against "
-    "market prices, and looks for cases where the two disagree by more than "
-    "the model's measured error.\n\n"
-    "The models are validated against historical data before any output is "
-    "shown to users. Until that validation passes, no selections are produced "
-    "at all — an unvalidated model produces noise, not edge.\n\n"
-    "<b>What you get today</b>\n"
-    "Match probabilities, expected goals and goals-market estimates for "
-    "fixtures in our covered leagues, plus each side's recent record.\n\n"
-    "<b>What you do not get</b>\n"
-    "Betting selections. Our models are well calibrated, but backtesting "
-    "across nine seasons shows they do not beat bookmaker prices. Publishing "
-    "selections on that basis would be dishonest, so we do not.\n\n"
-    "<b>Coverage grades</b>\n"
-    "🟢 Fully modelled · 🟡 Partially modelled · 🔵 Data only · ⚪ Unsupported"
-)
-
 
 def _menu_text(user: User) -> str:
     """Return the main menu body for a user."""
@@ -148,9 +136,17 @@ def _menu_text(user: User) -> str:
 async def handle_start(message: Message, user: User, session: object, settings: Settings) -> None:
     """Begin onboarding, or show the menu to an already-accepted user."""
     if has_valid_acceptance(user):
+        # The sport comes first. Asking which game someone is here for is a
+        # smaller question than a fifteen-button menu, and it makes the second
+        # sport visible before it exists rather than after.
         await message.answer(
-            f"{WELCOME}\n\n{_menu_text(user)}",
-            reply_markup=main_menu(settings.features),
+            SPORT_PICKER,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [InlineKeyboardButton(text="⚽ Football", callback_data="menu:main")],
+                    [InlineKeyboardButton(text="🏀 Basketball", callback_data="sport:basketball")],
+                ]
+            ),
         )
         return
 
@@ -216,7 +212,7 @@ async def handle_how_it_works(callback: CallbackQuery) -> None:
     """Explain the approach without promising outcomes."""
     await callback.answer()
     if isinstance(callback.message, Message):
-        await callback.message.edit_text(HOW_IT_WORKS, reply_markup=back_to_menu())
+        await callback.message.edit_text(HOW_IT_WORKS_GUIDE, reply_markup=back_to_menu())
 
 
 async def handle_terms_button(callback: CallbackQuery) -> None:
@@ -443,6 +439,42 @@ def _back(*rows: list[InlineKeyboardButton]) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=keyboard)
 
 
+async def handle_sport_picker(callback: CallbackQuery) -> None:
+    """Show the sport chooser."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+    await callback.message.edit_text(
+        SPORT_PICKER,
+        reply_markup=InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text="⚽ Football", callback_data="menu:main")],
+                [InlineKeyboardButton(text="🏀 Basketball", callback_data="sport:basketball")],
+            ]
+        ),
+    )
+
+
+async def handle_basketball(callback: CallbackQuery) -> None:
+    """Say plainly where basketball stands.
+
+    A button that opens an empty room is worse than one that explains itself,
+    so this states what exists, what was found, and when it opens.
+    """
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+    await callback.message.edit_text(
+        BASKETBALL_STATUS,
+        reply_markup=InlineKeyboardMarkup(
+            inline_keyboard=[
+                [InlineKeyboardButton(text="⚽ Use football", callback_data="menu:main")],
+                [InlineKeyboardButton(text="⬅️ Back", callback_data="sport:pick")],
+            ]
+        ),
+    )
+
+
 async def handle_best_today(callback: CallbackQuery, session: object) -> None:
     """Show the service chooser, not every selection at once.
 
@@ -634,7 +666,31 @@ async def handle_service_record(callback: CallbackQuery, session: object) -> Non
     if not isinstance(callback.message, Message):
         return
 
-    records = await SelectionService(session).track_record()  # type: ignore[arg-type]
+    records = list(await SelectionService(session).track_record())  # type: ignore[arg-type]
+
+    # A wall of percentages is read by nobody. The same figures as a chart are
+    # taken in at a glance, which matters most for the screen we most want
+    # people to actually look at.
+    chart = track_record_chart(
+        [
+            ServiceBar(
+                label=record.label,
+                actual=record.actual_rate or 0.0,
+                expected=record.expected_rate or 0.0,
+                settled=record.settled,
+            )
+            for record in records
+            if record.settled
+        ]
+    )
+    if chart is not None:
+        await callback.message.answer_photo(
+            BufferedInputFile(chart, filename="track-record.png"),
+            caption=(
+                "<b>📈 Live record</b>\nBar is what happened. Line is what we " "said would happen."
+            ),
+        )
+
     await callback.message.edit_text(
         format_service_record(list(records)),
         reply_markup=_back(
@@ -1506,6 +1562,8 @@ def build_router() -> Router:
     router.callback_query.register(handle_explore, F.data == "menu:explore")
     router.callback_query.register(handle_why, F.data.startswith("why:"))
     router.callback_query.register(handle_board, F.data.startswith("board:"))
+    router.callback_query.register(handle_sport_picker, F.data == "sport:pick")
+    router.callback_query.register(handle_basketball, F.data == "sport:basketball")
     router.callback_query.register(handle_best_today, F.data == "menu:best")
     router.callback_query.register(handle_service_list, F.data.startswith("svc:"))
     router.callback_query.register(handle_service_record, F.data.in_({"sel:record", "menu:record"}))
