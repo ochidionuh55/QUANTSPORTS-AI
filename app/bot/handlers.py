@@ -1038,6 +1038,20 @@ async def handle_market_browse(callback: CallbackQuery, session: object) -> None
     )
 
 
+CALLBACK_LIMIT = 64
+"""Telegram's callback payload limit, counted in bytes.
+
+Characters and bytes differ once a club name carries an accent, so a name that
+looks short can still exceed the limit and make Telegram reject the whole
+keyboard — which the user sees as a button that does nothing.
+"""
+
+
+def _callback_fits(name: str) -> bool:
+    """Whether a club name can be carried in a callback payload."""
+    return len(f"team:{name}".encode()) <= CALLBACK_LIMIT
+
+
 async def handle_explore_teams(callback: CallbackQuery, session: object) -> None:
     """Offer the clubs playing today, rather than asking for typing.
 

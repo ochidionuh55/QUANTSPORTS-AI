@@ -194,7 +194,10 @@ class ErrorMiddleware(BaseMiddleware):
             self._logger.exception(
                 "bot.handler_failed",
                 error_type=type(exc).__name__,
+                error=str(exc)[:200],
                 event_type=type(event).__name__,
+                callback_data=getattr(event, "data", None),
+                handler=getattr(handler, "__name__", None),
             )
             await self._apologise(event)
             return None
