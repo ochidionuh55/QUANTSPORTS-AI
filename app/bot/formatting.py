@@ -173,17 +173,27 @@ COVERAGE_BADGE = {
 }
 
 
-def format_summary_line(record: object) -> str:
+def format_summary_line(
+    record: object,
+    picks_by_fixture: dict[str, list[tuple[str, str, float]]] | None = None,
+) -> str:
     """Render one fixture for the daily list.
 
     Deliberately compact: a user scanning a card wants the shape of each match
     at a glance, with the detail one tap away.
+
+    Args:
+        record: The stored analysis.
+        picks_by_fixture: Services that selected each fixture, keyed by
+            provider event id. Supplied by the caller so the whole day needs
+            one query rather than one per fixture.
     """
     markets = getattr(record, "markets", {}) or {}
     one_x_two = markets.get("1X2", {})
     goals = markets.get("Goals", {})
     btts = markets.get("Both teams to score", {})
     badge = COVERAGE_BADGE.get(getattr(record, "coverage", ""), "⚪")
+    picks_by_fixture = picks_by_fixture or {}
 
     header = (
         f"{badge} <b>{record.home_name} v {record.away_name}</b>\n"  # type: ignore[attr-defined]
@@ -217,6 +227,19 @@ def format_summary_line(record: object) -> str:
         extras.append(f"BTTS {_pct(btts.get('Yes'))}")
     if extras:
         parts.append("  ".join(extras))
+
+    # The services that selected this fixture, if any were passed in. Shown on
+    # the card itself because a user scanning the day should not have to open
+    # every fixture to discover which ones our services actually chose.
+    picks = (
+        picks_by_fixture.get(getattr(record, "provider_event_id", ""), [])
+        if picks_by_fixture
+        else []
+    )
+    if picks:
+        headline = picks[0]
+        extra = f" +{len(picks) - 1} more" if len(picks) > 1 else ""
+        parts.append(f"⭐ {headline[0]}: {headline[1]} {headline[2] * 100:.0f}%{extra}")
     return "\n".join(parts)
 
 

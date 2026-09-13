@@ -438,6 +438,29 @@ class SelectionService:
             if row.service_key not in WITHHELD
         ]
 
+    async def picks_by_fixture(
+        self, day: date | None = None
+    ) -> dict[str, list[tuple[str, str, float]]]:
+        """Return every fixture's selections for a day, keyed by fixture.
+
+        One query for the whole card, so listing today's football does not
+        issue a database round trip per fixture.
+        """
+        target = day or datetime.now(UTC).date()
+        rows = await self._session.execute(
+            select(ServiceSelection)
+            .where(ServiceSelection.selection_date == target)
+            .order_by(ServiceSelection.probability.desc())
+        )
+        grouped: dict[str, list[tuple[str, str, float]]] = {}
+        for row in rows.scalars().all():
+            if row.service_key in WITHHELD:
+                continue
+            grouped.setdefault(row.provider_event_id, []).append(
+                (row.service_label, row.outcome, row.probability)
+            )
+        return grouped
+
     async def day_view(self, day: date) -> DayView:
         """Return a full historical day, selections and card shape together."""
         selections = await self.for_day(day)

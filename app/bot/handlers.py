@@ -289,6 +289,7 @@ async def handle_today(
         return
 
     computed = await repository.last_computed()
+    picks = await SelectionService(session).picks_by_fixture()  # type: ignore[arg-type]
     blocks = [
         "<b>Today's analysis</b>",
         f"{len(records)} fixtures · updated "
@@ -297,7 +298,7 @@ async def handle_today(
     ]
     buttons: list[list[InlineKeyboardButton]] = []
     for record in records:
-        blocks.append(format_summary_line(record))
+        blocks.append(format_summary_line(record, picks))
         blocks.append("")
         buttons.append(
             [
