@@ -26,6 +26,7 @@ from app.bot.formatting import (
 )
 from app.bot.formatting import (
     SPORT_PICKER,
+    format_account,
     format_admin_dashboard,
     format_basketball_today,
     format_board,
@@ -38,6 +39,7 @@ from app.bot.formatting import (
     format_league_profile,
     format_market_menu,
     format_my_quantsport,
+    format_paywall,
     format_performance,
     format_search_results,
     format_service_list,
@@ -100,6 +102,15 @@ from app.services.queries import (
 )
 from app.services.selections import SelectionService, published_services
 from app.services.settlement import PerformanceService
+from app.services.subscriptions import (
+    FEATURE_LABELS,
+    Access,
+    Feature,
+    describe,
+    extend,
+    resolve,
+    start_trial,
+)
 from app.services.user_service import UserService, has_valid_acceptance
 
 logger = get_logger(__name__)
@@ -435,6 +446,95 @@ async def handle_highlights(
     )
 
 
+def _access(user: User) -> Access:
+    """Read a user's current entitlement."""
+    return resolve(
+        user.subscription_tier,
+        user.subscription_expires_at,
+        user.subscription_started_at,
+    )
+
+
+async def _gate(callback: CallbackQuery, user: User, feature: Feature) -> bool:
+    """Show the paywall if a user cannot reach a feature.
+
+    Returns whether the caller may continue. Gating here rather than inside
+    each screen keeps one rule in one place — a feature added later is locked
+    by default rather than open by oversight.
+    """
+    access = _access(user)
+    if access.allows(feature):
+        return True
+
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return False
+
+    rows: list[list[InlineKeyboardButton]] = []
+    if not user.trial_used:
+        rows.append(
+            [InlineKeyboardButton(text="✨ Start 7-day free trial", callback_data="sub:trial")]
+        )
+    rows.append(
+        [
+            InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
+            InlineKeyboardButton(text="📈 Track record", callback_data="sel:record"),
+        ]
+    )
+
+    await callback.message.edit_text(
+        format_paywall(FEATURE_LABELS[feature], not user.trial_used),
+        reply_markup=_back(*rows),
+    )
+    return False
+
+
+async def handle_start_trial(callback: CallbackQuery, user: User, session: object) -> None:
+    """Begin a user's free trial, once."""
+    if user.trial_used:
+        await callback.answer("Your trial has already been used.", show_alert=True)
+        return
+
+    access = start_trial()
+    user.subscription_tier = access.tier.value
+    user.subscription_expires_at = access.expires_at
+    user.subscription_started_at = access.started_at
+    user.trial_used = True
+    await session.flush()  # type: ignore[attr-defined]
+
+    await callback.answer("Trial started. Enjoy.", show_alert=True)
+    if isinstance(callback.message, Message):
+        await callback.message.edit_text(
+            "<b>✨ Your 7-day trial has started</b>\n\n"
+            "Everything is open: Best of today, Market explorer, Team "
+            "intelligence and Following.\n\n"
+            "<i>Use it properly — open a few services, check the reasoning "
+            "behind a selection, and watch the track record. Seven days is "
+            "enough to see a full weekend settle.</i>",
+            reply_markup=_back(
+                [InlineKeyboardButton(text="🔥 Best of today", callback_data="menu:best")]
+            ),
+        )
+
+
+async def handle_account_state(callback: CallbackQuery, user: User) -> None:
+    """Show a user's plan and what it reaches."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    access = _access(user)
+    rows: list[list[InlineKeyboardButton]] = []
+    if not access.active and not user.trial_used:
+        rows.append(
+            [InlineKeyboardButton(text="✨ Start 7-day free trial", callback_data="sub:trial")]
+        )
+
+    await callback.message.edit_text(
+        format_account(access, describe(access)), reply_markup=_back(*rows)
+    )
+
+
 def _back(*rows: list[InlineKeyboardButton]) -> InlineKeyboardMarkup:
     """Build a keyboard, always ending at home."""
     keyboard = [list(row) for row in rows]
@@ -486,13 +586,15 @@ async def handle_basketball(callback: CallbackQuery) -> None:
     )
 
 
-async def handle_best_today(callback: CallbackQuery, session: object) -> None:
+async def handle_best_today(callback: CallbackQuery, user: User, session: object) -> None:
     """Show the service chooser, not every selection at once.
 
     Eighteen services printed in full fills several phone screens and buries
     the one market a user actually came for. The chooser puts the question
     first and the answer one tap away.
     """
+    if not await _gate(callback, user, Feature.BEST_OF_TODAY):
+        return
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
@@ -526,8 +628,10 @@ async def handle_best_today(callback: CallbackQuery, session: object) -> None:
     )
 
 
-async def handle_service_list(callback: CallbackQuery, session: object) -> None:
+async def handle_service_list(callback: CallbackQuery, user: User, session: object) -> None:
     """Show one service's ranked selections."""
+    if not await _gate(callback, user, Feature.BEST_OF_TODAY):
+        return
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
@@ -1082,7 +1186,7 @@ async def handle_explore(callback: CallbackQuery) -> None:
     )
 
 
-async def handle_markets_menu(callback: CallbackQuery, session: object) -> None:
+async def handle_markets_menu(callback: CallbackQuery, user: User, session: object) -> None:
     """List every market a user can browse by."""
     await callback.answer()
     if not isinstance(callback.message, Message):
@@ -1167,7 +1271,7 @@ def _callback_fits(name: str) -> bool:
     return len(f"team:{name}".encode()) <= CALLBACK_LIMIT
 
 
-async def handle_explore_teams(callback: CallbackQuery, session: object) -> None:
+async def handle_explore_teams(callback: CallbackQuery, user: User, session: object) -> None:
     """Offer the clubs playing today, rather than asking for typing.
 
     A screen whose only instruction is "type a command" puts the work on the
@@ -1175,6 +1279,8 @@ async def handle_explore_teams(callback: CallbackQuery, session: object) -> None
     sides actually playing today makes the feature discoverable in one tap,
     and typing still works for anyone who knows the club they want.
     """
+    if not await _gate(callback, user, Feature.TEAM_INTELLIGENCE):
+        return
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
@@ -1415,6 +1521,39 @@ async def handle_stats(message: Message, user: User, session: object) -> None:
     await message.answer(format_admin_dashboard(snapshot))
 
 
+async def handle_grant(message: Message, user: User, session: object) -> None:
+    """Admin: grant paid access to a user.
+
+    Exists so the product can be sold before a gateway is approved, and so
+    access can be restored for someone a payment failed for.
+    """
+    if not user.is_admin:
+        await message.answer("That command is not available.")
+        return
+
+    parts = (message.text or "").split()
+    if len(parts) < 3 or not parts[1].isdigit() or not parts[2].isdigit():
+        await message.answer("Usage: <code>/grant &lt;telegram_id&gt; &lt;days&gt;</code>")
+        return
+
+    target = (
+        await session.execute(  # type: ignore[attr-defined]
+            select(User).where(User.telegram_id == int(parts[1]))
+        )
+    ).scalar_one_or_none()
+    if target is None:
+        await message.answer("No user with that Telegram id has started the bot.")
+        return
+
+    access = extend(_access(target), int(parts[2]))
+    target.subscription_tier = access.tier.value
+    target.subscription_expires_at = access.expires_at
+    target.subscription_started_at = access.started_at or datetime.now(UTC)
+    await session.flush()  # type: ignore[attr-defined]
+
+    await message.answer(f"Granted {parts[2]} day(s) to {parts[1]}. Now: {describe(access)}.")
+
+
 async def handle_review(message: Message, user: User, session: object) -> None:
     """Admin: list team names awaiting a mapping decision."""
     if not user.is_admin:
@@ -1573,6 +1712,8 @@ def build_router() -> Router:
     router.callback_query.register(handle_explore, F.data == "menu:explore")
     router.callback_query.register(handle_why, F.data.startswith("why:"))
     router.callback_query.register(handle_board, F.data.startswith("board:"))
+    router.callback_query.register(handle_start_trial, F.data == "sub:trial")
+    router.callback_query.register(handle_account_state, F.data == "sub:account")
     router.callback_query.register(handle_sport_picker, F.data == "sport:pick")
     router.callback_query.register(handle_basketball, F.data == "sport:basketball")
     router.callback_query.register(handle_best_today, F.data == "menu:best")
@@ -1609,6 +1750,7 @@ def build_router() -> Router:
     router.message.register(handle_find, Command("find"))
     router.callback_query.register(handle_save, F.data.startswith("save:"))
     router.message.register(handle_stats, Command("stats"))
+    router.message.register(handle_grant, Command("grant"))
     router.message.register(handle_review, Command("review"))
     router.message.register(handle_link, Command("link"))
     router.message.register(handle_reject_alias, Command("rejectalias"))

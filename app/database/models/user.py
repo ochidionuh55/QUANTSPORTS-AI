@@ -16,6 +16,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    text,
 )
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -42,6 +43,27 @@ class User(IntPrimaryKeyMixin, TimestampMixin, Base):
     language_code: Mapped[str | None] = mapped_column(String(16))
 
     credits: Mapped[int] = mapped_column(Integer, default=0, server_default="0", nullable=False)
+    subscription_tier: Mapped[str] = mapped_column(
+        String(16), nullable=False, default="free", server_default=text("'free'")
+    )
+    """``free``, ``trial`` or ``pro``.
+
+    Expiry is not stored as a state. It is computed from
+    ``subscription_expires_at`` on every check, so a lapsed subscription cannot
+    keep working because a background job failed to run.
+    """
+
+    subscription_expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    subscription_started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    trial_used: Mapped[bool] = mapped_column(
+        Boolean, nullable=False, default=False, server_default=text("false")
+    )
+    """Whether a trial has ever been started.
+
+    Kept apart from the tier so a trial cannot be restarted simply by letting
+    it lapse.
+    """
+
     plan: Mapped[UserPlan] = mapped_column(
         enum_column(UserPlan, "user_plan"),
         default=UserPlan.FREE,

@@ -1689,3 +1689,64 @@ def _basketball_line(fixture: object, badge: str) -> str:
         f"{badge} <b>{fixture.home_name} v {fixture.away_name}</b>\n"  # type: ignore[attr-defined]
         f"   {when} · {getattr(fixture, 'competition_name', 'Unknown')}"
     )
+
+
+PAYWALL = (
+    "<b>🔒 QUANTSPORT Pro</b>\n\n"
+    "{feature} is part of Pro.\n\n"
+    "<b>What Pro includes</b>\n"
+    "🔥 Best of today — 18 services, ten ranked fixtures each\n"
+    "📊 Market explorer — search any market across 38 competitions\n"
+    "👥 Team intelligence — full club records from 113,000 matches\n"
+    "⭐ Follow selections and track your own record\n\n"
+    "<b>Always free</b>\n"
+    "⚽ Today's analysis · 📚 History · 📈 Track record\n\n"
+    "<i>The evidence stays open. You should be able to check what we published "
+    "and how it turned out — including the losses — before deciding whether "
+    "the rest is worth paying for.</i>"
+)
+
+TRIAL_OFFER = (
+    "\n\n<b>7 days free</b>\nNo card, no commitment. Long enough to see a full "
+    "weekend and watch selections settle."
+)
+
+TRIAL_USED = (
+    "\n\n<i>Your trial has been used. Subscription options are coming shortly — "
+    "we are completing payment setup.</i>"
+)
+
+
+def format_paywall(feature_label: str, trial_available: bool) -> str:
+    """Render the paywall for a gated feature."""
+    body = PAYWALL.format(feature=feature_label)
+    return body + (TRIAL_OFFER if trial_available else TRIAL_USED)
+
+
+def format_account(access: object, description: str) -> str:
+    """Render a user's subscription state."""
+    lines = ["<b>👤 YOUR ACCOUNT</b>", "", f"<b>Plan:</b> {description}", ""]
+
+    days = getattr(access, "days_left", lambda: None)()
+    if days is not None and getattr(access, "active", False):
+        lines.append(f"Access continues for {days} more day(s).")
+        lines.append("")
+
+    if getattr(access, "active", False):
+        lines.append("<b>You have</b>")
+        lines.append(
+            "🔥 Best of today · 📊 Market explorer · 👥 Team intelligence · " "⭐ Following"
+        )
+    else:
+        lines.append("<b>You have</b>")
+        lines.append("⚽ Today's analysis · 📚 History · 📈 Track record")
+        lines.append("")
+        lines.append(
+            "<i>History and the track record stay open on every plan. Our "
+            "record, including losses, is not something you should have to pay "
+            "to inspect.</i>"
+        )
+
+    lines.append("")
+    lines.append(FOOTER)
+    return "\n".join(lines)
