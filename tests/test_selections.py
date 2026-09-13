@@ -511,3 +511,85 @@ class TestServiceDepth:
     async def test_picks_for_unknown_fixture_is_empty(self, session: AsyncSession) -> None:
         picks = await SelectionService(session).picks_for_fixture("nope", day=NOW.date())
         assert picks == []
+
+
+class TestStrongestAngle:
+    """Every analysed fixture says something, without faking a selection."""
+
+    @staticmethod
+    def _record(markets: dict[str, dict[str, str]], components: list[str]) -> object:
+        from types import SimpleNamespace
+
+        return SimpleNamespace(
+            provider_event_id="1",
+            home_name="Alpha",
+            away_name="Bravo",
+            kickoff=NOW,
+            competition="Championship",
+            coverage="fully_modelled" if components != ["market"] else "data_only",
+            components_used=components,
+            expected_home_goals=1.8,
+            expected_away_goals=1.0,
+            markets=markets,
+        )
+
+    def test_unremarkable_fixture_gets_no_angle(self) -> None:
+        """A market true in almost every match is a fact, not a finding."""
+        from app.bot.formatting import strongest_angle
+
+        record = self._record(
+            {
+                "1X2": {"Home": "0.38", "Draw": "0.30", "Away": "0.32"},
+                "Goals": {"Over 2.5": "0.51", "Under 2.5": "0.49"},
+                "Both teams to score": {"Yes": "0.52", "No": "0.48"},
+            },
+            ["poisson", "elo", "form"],
+        )
+        assert strongest_angle(record) is None
+
+    def test_strong_fixture_gets_an_angle(self) -> None:
+        from app.bot.formatting import strongest_angle
+
+        record = self._record(
+            {
+                "1X2": {"Home": "0.72", "Draw": "0.16", "Away": "0.12"},
+                "Goals": {"Over 2.5": "0.55", "Under 2.5": "0.45"},
+                "Both teams to score": {"Yes": "0.50", "No": "0.50"},
+            },
+            ["poisson", "elo", "form"],
+        )
+        angle = strongest_angle(record)
+        assert angle is not None
+        assert "Home" in angle[0]
+
+    def test_angle_is_not_shown_when_a_service_selected_the_fixture(self) -> None:
+        """A ranked selection outranks an observation, and only one appears."""
+        from app.bot.formatting import format_summary_line
+
+        record = self._record(
+            {
+                "1X2": {"Home": "0.72", "Draw": "0.16", "Away": "0.12"},
+                "Goals": {"Over 2.5": "0.60", "Under 2.5": "0.40"},
+                "Both teams to score": {"Yes": "0.55", "No": "0.45"},
+            },
+            ["poisson", "elo", "form"],
+        )
+        rendered = format_summary_line(record, {"1": [("🏆 Best Home Win", "Home", 0.72)]})
+        assert "⭐" in rendered
+        assert "📌" not in rendered
+
+    def test_market_only_fixture_is_labelled_as_the_market(self) -> None:
+        """Relaying a bookmaker price back as our analysis would be dishonest."""
+        from app.bot.formatting import format_summary_line
+
+        record = self._record(
+            {
+                "1X2": {"Home": "0.45", "Draw": "0.27", "Away": "0.28"},
+                "Goals": {"Over 1.5": "0.85", "Over 2.5": "0.55"},
+                "Both teams to score": {"Yes": "0.52", "No": "0.48"},
+            },
+            ["market"],
+        )
+        rendered = format_summary_line(record, {})
+        assert "Market's strongest" in rendered
+        assert "📌 Strongest" not in rendered

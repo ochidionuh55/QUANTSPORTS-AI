@@ -173,6 +173,55 @@ COVERAGE_BADGE = {
 }
 
 
+# Markets worth naming as a fixture's strongest angle, with the floor each
+# must clear. Over 0.5 is true in almost every match, so surfacing it would
+# fill the card with a fact rather than a finding.
+_ANGLE_FLOORS: dict[tuple[str, str], float] = {
+    ("1X2", "Home"): 0.55,
+    ("1X2", "Away"): 0.45,
+    ("1X2", "Draw"): 0.32,
+    ("Double chance", "1X (home or draw)"): 0.72,
+    ("Double chance", "X2 (draw or away)"): 0.70,
+    ("Goals", "Over 1.5"): 0.78,
+    ("Goals", "Over 2.5"): 0.60,
+    ("Goals", "Under 2.5"): 0.60,
+    ("Goals", "Under 3.5"): 0.78,
+    ("Both teams to score", "Yes"): 0.62,
+    ("Both teams to score", "No"): 0.60,
+}
+
+
+def strongest_angle(record: object) -> tuple[str, float] | None:
+    """Return a fixture's most notable market, or ``None`` if it has none.
+
+    This is not a selection. It is the highest market this fixture reaches
+    against a per-market floor, shown so that every analysed match says
+    something rather than leaving the reader to compare percentages
+    themselves. Selections come from the ranked services and are marked
+    differently, because a fixture that no service chose was not chosen.
+    """
+    markets = getattr(record, "markets", {}) or {}
+    best: tuple[str, float] | None = None
+
+    for (market, outcome), floor in _ANGLE_FLOORS.items():
+        raw = (markets.get(market) or {}).get(outcome)
+        if raw is None:
+            continue
+        try:
+            probability = float(str(raw))
+        except (TypeError, ValueError):
+            continue
+        if probability < floor:
+            continue
+        # Ranked by how far past its own floor each market sits, so a 63%
+        # BTTS is not buried by an 80% over 1.5 that barely cleared its bar.
+        margin = probability - floor
+        if best is None or margin > best[1]:
+            best = (f"{outcome} {probability * 100:.0f}%", margin)
+
+    return best
+
+
 def format_summary_line(
     record: object,
     picks_by_fixture: dict[str, list[tuple[str, str, float]]] | None = None,
@@ -204,12 +253,19 @@ def format_summary_line(
         return f"{header}\nNo analysis: {reason or 'insufficient data'}"
 
     if list(getattr(record, "components_used", []) or []) == ["market"]:
-        return (
+        market_line = (
             f"{header}\n"
             f"Market  {_pct(one_x_two.get('Home'))} / "
             f"{_pct(one_x_two.get('Draw'))} / {_pct(one_x_two.get('Away'))}"
             "\n<i>bookmaker view — our models could not run</i>"
         )
+        # A strongest angle is still worth naming here, but it is the market's
+        # angle, not ours, and saying so is the difference between informing a
+        # reader and relaying a price back to them as if it were analysis.
+        angle = strongest_angle(record)
+        if angle is not None:
+            market_line += f"\n📊 Market's strongest: {angle[0]}"
+        return market_line
 
     parts = [
         header,
@@ -240,6 +296,13 @@ def format_summary_line(
         headline = picks[0]
         extra = f" +{len(picks) - 1} more" if len(picks) > 1 else ""
         parts.append(f"⭐ {headline[0]}: {headline[1]} {headline[2] * 100:.0f}%{extra}")
+    else:
+        # No service chose this fixture, so nothing here is presented as a
+        # selection. Its strongest market is still named, marked differently,
+        # so a reader can tell a ranked pick from a plain observation.
+        angle = strongest_angle(record)
+        if angle is not None:
+            parts.append(f"📌 Strongest: {angle[0]}")
     return "\n".join(parts)
 
 
