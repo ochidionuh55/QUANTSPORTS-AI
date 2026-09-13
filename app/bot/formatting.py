@@ -1305,3 +1305,105 @@ def format_service_record(records: list[object]) -> str:
     lines.append("")
     lines.append(FOOTER)
     return "\n".join(lines)
+
+
+def format_service_menu(counts: dict[str, int], modelled: int, available: int) -> str:
+    """Render the Best of Today service chooser."""
+    lines = ["<b>🔥 BEST OF TODAY</b>", ""]
+    if available:
+        lines.append(f"<i>{modelled} of {available} fixtures modelled today.</i>")
+        lines.append("")
+
+    total = sum(counts.values())
+    if not total:
+        lines.append(
+            "<b>No qualifying selection today.</b>\n\n"
+            "Nothing on today's card cleared the bar for any service. That is a "
+            "real answer — we never publish a selection to fill a slot."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    lines.append(
+        f"<b>{total} selections across {len(counts)} services.</b>\n\n"
+        "Pick the market you care about. Each one opens its own ranked list, "
+        "strongest first."
+    )
+    lines.append("")
+    lines.append(METHOD_NOTE)
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_service_list(label: str, selections: list[object], day_label: str = "today") -> str:
+    """Render one service's ranked selections."""
+    lines = [f"<b>{label}</b>", ""]
+
+    if not selections:
+        lines.append(
+            f"No fixture cleared this service's threshold {day_label}.\n\n"
+            "Nothing is published to fill the slot."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    lines.append(f"<i>{len(selections)} qualifying, strongest first.</i>")
+    lines.append("")
+
+    for index, selection in enumerate(selections, start=1):
+        badge = COVERAGE_BADGE.get(getattr(selection, "coverage", ""), "⚪")
+        kickoff = getattr(selection, "kickoff", None)
+        when = f"{kickoff:%H:%M}" if kickoff else ""
+        status = getattr(selection, "status", "pending")
+
+        entry = (
+            f"<b>{index}.</b> {badge} <b>{selection.home_name} v "  # type: ignore[attr-defined]
+            f"{selection.away_name}</b>\n"  # type: ignore[attr-defined]
+            f"{when} · {getattr(selection, 'competition', None) or 'Unknown league'}\n"
+            f"<b>{selection.outcome} — {selection.probability * 100:.0f}%</b>"  # type: ignore[attr-defined]
+        )
+        if status != "pending":
+            home_goals = getattr(selection, "home_goals", None)
+            score = (
+                f" ({home_goals}-{getattr(selection, 'away_goals', '')})"
+                if home_goals is not None
+                else ""
+            )
+            entry += f"\n{RESULT_BADGE.get(status, status)}{score}"
+        lines.append(entry)
+        lines.append("")
+
+    lines.append(
+        "<i>Ranked by our methodology, so strength falls as you go down the "
+        "list. The tenth is genuinely weaker than the first.</i>"
+    )
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_fixture_picks(picks: list[tuple[str, str, float]]) -> str:
+    """Render the services that selected a fixture.
+
+    Shown inside the fixture card so a user reading an analysis can see which
+    of our services reached a conclusion about it, rather than having to work
+    backwards from the market lists.
+    """
+    if not picks:
+        return (
+            "\n\n<b>Recommended picks</b>\n"
+            "No service selected this fixture today. Its numbers did not clear "
+            "any service threshold."
+        )
+
+    lines = ["", "", "<b>Recommended picks</b>"]
+    for label, outcome, probability in picks:
+        lines.append(f"{label}: <b>{outcome} — {probability * 100:.0f}%</b>")
+    lines.append(
+        "<i>Published before kickoff and tracked. Open Best of Today to see "
+        "where each sits in its ranking.</i>"
+    )
+    return "\n".join(lines)

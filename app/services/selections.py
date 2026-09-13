@@ -47,6 +47,16 @@ from app.services.best_of_day import (
 
 logger = get_logger(__name__)
 
+DEPTH = 10
+"""How many ranked selections each service publishes.
+
+One per service reads as a tip sheet and gives a user nothing to work with on a
+busy Saturday. A ranked list lets them see where the strength drops off, which
+is information a single pick hides — the tenth entry is genuinely weaker than
+the first, and showing both is more honest than showing only the top.
+"""
+
+
 WITHHELD: frozenset[str] = frozenset({"under_25", "no_btts"})
 """Services validation found overconfident, excluded from publication.
 
@@ -172,7 +182,7 @@ class SelectionService:
     # Publishing
     # ------------------------------------------------------------------
 
-    async def publish(self, now: datetime | None = None, top: int = 1) -> PublishReport:
+    async def publish(self, now: datetime | None = None, top: int = DEPTH) -> PublishReport:
         """Rank today's fixtures and store the qualifying selections.
 
         Only fixtures that have not kicked off are eligible, so a published
@@ -381,6 +391,52 @@ class SelectionService:
         selections = [s for s in rows.scalars().all() if s.service_key not in WITHHELD]
         selections.sort(key=lambda s: (order.get(s.service_key, 99), s.rank))
         return selections
+
+    async def for_service(
+        self, service_key: str, day: date | None = None
+    ) -> list[ServiceSelection]:
+        """Return one service's ranked selections for a day."""
+        target = day or datetime.now(UTC).date()
+        if service_key in WITHHELD:
+            return []
+        rows = await self._session.execute(
+            select(ServiceSelection)
+            .where(
+                ServiceSelection.service_key == service_key,
+                ServiceSelection.selection_date == target,
+            )
+            .order_by(ServiceSelection.rank)
+        )
+        return list(rows.scalars().all())
+
+    async def service_counts(self, day: date | None = None) -> dict[str, int]:
+        """Return how many selections each service published on a day."""
+        target = day or datetime.now(UTC).date()
+        rows = await self._session.execute(
+            select(ServiceSelection.service_key, func.count())
+            .where(ServiceSelection.selection_date == target)
+            .group_by(ServiceSelection.service_key)
+        )
+        return {key: int(count) for key, count in rows.all() if key not in WITHHELD}
+
+    async def picks_for_fixture(
+        self, fixture_id: str, day: date | None = None
+    ) -> list[tuple[str, str, float]]:
+        """Return the services that selected a fixture, strongest first."""
+        target = day or datetime.now(UTC).date()
+        rows = await self._session.execute(
+            select(ServiceSelection)
+            .where(
+                ServiceSelection.provider_event_id == fixture_id,
+                ServiceSelection.selection_date == target,
+            )
+            .order_by(ServiceSelection.probability.desc())
+        )
+        return [
+            (row.service_label, row.outcome, row.probability)
+            for row in rows.scalars().all()
+            if row.service_key not in WITHHELD
+        ]
 
     async def day_view(self, day: date) -> DayView:
         """Return a full historical day, selections and card shape together."""

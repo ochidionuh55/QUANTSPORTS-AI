@@ -61,15 +61,12 @@ def menu_features(features: FeatureFlags) -> list[MenuFeature]:
         MenuFeature("🔥 Best of today", "menu:best", phase=13, available=True),
         MenuFeature("📊 Market explorer", "menu:markets", phase=13, available=True),
         MenuFeature("👥 Team intelligence", "menu:teams", phase=13, available=True),
-        MenuFeature("🏆 Competitions", "menu:competitions", phase=13, available=True),
         MenuFeature("📚 History", "menu:history", phase=13, available=True),
         MenuFeature("📈 Track record", "menu:record", phase=13, available=True),
-        MenuFeature("⭐ Following", "menu:mine", phase=12, available=True),
         MenuFeature("⚽ Today's analysis", "menu:today", phase=12, available=True),
         MenuFeature("🔍 Explore", "menu:explore", phase=12, available=True),
+        MenuFeature("🏆 Competitions", "menu:competitions", phase=13, available=True),
         MenuFeature("🎯 Daily boards", "menu:highlights", phase=12, available=True),
-        MenuFeature("📊 League coverage", "menu:leagues", phase=12, available=True),
-        MenuFeature("📈 Model performance", "menu:performance", phase=12, available=True),
         MenuFeature("📖 How it works", "menu:how_it_works", phase=3, available=True),
         MenuFeature("👤 My account", "menu:account", phase=3, available=True),
         MenuFeature("📜 Terms and safety", "menu:terms", phase=3, available=True),
@@ -91,11 +88,16 @@ def menu_features(features: FeatureFlags) -> list[MenuFeature]:
 
 def main_menu(features: FeatureFlags) -> InlineKeyboardMarkup:
     """Build the main menu from the features that are actually available."""
-    rows = [
-        [InlineKeyboardButton(text=feature.label, callback_data=feature.callback_data)]
+    buttons = [
+        InlineKeyboardButton(text=feature.label, callback_data=feature.callback_data)
         for feature in menu_features(features)
         if feature.available
     ]
+
+    # Two per row. A single column of fifteen buttons fills a phone screen
+    # entirely, which makes the product feel like a list to scroll rather than
+    # a place to choose from.
+    rows = [buttons[index : index + 2] for index in range(0, len(buttons), 2)]
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 

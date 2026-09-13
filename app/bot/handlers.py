@@ -21,10 +21,10 @@ from sqlalchemy import select
 
 from app.bot.formatting import (
     format_admin_dashboard,
-    format_best_today,
     format_board,
     format_breakdown,
     format_fixture_list,
+    format_fixture_picks,
     format_highlight,
     format_history_day,
     format_home,
@@ -33,6 +33,8 @@ from app.bot.formatting import (
     format_my_quantsport,
     format_performance,
     format_search_results,
+    format_service_list,
+    format_service_menu,
     format_service_record,
     format_stored_detail,
     format_summary_line,
@@ -68,6 +70,7 @@ from app.providers.live import live_odds_provider
 from app.services.activity import ActivityService
 from app.services.aliases import AliasReviewService
 from app.services.analytics import AnalyticsService
+from app.services.best_of_day import SERVICES_BY_KEY
 from app.services.boards import TRACK_DESCRIPTIONS, TRACK_LABELS
 from app.services.daily_scan import AnalysisRepository
 from app.services.highlights import (
@@ -85,7 +88,7 @@ from app.services.queries import (
     FixtureQueryService,
     probability_for,
 )
-from app.services.selections import SelectionService
+from app.services.selections import SelectionService, published_services
 from app.services.settlement import PerformanceService
 from app.services.user_service import UserService, has_valid_acceptance
 
@@ -340,8 +343,12 @@ async def handle_analyse(
         )
         return
 
+    # Which services selected this fixture today, read from what was actually
+    # published rather than recomputed here.
+    picks = await SelectionService(session).picks_for_fixture(fixture_id)  # type: ignore[arg-type]
+
     await callback.message.edit_text(
-        format_stored_detail(record),
+        format_stored_detail(record) + format_fixture_picks(picks),
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [
@@ -436,25 +443,33 @@ def _back(*rows: list[InlineKeyboardButton]) -> InlineKeyboardMarkup:
 
 
 async def handle_best_today(callback: CallbackQuery, session: object) -> None:
-    """Show today's published Best of the Day selections."""
+    """Show the service chooser, not every selection at once.
+
+    Eighteen services printed in full fills several phone screens and buries
+    the one market a user actually came for. The chooser puts the question
+    first and the answer one tap away.
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
 
     service = SelectionService(session)  # type: ignore[arg-type]
-    selections = await service.today()
+    counts = await service.service_counts()
     view = await service.day_view(datetime.now(UTC).date())
 
+    modelled = getattr(view.snapshot, "fixtures_modelled", 0) if view.snapshot else 0
+    available = getattr(view.snapshot, "fixtures_available", 0) if view.snapshot else 0
+
     rows: list[list[InlineKeyboardButton]] = []
-    for selection in selections[:10]:
-        rows.append(
-            [
-                InlineKeyboardButton(
-                    text=f"🔎 {selection.service_label}",
-                    callback_data=f"sel:{selection.id}:today",
-                )
-            ]
+    buttons = [
+        InlineKeyboardButton(
+            text=f"{SERVICES_BY_KEY[key].label} ({counts[key]})",
+            callback_data=f"svc:{key}",
         )
+        for key in published_services()
+        if counts.get(key)
+    ]
+    rows.extend(buttons[index : index + 1] for index in range(0, len(buttons), 1))
     rows.append(
         [
             InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
@@ -463,7 +478,39 @@ async def handle_best_today(callback: CallbackQuery, session: object) -> None:
     )
 
     await callback.message.edit_text(
-        format_best_today(list(selections), view.snapshot), reply_markup=_back(*rows)
+        format_service_menu(counts, modelled, available), reply_markup=_back(*rows)
+    )
+
+
+async def handle_service_list(callback: CallbackQuery, session: object) -> None:
+    """Show one service's ranked selections."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    key = (callback.data or "").split(":", 1)[-1]
+    definition = SERVICES_BY_KEY.get(key)
+    if definition is None:
+        return
+
+    service = SelectionService(session)  # type: ignore[arg-type]
+    selections = await service.for_service(key)
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for index, selection in enumerate(selections[:10], start=1):
+        rows.append(
+            [
+                InlineKeyboardButton(
+                    text=f"🔎 {index}. {selection.home_name} v {selection.away_name}"[:60],
+                    callback_data=f"sel:{selection.id}:today",
+                )
+            ]
+        )
+    rows.append([InlineKeyboardButton(text="⬅️ All services", callback_data="menu:best")])
+
+    await callback.message.edit_text(
+        format_service_list(definition.label, list(selections)),
+        reply_markup=_back(*rows),
     )
 
 
@@ -1079,7 +1126,7 @@ async def handle_explore_teams(callback: CallbackQuery, session: object) -> None
     for index in range(0, min(len(clubs), 16), 2):
         pair = clubs[index : index + 2]
         rows.append(
-            [InlineKeyboardButton(text=name, callback_data=f"team:{name[:56]}") for name in pair]
+            [InlineKeyboardButton(text=name, callback_data=f"team:{name}") for name in pair]
         )
 
     if clubs:
@@ -1215,11 +1262,18 @@ async def handle_team_button(callback: CallbackQuery, session: object) -> None:
     if not isinstance(callback.message, Message):
         return
 
-    team_id = (callback.data or "").split(":", 1)[-1]
-    if not team_id.isdigit():
-        return
+    raw = (callback.data or "").split(":", 1)[-1]
+    service = ProfileService(session)  # type: ignore[arg-type]
 
-    profile = await ProfileService(session).team_profile(int(team_id))  # type: ignore[arg-type]
+    # Buttons carry an id when the club came from a disambiguation list, and a
+    # name when it came from today's card. Silently ignoring the second form
+    # made every club button on the Teams screen do nothing.
+    if raw.isdigit():
+        profile = await service.team_profile(int(raw))
+    else:
+        matches = await service.find_teams(raw, limit=1)
+        profile = await service.team_profile(matches[0].id) if matches else None
+
     if profile is None:
         await callback.message.edit_text(
             "That club is no longer on record.", reply_markup=back_to_menu()
@@ -1452,6 +1506,7 @@ def build_router() -> Router:
     router.callback_query.register(handle_why, F.data.startswith("why:"))
     router.callback_query.register(handle_board, F.data.startswith("board:"))
     router.callback_query.register(handle_best_today, F.data == "menu:best")
+    router.callback_query.register(handle_service_list, F.data.startswith("svc:"))
     router.callback_query.register(handle_service_record, F.data.in_({"sel:record", "menu:record"}))
     router.callback_query.register(handle_history_days, F.data.in_({"hist:days", "menu:history"}))
 

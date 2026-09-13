@@ -446,3 +446,68 @@ class TestTrackRecord:
     async def test_gap_is_none_without_settled_selections(self, session: AsyncSession) -> None:
         records = await SelectionService(session).track_record()
         assert all(r.gap is None for r in records)
+
+
+class TestServiceDepth:
+    """Each service publishes a ranked list, not a single pick."""
+
+    async def test_publishes_multiple_ranked_selections(self, session: AsyncSession) -> None:
+        """A single pick per service gives a user nothing to work with on a
+        busy card, and hides where the strength drops off."""
+        for index in range(6):
+            await _analysis(
+                session,
+                str(index),
+                home=str(0.70 - index * 0.02),
+                draw="0.18",
+                away=str(0.12 + index * 0.02),
+            )
+
+        await SelectionService(session).publish(now=NOW)
+        home = await SelectionService(session).for_service("home", day=NOW.date())
+
+        assert len(home) > 1
+        assert [s.rank for s in home] == sorted(s.rank for s in home)
+
+    async def test_ranked_strongest_first(self, session: AsyncSession) -> None:
+        """Rank one must score at least as well as rank two."""
+        for index in range(5):
+            await _analysis(session, str(index), home=str(0.72 - index * 0.03))
+
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+        home = await service.for_service("home", day=NOW.date())
+
+        assert len(home) > 1, "ranking must produce a list, not a single pick"
+        scores = [s.score for s in home]
+        assert scores == sorted(scores, reverse=True)
+
+    async def test_withheld_service_returns_nothing(self, session: AsyncSession) -> None:
+        await _analysis(session)
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        for key in WITHHELD:
+            assert await service.for_service(key, day=NOW.date()) == []
+
+    async def test_counts_exclude_withheld(self, session: AsyncSession) -> None:
+        await _analysis(session)
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        counts = await service.service_counts(day=NOW.date())
+        assert not set(counts) & WITHHELD
+
+    async def test_picks_for_fixture_lists_every_service(self, session: AsyncSession) -> None:
+        """A fixture card should say which services chose it."""
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        picks = await service.picks_for_fixture("1", day=NOW.date())
+        assert picks
+        assert all(len(pick) == 3 for pick in picks)
+
+    async def test_picks_for_unknown_fixture_is_empty(self, session: AsyncSession) -> None:
+        picks = await SelectionService(session).picks_for_fixture("nope", day=NOW.date())
+        assert picks == []
