@@ -27,16 +27,34 @@ import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-BACKGROUND = "#17212b"
-"""Telegram's dark conversation background."""
+# QUANTSPORT brand palette. White-first, emerald-led.
+#
+# Deliberately light rather than matching Telegram's dark chat: a chart that
+# arrives as a clean white card reads as a published artefact rather than a
+# screenshot, and can be reposted anywhere without looking out of place.
+BACKGROUND = "#FFFFFF"
+SURFACE = "#EFFBF5"
+"""Light green surface for fills behind content."""
 
-SURFACE = "#1d2733"
-TEXT = "#e9edf2"
-MUTED = "#7d8b99"
-ACCENT = "#4aa3df"
-GOOD = "#4caf72"
-BAD = "#e05561"
-GRID = "#2b3846"
+TEXT = "#07171D"
+"""Near-black. Headings and labels."""
+
+MUTED = "#64757D"
+ACCENT = "#08B85A"
+"""Primary emerald."""
+
+DEEP = "#006B42"
+BRIGHT = "#35E56F"
+LIME = "#B6FF37"
+GOOD = "#08B85A"
+BAD = "#C2410C"
+"""Warm amber-red rather than a gambling red.
+
+Losses and overconfidence must be legible without the interface looking like a
+casino, so the negative colour sits away from the red used on betting sites.
+"""
+
+GRID = "#DFEAE5"
 
 
 def plain(label: str) -> str:
@@ -72,13 +90,37 @@ def _figure(width: float, height: float) -> tuple[Figure, Axes]:
     for spine in axes.spines.values():
         spine.set_visible(False)
     axes.tick_params(colors=MUTED, labelsize=8, length=0)
-    axes.grid(axis="x", color=GRID, linewidth=0.7)
+    axes.grid(axis="x", color=GRID, linewidth=0.9)
     axes.set_axisbelow(True)
     return figure, axes
 
 
+def _brand(figure: Figure) -> None:
+    """Sign a chart, so a reposted image still says where it came from."""
+    # Below the axis label rather than beside it, so the signature never
+    # collides with the chart's own text.
+    figure.text(
+        0.01,
+        -0.07,
+        "QUANTSPORT AI · Football Intelligence, Quantified.",
+        color=MUTED,
+        fontsize=7,
+        ha="left",
+    )
+    figure.text(
+        0.99,
+        -0.07,
+        "Ask the Data.",
+        color=ACCENT,
+        fontsize=7.5,
+        ha="right",
+        style="italic",
+    )
+
+
 def _to_png(figure: Figure) -> bytes:
     """Render a figure to PNG bytes."""
+    _brand(figure)
     buffer = io.BytesIO()
     figure.savefig(
         buffer,
@@ -110,7 +152,10 @@ def track_record_chart(bars: list[ServiceBar]) -> bytes | None:
     positions = range(len(usable))
     for position, bar in zip(positions, usable, strict=True):
         gap = bar.actual - bar.expected
-        colour = GOOD if gap >= -0.02 else BAD
+        # Five points, matching the threshold the track record uses to call a
+        # service overconfident. A tighter bar would paint ordinary variance as
+        # failure and make every chart look alarming.
+        colour = GOOD if gap >= -0.05 else BAD
         axes.barh(position, bar.actual * 100, color=colour, height=0.55, alpha=0.9)
         axes.plot(
             bar.expected * 100,
@@ -120,18 +165,24 @@ def track_record_chart(bars: list[ServiceBar]) -> bytes | None:
             markeredgewidth=2.2,
             color=TEXT,
         )
+        # Placed past whichever of the bar and the marker sits furthest right,
+        # so the label never lands on top of the prediction line.
+        label_x = max(bar.actual, bar.expected) * 100 + 2.5
         axes.text(
-            bar.actual * 100 + 1.4,
+            label_x,
             position,
             f"{bar.actual:.0%}  ({bar.settled})",
             va="center",
-            color=MUTED,
+            color=TEXT,
             fontsize=8,
         )
 
     axes.set_yticks(list(positions))
     axes.set_yticklabels([plain(bar.label) for bar in usable], color=TEXT, fontsize=8.5)
-    axes.set_xlim(0, 108)
+    axes.set_xlim(0, 122)
+    # Ticks stop at 100 because a win rate cannot exceed it. The extra width is
+    # only there to hold the labels.
+    axes.set_xticks([0, 20, 40, 60, 80, 100])
     axes.set_xlabel("actual win rate %", color=MUTED, fontsize=8)
     axes.set_title(
         "Live record - bar is actual, line is what we predicted",
@@ -159,7 +210,7 @@ def calibration_chart(
     figure, axes = _figure(4.8, 4.2)
     axes.grid(axis="y", color=GRID, linewidth=0.7)
 
-    axes.plot([0, 100], [0, 100], color=MUTED, linewidth=1, linestyle="--")
+    axes.plot([0, 100], [0, 100], color=DEEP, linewidth=1, linestyle="--", alpha=0.6)
     sizes = [min(260, 30 + n * 0.6) for _, _, n in usable]
     axes.scatter(
         [p * 100 for p, _, _ in usable],

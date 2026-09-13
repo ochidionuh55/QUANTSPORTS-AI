@@ -27,7 +27,7 @@ from app.bot.formatting import (
 from app.bot.formatting import (
     SPORT_PICKER,
     format_admin_dashboard,
-    format_basketball_status,
+    format_basketball_today,
     format_board,
     format_breakdown,
     format_fixture_list,
@@ -74,6 +74,8 @@ from app.database.models import (
     UserFeedback,
 )
 from app.providers.base import OddsProvider
+from app.providers.basketball import BasketballProviderError
+from app.providers.basketball import from_environment as basketball_from_environment
 from app.providers.live import live_odds_provider
 from app.services.activity import ActivityService
 from app.services.aliases import AliasReviewService
@@ -465,8 +467,16 @@ async def handle_basketball(callback: CallbackQuery) -> None:
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
+    provider = basketball_from_environment()
+    fixtures: list[object] = []
+    error: str | None = None
+    try:
+        fixtures = list(await provider.fixtures())
+    except BasketballProviderError as exc:
+        error = str(exc)
+
     await callback.message.edit_text(
-        format_basketball_status(list(BASKETBALL_COMPETITIONS.values())),
+        format_basketball_today(fixtures, error, list(BASKETBALL_COMPETITIONS.values())),
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [InlineKeyboardButton(text="⚽ Use football", callback_data="menu:main")],

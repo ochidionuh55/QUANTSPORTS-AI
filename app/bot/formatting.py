@@ -961,8 +961,8 @@ def format_home(counts: dict[str, int], boards: dict[str, int]) -> str:
     """Render the home screen with live counts."""
     total = sum(counts.values())
     lines = [
-        "<b>QUANTSPORT</b>",
-        "<i>Football intelligence — 113,000 matches, 38 competitions.</i>",
+        "<b>QUANTSPORT AI</b>",
+        "<i>Football Intelligence, Quantified. · Ask the Data.</i>",
         "",
     ]
     if total:
@@ -1496,8 +1496,8 @@ def format_fixture_picks(picks: list[tuple[str, str, float]]) -> str:
 
 
 SPORT_PICKER = (
-    "<b>QUANTSPORT</b>\n"
-    "<i>Football and basketball intelligence, measured.</i>\n\n"
+    "<b>QUANTSPORT AI</b>\n"
+    "<i>Football Intelligence, Quantified.</i>\n\n"
     "Choose a sport to begin.\n\n"
     "⚽ <b>Football</b>\n"
     "113,000 matches · 38 competitions · 18 daily services\n"
@@ -1619,3 +1619,73 @@ def format_basketball_status(competitions: list[object]) -> str:
         "we cannot show.</i>"
     )
     return "\n".join(lines)
+
+
+def format_basketball_today(
+    fixtures: list[object], error: str | None, competitions: list[object]
+) -> str:
+    """Render today's basketball, separating what we see from what we can say.
+
+    A fixture being visible and a fixture being modellable are different
+    things, and the screen keeps them apart. Showing a game we cannot model
+    with a probability attached would be the single most dishonest thing this
+    product could do.
+    """
+    lines = ["<b>🏀 BASKETBALL TODAY</b>", ""]
+
+    if error:
+        lines.append(f"<b>No fixtures available.</b>\n{error}")
+        lines.append("")
+        lines.append(
+            "<i>A basketball feed covers the leagues playing now — the WNBA, "
+            "FIBA tournaments, the Australian NBL. It shows you the games. It "
+            "does not, on its own, let us put a probability on them: that "
+            "needs each league's own measured history.</i>"
+        )
+        lines.append("")
+        lines.append(format_basketball_status(competitions))
+        return "\n".join(lines)
+
+    if not fixtures:
+        lines.append("No basketball fixtures found for today in the competitions we " "recognise.")
+        lines.append("")
+        lines.append(format_basketball_status(competitions))
+        return "\n".join(lines)
+
+    modellable = [f for f in fixtures if getattr(f, "modellable", False)]
+    watch_only = [f for f in fixtures if not getattr(f, "modellable", False)]
+
+    lines.append(f"<i>{len(fixtures)} fixture(s) today · {len(modellable)} we can model.</i>")
+    lines.append("")
+
+    if modellable:
+        lines.append("<b>Analysed</b>")
+        for fixture in modellable[:12]:
+            lines.append(_basketball_line(fixture, "🟢"))
+        lines.append("")
+
+    if watch_only:
+        lines.append("<b>Listed only — no model for these competitions yet</b>")
+        for fixture in watch_only[:15]:
+            lines.append(_basketball_line(fixture, "⚪"))
+        lines.append("")
+        lines.append(
+            "<i>These fixtures are real and so is the gap: their competitions "
+            "have no measured parameters, so we show the game and say nothing "
+            "about it. Borrowing the NBA's numbers would put confident "
+            "figures on leagues that score sixty points fewer per game.</i>"
+        )
+        lines.append("")
+
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def _basketball_line(fixture: object, badge: str) -> str:
+    """Render one basketball fixture."""
+    tip_off = getattr(fixture, "tip_off", None)
+    when = f"{tip_off:%H:%M}" if tip_off else ""
+    return (
+        f"{badge} <b>{fixture.home_name} v {fixture.away_name}</b>\n"  # type: ignore[attr-defined]
+        f"   {when} · {getattr(fixture, 'competition_name', 'Unknown')}"
+    )
