@@ -271,6 +271,10 @@ class BestOfDayEngine:
         ranked: dict[str, list[Selection]] = {}
         eligible = [f for f in forecasts if f.sample >= MIN_SAMPLE]
 
+        # Which result leg each fixture has already been published under, so a
+        # later service cannot back the opposite side of the same match.
+        claimed: dict[str, str] = {}
+
         for service in self._services:
             candidates: list[Selection] = []
             for forecast in eligible:
@@ -289,7 +293,22 @@ class BestOfDayEngine:
                 )
 
             candidates.sort(key=lambda s: (-s.score, s.forecast.fixture_id))
-            ranked[service.key] = candidates[:limit]
+
+            chosen: list[Selection] = []
+            for candidate in candidates:
+                existing = claimed.get(candidate.forecast.fixture_id)
+                if existing is not None and _legs_conflict(existing, service.key):
+                    continue
+                chosen.append(candidate)
+                if len(chosen) >= limit:
+                    break
+
+            for selection in chosen:
+                leg = RESULT_LEG.get(service.key)
+                if leg is not None:
+                    claimed.setdefault(selection.forecast.fixture_id, leg)
+
+            ranked[service.key] = chosen
         return ranked
 
     def best(self, forecasts: list[ModelForecast]) -> dict[str, Selection | None]:
@@ -304,6 +323,63 @@ class BestOfDayEngine:
         if not outcomes or service.outcome not in outcomes:
             return None
         return float(outcomes[service.outcome])
+
+
+# Which side of a fixture each service's result leg backs. Services whose
+# outcome carries no result leg — pure goals and BTTS markets — are absent.
+RESULT_LEG: Final[dict[str, str]] = {
+    "home": "home",
+    "away": "away",
+    "draw": "draw",
+    "home_draw": "home",
+    "away_draw": "away",
+    "home_or_over": "home",
+    "home_or_under": "home",
+    "draw_or_over": "draw",
+    "draw_or_under": "draw",
+    "away_or_over": "away",
+    "away_or_under": "away",
+    "home_or_btts": "home",
+    "draw_or_btts": "draw",
+    "away_or_btts": "away",
+    "home_or_cs": "home",
+}
+
+OPPOSING: Final[dict[str, frozenset[str]]] = {
+    "home": frozenset({"away"}),
+    "away": frozenset({"home"}),
+    "draw": frozenset(),
+}
+"""Which result legs contradict each other.
+
+A draw leg conflicts with neither: "draw or over 2.5" and "home or over 2.5"
+can both be sound, and a reader does not see them as opposite calls. Home
+against away is the pair that looks like backing both sides.
+"""
+
+
+def conflicts(first_service: str, second_service: str) -> bool:
+    """Whether two services would back opposing sides of one fixture.
+
+    Mathematically nothing is wrong with publishing "home or over 2.5" and
+    "away or over 2.5" on the same match — both win on any high-scoring game,
+    so they are not contradictory bets. But a reader sees one product backing
+    both teams, and that reads as hedging rather than analysis. The product is
+    judged on how it looks as much as on whether it is defensible.
+    """
+    first = RESULT_LEG.get(first_service)
+    second = RESULT_LEG.get(second_service)
+    if first is None or second is None:
+        return False
+    return second in OPPOSING.get(first, frozenset())
+
+
+def _legs_conflict(existing_leg: str, service_key: str) -> bool:
+    """Whether a service's leg opposes one already claimed for a fixture."""
+    leg = RESULT_LEG.get(service_key)
+    if leg is None:
+        return False
+    return leg in OPPOSING.get(existing_leg, frozenset())
 
 
 def settles(service_key: str, home_goals: int, away_goals: int) -> bool | None:

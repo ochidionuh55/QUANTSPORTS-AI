@@ -25,6 +25,7 @@ from app.bot.formatting import (
     HOW_IT_WORKS as HOW_IT_WORKS_GUIDE,
 )
 from app.bot.formatting import (
+    PAGE_SIZE,
     SPORT_PICKER,
     format_account,
     format_admin_dashboard,
@@ -1141,6 +1142,53 @@ async def handle_find(message: Message, user: User, session: object) -> None:
     )
 
 
+def _paged_fixture_buttons(
+    records: Sequence[object], page: int, prefix: str
+) -> InlineKeyboardMarkup:
+    """Build one page of fixture buttons with arrows.
+
+    Every fixture must be reachable. Listing a subset and telling a user to
+    "narrow the search" leaves them told there are twenty-one and shown eight,
+    which reads as the product being broken rather than concise.
+    """
+    total = len(records)
+    pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
+    page = max(0, min(page, pages - 1))
+    start = page * PAGE_SIZE
+    visible = list(records)[start : start + PAGE_SIZE]
+
+    rows: list[list[InlineKeyboardButton]] = [
+        [
+            InlineKeyboardButton(
+                text=f"{r.home_name} v {r.away_name}",  # type: ignore[attr-defined]
+                callback_data=f"analyse:{r.provider_event_id}",  # type: ignore[attr-defined]
+            )
+        ]
+        for r in visible
+    ]
+
+    if pages > 1:
+        navigation: list[InlineKeyboardButton] = []
+        if page > 0:
+            navigation.append(
+                InlineKeyboardButton(text="◀️ Previous", callback_data=f"{prefix}:{page - 1}")
+            )
+        navigation.append(InlineKeyboardButton(text=f"{page + 1}/{pages}", callback_data="noop"))
+        if page < pages - 1:
+            navigation.append(
+                InlineKeyboardButton(text="Next ▶️", callback_data=f"{prefix}:{page + 1}")
+            )
+        rows.append(navigation)
+
+    rows.append([InlineKeyboardButton(text="Back to markets", callback_data="markets:menu")])
+    return InlineKeyboardMarkup(inline_keyboard=rows)
+
+
+async def handle_noop(callback: CallbackQuery) -> None:
+    """Absorb a tap on the page indicator."""
+    await callback.answer()
+
+
 def _fixture_buttons(records: Sequence[object]) -> InlineKeyboardMarkup:
     """Build tappable buttons for a list of fixtures."""
     rows = [
@@ -1222,19 +1270,23 @@ async def handle_markets_menu(callback: CallbackQuery, user: User, session: obje
     )
 
 
-async def handle_market_browse(callback: CallbackQuery, session: object) -> None:
+async def handle_market_browse(callback: CallbackQuery, user: User, session: object) -> None:
     """Show every fixture ranked by one market."""
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
 
-    key = (callback.data or "").split(":", 1)[-1]
+    # Either "market:<key>" or "mkt:<key>:<page>", the second coming from the
+    # paging arrows.
+    parts = (callback.data or "").split(":")
+    key = parts[1] if len(parts) > 1 else ""
+    page = int(parts[2]) if len(parts) > 2 and parts[2].isdigit() else 0
     definition = MARKETS_BY_KEY.get(key)
     if definition is None:
         await callback.message.edit_text("Unknown market.", reply_markup=back_to_menu())
         return
 
-    query = FixtureQuery(market=key, min_probability=0.50, limit=20)
+    query = FixtureQuery(market=key, min_probability=0.50, limit=60)
     records = await FixtureQueryService(session).search(query)  # type: ignore[arg-type]
     records.sort(key=lambda r: probability_for(r, key) or 0.0, reverse=True)
 
@@ -1252,8 +1304,8 @@ async def handle_market_browse(callback: CallbackQuery, session: object) -> None
         return
 
     await callback.message.edit_text(
-        format_search_results(f"{definition.label}, strongest first", records, key),
-        reply_markup=_fixture_buttons(records),
+        format_search_results(f"{definition.label}, strongest first", records, key, page),
+        reply_markup=_paged_fixture_buttons(records, page, f"mkt:{key}"),
     )
 
 
@@ -1730,7 +1782,7 @@ def build_router() -> Router:
     router.callback_query.register(
         handle_markets_menu, F.data.in_({"markets:menu", "menu:markets"})
     )
-    router.callback_query.register(handle_market_browse, F.data.startswith("market:"))
+    router.callback_query.register(handle_market_browse, F.data.startswith(("market:", "mkt:")))
     router.callback_query.register(
         handle_explore_teams, F.data.in_({"explore:teams", "menu:teams"})
     )

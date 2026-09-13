@@ -603,21 +603,43 @@ def format_fixture_list(title: str, records: Sequence[object]) -> str:
     return "\n".join(lines)
 
 
+PAGE_SIZE = 8
+"""Fixtures per page.
+
+Small enough that a page fits a phone screen without scrolling past the
+buttons, which is what made the previous truncated list feel broken.
+"""
+
+
 def format_search_results(
-    description: str, records: Sequence[object], market_key: str | None = None
+    description: str,
+    records: Sequence[object],
+    market_key: str | None = None,
+    page: int = 0,
 ) -> str:
-    """Render search results, showing the filtered market where one applies."""
+    """Render one page of search results.
+
+    Previously this listed twelve and said "narrow the search to see the rest",
+    which left a user told there were twenty-one fixtures and shown eight with
+    no way forward. Every fixture is now reachable by paging.
+    """
     from app.services.queries import MARKETS_BY_KEY, probability_for
 
     definition = MARKETS_BY_KEY.get(market_key) if market_key else None
+    total = len(records)
+    pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
+    page = max(0, min(page, pages - 1))
+    start = page * PAGE_SIZE
+    visible = list(records)[start : start + PAGE_SIZE]
+
     lines = [
         "<b>Search results</b>",
         f"<i>{description}</i>",
-        f"{len(records)} fixture(s)",
+        f"{total} fixture(s)" + (f" · page {page + 1} of {pages}" if pages > 1 else ""),
         "",
     ]
 
-    for record in records[:12]:
+    for record in visible:
         badge = COVERAGE_BADGE.get(getattr(record, "coverage", ""), "⚪")
         kickoff = getattr(record, "kickoff", None)
         when = f"{kickoff:%a %H:%M}" if kickoff else ""
@@ -632,8 +654,10 @@ def format_search_results(
         lines.append(row)
         lines.append("")
 
-    if len(records) > 12:
-        lines.append(f"… and {len(records) - 12} more. Narrow the search to see them.")
+    if pages > 1:
+        lines.append(
+            f"Showing {start + 1}-{start + len(visible)} of {total}. " "Use the arrows below."
+        )
         lines.append("")
 
     lines.append(EXPERIMENTAL_NOTICE)

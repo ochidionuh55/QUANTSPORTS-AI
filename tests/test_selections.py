@@ -411,12 +411,20 @@ class TestHistory:
 
     async def test_history_is_not_limited_to_a_week(self, session: AsyncSession) -> None:
         """Records stay available indefinitely."""
-        await _analysis(session, "1")
+        long_ago = NOW - timedelta(days=200)
+
+        # The fixture must sit on the day being published, now that only
+        # today's card is eligible.
+        record = await _analysis(session, "1")
+        record.kickoff = long_ago + timedelta(hours=6)
+        record.computed_at = long_ago
+        await session.flush()
+
         service = SelectionService(session)
-        await service.publish(now=NOW - timedelta(days=200))
+        await service.publish(now=long_ago)
 
         days = await service.available_days()
-        assert (NOW - timedelta(days=200)).date() in days
+        assert long_ago.date() in days
 
 
 class TestTrackRecord:

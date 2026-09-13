@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from dataclasses import dataclass, field
-from datetime import UTC, date, datetime, timedelta
+from datetime import UTC, date, datetime, time, timedelta
 from decimal import Decimal
 
 from sqlalchemy import func, select
@@ -191,9 +191,17 @@ class SelectionService:
         moment = now or datetime.now(UTC)
         report = PublishReport(selection_date=moment.date())
 
+        # Today only. A card that quietly includes tomorrow's fixtures makes a
+        # daily service dishonest: a user reading "Best Home Win today" and
+        # finding a match that kicks off in thirty hours has been misled, even
+        # though the probability was sound.
+        end_of_day = datetime.combine(moment.date(), time(23, 59, 59), tzinfo=UTC)
         rows = await self._session.execute(
             select(StoredAnalysis)
-            .where(StoredAnalysis.kickoff > moment)
+            .where(
+                StoredAnalysis.kickoff > moment,
+                StoredAnalysis.kickoff <= end_of_day,
+            )
             .order_by(StoredAnalysis.kickoff)
         )
         analyses = list(rows.scalars().all())

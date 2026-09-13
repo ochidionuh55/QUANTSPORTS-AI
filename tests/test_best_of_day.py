@@ -221,3 +221,58 @@ class TestServiceDefinitions:
     def test_combination_services_exist(self) -> None:
         assert "home_or_over" in SERVICES_BY_KEY
         assert SERVICES_BY_KEY["home_or_over"].market == "Result or goals"
+
+
+class TestFixtureIntegrity:
+    """One fixture must not appear backing both teams."""
+
+    def test_opposing_legs_conflict(self) -> None:
+        from app.services.best_of_day import conflicts
+
+        assert conflicts("home_or_over", "away_or_over")
+        assert conflicts("home", "away")
+        assert conflicts("home_draw", "away_draw")
+
+    def test_draw_legs_do_not_conflict(self) -> None:
+        """ "Draw or over" beside "home or over" does not read as backing both
+        sides, so it stays permitted."""
+        from app.services.best_of_day import conflicts
+
+        assert not conflicts("home_or_over", "draw_or_over")
+        assert not conflicts("draw", "home")
+
+    def test_goal_only_services_never_conflict(self) -> None:
+        """Over 1.5 and under 3.5 carry no result leg at all."""
+        from app.services.best_of_day import conflicts
+
+        assert not conflicts("over_15", "under_35")
+        assert not conflicts("btts", "home_or_over")
+
+    def test_engine_refuses_to_back_both_sides(self) -> None:
+        """The complaint this rule exists for: one product appearing to back
+        the home team in one service and the away team in another, on the same
+        match.
+
+        Draw legs are deliberately still permitted — "draw or over 2.5" beside
+        "home or over 2.5" does not read as backing both teams.
+        """
+        from app.services.best_of_day import RESULT_LEG
+
+        record = _forecast("1", lambda_home=1.9, lambda_away=1.8, sample=200)
+        ranked = BestOfDayEngine().rank([record], limit=3)
+
+        legs: set[str] = set()
+        for key, selections in ranked.items():
+            leg = RESULT_LEG.get(key)
+            if leg is not None and selections:
+                legs.add(leg)
+
+        assert not {"home", "away"} <= legs
+
+    def test_unrelated_fixtures_are_unaffected(self) -> None:
+        """The rule applies per fixture, not across the card."""
+        home_side = _forecast("home-strong", lambda_home=2.4, lambda_away=0.7)
+        away_side = _forecast("away-strong", lambda_home=0.7, lambda_away=2.4)
+
+        ranked = BestOfDayEngine().rank([home_side, away_side], limit=3)
+        assert ranked["home"] or ranked["away"]
