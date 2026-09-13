@@ -26,6 +26,12 @@ from app.api.dependencies.common import SessionDep
 from app.core.competitions import CSV_COMPETITIONS
 from app.database.models import HistoricalMatch, ServiceSelection, StoredAnalysis, Team
 from app.services.best_of_day import SERVICES, SERVICES_BY_KEY
+from app.services.queries import (
+    MARKET_FILTERS,
+    MARKETS_BY_KEY,
+    FixtureQuery,
+    FixtureQueryService,
+)
 from app.services.selections import (
     UNDER_OBSERVATION,
     WITHHELD,
@@ -250,6 +256,109 @@ async def history_days(
 ) -> list[date]:
     """Return dates with published selections, newest first."""
     return await SelectionService(session).available_days(limit=limit)
+
+
+class MarketOption(BaseModel):
+    """One market a reader can filter on."""
+
+    key: str
+    label: str
+    market: str
+    outcome: str
+    available: int = Field(description="Fixtures on today's card reaching the probability floor.")
+
+
+@router.get("/markets", response_model=list[MarketOption])
+async def markets(
+    session: SessionDep,
+    min_probability: float = Query(default=0.5, ge=0.0, le=1.0),
+) -> list[MarketOption]:
+    """Return every filterable market with a live count.
+
+    Counts come from the same query service the search endpoint uses, so a
+    market that advertises twelve fixtures returns twelve when opened. A count
+    computed by a different path is a promise the next screen may not keep.
+    """
+    service = FixtureQueryService(session)
+    options: list[MarketOption] = []
+
+    for definition in MARKET_FILTERS:
+        found = await service.search(
+            FixtureQuery(market=definition.key, min_probability=min_probability, limit=200)
+        )
+        options.append(
+            MarketOption(
+                key=definition.key,
+                label=definition.label,
+                market=definition.market,
+                outcome=definition.outcome,
+                available=len(found),
+            )
+        )
+    return options
+
+
+@router.get("/search", response_model=list[FixtureCard])
+async def search(
+    session: SessionDep,
+    market: str | None = Query(default=None),
+    competition: str | None = Query(default=None),
+    min_probability: float = Query(default=0.0, ge=0.0, le=1.0),
+    coverage: str | None = Query(default=None),
+    limit: int = Query(default=60, ge=1, le=200),
+) -> list[FixtureCard]:
+    """Search today's modelled fixtures.
+
+    Returns an empty list rather than an error when nothing matches: a search
+    that finds nothing is a real answer about the card, not a failure.
+    """
+    if market is not None and market not in MARKETS_BY_KEY:
+        raise HTTPException(status_code=404, detail="Unknown market.")
+
+    query = FixtureQuery(
+        competitions=(competition,) if competition else (),
+        market=market,
+        min_probability=min_probability,
+        min_coverage=coverage,
+        limit=limit,
+    )
+    records = await FixtureQueryService(session).search(query)
+    picks = await SelectionService(session).picks_by_fixture()
+
+    cards: list[FixtureCard] = []
+    for record in records:
+        chosen = picks.get(record.provider_event_id, [])
+        probability = None
+        outcome = None
+
+        if market is not None:
+            definition = MARKETS_BY_KEY[market]
+            raw = (record.markets or {}).get(definition.market, {})
+            value = raw.get(definition.outcome) if isinstance(raw, dict) else None
+            if value is not None:
+                try:
+                    probability = float(str(value))
+                    outcome = definition.outcome
+                except (TypeError, ValueError):
+                    probability = None
+        elif chosen:
+            outcome = chosen[0][1]
+            probability = chosen[0][2]
+
+        cards.append(
+            FixtureCard(
+                fixture_id=record.provider_event_id,
+                home_name=record.home_name,
+                away_name=record.away_name,
+                competition=record.competition,
+                kickoff=record.kickoff,
+                coverage=record.coverage,
+                strongest_market=outcome,
+                strongest_probability=probability,
+                services=[label for label, _, _ in chosen],
+            )
+        )
+    return cards
 
 
 class ServiceRecordCard(BaseModel):

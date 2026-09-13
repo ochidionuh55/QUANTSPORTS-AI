@@ -68,11 +68,17 @@ export type FixtureCard = {
  * should say the data is unavailable, not collapse into an error screen — the
  * rest of the page is still worth reading.
  */
+const TIMEOUT_MS = 4000;
+
 async function get<T>(path: string, revalidate = 300): Promise<T | null> {
   try {
     const response = await fetch(`${API}${path}`, {
       next: { revalidate },
       headers: { accept: "application/json" },
+      // A page renders only once its data resolves, so an unreachable API
+      // would otherwise leave a visitor staring at a blank screen for as long
+      // as the network takes to give up. Four seconds, then render without it.
+      signal: AbortSignal.timeout(TIMEOUT_MS),
     });
     if (!response.ok) return null;
     return (await response.json()) as T;
@@ -86,6 +92,48 @@ export const getServices = () => get<ServiceStatus[]>("/api/v1/services", 300);
 export const getToday = () => get<FixtureCard[]>("/api/v1/today", 300);
 export const getBestOfToday = () =>
   get<SelectionCard[]>("/api/v1/best-of-today", 300);
+
+export type ServiceRecord = {
+  key: string;
+  label: string;
+  status: "validated" | "observation";
+  total: number;
+  won: number;
+  lost: number;
+  pending: number;
+  actual_rate: number | null;
+  expected_rate: number | null;
+  gap: number | null;
+  meaningful: boolean;
+};
+
+export const getTrackRecord = () =>
+  get<ServiceRecord[]>("/api/v1/track-record", 600);
+
+export type MarketOption = {
+  key: string;
+  label: string;
+  market: string;
+  outcome: string;
+  available: number;
+};
+
+export const getMarkets = () => get<MarketOption[]>("/api/v1/markets", 300);
+
+/** Search today's card. Filters are applied server-side by the query service
+ *  the Telegram bot also uses, so both interfaces answer identically. */
+export async function searchFixtures(params: {
+  market?: string;
+  minProbability?: number;
+  coverage?: string;
+}): Promise<FixtureCard[] | null> {
+  const query = new URLSearchParams();
+  if (params.market) query.set("market", params.market);
+  if (params.minProbability !== undefined)
+    query.set("min_probability", String(params.minProbability));
+  if (params.coverage) query.set("coverage", params.coverage);
+  return get<FixtureCard[]>(`/api/v1/search?${query.toString()}`, 300);
+}
 
 /** Format a probability the way the product speaks about one. */
 export function asPercent(value: number | null | undefined): string {

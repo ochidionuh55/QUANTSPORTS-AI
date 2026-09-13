@@ -1,22 +1,22 @@
 import Link from "next/link";
+import { Mark } from "./ui/Mark";
 
 const COLUMNS = [
   {
     title: "Product",
     links: [
       { href: "/today", label: "Today" },
-      { href: "/markets", label: "Markets" },
-      { href: "/teams", label: "Teams" },
+      { href: "/markets", label: "Market Explorer" },
+      { href: "/teams", label: "Team Intelligence" },
       { href: "/track-record", label: "Track Record" },
     ],
   },
   {
-    title: "Company",
+    title: "Research",
     links: [
       { href: "/methodology", label: "Methodology" },
       { href: "/data-sources", label: "Data Sources" },
-      { href: "/pricing", label: "Pricing" },
-      { href: "/contact", label: "Contact" },
+      { href: "/history", label: "History" },
     ],
   },
   {
@@ -29,41 +29,29 @@ const COLUMNS = [
   },
 ];
 
-/** The site footer, carrying the standing disclosure. */
+/** The footer. Ends on the brand line, set as a poster. */
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-line bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-14">
-        <div className="grid gap-10 md:grid-cols-4">
+    <footer className="relative z-0 border-t border-line bg-warm">
+      <div className="mx-auto max-w-shell px-6 py-20">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span
-                aria-hidden
-                className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-emerald-deep via-emerald to-emerald-bright text-sm font-bold text-white"
-              >
-                Q
-              </span>
-              <span className="text-[15px] font-semibold tracking-tight">
-                QUANTSPORT <span className="text-emerald">AI</span>
-              </span>
-            </div>
-            <p className="mt-3 text-sm text-muted">
+            <Mark size={38} />
+            <p className="mt-4 text-sm font-medium text-ink">QUANTSPORT AI</p>
+            <p className="mt-1 text-sm text-ink-muted">
               Football Intelligence, Quantified.
             </p>
-            <p className="mt-1 text-sm italic text-emerald">Ask the Data.</p>
           </div>
 
           {COLUMNS.map((column) => (
             <div key={column.title}>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-ink">
-                {column.title}
-              </h3>
-              <ul className="mt-4 space-y-2.5">
+              <h3 className="mono-label">{column.title}</h3>
+              <ul className="mt-5 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-ink"
+                      className="text-sm text-ink-muted transition-colors duration-fast hover:text-ink"
                     >
                       {link.label}
                     </Link>
@@ -74,14 +62,19 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 border-t border-line pt-6">
-          <p className="text-xs leading-relaxed text-muted">
-            QUANTSPORT AI provides statistical analysis of football data. High
-            probability does not mean certainty, and historical performance does
-            not guarantee future results. Our models are calibrated but have not
-            been shown to beat bookmaker prices; we publish that finding rather
-            than obscure it. Analytical information only. 18+.
-          </p>
+        <p className="mt-16 max-w-prose text-xs leading-relaxed text-ink-faint">
+          QUANTSPORT AI provides calibrated football intelligence, not a claim
+          of proven bookmaker-beating edge. Our models are measured against
+          outcomes and market benchmarks where valid data exists. We publish
+          what the evidence supports. High probability does not mean certainty.
+          Analytical information only. 18+.
+        </p>
+
+        <div
+          aria-hidden
+          className="mt-12 select-none border-t border-line pt-10 text-[clamp(2.5rem,11vw,9rem)] font-semibold leading-none tracking-[-0.05em] text-emerald/12"
+        >
+          ASK THE DATA.
         </div>
       </div>
     </footer>

@@ -1,267 +1,204 @@
-import Link from "next/link";
-import { Stat } from "@/components/Stat";
-import { DistributionCurve } from "@/components/DistributionCurve";
-import { COVERAGE, asPercent, getServices, getSummary, getToday } from "@/lib/api";
+import { Button } from "@/components/ui/Button";
+import { ScoreMatrix } from "@/components/hero/ScoreMatrix";
+import { ProbabilityField } from "@/components/hero/ProbabilityField";
+import { MarketDerivation } from "@/components/hero/MarketDerivation";
+import { CommandBar } from "@/components/hero/CommandBar";
+import { getSummary } from "@/lib/api";
+import { formatCount } from "@/lib/format";
 
-export const revalidate = 300;
+export const revalidate = 900;
 
 export default async function Home() {
-  const [summary, fixtures, services] = await Promise.all([
-    getSummary(),
-    getToday(),
-    getServices(),
-  ]);
-
-  const upcoming = (fixtures ?? []).slice(0, 6);
-  const published = (services ?? []).filter((service) => service.published);
+  const summary = await getSummary();
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden border-b border-line">
+      {/* Screen 1 — the statement.
+          Full-viewport and left-aligned. The mathematics occupies the space
+          rather than sitting in a card beside the copy, which is what made the
+          previous version read as a template with a widget bolted on. */}
+      <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-white">
+        <ProbabilityField />
+
+        {/* A wash so the type stays legible over the field without hiding it. */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-40 -top-40 h-[32rem] w-[32rem] rounded-full bg-gradient-to-br from-emerald-bright/20 via-emerald/10 to-transparent blur-3xl"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"
         />
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:py-28">
-          <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-emerald-deep">
-                Data · Models · Markets · Evidence
-              </p>
-              <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-6xl">
-                Football Intelligence,
+
+        <div className="relative mx-auto w-full max-w-shell px-5 py-24 sm:px-6">
+          <div className="max-w-3xl">
+            <p className="mono-label animate-rise">
+              QUANTSPORT Intelligence Engine
+            </p>
+
+            <h1
+              className="mt-8 animate-rise text-hero font-semibold text-ink"
+              style={{ animationDelay: "60ms" }}
+            >
+              Football intelligence.
+              <br />
+              <span className="text-emerald">Quantified.</span>
+            </h1>
+
+            <p
+              className="mt-10 max-w-lg animate-rise text-lead text-ink-muted"
+              style={{ animationDelay: "130ms" }}
+            >
+              Football is full of opinions. We start with probabilities.
+            </p>
+
+            <div
+              className="mt-11 flex animate-rise flex-wrap gap-3"
+              style={{ animationDelay: "200ms" }}
+            >
+              <Button href="/today">Explore Today</Button>
+              <Button
+                href="https://t.me/quantpredictzbot"
+                variant="secondary"
+                external
+              >
+                Open Telegram
+              </Button>
+            </div>
+
+            {/* Figures come from the database. If it is unreachable we show a
+                dash rather than a number nobody measured. */}
+            <div
+              className="mt-16 flex animate-rise flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint"
+              style={{ animationDelay: "260ms" }}
+            >
+              <span className="tabular text-ink">
+                {summary ? formatCount(summary.matches) : "—"}
+              </span>
+              <span>matches</span>
+              <span className="text-line-strong">•</span>
+              <span className="tabular text-ink">
+                {summary ? summary.competitions : "—"}
+              </span>
+              <span>competitions</span>
+              <span className="text-line-strong">•</span>
+              <span className="tabular text-ink">
+                {summary ? formatCount(summary.teams) : "—"}
+              </span>
+              <span>teams</span>
+            </div>
+
+            <p
+              className="mt-10 animate-rise text-sm italic text-emerald-deep"
+              style={{ animationDelay: "320ms" }}
+            >
+              Ask the Data.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Screen 3 — the matrix the hero field resolves into. */}
+      <section className="border-y border-line bg-warm">
+        <div className="mx-auto max-w-shell px-5 py-20 sm:px-6 sm:py-28">
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <p className="mono-label">The distribution</p>
+              <h2 className="mt-6 text-display font-semibold text-ink">
+                One match.
                 <br />
-                <span className="text-emerald">Quantified.</span>
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-                Mathematical models, historical evidence and transparent
-                probabilities — built to help you explore football beyond
-                opinion.
+                Thousands of outcomes.
+              </h2>
+              <p className="mt-7 max-w-prose leading-relaxed text-ink-muted">
+                A football match does not have an answer. It has a distribution
+                — every scoreline with a probability attached, estimated from
+                how the two sides have actually scored and conceded.
               </p>
-
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Link
-                  href="/today"
-                  className="rounded-pill bg-emerald px-6 py-3 text-sm font-medium text-white shadow-card transition-opacity hover:opacity-90"
-                >
-                  Explore Today
-                </Link>
-                <a
-                  href="https://t.me/quantpredictzbot"
-                  className="rounded-pill border border-line bg-white px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-emerald"
-                >
-                  Try on Telegram
-                </a>
-              </div>
-
-              <p className="mt-8 text-sm italic text-emerald-deep">
-                Ask the Data.
+              <p className="mt-4 max-w-prose leading-relaxed text-ink-muted">
+                Hover a cell to see its probability, and which markets that
+                scoreline feeds.
               </p>
             </div>
 
-            <DistributionCurve lambda={2.68} />
-          </div>
-
-          {/* Figures come from the database, never from the design. */}
-          <div className="mt-16 grid grid-cols-2 gap-8 border-t border-line pt-10 sm:grid-cols-4">
-            <Stat
-              value={summary ? summary.matches.toLocaleString() : "—"}
-              label="Matches"
-            />
-            <Stat
-              value={summary ? String(summary.competitions) : "—"}
-              label="Competitions"
-            />
-            <Stat
-              value={summary ? summary.teams.toLocaleString() : "—"}
-              label="Teams"
-            />
-            <Stat
-              value={summary ? String(summary.services) : "—"}
-              label="Daily services"
-            />
+            <div className="rounded-lg border border-line bg-white p-5 shadow-float sm:p-8">
+              <ScoreMatrix />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Today's intelligence */}
-      <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Today&rsquo;s Intelligence
-            </h2>
-            <p className="mt-2 text-muted">
-              {summary
-                ? `${summary.fixtures_modelled_today} of ${summary.fixtures_today} fixtures modelled.`
-                : "Fixture data is unavailable right now."}
-            </p>
-          </div>
-          <Link
-            href="/today"
-            className="hidden shrink-0 text-sm font-medium text-emerald hover:underline sm:block"
-          >
-            View all →
-          </Link>
-        </div>
-
-        {upcoming.length === 0 ? (
-          <div className="mt-8 rounded-card border border-line bg-surface p-10 text-center">
-            <p className="font-medium text-ink">No fixtures to show yet</p>
-            <p className="mt-2 text-sm text-muted">
-              Nothing is on the card at the moment. We publish what the data
-              supports rather than filling the page.
-            </p>
-          </div>
-        ) : (
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {upcoming.map((fixture) => {
-              const coverage =
-                COVERAGE[fixture.coverage] ?? COVERAGE.unsupported;
-              return (
-                <article
-                  key={fixture.fixture_id}
-                  className="rounded-card border border-line bg-white p-5 shadow-card transition-shadow hover:shadow-lift"
-                >
-                  <div className="flex items-center justify-between text-xs text-muted">
-                    <span>{fixture.competition ?? "Unknown league"}</span>
-                    <span title={coverage.label}>{coverage.badge}</span>
-                  </div>
-                  <h3 className="mt-3 text-[15px] font-semibold leading-snug text-ink">
-                    {fixture.home_name}{" "}
-                    <span className="font-normal text-muted">v</span>{" "}
-                    {fixture.away_name}
-                  </h3>
-                  <p className="mt-1 text-xs text-muted">
-                    {new Date(fixture.kickoff).toLocaleTimeString([], {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
-                  </p>
-
-                  {fixture.strongest_market ? (
-                    <div className="mt-4 rounded-xl bg-surface-green px-3.5 py-3">
-                      <div className="text-xs text-muted">Model view</div>
-                      <div className="mt-0.5 flex items-baseline justify-between">
-                        <span className="text-sm font-medium text-ink">
-                          {fixture.strongest_market}
-                        </span>
-                        <span className="tabular text-lg font-semibold text-emerald-deep">
-                          {asPercent(fixture.strongest_probability)}
-                        </span>
-                      </div>
-                    </div>
-                  ) : (
-                    <p className="mt-4 text-xs text-muted">
-                      No service selected this fixture today.
-                    </p>
-                  )}
-                </article>
-              );
-            })}
-          </div>
-        )}
+      {/* Screen 04 — one model, every market */}
+      <section className="mx-auto max-w-shell px-5 py-20 sm:px-6 sm:py-28">
+        <MarketDerivation />
       </section>
 
-      {/* Services */}
-      <section className="border-y border-line bg-surface">
-        <div className="mx-auto max-w-6xl px-5 py-20">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Daily services
+      {/* Screen 05 — Ask the Data */}
+      <section className="light-field grain relative overflow-hidden border-y border-line">
+        <div className="mx-auto max-w-shell px-5 py-20 sm:px-6 sm:py-28">
+          <CommandBar />
+        </div>
+      </section>
+
+      {/* Screen — the honesty, as a cinematic dark section */}
+      <section className="bg-night-deep py-28 text-white">
+        <div className="mx-auto max-w-shell px-6">
+          <p className="font-mono text-mono uppercase text-emerald-mint">
+            Nothing hidden
+          </p>
+          <h2 className="mt-6 max-w-3xl text-display font-semibold">
+            We test before we trust.
           </h2>
-          <p className="mt-2 max-w-2xl text-muted">
-            Each service ranks today&rsquo;s fixtures for one market. Nothing is
-            published to fill a slot — if nothing qualifies, the service says
-            so.
+          <p className="mt-7 max-w-prose text-lead text-white/70">
+            Our models are measured against outcomes and market benchmarks
+            wherever valid data exists. We publish what the evidence supports —
+            not what sounds impressive.
           </p>
 
-          <div className="mt-8 flex flex-wrap gap-2.5">
-            {published.length === 0 ? (
-              <p className="text-sm text-muted">
-                Service data is unavailable right now.
-              </p>
-            ) : (
-              published.map((service) => (
-                <span
-                  key={service.key}
-                  className="inline-flex items-center gap-2 rounded-pill border border-line bg-white px-4 py-2 text-sm"
-                >
-                  <span
-                    aria-hidden
-                    className={
-                      service.status === "validated"
-                        ? "h-1.5 w-1.5 rounded-full bg-emerald"
-                        : "h-1.5 w-1.5 rounded-full bg-lime"
-                    }
-                  />
-                  {service.label.replace(/^[^\s]+\s/, "")}
-                  {service.selections_today > 0 ? (
-                    <span className="tabular text-xs text-muted">
-                      {service.selections_today}
-                    </span>
-                  ) : null}
-                </span>
-              ))
-            )}
+          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-3">
+            {[
+              {
+                value: "Calibrated",
+                label: "Outcomes happen about as often as we say they will",
+              },
+              {
+                value: "No proven edge",
+                label:
+                  "Tested against closing prices more than once. The market won",
+              },
+              {
+                value: "Published first",
+                label:
+                  "Every selection timestamped before kickoff, never edited after",
+              },
+            ].map((item) => (
+              <div key={item.value} className="bg-night-deep p-8">
+                <div className="text-title font-semibold text-emerald-mint">
+                  {item.value}
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">
+                  {item.label}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <p className="mt-6 text-xs text-muted">
-            Green = validated · Lime = under observation. Services measured as
-            overconfident are withheld rather than published.
+          <p className="mt-10 max-w-prose text-sm text-white/45">
+            That is not a weakness we are admitting. It is the finding, and a
+            record you can check is worth more than a claim you cannot.
           </p>
         </div>
       </section>
 
-      {/* Honesty */}
-      <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              What we can show, and what we can&rsquo;t
-            </h2>
-            <p className="mt-5 leading-relaxed text-muted">
-              Our probabilities are well calibrated: outcomes happen about as
-              often as we say they will. We have tested, more than once, whether
-              the models beat bookmaker prices. They do not.
-            </p>
-            <p className="mt-4 leading-relaxed text-muted">
-              We publish that finding rather than obscure it, because a track
-              record you cannot check is only a claim. Every selection is
-              timestamped before kickoff, settled from the result, and never
-              edited afterwards — including the ones that lost.
-            </p>
-            <Link
-              href="/methodology"
-              className="mt-6 inline-block text-sm font-medium text-emerald hover:underline"
-            >
-              Read the methodology →
-            </Link>
-          </div>
-
-          <div className="rounded-card border border-line bg-white p-8 shadow-card">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-ink">
-              What this is not
-            </h3>
-            <ul className="mt-5 space-y-3.5 text-sm text-muted">
-              {[
-                "A tipping service",
-                "A claim to beat bookmakers",
-                "Guaranteed outcomes of any kind",
-                "A record with the losses removed",
-              ].map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span aria-hidden className="text-muted">
-                    ✕
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 border-t border-line pt-5 text-sm leading-relaxed text-ink">
-              It is a research tool for people who would rather see the
-              mathematics than be told an answer.
-            </p>
+      {/* Close */}
+      <section className="mx-auto max-w-shell px-6 py-28">
+        <div className="max-w-2xl">
+          <h2 className="text-display font-semibold text-ink">
+            The game looks different from here.
+          </h2>
+          <p className="mt-6 text-lead text-ink-muted">
+            Probability before opinion. See what the model sees.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button href="/today">Explore QUANTSPORT AI</Button>
+            <Button href="/methodology" variant="secondary">
+              Read the methodology
+            </Button>
           </div>
         </div>
       </section>
