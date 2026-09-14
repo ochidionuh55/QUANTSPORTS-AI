@@ -52,26 +52,33 @@ export default async function TeamPage({ params }: Props) {
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {team.form ? (
-            <div className="rounded-lg border border-line bg-white p-6">
+            <div className="rounded-lg border border-line bg-white p-6 sm:p-8">
               <p className="mono-label">Recent form</p>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {(team.form ?? "").split("").map((result, index) => (
                   <span
                     key={`${result}-${index}`}
                     className={[
-                      "grid h-9 w-9 place-items-center rounded-sm font-mono text-[13px] font-medium",
+                      "grid h-11 w-11 place-items-center rounded-sm font-mono",
+                      "text-[15px] font-medium transition-transform duration-base",
+                      "ease-quant hover:-translate-y-0.5",
                       result === "W"
-                        ? "bg-surface-mint text-emerald-deep"
+                        ? "bg-emerald text-white"
                         : result === "D"
                           ? "bg-surface text-ink-muted"
                           : "bg-line text-ink-muted",
                     ].join(" ")}
+                    style={{
+                      animation: `rise 520ms cubic-bezier(0.22,1,0.36,1) ${index * 55}ms both`,
+                    }}
                   >
                     {result}
                   </span>
                 ))}
               </div>
-              <p className="mt-4 text-xs text-ink-faint">Oldest first.</p>
+              <p className="mt-5 text-xs text-ink-faint">
+                Oldest first. Counted results, no forecast involved.
+              </p>
             </div>
           ) : null}
 

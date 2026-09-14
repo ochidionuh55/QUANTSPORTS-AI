@@ -26,6 +26,7 @@ from app.api.dependencies.common import SessionDep
 from app.core.competitions import CSV_COMPETITIONS
 from app.database.models import HistoricalMatch, ServiceSelection, StoredAnalysis, Team
 from app.services.best_of_day import SERVICES, SERVICES_BY_KEY
+from app.services.divergence import find_divergences
 from app.services.profiles import ProfileService
 from app.services.queries import (
     MARKET_FILTERS,
@@ -651,6 +652,63 @@ async def competitions(session: SessionDep) -> list[CompetitionCard]:
 
     cards.sort(key=lambda card: (-card.fixtures_today, card.name))
     return cards
+
+
+class DivergenceCard(BaseModel):
+    """One fixture where our estimate parts company with the price."""
+
+    fixture_id: str
+    home_name: str
+    away_name: str
+    competition: str | None
+    kickoff: datetime
+    outcome: str
+    model_probability: float
+    market_probability: float
+    model_odds: float
+    market_odds: float
+    gap: float
+    coverage: str
+    sample: int
+
+
+@router.get("/divergence", response_model=list[DivergenceCard])
+async def divergence(
+    session: SessionDep, limit: int = Query(default=10, ge=1, le=40)
+) -> list[DivergenceCard]:
+    """Return fixtures where our model most disagrees with the market.
+
+    A disagreement report, not a value signal. Our models have been measured
+    against closing prices and do not beat them, so this says where we differ
+    and nothing about who is right.
+    """
+    moment = datetime.now(UTC)
+    rows = await session.execute(
+        select(StoredAnalysis)
+        .where(StoredAnalysis.kickoff > moment)
+        .order_by(StoredAnalysis.kickoff)
+        .limit(200)
+    )
+
+    found = find_divergences(list(rows.scalars().all()), limit=limit, now=moment)
+    return [
+        DivergenceCard(
+            fixture_id=item.fixture_id,
+            home_name=item.home_name,
+            away_name=item.away_name,
+            competition=item.competition,
+            kickoff=item.kickoff,
+            outcome=item.outcome,
+            model_probability=item.model_probability,
+            market_probability=item.market_probability,
+            model_odds=item.implied_odds_model,
+            market_odds=item.implied_odds_market,
+            gap=item.gap,
+            coverage=item.coverage,
+            sample=item.sample,
+        )
+        for item in found
+    ]
 
 
 class ServiceRecordCard(BaseModel):

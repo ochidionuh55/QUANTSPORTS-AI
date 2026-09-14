@@ -216,6 +216,25 @@ export const getDayRecord = (day: string) =>
 
 export const getHistoryDays = () => get<string[]>("/api/v1/history", 600);
 
+export type DivergenceCard = {
+  fixture_id: string;
+  home_name: string;
+  away_name: string;
+  competition: string | null;
+  kickoff: string;
+  outcome: string;
+  model_probability: number;
+  market_probability: number;
+  model_odds: number;
+  market_odds: number;
+  gap: number;
+  coverage: string;
+  sample: number;
+};
+
+export const getDivergence = () =>
+  get<DivergenceCard[]>("/api/v1/divergence", 300);
+
 /** Search today's card. Filters are applied server-side by the query service
  *  the Telegram bot also uses, so both interfaces answer identically. */
 export async function searchFixtures(params: {

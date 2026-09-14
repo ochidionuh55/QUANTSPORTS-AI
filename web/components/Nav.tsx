@@ -8,6 +8,7 @@ import { Wordmark } from "./ui/Wordmark";
 const LINKS = [
   { href: "/today", label: "Today" },
   { href: "/markets", label: "Markets" },
+  { href: "/divergence", label: "Divergence" },
   { href: "/teams", label: "Teams" },
   { href: "/history", label: "History" },
   { href: "/track-record", label: "Track Record" },

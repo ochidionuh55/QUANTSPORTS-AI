@@ -83,3 +83,45 @@ Where a field is missing the component degrades: the lead selection drops its
 evidence meters and keeps its headline figures, rather than taking the page
 down. Making these optional also let the compiler find three more unguarded
 call sites we had not noticed.
+
+## Pages
+
+| Route | State |
+|---|---|
+| `/` | Living probability field, market derivation, command demo |
+| `/today` | Lead intelligence object, service feed, full card |
+| `/markets` | Search-led explorer with sticky controls |
+| `/divergence` | Model–market disagreement |
+| `/teams` · `/teams/[id]` | Club hero, counted splits, form strip |
+| `/competitions` | Per-league character with result bars |
+| `/history` · `/history/[day]` | Permanent daily record |
+| `/track-record` | Calibration plot and per-service bars |
+| `/methodology` `/pricing` `/login` | Static |
+
+## Divergence, and why the wording is load-bearing
+
+`/divergence` shows fixtures where our models reach a different conclusion from
+the bookmaker. It would be trivial to present this as value betting, and it
+would be false: we measured skill at +0.000% across nine seasons of football and
+eleven of basketball. Where our models have disagreed with the price, the price
+was right.
+
+So the page shows **both figures on every row** — ours and the market's, as
+probability and as decimal odds. A divergence shown without the price it
+diverges from invites a reader to assume we think we are right.
+
+Four tests assert the copy never drifts into a value claim. They check
+promotional phrases rather than bare words, because "No outcome is guaranteed"
+is the disclaimer and must stay, while "guaranteed win" would be the lie.
+
+## Empty states are answers
+
+Every empty state states a finding rather than apologising:
+
+- No selections today → "That is a real answer, not an empty page."
+- No divergence → "Bookmakers are good at this, and a day with no material
+  disagreement is not a day the product failed."
+- Thin sample → the rate is not printed at all, and the screen says why.
+
+An interface that treats an honest "nothing qualified" as a failure teaches its
+readers to distrust the days when something does.
