@@ -18,7 +18,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
 
 from app.database.base import Base
-from app.database.models import HistoricalMatch, StoredAnalysis, Team
+from app.database.models import HistoricalMatch, SettledPrediction, StoredAnalysis, Team
 from app.providers.errors import ProviderRateLimitError, ProviderUnavailableError
 from app.providers.mock import MockOddsProvider
 from app.services.daily_scan import (
@@ -281,7 +281,8 @@ class TestDailyScan:
         report = await DailyScanService(session).scan(Down(), now=NOW)
         assert report.errors == 1
 
-    async def test_finished_fixtures_are_pruned(self, session: AsyncSession) -> None:
+    async def test_settled_fixtures_are_pruned(self, session: AsyncSession) -> None:
+        """An analysis is removed once its result has been recorded."""
         session.add(
             StoredAnalysis(
                 provider_name="mock",
@@ -298,6 +299,29 @@ class TestDailyScan:
                 computed_at=NOW - timedelta(days=3),
             )
         )
+        session.add(
+            SettledPrediction(
+                provider_name="mock",
+                provider_event_id="old",
+                source="live",
+                home_name="A",
+                away_name="B",
+                competition="Test",
+                kickoff=NOW - timedelta(days=3),
+                coverage="unsupported",
+                model_version="v1",
+                components_used=[],
+                predicted_home=Decimal("0.5"),
+                predicted_draw=Decimal("0.3"),
+                predicted_away=Decimal("0.2"),
+                home_goals=1,
+                away_goals=0,
+                actual_result="home",
+                predicted_favourite="home",
+                favourite_won=True,
+                settled_at=NOW,
+            )
+        )
         await session.flush()
 
         await DailyScanService(session).scan(
@@ -307,6 +331,39 @@ class TestDailyScan:
             (await session.execute(select(StoredAnalysis.provider_event_id))).scalars().all()
         )
         assert "old" not in remaining
+
+    async def test_unsettled_fixtures_are_kept(self, session: AsyncSession) -> None:
+        """The bug this rule exists for.
+
+        Deleting an analysis on age alone left every fixture that finished
+        overnight permanently unsettleable: settlement reads these rows, so the
+        published selection could never be scored and sat pending forever.
+        """
+        session.add(
+            StoredAnalysis(
+                provider_name="mock",
+                provider_event_id="unsettled",
+                home_name="A",
+                away_name="B",
+                kickoff=NOW - timedelta(days=1),
+                coverage="fully_modelled",
+                markets={"1X2": {"Home": "0.5", "Draw": "0.3", "Away": "0.2"}},
+                home_stats={},
+                away_stats={},
+                components_used=["poisson"],
+                components_dropped=[],
+                computed_at=NOW - timedelta(days=1),
+            )
+        )
+        await session.flush()
+
+        await DailyScanService(session).scan(
+            MockOddsProvider(name="mock"), fetch_odds=False, now=NOW
+        )
+        remaining = (
+            (await session.execute(select(StoredAnalysis.provider_event_id))).scalars().all()
+        )
+        assert "unsettled" in remaining
 
     async def test_report_summary_is_readable(self, session: AsyncSession) -> None:
         report = await DailyScanService(session).scan(

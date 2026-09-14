@@ -621,7 +621,7 @@ class TestSettlementIsGlobal:
 
         assert "SettlementService(session).settle(provider)" in block
         assert "HighlightService(session).settle()" in block
-        assert "SelectionService(session).settle()" in block
+        assert "SelectionService(session).settle(" in block
 
     async def test_settlement_never_alters_the_published_claim(self, session: AsyncSession) -> None:
         """The result is added; the prediction is not revised."""
@@ -684,3 +684,104 @@ class TestSettlementIsGlobal:
             for s in await service.for_day(NOW.date())
         ]
         assert after == before
+
+
+class TestSettlementSurvivesPruning:
+    """A published selection outlives the analysis that produced it.
+
+    Stored analyses are transient — the scan removes them once a fixture is
+    settled. A selection is permanent. If settlement depended entirely on the
+    analysis, every fixture that finished overnight would become permanently
+    unsettleable, and the record would show claims that could never be scored.
+    """
+
+    async def test_settles_from_the_provider_when_no_settlement_row_exists(
+        self, session: AsyncSession
+    ) -> None:
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        # The analysis is gone, exactly as pruning would leave it.
+        for analysis in (await session.execute(select(StoredAnalysis))).scalars():
+            await session.delete(analysis)
+        await session.flush()
+
+        class _Results:
+            async def get_results(self, ids: list[str]) -> list[object]:
+                from types import SimpleNamespace
+
+                return [
+                    SimpleNamespace(provider_event_id=identifier, home_goals=2, away_goals=0)
+                    for identifier in ids
+                ]
+
+        settled = await service.settle(now=NOW + timedelta(hours=9), source=_Results())
+
+        assert settled > 0
+        selection = (await session.execute(select(ServiceSelection).limit(1))).scalar_one()
+        assert selection.is_settled
+        assert selection.home_goals == 2
+
+    async def test_provider_failure_does_not_break_settlement(self, session: AsyncSession) -> None:
+        """A provider outage must leave selections pending, not raise."""
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        class _Broken:
+            async def get_results(self, ids: list[str]) -> list[object]:
+                raise RuntimeError("provider unavailable")
+
+        settled = await service.settle(now=NOW + timedelta(hours=9), source=_Broken())
+        assert settled == 0
+
+    async def test_settles_without_a_source(self, session: AsyncSession) -> None:
+        """The settlement table remains the primary path."""
+        await _analysis(session)
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        selection = (await session.execute(select(ServiceSelection).limit(1))).scalar_one()
+        session.add(
+            SettledPrediction(
+                provider_name="api_football",
+                provider_event_id=selection.provider_event_id,
+                source="live",
+                home_name=selection.home_name,
+                away_name=selection.away_name,
+                competition="Championship",
+                kickoff=selection.kickoff,
+                coverage="fully_modelled",
+                model_version="v1",
+                components_used=[],
+                predicted_home=Decimal("0.66"),
+                predicted_draw=Decimal("0.20"),
+                predicted_away=Decimal("0.14"),
+                home_goals=3,
+                away_goals=1,
+                actual_result="home",
+                predicted_favourite="home",
+                favourite_won=True,
+                settled_at=NOW,
+            )
+        )
+        await session.flush()
+
+        assert await service.settle(now=NOW + timedelta(hours=9)) > 0
+
+
+class TestPruningProtectsSettlement:
+    """The scan must not delete what settlement still needs."""
+
+    def test_prune_requires_a_settlement_row(self) -> None:
+        """Deleting on age alone is what made overnight fixtures
+        unsettleable."""
+        import pathlib
+
+        source = pathlib.Path("app/services/daily_scan.py").read_text()
+        block = source[source.index("async def _prune") :]
+        block = block[: block.index("class AnalysisRepository")]
+
+        assert "settled.exists()" in block
+        assert "DELETE_AFTER_DAYS" in block

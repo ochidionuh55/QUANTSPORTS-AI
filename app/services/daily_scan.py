@@ -24,7 +24,7 @@ from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.logging import get_logger
-from app.database.models import StoredAnalysis
+from app.database.models import SettledPrediction, StoredAnalysis
 from app.providers.base import OddsProvider
 from app.providers.errors import ProviderError, ProviderRateLimitError
 from app.providers.models import ProviderEvent
@@ -40,6 +40,20 @@ quota on them wastes the allowance.
 """
 
 RETENTION_HOURS = 6
+"""How long after kickoff an analysis stays on the card.
+
+Only governs what the bot lists. It does not govern deletion — settlement reads
+these rows, so removing one before its result has been recorded makes that
+fixture permanently unsettleable.
+"""
+
+DELETE_AFTER_DAYS = 14
+"""Backstop for analyses that were never settled.
+
+A fixture postponed or abandoned will never produce a result, so its analysis
+would otherwise sit in the table indefinitely. Two weeks is long past the point
+where a genuine result could still arrive.
+"""
 """How long a finished fixture's analysis is kept before being cleared."""
 
 
@@ -231,10 +245,32 @@ class DailyScanService:
         record.computed_at = moment
 
     async def _prune(self, moment: datetime) -> None:
-        """Remove analyses for fixtures that finished some time ago."""
+        """Remove analyses no longer needed by anything.
+
+        An analysis is only deleted once its fixture has been settled, because
+        settlement reads these rows to compare a forecast against a result.
+        Deleting on age alone made every fixture that finished overnight
+        permanently unsettleable — the record would show a prediction that
+        could never be scored.
+
+        Unsettled analyses are kept until a backstop, so a postponed match does
+        not hold a row forever.
+        """
+        settled = select(SettledPrediction.provider_event_id).where(
+            SettledPrediction.provider_name == StoredAnalysis.provider_name,
+            SettledPrediction.provider_event_id == StoredAnalysis.provider_event_id,
+        )
+
         await self._session.execute(
             delete(StoredAnalysis).where(
-                StoredAnalysis.kickoff < moment - timedelta(hours=RETENTION_HOURS)
+                StoredAnalysis.kickoff < moment - timedelta(hours=RETENTION_HOURS),
+                settled.exists(),
+            )
+        )
+
+        await self._session.execute(
+            delete(StoredAnalysis).where(
+                StoredAnalysis.kickoff < moment - timedelta(days=DELETE_AFTER_DAYS)
             )
         )
 

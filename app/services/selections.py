@@ -323,11 +323,18 @@ class SelectionService:
     # Settlement
     # ------------------------------------------------------------------
 
-    async def settle(self, now: datetime | None = None) -> int:
+    async def settle(self, now: datetime | None = None, source: object | None = None) -> int:
         """Fill in results for selections whose matches have finished.
 
-        Results come from the settlement table, so a selection cannot be
+        Results come from the settlement table first, so a selection cannot be
         settled from a source that disagrees with the rest of the record.
+
+        Where no settlement row exists, and a results source is supplied, the
+        provider is asked directly. A published selection carries its own
+        fixture id and does not depend on the analysis that produced it — and
+        that analysis is transient, so a selection that outlived it must still
+        be scoreable. Otherwise a published claim could sit unresolved forever
+        through nobody's fault but our own retention policy.
         """
         moment = now or datetime.now(UTC)
         rows = await self._session.execute(
@@ -349,6 +356,28 @@ class SelectionService:
             row.provider_event_id: (row.home_goals, row.away_goals)
             for row in results.scalars().all()
         }
+
+        # Anything the settlement table cannot answer is asked of the provider
+        # directly, so a selection is never stranded by a missing analysis row.
+        missing = [
+            selection.provider_event_id
+            for selection in pending
+            if selection.provider_event_id not in scores
+        ]
+        if missing and source is not None and hasattr(source, "get_results"):
+            try:
+                for result in await source.get_results(missing):  # type: ignore[attr-defined]
+                    identifier = getattr(result, "provider_event_id", None)
+                    home_goals = getattr(result, "home_goals", None)
+                    away_goals = getattr(result, "away_goals", None)
+                    if identifier and home_goals is not None and away_goals is not None:
+                        scores[str(identifier)] = (int(home_goals), int(away_goals))
+            except Exception as exc:  # noqa: BLE001 - a provider failure must not stop settlement
+                logger.warning(
+                    "selections.direct_results_failed",
+                    error_type=type(exc).__name__,
+                    missing=len(missing),
+                )
 
         settled = 0
         for selection in pending:

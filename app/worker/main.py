@@ -189,7 +189,7 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
                 # product ends up telling two different stories about the same
                 # match — which is worse than telling neither.
                 highlights = await HighlightService(session).settle()
-                selections = await SelectionService(session).settle()
+                selections = await SelectionService(session).settle(source=provider)
 
             logger.info(
                 "settlement.stored",
