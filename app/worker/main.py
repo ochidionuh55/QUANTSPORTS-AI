@@ -183,8 +183,20 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
         try:
             async with database.session() as session:
                 report = await SettlementService(session).settle(provider)
-                settled = await HighlightService(session).settle()
-            logger.info("settlement.stored", summary=report.summary(), highlights=settled)
+
+                # Every published record settles from the same run, against
+                # the same results. Settling one store and not another is how a
+                # product ends up telling two different stories about the same
+                # match — which is worse than telling neither.
+                highlights = await HighlightService(session).settle()
+                selections = await SelectionService(session).settle()
+
+            logger.info(
+                "settlement.stored",
+                summary=report.summary(),
+                highlights=highlights,
+                selections=selections,
+            )
         except Exception as exc:
             logger.exception("settlement.failed", error_type=type(exc).__name__)
 

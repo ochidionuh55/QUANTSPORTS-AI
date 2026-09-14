@@ -601,3 +601,86 @@ class TestStrongestAngle:
         rendered = format_summary_line(record, {})
         assert "Market's strongest" in rendered
         assert "📌 Strongest" not in rendered
+
+
+class TestSettlementIsGlobal:
+    """Every published store settles from one source of truth."""
+
+    async def test_worker_settles_selections_and_highlights_together(self) -> None:
+        """Settling one store and not another lets the product tell two
+        different stories about the same match.
+
+        The worker previously settled highlights while leaving service
+        selections pending forever, which is exactly that failure.
+        """
+        import pathlib
+
+        source = pathlib.Path("app/worker/main.py").read_text()
+        block = source[source.index("async def settle_finished") :]
+        block = block[: block.index("scheduler.add_job")]
+
+        assert "SettlementService(session).settle(provider)" in block
+        assert "HighlightService(session).settle()" in block
+        assert "SelectionService(session).settle()" in block
+
+    async def test_settlement_never_alters_the_published_claim(self, session: AsyncSession) -> None:
+        """The result is added; the prediction is not revised."""
+        await _analysis(session)
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        selection = (await session.execute(select(ServiceSelection).limit(1))).scalar_one()
+        locked = dict(selection.locked_fields())
+
+        session.add(
+            SettledPrediction(
+                provider_name="api_football",
+                provider_event_id=selection.provider_event_id,
+                source="live",
+                home_name=selection.home_name,
+                away_name=selection.away_name,
+                competition="Championship",
+                kickoff=selection.kickoff,
+                coverage="fully_modelled",
+                model_version="v1",
+                components_used=[],
+                predicted_home=Decimal("0.66"),
+                predicted_draw=Decimal("0.20"),
+                predicted_away=Decimal("0.14"),
+                home_goals=2,
+                away_goals=0,
+                actual_result="home",
+                predicted_favourite="home",
+                favourite_won=True,
+                settled_at=NOW,
+            )
+        )
+        await session.flush()
+        await service.settle(now=NOW + timedelta(hours=9))
+        await session.refresh(selection)
+
+        assert selection.locked_fields() == locked
+        assert selection.status != "pending"
+        assert selection.home_goals == 2
+
+    async def test_a_days_record_is_read_not_recomputed(self, session: AsyncSession) -> None:
+        """A daily record regenerated with today's model would be looking
+        clever about football already played."""
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        before = [
+            (s.provider_event_id, s.outcome, s.probability)
+            for s in await service.for_day(NOW.date())
+        ]
+
+        for analysis in (await session.execute(select(StoredAnalysis))).scalars():
+            await session.delete(analysis)
+        await session.flush()
+
+        after = [
+            (s.provider_event_id, s.outcome, s.probability)
+            for s in await service.for_day(NOW.date())
+        ]
+        assert after == before

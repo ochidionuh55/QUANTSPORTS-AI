@@ -186,6 +186,36 @@ export type CompetitionCard = {
 export const getCompetitions = () =>
   get<CompetitionCard[]>("/api/v1/competitions", 3600);
 
+export type DayServiceTally = {
+  key: string;
+  label: string;
+  won: number;
+  lost: number;
+  void: number;
+  pending: number;
+};
+
+export type DayRecord = {
+  day: string;
+  fixtures_available: number;
+  fixtures_modelled: number;
+  services_qualified: number;
+  total: number;
+  won: number;
+  lost: number;
+  void: number;
+  pending: number;
+  tallies?: DayServiceTally[] | null;
+  selections?: SelectionCard[] | null;
+};
+
+/** One day's published record. Settled days are permanent, so they cache hard;
+ *  today is still moving, so it does not. */
+export const getDayRecord = (day: string) =>
+  get<DayRecord>(`/api/v1/record/${day}`, 600);
+
+export const getHistoryDays = () => get<string[]>("/api/v1/history", 600);
+
 /** Search today's card. Filters are applied server-side by the query service
  *  the Telegram bot also uses, so both interfaces answer identically. */
 export async function searchFixtures(params: {

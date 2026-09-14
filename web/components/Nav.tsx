@@ -9,8 +9,8 @@ const LINKS = [
   { href: "/today", label: "Today" },
   { href: "/markets", label: "Markets" },
   { href: "/teams", label: "Teams" },
+  { href: "/history", label: "History" },
   { href: "/track-record", label: "Track Record" },
-  { href: "/pricing", label: "Pricing" },
 ];
 
 /**

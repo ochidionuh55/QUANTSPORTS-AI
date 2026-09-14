@@ -247,6 +247,89 @@ async def service_selections(service_key: str, session: SessionDep) -> list[Sele
     return [_as_card(selection) for selection in selections]
 
 
+class DayServiceTally(BaseModel):
+    """One service's result for a single day."""
+
+    key: str
+    label: str
+    won: int
+    lost: int
+    void: int
+    pending: int
+
+    @property
+    def settled(self) -> int:
+        """Selections with a known outcome."""
+        return self.won + self.lost
+
+
+class DayRecord(BaseModel):
+    """Everything QUANTSPORT published on one date.
+
+    Read from storage, never recomputed. The point of a daily record is that it
+    says what was actually claimed before those matches were played — a page
+    regenerated with today's model would simply be looking clever about
+    football that has already happened.
+    """
+
+    day: date
+    fixtures_available: int
+    fixtures_modelled: int
+    services_qualified: int
+    total: int
+    won: int
+    lost: int
+    void: int
+    pending: int
+    tallies: list[DayServiceTally]
+    selections: list[SelectionCard]
+
+
+@router.get("/record/{day}", response_model=DayRecord)
+async def day_record(day: date, session: SessionDep) -> DayRecord:
+    """Return one day's published record, with per-service tallies."""
+    service = SelectionService(session)
+    view = await service.day_view(day)
+
+    grouped: dict[str, DayServiceTally] = {}
+    for selection in view.selections:
+        tally = grouped.setdefault(
+            selection.service_key,
+            DayServiceTally(
+                key=selection.service_key,
+                label=selection.service_label,
+                won=0,
+                lost=0,
+                void=0,
+                pending=0,
+            ),
+        )
+        if selection.status == "won":
+            tally.won += 1
+        elif selection.status == "lost":
+            tally.lost += 1
+        elif selection.status == "void":
+            tally.void += 1
+        else:
+            tally.pending += 1
+
+    tallies = sorted(grouped.values(), key=lambda t: (-(t.won + t.lost), -t.won, t.label))
+
+    return DayRecord(
+        day=day,
+        fixtures_available=getattr(view.snapshot, "fixtures_available", 0) or 0,
+        fixtures_modelled=getattr(view.snapshot, "fixtures_modelled", 0) or 0,
+        services_qualified=getattr(view.snapshot, "services_qualified", 0) or 0,
+        total=len(view.selections),
+        won=sum(t.won for t in tallies),
+        lost=sum(t.lost for t in tallies),
+        void=sum(t.void for t in tallies),
+        pending=sum(t.pending for t in tallies),
+        tallies=tallies,
+        selections=[_as_card(s) for s in view.selections],
+    )
+
+
 @router.get("/history/{day}", response_model=list[SelectionCard])
 async def history(day: date, session: SessionDep) -> list[SelectionCard]:
     """Return exactly what was published on a date.
