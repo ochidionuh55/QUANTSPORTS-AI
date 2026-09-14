@@ -11,6 +11,7 @@ import { formatKickoff } from "@/lib/format";
  */
 export function FixtureCard({ fixture }: { fixture: Fixture }) {
   const coverage = COVERAGE[fixture.coverage] ?? COVERAGE.unsupported;
+  const services = fixture.services ?? [];
 
   return (
     <article className="group rounded-lg border border-line bg-white p-6 transition-all duration-base ease-quant hover:-translate-y-0.5 hover:border-line-strong hover:shadow-float">
@@ -49,10 +50,10 @@ export function FixtureCard({ fixture }: { fixture: Fixture }) {
               {asPercent(fixture.strongest_probability)}
             </span>
           </div>
-          {fixture.services.length > 1 ? (
+          {services.length > 1 ? (
             <p className="mt-2 text-[11px] text-ink-faint">
-              +{fixture.services.length - 1} more service
-              {fixture.services.length > 2 ? "s" : ""} selected this fixture
+              +{services.length - 1} more service
+              {services.length > 2 ? "s" : ""} selected this fixture
             </p>
           ) : null}
         </div>

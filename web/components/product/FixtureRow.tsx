@@ -15,7 +15,8 @@ import { formatKickoff } from "@/lib/format";
  */
 export function FixtureRow({ fixture }: { fixture: Fixture }) {
   const coverage = COVERAGE[fixture.coverage] ?? COVERAGE.unsupported;
-  const selected = fixture.services.length > 0;
+  const services = fixture.services ?? [];
+  const selected = services.length > 0;
 
   return (
     <article
@@ -45,8 +46,8 @@ export function FixtureRow({ fixture }: { fixture: Fixture }) {
           {selected ? (
             <>
               <span className="mx-2 text-line-strong">•</span>
-              {fixture.services.length} service
-              {fixture.services.length > 1 ? "s" : ""} selected this fixture
+              {services.length} service
+              {services.length > 1 ? "s" : ""} selected this fixture
             </>
           ) : null}
         </p>

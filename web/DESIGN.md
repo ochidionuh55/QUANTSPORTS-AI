@@ -69,3 +69,17 @@ No probability is computed in the frontend. The score matrix on the homepage is
 an illustration of the method, clearly framed as such. Every published figure
 comes from the intelligence layer that Telegram also reads, so the two
 interfaces cannot disagree about what QUANTSPORT said.
+
+## API fields are not guaranteed
+
+Optional API fields are typed optional and read through a guard, always.
+
+The website and the API deploy independently, so the site may be newer than the
+server it is talking to. A type annotation is a claim about data we control,
+and a network response is not that — typing a field as required because our own
+API returns it turns a rolling deploy into a runtime crash on a live page.
+
+Where a field is missing the component degrades: the lead selection drops its
+evidence meters and keeps its headline figures, rather than taking the page
+down. Making these optional also let the compiler find three more unguarded
+call sites we had not noticed.

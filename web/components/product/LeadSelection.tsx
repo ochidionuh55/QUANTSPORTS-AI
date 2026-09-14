@@ -48,8 +48,11 @@ export function LeadSelection({ selection }: { selection: SelectionCard }) {
   }, [selection.probability]);
 
   const tallest = Math.max(...bars.map((bar) => bar.value));
-  const factors = Object.entries(selection.factors).filter(
-    ([key]) => key in FACTOR_LABELS,
+  // Guarded because the deployed API may predate the field. Falling back to an
+  // empty list degrades the card to its headline figures rather than taking
+  // the page down.
+  const factors = Object.entries(selection.factors ?? {}).filter(
+    ([key, value]) => key in FACTOR_LABELS && Number.isFinite(value),
   );
 
   return (
@@ -123,7 +126,9 @@ export function LeadSelection({ selection }: { selection: SelectionCard }) {
             </span>
             <span>{selection.model_version}</span>
             {selection.sample_size ? (
-              <span>{selection.sample_size} matches behind the thinner side</span>
+              <span>
+                {selection.sample_size} matches behind the thinner side
+              </span>
             ) : null}
           </p>
         </div>

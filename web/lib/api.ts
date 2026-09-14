@@ -47,9 +47,13 @@ export type SelectionCard = {
   published_at: string;
   model_version: string;
   rationale: string;
-  factors: Record<string, number>;
-  sample_size: number;
-  components_used: string[];
+  /** Present only on API versions that publish the ranking evidence.
+   *  Optional deliberately: the website may be newer than the deployed API,
+   *  and a type that promises a field the server does not send turns a rolling
+   *  deploy into a runtime crash. */
+  factors?: Record<string, number> | null;
+  sample_size?: number | null;
+  components_used?: string[] | null;
 };
 
 export type FixtureCard = {
@@ -61,7 +65,7 @@ export type FixtureCard = {
   coverage: string;
   strongest_market: string | null;
   strongest_probability: number | null;
-  services: string[];
+  services?: string[] | null;
 };
 
 /**
@@ -147,8 +151,8 @@ export type TeamCard = {
   overall: Split;
   home: Split;
   away: Split;
-  form: string;
-  competitions: string[];
+  form?: string | null;
+  competitions?: string[] | null;
   first_match: string | null;
   last_match: string | null;
 };

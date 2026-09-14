@@ -37,8 +37,8 @@ export default async function TeamPage({ params }: Props) {
         label={team.country ?? "Club record"}
         title={team.name}
         lead={`${team.overall.played} matches on record${
-          team.competitions.length
-            ? ` across ${team.competitions.slice(0, 3).join(", ")}`
+          (team.competitions ?? []).length
+            ? ` across ${(team.competitions ?? []).slice(0, 3).join(", ")}`
             : ""
         }. Counted, not forecast.`}
       />
@@ -55,7 +55,7 @@ export default async function TeamPage({ params }: Props) {
             <div className="rounded-lg border border-line bg-white p-6">
               <p className="mono-label">Recent form</p>
               <div className="mt-5 flex flex-wrap gap-2">
-                {team.form.split("").map((result, index) => (
+                {(team.form ?? "").split("").map((result, index) => (
                   <span
                     key={`${result}-${index}`}
                     className={[
