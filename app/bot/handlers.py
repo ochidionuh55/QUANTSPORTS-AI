@@ -32,6 +32,7 @@ from app.bot.formatting import (
     format_basketball_today,
     format_board,
     format_breakdown,
+    format_divergences,
     format_fixture_list,
     format_fixture_picks,
     format_highlight,
@@ -86,6 +87,7 @@ from app.services.analytics import AnalyticsService
 from app.services.best_of_day import SERVICES_BY_KEY
 from app.services.boards import TRACK_DESCRIPTIONS, TRACK_LABELS
 from app.services.daily_scan import AnalysisRepository
+from app.services.divergence import find_divergences
 from app.services.highlights import (
     RECONSTRUCTED,
     HighlightService,
@@ -478,6 +480,16 @@ async def _gate(callback: CallbackQuery, user: User, feature: Feature) -> bool:
         )
     rows.append(
         [
+            InlineKeyboardButton(
+                # En dash is deliberate: the brand's own wording, and a hyphen
+                # would read as a compound adjective rather than a pairing.
+                text="⚡ Model–market divergence",  # noqa: RUF001
+                callback_data="menu:divergence",
+            )
+        ]
+    )
+    rows.append(
+        [
             InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
             InlineKeyboardButton(text="📈 Track record", callback_data="sel:record"),
         ]
@@ -619,6 +631,16 @@ async def handle_best_today(callback: CallbackQuery, user: User, session: object
     rows.extend(buttons[index : index + 1] for index in range(0, len(buttons), 1))
     rows.append(
         [
+            InlineKeyboardButton(
+                # En dash is deliberate: the brand's own wording, and a hyphen
+                # would read as a compound adjective rather than a pairing.
+                text="⚡ Model–market divergence",  # noqa: RUF001
+                callback_data="menu:divergence",
+            )
+        ]
+    )
+    rows.append(
+        [
             InlineKeyboardButton(text="📚 History", callback_data="hist:days"),
             InlineKeyboardButton(text="📈 Track record", callback_data="sel:record"),
         ]
@@ -626,6 +648,25 @@ async def handle_best_today(callback: CallbackQuery, user: User, session: object
 
     await callback.message.edit_text(
         format_service_menu(counts, modelled, available), reply_markup=_back(*rows)
+    )
+
+
+async def handle_divergence(callback: CallbackQuery, user: User, session: object) -> None:
+    """Show where our model most disagrees with the market."""
+    if not await _gate(callback, user, Feature.BEST_OF_TODAY):
+        return
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    records = await AnalysisRepository(session).upcoming(limit=200)  # type: ignore[arg-type]
+    found = find_divergences(list(records), limit=10)
+
+    await callback.message.edit_text(
+        format_divergences(list(found)),
+        reply_markup=_back(
+            [InlineKeyboardButton(text="⬅️ Back to services", callback_data="menu:best")]
+        ),
     )
 
 
@@ -1764,6 +1805,7 @@ def build_router() -> Router:
     router.callback_query.register(handle_basketball, F.data == "sport:basketball")
     router.callback_query.register(handle_best_today, F.data == "menu:best")
     router.callback_query.register(handle_service_list, F.data.startswith("svc:"))
+    router.callback_query.register(handle_divergence, F.data == "menu:divergence")
     router.callback_query.register(handle_service_record, F.data.in_({"sel:record", "menu:record"}))
     router.callback_query.register(handle_history_days, F.data.in_({"hist:days", "menu:history"}))
 

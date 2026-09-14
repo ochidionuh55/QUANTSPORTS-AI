@@ -1867,3 +1867,67 @@ def format_account(access: object, description: str) -> str:
     lines.append("")
     lines.append(FOOTER)
     return "\n".join(lines)
+
+
+DIVERGENCE_NOTICE = (
+    "<b>What this is — and is not</b>\n"
+    "These are fixtures where our mathematics reaches a different conclusion "
+    "from the bookmaker. That is all it is.\n\n"
+    "It is <b>not</b> a value signal. We have tested whether our models beat "
+    "closing prices — across nine seasons of football and eleven of basketball "
+    "— and they do not. Where we have disagreed with the price before, the "
+    "price was right.\n\n"
+    "We show these because a real disagreement is worth seeing, and because "
+    "the record will tell us over time whether they carry information. Today "
+    "they are a curiosity with evidence attached."
+)
+
+
+def format_divergences(items: list[object]) -> str:
+    """Render model-market disagreements.
+
+    The market's own number sits beside ours on every line. A divergence shown
+    without the price it diverges from invites a reader to assume we think we
+    are right.
+    """
+    lines = ["<b>⚡ MODEL–MARKET DIVERGENCE</b>", ""]  # noqa: RUF001
+
+    if not items:
+        lines.append(
+            "Our models and the market agree on today's card, within the "
+            "threshold we consider meaningful.\n\n"
+            "That is the usual state of things. Bookmakers are good at this, "
+            "and a day with no material disagreement is not a day the product "
+            "failed."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    lines.append(
+        f"<i>{len(items)} fixture(s) where we differ from the price by eight " "points or more.</i>"
+    )
+    lines.append("")
+
+    for index, item in enumerate(items, start=1):
+        badge = COVERAGE_BADGE.get(getattr(item, "coverage", ""), "⚪")
+        kickoff = getattr(item, "kickoff", None)
+        when = f"{kickoff:%H:%M}" if kickoff else ""
+
+        lines.append(
+            f"<b>{index}.</b> {badge} <b>{item.home_name} v {item.away_name}</b>\n"  # type: ignore[attr-defined]
+            f"{when} · {getattr(item, 'competition', None) or 'Unknown league'}\n"
+            f"<b>{item.outcome}</b> — "  # type: ignore[attr-defined]
+            f"we say {item.model_probability * 100:.0f}% "  # type: ignore[attr-defined]
+            f"({item.implied_odds_model:.2f}), "  # type: ignore[attr-defined]
+            f"market says {item.market_probability * 100:.0f}% "  # type: ignore[attr-defined]
+            f"({item.implied_odds_market:.2f})\n"  # type: ignore[attr-defined]
+            f"<i>{item.gap * 100:+.0f} points · {item.sample} matches behind "  # type: ignore[attr-defined]
+            "the thinner side</i>"
+        )
+        lines.append("")
+
+    lines.append(DIVERGENCE_NOTICE)
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
