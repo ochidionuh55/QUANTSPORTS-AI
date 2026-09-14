@@ -120,6 +120,47 @@ export type MarketOption = {
 
 export const getMarkets = () => get<MarketOption[]>("/api/v1/markets", 300);
 
+export type Split = {
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  scored: number;
+  conceded: number;
+  points_per_game: number | null;
+  goals_per_game: number | null;
+  over_1_5: number | null;
+  over_2_5: number | null;
+  over_3_5: number | null;
+  both_scored: number | null;
+  clean_sheets: number | null;
+  meaningful: boolean;
+};
+
+export type TeamCard = {
+  team_id: number;
+  name: string;
+  country: string | null;
+  overall: Split;
+  home: Split;
+  away: Split;
+  form: string;
+  competitions: string[];
+  first_match: string | null;
+  last_match: string | null;
+};
+
+export type TeamMatch = {
+  team_id: number;
+  name: string;
+  country: string | null;
+};
+
+export const getTeams = (q = "") =>
+  get<TeamMatch[]>(`/api/v1/teams?q=${encodeURIComponent(q)}`, 300);
+
+export const getTeam = (id: number) => get<TeamCard>(`/api/v1/teams/${id}`, 600);
+
 /** Search today's card. Filters are applied server-side by the query service
  *  the Telegram bot also uses, so both interfaces answer identically. */
 export async function searchFixtures(params: {

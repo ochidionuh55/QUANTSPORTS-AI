@@ -26,6 +26,7 @@ from app.api.dependencies.common import SessionDep
 from app.core.competitions import CSV_COMPETITIONS
 from app.database.models import HistoricalMatch, ServiceSelection, StoredAnalysis, Team
 from app.services.best_of_day import SERVICES, SERVICES_BY_KEY
+from app.services.profiles import ProfileService
 from app.services.queries import (
     MARKET_FILTERS,
     MARKETS_BY_KEY,
@@ -359,6 +360,141 @@ async def search(
             )
         )
     return cards
+
+
+class SplitCard(BaseModel):
+    """One slice of a club's record."""
+
+    played: int
+    won: int
+    drawn: int
+    lost: int
+    scored: int
+    conceded: int
+    points_per_game: float | None
+    goals_per_game: float | None
+
+    over_1_5: float | None
+    over_2_5: float | None
+    over_3_5: float | None
+    both_scored: float | None
+    clean_sheets: float | None
+    meaningful: bool = Field(description="Whether the sample supports quoting rates.")
+
+
+class TeamCard(BaseModel):
+    """A club's counted record. No forecast involved."""
+
+    team_id: int
+    name: str
+    country: str | None
+    overall: SplitCard
+    home: SplitCard
+    away: SplitCard
+    form: str
+    competitions: list[str]
+    first_match: date | None
+    last_match: date | None
+
+
+class TeamMatch(BaseModel):
+    """One club, for a search result."""
+
+    team_id: int
+    name: str
+    country: str | None
+
+
+@router.get("/teams", response_model=list[TeamMatch])
+async def teams(
+    session: SessionDep,
+    q: str = Query(default="", description="Club name, partial is fine."),
+    limit: int = Query(default=12, ge=1, le=50),
+) -> list[TeamMatch]:
+    """Find clubs by name.
+
+    An empty query returns the clubs playing today rather than an arbitrary
+    slice of the register, so the page opens with something useful.
+    """
+    service = ProfileService(session)
+
+    if q.strip():
+        found = await service.find_teams(q, limit=limit)
+        return [TeamMatch(team_id=t.id, name=t.canonical_name, country=t.country) for t in found]
+
+    moment = datetime.now(UTC)
+    rows = await session.execute(
+        select(StoredAnalysis)
+        .where(StoredAnalysis.kickoff > moment)
+        .order_by(StoredAnalysis.kickoff)
+        .limit(limit)
+    )
+
+    seen: set[int] = set()
+    results: list[TeamMatch] = []
+    for record in rows.scalars().all():
+        for stats in (record.home_stats or {}, record.away_stats or {}):
+            identifier = stats.get("team_id") if isinstance(stats, dict) else None
+            if not isinstance(identifier, int) or identifier in seen:
+                continue
+            team = await session.get(Team, identifier)
+            if team is None:
+                continue
+            seen.add(identifier)
+            results.append(
+                TeamMatch(
+                    team_id=team.id,
+                    name=team.canonical_name,
+                    country=team.country,
+                )
+            )
+    return results[:limit]
+
+
+@router.get("/teams/{team_id}", response_model=TeamCard)
+async def team(team_id: int, session: SessionDep) -> TeamCard:
+    """Return a club's counted record."""
+    profile = await ProfileService(session).team_profile(team_id)
+    if profile is None or not profile.has_data:
+        raise HTTPException(status_code=404, detail="No matches on record for that club.")
+
+    return TeamCard(
+        team_id=profile.team_id,
+        name=profile.name,
+        country=profile.country,
+        overall=_split(profile.overall),
+        home=_split(profile.home),
+        away=_split(profile.away),
+        form=profile.form_string,
+        competitions=list(profile.competitions),
+        first_match=profile.first_match,
+        last_match=profile.last_match,
+    )
+
+
+def _split(record: object) -> SplitCard:
+    """Convert a split for transport.
+
+    Rates are ``None`` below the minimum sample rather than zero, so the
+    interface can say "not enough matches" instead of printing a figure that
+    looks measured and is not.
+    """
+    return SplitCard(
+        played=record.played,  # type: ignore[attr-defined]
+        won=record.won,  # type: ignore[attr-defined]
+        drawn=record.drawn,  # type: ignore[attr-defined]
+        lost=record.lost,  # type: ignore[attr-defined]
+        scored=record.scored,  # type: ignore[attr-defined]
+        conceded=record.conceded,  # type: ignore[attr-defined]
+        points_per_game=record.points_per_game,  # type: ignore[attr-defined]
+        goals_per_game=record.goals_per_game,  # type: ignore[attr-defined]
+        over_1_5=record.rate(record.over_1_5),  # type: ignore[attr-defined]
+        over_2_5=record.rate(record.over_2_5),  # type: ignore[attr-defined]
+        over_3_5=record.rate(record.over_3_5),  # type: ignore[attr-defined]
+        both_scored=record.rate(record.both_scored),  # type: ignore[attr-defined]
+        clean_sheets=record.rate(record.clean_sheets),  # type: ignore[attr-defined]
+        meaningful=record.is_meaningful,  # type: ignore[attr-defined]
+    )
 
 
 class ServiceRecordCard(BaseModel):
