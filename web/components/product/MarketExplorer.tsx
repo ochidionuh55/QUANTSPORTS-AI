@@ -9,6 +9,8 @@ import {
 } from "@/lib/api";
 import { COVERAGE } from "@/lib/api";
 import { formatKickoff } from "@/lib/format";
+import { CommandSurface } from "./CommandSurface";
+import { Calculating } from "@/components/ui/Calculating";
 
 const BANDS = [
   { value: 0.5, label: "50%+" },
@@ -72,7 +74,17 @@ export function MarketExplorer({
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
+      <CommandSurface
+        markets={markets}
+        onQuery={(parsed) => {
+          // Typed language and the controls drive the same state, so the
+          // reader can always see what the query did.
+          if (parsed.market) setMarket(parsed.market);
+          if (parsed.floor !== undefined) setFloor(parsed.floor);
+        }}
+      />
+
+      <div className="mt-10 flex flex-wrap gap-2">
         {markets.map((option) => {
           const active = option.key === market;
           return (
@@ -104,7 +116,7 @@ export function MarketExplorer({
         })}
       </div>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-line pt-6">
+      <div className="sticky top-[4.75rem] z-30 -mx-5 mt-6 flex flex-wrap items-center gap-3 border-t border-line bg-white/90 px-5 py-4 backdrop-blur sm:-mx-6 sm:px-6">
         <span className="mono-label">Probability floor</span>
         {BANDS.map((band) => (
           <button
@@ -123,10 +135,7 @@ export function MarketExplorer({
         ))}
       </div>
 
-      <div
-        className="mt-10 transition-opacity duration-base ease-quant"
-        style={{ opacity: pending ? 0.45 : 1 }}
-      >
+      <div className="mt-10">
         <div className="flex items-baseline justify-between gap-4">
           <h2 className="text-title font-semibold text-ink">
             {selected?.label ?? "Results"}
@@ -136,7 +145,9 @@ export function MarketExplorer({
           </span>
         </div>
 
-        {failed ? (
+        {pending ? (
+          <Calculating label={`Searching ${selected?.label ?? "the card"}`} />
+        ) : failed ? (
           <div className="mt-8 rounded-lg border border-line bg-white p-12 text-center">
             <p className="font-medium text-ink">Results unavailable</p>
             <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-muted">

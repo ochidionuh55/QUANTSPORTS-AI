@@ -22,13 +22,27 @@ export default async function MarketsPage() {
 
   return (
     <>
-      <PageHeader
-        label="Market Explorer"
-        title="Ask the card a question."
-        lead="Every modelled fixture, ranked by the market you care about. Choose a market, set a floor, and see what today actually supports."
-      />
+      <section className="light-field grain relative overflow-hidden border-b border-line">
+        <div className="mx-auto max-w-shell px-5 pb-14 pt-32 sm:px-6 sm:pb-16 sm:pt-40">
+          <p className="mono-label animate-rise">Market Explorer</p>
+          <h1
+            className="mt-6 max-w-3xl animate-rise text-hero font-semibold text-ink"
+            style={{ animationDelay: "60ms" }}
+          >
+            Ask the card
+            <br />
+            <span className="text-emerald">a question.</span>
+          </h1>
+          <p
+            className="mt-8 max-w-xl animate-rise text-lead text-ink-muted"
+            style={{ animationDelay: "130ms" }}
+          >
+            Every modelled fixture, searchable by the market you care about.
+          </p>
+        </div>
+      </section>
 
-      <section className="mx-auto max-w-shell px-5 py-16 sm:px-6 sm:py-20">
+      <section className="mx-auto max-w-shell px-5 py-12 sm:px-6 sm:py-16">
         <MarketExplorer
           markets={markets ?? []}
           initialMarket="home"
