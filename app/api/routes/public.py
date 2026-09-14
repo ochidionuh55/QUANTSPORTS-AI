@@ -497,6 +497,71 @@ def _split(record: object) -> SplitCard:
     )
 
 
+class CompetitionCard(BaseModel):
+    """How one competition actually behaves."""
+
+    code: str
+    name: str
+    country: str
+    matches: int
+    goals_per_game: float | None
+    home_rate: float | None
+    draw_rate: float | None
+    away_rate: float | None
+    over_2_5: float | None
+    both_scored: float | None
+    fixtures_today: int
+    meaningful: bool = Field(description="Whether the sample supports quoting rates.")
+
+
+@router.get("/competitions", response_model=list[CompetitionCard])
+async def competitions(session: SessionDep) -> list[CompetitionCard]:
+    """Return every competition on record with its measured character.
+
+    Leagues differ more than people assume — goals per game, home advantage and
+    draw frequency all vary materially — so these are measured per competition
+    rather than inherited from a global average.
+    """
+    service = ProfileService(session)
+    moment = datetime.now(UTC)
+
+    upcoming = list(
+        (await session.execute(select(StoredAnalysis).where(StoredAnalysis.kickoff > moment)))
+        .scalars()
+        .all()
+    )
+    today_counts: dict[str, int] = {}
+    for record in upcoming:
+        if record.competition:
+            today_counts[record.competition] = today_counts.get(record.competition, 0) + 1
+
+    cards: list[CompetitionCard] = []
+    for code, (name, country) in CSV_COMPETITIONS.items():
+        profile = await service.league_profile(name)
+        if not profile.has_data:
+            continue
+
+        cards.append(
+            CompetitionCard(
+                code=code,
+                name=name,
+                country=country,
+                matches=profile.matches,
+                goals_per_game=profile.goals_per_game,
+                home_rate=profile.rate(profile.home_wins),
+                draw_rate=profile.rate(profile.draws),
+                away_rate=profile.rate(profile.away_wins),
+                over_2_5=profile.rate(profile.over_2_5),
+                both_scored=profile.rate(profile.both_scored),
+                fixtures_today=today_counts.get(name, 0),
+                meaningful=profile.matches >= 50,
+            )
+        )
+
+    cards.sort(key=lambda card: (-card.fixtures_today, card.name))
+    return cards
+
+
 class ServiceRecordCard(BaseModel):
     """One service's live performance."""
 

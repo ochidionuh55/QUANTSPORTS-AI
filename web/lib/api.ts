@@ -161,6 +161,24 @@ export const getTeams = (q = "") =>
 
 export const getTeam = (id: number) => get<TeamCard>(`/api/v1/teams/${id}`, 600);
 
+export type CompetitionCard = {
+  code: string;
+  name: string;
+  country: string;
+  matches: number;
+  goals_per_game: number | null;
+  home_rate: number | null;
+  draw_rate: number | null;
+  away_rate: number | null;
+  over_2_5: number | null;
+  both_scored: number | null;
+  fixtures_today: number;
+  meaningful: boolean;
+};
+
+export const getCompetitions = () =>
+  get<CompetitionCard[]>("/api/v1/competitions", 3600);
+
 /** Search today's card. Filters are applied server-side by the query service
  *  the Telegram bot also uses, so both interfaces answer identically. */
 export async function searchFixtures(params: {
