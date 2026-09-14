@@ -177,6 +177,12 @@ class SelectionService:
     def __init__(self, session: AsyncSession) -> None:
         self._session = session
         self._engine = BestOfDayEngine()
+        self.last_results_error: str | None = None
+        """The vendor's message from the most recent failed results fetch.
+
+        Surfaced so an operator sees why settlement could not complete rather
+        than only that it did not.
+        """
 
     # ------------------------------------------------------------------
     # Publishing
@@ -373,11 +379,17 @@ class SelectionService:
                     if identifier and home_goals is not None and away_goals is not None:
                         scores[str(identifier)] = (int(home_goals), int(away_goals))
             except Exception as exc:  # noqa: BLE001 - a provider failure must not stop settlement
+                # The vendor's own message is logged, not just the exception
+                # type. "ProviderDataError" tells an operator nothing about
+                # whether the key is spent, the plan forbids the call, or the
+                # ids were malformed — and those need different responses.
                 logger.warning(
                     "selections.direct_results_failed",
                     error_type=type(exc).__name__,
+                    detail=str(exc)[:300],
                     missing=len(missing),
                 )
+                self.last_results_error = str(exc)[:300]
 
         settled = 0
         for selection in pending:

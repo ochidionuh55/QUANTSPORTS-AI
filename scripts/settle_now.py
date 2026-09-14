@@ -74,7 +74,12 @@ async def main() -> int:
 
     try:
         before = await _counts(database)
-        print(f"Before:  {before[0]} pending, {before[1]} won, {before[2]} lost\n")
+        print(f"Before:  {before[0]} pending, {before[1]} won, {before[2]} lost")
+
+        budget = getattr(provider, "budget", None)
+        if budget is not None:
+            print(f"Provider requests left today: {budget.remaining}")
+        print()
 
         async with database.session() as session:
             report = await SettlementService(session).settle(provider)
@@ -88,8 +93,11 @@ async def main() -> int:
             # The provider is passed so selections whose analysis was pruned
             # can still be scored. Without it, anything older than the
             # retention window would stay pending permanently.
-            selections = await SelectionService(session).settle(source=provider)
+            service = SelectionService(session)
+            selections = await service.settle(source=provider)
             print(f"Service selections settled: {selections}")
+            if service.last_results_error:
+                print(f"\n  Provider said: {service.last_results_error}")
 
         after = await _counts(database)
         print(f"\nAfter:   {after[0]} pending, {after[1]} won, {after[2]} lost")
