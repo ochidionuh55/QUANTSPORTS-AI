@@ -739,16 +739,10 @@ async def handle_history_day(callback: CallbackQuery, session: object) -> None:
     view = await service.day_view(day)
     days = await service.available_days(limit=60)
 
+    # No per-selection buttons. Ten rows reading "Best Home Win" tell a reader
+    # nothing and push the navigation off the screen — the card already carries
+    # everything those buttons would have opened.
     rows: list[list[InlineKeyboardButton]] = []
-    for selection in view.selections[:10]:
-        rows.append(
-            [
-                InlineKeyboardButton(
-                    text=f"🔎 {selection.service_label}",
-                    callback_data=f"sel:{selection.id}:{day.isoformat()}",
-                )
-            ]
-        )
 
     # Day-to-day navigation across whatever exists, not a fixed window.
     ordered = sorted(days)

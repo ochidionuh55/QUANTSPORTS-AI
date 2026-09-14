@@ -1247,25 +1247,51 @@ def format_best_today(selections: list[object], snapshot: object | None) -> str:
 
 
 def format_selection_card(selection: object, show_service: bool = True) -> str:
-    """Render one published selection compactly."""
+    """Render one published selection, with its result when the match is over.
+
+    The scoreline is the point of a historical card. A reader looking at
+    yesterday wants to see what we said and what happened, side by side —
+    without it they have to go and check the result themselves, which defeats
+    the purpose of keeping a record at all.
+    """
     badge = COVERAGE_BADGE.get(getattr(selection, "coverage", ""), "⚪")
     status = getattr(selection, "status", "pending")
     kickoff = getattr(selection, "kickoff", None)
     when = f"{kickoff:%H:%M}" if kickoff else ""
 
+    home_goals = getattr(selection, "home_goals", None)
+    away_goals = getattr(selection, "away_goals", None)
+    finished = home_goals is not None and away_goals is not None
+
     head = f"<b>{selection.service_label}</b>\n" if show_service else ""  # type: ignore[attr-defined]
+
+    # With a result, the scoreline sits between the teams so the match reads
+    # the way a result always does.
+    if finished:
+        fixture = (
+            f"<b>{selection.home_name} {home_goals}-{away_goals} "  # type: ignore[attr-defined]
+            f"{selection.away_name}</b>"  # type: ignore[attr-defined]
+        )
+    else:
+        fixture = f"<b>{selection.home_name} v {selection.away_name}</b>"  # type: ignore[attr-defined]
+
     card = (
         f"{head}"
-        f"{badge} <b>{selection.home_name} v {selection.away_name}</b>\n"  # type: ignore[attr-defined]
+        f"{badge} {fixture}\n"
         f"{when} · {getattr(selection, 'competition', None) or 'Unknown league'}\n"
         f"<b>{selection.outcome} — {selection.probability * 100:.0f}%</b>"  # type: ignore[attr-defined]
     )
 
-    if status != "pending":
-        home_goals = getattr(selection, "home_goals", None)
-        away_goals = getattr(selection, "away_goals", None)
-        score = f" ({home_goals}-{away_goals})" if home_goals is not None else ""
-        card += f"\n{RESULT_BADGE.get(status, status)}{score}"
+    if status in {"won", "lost", "void"}:
+        card += f"  {RESULT_BADGE.get(status, status)}"
+    elif finished:
+        # The match is over but settlement has not caught up. Saying so is
+        # better than showing PENDING beside a final score, which reads as the
+        # product not knowing something the reader can plainly see.
+        card += "\n<i>awaiting settlement</i>"
+    else:
+        card += "  ⏳"
+
     return card
 
 
@@ -1365,20 +1391,18 @@ def fit(text: str, note: str = "") -> str:
 
 
 def format_history_day(view: object, limit: int = 12) -> str:
-    """Render one historical day exactly as it was published."""
+    """Render one historical day exactly as it was published.
+
+    Led by the per-service tally, because that is the day's story. The
+    selections beneath are the evidence for it.
+    """
     day = getattr(view, "day", None)
-    selections = getattr(view, "selections", []) or []
-    snapshot = getattr(view, "snapshot", None)
+    selections = list(getattr(view, "selections", []) or [])
 
-    lines = [f"<b>📅 QUANTSPORT — {day:%A %d %B %Y}</b>" if day else "<b>📅 History</b>", ""]
-
-    if snapshot is not None:
-        lines.append(
-            f"<i>{getattr(snapshot, 'fixtures_modelled', 0)} of "
-            f"{getattr(snapshot, 'fixtures_available', 0)} fixtures modelled; "
-            f"{getattr(snapshot, 'services_qualified', 0)} services qualified.</i>"
-        )
-        lines.append("")
+    lines = [
+        f"<b>📅 QUANTSPORT — {day:%A %d %B %Y}</b>" if day else "<b>📅 History</b>",
+        "",
+    ]
 
     if not selections:
         lines.append(
@@ -1389,15 +1413,37 @@ def format_history_day(view: object, limit: int = 12) -> str:
         lines.append(EVIDENCE_NOTE)
         return "\n".join(lines)
 
-    settled = getattr(view, "settled", 0)
-    won = getattr(view, "won", 0)
+    # Per-service tallies. A day summarised as one number hides that a service
+    # can have a poor day while the card as a whole looks fine.
+    tallies: dict[str, list[int]] = {}
+    for selection in selections:
+        label = getattr(selection, "service_label", "Unknown")
+        tally = tallies.setdefault(label, [0, 0, 0])
+        status = getattr(selection, "status", "pending")
+        if status == "won":
+            tally[0] += 1
+            tally[1] += 1
+        elif status == "lost":
+            tally[1] += 1
+        else:
+            tally[2] += 1
+
+    settled = sum(tally[1] for tally in tallies.values())
+    won = sum(tally[0] for tally in tallies.values())
+
     if settled:
-        lines.append(f"<b>Settled: {won}/{settled} won</b>")
+        lines.append(f"<b>{won}/{settled} settled selections won</b>")
         lines.append("")
 
-    # Bounded deliberately. A day with a hundred selections cannot be shown in
-    # one Telegram message, and a page of them would not be read anyway — the
-    # per-service tally above carries the day's story.
+    for label, (service_won, played, pending) in sorted(
+        tallies.items(), key=lambda item: (-item[1][1], item[0])
+    ):
+        if played:
+            lines.append(f"{label} — <b>{service_won}/{played}</b>")
+        else:
+            lines.append(f"{label} — {pending} awaiting results")
+    lines.append("")
+
     for selection in selections[:limit]:
         lines.append(format_selection_card(selection))
         lines.append("")
