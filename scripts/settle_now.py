@@ -86,7 +86,7 @@ async def main() -> int:
             print(f"Fixtures settled from stored analyses: {report.settled}")
 
         async with database.session() as session:
-            highlights = await HighlightService(session).settle()
+            highlights = await HighlightService(session).settle(source=provider)
             print(f"Highlights settled: {highlights}")
 
         async with database.session() as session:

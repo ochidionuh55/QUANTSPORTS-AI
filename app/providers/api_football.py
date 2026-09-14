@@ -605,6 +605,45 @@ class ApiFootballProvider(OddsProvider):
 
         return await self.observe("get_event_odds", call)
 
+    async def get_results_for_dates(self, days: list[object]) -> list[object]:
+        """Return final scores for every finished fixture on the given dates.
+
+        Fetching by date rather than by id, because the free plan forbids the
+        ``ids`` parameter outright — a restriction that silently stranded every
+        published selection in a permanently unsettled state.
+
+        Cheaper as well as permitted: one request per day covers an entire
+        card, where fetching by id costs a request per twenty fixtures. A busy
+        Saturday settles in a single call.
+        """
+        from app.services.settlement import FinalScore
+
+        if not days:
+            return []
+
+        self.require(ProviderCapability.FIXTURES)
+        finished: list[object] = []
+
+        for day in days:
+            items = await self._get("fixtures", {"date": str(day)})
+            for item in items:
+                fixture = item.get("fixture", {})
+                status = str(fixture.get("status", {}).get("short", ""))
+                if _STATUS_MAP.get(status) is not ProviderEventStatus.FINISHED:
+                    continue
+                goals = item.get("goals", {})
+                home, away = goals.get("home"), goals.get("away")
+                if home is None or away is None:
+                    continue
+                finished.append(
+                    FinalScore(
+                        provider_event_id=str(fixture.get("id")),
+                        home_goals=int(home),
+                        away_goals=int(away),
+                    )
+                )
+        return finished
+
     async def get_results(self, fixture_ids: list[str]) -> list[object]:
         """Return final scores for finished fixtures.
 

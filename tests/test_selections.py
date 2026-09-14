@@ -620,7 +620,7 @@ class TestSettlementIsGlobal:
         block = block[: block.index("scheduler.add_job")]
 
         assert "SettlementService(session).settle(provider)" in block
-        assert "HighlightService(session).settle()" in block
+        assert "HighlightService(session).settle(" in block
         assert "SelectionService(session).settle(" in block
 
     async def test_settlement_never_alters_the_published_claim(self, session: AsyncSession) -> None:
@@ -730,7 +730,7 @@ class TestSettlementSurvivesPruning:
         await service.publish(now=NOW)
 
         class _Broken:
-            async def get_results(self, ids: list[str]) -> list[object]:
+            async def get_results_for_dates(self, days: list[object]) -> list[object]:
                 raise RuntimeError("provider unavailable")
 
         settled = await service.settle(now=NOW + timedelta(hours=9), source=_Broken())
@@ -785,3 +785,86 @@ class TestPruningProtectsSettlement:
 
         assert "settled.exists()" in block
         assert "DELETE_AFTER_DAYS" in block
+
+
+class TestResultsAreFetchedByDate:
+    """The free plan forbids fetching fixtures by id.
+
+    That restriction stranded every published selection permanently: the call
+    failed, nothing settled, and the record showed predictions that could never
+    be scored. Fetching by date is permitted and cheaper — one request covers a
+    whole card rather than one per twenty fixtures.
+    """
+
+    async def test_dates_are_requested_not_ids(self, session: AsyncSession) -> None:
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        for analysis in (await session.execute(select(StoredAnalysis))).scalars():
+            await session.delete(analysis)
+        await session.flush()
+
+        requested: list[object] = []
+
+        class _ByDate:
+            async def get_results_for_dates(self, days: list[object]) -> list[object]:
+                from types import SimpleNamespace
+
+                requested.extend(days)
+                return [SimpleNamespace(provider_event_id="1", home_goals=2, away_goals=0)]
+
+            async def get_results(self, ids: list[str]) -> list[object]:
+                raise AssertionError("id lookup is forbidden on the free plan")
+
+        settled = await service.settle(now=NOW + timedelta(hours=9), source=_ByDate())
+
+        assert settled > 0
+        assert requested == [NOW.date()]
+
+    async def test_one_request_per_day_not_per_fixture(self, session: AsyncSession) -> None:
+        """Twenty selections on one date must cost one request."""
+        for index in range(20):
+            await _analysis(session, str(index))
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        for analysis in (await session.execute(select(StoredAnalysis))).scalars():
+            await session.delete(analysis)
+        await session.flush()
+
+        calls: list[list[object]] = []
+
+        class _Counting:
+            async def get_results_for_dates(self, days: list[object]) -> list[object]:
+                calls.append(list(days))
+                return []
+
+        await service.settle(now=NOW + timedelta(hours=9), source=_Counting())
+
+        assert len(calls) == 1
+        assert len(calls[0]) == 1
+
+    async def test_falls_back_to_ids_when_that_is_all_a_source_offers(
+        self, session: AsyncSession
+    ) -> None:
+        """A provider on a paid plan, or a test double, may only offer ids."""
+        await _analysis(session, "1")
+        service = SelectionService(session)
+        await service.publish(now=NOW)
+
+        for analysis in (await session.execute(select(StoredAnalysis))).scalars():
+            await session.delete(analysis)
+        await session.flush()
+
+        class _ById:
+            async def get_results(self, ids: list[str]) -> list[object]:
+                from types import SimpleNamespace
+
+                return [
+                    SimpleNamespace(provider_event_id=identifier, home_goals=1, away_goals=0)
+                    for identifier in ids
+                ]
+
+        settled = await service.settle(now=NOW + timedelta(hours=9), source=_ById())
+        assert settled > 0

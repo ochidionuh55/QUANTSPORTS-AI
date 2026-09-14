@@ -365,31 +365,55 @@ class SelectionService:
 
         # Anything the settlement table cannot answer is asked of the provider
         # directly, so a selection is never stranded by a missing analysis row.
-        missing = [
-            selection.provider_event_id
-            for selection in pending
-            if selection.provider_event_id not in scores
+        outstanding = [
+            selection for selection in pending if selection.provider_event_id not in scores
         ]
-        if missing and source is not None and hasattr(source, "get_results"):
-            try:
-                for result in await source.get_results(missing):  # type: ignore[attr-defined]
-                    identifier = getattr(result, "provider_event_id", None)
-                    home_goals = getattr(result, "home_goals", None)
-                    away_goals = getattr(result, "away_goals", None)
-                    if identifier and home_goals is not None and away_goals is not None:
-                        scores[str(identifier)] = (int(home_goals), int(away_goals))
-            except Exception as exc:  # noqa: BLE001 - a provider failure must not stop settlement
-                # The vendor's own message is logged, not just the exception
-                # type. "ProviderDataError" tells an operator nothing about
-                # whether the key is spent, the plan forbids the call, or the
-                # ids were malformed — and those need different responses.
-                logger.warning(
-                    "selections.direct_results_failed",
-                    error_type=type(exc).__name__,
-                    detail=str(exc)[:300],
-                    missing=len(missing),
-                )
-                self.last_results_error = str(exc)[:300]
+        if outstanding and source is not None:
+            # Fetched by date, not by fixture id. The free plan forbids the
+            # ``ids`` parameter, which silently stranded every selection; a
+            # date covers a whole card in one request and is permitted.
+            days = sorted(
+                {
+                    (
+                        selection.kickoff
+                        if selection.kickoff.tzinfo
+                        else selection.kickoff.replace(tzinfo=UTC)
+                    ).date()
+                    for selection in outstanding
+                }
+            )
+
+            fetch = getattr(source, "get_results_for_dates", None)
+            if fetch is None:
+                fetch = getattr(source, "get_results", None)
+                arguments: object = [s.provider_event_id for s in outstanding]
+            else:
+                arguments = days
+
+            if fetch is not None:
+                try:
+                    for result in await fetch(arguments):
+                        identifier = getattr(result, "provider_event_id", None)
+                        home_goals = getattr(result, "home_goals", None)
+                        away_goals = getattr(result, "away_goals", None)
+                        if identifier and home_goals is not None and away_goals is not None:
+                            scores[str(identifier)] = (
+                                int(home_goals),
+                                int(away_goals),
+                            )
+                except Exception as exc:  # noqa: BLE001 - a provider failure must not stop settlement
+                    # The vendor's own message is logged, not just the
+                    # exception type. "ProviderDataError" tells an operator
+                    # nothing about whether the key is spent, the plan forbids
+                    # the call, or the ids were malformed — and those need
+                    # different responses.
+                    logger.warning(
+                        "selections.direct_results_failed",
+                        error_type=type(exc).__name__,
+                        detail=str(exc)[:300],
+                        missing=len(outstanding),
+                    )
+                    self.last_results_error = str(exc)[:300]
 
         settled = 0
         for selection in pending:

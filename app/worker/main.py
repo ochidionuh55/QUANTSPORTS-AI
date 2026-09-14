@@ -188,7 +188,7 @@ def build_scheduler(settings: Settings, database: Database, redis: RedisClient) 
                 # the same results. Settling one store and not another is how a
                 # product ends up telling two different stories about the same
                 # match — which is worse than telling neither.
-                highlights = await HighlightService(session).settle()
+                highlights = await HighlightService(session).settle(source=provider)
                 selections = await SelectionService(session).settle(source=provider)
 
             logger.info(

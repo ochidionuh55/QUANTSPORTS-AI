@@ -313,7 +313,7 @@ class HighlightService:
         )
         return True
 
-    async def settle(self, now: datetime | None = None) -> int:
+    async def settle(self, now: datetime | None = None, source: object | None = None) -> int:
         """Settle highlights whose matches have finished.
 
         Results come from the settlement table, which is populated from the
@@ -340,6 +340,42 @@ class HighlightService:
             row.provider_event_id: (row.home_goals, row.away_goals)
             for row in settled_rows.scalars().all()
         }
+
+        # Same fallback as service selections: a published highlight outlives
+        # the analysis that produced it, so it must still be scoreable once
+        # that analysis has been pruned.
+        outstanding = [
+            highlight for highlight in pending if highlight.provider_event_id not in results
+        ]
+        if outstanding and source is not None:
+            fetch = getattr(source, "get_results_for_dates", None)
+            if fetch is not None:
+                days = sorted(
+                    {
+                        (
+                            highlight.kickoff
+                            if highlight.kickoff.tzinfo
+                            else highlight.kickoff.replace(tzinfo=UTC)
+                        ).date()
+                        for highlight in outstanding
+                    }
+                )
+                try:
+                    for result in await fetch(days):
+                        identifier = getattr(result, "provider_event_id", None)
+                        home_goals = getattr(result, "home_goals", None)
+                        away_goals = getattr(result, "away_goals", None)
+                        if identifier and home_goals is not None and away_goals is not None:
+                            results[str(identifier)] = (
+                                int(home_goals),
+                                int(away_goals),
+                            )
+                except Exception as exc:  # noqa: BLE001
+                    logger.warning(
+                        "highlight.direct_results_failed",
+                        error_type=type(exc).__name__,
+                        detail=str(exc)[:300],
+                    )
 
         settled = 0
         for highlight in pending:
