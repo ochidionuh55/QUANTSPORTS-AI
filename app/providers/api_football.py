@@ -624,7 +624,25 @@ class ApiFootballProvider(OddsProvider):
         self.require(ProviderCapability.FIXTURES)
         finished: list[object] = []
 
+        # The free plan serves a narrow window around today and rejects
+        # anything outside it. Requesting a date it will refuse spends an
+        # allowance we cannot spare and returns nothing, so those dates are
+        # skipped rather than attempted.
+        today = datetime.now(UTC).date()
+        earliest = today - timedelta(days=self._max_days_ahead)
+        latest = today + timedelta(days=self._max_days_ahead)
+
         for day in days:
+            parsed = day if isinstance(day, date) else None
+            if parsed is not None and not (earliest <= parsed <= latest):
+                logger.info(
+                    "provider.date_outside_plan_window",
+                    day=str(parsed),
+                    earliest=str(earliest),
+                    latest=str(latest),
+                )
+                continue
+
             items = await self._get("fixtures", {"date": str(day)})
             for item in items:
                 fixture = item.get("fixture", {})
