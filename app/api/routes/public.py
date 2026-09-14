@@ -108,6 +108,14 @@ class SelectionCard(BaseModel):
     published_at: datetime
     model_version: str
     rationale: str
+    factors: dict[str, float] = Field(
+        default_factory=dict,
+        description="Ranking terms, so the evidence travels with the selection.",
+    )
+    sample_size: int = 0
+    components_used: list[str] = Field(default_factory=list)
+    expected_home_goals: float | None = None
+    expected_away_goals: float | None = None
 
 
 @router.get("/summary", response_model=PlatformSummary)
@@ -625,4 +633,11 @@ def _as_card(selection: ServiceSelection) -> SelectionCard:
         published_at=selection.published_at,
         model_version=selection.model_version,
         rationale=selection.rationale,
+        factors={
+            key: float(value)
+            for key, value in (selection.factors or {}).items()
+            if isinstance(value, int | float)
+        },
+        sample_size=selection.sample_size,
+        components_used=[str(c) for c in (selection.components_used or [])],
     )

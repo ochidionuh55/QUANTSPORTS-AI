@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/product/PageHeader";
 import { FixtureRow } from "@/components/product/FixtureRow";
 import { FeaturedSelection } from "@/components/product/FeaturedSelection";
+import { LeadSelection } from "@/components/product/LeadSelection";
 import {
   getBestOfToday,
   getSummary,
@@ -60,32 +61,43 @@ export default async function TodayPage() {
 
       {featured.length > 0 ? (
         <section className="mx-auto max-w-shell px-5 py-16 sm:px-6 sm:py-20">
-          <div className="flex items-baseline justify-between gap-4">
-            <div>
-              <p className="mono-label">Strongest today</p>
-              <h2 className="mt-4 text-display font-semibold text-ink">
-                Where the model is most confident.
-              </h2>
+          <LeadSelection selection={featured[0]} />
+
+          {featured.length > 1 ? (
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
+              {featured.slice(1).map((selection, index) => (
+                <FeaturedSelection
+                  key={selection.id}
+                  selection={selection}
+                  rank={index + 2}
+                />
+              ))}
             </div>
-          </div>
+          ) : null}
 
-          <p className="mt-5 max-w-prose leading-relaxed text-ink-muted">
+          <p className="mt-8 max-w-prose text-[13px] leading-relaxed text-ink-muted">
             High probability is not the same as good value — an outcome our
-            models put at 94% is priced accordingly. These are simply the
-            conclusions the mathematics holds most firmly today.
+            models put at 94% is priced accordingly. These are the conclusions
+            the mathematics holds most firmly today, ranked by our published
+            methodology.
           </p>
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {featured.map((selection, index) => (
-              <FeaturedSelection
-                key={selection.id}
-                selection={selection}
-                rank={index + 1}
-              />
-            ))}
+        </section>
+      ) : (
+        <section className="mx-auto max-w-shell px-5 py-20 sm:px-6 sm:py-28">
+          <div className="rounded-2xl border border-line bg-white p-12 text-center sm:p-20">
+            <p className="mono-label">No qualifying selection</p>
+            <h2 className="mx-auto mt-6 max-w-2xl text-display font-semibold text-ink">
+              Nothing on today&rsquo;s card cleared the bar.
+            </h2>
+            <p className="mx-auto mt-6 max-w-prose leading-relaxed text-ink-muted">
+              That is a real answer, not an empty page. Every service has a
+              threshold, and today no fixture reached one. We never publish a
+              selection to fill a slot — a feature that must produce something
+              eventually produces something worthless.
+            </p>
           </div>
         </section>
-      ) : null}
+      )}
 
       {Object.keys(byService).length > 0 ? (
         <section className="border-y border-line bg-warm">

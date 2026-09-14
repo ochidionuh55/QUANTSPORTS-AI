@@ -47,6 +47,9 @@ export type SelectionCard = {
   published_at: string;
   model_version: string;
   rationale: string;
+  factors: Record<string, number>;
+  sample_size: number;
+  components_used: string[];
 };
 
 export type FixtureCard = {
