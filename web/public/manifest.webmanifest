@@ -1,0 +1,19 @@
+{
+  "name": "QUANTSPORT AI",
+  "short_name": "QUANTSPORT",
+  "description": "Football Intelligence, Quantified. Mathematical models, verified data and transparent probabilities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#05B85C",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,9 +1,15 @@
+import Image from "next/image";
+
 /**
- * The Q mark.
+ * The QUANTSPORT mark.
  *
- * Drawn rather than imported so it can carry state: the ring becomes a
- * probability arc while the engine is working, which is the logo doing a job
- * rather than sitting in a corner.
+ * The real logo, not a drawn approximation. Rendered through next/image so it
+ * is served in a modern format at the exact size requested rather than shipping
+ * a 512px asset to a 30px slot.
+ *
+ * The calculating state wraps it in a rotating probability arc rather than
+ * spinning the mark itself — a tumbling logo reads as a broken page, while a
+ * ring around a still mark reads as the engine working.
  */
 export function Mark({
   size = 32,
@@ -12,42 +18,42 @@ export function Mark({
   size?: number;
   calculating?: boolean;
 }) {
-  return (
-    <svg
+  const logo = (
+    <Image
+      src="/icon-192.png"
+      alt="QUANTSPORT"
       width={size}
       height={size}
-      viewBox="0 0 48 48"
-      fill="none"
-      role="img"
-      aria-label="QUANTSPORT"
-    >
-      <defs>
-        <linearGradient id="q-mark" x1="6" y1="6" x2="42" y2="42">
-          <stop offset="0%" stopColor="#006B45" />
-          <stop offset="55%" stopColor="#05B85C" />
-          <stop offset="100%" stopColor="#A9FF3F" />
-        </linearGradient>
-      </defs>
+      priority={size >= 30}
+      className="select-none"
+    />
+  );
 
-      <circle
-        cx="24"
-        cy="24"
-        r="17"
-        stroke="url(#q-mark)"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-        strokeDasharray={calculating ? "34 74" : undefined}
-        className={calculating ? "origin-center animate-spin" : undefined}
-        style={calculating ? { animationDuration: "1.4s" } : undefined}
-      />
-      {/* The tail: a rising curve, not a serif. Growth, measured. */}
-      <path
-        d="M27 27 L41 41"
-        stroke="url(#q-mark)"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-      />
-      <circle cx="24" cy="24" r="5.5" fill="url(#q-mark)" opacity="0.9" />
-    </svg>
+  if (!calculating) return logo;
+
+  return (
+    <span
+      className="relative inline-grid place-items-center"
+      style={{ width: size * 1.5, height: size * 1.5 }}
+    >
+      <svg
+        viewBox="0 0 48 48"
+        className="absolute inset-0 h-full w-full animate-spin"
+        style={{ animationDuration: "1.4s" }}
+        aria-hidden
+      >
+        <circle
+          cx="24"
+          cy="24"
+          r="21"
+          fill="none"
+          stroke="#05B85C"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeDasharray="30 102"
+        />
+      </svg>
+      {logo}
+    </span>
   );
 }

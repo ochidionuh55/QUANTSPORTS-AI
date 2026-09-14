@@ -19,9 +19,39 @@ export const metadata: Metadata = {
     title: "QUANTSPORT AI — Football Intelligence, Quantified",
     description:
       "Football is full of opinions. We start with probabilities. 113,000 matches, 38 competitions, and a record that includes the losses.",
+    url: "/",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "QUANTSPORT AI",
+      },
+    ],
   },
-  twitter: { card: "summary_large_image" },
+  twitter: {
+    card: "summary_large_image",
+    title: "QUANTSPORT AI — Football Intelligence, Quantified",
+    description:
+      "113,000 matches, 38 competitions, and a published record that includes the losses.",
+    images: ["/og.png"],
+  },
   robots: { index: true, follow: true },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: ["/favicon.ico"],
+  },
+  applicationName: "QUANTSPORT AI",
+  appleWebApp: {
+    capable: true,
+    title: "QUANTSPORT",
+    statusBarStyle: "default",
+  },
 };
 
 export const viewport: Viewport = {
