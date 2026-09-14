@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 
-const BASE = "https://quantsports-ai.vercel.app";
+const BASE =
+  process.env.SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://quantsports-ai.vercel.app");
 
 /**
  * The sitemap.

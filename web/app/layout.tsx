@@ -6,7 +6,16 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://quantsport.ai"),
+  // Social platforms need an absolute image URL, so this must be the domain
+  // actually serving the site. Vercel provides its own URL at build time;
+  // SITE_URL overrides it once a custom domain is attached. Pointing this at a
+  // domain we do not own resolves every preview image to a 404.
+  metadataBase: new URL(
+    process.env.SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : "https://quantsports-ai.vercel.app"),
+  ),
   title: {
     default: "QUANTSPORT AI — Football Intelligence, Quantified",
     template: "%s | QUANTSPORT AI",
