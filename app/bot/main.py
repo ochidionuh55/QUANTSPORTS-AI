@@ -23,6 +23,7 @@ from app.bot.middleware import (
     ContextMiddleware,
     DatabaseMiddleware,
     ErrorMiddleware,
+    LengthMiddleware,
     UserMiddleware,
 )
 from app.core.config import ServiceRole, Settings, get_settings
@@ -91,10 +92,16 @@ def build_dispatcher(database: Database, settings: Settings) -> Dispatcher:
 
 def build_bot(settings: Settings) -> Bot:
     """Create the aiogram bot client from settings."""
-    return Bot(
+    bot = Bot(
         token=settings.telegram.bot_token.get_secret_value(),
         default=DefaultBotProperties(parse_mode=settings.telegram.parse_mode),
     )
+
+    # Attached to the session so it wraps the outgoing API call itself. Doing
+    # it here covers every path a screen might send through, rather than only
+    # the ones we remembered to wrap.
+    bot.session.middleware(LengthMiddleware())
+    return bot
 
 
 async def run_bot(settings: Settings) -> None:

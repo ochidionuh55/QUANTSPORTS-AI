@@ -1327,7 +1327,44 @@ def format_why_selection(selection: object) -> str:
     return "\n".join(lines)
 
 
-def format_history_day(view: object) -> str:
+TELEGRAM_LIMIT = 4096
+"""Telegram's hard message limit, in characters.
+
+Exceeding it is rejected outright rather than truncated, so anything rendering
+an unbounded list has to bound it here.
+"""
+
+SAFE_LIMIT = 3800
+"""What we render to.
+
+Below the hard limit with room for a closing note, so a message that grows
+slightly between rendering and sending cannot tip over.
+"""
+
+
+def fit(text: str, note: str = "") -> str:
+    """Trim a message to something Telegram will accept.
+
+    A last line of defence rather than the plan: screens should bound their own
+    content. But a rejected message shows the user an error and tells them
+    nothing, whereas a trimmed one still answers the question — so nothing is
+    ever sent that could be refused outright.
+    """
+    if len(text) <= SAFE_LIMIT:
+        return text
+
+    tail = f"\n\n<i>{note}</i>" if note else ""
+    budget = SAFE_LIMIT - len(tail)
+    trimmed = text[:budget]
+
+    # Cut at a line break so a tag or word is never left half-written.
+    cut = trimmed.rfind("\n")
+    if cut > budget * 0.6:
+        trimmed = trimmed[:cut]
+    return trimmed + tail
+
+
+def format_history_day(view: object, limit: int = 12) -> str:
     """Render one historical day exactly as it was published."""
     day = getattr(view, "day", None)
     selections = getattr(view, "selections", []) or []
@@ -1358,8 +1395,18 @@ def format_history_day(view: object) -> str:
         lines.append(f"<b>Settled: {won}/{settled} won</b>")
         lines.append("")
 
-    for selection in selections:
+    # Bounded deliberately. A day with a hundred selections cannot be shown in
+    # one Telegram message, and a page of them would not be read anyway — the
+    # per-service tally above carries the day's story.
+    for selection in selections[:limit]:
         lines.append(format_selection_card(selection))
+        lines.append("")
+
+    remaining = len(selections) - limit
+    if remaining > 0:
+        lines.append(
+            f"<i>{remaining} more selection(s) that day. The full record is on " "the website.</i>"
+        )
         lines.append("")
 
     lines.append("<i>Published before kickoff and never edited since.</i>")

@@ -17,10 +17,12 @@ from __future__ import annotations
 from collections.abc import Awaitable, Callable
 from typing import Any, Final
 
-from aiogram import BaseMiddleware
+from aiogram import BaseMiddleware, Bot
+from aiogram.methods import TelegramMethod
 from aiogram.types import CallbackQuery, Message, TelegramObject, Update
 from aiogram.types import User as TgUser
 
+from app.bot.formatting import TELEGRAM_LIMIT, fit
 from app.core.logging import get_logger, set_correlation_id
 from app.core.terms import GATE_BLOCKED_MESSAGE
 from app.database.models import User
@@ -224,3 +226,45 @@ class ErrorMiddleware(BaseMiddleware):
                 await answer(message)
         except Exception:  # noqa: BLE001 - a failure to apologise must not raise
             self._logger.warning("bot.apology_failed")
+
+
+class LengthMiddleware:
+    """Keeps every outgoing message within Telegram's size limit.
+
+    Telegram rejects anything over 4,096 characters outright — it does not
+    truncate — so a screen rendering an unbounded list fails completely and the
+    user sees an error instead of an answer.
+
+    Individual screens should bound their own content, and they do. This exists
+    because "should" is not a guarantee: a day with a hundred selections, an
+    unusually long club name, a competition list that grows. Trimming at the
+    boundary means the worst case is a shortened message rather than a broken
+    one.
+
+    Implemented as a session middleware so it intercepts the outgoing API call
+    itself. Wrapping the message object instead would mean patching aiogram's
+    own methods, which is fragile and breaks as soon as a screen sends through
+    a path nobody remembered to wrap.
+    """
+
+    def __init__(self) -> None:
+        self._logger = get_logger(__name__)
+
+    async def __call__(
+        self,
+        make_request: Callable[[Bot, TelegramMethod[Any]], Awaitable[Any]],
+        bot: Bot,
+        method: TelegramMethod[Any],
+    ) -> Any:
+        """Trim the payload of any method that carries text."""
+        text = getattr(method, "text", None)
+        if isinstance(text, str) and len(text) > TELEGRAM_LIMIT:
+            self._logger.warning(
+                "bot.message_trimmed",
+                length=len(text),
+                method=type(method).__name__,
+            )
+            method.text = fit(  # type: ignore[attr-defined]
+                text, "Trimmed to fit. The full record is on the website."
+            )
+        return await make_request(bot, method)
