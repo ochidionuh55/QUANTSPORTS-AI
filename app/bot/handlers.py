@@ -59,7 +59,7 @@ from app.bot.formatting import (
 )
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
 from app.core.basketball_competitions import BASKETBALL_COMPETITIONS
-from app.core.community import CHANNEL_ID, CHANNEL_URL
+from app.core.community import CHANNEL_URL
 from app.core.config import Settings
 from app.core.logging import get_logger
 from app.core.terms import (
@@ -673,41 +673,17 @@ async def handle_community(callback: CallbackQuery, user: User, session: object)
         days_on_record=days,
     )
 
-    joined = await _is_member(callback, user)
+    # No membership check. Telegram's own channel analytics already reports
+    # subscribers, so asking the API on every visit would spend requests to
+    # learn something visible in the dashboard — and risk locking people out
+    # whenever that call failed.
     rows: list[list[InlineKeyboardButton]] = [
         [InlineKeyboardButton(text="📣 Open the channel", url=CHANNEL_URL)]
     ]
-    if joined is False:
-        rows.append([InlineKeyboardButton(text="✅ I have joined", callback_data="menu:community")])
 
-    body = format_community(stats, CHANNEL_URL)
-    if joined is True:
-        body += "\n\n<i>You are a member. Thank you.</i>"
-
-    await callback.message.edit_text(body, reply_markup=_back(*rows))
-
-
-async def _is_member(callback: CallbackQuery, user: User) -> bool | None:
-    """Whether a user has joined the channel.
-
-    Returns ``None`` when the answer cannot be obtained — the bot may not be an
-    administrator of the channel, or Telegram may be unreachable. Treating an
-    unknown as "not joined" would nag people who are already members, which is
-    a worse failure than not asking at all.
-    """
-    bot = getattr(callback, "bot", None)
-    if bot is None:
-        return None
-    try:
-        member = await bot.get_chat_member(CHANNEL_ID, user.telegram_id)
-    except Exception as exc:  # noqa: BLE001 - membership is a nicety, not a gate
-        logger.info("community.membership_unknown", error_type=type(exc).__name__)
-        return None
-    return str(getattr(member, "status", "")) in {
-        "member",
-        "administrator",
-        "creator",
-    }
+    await callback.message.edit_text(
+        format_community(stats, CHANNEL_URL), reply_markup=_back(*rows)
+    )
 
 
 @dataclass

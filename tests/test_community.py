@@ -9,7 +9,6 @@ out every user at once.
 from __future__ import annotations
 
 from app.core.community import (
-    CHANNEL_ID,
     CHANNEL_NAME,
     CHANNEL_URL,
     CHANNEL_USERNAME,
@@ -22,10 +21,6 @@ class TestChannelDefinition:
 
     def test_url_matches_username(self) -> None:
         assert f"https://t.me/{CHANNEL_USERNAME}" == CHANNEL_URL
-
-    def test_id_is_the_form_telegram_expects(self) -> None:
-        """Membership lookups need the @ form, links need the URL form."""
-        assert f"@{CHANNEL_USERNAME}" == CHANNEL_ID
 
     def test_channel_is_named(self) -> None:
         assert CHANNEL_NAME
@@ -91,59 +86,3 @@ class TestCommunityScreen:
             members=0, active_this_week=0, selections_published=0, days_on_record=0
         )
         assert format_community(stats, CHANNEL_URL)
-
-
-class TestMembershipFailsOpen:
-    """An unknown answer must never be treated as "not joined"."""
-
-    async def test_unreachable_telegram_returns_unknown(self) -> None:
-        from types import SimpleNamespace
-
-        from app.bot.handlers import _is_member
-
-        class _Bot:
-            async def get_chat_member(self, chat: str, user: int) -> object:
-                raise RuntimeError("telegram unavailable")
-
-        callback = SimpleNamespace(bot=_Bot())
-        user = SimpleNamespace(telegram_id=1)
-
-        assert await _is_member(callback, user) is None  # type: ignore[arg-type]
-
-    async def test_member_is_recognised(self) -> None:
-        from types import SimpleNamespace
-
-        from app.bot.handlers import _is_member
-
-        class _Bot:
-            async def get_chat_member(self, chat: str, user: int) -> object:
-                return SimpleNamespace(status="member")
-
-        callback = SimpleNamespace(bot=_Bot())
-        user = SimpleNamespace(telegram_id=1)
-
-        assert await _is_member(callback, user) is True  # type: ignore[arg-type]
-
-    async def test_non_member_is_recognised(self) -> None:
-        from types import SimpleNamespace
-
-        from app.bot.handlers import _is_member
-
-        class _Bot:
-            async def get_chat_member(self, chat: str, user: int) -> object:
-                return SimpleNamespace(status="left")
-
-        callback = SimpleNamespace(bot=_Bot())
-        user = SimpleNamespace(telegram_id=1)
-
-        assert await _is_member(callback, user) is False  # type: ignore[arg-type]
-
-    async def test_missing_bot_returns_unknown(self) -> None:
-        from types import SimpleNamespace
-
-        from app.bot.handlers import _is_member
-
-        callback = SimpleNamespace(bot=None)
-        user = SimpleNamespace(telegram_id=1)
-
-        assert await _is_member(callback, user) is None  # type: ignore[arg-type]
