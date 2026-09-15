@@ -16,15 +16,23 @@ about a live selection — selections are immutable once published.
 
 from __future__ import annotations
 
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
-from sqlalchemy import func, select
+from sqlalchemy import distinct, func, select
 
 from app.api.dependencies.common import SessionDep
+from app.core.community import CHANNEL_URL
 from app.core.competitions import CSV_COMPETITIONS
-from app.database.models import HistoricalMatch, ServiceSelection, StoredAnalysis, Team
+from app.database.models import (
+    FixtureView,
+    HistoricalMatch,
+    ServiceSelection,
+    StoredAnalysis,
+    Team,
+    User,
+)
 from app.services.best_of_day import SERVICES, SERVICES_BY_KEY
 from app.services.divergence import find_divergences
 from app.services.profiles import ProfileService
@@ -652,6 +660,54 @@ async def competitions(session: SessionDep) -> list[CompetitionCard]:
 
     cards.sort(key=lambda card: (-card.fixtures_today, card.name))
     return cards
+
+
+class CommunityStats(BaseModel):
+    """Public, aggregate figures about who is using QUANTSPORT.
+
+    Counts only. No identifiers, no names, nothing that could single anyone
+    out — a community number is a milestone to celebrate, not a reason to
+    expose the people who make it up.
+    """
+
+    members: int = Field(description="People who have started the bot.")
+    active_this_week: int
+    selections_published: int
+    days_on_record: int
+    channel_url: str
+
+
+@router.get("/community", response_model=CommunityStats)
+async def community(session: SessionDep) -> CommunityStats:
+    """Return public community figures."""
+    week = datetime.now(UTC) - timedelta(days=7)
+
+    members = int((await session.execute(select(func.count()).select_from(User))).scalar_one())
+    active = int(
+        (
+            await session.execute(
+                select(func.count(distinct(FixtureView.user_id))).where(
+                    FixtureView.created_at >= week
+                )
+            )
+        ).scalar_one()
+    )
+    published = int(
+        (await session.execute(select(func.count()).select_from(ServiceSelection))).scalar_one()
+    )
+    days = int(
+        (
+            await session.execute(select(func.count(distinct(ServiceSelection.selection_date))))
+        ).scalar_one()
+    )
+
+    return CommunityStats(
+        members=members,
+        active_this_week=active,
+        selections_published=published,
+        days_on_record=days,
+        channel_url=CHANNEL_URL,
+    )
 
 
 class DivergenceCard(BaseModel):

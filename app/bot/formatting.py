@@ -13,6 +13,7 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 from decimal import Decimal
 
+from app.core.community import JOIN_PROMPT
 from app.services.match_analysis import MatchAnalysis
 
 MARKET_ONLY_NOTICE = (
@@ -1944,4 +1945,38 @@ def format_divergences(items: list[object]) -> str:
     lines.append(DIVERGENCE_NOTICE)
     lines.append("")
     lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_community(stats: object, channel_url: str) -> str:
+    """Render the community screen.
+
+    Aggregate counts only. A milestone is worth celebrating; the people making
+    it up are not a leaderboard.
+    """
+    lines = [
+        "<b>📣 THE QUANTSPORT COMMUNITY</b>",
+        "",
+        f"<b>{getattr(stats, 'members', 0):,}</b> people use QUANTSPORT.",
+        "",
+    ]
+
+    active = getattr(stats, "active_this_week", 0)
+    if active:
+        lines.append(f"{active:,} of them opened a fixture in the last week.")
+        lines.append("")
+
+    published = getattr(stats, "selections_published", 0)
+    days = getattr(stats, "days_on_record", 0)
+    if published:
+        lines.append(
+            f"<b>{published:,}</b> selections published across <b>{days}</b> "
+            "day(s) — every one timestamped before kickoff and settled from "
+            "the result."
+        )
+        lines.append("")
+
+    lines.append(JOIN_PROMPT)
+    lines.append("")
+    lines.append("<i>We publish counts, never names. Nothing here identifies anyone.</i>")
     return "\n".join(lines)

@@ -33,6 +33,7 @@ from app.bot.formatting import (
     format_basketball_today,
     format_board,
     format_breakdown,
+    format_community,
     format_divergences,
     format_fixture_list,
     format_fixture_picks,
@@ -58,6 +59,7 @@ from app.bot.formatting import (
 )
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
 from app.core.basketball_competitions import BASKETBALL_COMPETITIONS
+from app.core.community import CHANNEL_ID, CHANNEL_URL
 from app.core.config import Settings
 from app.core.logging import get_logger
 from app.core.terms import (
@@ -651,6 +653,71 @@ async def handle_best_today(callback: CallbackQuery, user: User, session: object
     await callback.message.edit_text(
         format_service_menu(counts, modelled, available), reply_markup=_back(*rows)
     )
+
+
+async def handle_community(callback: CallbackQuery, user: User, session: object) -> None:
+    """Show community figures and the channel."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    snapshot = await AnalyticsService(session).snapshot()  # type: ignore[arg-type]
+    selections = await SelectionService(session).track_record()  # type: ignore[arg-type]
+    published = sum(record.total for record in selections)
+    days = len(await SelectionService(session).available_days(limit=365))  # type: ignore[arg-type]
+
+    stats = _CommunityStats(
+        members=snapshot.total_users,
+        active_this_week=snapshot.active_week,
+        selections_published=published,
+        days_on_record=days,
+    )
+
+    joined = await _is_member(callback, user)
+    rows: list[list[InlineKeyboardButton]] = [
+        [InlineKeyboardButton(text="📣 Open the channel", url=CHANNEL_URL)]
+    ]
+    if joined is False:
+        rows.append([InlineKeyboardButton(text="✅ I have joined", callback_data="menu:community")])
+
+    body = format_community(stats, CHANNEL_URL)
+    if joined is True:
+        body += "\n\n<i>You are a member. Thank you.</i>"
+
+    await callback.message.edit_text(body, reply_markup=_back(*rows))
+
+
+async def _is_member(callback: CallbackQuery, user: User) -> bool | None:
+    """Whether a user has joined the channel.
+
+    Returns ``None`` when the answer cannot be obtained — the bot may not be an
+    administrator of the channel, or Telegram may be unreachable. Treating an
+    unknown as "not joined" would nag people who are already members, which is
+    a worse failure than not asking at all.
+    """
+    bot = getattr(callback, "bot", None)
+    if bot is None:
+        return None
+    try:
+        member = await bot.get_chat_member(CHANNEL_ID, user.telegram_id)
+    except Exception as exc:  # noqa: BLE001 - membership is a nicety, not a gate
+        logger.info("community.membership_unknown", error_type=type(exc).__name__)
+        return None
+    return str(getattr(member, "status", "")) in {
+        "member",
+        "administrator",
+        "creator",
+    }
+
+
+@dataclass
+class _CommunityStats:
+    """Aggregate figures for the community screen."""
+
+    members: int
+    active_this_week: int
+    selections_published: int
+    days_on_record: int
 
 
 async def handle_divergence(callback: CallbackQuery, user: User, session: object) -> None:
@@ -1883,6 +1950,7 @@ def build_router() -> Router:
     router.callback_query.register(handle_best_today, F.data == "menu:best")
     router.callback_query.register(handle_service_list, F.data.startswith("svc:"))
     router.callback_query.register(handle_divergence, F.data == "menu:divergence")
+    router.callback_query.register(handle_community, F.data == "menu:community")
     router.callback_query.register(handle_service_record, F.data.in_({"sel:record", "menu:record"}))
     router.callback_query.register(handle_history_days, F.data.in_({"hist:days", "menu:history"}))
 

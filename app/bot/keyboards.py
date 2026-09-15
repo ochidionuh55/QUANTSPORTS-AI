@@ -67,6 +67,7 @@ def menu_features(features: FeatureFlags) -> list[MenuFeature]:
         MenuFeature("🔍 Explore", "menu:explore", phase=12, available=True),
         MenuFeature("🏆 Competitions", "menu:competitions", phase=13, available=True),
         MenuFeature("🎯 Daily boards", "menu:highlights", phase=12, available=True),
+        MenuFeature("📣 Community", "menu:community", phase=13, available=True),
         MenuFeature("📖 How it works", "menu:how_it_works", phase=3, available=True),
         MenuFeature("👤 My account", "menu:account", phase=3, available=True),
         MenuFeature("📜 Terms and safety", "menu:terms", phase=3, available=True),

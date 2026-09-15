@@ -41,6 +41,24 @@ export function Footer() {
             <p className="mt-1 text-sm text-ink-muted">
               Football Intelligence, Quantified.
             </p>
+            <div className="mt-5 flex flex-col gap-2">
+              <a
+                href="https://t.me/quantpredictzbot"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-ink-muted transition-colors duration-fast hover:text-emerald"
+              >
+                Open the bot →
+              </a>
+              <a
+                href="https://t.me/PITCHIQ2"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-ink-muted transition-colors duration-fast hover:text-emerald"
+              >
+                Join PitchIQ channel →
+              </a>
+            </div>
           </div>
 
           {COLUMNS.map((column) => (

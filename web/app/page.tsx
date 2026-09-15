@@ -3,13 +3,17 @@ import { ScoreMatrix } from "@/components/hero/ScoreMatrix";
 import { ProbabilityField } from "@/components/hero/ProbabilityField";
 import { MarketDerivation } from "@/components/hero/MarketDerivation";
 import { CommandBar } from "@/components/hero/CommandBar";
-import { getSummary } from "@/lib/api";
+import { getCommunity, getSummary } from "@/lib/api";
+import { Community } from "@/components/product/Community";
 import { formatCount } from "@/lib/format";
 
 export const revalidate = 900;
 
 export default async function Home() {
-  const summary = await getSummary();
+  const [summary, community] = await Promise.all([
+    getSummary(),
+    getCommunity(),
+  ]);
 
   return (
     <>
@@ -134,6 +138,8 @@ export default async function Home() {
           <CommandBar />
         </div>
       </section>
+
+      <Community stats={community} />
 
       {/* Screen — the honesty, as a cinematic dark section */}
       <section className="bg-night-deep py-28 text-white">

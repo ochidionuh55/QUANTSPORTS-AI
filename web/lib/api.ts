@@ -235,6 +235,22 @@ export type DivergenceCard = {
 export const getDivergence = () =>
   get<DivergenceCard[]>("/api/v1/divergence", 300);
 
+export type CommunityStats = {
+  members: number;
+  active_this_week: number;
+  selections_published: number;
+  days_on_record: number;
+  channel_url: string;
+};
+
+export const getCommunity = () =>
+  get<CommunityStats>("/api/v1/community", 600);
+
+/** The community channel. Falls back to the known URL if the API is
+ *  unreachable, so the join link never breaks on a page that still renders. */
+export const CHANNEL_URL = "https://t.me/PITCHIQ2";
+export const BOT_URL = "https://t.me/quantpredictzbot";
+
 /** Search today's card. Filters are applied server-side by the query service
  *  the Telegram bot also uses, so both interfaces answer identically. */
 export async function searchFixtures(params: {
