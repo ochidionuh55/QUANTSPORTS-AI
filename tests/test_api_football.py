@@ -490,3 +490,53 @@ class TestRequestPacing:
         """A provider built without argument must not burst."""
         provider = ApiFootballProvider(api_key="k")
         assert provider._pacer._interval == MIN_REQUEST_INTERVAL_SECONDS
+
+
+class TestPlanAwareness:
+    """The provider must report the account's real limits, not assumptions."""
+
+    def test_budget_starts_from_the_configured_limit(self) -> None:
+        budget = RequestBudget(daily_limit=100)
+        assert budget.remaining == 100
+
+    def test_headers_override_the_local_count(self) -> None:
+        """Reporting 100 remaining on an account holding 7,500 made the quota
+        look like the cause of a failure it had nothing to do with."""
+        budget = RequestBudget(daily_limit=100)
+        budget.observe(
+            {"x-ratelimit-requests-limit": "7500", "x-ratelimit-requests-remaining": "7421"}
+        )
+
+        assert budget.limit == 7500
+        assert budget.remaining == 7421
+
+    def test_malformed_headers_are_ignored(self) -> None:
+        budget = RequestBudget(daily_limit=100)
+        budget.observe(
+            {"x-ratelimit-requests-limit": "lots", "x-ratelimit-requests-remaining": None}
+        )
+
+        assert budget.limit == 100
+        assert budget.remaining == 100
+
+    def test_missing_headers_are_ignored(self) -> None:
+        budget = RequestBudget(daily_limit=100)
+        budget.observe({})
+        assert budget.remaining == 100
+
+    def test_non_mapping_headers_do_not_raise(self) -> None:
+        budget = RequestBudget(daily_limit=100)
+        budget.observe(object())
+        assert budget.remaining == 100
+
+    def test_limit_is_never_lowered_by_a_header(self) -> None:
+        """A single odd response must not shrink a known allowance."""
+        budget = RequestBudget(daily_limit=7500)
+        budget.observe({"x-ratelimit-requests-limit": "100"})
+        assert budget.limit == 7500
+
+    async def test_date_window_is_configurable(self) -> None:
+        """At one day, a Saturday match could not be settled from Monday: the
+        request was refused and the selection stayed pending permanently."""
+        provider = ApiFootballProvider(api_key="k", max_days_ahead=14, request_interval=0.0)
+        assert provider._max_days_ahead == 14

@@ -21,6 +21,8 @@ distinguish "come back tomorrow" from "the service is broken".
 from __future__ import annotations
 
 import asyncio
+import os
+from contextlib import suppress
 from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal, InvalidOperation
 from typing import Any, Final
@@ -57,8 +59,25 @@ logger = get_logger(__name__)
 
 DEFAULT_BASE_URL: Final[str] = "https://v3.football.api-sports.io"
 FREE_TIER_DAILY_REQUESTS: Final[int] = 100
+"""Requests a day on the free plan.
+
+A starting assumption only. The real allowance is read from the response
+headers on the first call, because a hardcoded number quietly lies about a
+paid plan — it reported 100 remaining while the account held 7,500, which made
+the quota look like the cause of a failure it had nothing to do with.
+"""
+
+DAILY_LIMIT_ENV: Final[str] = "API_FOOTBALL_DAILY_LIMIT"
+MAX_DAYS_ENV: Final[str] = "API_FOOTBALL_MAX_DAYS"
 
 FREE_TIER_MAX_DAYS_AHEAD: Final[int] = 1
+"""How many days either side of today the free plan will serve.
+
+The binding constraint on settling older fixtures. At one day, a match played
+on Saturday could not be settled from Monday — the request was refused, and
+the selection stayed pending permanently. Paid plans serve a far wider window,
+so this is configurable rather than fixed.
+"""
 """How far ahead the free plan permits fixture queries.
 
 The plan allows roughly today plus one day. Requesting a date outside that
@@ -136,6 +155,10 @@ class RequestPacer:
             self._last = now
 
 
+REMAINING_HEADER: Final[str] = "x-ratelimit-requests-remaining"
+LIMIT_HEADER: Final[str] = "x-ratelimit-requests-limit"
+
+
 class RequestBudget:
     """Tracks daily request usage against a quota.
 
@@ -148,6 +171,8 @@ class RequestBudget:
         self._limit = daily_limit
         self._day: date | None = None
         self._used = 0
+        self._reported_remaining: int | None = None
+        """What the vendor last said was left, which overrides our count."""
 
     @property
     def used(self) -> int:
@@ -155,9 +180,37 @@ class RequestBudget:
         return self._used
 
     @property
+    def limit(self) -> int:
+        """The allowance this key actually has."""
+        return self._limit
+
+    @property
     def remaining(self) -> int:
         """Requests left today."""
+        if self._reported_remaining is not None:
+            return self._reported_remaining
         return max(0, self._limit - self._used)
+
+    def observe(self, headers: object) -> None:
+        """Learn the real allowance from a response.
+
+        The vendor reports both the plan limit and what is left on every call.
+        Trusting a local counter instead meant reporting 100 remaining on an
+        account holding 7,500 — which made the quota look like the cause of a
+        failure it had nothing to do with, and cost an afternoon.
+        """
+        try:
+            limit = headers.get(LIMIT_HEADER)  # type: ignore[attr-defined]
+            remaining = headers.get(REMAINING_HEADER)  # type: ignore[attr-defined]
+        except AttributeError:
+            return
+
+        if limit is not None:
+            with suppress(TypeError, ValueError):
+                self._limit = max(self._limit, int(limit))
+        if remaining is not None:
+            with suppress(TypeError, ValueError):
+                self._reported_remaining = max(0, int(remaining))
 
     def spend(self, now: datetime | None = None) -> None:
         """Record one request.
@@ -169,6 +222,7 @@ class RequestBudget:
         if self._day != today:
             self._day = today
             self._used = 0
+            self._reported_remaining = None
 
         if self._used >= self._limit:
             raise ProviderRateLimitError(
@@ -243,8 +297,18 @@ class ApiFootballProvider(OddsProvider):
             role=config.role,
             base_url=config.base_url or DEFAULT_BASE_URL,
             timeout_seconds=config.timeout_seconds,
-            daily_limit=int(config.options.get("daily_limit", FREE_TIER_DAILY_REQUESTS)),
-            max_days_ahead=int(config.options.get("max_days_ahead", FREE_TIER_MAX_DAYS_AHEAD)),
+            daily_limit=int(
+                config.options.get(
+                    "daily_limit",
+                    os.environ.get(DAILY_LIMIT_ENV, FREE_TIER_DAILY_REQUESTS),
+                )
+            ),
+            max_days_ahead=int(
+                config.options.get(
+                    "max_days_ahead",
+                    os.environ.get(MAX_DAYS_ENV, FREE_TIER_MAX_DAYS_AHEAD),
+                )
+            ),
             request_interval=float(
                 config.options.get("request_interval", MIN_REQUEST_INTERVAL_SECONDS)
             ),
@@ -320,6 +384,11 @@ class ApiFootballProvider(OddsProvider):
         finally:
             if owns_client:
                 await client.aclose()
+
+        # The vendor reports the real plan limit and what is left on every
+        # response. Reading it means the budget reflects the account rather
+        # than an assumption made at startup.
+        self.budget.observe(response.headers)
 
         if response.status_code in (401, 403):
             raise ProviderAuthenticationError(

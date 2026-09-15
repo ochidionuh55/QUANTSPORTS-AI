@@ -78,7 +78,17 @@ async def main() -> int:
 
         budget = getattr(provider, "budget", None)
         if budget is not None:
-            print(f"Provider requests left today: {budget.remaining}")
+            print(f"Provider requests: {budget.remaining} of {budget.limit} left " "today")
+
+        # The window silently excluded older dates, which looked like
+        # settlement failing when it was never attempted.
+        window = getattr(provider, "_max_days_ahead", None)
+        if window is not None:
+            today = datetime.now(UTC).date()
+            print(
+                f"Results window: {today - timedelta(days=window)} to "
+                f"{today + timedelta(days=window)}"
+            )
         print()
 
         async with database.session() as session:
