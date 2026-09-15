@@ -7,6 +7,7 @@ booking codes — those arrive with their phases and are not hinted at here.
 from __future__ import annotations
 
 from collections.abc import Sequence
+from dataclasses import dataclass
 from datetime import UTC, date, datetime
 
 from aiogram import F, Router
@@ -36,7 +37,8 @@ from app.bot.formatting import (
     format_fixture_list,
     format_fixture_picks,
     format_highlight,
-    format_history_day,
+    format_history_service,
+    format_history_summary,
     format_home,
     format_league_profile,
     format_market_menu,
@@ -764,8 +766,23 @@ async def handle_history_days(callback: CallbackQuery, session: object) -> None:
     )
 
 
+@dataclass
+class _DayTally:
+    """One service's result on one day, for the history buttons."""
+
+    label: str
+    won: int = 0
+    played: int = 0
+    pending: int = 0
+
+
 async def handle_history_day(callback: CallbackQuery, session: object) -> None:
-    """Show one historical day, read from storage."""
+    """Show one historical day as a set of services to open.
+
+    A single mixed list buries the service that went 6/6 among the ones that
+    did not. Each service is its own page, so a reader sees a clean record per
+    market rather than an average of everything.
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
@@ -777,38 +794,98 @@ async def handle_history_day(callback: CallbackQuery, session: object) -> None:
         return
 
     service = SelectionService(session)  # type: ignore[arg-type]
-    view = await service.day_view(day)
+    selections = await service.for_day(day)
     days = await service.available_days(limit=60)
 
-    # No per-selection buttons. Ten rows reading "Best Home Win" tell a reader
-    # nothing and push the navigation off the screen — the card already carries
-    # everything those buttons would have opened.
-    rows: list[list[InlineKeyboardButton]] = []
+    # Grouped and ranked by how the service actually did that day.
+    grouped: dict[str, _DayTally] = {}
+    for selection in selections:
+        entry = grouped.setdefault(selection.service_key, _DayTally(label=selection.service_label))
+        if selection.status == "won":
+            entry.won += 1
+            entry.played += 1
+        elif selection.status == "lost":
+            entry.played += 1
+        else:
+            entry.pending += 1
 
-    # Day-to-day navigation across whatever exists, not a fixed window.
-    ordered = sorted(days)
-    if day in ordered:
-        index = ordered.index(day)
+    ordered = sorted(
+        grouped.items(),
+        key=lambda item: (-item[1].played, -item[1].won, item[1].label),
+    )
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for key, entry in ordered:
+        score = f"{entry.won}/{entry.played}" if entry.played else f"{entry.pending} pending"
+        rows.append(
+            [
+                InlineKeyboardButton(
+                    text=f"{entry.label} — {score}"[:60],
+                    callback_data=f"hsvc:{day.isoformat()}:{key}",
+                )
+            ]
+        )
+
+    ordered_days = sorted(days)
+    if day in ordered_days:
+        index = ordered_days.index(day)
         navigation: list[InlineKeyboardButton] = []
         if index > 0:
             navigation.append(
                 InlineKeyboardButton(
                     text="◀️ Previous",
-                    callback_data=f"hist:day:{ordered[index - 1].isoformat()}",
+                    callback_data=f"hist:day:{ordered_days[index - 1].isoformat()}",
                 )
             )
-        if index < len(ordered) - 1:
+        if index < len(ordered_days) - 1:
             navigation.append(
                 InlineKeyboardButton(
                     text="Next ▶️",
-                    callback_data=f"hist:day:{ordered[index + 1].isoformat()}",
+                    callback_data=f"hist:day:{ordered_days[index + 1].isoformat()}",
                 )
             )
         if navigation:
             rows.append(navigation)
 
     rows.append([InlineKeyboardButton(text="⬅️ All dates", callback_data="hist:days")])
-    await callback.message.edit_text(format_history_day(view), reply_markup=_back(*rows))
+
+    await callback.message.edit_text(
+        format_history_summary(day, list(selections)), reply_markup=_back(*rows)
+    )
+
+
+async def handle_history_service(callback: CallbackQuery, session: object) -> None:
+    """Show one service's selections for one day."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    parts = (callback.data or "").split(":")
+    if len(parts) < 3:
+        return
+    try:
+        day = date.fromisoformat(parts[1])
+    except ValueError:
+        return
+    key = parts[2]
+
+    selections = [
+        selection
+        for selection in await SelectionService(session).for_day(day)  # type: ignore[arg-type]
+        if selection.service_key == key
+    ]
+
+    await callback.message.edit_text(
+        format_history_service(day, list(selections)),
+        reply_markup=_back(
+            [
+                InlineKeyboardButton(
+                    text="⬅️ Back to that day",
+                    callback_data=f"hist:day:{day.isoformat()}",
+                )
+            ]
+        ),
+    )
 
 
 async def handle_service_record(callback: CallbackQuery, session: object) -> None:
@@ -1810,6 +1887,7 @@ def build_router() -> Router:
     router.callback_query.register(handle_history_days, F.data.in_({"hist:days", "menu:history"}))
 
     router.callback_query.register(handle_history_day, F.data.startswith("hist:day:"))
+    router.callback_query.register(handle_history_service, F.data.startswith("hsvc:"))
     router.callback_query.register(handle_selection_detail, F.data.startswith("sel:"))
     router.callback_query.register(handle_follow, F.data.startswith("follow:"))
     router.callback_query.register(handle_my_quantsport, F.data == "menu:mine")

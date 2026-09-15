@@ -1390,19 +1390,14 @@ def fit(text: str, note: str = "") -> str:
     return trimmed + tail
 
 
-def format_history_day(view: object, limit: int = 12) -> str:
-    """Render one historical day exactly as it was published.
+def format_history_summary(day: object, selections: list[object]) -> str:
+    """Render one day as a scoreboard, with the detail one tap away.
 
-    Led by the per-service tally, because that is the day's story. The
-    selections beneath are the evidence for it.
+    A single mixed list buries the service that went 6/6 among the ones that
+    did not, and a reader cannot tell a strong market from a weak one without
+    reading every entry. Each service gets its own page instead.
     """
-    day = getattr(view, "day", None)
-    selections = list(getattr(view, "selections", []) or [])
-
-    lines = [
-        f"<b>📅 QUANTSPORT — {day:%A %d %B %Y}</b>" if day else "<b>📅 History</b>",
-        "",
-    ]
+    lines = [f"<b>📅 QUANTSPORT — {day:%A %d %B %Y}</b>", ""]
 
     if not selections:
         lines.append(
@@ -1413,46 +1408,65 @@ def format_history_day(view: object, limit: int = 12) -> str:
         lines.append(EVIDENCE_NOTE)
         return "\n".join(lines)
 
-    # Per-service tallies. A day summarised as one number hides that a service
-    # can have a poor day while the card as a whole looks fine.
-    tallies: dict[str, list[int]] = {}
-    for selection in selections:
-        label = getattr(selection, "service_label", "Unknown")
-        tally = tallies.setdefault(label, [0, 0, 0])
-        status = getattr(selection, "status", "pending")
-        if status == "won":
-            tally[0] += 1
-            tally[1] += 1
-        elif status == "lost":
-            tally[1] += 1
-        else:
-            tally[2] += 1
-
-    settled = sum(tally[1] for tally in tallies.values())
-    won = sum(tally[0] for tally in tallies.values())
+    won = sum(1 for s in selections if getattr(s, "status", "") == "won")
+    lost = sum(1 for s in selections if getattr(s, "status", "") == "lost")
+    pending = sum(1 for s in selections if getattr(s, "status", "") == "pending")
+    settled = won + lost
 
     if settled:
         lines.append(f"<b>{won}/{settled} settled selections won</b>")
-        lines.append("")
-
-    for label, (service_won, played, pending) in sorted(
-        tallies.items(), key=lambda item: (-item[1][1], item[0])
-    ):
-        if played:
-            lines.append(f"{label} — <b>{service_won}/{played}</b>")
-        else:
-            lines.append(f"{label} — {pending} awaiting results")
+    if pending:
+        lines.append(f"<i>{pending} still awaiting results.</i>")
     lines.append("")
 
-    for selection in selections[:limit]:
-        lines.append(format_selection_card(selection))
+    lines.append(
+        "Tap a service below to see only its selections for this date, with "
+        "scorelines and results."
+    )
+    lines.append("")
+    lines.append(
+        "<i>Every probability was published before its match kicked off and "
+        "has not been changed since. Only the result was added afterwards.</i>"
+    )
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_history_service(day: object, selections: list[object]) -> str:
+    """Render one service's selections for one day."""
+    label = getattr(selections[0], "service_label", "Service") if selections else "Service"
+    lines = [f"<b>{label}</b>", f"<i>{day:%A %d %B %Y}</i>", ""]
+
+    if not selections:
+        lines.append("This service published nothing on that date.")
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    won = sum(1 for s in selections if getattr(s, "status", "") == "won")
+    lost = sum(1 for s in selections if getattr(s, "status", "") == "lost")
+    settled = won + lost
+
+    if settled:
+        lines.append(f"<b>{won}/{settled}</b> — {won / settled:.0%}")
+    else:
+        lines.append(f"<b>{len(selections)} selection(s)</b>, none settled yet")
+    lines.append("")
+
+    # Settled first, so a reader sees results before open positions.
+    ordered = sorted(
+        selections,
+        key=lambda s: (getattr(s, "status", "") == "pending", getattr(s, "rank", 0)),
+    )
+
+    for selection in ordered[:14]:
+        lines.append(format_selection_card(selection, show_service=False))
         lines.append("")
 
-    remaining = len(selections) - limit
+    remaining = len(ordered) - 14
     if remaining > 0:
-        lines.append(
-            f"<i>{remaining} more selection(s) that day. The full record is on " "the website.</i>"
-        )
+        lines.append(f"<i>{remaining} more. The full record is on the website.</i>")
         lines.append("")
 
     lines.append("<i>Published before kickoff and never edited since.</i>")

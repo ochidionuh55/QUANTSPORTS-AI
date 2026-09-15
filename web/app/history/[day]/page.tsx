@@ -61,29 +61,32 @@ export default async function DayPage({ params }: Props) {
       />
 
       <section className="mx-auto max-w-shell px-5 py-16 sm:px-6 sm:py-20">
-        {tallies.length > 0 ? (
-          <>
-            <p className="mono-label">By service</p>
-            <div className="mt-6 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-              {tallies.map((tally) => {
-                const decided = tally.won + tally.lost;
-                return (
-                  <div
-                    key={tally.key}
-                    className="flex items-baseline justify-between gap-4 rounded-md border border-line bg-white px-5 py-4"
-                  >
-                    <span className="truncate text-[14px] font-medium text-ink">
+        <div className="mt-14 space-y-12">
+          <p className="mono-label">By service</p>
+          {selections.length === 0 ? (
+            <div className="rounded-lg border border-line bg-white p-12 text-center">
+              <p className="font-medium text-ink">Nothing published</p>
+              <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-muted">
+                No fixture cleared a service threshold on this date. That is a
+                real answer — we never publish a selection to fill a slot.
+              </p>
+            </div>
+          ) : (
+            tallies.map((tally) => {
+              const own = selections.filter(
+                (selection) => selection.service_key === tally.key,
+              );
+              const decided = tally.won + tally.lost;
+
+              return (
+                <section key={tally.key}>
+                  <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line pb-3">
+                    <h3 className="text-[17px] font-semibold tracking-[-0.02em] text-ink">
                       {tally.label}
-                    </span>
-                    <span className="tabular shrink-0 font-mono text-[15px]">
+                    </h3>
+                    <span className="tabular font-mono text-[15px]">
                       {decided > 0 ? (
-                        <span
-                          className={
-                            tally.won >= decided - tally.won
-                              ? "text-emerald-deep"
-                              : "text-ink"
-                          }
-                        >
+                        <span className="text-emerald-deep">
                           {tally.won}/{decided}
                         </span>
                       ) : (
@@ -93,81 +96,68 @@ export default async function DayPage({ params }: Props) {
                       )}
                     </span>
                   </div>
-                );
-              })}
-            </div>
-          </>
-        ) : null}
 
-        <div className="mt-14">
-          <p className="mono-label">Every selection</p>
-          {selections.length === 0 ? (
-            <div className="mt-6 rounded-lg border border-line bg-white p-12 text-center">
-              <p className="font-medium text-ink">Nothing published</p>
-              <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-muted">
-                No fixture cleared a service threshold on this date. That is a
-                real answer — we never publish a selection to fill a slot.
-              </p>
-            </div>
-          ) : (
-            <div className="mt-6 border-t border-line">
-              {selections.map((selection) => {
-                const status =
-                  STATUS[selection.status as keyof typeof STATUS] ??
-                  STATUS.pending;
-                const coverage =
-                  COVERAGE[selection.coverage] ?? COVERAGE.unsupported;
-                const score =
-                  selection.home_goals !== null &&
-                  selection.away_goals !== null
-                    ? `${selection.home_goals}–${selection.away_goals}`
-                    : null;
+                  <div>
+                    {own.map((selection) => {
+                      const status =
+                        STATUS[selection.status as keyof typeof STATUS] ??
+                        STATUS.pending;
+                      const coverage =
+                        COVERAGE[selection.coverage] ?? COVERAGE.unsupported;
+                      const score =
+                        selection.home_goals !== null &&
+                        selection.away_goals !== null
+                          ? `${selection.home_goals}–${selection.away_goals}`
+                          : null;
 
-                return (
-                  <article
-                    key={selection.id}
-                    className="grid items-center gap-x-5 gap-y-2 border-b border-line py-5 sm:grid-cols-[8rem_1fr_auto] sm:px-4"
-                  >
-                    <span
-                      className={`font-mono text-[12px] font-medium ${status.className}`}
-                    >
-                      {status.mark} {status.label}
-                    </span>
-
-                    <div className="min-w-0">
-                      <h3 className="text-[16px] font-semibold leading-snug tracking-[-0.02em] text-ink">
-                        {selection.home_name}
-                        {score ? (
-                          <span className="tabular mx-2.5 font-mono text-ink">
-                            {score}
+                      return (
+                        <article
+                          key={selection.id}
+                          className="grid items-center gap-x-5 gap-y-2 border-b border-line/70 py-4 sm:grid-cols-[7rem_1fr_auto]"
+                        >
+                          <span
+                            className={`font-mono text-[12px] font-medium ${status.className}`}
+                          >
+                            {status.mark} {status.label}
                           </span>
-                        ) : (
-                          <span className="mx-2 font-normal text-ink-faint">
-                            v
-                          </span>
-                        )}
-                        {selection.away_name}
-                      </h3>
-                      <p className="mt-1 truncate text-[12px] text-ink-muted">
-                        {selection.service_label}
-                        <span className="mx-2 text-line-strong">•</span>
-                        {selection.outcome}
-                        <span className="mx-2 text-line-strong">•</span>
-                        <span title={coverage.label}>{coverage.badge}</span>
-                        <span className="mx-2 text-line-strong">•</span>
-                        <span className="tabular font-mono">
-                          {formatKickoff(selection.kickoff)}
-                        </span>
-                      </p>
-                    </div>
 
-                    <span className="tabular font-mono text-xl font-medium text-emerald-deep sm:text-right">
-                      {Math.round(selection.probability * 100)}%
-                    </span>
-                  </article>
-                );
-              })}
-            </div>
+                          <div className="min-w-0">
+                            <h4 className="text-[16px] font-medium leading-snug tracking-[-0.02em] text-ink">
+                              {selection.home_name}
+                              {score ? (
+                                <span className="tabular mx-2.5 font-mono text-ink">
+                                  {score}
+                                </span>
+                              ) : (
+                                <span className="mx-2 font-normal text-ink-faint">
+                                  v
+                                </span>
+                              )}
+                              {selection.away_name}
+                            </h4>
+                            <p className="mt-1 truncate text-[12px] text-ink-muted">
+                              {selection.outcome}
+                              <span className="mx-2 text-line-strong">•</span>
+                              <span title={coverage.label}>
+                                {coverage.badge}
+                              </span>
+                              <span className="mx-2 text-line-strong">•</span>
+                              <span className="tabular font-mono">
+                                {formatKickoff(selection.kickoff)}
+                              </span>
+                            </p>
+                          </div>
+
+                          <span className="tabular font-mono text-lg font-medium text-emerald-deep sm:text-right">
+                            {Math.round(selection.probability * 100)}%
+                          </span>
+                        </article>
+                      );
+                    })}
+                  </div>
+                </section>
+              );
+            })
           )}
         </div>
 

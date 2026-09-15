@@ -15,7 +15,7 @@ from app.bot.formatting import (
     SAFE_LIMIT,
     TELEGRAM_LIMIT,
     fit,
-    format_history_day,
+    format_history_service,
 )
 from app.bot.middleware import LengthMiddleware
 
@@ -68,50 +68,28 @@ class TestFit:
         assert trimmed.count("<b>") == trimmed.count("</b>")
 
 
-class TestHistoryDay:
-    """The screen that failed."""
+class TestHistoryService:
+    """The screen that failed.
+
+    Now split per service, which bounds it naturally — but a single busy
+    service can still publish more than a message will hold.
+    """
 
     def test_a_hundred_selections_still_fit(self) -> None:
         """The real failure: a day with a hundred published selections
         produced a message Telegram refused outright."""
-        view = SimpleNamespace(
-            day=NOW.date(),
-            selections=[_selection(i) for i in range(100)],
-            snapshot=SimpleNamespace(
-                fixtures_modelled=41, fixtures_available=51, services_qualified=14
-            ),
-            settled=100,
-            won=71,
-        )
-        rendered = format_history_day(view)
-
+        rendered = format_history_service(NOW.date(), [_selection(i) for i in range(100)])
         assert len(rendered) < TELEGRAM_LIMIT
 
     def test_remaining_count_is_stated(self) -> None:
         """A truncated list must say it is truncated, or a reader believes
-        they have seen the whole day."""
-        view = SimpleNamespace(
-            day=NOW.date(),
-            selections=[_selection(i) for i in range(40)],
-            snapshot=None,
-            settled=40,
-            won=28,
-        )
-        rendered = format_history_day(view, limit=12)
+        they have seen everything."""
+        rendered = format_history_service(NOW.date(), [_selection(i) for i in range(40)])
+        assert "26 more" in rendered
 
-        assert "28 more selection" in rendered
-
-    def test_short_day_shows_everything(self) -> None:
-        view = SimpleNamespace(
-            day=NOW.date(),
-            selections=[_selection(i) for i in range(3)],
-            snapshot=None,
-            settled=3,
-            won=2,
-        )
-        rendered = format_history_day(view)
-
-        assert "more selection" not in rendered
+    def test_short_list_shows_everything(self) -> None:
+        rendered = format_history_service(NOW.date(), [_selection(i) for i in range(3)])
+        assert "more" not in rendered.split("Published before")[0]
 
 
 class TestLengthMiddleware:

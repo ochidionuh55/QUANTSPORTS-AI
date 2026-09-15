@@ -32,6 +32,8 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Final
 
+from app.quant.poisson import score_matrix
+
 Scoreline = tuple[int, int]
 Grid = dict[Scoreline, Decimal]
 Predicate = Callable[[int, int], bool]
@@ -207,6 +209,70 @@ def probability_of(grid: Grid, market: str, outcome: str) -> Decimal | None:
                 Decimal(0),
             )
     return None
+
+
+# Share of a match's goals scored before half time.
+#
+# **Not yet measured from our own data, and therefore not published.** Only
+# 12.6% of the 113,029 matches on record carry half-time scores, and that
+# subset reports 63% of goals arriving before the break — the opposite of the
+# well-established pattern that second halves are higher scoring. A figure that
+# contradicts the literature is far more likely to mean the sample is
+# unrepresentative than that football is.
+#
+# The value below is the conventional one. The functions using it are correct
+# and tested, but no service publishes them until the underlying rate can be
+# measured from data we trust.
+FIRST_HALF_SHARE: Final[float] = 0.44
+
+
+def first_half_markets(lambda_home: float, lambda_away: float) -> dict[str, dict[str, Decimal]]:
+    """Return first-half markets from full-match scoring rates.
+
+    Built as its own distribution rather than derived from the full-time one,
+    because the question is different: a match that finishes 2-1 may have been
+    0-0 at the break, and no amount of arithmetic on the final score recovers
+    that.
+
+    Goals arrive at a lower rate before half time, so the rates are scaled by a
+    measured share rather than halved.
+    """
+    half_home = max(0.01, lambda_home * FIRST_HALF_SHARE)
+    half_away = max(0.01, lambda_away * FIRST_HALF_SHARE)
+    grid = score_matrix(half_home, half_away)
+
+    def total(predicate: Predicate) -> Decimal:
+        return sum(
+            (p for (home, away), p in grid.items() if predicate(home, away)),
+            Decimal(0),
+        )
+
+    return {
+        "First half": {
+            "Home": total(_home),
+            "Draw": total(_draw),
+            "Away": total(_away),
+            "Over 0.5": total(_over(0.5)),
+            "Under 0.5": total(_under(0.5)),
+            "Over 1.5": total(_over(1.5)),
+            "Under 1.5": total(_under(1.5)),
+        }
+    }
+
+
+def settles_first_half(outcome: str, home_goals: int, away_goals: int) -> bool | None:
+    """Whether a half-time scoreline wins a first-half outcome."""
+    total = home_goals + away_goals
+    checks: dict[str, bool] = {
+        "Home": home_goals > away_goals,
+        "Draw": home_goals == away_goals,
+        "Away": home_goals < away_goals,
+        "Over 0.5": total > 0.5,
+        "Under 0.5": total < 0.5,
+        "Over 1.5": total > 1.5,
+        "Under 1.5": total < 1.5,
+    }
+    return checks.get(outcome)
 
 
 def settles_won(market: str, outcome: str, home_goals: int, away_goals: int) -> bool | None:
