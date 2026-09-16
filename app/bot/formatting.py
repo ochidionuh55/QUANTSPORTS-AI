@@ -982,6 +982,80 @@ def format_track_record(records: list[object], source_note: str = "") -> str:
     return "\n".join(lines)
 
 
+def format_board_record(
+    board_label: str, records: list[object], source_note: str = ""
+) -> str:
+    """Render track record for one specific board (banker/sharp/pattern)."""
+    lines = [f"<b>📋 {board_label} — track record</b>", ""]
+    if source_note:
+        lines.append(source_note)
+        lines.append("")
+
+    any_settled = False
+    for record in records:
+        settled = getattr(record, "settled", 0)
+        if not settled:
+            lines.append(f"<b>{record.label}</b>: no settled selections yet")  # type: ignore[attr-defined]
+            continue
+
+        any_settled = True
+        rate = getattr(record, "strike_rate", None) or 0.0
+        expected = getattr(record, "expected_rate", None)
+        lines.append(
+            f"<b>{record.label}</b>: {record.won}/{settled} ({rate:.1%})"  # type: ignore[attr-defined]
+        )
+        if expected:
+            gap = rate - expected
+            lines.append(f"   forecasts implied {expected:.1%} — {gap:+.1%} against expectation")
+        pending = getattr(record, "pending", 0)
+        if pending:
+            lines.append(f"   {pending} still pending")
+
+    if any_settled:
+        last = records[-1]
+        by_market = getattr(last, "by_market", {}) or {}
+        if by_market:
+            lines.append("")
+            lines.append("<b>By market</b>")
+            for market, (won, played) in sorted(by_market.items(), key=lambda item: -item[1][1]):
+                lines.append(f"{market}: {won}/{played} ({won / played:.1%})")
+
+    lines.append("")
+    lines.append("Every selection is timestamped before kickoff and never edited.")
+    lines.append("")
+    lines.append(FOOTER)
+    return "\n".join(lines)
+
+
+def format_board_history(
+    board_label: str, selections: list[object], source_note: str = ""
+) -> str:
+    """Render history for one specific board, grouped by day."""
+    lines = [f"<b>🗓 {board_label} — recent results</b>", ""]
+    if source_note:
+        lines.append(source_note)
+        lines.append("")
+
+    if not selections:
+        lines.append("No history for this board yet.")
+        lines.append("")
+        lines.append(FOOTER)
+        return "\n".join(lines)
+
+    current_day = None
+    for selection in selections:
+        sel_date = getattr(selection, "selection_date", None)
+        if sel_date != current_day:
+            current_day = sel_date
+            if current_day is not None:
+                lines.append(f"<b>{current_day:%A %d %b}</b>")
+        lines.append(format_highlight(selection))
+        lines.append("")
+
+    lines.append(FOOTER)
+    return "\n".join(lines)
+
+
 def format_home(counts: dict[str, int], boards: dict[str, int]) -> str:
     """Render the home screen with live counts."""
     total = sum(counts.values())

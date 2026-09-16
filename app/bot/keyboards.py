@@ -64,7 +64,7 @@ def menu_features(features: FeatureFlags) -> list[MenuFeature]:
         MenuFeature("📚 History", "menu:history", phase=13, available=True),
         MenuFeature("📈 Track record", "menu:record", phase=13, available=True),
         MenuFeature("⚽ Today's analysis", "menu:today", phase=12, available=True),
-        MenuFeature("🔍 Explore", "menu:explore", phase=12, available=True),
+        MenuFeature("📊 Explore markets", "menu:explore", phase=12, available=True),
         MenuFeature("🏆 Competitions", "menu:competitions", phase=13, available=True),
         MenuFeature("🎯 Daily boards", "menu:highlights", phase=12, available=True),
         MenuFeature("📣 Community", "menu:community", phase=13, available=True),

@@ -53,6 +53,8 @@ from app.bot.formatting import (
     format_stored_detail,
     format_summary_line,
     format_team_profile,
+    format_board_history,
+    format_board_record,
     format_track_record,
     format_why,
     format_why_selection,
@@ -419,7 +421,7 @@ async def handle_highlights(
         return
 
     service = HighlightService(session)  # type: ignore[arg-type]
-    selections = await service.today()
+    selections = await service.today(today_kickoffs_only=True)
     counts = {track: 0 for track in TRACK_LABELS}
     for selection in selections:
         counts[selection.track] = counts.get(selection.track, 0) + 1
@@ -974,7 +976,12 @@ async def handle_service_record(callback: CallbackQuery, session: object) -> Non
 
 
 async def handle_board(callback: CallbackQuery, session: object) -> None:
-    """Show one of the three daily boards."""
+    """Show one of the three daily boards.
+
+    Only fixtures kicking off *today* are shown. A late evening scan may pick
+    up tomorrow's fixtures, but the person reading this on Tuesday wants
+    Tuesday — not a mixed bag that makes them wait 24 hours to see a result.
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
@@ -984,7 +991,7 @@ async def handle_board(callback: CallbackQuery, session: object) -> None:
         return
 
     service = HighlightService(session)  # type: ignore[arg-type]
-    selections = await service.today(track=track)
+    selections = await service.today(track=track, today_kickoffs_only=True)
 
     rows: list[list[InlineKeyboardButton]] = []
     for selection in selections:
@@ -994,6 +1001,16 @@ async def handle_board(callback: CallbackQuery, session: object) -> None:
                 InlineKeyboardButton(text="❓ Why", callback_data=f"why:{selection.id}"),
             ]
         )
+    rows.append(
+        [
+            InlineKeyboardButton(
+                text="📋 Track record", callback_data=f"hl:record:{track}"
+            ),
+            InlineKeyboardButton(
+                text="🗓 History", callback_data=f"hl:history:{track}"
+            ),
+        ]
+    )
     rows.append([InlineKeyboardButton(text="⬅️ Back to boards", callback_data="menu:highlights")])
     rows.append([InlineKeyboardButton(text="🏠 Home", callback_data="menu:main")])
 
@@ -1119,16 +1136,23 @@ async def handle_why(callback: CallbackQuery, session: object) -> None:
 
 
 async def handle_track_record(callback: CallbackQuery, session: object) -> None:
-    """Show the published track record with sample sizes."""
+    """Show the published track record — global or per-board.
+
+    ``hl:record`` → global (all boards combined).
+    ``hl:record:<track>`` → one board only (banker, sharp, pattern).
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
 
+    parts = (callback.data or "").split(":")
+    track = parts[2] if len(parts) > 2 and parts[2] in TRACK_LABELS else None
+
     service = HighlightService(session)  # type: ignore[arg-type]
     live = [
-        await service.track_record("Last 7 days", days=7),
-        await service.track_record("Last 30 days", days=30),
-        await service.track_record("All time", days=None),
+        await service.track_record("Last 7 days", days=7, track=track),
+        await service.track_record("Last 30 days", days=30, track=track),
+        await service.track_record("All time", days=None, track=track),
     ]
     settled = sum(record.settled for record in live)
 
@@ -1143,77 +1167,92 @@ async def handle_track_record(callback: CallbackQuery, session: object) -> None:
             "so it is evidence about the method, not about the live product."
         )
         records = [
-            await service.track_record("Last 30 days", days=30, source=RECONSTRUCTED),
-            await service.track_record("Last 90 days", days=90, source=RECONSTRUCTED),
-            await service.track_record("All time", days=None, source=RECONSTRUCTED),
+            await service.track_record(
+                "Last 30 days", days=30, source=RECONSTRUCTED, track=track
+            ),
+            await service.track_record(
+                "Last 90 days", days=90, source=RECONSTRUCTED, track=track
+            ),
+            await service.track_record("All time", days=None, source=RECONSTRUCTED, track=track),
         ]
 
+    back_target = f"board:{track}" if track else "menu:highlights"
+    back_label = f"⬅️ Back to {TRACK_LABELS[track]}" if track else "⬅️ Back to highlights"
+
+    if track:
+        text = format_board_record(TRACK_LABELS[track], list(records), note)
+    else:
+        text = format_track_record(list(records), note)
+
     await callback.message.edit_text(
-        format_track_record(list(records), note),
+        text,
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
-                [
-                    InlineKeyboardButton(
-                        text="⬅️ Back to highlights", callback_data="menu:highlights"
-                    )
-                ],
-                [InlineKeyboardButton(text="Back to menu", callback_data="menu:main")],
+                [InlineKeyboardButton(text=back_label, callback_data=back_target)],
+                [InlineKeyboardButton(text="🏠 Home", callback_data="menu:main")],
             ]
         ),
     )
 
 
 async def handle_highlight_history(callback: CallbackQuery, session: object) -> None:
-    """Show recent highlight selections and how they finished."""
+    """Show recent highlight results — global or per-board.
+
+    ``hl:history`` → all boards combined.
+    ``hl:history:<track>`` → one board only.
+    """
     await callback.answer()
     if not isinstance(callback.message, Message):
         return
 
+    parts = (callback.data or "").split(":")
+    track = parts[2] if len(parts) > 2 and parts[2] in TRACK_LABELS else None
+
     service = HighlightService(session)  # type: ignore[arg-type]
-    selections = await service.history(days=7)
+    selections = await service.history(days=7, track=track)
     source_note = ""
     if not selections:
-        selections = await service.history(days=14, source=RECONSTRUCTED)
+        selections = await service.history(days=14, source=RECONSTRUCTED, track=track)
         source_note = (
             "<i>Reconstructed from historical forecasts — these were never "
             "published live.</i>\n\n"
         )
 
+    back_target = f"board:{track}" if track else "menu:highlights"
+    back_label = f"⬅️ Back to {TRACK_LABELS[track]}" if track else "⬅️ Back to highlights"
+    record_target = f"hl:record:{track}" if track else "hl:record"
+
     if not selections:
         await callback.message.edit_text(
-            "No highlight history yet.",
+            f"No history for {TRACK_LABELS[track]} yet." if track else "No highlight history yet.",
             reply_markup=InlineKeyboardMarkup(
                 inline_keyboard=[
-                    [
-                        InlineKeyboardButton(
-                            text="⬅️ Back to highlights",
-                            callback_data="menu:highlights",
-                        )
-                    ]
+                    [InlineKeyboardButton(text=back_label, callback_data=back_target)]
                 ]
             ),
         )
         return
 
-    lines = ["<b>🗓 Recent highlights</b>", "", source_note]
-    current_day = None
-    for selection in selections[:20]:
-        if selection.selection_date != current_day:
-            current_day = selection.selection_date
-            lines.append(f"<b>{current_day:%A %d %b}</b>")
-        lines.append(format_highlight(selection))
-        lines.append("")
+    if track:
+        text = format_board_history(TRACK_LABELS[track], list(selections[:20]), source_note)
+    else:
+        lines = ["<b>🗓 Recent highlights</b>", "", source_note]
+        current_day = None
+        for selection in selections[:20]:
+            if selection.selection_date != current_day:
+                current_day = selection.selection_date
+                lines.append(f"<b>{current_day:%A %d %b}</b>")
+            lines.append(format_highlight(selection))
+            lines.append("")
+        text = "\n".join(lines)
 
     await callback.message.edit_text(
-        "\n".join(lines),
+        text,
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
-                [InlineKeyboardButton(text="📋 Track record", callback_data="hl:record")],
-                [
-                    InlineKeyboardButton(
-                        text="⬅️ Back to highlights", callback_data="menu:highlights"
-                    )
-                ],
+                [InlineKeyboardButton(text="📋 Track record", callback_data=record_target)],
+                [InlineKeyboardButton(text=back_label, callback_data=back_target)],
+                [InlineKeyboardButton(text="🏠 Home", callback_data="menu:main")],
             ]
         ),
     )
@@ -1366,9 +1405,9 @@ async def handle_explore(callback: CallbackQuery) -> None:
         return
 
     await callback.message.edit_text(
-        "<b>Explore</b>\n\n"
-        "QUANTSPORT holds 113,000 matches across 38 competitions. Ask it a "
-        "question rather than reading one list.\n\n"
+        "<b>📊 Explore markets</b>\n\n"
+        "QUANTSPORT holds 113,000 matches across 38 competitions. Pick a "
+        "market to see every fixture ranked by it — or search in plain language.\n\n"
         "<b>Markets</b> — every fixture ranked by the market you care about\n"
         "<b>Teams</b> — a club's full record, home and away splits, form\n"
         "<b>Competitions</b> — how a league actually behaves\n"
@@ -1935,8 +1974,8 @@ def build_router() -> Router:
     router.callback_query.register(handle_selection_detail, F.data.startswith("sel:"))
     router.callback_query.register(handle_follow, F.data.startswith("follow:"))
     router.callback_query.register(handle_my_quantsport, F.data == "menu:mine")
-    router.callback_query.register(handle_track_record, F.data == "hl:record")
-    router.callback_query.register(handle_highlight_history, F.data == "hl:history")
+    router.callback_query.register(handle_track_record, F.data.startswith("hl:record"))
+    router.callback_query.register(handle_highlight_history, F.data.startswith("hl:history"))
     router.callback_query.register(
         handle_markets_menu, F.data.in_({"markets:menu", "menu:markets"})
     )

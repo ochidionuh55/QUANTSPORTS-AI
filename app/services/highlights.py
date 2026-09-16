@@ -502,9 +502,18 @@ class HighlightService:
         return result.first() is not None
 
     async def today(
-        self, now: datetime | None = None, track: str | None = None
+        self,
+        now: datetime | None = None,
+        track: str | None = None,
+        today_kickoffs_only: bool = False,
     ) -> list[HighlightSelection]:
-        """Return today's published selections, optionally for one board."""
+        """Return today's published selections, optionally for one board.
+
+        When *today_kickoffs_only* is true, only fixtures whose kickoff falls
+        on today's date are returned. This prevents a Tuesday board from
+        showing Wednesday fixtures that were scooped up by a late scan — the
+        user on Tuesday cares about Tuesday.
+        """
         moment = now or datetime.now(UTC)
         statement = select(HighlightSelection).where(
             HighlightSelection.source == LIVE,
@@ -512,24 +521,43 @@ class HighlightService:
         )
         if track is not None:
             statement = statement.where(HighlightSelection.track == track)
+        if today_kickoffs_only:
+            day_start = datetime.combine(moment.date(), datetime.min.time()).replace(tzinfo=UTC)
+            day_end = day_start + timedelta(days=1)
+            statement = statement.where(
+                HighlightSelection.kickoff >= day_start,
+                HighlightSelection.kickoff < day_end,
+            )
         result = await self._session.execute(
             statement.order_by(HighlightSelection.track, HighlightSelection.rank)
         )
         return list(result.scalars().all())
 
     async def history(
-        self, days: int = 7, source: str = LIVE, now: datetime | None = None
+        self,
+        days: int = 7,
+        source: str = LIVE,
+        now: datetime | None = None,
+        track: str | None = None,
     ) -> list[HighlightSelection]:
-        """Return recent selections, newest first."""
+        """Return recent selections, newest first.
+
+        When *track* is given, only that board's selections are returned — so
+        Banker, Sharp and Pattern can each show their own history instead of a
+        combined dump.
+        """
         moment = now or datetime.now(UTC)
         cutoff = (moment - timedelta(days=days)).date()
+        statement = select(HighlightSelection).where(
+            HighlightSelection.source == source,
+            HighlightSelection.selection_date >= cutoff,
+        )
+        if track is not None:
+            statement = statement.where(HighlightSelection.track == track)
         result = await self._session.execute(
-            select(HighlightSelection)
-            .where(
-                HighlightSelection.source == source,
-                HighlightSelection.selection_date >= cutoff,
+            statement.order_by(
+                HighlightSelection.selection_date.desc(), HighlightSelection.rank
             )
-            .order_by(HighlightSelection.selection_date.desc(), HighlightSelection.rank)
         )
         return list(result.scalars().all())
 
@@ -539,14 +567,22 @@ class HighlightService:
         days: int | None = None,
         source: str = LIVE,
         now: datetime | None = None,
+        track: str | None = None,
     ) -> TrackRecord:
-        """Summarise settled highlight performance."""
+        """Summarise settled highlight performance.
+
+        When *track* is given, only that board's selections count — so each
+        board's record stands on its own evidence rather than borrowing from
+        the others.
+        """
         moment = now or datetime.now(UTC)
         statement = select(HighlightSelection).where(HighlightSelection.source == source)
         if days is not None:
             statement = statement.where(
                 HighlightSelection.selection_date >= (moment - timedelta(days=days)).date()
             )
+        if track is not None:
+            statement = statement.where(HighlightSelection.track == track)
 
         rows = list((await self._session.execute(statement)).scalars().all())
         record = TrackRecord(label=label, source=source, total=len(rows))
