@@ -15,8 +15,10 @@ from datetime import UTC, datetime, timedelta
 from types import SimpleNamespace
 
 from app.services.divergence import (
+    MAX_MARKET_PROBABILITY,
     MIN_DIVERGENCE,
     MIN_MODEL_PROBABILITY,
+    MIN_RATIO,
     MIN_SAMPLE,
     find_divergences,
 )
@@ -185,3 +187,121 @@ class TestHonestLanguage:
             "free money",
         ):
             assert phrase not in lowered
+
+
+class TestOutsiderConstraint:
+    """The board must not fill up with favourites.
+
+    The failure this guards against is the one that prompted the rework: a
+    side priced at 1.45 appearing on a board whose entire promise is that it
+    shows outcomes the market rates as unlikely. A nine-point gap on a
+    favourite is a rounding difference, not an upset, and publishing it under
+    this heading misleads by framing.
+    """
+
+    def test_short_priced_favourite_is_excluded(self) -> None:
+        """A market favourite never appears, however much we agree with it."""
+        # Market makes home ~69% (about 1.45); we make it 78%. A nine-point
+        # gap, but on the shortest price on the card.
+        record = _record(
+            model=("0.78", "0.13", "0.09"),
+            market=("0.69", "0.18", "0.13"),
+        )
+        assert find_divergences([record], now=NOW) == []
+
+    def test_genuine_outsider_is_reported(self) -> None:
+        """An outcome the market prices against, which we rate far higher."""
+        record = _record(
+            model=("0.40", "0.28", "0.32"),
+            market=("0.24", "0.30", "0.46"),
+        )
+        found = find_divergences([record], now=NOW)
+        assert found
+        assert found[0].outcome == "Home"
+        assert found[0].market_probability < MAX_MARKET_PROBABILITY
+
+    def test_nothing_above_the_market_ceiling_survives(self) -> None:
+        """Whatever is returned, the market rated it an outsider."""
+        records = [
+            _record(fixture_id=str(index), model=model, market=market)
+            for index, (model, market) in enumerate(
+                [
+                    (("0.78", "0.13", "0.09"), ("0.69", "0.18", "0.13")),
+                    (("0.40", "0.28", "0.32"), ("0.24", "0.30", "0.46")),
+                    (("0.60", "0.22", "0.18"), ("0.50", "0.26", "0.24")),
+                    (("0.36", "0.30", "0.34"), ("0.20", "0.32", "0.48")),
+                ]
+            )
+        ]
+        for found in find_divergences(records, now=NOW):
+            assert found.market_probability <= MAX_MARKET_PROBABILITY
+
+    def test_relative_margin_is_required(self) -> None:
+        """A gap that is large in points but small in proportion is dropped."""
+        # Market 40%, model 48.5%: 8.5 points, but only 1.21x — below the bar.
+        record = _record(
+            model=("0.485", "0.265", "0.25"),
+            market=("0.40", "0.30", "0.30"),
+        )
+        found = find_divergences([record], now=NOW)
+        assert all(item.ratio >= MIN_RATIO for item in found)
+
+    def test_ceiling_can_be_relaxed_by_the_caller(self) -> None:
+        """The bound is configuration, not a hardcoded rule.
+
+        Chosen so the ceiling is the only thing blocking it: the gap and the
+        relative margin both clear their bars, so lifting the ceiling alone
+        must let it through.
+        """
+        record = _record(
+            model=("0.75", "0.14", "0.11"),
+            market=("0.55", "0.23", "0.22"),
+        )
+        assert find_divergences([record], now=NOW) == []
+        assert find_divergences([record], now=NOW, max_market_probability=0.95)
+
+    def test_ratio_is_reported_for_every_entry(self) -> None:
+        """The screen shows it, so it must be present and sane."""
+        record = _record(
+            model=("0.40", "0.28", "0.32"),
+            market=("0.24", "0.30", "0.46"),
+        )
+        for item in find_divergences([record], now=NOW):
+            assert item.ratio > 1.0
+
+
+class TestOutsiderLanguage:
+    """The rename must not smuggle in a value claim."""
+
+    def test_board_does_not_promise_profit(self) -> None:
+        """Checked as promotional phrases, not bare words.
+
+        The description contains "not value calls", and that denial is the
+        point — it is "value bet" that would be the lie.
+        """
+        from app.services.divergence import BOARD_DESCRIPTION, BOARD_LABEL
+
+        lowered = f"{BOARD_LABEL} {BOARD_DESCRIPTION}".lower()
+        for phrase in (
+            "value bet",
+            "underpriced",
+            "guaranteed",
+            "profit",
+            "free money",
+            "beat the book",
+        ):
+            assert phrase not in lowered
+
+    def test_board_description_admits_the_price_may_be_right(self) -> None:
+        """The board's own copy must not imply we know better."""
+        from app.services.divergence import BOARD_DESCRIPTION
+
+        assert "may well be right" in BOARD_DESCRIPTION.lower()
+
+    def test_notice_warns_that_outsiders_usually_lose(self) -> None:
+        """The honest half of a longshot board, stated on the screen."""
+        from app.bot.formatting import DIVERGENCE_NOTICE
+
+        lowered = DIVERGENCE_NOTICE.lower()
+        assert "lose more often" in lowered
+        assert "variance" in lowered

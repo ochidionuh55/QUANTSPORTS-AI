@@ -106,6 +106,20 @@ SERVICES: Final[tuple[ServiceDefinition, ...]] = (
         "Home or clean sheet",
         0.75,
     ),
+    ServiceDefinition(
+        "away_or_cs",
+        "🔥 Best Away or Clean Sheet",
+        "Result or clean sheet",
+        "Away or clean sheet",
+        0.70,
+    ),
+    ServiceDefinition(
+        "draw_or_cs",
+        "🔥 Best Draw or Clean Sheet",
+        "Result or clean sheet",
+        "Draw or clean sheet",
+        0.62,
+    ),
 )
 
 SERVICES_BY_KEY: Final[dict[str, ServiceDefinition]] = {s.key: s for s in SERVICES}

@@ -494,7 +494,7 @@ async def _gate(callback: CallbackQuery, user: User, feature: Feature) -> bool:
             InlineKeyboardButton(
                 # En dash is deliberate: the brand's own wording, and a hyphen
                 # would read as a compound adjective rather than a pairing.
-                text="⚡ Model–market divergence",  # noqa: RUF001
+                text="🎲 Outsider Board",
                 callback_data="menu:divergence",
             )
         ]
@@ -645,7 +645,7 @@ async def handle_best_today(callback: CallbackQuery, user: User, session: object
             InlineKeyboardButton(
                 # En dash is deliberate: the brand's own wording, and a hyphen
                 # would read as a compound adjective rather than a pairing.
-                text="⚡ Model–market divergence",  # noqa: RUF001
+                text="🎲 Outsider Board",
                 callback_data="menu:divergence",
             )
         ]

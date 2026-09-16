@@ -2116,31 +2116,32 @@ def format_account(access: object, description: str) -> str:
 
 DIVERGENCE_NOTICE = (
     "<b>What this is — and is not</b>\n"
-    "These are fixtures where our mathematics reaches a different conclusion "
-    "from the bookmaker. That is all it is.\n\n"
+    "Outcomes the bookmaker prices as unlikely that our mathematics rates "
+    "materially higher. That is all it is.\n\n"
     "It is <b>not</b> a value signal. We have tested whether our models beat "
     "closing prices — across nine seasons of football and eleven of basketball "
     "— and they do not. Where we have disagreed with the price before, the "
     "price was right.\n\n"
-    "We show these because a real disagreement is worth seeing, and because "
-    "the record will tell us over time whether they carry information. Today "
-    "they are a curiosity with evidence attached."
+    "Long odds are long for a reason, and these will lose more often than they "
+    "win — that is what the price means. A good run of them is the variance "
+    "those odds describe, not proof the board works. The published record, "
+    "over hundreds of selections, is what will decide that."
 )
 
 
 def format_divergences(items: list[object]) -> str:
-    """Render model-market disagreements.
+    """Render the Outsider Board.
 
-    The market's own number sits beside ours on every line. A divergence shown
-    without the price it diverges from invites a reader to assume we think we
-    are right.
+    The market's own number sits beside ours on every line. A disagreement
+    shown without the price it disagrees with invites a reader to assume we
+    think we are right.
     """
-    lines = ["<b>⚡ MODEL–MARKET DIVERGENCE</b>", ""]  # noqa: RUF001
+    lines = ["<b>\U0001F3B2 OUTSIDER BOARD</b>", ""]
 
     if not items:
         lines.append(
-            "Our models and the market agree on today's card, within the "
-            "threshold we consider meaningful.\n\n"
+            "No outsider on today's card is rated far enough above its price "
+            "to report.\n\n"
             "That is the usual state of things. Bookmakers are good at this, "
             "and a day with no material disagreement is not a day the product "
             "failed."
@@ -2150,7 +2151,9 @@ def format_divergences(items: list[object]) -> str:
         return "\n".join(lines)
 
     lines.append(
-        f"<i>{len(items)} fixture(s) where we differ from the price by eight " "points or more.</i>"
+        f"<i>{len(items)} outcome(s) the market prices against that our "
+        "mathematics rates materially higher. Nothing the market already makes "
+        "likely appears here.</i>"
     )
     lines.append("")
 
@@ -2167,8 +2170,9 @@ def format_divergences(items: list[object]) -> str:
             f"({item.implied_odds_model:.2f}), "  # type: ignore[attr-defined]
             f"market says {item.market_probability * 100:.0f}% "  # type: ignore[attr-defined]
             f"({item.implied_odds_market:.2f})\n"  # type: ignore[attr-defined]
-            f"<i>{item.gap * 100:+.0f} points · {item.sample} matches behind "  # type: ignore[attr-defined]
-            "the thinner side</i>"
+            f"<i>{item.gap * 100:+.0f} points · "  # type: ignore[attr-defined]
+            f"{getattr(item, 'ratio', 0.0):.1f}x the market's estimate · "
+            f"{item.sample} matches behind the thinner side</i>"  # type: ignore[attr-defined]
         )
         lines.append("")
 

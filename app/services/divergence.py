@@ -1,20 +1,29 @@
-"""Where our model most disagrees with the market.
+"""The Outsider Board: where our model rates an underdog far above its price.
 
-**This is a disagreement report, not a value signal.** The distinction is the
-whole reason this module can exist at all.
+**What changed and why.** This started as a general model-market disagreement
+report, and it surfaced the wrong thing. A nine-point gap on a side already
+priced at 1.45 is a disagreement about a favourite: the market says 69%, we say
+78%, and the reader learns nothing they could not have guessed from the price.
+Worse, it filled a feature promising unusual conclusions with the most ordinary
+picks on the card.
 
-A value signal says: the market is wrong here, so this price is worth taking.
-Making that claim requires having shown the models beat closing prices. We
-tested exactly that — across nine seasons and 14,097 football forecasts, then
-again with Dixon-Coles, then again on 13,903 NBA games — and measured skill at
-+0.000%. Where our models disagreed with the price, the price was right.
+The disagreement that carries information is the one where the market makes
+something an outsider and our mathematics does not. That is now the only kind
+this module reports: the market must price the outcome *against*, and we must
+make it materially likelier than that.
 
-So this reports the disagreement and says nothing about who is correct. It is
-genuinely interesting: a fixture where our mathematics reaches a materially
-different conclusion from the market is worth a reader's attention, and the
-published record will show over time whether those disagreements carry
-information. Today they are a curiosity with evidence attached, and the product
-says so plainly.
+**This is still not a value signal, and the distinction still matters.**
+A value signal says the price is wrong and therefore worth taking. Making that
+claim requires having shown the models beat closing prices. We tested exactly
+that - across nine seasons and 14,097 football forecasts, again with
+Dixon-Coles, again on 13,903 NBA games - and measured skill at +0.000%. Where
+our models disagreed with the price, the price was right.
+
+So this reports a disagreement about an underdog and says nothing about who is
+correct. Filtering to outsiders makes the report more *interesting*; it does
+not make it more *right*, and a run of winners at long odds is the variance
+those odds describe rather than evidence the filter works. The published record
+is what will decide that, over a sample far larger than a good weekend.
 
 **Presented with the market's own number beside ours.** A divergence shown
 without the price it diverges from invites the reader to assume we think we are
@@ -31,6 +40,39 @@ from app.core.logging import get_logger
 from app.database.models import StoredAnalysis
 
 logger = get_logger(__name__)
+
+BOARD_LABEL: Final[str] = "🎲 Outsider Board"
+"""What this is called in the product.
+
+"Divergence" described the mechanism, not the reader's question. "Outsider"
+names what is actually on the board - sides the market prices against - and,
+unlike "value" or "underpriced", claims nothing about whether the price is
+wrong, which we have not shown and cannot say.
+"""
+
+BOARD_DESCRIPTION: Final[str] = (
+    "Outcomes the market prices as unlikely that our mathematics rates far "
+    "higher. These are disagreements, not value calls - the price may well be "
+    "right, and long odds are long for a reason."
+)
+
+MAX_MARKET_PROBABILITY: Final[float] = 0.45
+"""Ceiling on the market's estimate - the constraint that defines this board.
+
+Roughly 2.20 in decimal odds. Above this the market already makes the outcome
+likely or near-even, and our agreeing more strongly is not an upset, it is a
+rounding difference on a favourite. This single bound is what stops a 1.45
+home side appearing on a board whose entire promise is that it will not show
+you those.
+"""
+
+MIN_RATIO: Final[float] = 1.25
+"""How many times likelier we must make it than the market does.
+
+A gap of eight points means something different at 15% than at 40%. Requiring
+a relative margin as well as an absolute one keeps the board's entries
+comparably surprising across the price range.
+"""
 
 MIN_DIVERGENCE: Final[float] = 0.08
 """How far apart the two must be before it is worth reporting.
@@ -80,6 +122,13 @@ class Divergence:
     def gap(self) -> float:
         """How much likelier we think it is than the market does."""
         return self.model_probability - self.market_probability
+
+    @property
+    def ratio(self) -> float:
+        """How many times likelier we make it than the market does."""
+        if self.market_probability <= 0:
+            return 0.0
+        return self.model_probability / self.market_probability
 
     @property
     def implied_odds_model(self) -> float:
@@ -146,12 +195,21 @@ def find_divergences(
     records: list[StoredAnalysis],
     limit: int = 10,
     now: datetime | None = None,
+    max_market_probability: float = MAX_MARKET_PROBABILITY,
 ) -> list[Divergence]:
-    """Return the fixtures where model and market disagree most.
+    """Return the outsiders our model rates furthest above their price.
 
     Only fixtures carrying both a model-only estimate and a real market price
     qualify. Without both there is nothing to compare, and inferring one from
     the other would produce a disagreement with itself.
+
+    Args:
+        records: Stored analyses to consider.
+        limit: How many to return, one per fixture.
+        now: Injected clock; fixtures already kicked off are excluded.
+        max_market_probability: The ceiling that makes this an outsider board.
+            Raise it to include shorter prices; the default deliberately
+            excludes anything the market already makes likely.
     """
     moment = now or datetime.now(UTC)
     found: list[Divergence] = []
@@ -183,7 +241,15 @@ def find_divergences(
 
             if model_probability < MIN_MODEL_PROBABILITY:
                 continue
+            # The defining constraint: the market must price this against.
+            # A favourite we like slightly more is not an outsider, and a
+            # board promising unusual conclusions cannot be filled with the
+            # shortest prices on the card.
+            if market_probability > max_market_probability:
+                continue
             if model_probability - market_probability < MIN_DIVERGENCE:
+                continue
+            if market_probability <= 0 or model_probability / market_probability < MIN_RATIO:
                 continue
 
             found.append(
