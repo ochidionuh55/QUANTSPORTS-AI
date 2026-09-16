@@ -1508,6 +1508,162 @@ def format_history_summary(day: object, selections: list[object]) -> str:
     return "\n".join(lines)
 
 
+def format_market_history_days() -> str:
+    """Render the intro for the market history date list."""
+    return (
+        "<b>📚 MARKET HISTORY</b>\n\n"
+        "How each market has actually performed. Every probability below was "
+        "published before its match kicked off; only the result was added "
+        "afterwards.\n\n"
+        "Open any date to see which markets qualified that day and how they "
+        "finished."
+    )
+
+
+def format_market_day(day: object, tallies: list[object]) -> str:
+    """Render one date as a per-market scoreboard.
+
+    Mirrors the Best of Today day view: a headline for the date, then each
+    market as its own openable page. One mixed list would bury the market that
+    went 6/6 among the ones that did not.
+    """
+    lines = [f"<b>📅 Markets — {day:%A %d %B %Y}</b>", ""]
+
+    if not tallies:
+        lines.append(
+            "Nothing qualified on this date. Either no fixture cleared the "
+            "threshold, or the day predates this record."
+        )
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    won = sum(getattr(t, "won", 0) for t in tallies)
+    played = sum(getattr(t, "played", 0) for t in tallies)
+    pending = sum(getattr(t, "pending", 0) for t in tallies)
+
+    if played:
+        lines.append(f"<b>{won}/{played} qualifying outcomes hit</b> — {won / played:.0%}")
+    if pending:
+        lines.append(f"<i>{pending} still awaiting results.</i>")
+    lines.append("")
+
+    lines.append(
+        "Tap a market below to see only its fixtures for this date, with "
+        "scorelines and results."
+    )
+    lines.append("")
+    lines.append(
+        "<i>A market listing every fixture above 55% is not a tip sheet — it "
+        "is the card filtered. High strike rates here reflect how often the "
+        "outcome happens, not an edge over the price.</i>"
+    )
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_market_day_detail(day: object, label: str, outcomes: list[object]) -> str:
+    """Render one market's fixtures for one day, with scorelines."""
+    lines = [f"<b>{label}</b>", f"<i>{day:%A %d %B %Y}</i>", ""]
+
+    if not outcomes:
+        lines.append("Nothing qualified for this market on that date.")
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    won = sum(1 for o in outcomes if getattr(o, "won", None) is True)
+    lost = sum(1 for o in outcomes if getattr(o, "won", None) is False)
+    settled = won + lost
+
+    if settled:
+        lines.append(f"<b>{won}/{settled}</b> — {won / settled:.0%}")
+    else:
+        lines.append(f"<b>{len(outcomes)} fixture(s)</b>, none settled yet")
+    lines.append("")
+
+    any_reconstructed = False
+    for outcome in outcomes[:14]:
+        hit = getattr(outcome, "won", None)
+        mark = "✅" if hit is True else ("❌" if hit is False else "⏳")
+        home = getattr(outcome, "home_name", "")
+        away = getattr(outcome, "away_name", "")
+        competition = getattr(outcome, "competition", None)
+        kickoff = getattr(outcome, "kickoff", None)
+        probability = getattr(outcome, "probability", 0.0)
+        scoreline = getattr(outcome, "scoreline", "")
+
+        if getattr(outcome, "reconstructed", False):
+            any_reconstructed = True
+
+        lines.append(f"{mark} <b>{home} v {away}</b>")
+        meta = f"{kickoff:%a %d %b, %H:%M}" if kickoff else ""
+        if competition:
+            meta = f"{meta} · {competition}" if meta else str(competition)
+        if meta:
+            lines.append(meta)
+        lines.append(f"{getattr(outcome, 'outcome', '')} — {probability:.0%}")
+        if hit is not None:
+            lines.append(f"Final: {scoreline} — {'HIT' if hit else 'MISSED'}")
+        lines.append("")
+
+    remaining = len(outcomes) - 14
+    if remaining > 0:
+        lines.append(f"<i>{remaining} more not shown.</i>")
+        lines.append("")
+
+    if any_reconstructed:
+        lines.append(
+            "<i>Probabilities for this market were rebuilt from the stored "
+            "expected-goals pair rather than read from a published figure. "
+            "Same model, same inputs — but marked so it is not mistaken for a "
+            "published number.</i>"
+        )
+        lines.append("")
+
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
+def format_market_track_record(tallies: list[object], window: str = "Last 30 days") -> str:
+    """Render every market's record over one window."""
+    lines = [
+        "<b>📈 MARKET TRACK RECORD</b>",
+        f"<i>{window}, from forecasts published before kickoff.</i>",
+        "",
+    ]
+
+    resolved = [t for t in tallies if getattr(t, "played", 0)]
+    if not resolved:
+        lines.append("No settled fixtures in this window yet.")
+        lines.append("")
+        lines.append(EVIDENCE_NOTE)
+        return "\n".join(lines)
+
+    for tally in resolved:
+        label = getattr(tally, "label", "")
+        won = getattr(tally, "won", 0)
+        played = getattr(tally, "played", 0)
+        rate = getattr(tally, "strike_rate", None) or 0.0
+        expected = getattr(tally, "expected_rate", None)
+
+        lines.append(f"<b>{label}</b>: {won}/{played} ({rate:.0%})")
+        if expected:
+            gap = rate - expected
+            lines.append(f"   forecast implied {expected:.0%} — {gap:+.0%}")
+
+    lines.append("")
+    lines.append(
+        "<i>These are filters over the whole card, not selections. A market "
+        "hitting near the rate its forecasts implied is the model being "
+        "calibrated — it is not evidence of an edge over the price.</i>"
+    )
+    lines.append("")
+    lines.append(EVIDENCE_NOTE)
+    return "\n".join(lines)
+
+
 def format_history_service(day: object, selections: list[object]) -> str:
     """Render one service's selections for one day."""
     label = getattr(selections[0], "service_label", "Service") if selections else "Service"

@@ -42,7 +42,11 @@ from app.bot.formatting import (
     format_history_summary,
     format_home,
     format_league_profile,
+    format_market_day,
+    format_market_day_detail,
+    format_market_history_days,
     format_market_menu,
+    format_market_track_record,
     format_my_quantsport,
     format_paywall,
     format_performance,
@@ -99,6 +103,7 @@ from app.services.highlights import (
     HighlightService,
     TrackRecord,
 )
+from app.services.market_history import MarketHistoryService
 from app.services.nl_query import parse as nl_parse
 from app.services.nl_query import suggestions as nl_suggestions
 from app.services.profiles import ProfileService
@@ -1337,13 +1342,23 @@ async def handle_find(message: Message, user: User, session: object) -> None:
 
 
 def _paged_fixture_buttons(
-    records: Sequence[object], page: int, prefix: str
+    records: Sequence[object],
+    page: int,
+    prefix: str,
+    extra_rows: Sequence[list[InlineKeyboardButton]] = (),
 ) -> InlineKeyboardMarkup:
     """Build one page of fixture buttons with arrows.
 
     Every fixture must be reachable. Listing a subset and telling a user to
     "narrow the search" leaves them told there are twenty-one and shown eight,
     which reads as the product being broken rather than concise.
+
+    Args:
+        records: Fixtures to page through.
+        page: Zero-based page index.
+        prefix: Callback prefix for the paging arrows.
+        extra_rows: Rows placed after the arrows and before the back button,
+            for screen-specific actions such as a market's own history.
     """
     total = len(records)
     pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
@@ -1374,6 +1389,7 @@ def _paged_fixture_buttons(
             )
         rows.append(navigation)
 
+    rows.extend([list(row) for row in extra_rows])
     rows.append([InlineKeyboardButton(text="Back to markets", callback_data="markets:menu")])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
@@ -1456,11 +1472,162 @@ async def handle_markets_menu(callback: CallbackQuery, user: User, session: obje
             pair = []
     if pair:
         rows.append(pair)
+    rows.append(
+        [
+            InlineKeyboardButton(text="📚 History", callback_data="mh:days"),
+            InlineKeyboardButton(text="📈 Track record", callback_data="mh:record"),
+        ]
+    )
     rows.append([InlineKeyboardButton(text="Back", callback_data="menu:explore")])
 
     await callback.message.edit_text(
         format_market_menu(counts),
         reply_markup=InlineKeyboardMarkup(inline_keyboard=rows),
+    )
+
+
+async def handle_market_history_days(callback: CallbackQuery, session: object) -> None:
+    """List the dates that have settled market history."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    days = await MarketHistoryService(session).available_days(limit=30)  # type: ignore[arg-type]
+    if not days:
+        await callback.message.edit_text(
+            "<b>📚 MARKET HISTORY</b>\n\nNothing has settled yet. Results "
+            "appear here once matches finish and are scored.",
+            reply_markup=_back([InlineKeyboardButton(text="Back", callback_data="markets:menu")]),
+        )
+        return
+
+    rows = [
+        [
+            InlineKeyboardButton(
+                text=f"{day:%a %d %b %Y}", callback_data=f"mh:day:{day.isoformat()}"
+            )
+        ]
+        for day in days[:14]
+    ]
+    rows.append([InlineKeyboardButton(text="📈 Track record", callback_data="mh:record")])
+    rows.append([InlineKeyboardButton(text="⬅️ Back to markets", callback_data="markets:menu")])
+
+    await callback.message.edit_text(
+        format_market_history_days(),
+        reply_markup=_back(*rows),
+    )
+
+
+async def handle_market_history_day(callback: CallbackQuery, session: object) -> None:
+    """Show one date as a set of markets to open.
+
+    The same shape as the Best of Today day view: each market is its own page,
+    labelled with how it actually did, so a reader sees a clean record per
+    market rather than an average of everything.
+    """
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    raw = (callback.data or "").split(":", 2)[-1]
+    try:
+        day = date.fromisoformat(raw)
+    except ValueError:
+        return
+
+    service = MarketHistoryService(session)  # type: ignore[arg-type]
+    tallies = await service.tallies_for_day(day)
+    days = await service.available_days(limit=60)
+
+    rows: list[list[InlineKeyboardButton]] = []
+    for tally in tallies:
+        score = f"{tally.won}/{tally.played}" if tally.played else f"{tally.pending} pending"
+        rows.append(
+            [
+                InlineKeyboardButton(
+                    text=f"{tally.label} — {score}"[:60],
+                    callback_data=f"mhd:{day.isoformat()}:{tally.key}",
+                )
+            ]
+        )
+
+    ordered_days = sorted(days)
+    if day in ordered_days:
+        index = ordered_days.index(day)
+        navigation: list[InlineKeyboardButton] = []
+        if index > 0:
+            navigation.append(
+                InlineKeyboardButton(
+                    text="◀️ Previous",
+                    callback_data=f"mh:day:{ordered_days[index - 1].isoformat()}",
+                )
+            )
+        if index < len(ordered_days) - 1:
+            navigation.append(
+                InlineKeyboardButton(
+                    text="Next ▶️",
+                    callback_data=f"mh:day:{ordered_days[index + 1].isoformat()}",
+                )
+            )
+        if navigation:
+            rows.append(navigation)
+
+    rows.append([InlineKeyboardButton(text="⬅️ All dates", callback_data="mh:days")])
+
+    await callback.message.edit_text(
+        format_market_day(day, list(tallies)), reply_markup=_back(*rows)
+    )
+
+
+async def handle_market_history_detail(callback: CallbackQuery, session: object) -> None:
+    """Show one market's fixtures for one day, with scorelines."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    parts = (callback.data or "").split(":")
+    if len(parts) < 3:
+        return
+    try:
+        day = date.fromisoformat(parts[1])
+    except ValueError:
+        return
+    key = parts[2]
+
+    definition = MARKETS_BY_KEY.get(key)
+    if definition is None:
+        return
+
+    outcomes = await MarketHistoryService(session).for_day_market(day, key)  # type: ignore[arg-type]
+
+    await callback.message.edit_text(
+        format_market_day_detail(day, definition.label, list(outcomes)),
+        reply_markup=_back(
+            [
+                InlineKeyboardButton(
+                    text="⬅️ Back to that day",
+                    callback_data=f"mh:day:{day.isoformat()}",
+                )
+            ],
+            [InlineKeyboardButton(text="📚 All dates", callback_data="mh:days")],
+        ),
+    )
+
+
+async def handle_market_track_record(callback: CallbackQuery, session: object) -> None:
+    """Show every market's record over the last 30 days."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    tallies = await MarketHistoryService(session).all_track_records(days=30)  # type: ignore[arg-type]
+
+    await callback.message.edit_text(
+        format_market_track_record(list(tallies), window="Last 30 days"),
+        reply_markup=_back(
+            [InlineKeyboardButton(text="📚 History by date", callback_data="mh:days")],
+            [InlineKeyboardButton(text="⬅️ Back to markets", callback_data="markets:menu")],
+        ),
     )
 
 
@@ -1499,7 +1666,76 @@ async def handle_market_browse(callback: CallbackQuery, user: User, session: obj
 
     await callback.message.edit_text(
         format_search_results(f"{definition.label}, strongest first", records, key, page),
-        reply_markup=_paged_fixture_buttons(records, page, f"mkt:{key}"),
+        reply_markup=_paged_fixture_buttons(
+            records,
+            page,
+            f"mkt:{key}",
+            extra_rows=[
+                [
+                    InlineKeyboardButton(
+                        text=f"📊 How {definition.label} has done",
+                        callback_data=f"mhk:{key}",
+                    )
+                ]
+            ],
+        ),
+    )
+
+
+async def handle_market_key_record(callback: CallbackQuery, session: object) -> None:
+    """Show one market's own record, reached from that market's fixture list."""
+    await callback.answer()
+    if not isinstance(callback.message, Message):
+        return
+
+    key = (callback.data or "").split(":", 1)[-1]
+    definition = MARKETS_BY_KEY.get(key)
+    if definition is None:
+        return
+
+    service = MarketHistoryService(session)  # type: ignore[arg-type]
+    windows = [
+        ("Last 7 days", await service.track_record(key, days=7)),
+        ("Last 30 days", await service.track_record(key, days=30)),
+        ("All time", await service.track_record(key, days=None)),
+    ]
+
+    lines = [f"<b>📊 {definition.label} — track record</b>", ""]
+    any_played = False
+    for label, tally in windows:
+        if not tally.played:
+            lines.append(f"<b>{label}</b>: nothing settled yet")
+            continue
+        any_played = True
+        rate = tally.strike_rate or 0.0
+        lines.append(f"<b>{label}</b>: {tally.won}/{tally.played} ({rate:.0%})")
+        expected = tally.expected_rate
+        if expected:
+            lines.append(f"   forecast implied {expected:.0%} — {rate - expected:+.0%}")
+        if tally.pending:
+            lines.append(f"   {tally.pending} still pending")
+
+    lines.append("")
+    if any_played:
+        lines.append(
+            "<i>This counts every fixture the model put above 55% for this "
+            "market — the card filtered, not a selection list. Hitting near "
+            "the implied rate means the model is calibrated, not that the "
+            "market is profitable to back.</i>"
+        )
+    else:
+        lines.append("<i>Results appear here once matches finish and are scored.</i>")
+
+    await callback.message.edit_text(
+        "\n".join(lines),
+        reply_markup=_back(
+            [InlineKeyboardButton(text="📚 History by date", callback_data="mh:days")],
+            [
+                InlineKeyboardButton(
+                    text=f"⬅️ Back to {definition.label}", callback_data=f"market:{key}"
+                )
+            ],
+        ),
     )
 
 
@@ -1979,6 +2215,11 @@ def build_router() -> Router:
     router.callback_query.register(
         handle_markets_menu, F.data.in_({"markets:menu", "menu:markets"})
     )
+    router.callback_query.register(handle_market_history_days, F.data == "mh:days")
+    router.callback_query.register(handle_market_track_record, F.data == "mh:record")
+    router.callback_query.register(handle_market_history_day, F.data.startswith("mh:day:"))
+    router.callback_query.register(handle_market_history_detail, F.data.startswith("mhd:"))
+    router.callback_query.register(handle_market_key_record, F.data.startswith("mhk:"))
     router.callback_query.register(handle_market_browse, F.data.startswith(("market:", "mkt:")))
     router.callback_query.register(
         handle_explore_teams, F.data.in_({"explore:teams", "menu:teams"})
