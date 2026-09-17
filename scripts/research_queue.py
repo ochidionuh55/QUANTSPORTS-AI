@@ -44,6 +44,7 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from app.core.competition_scope import Scope, classify_scope, is_in_scope
 from app.core.competitions import BY_API_ID
 
 # The standard our existing divisions were held to. Used as a reference point
@@ -51,13 +52,9 @@ from app.core.competitions import BY_API_ID
 # numbers, not silently dropped.
 REFERENCE_MATCHES = 1200
 
-RESERVE_HINTS = (
-    "premier league 2", "u21", "u23", "u20", "u19", "u18", "u17",
-    "reserve", "reserves", "academy", "youth", "development", " ii",
-    "primavera", "b team", "castilla",
-)
-
-WOMENS_HINTS = ("women", "feminin", "femenin", "frauen", "femminile", "dames", "kvinner")
+# Scope classification lives in app.core.competition_scope so the same rules
+# apply everywhere. Keeping local copies is how "Femenil" passed one script's
+# filter after being fixed in another.
 
 
 @dataclass
@@ -90,7 +87,9 @@ class Candidate:
         squad turnover differ enough that our rate model would be estimating
         something other than what it assumes.
         """
-        return any(h in self.lowered for h in RESERVE_HINTS + WOMENS_HINTS)
+        return not is_in_scope(
+            classify_scope(self.name, self.country, self.kind, self.league_id)
+        )
 
     @property
     def season_count(self) -> int:
@@ -235,7 +234,8 @@ async def build(days: int, min_seasons: int) -> int:
         c
         for c in candidates.values()
         if not c.is_ours
-        and c.kind.lower() == "league"
+        and classify_scope(c.name, c.country, c.kind, c.league_id)
+        is Scope.SENIOR_MENS_LEAGUE
         and (c.fixtures_midweek or c.fixtures_weekend)
         and c.country
         and c.country.lower() != "world"
