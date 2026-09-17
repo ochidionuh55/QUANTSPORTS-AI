@@ -87,12 +87,46 @@ Dixon-Coles parameters, for one — needs this to get back.
 """
 
 
+BY_API_ID: Final[dict[int, Competition]] = {
+    int(c.api_football_id): c for c in COMPETITIONS if c.api_football_id
+}
+"""Lookup by the provider's league id.
+
+The reliable key. Display names are neither unique nor stable: API-Football
+calls both Italy's and Brazil's top division "Serie A", so resolving by name
+silently files Brazilian fixtures under an Italian competition — and the
+mis-attribution is invisible, because a wrong answer looks exactly like a
+right one.
+"""
+
+
+def code_for_api_id(external_id: object) -> str | None:
+    """Return our competition code for a provider league id.
+
+    Accepts the id in whatever form the provider supplied it. ``external_id``
+    is a string on ``ProviderCompetition`` while ``api_football_id`` is an int,
+    and comparing them unnormalised is always false — the mistake that made a
+    discovery report list every configured competition as unknown.
+    """
+    if external_id is None:
+        return None
+    try:
+        numeric = int(str(external_id).strip())
+    except (TypeError, ValueError):
+        return None
+    found = BY_API_ID.get(numeric)
+    return found.code if found else None
+
+
 def code_for_name(name: str | None) -> str | None:
     """Return the competition code for a display name, if we know it.
 
     Returns ``None`` for an unknown name rather than guessing. A wrong code
     would silently select another league's fitted parameter, which is worse
     than falling back to the default.
+
+    Prefer :func:`code_for_api_id` wherever the provider's league id is
+    available: names collide across countries and this cannot tell them apart.
     """
     if not name:
         return None

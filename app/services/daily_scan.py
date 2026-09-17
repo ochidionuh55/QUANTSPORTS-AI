@@ -23,7 +23,7 @@ from decimal import Decimal
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.competitions import code_for_name
+from app.core.competitions import code_for_api_id, code_for_name
 from app.core.logging import get_logger
 from app.database.models import SettledPrediction, StoredAnalysis
 from app.database.models.scan_telemetry import RejectionCode, ScanRunStatus
@@ -165,10 +165,13 @@ class DailyScanService:
                 )
                 report.errors += 1
                 competition_name = getattr(event.competition, "name", None)
+                competition_code = code_for_api_id(
+                    getattr(event.competition, "external_id", None)
+                ) or code_for_name(competition_name)
                 telemetry.record(
                     event.external_id,
                     competition=competition_name,
-                    competition_code=code_for_name(competition_name),
+                    competition_code=competition_code,
                     kickoff=event.start_time,
                     home_team=event.home_team.name,
                     away_team=event.away_team.name,
@@ -246,11 +249,15 @@ class DailyScanService:
             produced = True
             fully = True
 
+        # By league id first. Names collide across countries — "Serie A" is
+        # both Italy's and Brazil's — so resolving by name files fixtures under
+        # the wrong competition without any sign of having done so.
         name = getattr(event.competition, "name", None)
+        resolved_code = code_for_api_id(getattr(event.competition, "external_id", None))
         telemetry.record(
             event.external_id,
             competition=name,
-            competition_code=code_for_name(name),
+            competition_code=resolved_code or code_for_name(name),
             kickoff=event.start_time,
             home_team=event.home_team.name,
             away_team=event.away_team.name,

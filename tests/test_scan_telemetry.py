@@ -462,3 +462,74 @@ class TestTelemetryCannotBreakTheScan:
         assert await telemetry.finish(now=NOW) is None
         rows = await session.execute(select(ScanDecision))
         assert list(rows.scalars().all()) == []
+
+
+class TestPublicationIsWiredIn:
+    """The funnel must not end at "fully modelled" reporting zero qualified.
+
+    ``attach_publication`` existed and nothing called it, so the first live
+    report showed 159 fully modelled fixtures and 0 qualified — a truncated
+    funnel that looked like a catastrophic conversion failure and was in fact
+    a missing function call.
+    """
+
+    def test_publication_path_attaches_telemetry(self) -> None:
+        import inspect
+
+        import app.services.selections as selections
+
+        source = inspect.getsource(selections)
+        assert "attach_publication" in source
+        assert "_attach_telemetry" in source
+
+    def test_attachment_is_tolerant_of_failure(self) -> None:
+        """Publication must proceed even when telemetry cannot be written."""
+        import inspect
+
+        import app.services.selections as selections
+
+        source = inspect.getsource(selections.SelectionService._attach_telemetry)
+        assert "except SQLAlchemyError" in source
+        assert "return" in source
+
+
+class TestCompetitionAttribution:
+    """Resolution by league id, because names are neither unique nor stable."""
+
+    def test_league_ids_resolve(self) -> None:
+        from app.core.competitions import code_for_api_id
+
+        assert code_for_api_id("39") == "E0"
+        assert code_for_api_id(39) == "E0"
+        assert code_for_api_id("283") == "ROM"
+
+    def test_colliding_names_resolve_distinctly_by_id(self) -> None:
+        """The bug this prevents.
+
+        API-Football calls both Italy's and Brazil's top division "Serie A".
+        Resolving by name files Brazilian fixtures under an Italian
+        competition, and a wrong code looks exactly like a right one — which
+        would have silently corrupted the stale-16 attribution.
+        """
+        from app.core.competitions import code_for_api_id, code_for_name
+
+        assert code_for_api_id("135") == "I1"
+        assert code_for_api_id("71") == "BRA"
+        # By name, both collapse to whichever is found first.
+        assert code_for_name("Serie A") == code_for_name("Serie A")
+
+    def test_unknown_and_malformed_ids_return_none(self) -> None:
+        from app.core.competitions import code_for_api_id
+
+        for value in (None, "", "abc", "9999999", object()):
+            assert code_for_api_id(value) is None
+
+    def test_scan_prefers_the_league_id(self) -> None:
+        """Asserted on source: falling back to name is the last resort."""
+        import inspect
+
+        import app.services.daily_scan as scan
+
+        source = inspect.getsource(scan)
+        assert "code_for_api_id(" in source
+        assert "or code_for_name(" in source

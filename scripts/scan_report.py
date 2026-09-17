@@ -99,6 +99,18 @@ async def report_runs(session: AsyncSession, days: int) -> list[ScanRun]:
         )
         if not run.funnel_is_monotonic():
             print(f"        !! funnel widens on run {run.id} — stage mapping is wrong")
+        if (
+            run.fully_modelled
+            and not run.fixtures_with_qualifying_selection
+            and not run.selections_published
+        ):
+            # Publication attaches after the scan. A run recorded before that
+            # wiring existed, or read before publication ran, has a truncated
+            # funnel and must not be mistaken for a conversion failure.
+            print(
+                f"        note: run {run.id} has no publication telemetry "
+                "(pre-fix run, or publication has not run yet)"
+            )
 
     earliest = min(r.started_at for r in runs)
     print(f"\n  Scan telemetry available since: {earliest:%d %b %Y %H:%M} UTC")
@@ -233,6 +245,49 @@ async def report_funnel(session: AsyncSession, runs: list[ScanRun], days: int) -
                 f"{sum(1 for d in group if d.competition_supported):>11}"
                 f"{sum(1 for d in group if d.fully_modelled):>16}"
                 f"{sum(1 for d in group if d.qualified):>11}"
+            )
+
+    # Service-level conversion.
+    #
+    # "analysed" is the number of fixtures that were actually eligible for a
+    # service's qualification test: fully modelled fixtures kicking off that
+    # day. Unsupported fixtures and ones that never produced a model
+    # probability are excluded, because counting them would inflate the
+    # denominator with fixtures the service never had the chance to consider.
+    from app.database.models import ServiceSelection
+    from app.services.best_of_day import SERVICES
+
+    eligible_by_day: dict[object, int] = defaultdict(int)
+    for decision in unique:
+        if decision.fully_modelled and decision.kickoff:
+            eligible_by_day[decision.kickoff.date()] += 1
+
+    if eligible_by_day:
+        selection_days = sorted(eligible_by_day, key=str)
+        selection_rows = await session.execute(
+            select(ServiceSelection).where(
+                ServiceSelection.selection_date.in_(selection_days)
+            )
+        )
+        selections = list(selection_rows.scalars().all())
+        qualified_by_service: dict[str, set[str]] = defaultdict(set)
+        rows_by_service: dict[str, int] = defaultdict(int)
+        for selection in selections:
+            qualified_by_service[selection.service_key].add(selection.provider_event_id)
+            rows_by_service[selection.service_key] += 1
+
+        total_eligible = sum(eligible_by_day.values())
+        print("\n" + "-" * 92)
+        print("SERVICE CONVERSION")
+        print("-" * 92)
+        print("  analysed = fully modelled fixtures eligible for the test that day\n")
+        for service in SERVICES:
+            qualified = len(qualified_by_service.get(service.key, set()))
+            published = rows_by_service.get(service.key, 0)
+            extra = f"   ({published} selections)" if published != qualified else ""
+            print(
+                f"  {service.label:<34}{total_eligible:>5} analysed"
+                f" · {qualified:>3} qualified{extra}"
             )
 
     # Coverage tiers.

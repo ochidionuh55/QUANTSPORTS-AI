@@ -23,11 +23,13 @@ from datetime import UTC, date, datetime, time, timedelta
 from decimal import Decimal
 
 from sqlalchemy import func, select
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.logging import get_logger
 from app.database.models import (
     DailySnapshot,
+    ScanRun,
     SelectionAudit,
     ServiceSelection,
     SettledPrediction,
@@ -44,6 +46,7 @@ from app.services.best_of_day import (
     model_only_version,
     settles,
 )
+from app.services.scan_telemetry import ScanTelemetry
 
 logger = get_logger(__name__)
 
@@ -217,6 +220,7 @@ class SelectionService:
         report.forecasts = len(forecasts)
 
         coverage: dict[str, int] = {}
+        published_by_fixture: dict[str, int] = {}
         for analysis in analyses:
             coverage[analysis.coverage] = coverage.get(analysis.coverage, 0) + 1
 
@@ -235,15 +239,49 @@ class SelectionService:
                     if found is None:
                         continue
                     created = await self._store(selection, found, rank, moment)
+                    published_by_fixture[selection.forecast.fixture_id] = (
+                        published_by_fixture.get(selection.forecast.fixture_id, 0) + 1
+                    )
                     if created:
                         report.published += 1
                     else:
                         report.already_present += 1
 
+        # Close the funnel. Qualification is decided here, not during the scan,
+        # so without this the last stage reads zero however many fixtures
+        # published — which is exactly what the first telemetry run showed.
+        await self._attach_telemetry(published_by_fixture, moment)
+
         await self._snapshot(moment, report, coverage)
         await self._session.flush()
         logger.info("selections.published", summary=report.summary())
         return report
+
+    async def _attach_telemetry(
+        self, published_by_fixture: dict[str, int], moment: datetime
+    ) -> None:
+        """Record which fixtures qualified against the most recent scan.
+
+        Observability only, and deliberately tolerant: if no scan run is found,
+        or the write fails, publication proceeds unchanged. Telemetry describes
+        the product; it must never be able to stop it.
+        """
+        try:
+            start = datetime.combine(moment.date(), time.min, tzinfo=UTC)
+            rows = await self._session.execute(
+                select(ScanRun)
+                .where(ScanRun.started_at >= start)
+                .order_by(ScanRun.started_at.desc())
+                .limit(1)
+            )
+            run = rows.scalars().first()
+            if run is None:
+                return
+            await ScanTelemetry(self._session).attach_publication(
+                published_by_fixture, run_id=run.id
+            )
+        except SQLAlchemyError as error:
+            logger.warning("selections.telemetry_attach_failed", error=str(error))
 
     async def _store(
         self,
