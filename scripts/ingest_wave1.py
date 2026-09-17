@@ -60,6 +60,7 @@ from app.core.fixture_status import (
 from app.database.models import HistoricalMatch, ProviderFixture
 from app.database.models.team import Competition as CompetitionRow
 from app.infrastructure.database import Database
+from app.services.team_names import normalize_team_name
 from app.services.team_resolution import TeamResolver
 
 PROVIDER = "api_football"
@@ -128,16 +129,36 @@ def _hash(payload: dict[str, Any]) -> str:
 async def _competition_row(
     session: AsyncSession, code: str | None, name: str, country: str
 ) -> CompetitionRow | None:
-    """Return the competition row, creating it if this is its first ingestion."""
-    if code is None:
-        return None
+    """Return the competition row, creating it if this is its first ingestion.
+
+    Mirrors ``HistoricalIngestionService._get_or_create_competition`` rather
+    than reimplementing it. Two details matter and a first attempt here got
+    both wrong: ``normalized_name`` is ``NOT NULL``, and the unique constraint
+    is on ``(sport, country, normalized_name)`` — so a lookup by canonical
+    name alone can miss an existing row and then fail to insert a duplicate.
+    """
+    normalized = normalize_team_name(name)
+
     found = await session.execute(
-        select(CompetitionRow).where(CompetitionRow.canonical_name == name)
+        select(CompetitionRow).where(
+            CompetitionRow.sport == "football",
+            CompetitionRow.normalized_name == normalized,
+            CompetitionRow.country == country,
+        )
     )
     row = found.scalar_one_or_none()
     if row is not None:
+        row.has_historical_coverage = True
         return row
-    row = CompetitionRow(canonical_name=name, sport="football", country=country)
+
+    row = CompetitionRow(
+        canonical_name=name,
+        normalized_name=normalized,
+        country=country,
+        sport="football",
+        has_historical_coverage=True,
+        external_metadata={"source_external_id": str(code or "")},
+    )
     session.add(row)
     await session.flush()
     return row
@@ -157,7 +178,7 @@ async def ingest_competition(
     report = Reconciliation(league_id=league_id, label=f"{label} ({country})")
     resolver = TeamResolver(session)
     competition = (
-        None if dry_run else await _competition_row(session, code or str(league_id), label, country)
+        None if dry_run else await _competition_row(session, code, label, country)
     )
 
     for season in seasons:
