@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import json
 import os
 import sys
 from dataclasses import dataclass, field
@@ -53,6 +54,32 @@ DEFAULT_CANDIDATES: dict[int, str] = {
 }
 
 FINISHED_STATUSES = {"FT", "AET", "PEN"}
+
+RESULTS_PATH = Path("/tmp/quantsport_history_audit.json")
+"""Where completed competitions are kept between runs.
+
+An SSH session reset has repeatedly killed this audit part-way and thrown away
+every competition already counted, costing the requests again on the retry.
+Each competition is written as soon as it finishes, so a dropped connection
+loses at most the one in flight and ``--summary`` can aggregate whatever has
+accumulated across however many invocations it took.
+"""
+
+
+def _load() -> dict[str, dict[str, Any]]:
+    """Read previously completed competitions."""
+    try:
+        return dict(json.loads(RESULTS_PATH.read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        return {}
+
+
+def _save(store: dict[str, dict[str, Any]]) -> None:
+    """Persist completed competitions, tolerating a read-only filesystem."""
+    try:
+        RESULTS_PATH.write_text(json.dumps(store, indent=2), encoding="utf-8")
+    except OSError as error:
+        print(f"  (could not persist results: {error})", flush=True)
 
 
 @dataclass
@@ -203,7 +230,50 @@ def _parse(item: dict[str, Any], audit: SeasonAudit) -> None:
         audit.weekend += 1
 
 
-async def audit(league_ids: dict[int, str], seasons_back: int) -> int:
+def report_stored() -> int:
+    """Print every competition counted so far, across all invocations."""
+    store = _load()
+    if not store:
+        print("No results stored yet. Run the audit first.")
+        return 1
+
+    print("=" * 104)
+    print(f"HISTORY AUDIT — {len(store)} competitions counted across all runs")
+    print("=" * 104)
+    print(
+        f"\n  {'competition':<34}{'usable':>8}{'completed':>10}{'seasons':>9}"
+        f"{'teams':>7}{'complete':>10}{'dup':>5}{'Mon-Thu':>9}  status"
+    )
+    rows = sorted(store.values(), key=lambda r: -int(r.get("usable", 0)))
+    for row in rows:
+        print(
+            f"  {str(row.get('label'))[:33]:<34}{int(row.get('usable', 0)):>8,}"
+            f"{int(row.get('completed', 0)):>10,}{int(row.get('usable_seasons', 0)):>9}"
+            f"{int(row.get('teams', 0)):>7}{float(row.get('completeness', 0)):>9.1%}"
+            f"{int(row.get('duplicates', 0)):>5}{int(row.get('midweek', 0)):>9,}"
+            f"  {row.get('status')}"
+        )
+
+    print("\n" + "-" * 104)
+    print("DATA INTEGRITY (all runs)")
+    print("-" * 104)
+    for label, field_name in (
+        ("Duplicate fixture rows", "duplicates"),
+        ("Fixtures outside their season", "out_of_season"),
+        ("Fixtures missing a team id", "missing_team_ids"),
+        ("Completed without a score", "missing_scores"),
+    ):
+        total = sum(int(r.get(field_name, 0)) for r in store.values())
+        print(f"  {label:<32}: {total}")
+
+    print("\n" + "=" * 104)
+    print("READ-ONLY. Reaches HISTORY AVAILABLE. Identity resolution and")
+    print("chronological validation remain unmeasured.")
+    print("=" * 104)
+    return 0
+
+
+async def audit(league_ids: dict[int, str], seasons_back: int, refresh: bool = False) -> int:
     """Count real history for each candidate."""
     key = os.getenv("API_FOOTBALL_KEY", "")
     if not key:
@@ -222,8 +292,12 @@ async def audit(league_ids: dict[int, str], seasons_back: int) -> int:
     provider = ApiFootballProvider(api_key=key)
     current_year = datetime.now().year
     results: list[CompetitionAudit] = []
+    store = _load()
 
     for league_id, label in league_ids.items():
+        if str(league_id) in store and not refresh:
+            print(f"\n  {label} (id {league_id}) — already counted, skipping", flush=True)
+            continue
         competition = CompetitionAudit(league_id=league_id, label=label)
         print(f"\n  {label} (id {league_id})", flush=True)
         for offset in range(seasons_back):
@@ -251,6 +325,25 @@ async def audit(league_ids: dict[int, str], seasons_back: int) -> int:
                 flush=True,
             )
         results.append(competition)
+
+        # Written now, not at the end. A reset after this point costs nothing.
+        store[str(league_id)] = {
+            "label": competition.label,
+            "usable": competition.usable,
+            "completed": competition.completed,
+            "returned": competition.returned,
+            "duplicates": competition.duplicates,
+            "usable_seasons": competition.usable_seasons,
+            "teams": competition.teams,
+            "completeness": competition.completeness,
+            "midweek": competition.midweek,
+            "weekend": competition.weekend,
+            "status": competition.status,
+            "out_of_season": sum(x.out_of_season for x in competition.seasons),
+            "missing_team_ids": sum(x.missing_team_ids for x in competition.seasons),
+            "missing_scores": sum(x.missing_scores for x in competition.seasons),
+        }
+        _save(store)
 
     print("\n" + "=" * 104)
     print("HISTORY AUDIT — counted, not estimated")
@@ -308,7 +401,20 @@ async def main() -> int:
         help="Comma-separated provider league ids. Defaults to the queue's top ten.",
     )
     parser.add_argument("--seasons", type=int, default=8)
+    parser.add_argument(
+        "--summary",
+        action="store_true",
+        help="Print everything counted so far without making any requests.",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Re-count competitions already stored.",
+    )
     args = parser.parse_args()
+
+    if args.summary:
+        return report_stored()
 
     if args.leagues:
         chosen: dict[int, str] = {}
@@ -321,7 +427,7 @@ async def main() -> int:
     else:
         chosen = DEFAULT_CANDIDATES
 
-    return await audit(chosen, max(1, args.seasons))
+    return await audit(chosen, max(1, args.seasons), refresh=args.refresh)
 
 
 if __name__ == "__main__":
