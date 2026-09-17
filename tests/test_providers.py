@@ -393,7 +393,7 @@ class TestArchitecture:
         for path in root.rglob("*.py"):
             if path.parts[-2:] == ("providers", "registry.py"):
                 continue
-            for number, line in enumerate(path.read_text().splitlines(), start=1):
+            for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
                 if line.lstrip().startswith("#"):
                     continue
                 if pattern.search(line):
@@ -407,7 +407,7 @@ class TestArchitecture:
         offenders: list[str] = []
         root = Path(__file__).resolve().parents[1] / "app" / "providers"
         for path in root.rglob("*.py"):
-            text = path.read_text()
+            text = path.read_text(encoding="utf-8")
             if "app.database.models" in text:
                 offenders.append(path.name)
         assert offenders == [], f"Provider layer must not depend on ORM models: {offenders}"
@@ -421,7 +421,7 @@ class TestArchitecture:
             if not area_path.exists():
                 continue
             for path in area_path.rglob("*.py"):
-                text = path.read_text()
+                text = path.read_text(encoding="utf-8")
                 if "import httpx" in text or "import requests" in text:
                     offenders.append(str(path.relative_to(root)))
         assert offenders == [], f"HTTP client leaked into business logic: {offenders}"
