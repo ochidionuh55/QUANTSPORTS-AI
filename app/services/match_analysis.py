@@ -35,11 +35,11 @@ from app.quant.elo import EloEngine
 from app.quant.ensemble import ComponentEstimate, EnsembleError, build_ensemble
 from app.quant.form import MatchOutcome, summarise
 from app.quant.form import predict as form_predict
+from app.quant.grid import build_match_probabilities
 from app.quant.poisson import (
     LeagueAverages,
     MatchProbabilities,
     expected_goals,
-    match_probabilities,
     team_strength,
 )
 from app.quant.probability import MarginMethod, ProbabilityError, fair_probabilities
@@ -386,6 +386,12 @@ class MatchAnalysisService:
             analysis.both_teams_score = poisson.both_teams_score
             components.append(
                 ComponentEstimate(
+                    # Deliberately the plain component name, not the engine
+                    # name. Ensemble weights are keyed on this string, so
+                    # "poisson_dc" here would silently resolve to a weight of
+                    # zero and hand Poisson's entire share to Elo and Form.
+                    # The engine generation is recorded in model_versions
+                    # instead, where nothing depends on the value.
                     "poisson",
                     {
                         "home": poisson.home_win,
@@ -497,7 +503,9 @@ class MatchAnalysisService:
             return None
 
         lambda_home, lambda_away = expected_goals(home_strength, away_strength, league)
-        return match_probabilities(lambda_home, lambda_away)
+        # Routed through the canonical builder so this fixture's distribution
+        # is the same one every other surface derives its markets from.
+        return build_match_probabilities(lambda_home, lambda_away)
 
     def _elo(
         self,

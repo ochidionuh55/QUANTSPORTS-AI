@@ -27,15 +27,14 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime, timedelta
-from decimal import Decimal
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.logging import get_logger
 from app.database.models import SettledPrediction
+from app.quant.grid import build_grid
 from app.quant.markets import probability_of, settles_won
-from app.quant.poisson import score_matrix
 from app.services.queries import MARKET_FILTERS, MARKETS_BY_KEY, MarketFilter
 
 logger = get_logger(__name__)
@@ -154,7 +153,7 @@ def _stored_probability(
     if lambda_home is None or lambda_away is None:
         return None
 
-    grid = score_matrix(float(lambda_home), float(lambda_away))
+    grid = build_grid(float(lambda_home), float(lambda_away))
     probability = probability_of(grid, definition.market, definition.outcome)
     if probability is None:
         return None

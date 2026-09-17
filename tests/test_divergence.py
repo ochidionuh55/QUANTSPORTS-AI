@@ -13,6 +13,7 @@ from __future__ import annotations
 
 from datetime import UTC, datetime, timedelta
 from types import SimpleNamespace
+from typing import Any
 
 from app.services.divergence import (
     MAX_MARKET_PROBABILITY,
@@ -32,8 +33,14 @@ def _record(
     market: tuple[str, str, str] = ("0.38", "0.28", "0.34"),
     sample: int = 90,
     hours: int = 5,
-) -> SimpleNamespace:
-    """Build a stored analysis carrying both views."""
+) -> Any:
+    """Build a stand-in for a stored analysis carrying both views.
+
+    Annotated ``Any`` rather than ``StoredAnalysis`` because that is the truth:
+    this is a duck-typed stand-in. ``find_divergences`` only reads attributes
+    and never touches a session, so a real ORM row would add setup without
+    adding coverage.
+    """
     return SimpleNamespace(
         provider_event_id=fixture_id,
         home_name=f"Alpha{fixture_id}",
@@ -176,7 +183,8 @@ class TestHonestLanguage:
         """
         from app.bot.formatting import format_divergences
 
-        rendered = format_divergences(find_divergences([_record()], now=NOW))
+        found: list[object] = list(find_divergences([_record()], now=NOW))
+        rendered = format_divergences(found)
         lowered = rendered.lower()
         for phrase in (
             "value bet",

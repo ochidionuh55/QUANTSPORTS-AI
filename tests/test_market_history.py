@@ -127,7 +127,9 @@ class TestStoredProbability:
 class TestMarketHistory:
     """Day views and aggregates."""
 
-    async def test_qualifying_fixtures_are_scored_against_the_result(self, session) -> None:
+    async def test_qualifying_fixtures_are_scored_against_the_result(
+        self, session: AsyncSession
+    ) -> None:
         kickoff = datetime.now(UTC) - timedelta(days=1)
         # Home at 72%, and the home side won.
         session.add(_prediction("won", kickoff, 3, 0, home=0.72))
@@ -144,7 +146,7 @@ class TestMarketHistory:
         assert by_id["won"].scoreline == "3-0"
         assert by_id["lost"].won is False
 
-    async def test_below_the_bar_is_excluded(self, session) -> None:
+    async def test_below_the_bar_is_excluded(self, session: AsyncSession) -> None:
         kickoff = datetime.now(UTC) - timedelta(days=1)
         session.add(_prediction("weak", kickoff, 1, 0, home=MIN_PROBABILITY - 0.05))
         await session.flush()
@@ -152,7 +154,9 @@ class TestMarketHistory:
         outcomes = await MarketHistoryService(session).for_day_market(kickoff.date(), "home")
         assert outcomes == []
 
-    async def test_backfilled_rows_are_never_counted(self, session) -> None:
+    async def test_backfilled_rows_are_never_counted(
+        self, session: AsyncSession
+    ) -> None:
         kickoff = datetime.now(UTC) - timedelta(days=1)
         session.add(_prediction("backfill", kickoff, 3, 0, home=0.80, source="backfill"))
         await session.flush()
@@ -161,7 +165,7 @@ class TestMarketHistory:
         assert await service.for_day_market(kickoff.date(), "home") == []
         assert await service.available_days() == []
 
-    async def test_tallies_rank_by_sample_then_wins(self, session) -> None:
+    async def test_tallies_rank_by_sample_then_wins(self, session: AsyncSession) -> None:
         kickoff = datetime.now(UTC) - timedelta(days=1)
         for index in range(3):
             session.add(_prediction(f"f{index}", kickoff, 2, 1, home=0.75))
@@ -173,7 +177,9 @@ class TestMarketHistory:
         assert top.played >= 3
         assert top.strike_rate is not None
 
-    async def test_track_record_aggregates_across_days(self, session) -> None:
+    async def test_track_record_aggregates_across_days(
+        self, session: AsyncSession
+    ) -> None:
         now = datetime.now(UTC)
         session.add(_prediction("d1", now - timedelta(days=1), 2, 0, home=0.70))
         session.add(_prediction("d2", now - timedelta(days=2), 2, 0, home=0.70))
@@ -186,7 +192,7 @@ class TestMarketHistory:
         assert tally.strike_rate == pytest.approx(2 / 3)
         assert tally.expected_rate == pytest.approx(0.70)
 
-    async def test_available_days_are_newest_first(self, session) -> None:
+    async def test_available_days_are_newest_first(self, session: AsyncSession) -> None:
         now = datetime.now(UTC)
         for offset in (1, 3, 2):
             session.add(_prediction(f"d{offset}", now - timedelta(days=offset), 2, 1))

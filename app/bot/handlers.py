@@ -32,6 +32,8 @@ from app.bot.formatting import (
     format_admin_dashboard,
     format_basketball_today,
     format_board,
+    format_board_history,
+    format_board_record,
     format_breakdown,
     format_community,
     format_divergences,
@@ -57,8 +59,6 @@ from app.bot.formatting import (
     format_stored_detail,
     format_summary_line,
     format_team_profile,
-    format_board_history,
-    format_board_record,
     format_track_record,
     format_why,
     format_why_selection,
@@ -427,7 +427,7 @@ async def handle_highlights(
 
     service = HighlightService(session)  # type: ignore[arg-type]
     selections = await service.today(today_kickoffs_only=True)
-    counts = {track: 0 for track in TRACK_LABELS}
+    counts = dict.fromkeys(TRACK_LABELS, 0)
     for selection in selections:
         counts[selection.track] = counts.get(selection.track, 0) + 1
 

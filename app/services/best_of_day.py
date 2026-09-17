@@ -32,6 +32,7 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Final
 
+from app.quant.grid import correction_enabled
 from app.quant.markets import MARKETS, derive_markets
 
 Grid = dict[tuple[int, int], Decimal]
@@ -125,12 +126,31 @@ SERVICES: Final[tuple[ServiceDefinition, ...]] = (
 SERVICES_BY_KEY: Final[dict[str, ServiceDefinition]] = {s.key: s for s in SERVICES}
 
 MODEL_ONLY_VERSION: Final[str] = "model-only-v1"
-"""Version recorded against published selections.
+"""Version for selections built on the independent Poisson grid.
 
 Deliberately distinct from the ensemble version used elsewhere, which names
 the market prior. A selection produced without any bookmaker input must not
 carry a version string implying one was used.
 """
+
+MODEL_ONLY_VERSION_DC: Final[str] = "model-only-v2-dc"
+"""Version for selections built on the Dixon-Coles corrected grid.
+
+A separate string because the two generations produce different numbers for
+the same fixture, and a record that cannot tell them apart cannot answer
+whether the change helped. Selections already published keep the version they
+were published under; nothing is restamped.
+"""
+
+
+def model_only_version() -> str:
+    """Return the version string for selections published now.
+
+    Read at publication time rather than fixed at import, so toggling the
+    correction takes effect on the next scan without a deploy and without the
+    version silently disagreeing with the engine that produced the numbers.
+    """
+    return MODEL_ONLY_VERSION_DC if correction_enabled() else MODEL_ONLY_VERSION
 
 MIN_SAMPLE: Final[int] = 15
 """Matches each side needs before a fixture is eligible at all.

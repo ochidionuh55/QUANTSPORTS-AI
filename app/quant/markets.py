@@ -32,7 +32,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Final
 
-from app.quant.poisson import score_matrix
+from app.quant.grid import build_grid
 
 Scoreline = tuple[int, int]
 Grid = dict[Scoreline, Decimal]
@@ -239,7 +239,7 @@ def first_half_markets(lambda_home: float, lambda_away: float) -> dict[str, dict
     """
     half_home = max(0.01, lambda_home * FIRST_HALF_SHARE)
     half_away = max(0.01, lambda_away * FIRST_HALF_SHARE)
-    grid = score_matrix(half_home, half_away)
+    grid = build_grid(half_home, half_away)
 
     def total(predicate: Predicate) -> Decimal:
         return sum(

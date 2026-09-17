@@ -34,14 +34,14 @@ from app.database.models import (
     StoredAnalysis,
 )
 from app.database.models.selections import LOST, PENDING, VOID, WON
-from app.quant.poisson import score_matrix
+from app.quant.grid import build_grid
 from app.services.best_of_day import (
     MIN_SAMPLE,
-    MODEL_ONLY_VERSION,
     SERVICES,
     SERVICES_BY_KEY,
     BestOfDayEngine,
     ModelForecast,
+    model_only_version,
     settles,
 )
 
@@ -280,7 +280,7 @@ class SelectionService:
             probability=selection.probability,  # type: ignore[attr-defined]
             score=selection.score,  # type: ignore[attr-defined]
             coverage=analysis.coverage,
-            model_version=MODEL_ONLY_VERSION,
+            model_version=model_only_version(),
             components_used=list(analysis.components_used or []),
             factors=dict(selection.factors),  # type: ignore[attr-defined]
             rationale=selection.reason,  # type: ignore[attr-defined]
@@ -322,7 +322,7 @@ class SelectionService:
         snapshot.services_run = len(published_services())
         snapshot.services_qualified = report.services_qualified
         snapshot.coverage = coverage
-        snapshot.model_version = MODEL_ONLY_VERSION
+        snapshot.model_version = model_only_version()
         snapshot.generated_at = moment
 
     # ------------------------------------------------------------------
@@ -636,7 +636,7 @@ def _forecast(analysis: StoredAnalysis) -> ModelForecast | None:
     if sum(result.values()) <= 0:
         return None
 
-    grid = _tilted(score_matrix(float(lambda_home), float(lambda_away)), result)
+    grid = _tilted(build_grid(float(lambda_home), float(lambda_away)), result)
 
     views: list[dict[str, Decimal]] = []
     for raw in analysis.component_views or []:
