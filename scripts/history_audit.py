@@ -55,6 +55,16 @@ DEFAULT_CANDIDATES: dict[int, str] = {
 
 FINISHED_STATUSES = {"FT", "AET", "PEN"}
 
+ABANDONED_STATUSES = {"ABD", "CANC", "PST", "SUSP", "AWD", "WO", "INT"}
+"""Fixtures that will never produce a usable result.
+
+Reported separately because a competition carrying two seasons of these is
+telling us something a single completeness percentage hid entirely.
+"""
+
+SCHEDULED_STATUSES = {"NS", "TBD", "PST"}
+"""Not yet played. A legitimate gap in the current season, not a data fault."""
+
 RESULTS_PATH = Path("/tmp/quantsport_history_audit.json")
 """Where completed competitions are kept between runs.
 
@@ -94,6 +104,9 @@ class SeasonAudit:
     missing_scores: int = 0
     teams: set[int] = field(default_factory=set)
     missing_team_ids: int = 0
+    unfinished: int = 0
+    abandoned: int = 0
+    scheduled: int = 0
     out_of_season: int = 0
     midweek: int = 0
     weekend: int = 0
@@ -105,10 +118,20 @@ class SeasonAudit:
 
     @property
     def completeness(self) -> float:
-        """Share of completed fixtures carrying a usable final score."""
-        if not self.completed:
+        """Share of **returned** fixtures that are usable.
+
+        Previously the denominator was ``completed``, which counts only
+        fixtures already marked finished — so it asked "of the matches that
+        finished, how many had a score", and the provider essentially never
+        returns a finished fixture without one. Every competition scored
+        100.0%, including one with two seasons of abandoned fixtures.
+
+        Measured against everything returned, a season that never finished
+        shows as the gap it is.
+        """
+        if not self.returned:
             return 0.0
-        return self.usable_scores / self.completed
+        return self.usable_scores / self.returned
 
 
 @dataclass
@@ -149,9 +172,22 @@ class CompetitionAudit:
 
     @property
     def completeness(self) -> float:
-        if not self.completed:
+        """Usable share of everything returned."""
+        if not self.returned:
             return 0.0
-        return self.usable / self.completed
+        return self.usable / self.returned
+
+    @property
+    def unfinished(self) -> int:
+        return sum(s.unfinished for s in self.seasons)
+
+    @property
+    def abandoned(self) -> int:
+        return sum(s.abandoned for s in self.seasons)
+
+    @property
+    def scheduled(self) -> int:
+        return sum(s.scheduled for s in self.seasons)
 
     @property
     def midweek(self) -> int:
@@ -170,7 +206,9 @@ class CompetitionAudit:
         """
         if self.usable == 0:
             return "NO_HISTORY"
-        if self.completeness < 0.9:
+        if self.abandoned > self.returned * 0.05:
+            return "HISTORY_GAPS"
+        if self.completeness < 0.85:
             return "HISTORY_INCOMPLETE"
         if self.usable >= 1200 and self.usable_seasons >= 6:
             return "HISTORY_STRONG"
@@ -200,6 +238,12 @@ def _parse(item: dict[str, Any], audit: SeasonAudit) -> None:
         audit.out_of_season += 1
 
     status = str((fixture.get("status") or {}).get("short") or "")
+    if status in ABANDONED_STATUSES:
+        audit.abandoned += 1
+    elif status in SCHEDULED_STATUSES:
+        audit.scheduled += 1
+    elif status not in FINISHED_STATUSES:
+        audit.unfinished += 1
     if status in FINISHED_STATUSES:
         audit.completed += 1
         home_goals = goals.get("home")
@@ -241,17 +285,17 @@ def report_stored() -> int:
     print(f"HISTORY AUDIT — {len(store)} competitions counted across all runs")
     print("=" * 104)
     print(
-        f"\n  {'competition':<34}{'usable':>8}{'completed':>10}{'seasons':>9}"
-        f"{'teams':>7}{'complete':>10}{'dup':>5}{'Mon-Thu':>9}  status"
+        f"\n  {'competition':<32}{'returned':>9}{'usable':>8}{'unfin':>7}{'abnd':>6}"
+        f"{'sched':>7}{'usable/ret':>11}{'teams':>7}{'Mon-Thu':>9}  status"
     )
     rows = sorted(store.values(), key=lambda r: -int(r.get("usable", 0)))
     for row in rows:
         print(
-            f"  {str(row.get('label'))[:33]:<34}{int(row.get('usable', 0)):>8,}"
-            f"{int(row.get('completed', 0)):>10,}{int(row.get('usable_seasons', 0)):>9}"
-            f"{int(row.get('teams', 0)):>7}{float(row.get('completeness', 0)):>9.1%}"
-            f"{int(row.get('duplicates', 0)):>5}{int(row.get('midweek', 0)):>9,}"
-            f"  {row.get('status')}"
+            f"  {str(row.get('label'))[:31]:<32}{int(row.get('returned', 0)):>9,}"
+            f"{int(row.get('usable', 0)):>8,}{int(row.get('unfinished', 0)):>7,}"
+            f"{int(row.get('abandoned', 0)):>6,}{int(row.get('scheduled', 0)):>7,}"
+            f"{float(row.get('completeness', 0)):>10.1%}{int(row.get('teams', 0)):>7}"
+            f"{int(row.get('midweek', 0)):>9,}  {row.get('status')}"
         )
 
     print("\n" + "-" * 104)
@@ -334,6 +378,9 @@ async def audit(league_ids: dict[int, str], seasons_back: int, refresh: bool = F
             "returned": competition.returned,
             "duplicates": competition.duplicates,
             "usable_seasons": competition.usable_seasons,
+            "unfinished": competition.unfinished,
+            "abandoned": competition.abandoned,
+            "scheduled": competition.scheduled,
             "teams": competition.teams,
             "completeness": competition.completeness,
             "midweek": competition.midweek,
@@ -354,15 +401,16 @@ async def audit(league_ids: dict[int, str], seasons_back: int, refresh: bool = F
     print("AGGREGATE (ranked by usable history)")
     print("-" * 104)
     print(
-        f"  {'competition':<34}{'usable':>8}{'completed':>10}{'seasons':>9}"
-        f"{'teams':>7}{'complete':>10}{'dup':>5}{'Mon-Thu':>9}  status"
+        f"  {'competition':<32}{'returned':>9}{'usable':>8}{'unfin':>7}{'abnd':>6}"
+        f"{'sched':>7}{'usable/ret':>11}{'teams':>7}{'Mon-Thu':>9}  status"
     )
     for competition in sorted(results, key=lambda c: -c.usable):
         print(
-            f"  {competition.label[:33]:<34}{competition.usable:>8,}"
-            f"{competition.completed:>10,}{competition.usable_seasons:>9}"
-            f"{competition.teams:>7}{competition.completeness:>9.1%}"
-            f"{competition.duplicates:>5}{competition.midweek:>9,}  {competition.status}"
+            f"  {competition.label[:31]:<32}{competition.returned:>9,}"
+            f"{competition.usable:>8,}{competition.unfinished:>7,}"
+            f"{competition.abandoned:>6,}{competition.scheduled:>7,}"
+            f"{competition.completeness:>10.1%}{competition.teams:>7}"
+            f"{competition.midweek:>9,}  {competition.status}"
         )
 
     print("\n" + "-" * 104)
