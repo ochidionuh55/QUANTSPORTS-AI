@@ -27,10 +27,12 @@ from __future__ import annotations
 import argparse
 import asyncio
 import os
+import re
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
+from enum import Enum
 from pathlib import Path
 from typing import Any
 
@@ -43,20 +45,64 @@ STALE_16 = {
     "MEX", "NOR", "POL", "ROM", "RUS", "SUI", "SWE", "USA",
 }
 
-# Competition types that need cross-league modelling before they could ever be
-# eligible. Teams in these come from different domestic scoring environments,
-# and our rate model has no way to compare a Brazilian side's attack with a
-# Spanish one.
-INTERNATIONAL_HINTS = (
-    "uefa", "conmebol", "concacaf", "champions", "europa", "conference",
-    "libertadores", "sudamericana", "afc ", "caf ", "club world",
-    "super cup", "nations league", "world cup", "euro ", "copa america",
-    "friendlies", "olympic", "qualification",
+class CompetitionType(str, Enum):
+    """What kind of competition this is.
+
+    Separated because the classification drives which leagues get researched,
+    and the first version got it wrong in three ways: domestic cups were filed
+    as expansion candidates, "USL Championship" matched a substring of
+    "champions" and landed under international, and Toppserien — Norway's
+    women's top division — passed every filter because its name contains no
+    word my heuristics looked for.
+    """
+
+    SENIOR_MENS_LEAGUE = "senior men's domestic league"
+    SENIOR_MENS_CUP = "senior men's domestic cup"
+    WOMENS = "women's competition"
+    YOUTH_RESERVE = "youth or reserve"
+    INTERNATIONAL_CLUB = "international club competition"
+    INTERNATIONAL_NATIONAL = "international national-team competition"
+    UNKNOWN = "unknown"
+
+
+WOMENS_LEAGUE_IDS: frozenset[int] = frozenset(
+    {
+        725,  # Toppserien (Norway). Named nothing like a women's competition.
+        724,  # Damallsvenskan (Sweden)
+        696,  # Frauen-Bundesliga (Germany)
+        44,  # FA Women's Super League (England)
+        139,  # Primera Division Femenina (Spain)
+        64,  # Division 1 Feminine (France)
+    }
 )
+"""Women's competitions whose names give no clue.
+
+A curated list because name matching cannot catch these. Incomplete by nature,
+which is why anything unmatched falls to UNKNOWN rather than being assumed to
+be a men's league.
+"""
+
+WOMENS_HINTS = ("women", "feminin", "femenin", "frauen", "femminile", "dames")
 
 YOUTH_HINTS = (
-    "u17", "u18", "u19", "u20", "u21", "u23", "youth", "primavera",
-    "women", "feminin", "femenin", "frauen", "reserve", "reserves",
+    "u17", "u18", "u19", "u20", "u21", "u23", "youth", "junior",
+    "primavera", "reserve", "reserves", "academy",
+)
+
+# Matched as whole words. "championship" contains "champions", which is how a
+# domestic American league was filed as an international competition.
+INTERNATIONAL_CLUB_WORDS = {
+    "uefa", "conmebol", "concacaf", "afc", "caf", "libertadores",
+    "sudamericana", "recopa",
+}
+INTERNATIONAL_CLUB_PHRASES = (
+    "champions league", "europa league", "conference league",
+    "club world cup", "super cup", "caribbean club", "central american cup",
+)
+INTERNATIONAL_NATIONAL_PHRASES = (
+    "world cup", "nations league", "euro ", "copa america", "friendlies",
+    "african cup", "asian cup", "gold cup", "qualification", "olympic",
+    "championship - u",
 )
 
 
@@ -81,17 +127,58 @@ class Competition:
         """Whether this is inside the configured universe."""
         return self.code is not None
 
+    kind: str = ""
+    """The provider's own "League" or "Cup". Authoritative where present."""
+
     @property
     def lowered(self) -> str:
         return f"{self.name} {self.country}".lower()
 
     @property
+    def words(self) -> set[str]:
+        """Whole words, so "championship" never matches "champions"."""
+        return set(re.findall(r"[a-z]+", self.lowered))
+
+    @property
+    def competition_type(self) -> CompetitionType:
+        """Classify from the provider's fields first, names only as fallback."""
+        lowered = self.lowered
+        if self.league_id in WOMENS_LEAGUE_IDS or any(
+            hint in lowered for hint in WOMENS_HINTS
+        ):
+            return CompetitionType.WOMENS
+        if any(hint in lowered for hint in YOUTH_HINTS):
+            return CompetitionType.YOUTH_RESERVE
+        if any(phrase in lowered for phrase in INTERNATIONAL_NATIONAL_PHRASES):
+            return CompetitionType.INTERNATIONAL_NATIONAL
+        if self.words & INTERNATIONAL_CLUB_WORDS or any(
+            phrase in lowered for phrase in INTERNATIONAL_CLUB_PHRASES
+        ):
+            return CompetitionType.INTERNATIONAL_CLUB
+        if not self.country or self.country.lower() == "world":
+            return CompetitionType.INTERNATIONAL_NATIONAL
+        # The provider states League or Cup. A cup draws teams from several
+        # divisions, so its fixtures span scoring environments our rate model
+        # cannot compare — the same obstacle as a continental competition.
+        if self.kind.lower() == "cup":
+            return CompetitionType.SENIOR_MENS_CUP
+        if self.kind.lower() == "league":
+            return CompetitionType.SENIOR_MENS_LEAGUE
+        return CompetitionType.UNKNOWN
+
+    @property
     def is_international(self) -> bool:
-        return any(hint in self.lowered for hint in INTERNATIONAL_HINTS)
+        return self.competition_type in {
+            CompetitionType.INTERNATIONAL_CLUB,
+            CompetitionType.INTERNATIONAL_NATIONAL,
+        }
 
     @property
     def is_youth_or_secondary(self) -> bool:
-        return any(hint in self.lowered for hint in YOUTH_HINTS)
+        return self.competition_type in {
+            CompetitionType.WOMENS,
+            CompetitionType.YOUTH_RESERVE,
+        }
 
     def classify(self) -> tuple[str, str]:
         """Return a class and the reason for it.
@@ -105,15 +192,27 @@ class Competition:
             if code in STALE_16:
                 return ("B", f"ours ({code}) — history stops December 2024")
             return ("B", f"ours ({code}) — already configured")
-        if self.is_international:
-            return ("C", "cross-league: teams from different scoring environments")
-        if self.is_youth_or_secondary:
-            return ("E", "youth, reserve or women's competition — separate model")
-        if not self.country or self.country.lower() in {"world", ""}:
-            return ("D", "no country — cannot establish a domestic baseline")
+
+        kind = self.competition_type
+        if kind in {CompetitionType.WOMENS, CompetitionType.YOUTH_RESERVE}:
+            return ("E", f"{kind.value} — outside current scope")
+        if kind in {
+            CompetitionType.INTERNATIONAL_CLUB,
+            CompetitionType.INTERNATIONAL_NATIONAL,
+        }:
+            return ("C", f"{kind.value} — needs cross-league modelling")
+        if kind is CompetitionType.SENIOR_MENS_CUP:
+            # A cup pairs a top-flight side with a fourth-tier one. The rate
+            # model has no way to compare teams from different divisions, which
+            # is the same obstacle continental competitions present.
+            return ("C", "domestic cup — teams span divisions")
+        if kind is CompetitionType.UNKNOWN:
+            return ("D", "competition type not established")
         if self.fixtures <= 1:
             return ("D", "one fixture seen — too little to judge")
-        return ("A", "domestic league, needs history and validation before use")
+        # Class A now requires a senior men's domestic league, established from
+        # the provider's own type field rather than inferred from its name.
+        return ("A", "senior men's domestic league — needs history and validation")
 
 
 CLASS_NAMES = {
@@ -136,6 +235,18 @@ async def probe(days: int) -> int:
 
     provider = ApiFootballProvider(api_key=key)
     today = datetime.now(UTC).date()
+
+    # Unbuffered. stdout is a pipe under `railway ssh`, so Python buffers it and
+    # a session that closes before the process finishes loses everything
+    # written so far — which is why a three-day probe returned no output at all
+    # while the one-day probe worked. Progress is printed per day for the same
+    # reason: partial output beats none.
+    reconfigure = getattr(sys.stdout, "reconfigure", None)
+    if reconfigure is not None:
+        try:
+            reconfigure(line_buffering=True)
+        except (AttributeError, ValueError):
+            pass
     competitions: dict[int, Competition] = {}
     total_fixtures = 0
 
@@ -163,6 +274,7 @@ async def probe(days: int) -> int:
                     league_id=league_id,
                     name=str(league.get("name") or "?"),
                     country=str(league.get("country") or ""),
+                    kind=str(league.get("type") or ""),
                 )
                 competitions[league_id] = competition
             competition.fixtures += 1
