@@ -64,9 +64,10 @@ CORRECTION_NOTE = (
 def old_rule(outcome: str, home_goals: int, away_goals: int) -> bool | None:
     """Reproduce the superseded predicate exactly.
 
-    Kept here rather than in the live registry: this is what the old rule was,
-    needed only to identify which rows it produced. Nothing should compute a
-    new result with it.
+    Retained as the record of what the old rule was, and used by the tests that
+    pin this script's behaviour. Deliberately *not* used to decide which rows
+    need correcting: that is decided by comparing stored status against the
+    current rule, so the script can tell when its work is already done.
     """
     either_clean_sheet = home_goals == 0 or away_goals == 0
     if outcome == "Home or clean sheet":
@@ -97,8 +98,16 @@ class Affected:
 
     @property
     def direction(self) -> str:
-        """Which way the correction moves this row."""
-        return "WON -> LOST" if self.old_result else "LOST -> WON"
+        """Which way the correction moves this row.
+
+        Reads both ends. An earlier version inferred the new result from the
+        old one, so a re-run of an already-corrected row reported "LOST -> WON"
+        — the exact opposite of what it would write.
+        """
+        return (
+            f"{'WON' if self.old_result else 'LOST'} -> "
+            f"{'WON' if self.new_result else 'LOST'}"
+        )
 
 
 async def collect(session: AsyncSession) -> list[Affected]:
@@ -113,9 +122,16 @@ async def collect(session: AsyncSession) -> list[Affected]:
             continue
         if row.home_goals is None or row.away_goals is None:
             continue
-        previous = old_rule(row.outcome, row.home_goals, row.away_goals)
         corrected = settles_won(row.market, row.outcome, row.home_goals, row.away_goals)
-        if corrected is None or previous is None or previous == corrected:
+        if corrected is None:
+            continue
+        stored = row.status == WON
+        # Compared against what is stored, not against what the old rule would
+        # have produced. Comparing the two *rules* describes the scoreline and
+        # is true forever, so the script re-flagged rows it had already fixed
+        # and could never confirm its own work. Comparing against storage makes
+        # a second run report nothing, which is what "done" looks like.
+        if stored == corrected:
             continue
         affected.append(
             Affected(
@@ -129,7 +145,7 @@ async def collect(session: AsyncSession) -> list[Affected]:
                 probability=row.probability,
                 home_goals=row.home_goals,
                 away_goals=row.away_goals,
-                old_result=row.status == WON,
+                old_result=stored,
                 new_result=corrected,
             )
         )
@@ -142,14 +158,16 @@ async def collect(session: AsyncSession) -> list[Affected]:
             continue
         if highlight.home_goals is None or highlight.away_goals is None:
             continue
-        previous = old_rule(highlight.outcome, highlight.home_goals, highlight.away_goals)
         corrected = settles_won(
             highlight.market,
             highlight.outcome,
             highlight.home_goals,
             highlight.away_goals,
         )
-        if corrected is None or previous is None or previous == corrected:
+        if corrected is None:
+            continue
+        stored = highlight.status == WON
+        if stored == corrected:
             continue
         affected.append(
             Affected(
@@ -163,7 +181,7 @@ async def collect(session: AsyncSession) -> list[Affected]:
                 probability=highlight.probability,
                 home_goals=highlight.home_goals,
                 away_goals=highlight.away_goals,
-                old_result=highlight.status == WON,
+                old_result=stored,
                 new_result=corrected,
             )
         )
@@ -232,7 +250,7 @@ def report(affected: list[Affected], before: dict[str, tuple[int, int]]) -> None
         by_day[item.day].append(item)
     for day in sorted(by_day, key=str):
         items = by_day[day]
-        delta = sum(1 if i.new_result else -1 for i in items)
+        delta = sum((1 if i.new_result else 0) - (1 if i.old_result else 0) for i in items)
         print(f"  {day}: {len(items)} corrected, net {delta:+d} wins")
 
     print("\n" + "-" * 78)
@@ -243,7 +261,7 @@ def report(affected: list[Affected], before: dict[str, tuple[int, int]]) -> None
         by_service[item.service].append(item)
     for service in sorted(by_service):
         items = by_service[service]
-        delta = sum(1 if i.new_result else -1 for i in items)
+        delta = sum((1 if i.new_result else 0) - (1 if i.old_result else 0) for i in items)
         print(f"  {service}: {len(items)} corrected, net {delta:+d} wins")
 
     print("\n" + "-" * 78)
@@ -272,6 +290,14 @@ async def apply(session: AsyncSession, affected: list[Affected]) -> None:
             row = await session.get(HighlightSelection, item.row_id)
         if row is None:
             continue
+        # Re-running --apply must not stack a second note onto a row that
+        # already carries one. The status write is idempotent; the annotation
+        # was not.
+        marker = "[SETTLEMENT CORRECTION]"
+        already = any(
+            marker in (getattr(row, field, "") or "")
+            for field in ("rationale", "reasoning")
+        )
         note = CORRECTION_NOTE.format(
             when=when,
             old="WON" if item.old_result else "LOST",
@@ -283,11 +309,12 @@ async def apply(session: AsyncSession, affected: list[Affected]) -> None:
         # what it always said.
         if hasattr(row, "corrected"):
             row.corrected = True
-        for field in ("rationale", "reasoning"):
-            if hasattr(row, field):
-                existing = getattr(row, field) or ""
-                setattr(row, field, f"{existing}\n\n[SETTLEMENT CORRECTION] {note}".strip())
-                break
+        if not already:
+            for field in ("rationale", "reasoning"):
+                if hasattr(row, field):
+                    existing = getattr(row, field) or ""
+                    setattr(row, field, f"{existing}\n\n{marker} {note}".strip())
+                    break
     await session.commit()
 
 
