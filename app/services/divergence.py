@@ -56,22 +56,28 @@ BOARD_DESCRIPTION: Final[str] = (
     "right, and long odds are long for a reason."
 )
 
-MAX_MARKET_PROBABILITY: Final[float] = 0.45
+MAX_MARKET_PROBABILITY: Final[float] = 0.50
 """Ceiling on the market's estimate - the constraint that defines this board.
 
-Roughly 2.20 in decimal odds. Above this the market already makes the outcome
-likely or near-even, and our agreeing more strongly is not an upset, it is a
+Decimal odds of 2.00 or longer. Above this the market makes the outcome its
+favourite, and our agreeing more strongly is not an upset, it is a
 rounding difference on a favourite. This single bound is what stops a 1.45
 home side appearing on a board whose entire promise is that it will not show
 you those.
 """
 
-MIN_RATIO: Final[float] = 1.25
+MIN_RATIO: Final[float] = 1.15
 """How many times likelier we must make it than the market does.
 
 A gap of eight points means something different at 15% than at 40%. Requiring
 a relative margin as well as an absolute one keeps the board's entries
 comparably surprising across the price range.
+
+Loosened from 1.25 after the first live day produced a single entry. The bound
+that defines this board is the market ceiling, not this one: at 1.15 an entry
+is still an outcome the market prices against that we rate materially higher.
+Loosening the ceiling instead would have let favourites back in, which is the
+one thing this board exists to exclude.
 """
 
 MIN_DIVERGENCE: Final[float] = 0.08

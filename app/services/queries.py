@@ -126,12 +126,26 @@ class FixtureQueryService:
     async def search(
         self, query: FixtureQuery, now: datetime | None = None
     ) -> list[StoredAnalysis]:
-        """Return matching fixtures, soonest first."""
+        """Return matching fixtures for today, soonest first.
+
+        **Today only, by default.** The scan reaches 48 hours ahead so the
+        boards can be prepared before kickoff, but browsing "Home win" and
+        being shown Saturday's card alongside today's makes the list unusable:
+        a reader cannot tell which of these they can act on now. Best of the
+        Day has always been bounded this way; this brings the explorer into
+        line with it.
+
+        An explicit ``on_date`` in the query still wins, so asking for a
+        specific day works as before.
+        """
         moment = now or datetime.now(UTC)
 
         statement = select(StoredAnalysis).where(
             StoredAnalysis.kickoff >= moment - timedelta(hours=2)
         )
+        if query.on_date is None:
+            end_of_day = datetime.combine(moment.date(), time(23, 59, 59), tzinfo=UTC)
+            statement = statement.where(StoredAnalysis.kickoff <= end_of_day)
         if query.competitions:
             names = [BY_CODE[code].name for code in query.competitions if code in BY_CODE]
             if names:
