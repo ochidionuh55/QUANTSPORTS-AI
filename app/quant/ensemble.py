@@ -151,6 +151,19 @@ def blend_components(
 
     # Renormalise over whichever components survived, so dropping one does not
     # quietly shrink the total weight and flatten the distribution.
+    # An unrecognised component name resolves to a weight of zero and is
+    # silently dropped while appearing in ``components_used``. That is how
+    # renaming the Poisson component to "poisson_dc" handed its entire 0.50
+    # share to Elo and Form with the whole suite still passing. Unknown names
+    # now fail loudly.
+    unknown = [c.name for c in usable if c.name not in configured]
+    if unknown:
+        raise EnsembleError(
+            f"Components {sorted(unknown)} have no configured weight. "
+            f"Known components: {sorted(configured)}. A component with no "
+            "weight contributes nothing while still being reported as used."
+        )
+
     total_weight = sum(configured.get(c.name, 0.0) for c in usable)
     if total_weight <= 0:
         raise EnsembleError(f"Components {[c.name for c in usable]} carry no configured weight.")

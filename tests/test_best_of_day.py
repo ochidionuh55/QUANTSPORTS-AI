@@ -192,7 +192,17 @@ class TestSettlement:
             ("home_or_over", (2, 0), True),
             ("home_or_over", (1, 1), False),
             ("away_or_btts", (1, 1), True),
-            ("home_or_cs", (0, 2), True),
+            # Corrected. This previously asserted the bug: a 0-2 home defeat
+            # was expected to WIN "Best Home or Clean Sheet" because the away
+            # side kept a clean sheet. No bookmaker settles it that way.
+            ("home_or_cs", (0, 2), False),
+            ("home_or_cs", (2, 0), True),
+            ("home_or_cs", (0, 0), True),
+            ("home_or_cs", (2, 1), True),
+            ("home_or_cs", (1, 1), False),
+            ("away_or_cs", (0, 2), True),
+            ("away_or_cs", (2, 0), False),
+            ("away_or_cs", (0, 0), True),
         ],
     )
     def test_settles_correctly(self, key: str, score: tuple[int, int], expected: bool) -> None:

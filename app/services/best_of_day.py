@@ -33,7 +33,7 @@ from decimal import Decimal
 from typing import Final
 
 from app.quant.grid import correction_enabled
-from app.quant.markets import MARKETS, derive_markets
+from app.quant.markets import MARKETS, derive_markets, require_publishable
 
 Grid = dict[tuple[int, int], Decimal]
 
@@ -114,14 +114,14 @@ SERVICES: Final[tuple[ServiceDefinition, ...]] = (
         "Away or clean sheet",
         0.70,
     ),
-    ServiceDefinition(
-        "draw_or_cs",
-        "🔥 Best Draw or Clean Sheet",
-        "Result or clean sheet",
-        "Draw or clean sheet",
-        0.62,
-    ),
 )
+
+# Every published service must name a market that can be settled and placed.
+# Checked at import: a service pointing at a retired or unknown market is a
+# deployment that cannot produce an honest record, and it should fail here
+# rather than at settlement time.
+for _service in SERVICES:
+    require_publishable(_service.market, _service.outcome)
 
 SERVICES_BY_KEY: Final[dict[str, ServiceDefinition]] = {s.key: s for s in SERVICES}
 

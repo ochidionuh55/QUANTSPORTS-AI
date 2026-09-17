@@ -50,10 +50,13 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Final
 
+from app.core.logging import get_logger
 from app.quant.dixon_coles import DEFAULT_RHO
 from app.quant.dixon_coles import score_matrix as corrected_matrix
 from app.quant.poisson import MAX_GOALS, MatchProbabilities
 from app.quant.poisson import score_matrix as independent_matrix
+
+logger = get_logger(__name__)
 
 Scoreline = tuple[int, int]
 Grid = dict[Scoreline, Decimal]
@@ -183,6 +186,17 @@ def rho_for(competition: str | None) -> float:
         fitted = _rho_table().get(competition)
         if fitted is not None:
             return fitted
+        # Falling back is correct — a competition we have not fitted should use
+        # the published default — but it must be visible. A silent fallback is
+        # indistinguishable from the competition name never arriving, which is
+        # exactly the failure mode when a display name is passed where a code
+        # was expected.
+        logger.info(
+            "grid.rho_fallback",
+            competition=competition,
+            rho=DEFAULT_RHO,
+            reason="competition not in fitted table",
+        )
     return DEFAULT_RHO
 
 

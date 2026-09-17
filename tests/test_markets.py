@@ -53,9 +53,18 @@ class TestSettlement:
             ("Home or BTTS", (2, 1), True),
             ("Home or BTTS", (0, 2), False),
             ("Home or BTTS", (1, 1), True),
-            ("Away or clean sheet", (1, 0), True),
+            # Corrected. These three previously asserted the bug: a 1-0 home
+            # win was expected to WIN "Away or clean sheet", because the old
+            # predicate accepted either side's clean sheet. The market means
+            # the away side's own sheet.
+            ("Away or clean sheet", (1, 0), False),
             ("Away or clean sheet", (0, 2), True),
             ("Away or clean sheet", (2, 1), False),
+            ("Away or clean sheet", (0, 0), True),
+            ("Away or clean sheet", (1, 2), True),
+            ("Home or clean sheet", (2, 0), True),
+            ("Home or clean sheet", (0, 2), False),
+            ("Home or clean sheet", (0, 0), True),
         ],
     )
     def test_scoreline_settles_correctly(

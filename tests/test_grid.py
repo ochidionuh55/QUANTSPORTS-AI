@@ -302,18 +302,18 @@ class TestPerCompetitionRho:
 
     def test_fitted_competitions_differ_from_the_default(self) -> None:
         """If every lookup returned the default, the table is not wired in."""
-        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.dixon_coles import DEFAULT_RHO
         from app.quant.grid import rho_for
 
         fitted = [rho_for(code) for code in ("E0", "I2", "JAP", "SWE")]
-        assert any(value != default for value in fitted)
+        assert any(value != DEFAULT_RHO for value in fitted)
 
     def test_unknown_competition_falls_back(self) -> None:
-        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.dixon_coles import DEFAULT_RHO
         from app.quant.grid import rho_for
 
-        assert rho_for("NOT_A_LEAGUE") == default
-        assert rho_for(None) == default
+        assert rho_for("NOT_A_LEAGUE") == DEFAULT_RHO
+        assert rho_for(None) == DEFAULT_RHO
 
     def test_environment_override_wins(self, monkeypatch: pytest.MonkeyPatch) -> None:
         from app.quant.grid import rho_for
@@ -379,11 +379,11 @@ class TestLivePathResolvesRho:
 
     def test_resolved_names_reach_a_fitted_parameter(self) -> None:
         from app.core.competitions import code_for_name
-        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.dixon_coles import DEFAULT_RHO
         from app.quant.grid import rho_for
 
         resolved = [rho_for(code_for_name(n)) for n in ("Premier League", "Serie B")]
-        assert any(value != default for value in resolved)
+        assert any(value != DEFAULT_RHO for value in resolved)
 
     def test_live_analysis_maps_the_name(self) -> None:
         """Asserted on source: passing the raw name would be a silent no-op."""
