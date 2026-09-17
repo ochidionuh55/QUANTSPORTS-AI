@@ -28,7 +28,6 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import os
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -234,70 +233,56 @@ def report_refresh_cost(stale: list[Coverage]) -> None:
 
 
 async def discover(country: str | None) -> None:
-    """List competitions the provider carries that we do not use."""
+    """Show our configured competitions. **This is not provider discovery.**
+
+    An earlier version of this section called ``get_competitions()`` and
+    presented the result as the provider's universe. That method does not
+    query the vendor at all — its own docstring says it returns the local
+    mapping because "the league list is stable and fetching it would spend
+    quota". So the report was our own configuration read back to us, which is
+    why it used zero requests and listed E0 and D1 as unused.
+
+    It compounded with a type mismatch: ``external_id`` is a string and
+    ``api_football_id`` is an int, so ``"39" not in {39, ...}`` marked all 38
+    configured competitions as unknown.
+
+    Genuine discovery needs a ``/leagues`` call the adapter does not implement.
+    Until that exists, this section states what it actually knows.
+    """
     print("\n" + "=" * 100)
-    print("3. WIDER PROVIDER UNIVERSE")
+    print("3. CONFIGURED COMPETITIONS (not provider discovery)")
     print("=" * 100)
+    print("\n  The provider adapter has no discovery call. `get_competitions()`")
+    print("  returns our own LEAGUE_IDS mapping without contacting the vendor,")
+    print("  so it cannot tell us what API-Football carries beyond our 38.")
+    print("  Implementing /leagues is a separate piece of work.")
 
-    from app.providers.api_football import ApiFootballProvider
+    from app.providers.api_football import LEAGUE_IDS
 
-    # Read from the environment, as every other script does. The key is not
-    # a field on Settings, so the previous getattr silently returned None and
-    # reported "not configured" on a service where the key is present.
-    key = os.getenv("API_FOOTBALL_KEY", "")
-    if not key:
-        print("\nAPI_FOOTBALL_KEY is not set on this service; skipping discovery.")
-        return
-    provider = ApiFootballProvider(api_key=key)
-    try:
-        competitions = await provider.get_competitions()
-    except Exception as error:  # noqa: BLE001
-        print(f"\nDiscovery failed: {error}")
-        print("The audit above does not depend on this section.")
-        return
+    # Compared as integers on both sides. The mismatch that made every
+    # configured competition look unused is pinned by a regression test.
+    configured_ids = {int(c.api_football_id): c for c in COMPETITIONS if c.api_football_id}
+    mapped = {code: int(league_id) for code, league_id in LEAGUE_IDS.items()}
 
-    print(f"\nProvider requests used by discovery: {provider.budget.used}")
+    print(f"\n  Configured competitions : {len(COMPETITIONS)}")
+    print(f"  Adapter league mappings : {len(mapped)}")
 
-    known = {c.api_football_id for c in COMPETITIONS}
-    unknown = [c for c in competitions if getattr(c, "external_id", None) not in known]
+    unmatched = [code for code, league_id in mapped.items() if league_id not in configured_ids]
+    mapped_ids = set(mapped.values())
+    missing = [
+        c.code for c in COMPETITIONS if int(c.api_football_id or 0) not in mapped_ids
+    ]
+
+    if unmatched:
+        print(f"\n  In the adapter but not configured: {sorted(unmatched)}")
+    if missing:
+        print(f"  Configured but not in the adapter: {sorted(missing)}")
+    if not unmatched and not missing:
+        print("\n  Adapter and configuration agree on all league IDs.")
+
     if country:
-        unknown = [c for c in unknown if country.lower() in str(getattr(c, "country", "")).lower()]
-
-    print(f"\nProvider carries {len(competitions)} competitions.")
-    print(f"We configure {len(COMPETITIONS)}. Unused: {len(unknown)}.")
-
-    print("\n" + "-" * 100)
-    print("INTERNATIONAL CLUB COMPETITIONS (flagged, not recommended yet)")
-    print("-" * 100)
-    for competition in competitions:
-        external = getattr(competition, "external_id", None)
-        try:
-            numeric = int(str(external))
-        except (TypeError, ValueError):
-            continue
-        if numeric in INTERNATIONAL_IDS:
-            print(f"  {numeric:>5}  {INTERNATIONAL_IDS[numeric]}")
-    print("\n  These play midweek and would fill Tuesday to Thursday directly.")
-    print("  They are NOT expansion candidates yet: their teams come from")
-    print("  different domestic scoring environments, and our rate model has no")
-    print("  way to compare a Brazilian side's attack with a Spanish one. A")
-    print("  cross-league normalisation has to be built and validated first.")
-
-    print("\n" + "-" * 100)
-    print("UNUSED DOMESTIC COMPETITIONS (first 60)")
-    print("-" * 100)
-    for competition in unknown[:60]:
-        print(
-            f"  {getattr(competition, 'external_id', '?')!s:>6}  "
-            f"{str(getattr(competition, 'name', '?'))[:40]:<42}"
-            f"{str(getattr(competition, 'country', '?'))[:20]}"
-        )
-    if len(unknown) > 60:
-        print(f"  ... and {len(unknown) - 60} more")
-
-    print("\n  A competition appearing here is a candidate, not an addition.")
-    print("  Each needs historical depth, team-identity resolution and its own")
-    print("  backtest before it can enter Best of the Day.")
+        chosen = [c for c in COMPETITIONS if country.lower() in c.country.lower()]
+        print(f"\n  Matching '{country}': {[c.code for c in chosen]}")
 
 
 async def main() -> int:
