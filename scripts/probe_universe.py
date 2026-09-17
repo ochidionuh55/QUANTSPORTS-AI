@@ -203,6 +203,30 @@ async def probe(days: int) -> int:
     for competition in competitions.values():
         grouped[competition.classify()[0]].append(competition)
 
+    # Senior domestic only: the like-for-like comparison. Counting youth,
+    # reserve and international fixtures on the outside against senior domestic
+    # on the inside would overstate the gap.
+    def senior_domestic(group: list[Competition]) -> list[Competition]:
+        return [
+            c for c in group if not c.is_international and not c.is_youth_or_secondary
+        ]
+
+    ours_senior = senior_domestic(ours)
+    outside_senior = senior_domestic(outside)
+    ours_senior_fixtures = sum(c.fixtures for c in ours_senior)
+    outside_senior_fixtures = sum(c.fixtures for c in outside_senior)
+
+    print("\n" + "-" * 96)
+    print("SENIOR DOMESTIC ONLY (like for like)")
+    print("-" * 96)
+    print(f"  Inside our 38             : {ours_senior_fixtures} fixtures, "
+          f"{len(ours_senior)} competitions")
+    print(f"  Outside our 38            : {outside_senior_fixtures} fixtures, "
+          f"{len(outside_senior)} competitions")
+    senior_total = ours_senior_fixtures + outside_senior_fixtures
+    if senior_total:
+        print(f"  Our share of senior domestic: {ours_senior_fixtures / senior_total:.1%}")
+
     print("\n" + "-" * 96)
     print("CLASSIFICATION")
     print("-" * 96)

@@ -28,6 +28,7 @@ import asyncio
 import sys
 from collections import defaultdict
 from datetime import UTC, datetime, timedelta
+from datetime import date as date_type
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -258,13 +259,27 @@ async def report_funnel(session: AsyncSession, runs: list[ScanRun], days: int) -
     from app.database.models import ServiceSelection
     from app.services.best_of_day import SERVICES
 
-    eligible_by_day: dict[object, int] = defaultdict(int)
+    eligible_by_day: dict[date_type, int] = defaultdict(int)
     for decision in unique:
         if decision.fully_modelled and decision.kickoff:
             eligible_by_day[decision.kickoff.date()] += 1
 
-    for day in sorted(eligible_by_day, key=str):
+    today = datetime.now(UTC).date()
+    for day in sorted(eligible_by_day):
         eligible = eligible_by_day[day]
+
+        # Best of the Day publishes today's fixtures only. A future date has
+        # candidates but no publication cycle yet, and printing "0 qualified"
+        # against 127 analysed reads as total failure when nothing has been
+        # attempted. Say so instead.
+        if day > today:
+            print("\n" + "-" * 92)
+            print(f"SERVICE CONVERSION — {day}")
+            print("-" * 92)
+            print(f"  {eligible} fully modelled candidates.")
+            print("  NOT YET PUBLISHED — this date's publication cycle has not run.")
+            print("  Conversion is unknown, not zero.")
+            continue
         selection_rows = await session.execute(
             select(ServiceSelection).where(ServiceSelection.selection_date == day)
         )
@@ -292,7 +307,13 @@ async def report_funnel(session: AsyncSession, runs: list[ScanRun], days: int) -
         print(f"  Fully modelled candidates  : {eligible}")
         print(f"  Unique fixtures qualified  : {len(unique_qualified)}")
         print(f"  Total service qualifications: {total_qualifications}")
-        print(f"  Total selections published : {len(selections)}\n")
+        print(f"  Total selections published : {len(selections)}")
+        print(
+            "\n  Counted live from service_selections. The run table above shows\n"
+            "  what telemetry captured when publication last attached, which is a\n"
+            "  snapshot: publishing again after that moment moves this number and\n"
+            "  not the stored one. A difference is staleness, not disagreement.\n"
+        )
 
         for service in SERVICES:
             qualified = len(qualified_fixtures.get(service.key, set()))
