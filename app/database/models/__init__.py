@@ -18,6 +18,7 @@ from app.database.models.highlights import HighlightFollow, HighlightSelection
 from app.database.models.historical import HistoricalMatch, ModelVersion
 from app.database.models.ingestion import DatasetIngestion
 from app.database.models.match import Market, Match, OddsSnapshot, Outcome
+from app.database.models.provider_fixtures import ProviderFixture
 from app.database.models.scan import BookingCode, Prediction, Scan
 from app.database.models.scan_telemetry import (
     RejectionCode,
@@ -51,6 +52,7 @@ __all__ = [
     "OddsSnapshot",
     "Outcome",
     "Prediction",
+    "ProviderFixture",
     "RejectionCode",
     "SavedFixture",
     "Scan",
