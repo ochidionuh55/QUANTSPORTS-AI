@@ -19,13 +19,6 @@ from app.database.models.historical import HistoricalMatch, ModelVersion
 from app.database.models.ingestion import DatasetIngestion
 from app.database.models.match import Market, Match, OddsSnapshot, Outcome
 from app.database.models.scan import BookingCode, Prediction, Scan
-from app.database.models.scan_telemetry import (
-    RejectionCode,
-    ScanDecision,
-    ScanRun,
-    ScanRunStatus,
-    ScanStage,
-)
 from app.database.models.selections import (
     DailySnapshot,
     SelectionAudit,
@@ -51,13 +44,8 @@ __all__ = [
     "OddsSnapshot",
     "Outcome",
     "Prediction",
-    "RejectionCode",
     "SavedFixture",
     "Scan",
-    "ScanDecision",
-    "ScanRun",
-    "ScanRunStatus",
-    "ScanStage",
     "SelectionAudit",
     "ServiceSelection",
     "SettledPrediction",
