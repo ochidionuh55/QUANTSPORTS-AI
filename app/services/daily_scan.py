@@ -23,12 +23,16 @@ from decimal import Decimal
 from sqlalchemy import delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.competitions import code_for_name
 from app.core.logging import get_logger
 from app.database.models import SettledPrediction, StoredAnalysis
+from app.database.models.scan_telemetry import RejectionCode, ScanRunStatus
 from app.providers.base import OddsProvider
 from app.providers.errors import ProviderError, ProviderRateLimitError
 from app.providers.models import ProviderEvent
+from app.quant.grid import grid_version
 from app.services.match_analysis import Coverage, MatchAnalysis, MatchAnalysisService
+from app.services.scan_telemetry import ScanTelemetry
 
 logger = get_logger(__name__)
 
@@ -106,15 +110,29 @@ class DailyScanService:
         moment = now or datetime.now(UTC)
         report = ScanReport()
 
+        # Observability only. A telemetry failure must never cost a selection,
+        # so every call here is best-effort and the scan proceeds regardless.
+        telemetry = ScanTelemetry(self._session)
+        await telemetry.start(
+            provider=provider.name,
+            hours_ahead=hours_ahead,
+            grid_version=grid_version(),
+            now=moment,
+        )
+
         try:
             events = await provider.get_events(hours_ahead=hours_ahead)
         except ProviderRateLimitError:
             logger.warning("scan.quota_exhausted")
             report.quota_exhausted = True
+            await telemetry.finish(status=ScanRunStatus.QUOTA_EXHAUSTED, fixtures_seen=0)
             return report
         except ProviderError as exc:
             logger.warning("scan.fixtures_failed", error=str(exc))
             report.errors += 1
+            await telemetry.finish(
+                status=ScanRunStatus.PROVIDER_ERROR, fixtures_seen=0, error_count=1
+            )
             return report
 
         report.fixtures_seen = len(events)
@@ -126,6 +144,7 @@ class DailyScanService:
             # request and would double-count coverage in the report.
             if event.external_id in seen:
                 report.duplicates_skipped += 1
+                telemetry.record_duplicate(event.external_id)
                 continue
             seen.add(event.external_id)
 
@@ -145,19 +164,105 @@ class DailyScanService:
                     error=str(exc),
                 )
                 report.errors += 1
+                competition_name = getattr(event.competition, "name", None)
+                telemetry.record(
+                    event.external_id,
+                    competition=competition_name,
+                    competition_code=code_for_name(competition_name),
+                    kickoff=event.start_time,
+                    home_team=event.home_team.name,
+                    away_team=event.away_team.name,
+                    rejection_code=RejectionCode.ANALYSIS_ERROR,
+                    rejection_detail=str(exc),
+                )
                 continue
 
             report.analysed += 1
             grade = str(analysis.coverage)
             report.coverage[grade] = report.coverage.get(grade, 0) + 1
 
+            self._record_decision(telemetry, event, analysis)
+
             await self._store(provider.name, event, analysis, moment)
             report.stored += 1
 
         await self._prune(moment)
+        await telemetry.finish(
+            status=ScanRunStatus.COMPLETED,
+            fixtures_seen=len(events),
+            odds_fetched=report.odds_fetched,
+            error_count=report.errors,
+            now=moment,
+        )
         await self._session.flush()
         logger.info("scan.completed", summary=report.summary())
         return report
+
+    @staticmethod
+    def _record_decision(
+        telemetry: ScanTelemetry, event: ProviderEvent, analysis: object
+    ) -> None:
+        """Translate one analysis into a durable scan decision.
+
+        The coverage tier and the reason the analyser wrote are mapped onto
+        machine-readable codes here, once, so no report has to parse English
+        to find out why a fixture was dropped.
+        """
+        coverage = str(getattr(analysis, "coverage", ""))
+        detail = getattr(analysis, "unavailable_reason", None) or ""
+        lowered = detail.lower()
+
+        supported = coverage != "unsupported" or "could not match" in lowered
+        identity = True
+        history = True
+        produced = False
+        fully = False
+        code: RejectionCode | None = None
+
+        if coverage == "unsupported":
+            if "could not match" in lowered:
+                identity = False
+                history = False
+                code = RejectionCode.BOTH_TEAMS_UNRESOLVED
+            else:
+                supported = False
+                identity = False
+                history = False
+                code = RejectionCode.UNSUPPORTED_COMPETITION
+        elif coverage == "data_only":
+            if "no matched history" in lowered:
+                identity = False
+                history = False
+                code = RejectionCode.BOTH_TEAMS_UNRESOLVED
+            elif "no model could be applied" in lowered:
+                code = RejectionCode.MODEL_FAILURE
+            else:
+                history = False
+                code = RejectionCode.INSUFFICIENT_HISTORY
+        elif coverage == "partially_modelled":
+            produced = True
+            code = RejectionCode.INCOMPLETE_MODEL
+        elif coverage == "fully_modelled":
+            produced = True
+            fully = True
+
+        name = getattr(event.competition, "name", None)
+        telemetry.record(
+            event.external_id,
+            competition=name,
+            competition_code=code_for_name(name),
+            kickoff=event.start_time,
+            home_team=event.home_team.name,
+            away_team=event.away_team.name,
+            competition_supported=supported,
+            identity_resolved=supported and identity,
+            history_sufficient=supported and identity and history,
+            model_produced=produced,
+            fully_modelled=fully,
+            rejection_code=code,
+            rejection_detail=detail or None,
+            coverage_tier=coverage or None,
+        )
 
     @staticmethod
     def _wants_odds(event: ProviderEvent, moment: datetime) -> bool:
