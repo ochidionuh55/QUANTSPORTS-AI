@@ -104,6 +104,138 @@ WITHHELD: dict[int, str] = {
 
 
 @dataclass
+class Preflight:
+    """Identity coverage for a competition's whole historical universe.
+
+    Run before any fixture is stored. Two orderings have already produced a
+    silently truncated dataset: seeding one season then ingesting eight, and
+    ingesting before seeding at all. Both left a competition looking ingested
+    while 43% and 69% of its fixtures had no team to attach to — and a model
+    fitted on that trains only on the clubs that happened to still be in the
+    division.
+
+    The remedy is not to remember the order. It is for ingestion to establish
+    its own prerequisite.
+    """
+
+    league_id: int
+    provider_teams: int = 0
+    already_known: int = 0
+    seeded: int = 0
+    unresolvable: list[tuple[str, str, float]] = field(default_factory=list)
+    seasons_checked: list[int] = field(default_factory=list)
+    errors: list[str] = field(default_factory=list)
+
+    @property
+    def covered(self) -> int:
+        return self.already_known + self.seeded
+
+    @property
+    def coverage(self) -> float:
+        if not self.provider_teams:
+            return 0.0
+        return self.covered / self.provider_teams
+
+    @property
+    def passes(self) -> bool:
+        """Whether ingestion may proceed to a training-ready state.
+
+        Every team the provider lists across every ingested season must
+        resolve. A single unresolvable club means some fixtures cannot be
+        attached, and a partial training set is worse than none: the gap is
+        invisible once the numbers look plausible.
+        """
+        return bool(self.provider_teams) and not self.unresolvable and self.coverage >= 1.0
+
+
+async def run_preflight(
+    session: AsyncSession,
+    provider: Any,
+    league_id: int,
+    country: str,
+    seasons: list[int],
+    apply: bool,
+) -> Preflight:
+    """Establish identity coverage, seeding what is safely seedable.
+
+    Uses the same resolver safeguards as seeding: an uncertain match is never
+    forced, and a fuzzy match against another team from the same provider is
+    refused outright. Anything that cannot be resolved *or* safely created is
+    reported by name rather than skipped.
+    """
+    report = Preflight(league_id=league_id)
+    resolver = TeamResolver(session)
+
+    collected: dict[str, dict[str, Any]] = {}
+    for season in seasons:
+        try:
+            items = await asyncio.wait_for(
+                provider._get(
+                    "teams", {"league": league_id, "season": season}
+                ),
+                timeout=60,
+            )
+        except Exception as error:  # noqa: BLE001
+            report.errors.append(f"season {season}: {type(error).__name__}")
+            continue
+        report.seasons_checked.append(season)
+        for entry in items:
+            team = entry.get("team") or {}
+            key = str(team.get("id") or team.get("name") or "")
+            if key and key not in collected:
+                collected[key] = entry
+
+    report.provider_teams = len(collected)
+
+    for entry in collected.values():
+        team = entry.get("team") or {}
+        name = str(team.get("name") or "").strip()
+        if not name:
+            continue
+        external_id = str(team.get("id") or "") or None
+
+        existing = await resolver.resolve(
+            provider_name=PROVIDER,
+            raw_name=name,
+            sport="football",
+            country=country,
+            external_team_id=external_id,
+            learn=False,
+        )
+        if existing.is_resolved:
+            report.already_known += 1
+            continue
+
+        if not apply:
+            # Dry run: an unknown team would be created, not blocked.
+            report.seeded += 1
+            continue
+
+        try:
+            resolution, created = await resolver.resolve_or_create(
+                provider_name=PROVIDER,
+                raw_name=name,
+                sport="football",
+                country=country,
+                external_team_id=external_id,
+            )
+        except Exception as error:  # noqa: BLE001
+            report.unresolvable.append((name, f"error: {type(error).__name__}", 0.0))
+            continue
+
+        if created or resolution.is_resolved:
+            report.seeded += 1
+            continue
+
+        # Queued for review by the resolver. No record was made, and forcing
+        # one is the thing these safeguards exist to prevent.
+        candidate = getattr(resolution.candidate, "canonical_name", "no candidate")
+        report.unresolvable.append((name, str(candidate), float(resolution.confidence)))
+
+    return report
+
+
+@dataclass
 class Reconciliation:
     """Every fixture accounted for, per competition."""
 
@@ -503,9 +635,41 @@ async def main() -> int:
     await database.connect()
 
     reports: list[Reconciliation] = []
+    blocked: list[tuple[str, Preflight]] = []
     async with database.session() as session:
         for league_id, (label, country) in chosen.items():
             print(f"\n  {label} ({country}) — id {league_id}", flush=True)
+
+            # Preflight. Ingestion establishes its own prerequisite rather than
+            # relying on a seeding script having been run first in the right
+            # order with the right season range.
+            print("    preflight: checking historical identity coverage ...", flush=True)
+            pre = await run_preflight(
+                session, provider, league_id, country, seasons, not args.dry_run
+            )
+            print(
+                f"    preflight: {pre.provider_teams} teams across "
+                f"{len(pre.seasons_checked)} seasons — "
+                f"{pre.already_known} known, {pre.seeded} seeded, "
+                f"{len(pre.unresolvable)} unresolvable",
+                flush=True,
+            )
+            if not args.dry_run:
+                await session.commit()
+
+            if not pre.passes:
+                blocked.append((label, pre))
+                print(
+                    f"    BLOCKED: identity coverage {pre.coverage:.0%}. "
+                    "Ingestion would produce a silently truncated training set.",
+                    flush=True,
+                )
+                for name, candidate, confidence in pre.unresolvable[:15]:
+                    print(f"      unresolvable: {name}  ->  {candidate} ({confidence:.2f})")
+                for error in pre.errors:
+                    print(f"      preflight error: {error}")
+                continue
+
             report = await ingest_competition(
                 session, provider, league_id, label, country, seasons, args.dry_run
             )
@@ -579,6 +743,20 @@ async def main() -> int:
             print("      *** DOES NOT BALANCE ***")
         for error in report.errors:
             print(f"      error: {error}")
+
+    if blocked:
+        print("\n" + "-" * 104)
+        print("BLOCKED — REVIEW REQUIRED")
+        print("-" * 104)
+        for label, pre in blocked:
+            print(f"\n  {label}: identity coverage {pre.coverage:.0%}")
+            print(f"    {pre.provider_teams} provider teams, {pre.covered} resolved")
+            for name, candidate, confidence in pre.unresolvable:
+                print(f"    {name}  ->  {candidate} ({confidence:.2f})")
+        print("\n  These competitions were not ingested. A team that cannot be")
+        print("  safely identified means fixtures with no team to attach to, and")
+        print("  a model fitted on the remainder would train only on the clubs")
+        print("  that happened to resolve.")
 
     if args.dry_run:
         print("\n  DRY RUN. Nothing written; transaction rolled back.")
