@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import os
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -240,10 +241,12 @@ async def discover(country: str | None) -> None:
 
     from app.providers.api_football import ApiFootballProvider
 
-    settings = get_settings()
-    key = getattr(settings, "api_football_key", None)
+    # Read from the environment, as every other script does. The key is not
+    # a field on Settings, so the previous getattr silently returned None and
+    # reported "not configured" on a service where the key is present.
+    key = os.getenv("API_FOOTBALL_KEY", "")
     if not key:
-        print("\nNo API_FOOTBALL_KEY configured; skipping discovery.")
+        print("\nAPI_FOOTBALL_KEY is not set on this service; skipping discovery.")
         return
     provider = ApiFootballProvider(api_key=key)
     try:

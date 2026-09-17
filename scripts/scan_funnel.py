@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import os
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -259,10 +260,9 @@ async def probe_provider(day_count: int) -> int | None:
     """Ask the provider how many fixtures exist, to anchor the top of the funnel."""
     from app.providers.api_football import ApiFootballProvider
 
-    settings = get_settings()
-    key = getattr(settings, "api_football_key", None)
+    key = os.getenv("API_FOOTBALL_KEY", "")
     if not key:
-        print("No API_FOOTBALL_KEY configured; skipping provider probe.\n")
+        print("API_FOOTBALL_KEY is not set on this service; skipping probe.\n")
         return None
 
     provider = ApiFootballProvider(api_key=key)
