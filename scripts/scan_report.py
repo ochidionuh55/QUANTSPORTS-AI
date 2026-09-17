@@ -247,13 +247,14 @@ async def report_funnel(session: AsyncSession, runs: list[ScanRun], days: int) -
                 f"{sum(1 for d in group if d.qualified):>11}"
             )
 
-    # Service-level conversion.
+    # Service-level conversion, scoped to one day.
     #
-    # "analysed" is the number of fixtures that were actually eligible for a
-    # service's qualification test: fully modelled fixtures kicking off that
-    # day. Unsupported fixtures and ones that never produced a model
-    # probability are excluded, because counting them would inflate the
-    # denominator with fixtures the service never had the chance to consider.
+    # Best of the Day publishes today's fixtures only — ``publish()`` bounds
+    # its query at end of day. Summing fully modelled fixtures across the whole
+    # telemetry window therefore counts Friday's and Saturday's candidates into
+    # Thursday's denominator, which reported "159 analysed" for a service that
+    # in truth had five fixtures to choose from. It made a healthy conversion
+    # look like a catastrophic one.
     from app.database.models import ServiceSelection
     from app.services.best_of_day import SERVICES
 
@@ -262,31 +263,43 @@ async def report_funnel(session: AsyncSession, runs: list[ScanRun], days: int) -
         if decision.fully_modelled and decision.kickoff:
             eligible_by_day[decision.kickoff.date()] += 1
 
-    if eligible_by_day:
-        selection_days = sorted(eligible_by_day, key=str)
+    for day in sorted(eligible_by_day, key=str):
+        eligible = eligible_by_day[day]
         selection_rows = await session.execute(
-            select(ServiceSelection).where(
-                ServiceSelection.selection_date.in_(selection_days)
-            )
+            select(ServiceSelection).where(ServiceSelection.selection_date == day)
         )
         selections = list(selection_rows.scalars().all())
-        qualified_by_service: dict[str, set[str]] = defaultdict(set)
+
+        qualified_fixtures: dict[str, set[str]] = defaultdict(set)
         rows_by_service: dict[str, int] = defaultdict(int)
         for selection in selections:
-            qualified_by_service[selection.service_key].add(selection.provider_event_id)
+            qualified_fixtures[selection.service_key].add(selection.provider_event_id)
             rows_by_service[selection.service_key] += 1
 
-        total_eligible = sum(eligible_by_day.values())
+        unique_qualified = {
+            fixture for fixtures in qualified_fixtures.values() for fixture in fixtures
+        }
+        total_qualifications = sum(len(f) for f in qualified_fixtures.values())
+
         print("\n" + "-" * 92)
-        print("SERVICE CONVERSION")
+        print(f"SERVICE CONVERSION — {day}")
         print("-" * 92)
-        print("  analysed = fully modelled fixtures eligible for the test that day\n")
+        print(f"  analysed = fully modelled fixtures kicking off {day}, the cohort")
+        print("  Best of the Day actually chose from\n")
+
+        # Three different numbers, kept apart on purpose. One fixture can
+        # qualify for several services, so these do not and should not match.
+        print(f"  Fully modelled candidates  : {eligible}")
+        print(f"  Unique fixtures qualified  : {len(unique_qualified)}")
+        print(f"  Total service qualifications: {total_qualifications}")
+        print(f"  Total selections published : {len(selections)}\n")
+
         for service in SERVICES:
-            qualified = len(qualified_by_service.get(service.key, set()))
+            qualified = len(qualified_fixtures.get(service.key, set()))
             published = rows_by_service.get(service.key, 0)
             extra = f"   ({published} selections)" if published != qualified else ""
             print(
-                f"  {service.label:<34}{total_eligible:>5} analysed"
+                f"  {service.label:<34}{eligible:>4} analysed"
                 f" · {qualified:>3} qualified{extra}"
             )
 

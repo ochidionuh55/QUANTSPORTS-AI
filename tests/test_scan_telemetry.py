@@ -533,3 +533,65 @@ class TestCompetitionAttribution:
         source = inspect.getsource(scan)
         assert "code_for_api_id(" in source
         assert "or code_for_name(" in source
+
+
+class TestServiceDenominatorIsScopedToOneDay:
+    """Future fixtures must never inflate today's Best-of-Today denominator.
+
+    ``publish()`` bounds its query at end of day, so a service chooses from
+    today's fully modelled fixtures alone. A report that summed the whole
+    telemetry window said "159 analysed" for a service with five candidates,
+    turning a 60% conversion rate into an apparent 2% one.
+    """
+
+    def test_report_groups_eligibility_by_kickoff_date(self) -> None:
+        from pathlib import Path
+
+        source = (
+            Path(__file__).resolve().parents[1] / "scripts" / "scan_report.py"
+        ).read_text(encoding="utf-8")
+        # Eligibility is bucketed by day and the loop reports per day.
+        assert "eligible_by_day[decision.kickoff.date()] += 1" in source
+        assert "for day in sorted(eligible_by_day" in source
+        assert "eligible = eligible_by_day[day]" in source
+        # The whole-window sum that caused the bug must be gone.
+        assert "total_eligible = sum(eligible_by_day.values())" not in source
+
+    def test_report_keeps_the_three_counts_apart(self) -> None:
+        """Fixtures, qualifications and selection rows are different numbers."""
+        from pathlib import Path
+
+        source = (
+            Path(__file__).resolve().parents[1] / "scripts" / "scan_report.py"
+        ).read_text(encoding="utf-8")
+        assert "Unique fixtures qualified" in source
+        assert "Total service qualifications" in source
+        assert "Total selections published" in source
+
+    def test_selections_are_queried_for_that_day_only(self) -> None:
+        from pathlib import Path
+
+        source = (
+            Path(__file__).resolve().parents[1] / "scripts" / "scan_report.py"
+        ).read_text(encoding="utf-8")
+        assert "ServiceSelection.selection_date == day" in source
+        assert "ServiceSelection.selection_date.in_(" not in source
+
+    def test_one_fixture_may_qualify_for_many_services(self) -> None:
+        """5 fixtures producing 19 qualifications must not break an invariant."""
+        from app.database.models.scan_telemetry import ScanRun
+
+        run = ScanRun(
+            started_at=NOW,
+            provider="test",
+            fixtures_seen=7,
+            supported=7,
+            identity_resolved=6,
+            sufficient_history=5,
+            model_produced=5,
+            fully_modelled=5,
+            fixtures_with_qualifying_selection=5,
+            selections_published=19,
+        )
+        assert run.funnel_is_monotonic()
+        assert run.selections_published > run.fixtures_seen
