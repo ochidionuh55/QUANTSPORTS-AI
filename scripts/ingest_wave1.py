@@ -78,6 +78,25 @@ WAVE_1: dict[int, tuple[str, str]] = {
     243: ("Liga Pro Serie B", "Ecuador"),
 }
 
+EXPECTED_TEAMS: dict[int, int] = {
+    382: 36, 291: 57, 287: 48, 240: 23,
+    496: 76, 399: 34, 317: 30, 243: 29,
+}
+"""Distinct teams each competition's history contains, from the history audit.
+
+Compared against what actually resolves. Seeding once covered a single season
+and left 43% of Liga Leumit's fixtures unresolvable; the two scripts disagreed
+about what "the teams in this competition" meant and nothing checked them
+against each other. This is that check.
+"""
+
+IDENTITY_FAILURE_LIMIT = 0.05
+"""Share of fixtures that may fail identity before ingestion is not worth doing.
+
+Above this the competition would train on a biased subset — every club that
+left the division missing — which is worse than not training on it at all.
+"""
+
 WITHHELD: dict[int, str] = {
     138: "Serie C - Girone A — identity review outstanding (8 of 20 ambiguous)",
     563: "Ettan - Norra — identity review outstanding (5 of 16 ambiguous)",
@@ -491,6 +510,39 @@ async def main() -> int:
                 session, provider, league_id, label, country, seasons, args.dry_run
             )
             reports.append(report)
+
+            # Refuse to leave a competition looking ingested when a large
+            # share of its history could not be attached to a team.
+            expected = EXPECTED_TEAMS.get(league_id)
+            share = (
+                report.identity_failures / report.returned if report.returned else 0.0
+            )
+            if share > IDENTITY_FAILURE_LIMIT:
+                print(
+                    f"    *** IDENTITY GAP: {report.identity_failures:,} of "
+                    f"{report.returned:,} fixtures ({share:.0%}) could not be "
+                    "attached to a team.",
+                    flush=True,
+                )
+                print(
+                    f"    *** {len(report.teams)} teams resolved; the history audit "
+                    f"found {expected if expected else 'more'}.",
+                    flush=True,
+                )
+                print(
+                    "    *** Seed across every ingested season first:",
+                    flush=True,
+                )
+                print(
+                    f"    ***   python scripts/seed_teams.py --apply "
+                    f"--leagues {league_id} --seasons {args.seasons}",
+                    flush=True,
+                )
+                print(
+                    "    *** Then re-run this; ingestion is idempotent and will "
+                    "backfill what newly resolves.",
+                    flush=True,
+                )
             print(
                 f"    {report.returned} returned, {report.stored} stored, "
                 f"{report.trainable} trainable, {report.excluded_total} excluded, "

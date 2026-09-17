@@ -12,6 +12,13 @@ made, because creating one would split a club's identity in two — which is the
 failure that made Serie C and Ettan Norra risky in the first place. This
 script cannot override that; it has no path to force a match.
 
+**Every season, not the current one.** Seeding once ran against a single
+season and produced 16 teams for Liga Leumit; its eight-season history contains
+36, and ingestion then failed identity on 1,022 of 2,374 fixtures — 43% of the
+competition. Clubs relegated or promoted out of a division still played the
+matches a model needs to learn from, so the squad list has to span the same
+seasons the history does.
+
 **Dry run by default.** Nothing is written without ``--apply``, and the dry run
 reports exactly what would be created so the list can be read before it exists.
 
@@ -86,21 +93,41 @@ async def seed(
     league_id: int,
     label: str,
     country: str,
-    season: int,
+    seasons: list[int],
     apply: bool,
 ) -> SeedResult:
-    """Seed one competition's teams."""
+    """Seed one competition's teams across every season it will be ingested for.
+
+    The union of all seasons' squads, not the current one. Seeding a single
+    season produced 16 teams for Liga Leumit against 36 in its eight-season
+    history, and ingestion then lost 1,022 of 2,374 fixtures to identity
+    failure. A club relegated out of a division still played the matches a
+    model learns from.
+    """
     result = SeedResult(league_id=league_id, label=label)
     resolver = TeamResolver(session)
 
-    try:
-        items = await asyncio.wait_for(
-            provider._get("teams", {"league": league_id, "season": season}),
-            timeout=60,
-        )
-    except Exception as error:  # noqa: BLE001
-        print(f"    teams request failed — {type(error).__name__}: {error}", flush=True)
-        return result
+    collected: dict[str, dict[str, Any]] = {}
+    for season in seasons:
+        try:
+            season_items = await asyncio.wait_for(
+                provider._get("teams", {"league": league_id, "season": season}),
+                timeout=60,
+            )
+        except Exception as error:  # noqa: BLE001
+            result.failed.append(f"season {season}: {type(error).__name__}")
+            print(f"    {season}: request failed — {type(error).__name__}", flush=True)
+            continue
+        added = 0
+        for entry in season_items:
+            team_block = entry.get("team") or {}
+            key = str(team_block.get("id") or team_block.get("name") or "")
+            if key and key not in collected:
+                collected[key] = entry
+                added += 1
+        print(f"    {season}: {len(season_items)} teams, {added} new", flush=True)
+
+    items = list(collected.values())
 
     for item in items:
         team = item.get("team") or {}
@@ -154,7 +181,14 @@ async def main() -> int:
     """Seed canonical records."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--leagues", default="")
-    parser.add_argument("--season", type=int, default=datetime.now().year - 1)
+    parser.add_argument(
+        "--seasons",
+        type=int,
+        default=8,
+        help="How many seasons back to collect squads from. Must cover the "
+        "seasons ingestion will store, or clubs from earlier ones resolve to "
+        "nothing and their fixtures are lost to identity failure.",
+    )
     parser.add_argument(
         "--apply",
         action="store_true",
@@ -188,15 +222,17 @@ async def main() -> int:
     from app.providers.api_football import ApiFootballProvider
 
     provider = ApiFootballProvider(api_key=key)
+    current = datetime.now().year
+    seasons = [current - 1 - offset for offset in range(args.seasons)]
     database = Database(get_settings())
     await database.connect()
 
     results: list[SeedResult] = []
     async with database.session() as session:
         for league_id, (label, country) in chosen.items():
-            print(f"\n  {label} (id {league_id}, season {args.season})", flush=True)
+            print(f"\n  {label} (id {league_id}, {len(seasons)} seasons)", flush=True)
             outcome = await seed(
-                session, provider, league_id, label, country, args.season, args.apply
+                session, provider, league_id, label, country, seasons, args.apply
             )
             results.append(outcome)
             print(
