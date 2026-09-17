@@ -28,6 +28,7 @@ from enum import StrEnum
 from sqlalchemy import or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.competitions import code_for_name
 from app.core.logging import get_logger
 from app.database.models import HistoricalMatch, Team
 from app.providers.models import ProviderEvent
@@ -504,8 +505,15 @@ class MatchAnalysisService:
 
         lambda_home, lambda_away = expected_goals(home_strength, away_strength, league)
         # Routed through the canonical builder so this fixture's distribution
-        # is the same one every other surface derives its markets from.
-        return build_match_probabilities(lambda_home, lambda_away)
+        # is the same one every other surface derives its markets from. The
+        # competition selects a fitted correlation parameter; without it the
+        # fixture would silently take the global default, which the holdout
+        # audit rejected.
+        return build_match_probabilities(
+            lambda_home,
+            lambda_away,
+            competition=code_for_name(analysis.competition),
+        )
 
     def _elo(
         self,

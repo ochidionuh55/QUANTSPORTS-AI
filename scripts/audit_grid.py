@@ -237,7 +237,11 @@ def _parse_date(raw: str) -> date | None:
 
 
 def walk_forward(
-    paths: list[Path], min_history: int, min_team_matches: int
+    paths: list[Path],
+    min_history: int,
+    min_team_matches: int,
+    global_rho: bool = False,
+    evaluate_from: float = 0.0,
 ) -> tuple[Report, Report]:
     """Forecast every eligible fixture with both engines.
 
@@ -272,6 +276,11 @@ def walk_forward(
         if len(rows) < min_history:
             continue
 
+        # Rates are always warmed on the full history; only *scoring* is
+        # withheld. Skipping the early matches entirely would hand the holdout
+        # a colder model than production ever runs.
+        score_from = int(len(rows) * evaluate_from)
+
         # The production rate model, not a simplified stand-in. An earlier
         # version of this script used a symmetric attack/defence ratio with no
         # home-advantage term and no home/away split in the league baseline.
@@ -284,7 +293,7 @@ def walk_forward(
         away_record: dict[int, list[tuple[int, int]]] = defaultdict(list)
         league_home = league_away = played = 0
 
-        for match_date, home, away, home_goals, away_goals in rows:
+        for index, (match_date, home, away, home_goals, away_goals) in enumerate(rows):
             home_id = ids.setdefault(home, len(ids))
             away_id = ids.setdefault(away, len(ids))
 
@@ -295,7 +304,7 @@ def walk_forward(
                 and seen_home >= min_team_matches
                 and seen_away >= min_team_matches
             )
-            if eligible:
+            if eligible and index >= score_from:
                 averages = LeagueAverages(
                     home_goals=league_home / played,
                     away_goals=league_away / played,
@@ -319,7 +328,10 @@ def walk_forward(
                         )
                         for report, use_correction in ((independent, False), (corrected, True)):
                             probabilities = build_match_probabilities(
-                                lambda_home, lambda_away, corrected=use_correction
+                                lambda_home,
+                                lambda_away,
+                                corrected=use_correction,
+                                competition=None if global_rho else competition,
                             )
                             report.forecasts.append(
                                 Forecast(
@@ -360,6 +372,21 @@ def main() -> int:
     parser.add_argument("--min-team-matches", type=int, default=5)
     parser.add_argument("--bootstrap", type=int, default=2000)
     parser.add_argument("--json", default="", help="Write machine-readable results here.")
+    parser.add_argument(
+        "--global-rho",
+        action="store_true",
+        help="Use the single default rho instead of the fitted per-competition table.",
+    )
+    parser.add_argument(
+        "--evaluate-from",
+        type=float,
+        default=0.0,
+        help=(
+            "Skip this chronological fraction of each competition before scoring. "
+            "Set to the training fraction used by fit_rho.py to evaluate only on "
+            "fixtures the fit never saw."
+        ),
+    )
     args = parser.parse_args()
 
     directory = Path(args.data)
@@ -373,7 +400,13 @@ def main() -> int:
         print("No competition files found.", file=sys.stderr)
         return 1
 
-    independent, corrected = walk_forward(paths, args.min_history, args.min_team_matches)
+    independent, corrected = walk_forward(
+        paths,
+        args.min_history,
+        args.min_team_matches,
+        global_rho=args.global_rho,
+        evaluate_from=args.evaluate_from,
+    )
     if not independent.forecasts:
         print("No fixtures were eligible.", file=sys.stderr)
         return 1

@@ -78,6 +78,27 @@ COMPETITIONS: Final[tuple[Competition, ...]] = (
 
 BY_CODE: Final[dict[str, Competition]] = {c.code: c for c in COMPETITIONS}
 
+BY_NAME: Final[dict[str, Competition]] = {c.name.casefold(): c for c in COMPETITIONS}
+"""Lookup by display name.
+
+Analyses carry the competition's name, not its code, because that is what a
+provider supplies and what a screen shows. Anything keyed by code — the fitted
+Dixon-Coles parameters, for one — needs this to get back.
+"""
+
+
+def code_for_name(name: str | None) -> str | None:
+    """Return the competition code for a display name, if we know it.
+
+    Returns ``None`` for an unknown name rather than guessing. A wrong code
+    would silently select another league's fitted parameter, which is worse
+    than falling back to the default.
+    """
+    if not name:
+        return None
+    found = BY_NAME.get(name.casefold())
+    return found.code if found else None
+
 LEAGUE_IDS: Final[dict[str, int]] = {
     c.code: c.api_football_id for c in COMPETITIONS if c.api_football_id is not None
 }

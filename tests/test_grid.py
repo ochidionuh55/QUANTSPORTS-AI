@@ -83,19 +83,20 @@ class TestProductionRouting:
 class TestCorrectionSwitch:
     """The correction is configurable and defaults on."""
 
-    def test_defaults_to_disabled(self, monkeypatch: pytest.MonkeyPatch) -> None:
-        """Off by default, on the evidence in docs/VALIDATION.md.
+    def test_defaults_to_enabled(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        """On by default, on the evidence in docs/VALIDATION.md sections 13-18.
 
-        Pinned as a test because the default is a decision the audit made, not
-        a convenience. Flipping it silently would undo that decision.
+        Pinned because the default is a decision the holdout audit made, not a
+        convenience. It was off for the global rho and earned being on only
+        once rho was fitted per competition.
         """
         monkeypatch.delenv(grid_module.CORRECTION_ENV, raising=False)
-        assert correction_enabled() is False
-
-    @pytest.mark.parametrize("value", ["1", "true", "yes", "on", "TRUE"])
-    def test_can_be_enabled(self, monkeypatch: pytest.MonkeyPatch, value: str) -> None:
-        monkeypatch.setenv(grid_module.CORRECTION_ENV, value)
         assert correction_enabled() is True
+
+    @pytest.mark.parametrize("value", ["0", "false", "no", "off", "FALSE"])
+    def test_can_be_disabled(self, monkeypatch: pytest.MonkeyPatch, value: str) -> None:
+        monkeypatch.setenv(grid_module.CORRECTION_ENV, value)
+        assert correction_enabled() is False
 
     def test_disabled_reproduces_the_previous_engine_exactly(self) -> None:
         """Turning it off must be a true rollback, not an approximation."""
@@ -107,11 +108,11 @@ class TestCorrectionSwitch:
         self, monkeypatch: pytest.MonkeyPatch
     ) -> None:
         monkeypatch.delenv(grid_module.CORRECTION_ENV, raising=False)
-        assert model_name() == MODEL_NAME_INDEPENDENT
-        assert grid_version() == GRID_VERSION_INDEPENDENT
-        monkeypatch.setenv(grid_module.CORRECTION_ENV, "1")
         assert model_name() == MODEL_NAME_CORRECTED
         assert grid_version() == GRID_VERSION_CORRECTED
+        monkeypatch.setenv(grid_module.CORRECTION_ENV, "0")
+        assert model_name() == MODEL_NAME_INDEPENDENT
+        assert grid_version() == GRID_VERSION_INDEPENDENT
 
     def test_malformed_rho_falls_back_rather_than_raising(
         self, monkeypatch: pytest.MonkeyPatch
@@ -256,9 +257,9 @@ class TestVersionStamping:
         )
 
         monkeypatch.delenv(grid_module.CORRECTION_ENV, raising=False)
-        assert model_only_version() == MODEL_ONLY_VERSION
-        monkeypatch.setenv(grid_module.CORRECTION_ENV, "1")
         assert model_only_version() == MODEL_ONLY_VERSION_DC
+        monkeypatch.setenv(grid_module.CORRECTION_ENV, "0")
+        assert model_only_version() == MODEL_ONLY_VERSION
 
 
 class TestEnsembleWeightingSurvives:
@@ -294,3 +295,99 @@ class TestEnsembleWeightingSurvives:
         assert 'ComponentEstimate(\n' in source
         assert '"poisson"' in source
         assert "model_name()," not in source
+
+
+class TestPerCompetitionRho:
+    """The fitted table, and the fallbacks around it."""
+
+    def test_fitted_competitions_differ_from_the_default(self) -> None:
+        """If every lookup returned the default, the table is not wired in."""
+        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.grid import rho_for
+
+        fitted = [rho_for(code) for code in ("E0", "I2", "JAP", "SWE")]
+        assert any(value != default for value in fitted)
+
+    def test_unknown_competition_falls_back(self) -> None:
+        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.grid import rho_for
+
+        assert rho_for("NOT_A_LEAGUE") == default
+        assert rho_for(None) == default
+
+    def test_environment_override_wins(self, monkeypatch: pytest.MonkeyPatch) -> None:
+        from app.quant.grid import rho_for
+
+        monkeypatch.setenv(grid_module.RHO_ENV, "-0.09")
+        assert rho_for("E0") == pytest.approx(-0.09)
+
+    def test_fitted_values_stay_inside_the_search_bounds(self) -> None:
+        """A value outside the bounds means a corrupt or hand-edited table."""
+        from app.quant.dixon_coles import RHO_BOUNDS
+        from app.quant.grid import _rho_table
+
+        low, high = RHO_BOUNDS
+        for code, value in _rho_table().items():
+            assert low <= value <= high, f"{code} rho {value} outside {RHO_BOUNDS}"
+
+    def test_competition_changes_the_distribution(self) -> None:
+        """Passing a competition must actually reach the correction."""
+        from app.quant.grid import build_match_probabilities as build
+
+        japan = build(1.5, 1.2, corrected=True, competition="JAP")
+        italy = build(1.5, 1.2, corrected=True, competition="I2")
+        assert japan.draw != italy.draw
+
+    def test_positive_rho_lowers_draws(self) -> None:
+        """Three competitions fit positive; the effect must run the other way.
+
+        Brazil, Japan and Scottish League Two score closer to independently
+        than Poisson assumes. Applying the negative default there added draw
+        mass that was not missing, which is the +2.7% overshoot round 1 saw.
+        """
+        from app.quant.grid import build_match_probabilities as build
+        from app.quant.grid import rho_for
+
+        assert rho_for("JAP") > 0
+        plain = build(1.5, 1.2, corrected=False)
+        japan = build(1.5, 1.2, corrected=True, competition="JAP")
+        assert japan.draw < plain.draw
+
+    def test_table_is_read_once(self) -> None:
+        """Cached: this is read on every fixture in a scan."""
+        from app.quant.grid import _rho_table
+
+        assert _rho_table() is _rho_table()
+
+
+class TestLivePathResolvesRho:
+    """The live analysis must reach the fitted table, not the default.
+
+    The failure this guards is silent and total: analyses carry a competition
+    *name* while the fitted table is keyed by *code*. Passing the name through
+    unmapped resolves nothing, every fixture takes the global default, and the
+    holdout result this was adopted on quietly does not apply in production.
+    """
+
+    def test_display_names_resolve_to_codes(self) -> None:
+        from app.core.competitions import code_for_name
+
+        assert code_for_name("Premier League") == "E0"
+        assert code_for_name("premier league") == "E0"
+        assert code_for_name("Nonsense League") is None
+        assert code_for_name(None) is None
+
+    def test_resolved_names_reach_a_fitted_parameter(self) -> None:
+        from app.core.competitions import code_for_name
+        from app.quant.dixon_coles import DEFAULT_RHO as default
+        from app.quant.grid import rho_for
+
+        resolved = [rho_for(code_for_name(n)) for n in ("Premier League", "Serie B")]
+        assert any(value != default for value in resolved)
+
+    def test_live_analysis_maps_the_name(self) -> None:
+        """Asserted on source: passing the raw name would be a silent no-op."""
+        import app.services.match_analysis as analysis
+
+        source = inspect.getsource(analysis)
+        assert "code_for_name(analysis.competition)" in source

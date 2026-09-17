@@ -3,8 +3,11 @@
 **Date:** 17 September 2026
 **Question:** should the Dixon-Coles low-score correction become the production
 scoreline engine?
-**Answer:** not yet. Merge the architecture, ship with the correction **off**,
-revisit after the outstanding work below.
+**Answer (round 1, global rho):** no. Indistinguishable from chance.
+**Answer (round 2, per-competition rho):** **yes.** Enable it.
+
+Round 2 is section 13 onward. Sections 1–12 record round 1 unchanged, because
+the rejected result is the reason the second round happened.
 
 ---
 
@@ -202,3 +205,120 @@ Pinned by `TestEnsembleWeightingSurvives`.
 This audit measures **calibration only**. It makes no comparison against
 bookmaker prices and no claim about edge. The value-detection gate is
 unchanged.
+
+
+---
+
+# Round 2 — per-competition rho
+
+**Date:** 17 September 2026
+**Question:** does fitting rho per competition rescue a correction that a
+single global rho could not justify?
+**Answer:** yes, on held-out data, by every metric measured.
+
+## 13. Why a second round
+
+Round 1 rejected the correction on a global rho of −0.13. The per-competition
+table in §6 showed why it failed rather than that it was wrong in principle:
+the same parameter that moved Serie B from −6.4% to −3.4% pushed the Premier
+League from −1.0% to **+1.6%**, and Japan from −0.1% to **+2.7%**. One value
+was serving two opposite needs.
+
+## 14. Fitting
+
+`scripts/fit_rho.py`. Maximum likelihood by grid search, on the production rate
+model, walked forward. **Fitted on the first 60% of each competition
+chronologically; the remaining 40% was never seen by the fit.**
+
+Fitted for all 38 competitions. Range **−0.1400 to +0.0500, median −0.0450**,
+against a default of **−0.1300**.
+
+The default was roughly **three times too strong** for a typical competition,
+and pointed the **wrong way** for three: Brazil (+0.035), Japan (+0.050) and
+Scottish League Two (+0.010). Those leagues score closer to independently than
+Poisson assumes, so applying a negative rho added draw mass where none was
+missing — precisely the +2.7% overshoot seen in Japan in round 1.
+
+### 14.1 A fallback bug found while fitting
+
+The first version of `fit_rho.py` treated a fitted rho near zero as a failed
+fit and fell back to the default of −0.13 — applying the **strongest**
+available correction to exactly the competitions whose own data said apply
+**none**. Six competitions were affected.
+
+A fitted rho of −0.005 is not a missing answer. It is the answer. Every fitted
+value is now stored, and the default applies only where there is too little
+data to fit at all.
+
+## 15. Holdout results
+
+44,172 forecasts, scored only on the 40% no fit had seen.
+
+| Metric | Poisson | Global rho | Fitted rho |
+|---|---|---|---|
+| **Brier** | 0.618510 | 0.618574 ✗ worse | **0.618128 ✓ better** |
+| **Log loss** | 1.031599 | 1.033224 ✗ worse | **1.031428 ✓ better** |
+| **ECE** | 0.030464 | 0.026218 ✓ | **0.027180 ✓** |
+
+Log loss is the telling one. It degraded under the global rho in both rounds —
+the signature of over-correction — and improves under the fitted values.
+
+**Outcome bias:**
+
+| Outcome | Observed | Poisson | Global rho | Fitted rho |
+|---|---|---|---|---|
+| Home | 43.9% | −0.2% | −1.7% | **−0.7%** |
+| Draw | 26.0% | −1.7% | **+1.2%** (overshoot) | **−0.7%** |
+| Away | 30.1% | +1.9% | +0.5% | +1.4% |
+
+The fitted values **halve** the draw bias without overshooting, and cost far
+less on the home leg than the global rho did.
+
+**Paired bootstrap, 2,000 resamples:**
+
+```
+global rho : mean +0.000064   95% CI [-0.000289, +0.000422]   straddles zero
+fitted rho : mean -0.000382   95% CI [-0.000551, -0.000218]   excludes zero
+```
+
+**This is the result round 1 lacked.** The interval lies entirely below zero.
+
+**Consistency:** improved in **23 of 38** competitions, and in **all four**
+chronological windows (−0.00020, −0.00073, −0.00020, −0.00041). Round 1's
+global rho improved in only 2 of 4 windows with no consistent direction.
+
+## 16. Decision
+
+| | |
+|---|---|
+| **Per-competition rho** | **Adopt.** `app/quant/rho_fitted.json`, regenerable. |
+| **Dixon-Coles correction** | **Enable.** Default on. |
+
+Reasoning against the stated rule: every out-of-sample metric improves, the
+Brier gain is distinguishable from chance on held-out data, the direction is
+consistent across all four time windows, and the bias it was raised to fix is
+halved without overshooting. That clears the bar round 1 did not.
+
+Still not a claim of edge. This is calibration. No comparison against
+bookmaker prices was made and the value-detection gate is untouched.
+
+## 17. Reproduce
+
+```bash
+python scripts/fit_rho.py --train-fraction 0.6
+python scripts/audit_grid.py --evaluate-from 0.6                # fitted
+python scripts/audit_grid.py --evaluate-from 0.6 --global-rho   # comparison
+```
+
+Rollback at any time: `QUANT_DIXON_COLES_ENABLED=0`.
+
+## 18. Remaining weaknesses
+
+- Away-win over-prediction (+1.4%) is now the largest outcome bias and is
+  untouched by this work.
+- Competitions with positive fitted rho (BRA, JAP, SC3) may indicate something
+  structural the model misses, not merely a different correlation.
+- Rho is fitted once, not refitted as data accumulates. No mechanism exists to
+  detect it drifting stale.
+- Three competitions worsened by more than 0.0005 Brier (E0, SP1, T1). Their
+  fitted values are small and the residual error is elsewhere.
