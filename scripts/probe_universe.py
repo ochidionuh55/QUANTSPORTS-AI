@@ -128,7 +128,13 @@ class Competition:
         return self.code is not None
 
     kind: str = ""
-    """The provider's own "League" or "Cup". Authoritative where present."""
+    """The provider's own "League" or "Cup", from the /leagues endpoint.
+
+    **Not available on the fixtures endpoint.** Its ``league`` object carries
+    only id, name and country. Assuming a ``type`` field was there left every
+    domestic league classified UNKNOWN and Class A empty, which read as "no
+    expansion candidates exist" when it meant "the field was never populated".
+    """
 
     @property
     def lowered(self) -> str:
@@ -164,6 +170,11 @@ class Competition:
             return CompetitionType.SENIOR_MENS_CUP
         if self.kind.lower() == "league":
             return CompetitionType.SENIOR_MENS_LEAGUE
+        # Catalogue unavailable. Fall back to the name, marked as a guess by
+        # returning UNKNOWN for anything that does not clearly read as a cup.
+        # Better a smaller Class A than a confident wrong one.
+        if any(word in self.lowered for word in ("cup", "kupa", "copa", "coupe", "pokal")):
+            return CompetitionType.SENIOR_MENS_CUP
         return CompetitionType.UNKNOWN
 
     @property
@@ -207,7 +218,7 @@ class Competition:
             # is the same obstacle continental competitions present.
             return ("C", "domestic cup — teams span divisions")
         if kind is CompetitionType.UNKNOWN:
-            return ("D", "competition type not established")
+            return ("D", "competition type not established from the catalogue")
         if self.fixtures <= 1:
             return ("D", "one fixture seen — too little to judge")
         # Class A now requires a senior men's domestic league, established from
@@ -236,10 +247,17 @@ async def probe(days: int) -> int:
     provider = ApiFootballProvider(api_key=key)
     today = datetime.now(UTC).date()
 
+    # One request for the league catalogue. This is the only place the provider
+    # states whether a competition is a League or a Cup, and that distinction
+    # decides whether a competition can be modelled at all — a cup draws teams
+    # from several divisions. Worth a request; guessing from names is what
+    # filed four domestic cups as expansion candidates.
+    league_types: dict[int, str] = {}
+
     # Unbuffered. stdout is a pipe under `railway ssh`, so Python buffers it and
     # a session that closes before the process finishes loses everything
     # written so far — which is why a three-day probe returned no output at all
-    # while the one-day probe worked. Progress is printed per day for the same
+    # while the one-day probe worked. Progress is printed as we go for the same
     # reason: partial output beats none.
     reconfigure = getattr(sys.stdout, "reconfigure", None)
     if reconfigure is not None:
@@ -247,6 +265,25 @@ async def probe(days: int) -> int:
             reconfigure(line_buffering=True)
         except (AttributeError, ValueError):
             pass
+
+    try:
+        print("  fetching league catalogue ...", flush=True)
+        catalogue = await asyncio.wait_for(
+            provider._get("leagues", {}),
+            timeout=90,
+        )
+        for entry in catalogue:
+            league = entry.get("league") or {}
+            try:
+                league_types[int(str(league.get("id")))] = str(league.get("type") or "")
+            except (TypeError, ValueError):
+                continue
+        print(f"  catalogue: {len(league_types)} competitions typed", flush=True)
+    except Exception as error:  # noqa: BLE001
+        # Without it every competition falls to UNKNOWN, which is reported
+        # honestly rather than guessed around.
+        print(f"  league catalogue unavailable ({type(error).__name__}) — "
+              "competition types will read as unknown", flush=True)
     competitions: dict[int, Competition] = {}
     total_fixtures = 0
 
@@ -274,7 +311,7 @@ async def probe(days: int) -> int:
                     league_id=league_id,
                     name=str(league.get("name") or "?"),
                     country=str(league.get("country") or ""),
-                    kind=str(league.get("type") or ""),
+                    kind=league_types.get(league_id, ""),
                 )
                 competitions[league_id] = competition
             competition.fixtures += 1
