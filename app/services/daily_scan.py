@@ -17,7 +17,7 @@ unmodellable fixture gains nothing from a price.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime, time, timedelta
 from decimal import Decimal
 
 from sqlalchemy import delete, select
@@ -404,6 +404,32 @@ class AnalysisRepository:
         result = await self._session.execute(
             select(StoredAnalysis)
             .where(StoredAnalysis.kickoff >= moment - timedelta(hours=2))
+            .order_by(StoredAnalysis.kickoff)
+            .limit(limit)
+        )
+        return list(result.scalars().all())
+
+    async def today(self, limit: int = 200, now: datetime | None = None) -> list[StoredAnalysis]:
+        """Return today's remaining fixtures only.
+
+        ``upcoming`` has no upper bound, so on a quiet afternoon its next 200
+        fixtures reach into tomorrow and the day after. That is right for a
+        "what is coming up" list and wrong for a board about today: the
+        Outsider Board was showing Saturday fixtures on a Friday with nothing
+        to say which date they were.
+
+        Bounded at the end of the current UTC day, matching Best of the Day and
+        Explore Markets so the three surfaces cannot disagree about what "today"
+        means.
+        """
+        moment = now or datetime.now(UTC)
+        end_of_day = datetime.combine(
+            moment.date(), time.max, tzinfo=UTC
+        )
+        result = await self._session.execute(
+            select(StoredAnalysis)
+            .where(StoredAnalysis.kickoff >= moment - timedelta(hours=2))
+            .where(StoredAnalysis.kickoff <= end_of_day)
             .order_by(StoredAnalysis.kickoff)
             .limit(limit)
         )

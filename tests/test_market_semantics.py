@@ -533,3 +533,56 @@ class TestAnyCleanSheetIsOneCanonicalDefinition:
                     assert definition.probability_holds(home, away) == definition.settles(
                         home, away
                     )
+
+
+class TestSurfacesAgreeOnToday:
+    """Every "today" surface must mean the same day.
+
+    The Outsider Board queried ``kickoff > now`` with no upper bound, so its
+    next two hundred fixtures ran into tomorrow and the day after. On a quiet
+    afternoon it showed Saturday's card on a Friday, with nothing on screen to
+    say which date the fixtures belonged to.
+    """
+
+    def test_outsider_board_is_bounded_at_end_of_day(self) -> None:
+        import inspect
+
+        import app.services.daily_scan as scan
+
+        source = inspect.getsource(scan.AnalysisRepository.today)
+        assert "kickoff <= end_of_day" in source
+        assert "time.max" in source
+
+    def test_bot_uses_the_bounded_query(self) -> None:
+        import inspect
+
+        import app.bot.handlers as handlers
+
+        source = inspect.getsource(handlers.handle_divergence)
+        assert ".today(" in source
+        assert ".upcoming(" not in source
+
+    def test_api_route_has_an_upper_bound(self) -> None:
+        from pathlib import Path
+
+        source = (
+            Path(__file__).resolve().parents[1] / "app" / "api" / "routes" / "public.py"
+        ).read_text(encoding="utf-8")
+        assert "StoredAnalysis.kickoff <= end_of_day" in source
+
+    def test_board_states_its_date(self) -> None:
+        """A fixture list without a date cannot be checked by the reader."""
+        from app.bot.formatting import format_divergences
+
+        header = format_divergences([]).split("\n")[1]
+        assert "Today" in header
+        assert "📅" in header
+
+    def test_unbounded_upcoming_still_exists_for_other_surfaces(self) -> None:
+        """``upcoming`` is right for "what is coming up" and stays unchanged."""
+        import inspect
+
+        import app.services.daily_scan as scan
+
+        source = inspect.getsource(scan.AnalysisRepository.upcoming)
+        assert "end_of_day" not in source

@@ -711,7 +711,9 @@ async def handle_divergence(callback: CallbackQuery, user: User, session: object
     if not isinstance(callback.message, Message):
         return
 
-    records = await AnalysisRepository(session).upcoming(limit=200)  # type: ignore[arg-type]
+    # Today only. ``upcoming`` has no upper bound and was reaching into
+    # tomorrow's card with nothing on screen to say so.
+    records = await AnalysisRepository(session).today(limit=200)  # type: ignore[arg-type]
     found = find_divergences(list(records), limit=10)
 
     await callback.message.edit_text(

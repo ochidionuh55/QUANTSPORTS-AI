@@ -16,7 +16,7 @@ about a live selection — selections are immutable once published.
 
 from __future__ import annotations
 
-from datetime import UTC, date, datetime, timedelta
+from datetime import UTC, date, datetime, time, timedelta
 
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
@@ -739,9 +739,13 @@ async def divergence(
     and nothing about who is right.
     """
     moment = datetime.now(UTC)
+    # Bounded at end of day. Without an upper bound the next 200 fixtures reach
+    # into tomorrow, so the board silently mixed dates.
+    end_of_day = datetime.combine(moment.date(), time.max, tzinfo=UTC)
     rows = await session.execute(
         select(StoredAnalysis)
         .where(StoredAnalysis.kickoff > moment)
+        .where(StoredAnalysis.kickoff <= end_of_day)
         .order_by(StoredAnalysis.kickoff)
         .limit(200)
     )

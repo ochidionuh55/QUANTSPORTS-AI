@@ -11,6 +11,7 @@ be trusted.
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
+from datetime import UTC, datetime
 from decimal import Decimal
 
 from app.core.community import JOIN_PROMPT
@@ -2129,14 +2130,23 @@ DIVERGENCE_NOTICE = (
 )
 
 
-def format_divergences(items: list[object]) -> str:
+def format_divergences(items: list[object], now: datetime | None = None) -> str:
     """Render the Outsider Board.
 
     The market's own number sits beside ours on every line. A disagreement
     shown without the price it disagrees with invites a reader to assume we
     think we are right.
+
+    The date is stated in the header. The board was briefly unbounded and
+    reached into tomorrow's card, which is indistinguishable from today's once
+    the fixtures are on screen without a date.
     """
-    lines = ["<b>\U0001F3B2 OUTSIDER BOARD</b>", ""]
+    moment = now or datetime.now(UTC)
+    lines = [
+        "<b>\U0001F3B2 OUTSIDER BOARD</b>",
+        f"\U0001F4C5 Today · {moment:%a %-d %b %Y}",
+        "",
+    ]
 
     if not items:
         lines.append(
