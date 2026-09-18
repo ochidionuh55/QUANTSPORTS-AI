@@ -14,6 +14,10 @@ from app.database.models.activity import (
     UserPreferences,
 )
 from app.database.models.analysis import StoredAnalysis
+from app.database.models.capabilities import (
+    CapabilityState,
+    ServiceCapability,
+)
 from app.database.models.highlights import HighlightFollow, HighlightSelection
 from app.database.models.historical import HistoricalMatch, ModelVersion
 from app.database.models.ingestion import DatasetIngestion
@@ -39,6 +43,7 @@ from app.database.models.user import User, WalletTransaction
 __all__ = [
     "Base",
     "BookingCode",
+    "CapabilityState",
     "Competition",
     "DailySnapshot",
     "DatasetIngestion",
@@ -61,6 +66,7 @@ __all__ = [
     "ScanRunStatus",
     "ScanStage",
     "SelectionAudit",
+    "ServiceCapability",
     "ServiceSelection",
     "SettledPrediction",
     "StoredAnalysis",

@@ -26,6 +26,7 @@ from sqlalchemy import func, select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.competitions import code_for_name
 from app.core.logging import get_logger
 from app.database.models import (
     DailySnapshot,
@@ -46,6 +47,7 @@ from app.services.best_of_day import (
     model_only_version,
     settles,
 )
+from app.services.capability_gate import CapabilityGate
 from app.services.scan_telemetry import ScanTelemetry
 
 logger = get_logger(__name__)
@@ -221,6 +223,9 @@ class SelectionService:
 
         coverage: dict[str, int] = {}
         published_by_fixture: dict[str, int] = {}
+        gate = CapabilityGate(self._session)
+        version = model_only_version()
+        blocked_by_capability = 0
         for analysis in analyses:
             coverage[analysis.coverage] = coverage.get(analysis.coverage, 0) + 1
 
@@ -238,6 +243,18 @@ class SelectionService:
                     found = by_id.get(selection.forecast.fixture_id)
                     if found is None:
                         continue
+
+                    # Wave 1 competitions publish only where a validated
+                    # capability says they may. Established competitions are
+                    # not gated, so this cannot stop what already worked.
+                    decision = await gate.may_publish(
+                        code_for_name(getattr(found, "competition", None)),
+                        key,
+                        version,
+                    )
+                    if not decision:
+                        blocked_by_capability += 1
+                        continue
                     created = await self._store(selection, found, rank, moment)
                     published_by_fixture[selection.forecast.fixture_id] = (
                         published_by_fixture.get(selection.forecast.fixture_id, 0) + 1
@@ -251,6 +268,13 @@ class SelectionService:
         # so without this the last stage reads zero however many fixtures
         # published — which is exactly what the first telemetry run showed.
         await self._attach_telemetry(published_by_fixture, moment)
+
+        if blocked_by_capability:
+            logger.info(
+                "selections.capability_blocked",
+                blocked=blocked_by_capability,
+                model_version=version,
+            )
 
         await self._snapshot(moment, report, coverage)
         await self._session.flush()
