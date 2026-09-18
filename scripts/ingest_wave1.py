@@ -351,6 +351,15 @@ async def ingest_competition(
     code = code_for_api_id(league_id)
     report = Reconciliation(league_id=league_id, label=f"{label} ({country})")
     resolver = TeamResolver(session)
+
+    # Fixture ids already handled in this run. A database lookup cannot see a
+    # row added to the session but not yet flushed, so a fixture the provider
+    # repeats — within one season's response or across two seasons' — reaches
+    # the insert twice and violates the unique constraint. Tracking in memory
+    # is independent of flush timing.
+    seen_fixture_ids: set[str] = set()
+    historical_ids: set[str] = set()
+
     competition = (
         None if dry_run else await _competition_row(session, code, label, country)
     )
@@ -378,6 +387,11 @@ async def ingest_competition(
             fixture_id = str(fixture.get("id") or "")
             if not fixture_id:
                 continue
+            if fixture_id in seen_fixture_ids:
+                # The provider repeated a fixture. Counted once; a second row
+                # would inflate every figure and break the unique constraint.
+                continue
+            seen_fixture_ids.add(fixture_id)
             report.returned += 1
             report.seasons.add(str(season))
 
@@ -485,7 +499,10 @@ async def ingest_competition(
 
             # Trainable fixtures also join the evidence base. Its goals are
             # NOT NULL, so only fully resolved, scored fixtures go there.
-            if row.training_eligible and home_id and away_id:
+            if row.training_eligible and home_id and away_id and home_id != away_id:
+                if fixture_id in historical_ids:
+                    report.historical_existing += 1
+                    continue
                 existing = await session.execute(
                     select(HistoricalMatch).where(
                         HistoricalMatch.provider_name == PROVIDER,
@@ -493,6 +510,7 @@ async def ingest_competition(
                     )
                 )
                 if existing.scalar_one_or_none() is None:
+                    historical_ids.add(fixture_id)
                     session.add(
                         HistoricalMatch(
                             provider_name=PROVIDER,
