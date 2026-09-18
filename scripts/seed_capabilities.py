@@ -47,7 +47,27 @@ from app.database.models.capabilities import CapabilityState
 from app.infrastructure.database import Database
 from app.services.best_of_day import model_only_version
 
-MATRIX_PATH = Path("wave1_capabilities.json")
+
+def _matrix_path() -> Path:
+    """Find the committed matrix.
+
+    ``data/`` first, because the runtime image copies only ``app``,
+    ``migrations``, ``scripts`` and ``data`` — a file at the repository root is
+    committed but never reaches the container, which is how the first seeding
+    attempt failed with the matrix sitting in git the whole time.
+    """
+    root = Path(__file__).resolve().parents[1]
+    for candidate in (
+        root / "data" / "wave1_capabilities.json",
+        root / "wave1_capabilities.json",
+        Path("wave1_capabilities.json"),
+    ):
+        if candidate.exists():
+            return candidate
+    return root / "data" / "wave1_capabilities.json"
+
+
+MATRIX_PATH = _matrix_path()
 VALIDATION_VERSION = "wave1-walkforward-v1"
 
 # Provider league id to our competition code. The matrix is keyed by league id;
@@ -204,8 +224,12 @@ async def main() -> int:
     apply = args.apply and not args.dry_run
 
     if not MATRIX_PATH.exists():
-        print(f"{MATRIX_PATH} not found. It must be committed to the repository.")
+        print(f"{MATRIX_PATH} not found.")
+        print("The matrix must be committed under data/ — the runtime image does")
+        print("not copy files from the repository root.")
         return 1
+
+    print(f"  matrix: {MATRIX_PATH}")
 
     database = Database(get_settings())
     await database.connect()
