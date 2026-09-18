@@ -248,6 +248,16 @@ class Reconciliation:
     historical_new: int = 0
     historical_existing: int = 0
     identity_failures: int = 0
+    historical_total: int = 0
+    """Rows actually present in ``historical_matches`` for this competition.
+
+    Not ``historical_new``, which counts only what this run inserted. On a
+    second pass that is correctly zero, and treating it as the invariant would
+    make a clean idempotency proof look like a total failure. What must equal
+    ``trainable`` is the total present.
+    """
+
+    historical_duplicates: int = 0
     excluded: dict[str, int] = field(default_factory=lambda: defaultdict(int))
     seasons: set[str] = field(default_factory=set)
     teams: set[int] = field(default_factory=set)
@@ -267,6 +277,19 @@ class Reconciliation:
         return (
             self.returned == self.stored
             and self.stored == self.trainable + self.excluded_total
+        )
+
+    @property
+    def training_complete(self) -> bool:
+        """Whether every trainable fixture is actually in the evidence base.
+
+        Measured against rows present, not rows inserted by this run, so a
+        second pass inserting nothing still passes.
+        """
+        return (
+            self.historical_total == self.trainable
+            and self.identity_failures == 0
+            and self.historical_duplicates == 0
         )
 
 
@@ -496,6 +519,24 @@ async def ingest_competition(
             flush=True,
         )
 
+    # Count what is actually present, and check for duplicates on the provider
+    # key. These are the figures the invariant is stated against.
+    if not dry_run:
+        rows = await session.execute(
+            select(HistoricalMatch.provider_match_id)
+            .where(HistoricalMatch.provider_name == PROVIDER)
+            .where(
+                HistoricalMatch.provider_match_id.in_(
+                    select(ProviderFixture.provider_fixture_id).where(
+                        ProviderFixture.provider_league_id == league_id
+                    )
+                )
+            )
+        )
+        ids = [row[0] for row in rows.all()]
+        report.historical_total = len(set(ids))
+        report.historical_duplicates = len(ids) - len(set(ids))
+
     return report
 
 
@@ -514,6 +555,9 @@ def _persist(reports: list[Reconciliation]) -> None:
                 "trainable": report.trainable,
                 "historical_new": report.historical_new,
                 "historical_existing": report.historical_existing,
+                "historical_total": report.historical_total,
+                "historical_duplicates": report.historical_duplicates,
+                "training_complete": report.training_complete,
                 "identity_failures": report.identity_failures,
                 "excluded": dict(report.excluded),
                 "seasons": sorted(report.seasons),
@@ -539,16 +583,21 @@ def report_summary() -> int:
     print("=" * 104)
     print(
         f"\n  {'competition':<30}{'returned':>9}{'stored':>8}{'trainable':>11}"
-        f"{'hist new':>10}{'excluded':>10}{'ident fail':>11}  balances"
+        f"{'hist total':>11}{'dup':>5}{'excluded':>10}{'ident':>7}  bal  training"
     )
+    complete = 0
     for row in sorted(store.values(), key=lambda r: -int(r.get("returned", 0))):
         excluded = sum(int(v) for v in dict(row.get("excluded", {})).values())
+        if row.get("training_complete"):
+            complete += 1
         print(
             f"  {str(row.get('label'))[:29]:<30}{int(row.get('returned', 0)):>9,}"
             f"{int(row.get('stored', 0)):>8,}{int(row.get('trainable', 0)):>11,}"
-            f"{int(row.get('historical_new', 0)):>10,}{excluded:>10,}"
-            f"{int(row.get('identity_failures', 0)):>11,}"
-            f"  {'YES' if row.get('balances') else 'NO'}"
+            f"{int(row.get('historical_total', 0)):>11,}"
+            f"{int(row.get('historical_duplicates', 0)):>5}{excluded:>10,}"
+            f"{int(row.get('identity_failures', 0)):>7}"
+            f"  {'YES' if row.get('balances') else 'NO ':<3}"
+            f"  {'COMPLETE' if row.get('training_complete') else 'INCOMPLETE'}"
         )
 
     print("\n" + "-" * 104)
@@ -575,9 +624,24 @@ def report_summary() -> int:
     print(f"  stored            : {stored:,}")
     print(f"  trainable         : {trainable:,}")
     print(f"  excluded          : {excluded:,}")
+    historical_total = sum(int(r.get("historical_total", 0)) for r in store.values())
+    duplicates = sum(int(r.get("historical_duplicates", 0)) for r in store.values())
+    identity = sum(int(r.get("identity_failures", 0)) for r in store.values())
+    print(f"  historical rows   : {historical_total:,}")
+    print(f"  duplicate rows    : {duplicates}")
+    print(f"  identity failures : {identity}")
+
     if returned == stored and stored == trainable + excluded:
         print("\n  BALANCED. Every returned fixture is stored, and every stored")
         print("  fixture is either trainable or excluded for a stated reason.")
+        if historical_total == trainable and not duplicates and not identity:
+            print(f"\n  TRAINING COMPLETE in {complete} of {len(store)} competitions.")
+            print("  Every trainable fixture is present in historical_matches, with")
+            print("  no duplicates and no unresolved identities.")
+        else:
+            print(f"\n  TRAINING INCOMPLETE. {trainable - historical_total:,} trainable "
+                  "fixtures are not in historical_matches.")
+            print("  Re-run the affected competitions; ingestion is idempotent.")
     else:
         print("\n  DOES NOT BALANCE. Fixtures are unaccounted for between the")
         print(f"  provider and the database: {returned - stored} lost in storage, "

@@ -190,3 +190,65 @@ class TestSameProviderCollisionsNeverMerge:
         report.stored_new = 2000
         report.trainable = 2000
         assert not report.balances
+
+
+class TestTrainingCompletenessIsRunIndependent:
+    """The invariant must hold on a second pass that inserts nothing.
+
+    ``historical_new`` counts what one run inserted. On a correct idempotency
+    pass it is zero, so asserting ``trainable == historical_new`` would make a
+    clean rerun look like total failure. What must equal ``trainable`` is the
+    number of rows *present*.
+    """
+
+    def _report(self, **kwargs: Any) -> Any:
+        report = ingest.Reconciliation(league_id=287, label="Prva Liga")
+        for key, value in kwargs.items():
+            setattr(report, key, value)
+        return report
+
+    def test_complete_on_first_run(self) -> None:
+        report = self._report(
+            returned=2329, stored_new=2329, trainable=2329, historical_new=2329,
+            historical_total=2329,
+        )
+        assert report.balances
+        assert report.training_complete
+
+    def test_still_complete_on_an_idempotent_rerun(self) -> None:
+        """Nothing inserted, everything present. The case the old rule failed."""
+        report = self._report(
+            returned=2329, stored_updated=2329, trainable=2329, historical_new=0,
+            historical_existing=2329, historical_total=2329,
+        )
+        assert report.balances
+        assert report.historical_new == 0
+        assert report.training_complete
+
+    def test_partial_history_is_not_complete(self) -> None:
+        """Serbia's 558-fixture gap: balanced, but not training-ready."""
+        report = self._report(
+            returned=2329, stored_new=2329, trainable=2329, historical_new=1771,
+            historical_total=1771,
+        )
+        assert report.balances
+        assert not report.training_complete
+
+    def test_identity_failures_block_completeness(self) -> None:
+        report = self._report(
+            returned=1452, stored_new=1452, trainable=1452, historical_total=1452,
+            identity_failures=1008,
+        )
+        assert not report.training_complete
+
+    def test_duplicate_historical_rows_block_completeness(self) -> None:
+        report = self._report(
+            returned=2329, stored_new=2329, trainable=2329, historical_total=2329,
+            historical_duplicates=3,
+        )
+        assert not report.training_complete
+
+    def test_completeness_is_measured_on_rows_present(self) -> None:
+        source = INGEST_PATH.read_text(encoding="utf-8")
+        assert "self.historical_total == self.trainable" in source
+        assert "self.historical_total == self.trainable" in source
