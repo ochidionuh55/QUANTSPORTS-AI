@@ -198,14 +198,20 @@ def _no_btts(home: int, away: int) -> bool:
     return home == 0 or away == 0
 
 
-def _home_clean_sheet(home: int, away: int) -> bool:
-    """The home side keeps a clean sheet: the away side did not score."""
-    return away == 0
+def _any_clean_sheet(home: int, away: int) -> bool:
+    """Either side keeps a clean sheet.
 
+    The bookmaker's market is "Home Team or **Any** Clean Sheet", and *any*
+    is the operative word: whichever team concedes nothing settles it. A 0-2
+    home defeat wins, because the away side kept a sheet.
 
-def _away_clean_sheet(home: int, away: int) -> bool:
-    """The away side keeps a clean sheet: the home side did not score."""
-    return home == 0
+    This was briefly changed to each team's own sheet on the reasoning that a
+    0-2 defeat winning "Home or clean sheet" could not be right. It is right —
+    the market says any — and the change turned three correctly settled
+    selections into losses. The bookmaker's wording is the specification; what
+    seems intuitive is not.
+    """
+    return home == 0 or away == 0
 
 
 MARKETS: Final[tuple[MarketDefinition, ...]] = (
@@ -295,49 +301,36 @@ MARKETS: Final[tuple[MarketDefinition, ...]] = (
     ),
     # Result combined with that side's own clean sheet.
     #
-    # **Corrected.** These previously used a predicate meaning "either side
-    # keeps a clean sheet", which made a 0-2 home defeat win "Home or clean
-    # sheet" — because the *away* team kept the sheet. No bookmaker settles it
-    # that way, so a selection could show WON here while the same bet lost
-    # everywhere else. The predicate is now the home side's own clean sheet.
+    # "Any Clean Sheet", as the bookmaker offers it. The result leg names a
+    # team; the clean-sheet leg does not, and either side keeping one settles
+    # the bet. All three share one predicate so the three markets cannot drift
+    # apart, and the display names carry "Any" because dropping it describes a
+    # different bet.
     MarketDefinition(
         market="Result or clean sheet",
         outcome="Home or clean sheet",
-        predicate=_either(_home, _home_clean_sheet),
-        display_name="Home win or home clean sheet",
+        predicate=_either(_home, _any_clean_sheet),
+        display_name="Home Team or Any Clean Sheet",
         provider_market="Result or clean sheet",
-        provider_outcome="Home win or home clean sheet",
+        provider_outcome="Home Team or Any Clean Sheet",
         combination=True,
     ),
     MarketDefinition(
         market="Result or clean sheet",
         outcome="Away or clean sheet",
-        predicate=_either(_away, _away_clean_sheet),
-        display_name="Away win or away clean sheet",
+        predicate=_either(_away, _any_clean_sheet),
+        display_name="Away Team or Any Clean Sheet",
         provider_market="Result or clean sheet",
-        provider_outcome="Away win or away clean sheet",
+        provider_outcome="Away Team or Any Clean Sheet",
         combination=True,
     ),
-    # Retired: no verified provider semantics.
-    #
-    # "Draw" names no team, so "draw or clean sheet" has no team whose sheet is
-    # meant, and no bookmaker offers a market by this name to check against.
-    # Under the old either-side predicate it settled on any 0-x or x-0 score,
-    # which is not a bet anyone could place. Kept in the registry rather than
-    # deleted so selections already published under it remain resolvable, and
-    # marked unsupported so none can be published again.
     MarketDefinition(
         market="Result or clean sheet",
         outcome="Draw or clean sheet",
-        predicate=_either(_draw, _either(_home_clean_sheet, _away_clean_sheet)),
-        display_name="Draw or clean sheet (retired)",
-        provider_market=None,
-        supported=False,
-        unsupported_reason=(
-            "No verified bookmaker equivalent. 'Draw' names no team, so the "
-            "clean sheet has no owner, and the market cannot be settled "
-            "against a real bet."
-        ),
+        predicate=_either(_draw, _any_clean_sheet),
+        display_name="Draw or Any Clean Sheet",
+        provider_market="Result or clean sheet",
+        provider_outcome="Draw or Any Clean Sheet",
         combination=True,
     ),
 )

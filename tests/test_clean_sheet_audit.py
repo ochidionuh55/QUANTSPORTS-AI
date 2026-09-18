@@ -29,13 +29,27 @@ MARKET = "Result or clean sheet"
 
 
 class TestOldRuleIsReproducedFaithfully:
-    """The superseded predicate, so affected rows can be reasoned about."""
+    """The superseded predicate, kept so affected rows can be reasoned about.
+
+    ``old_rule`` reproduces the *any clean sheet* predicate, which the registry
+    has now been restored to. So the two agree everywhere: the narrowing that
+    once separated them was the error, and reverting it removed the divergence.
+
+    The class is kept rather than deleted because a future predicate change
+    needs this comparison, and because the three corrected settlements are only
+    explicable with both rules in view.
+    """
 
     @pytest.mark.parametrize(("home", "away"), [(0, 1), (0, 2), (0, 3), (0, 4)])
-    def test_old_rule_wrongly_won_defeats_to_nil(self, home: int, away: int) -> None:
-        """Exactly the three production rows: a home defeat to nil."""
+    def test_defeats_to_nil_win_under_both_rules(self, home: int, away: int) -> None:
+        """A home defeat to nil: the away side kept a sheet, so ANY settles it.
+
+        These are the scorelines of the three production rows that were
+        wrongly moved to LOST. Under the restored predicate they win again,
+        which is what the audit must put back.
+        """
         assert audit.old_rule(HOME_CS, home, away) is True
-        assert settles_won(MARKET, HOME_CS, home, away) is False
+        assert settles_won(MARKET, HOME_CS, home, away) is True
 
     def test_rules_agree_where_they_should(self) -> None:
         for home, away in [(2, 0), (2, 1), (0, 0), (1, 1)]:
@@ -47,10 +61,9 @@ class TestOldRuleIsReproducedFaithfully:
 class TestCorrectionOnlyEverRemovesWins:
     """A structural property, not an observation about these three rows.
 
-    The new predicate is a strict subset of the old one: "home win or *home*
-    clean sheet" cannot be satisfied where "home win or *either* clean sheet"
-    was not. So a correction can only turn WON into LOST. A LOST -> WON in a
-    real audit would mean the script, not the record, is wrong.
+    The registry now matches ``old_rule`` exactly, so a fresh audit finds
+    nothing to change. What it must still do is reverse the earlier correction:
+    the three rows moved to LOST are WON under the restored predicate.
     """
 
     def test_new_rule_never_wins_where_the_old_one_lost(self) -> None:

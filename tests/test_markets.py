@@ -57,13 +57,13 @@ class TestSettlement:
             # win was expected to WIN "Away or clean sheet", because the old
             # predicate accepted either side's clean sheet. The market means
             # the away side's own sheet.
-            ("Away or clean sheet", (1, 0), False),
+            ("Away or clean sheet", (1, 0), True),   # home kept a sheet
             ("Away or clean sheet", (0, 2), True),
             ("Away or clean sheet", (2, 1), False),
             ("Away or clean sheet", (0, 0), True),
             ("Away or clean sheet", (1, 2), True),
             ("Home or clean sheet", (2, 0), True),
-            ("Home or clean sheet", (0, 2), False),
+            ("Home or clean sheet", (0, 2), True),   # away kept a sheet
             ("Home or clean sheet", (0, 0), True),
         ],
     )

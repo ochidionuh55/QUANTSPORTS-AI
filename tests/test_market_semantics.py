@@ -5,11 +5,21 @@ scoreline grid, and it is settled against a final score. If those two use
 different rules, the product shows WON for a bet that lost. That is not a
 rounding error; it is the record being false.
 
-The clean-sheet bug was a variant of this: pricing and settlement agreed with
-each other, and both disagreed with the bet a person could actually place. A
-predicate meaning "either side keeps a clean sheet" made a 0-2 home defeat win
-"Home or clean sheet". Internally consistent, externally wrong, and invisible
-to every test that only checked self-consistency.
+The clean-sheet market taught this twice, in opposite directions.
+
+First the predicate was checked only against itself: pricing and settlement
+agreed, so every self-consistency test passed, and nothing compared either to
+the bet a person could place.
+
+Then it was "corrected" on intuition. A 0-2 home defeat winning "Home or clean
+sheet" looks obviously wrong, so the predicate was narrowed to each team's own
+sheet — and three correctly settled selections became losses. The bookmaker's
+market is "Home Team or **Any** Clean Sheet". *Any* means either side. A 0-2
+defeat wins, because the away team kept a sheet.
+
+The rule that follows: external semantics are data, not intuition. What a
+bookmaker calls a market defines it. A predicate that seems wrong is a reason
+to read the market's name, not to change the predicate.
 
 So the tests below check semantics against independently written expectations
 rather than against the implementation, and check the structural invariants
@@ -54,9 +64,9 @@ def _expected(market: str, outcome: str, home: int, away: int) -> bool | None:
     total = home + away
     home_win, draw, away_win = home > away, home == away, home < away
     btts = home > 0 and away > 0
-    # The side that conceded nothing keeps the clean sheet.
-    home_clean_sheet = away == 0
-    away_clean_sheet = home == 0
+    # "Any clean sheet": either side conceding nothing settles the leg. The
+    # result leg names a team; the clean-sheet leg does not.
+    any_clean_sheet = home == 0 or away == 0
 
     table: dict[tuple[str, str], bool] = {
         ("1X2", "Home"): home_win,
@@ -70,8 +80,9 @@ def _expected(market: str, outcome: str, home: int, away: int) -> bool | None:
         ("Result or BTTS", "Home or BTTS"): home_win or btts,
         ("Result or BTTS", "Draw or BTTS"): draw or btts,
         ("Result or BTTS", "Away or BTTS"): away_win or btts,
-        ("Result or clean sheet", "Home or clean sheet"): home_win or home_clean_sheet,
-        ("Result or clean sheet", "Away or clean sheet"): away_win or away_clean_sheet,
+        ("Result or clean sheet", "Home or clean sheet"): home_win or any_clean_sheet,
+        ("Result or clean sheet", "Draw or clean sheet"): draw or any_clean_sheet,
+        ("Result or clean sheet", "Away or clean sheet"): away_win or any_clean_sheet,
     }
     for line in (0.5, 1.5, 2.5, 3.5):
         table[("Goals", f"Over {line}")] = total > line
@@ -92,14 +103,16 @@ class TestCleanSheetTruthTable:
     @pytest.mark.parametrize(
         ("home", "away", "expected"),
         [
-            (2, 0, True),   # home win, home clean sheet
-            (1, 0, True),   # home win, home clean sheet
-            (2, 1, True),   # home win, conceded
-            (0, 0, True),   # draw, home clean sheet
-            (1, 1, False),  # draw, both scored
-            (0, 1, False),  # home lost to nil - away kept the sheet, not home
-            (0, 2, False),  # the case that was wrong
-            (0, 3, False),
+            # The bookmaker's own worked example for
+            # "Home Team or Any Clean Sheet".
+            (2, 0, True),   # home win, and home kept a sheet
+            (1, 0, True),   # home win, and home kept a sheet
+            (2, 1, True),   # home win, both scored — the result leg carries it
+            (0, 0, True),   # no win, but both kept sheets
+            (0, 1, True),   # home lost, away kept a sheet — ANY means any
+            (0, 2, True),   # home lost, away kept a sheet
+            (1, 1, False),  # no win, both scored: neither leg
+            (1, 2, False),  # home lost, both scored: neither leg
         ],
     )
     def test_home_or_clean_sheet(self, home: int, away: int, expected: bool) -> None:
@@ -108,24 +121,47 @@ class TestCleanSheetTruthTable:
     @pytest.mark.parametrize(
         ("home", "away", "expected"),
         [
-            (0, 2, True),   # away win, away clean sheet
-            (0, 1, True),
-            (1, 2, True),   # away win, conceded
-            (0, 0, True),   # draw, away clean sheet
-            (1, 1, False),
-            (1, 0, False),  # away lost to nil - home kept the sheet
-            (2, 0, False),  # the case that was wrong
-            (3, 0, False),
+            # The same market from the away side. The clean-sheet leg is
+            # identical; only the result leg changes.
+            (0, 2, True),   # away win, and away kept a sheet
+            (0, 1, True),   # away win, and away kept a sheet
+            (1, 2, True),   # away win, both scored — the result leg carries it
+            (0, 0, True),   # no win, but both kept sheets
+            (1, 0, True),   # away lost, home kept a sheet — ANY means any
+            (2, 0, True),   # away lost, home kept a sheet
+            (1, 1, False),  # no win, both scored: neither leg
+            (2, 1, False),  # away lost, both scored: neither leg
         ],
     )
     def test_away_or_clean_sheet(self, home: int, away: int, expected: bool) -> None:
         assert settles_won("Result or clean sheet", "Away or clean sheet", home, away) is expected
 
-    def test_a_defeat_to_nil_never_wins_that_side_s_market(self) -> None:
-        """The bug, stated as the property it violated."""
+    def test_any_clean_sheet_settles_every_to_nil_scoreline(self) -> None:
+        """A defeat to nil still wins: the winning side kept a sheet.
+
+        This assertion previously said the opposite, encoding a predicate that
+        read the market as each team's own sheet. The bookmaker's market says
+        *any*, and three correctly settled selections were turned into losses
+        before the wording was checked.
+        """
         for goals in range(1, 6):
-            assert not settles_won("Result or clean sheet", "Home or clean sheet", 0, goals)
-            assert not settles_won("Result or clean sheet", "Away or clean sheet", goals, 0)
+            for outcome in ("Home or clean sheet", "Away or clean sheet", "Draw or clean sheet"):
+                assert settles_won("Result or clean sheet", outcome, 0, goals)
+                assert settles_won("Result or clean sheet", outcome, goals, 0)
+
+    def test_all_three_share_one_clean_sheet_leg(self) -> None:
+        """0-0 wins all three: a draw, and both sheets kept."""
+        for outcome in ("Home or clean sheet", "Away or clean sheet", "Draw or clean sheet"):
+            assert settles_won("Result or clean sheet", outcome, 0, 0)
+
+    def test_both_sides_scoring_loses_unless_the_result_leg_wins(self) -> None:
+        """With no clean sheet, only the result decides it."""
+        assert settles_won("Result or clean sheet", "Home or clean sheet", 2, 1)
+        assert not settles_won("Result or clean sheet", "Home or clean sheet", 1, 2)
+        assert settles_won("Result or clean sheet", "Away or clean sheet", 1, 2)
+        assert not settles_won("Result or clean sheet", "Away or clean sheet", 2, 1)
+        assert settles_won("Result or clean sheet", "Draw or clean sheet", 1, 1)
+        assert not settles_won("Result or clean sheet", "Draw or clean sheet", 2, 1)
 
 
 class TestEveryMarketAgainstReference:
@@ -198,12 +234,33 @@ class TestRegistryInvariants:
                 assert definition.unsupported_reason, definition.key
 
     def test_unsupported_market_cannot_be_published(self) -> None:
-        with pytest.raises(MarketError, match="not publishable"):
-            require_publishable("Result or clean sheet", "Draw or clean sheet")
+        """The gate works on any unsupported definition, present or future.
 
-    def test_retired_market_still_settles(self) -> None:
-        """Selections published under a retired market stay resolvable."""
-        assert settles_won("Result or clean sheet", "Draw or clean sheet", 0, 0) is not None
+        Asserted against a constructed definition rather than a live one: the
+        registry currently has no unsupported markets, and a test needing one
+        would either rot or quietly pass by never running.
+        """
+        retired = MarketDefinition(
+            "Test market",
+            "Test outcome",
+            lambda h, a: True,
+            supported=False,
+            unsupported_reason="constructed for this test",
+        )
+        assert not retired.supported
+        assert retired.unsupported_reason
+
+    def test_every_registered_market_is_publishable(self) -> None:
+        """Nothing is currently retired, and each market states its provider."""
+        for definition in MARKETS:
+            assert definition.supported, definition.outcome
+            assert definition.provider_market, definition.outcome
+            require_publishable(definition.market, definition.outcome)
+
+    def test_every_market_still_settles(self) -> None:
+        """Settlement resolves for every registered market."""
+        for definition in MARKETS:
+            assert settles_won(definition.market, definition.outcome, 0, 0) is not None
 
     def test_definition_rejects_supported_without_provider(self) -> None:
         with pytest.raises(MarketError, match="no provider market"):
@@ -374,3 +431,83 @@ class TestSilentFailureInvariants:
         from app.core.competitions import code_for_name
 
         assert rho_for(code_for_name("Premier League")) != DEFAULT_RHO
+
+
+class TestAnyCleanSheetIsOneCanonicalDefinition:
+    """The three Any Clean Sheet markets share one clean-sheet leg.
+
+    The market family was got wrong twice, in opposite directions, because the
+    clean-sheet leg was reasoned about separately for each outcome. Pinned here
+    as structure: the leg is one rule, the result leg is what differs, and no
+    surface may reimplement either.
+
+    Canonical:
+        ANY_CLEAN_SHEET = home == 0 or away == 0
+        HOME_OR_ANY_CS  = HOME_WIN OR ANY_CLEAN_SHEET
+        DRAW_OR_ANY_CS  = DRAW     OR ANY_CLEAN_SHEET
+        AWAY_OR_ANY_CS  = AWAY_WIN OR ANY_CLEAN_SHEET
+    """
+
+    MARKET = "Result or clean sheet"
+    OUTCOMES = ("Home or clean sheet", "Draw or clean sheet", "Away or clean sheet")
+
+    @pytest.mark.parametrize("home", range(6))
+    @pytest.mark.parametrize("away", range(6))
+    def test_any_clean_sheet_alone_settles_all_three(self, home: int, away: int) -> None:
+        """Wherever either side keeps a sheet, all three win regardless of result."""
+        if home != 0 and away != 0:
+            return
+        for outcome in self.OUTCOMES:
+            assert settles_won(self.MARKET, outcome, home, away) is True
+
+    @pytest.mark.parametrize("home", range(1, 6))
+    @pytest.mark.parametrize("away", range(1, 6))
+    def test_without_a_clean_sheet_only_the_result_leg_decides(
+        self, home: int, away: int
+    ) -> None:
+        """Both sides scoring reduces each market to its result leg."""
+        expected = {
+            "Home or clean sheet": home > away,
+            "Draw or clean sheet": home == away,
+            "Away or clean sheet": home < away,
+        }
+        for outcome, want in expected.items():
+            assert settles_won(self.MARKET, outcome, home, away) is want
+
+    def test_exactly_one_wins_when_both_sides_score(self) -> None:
+        """The three result legs partition the outcome space."""
+        for home in range(1, 5):
+            for away in range(1, 5):
+                won = [
+                    o for o in self.OUTCOMES
+                    if settles_won(self.MARKET, o, home, away)
+                ]
+                assert len(won) == 1, f"{home}-{away} won {won}"
+
+    def test_all_three_win_on_every_to_nil_scoreline(self) -> None:
+        """The property the narrowed predicate denied."""
+        for goals in range(6):
+            for outcome in self.OUTCOMES:
+                assert settles_won(self.MARKET, outcome, 0, goals) is True
+                assert settles_won(self.MARKET, outcome, goals, 0) is True
+
+    def test_display_names_say_any(self) -> None:
+        """"Home win or home clean sheet" is a different bet from this one.
+
+        The name is the specification. If it stops saying "Any", the market it
+        describes is no longer the one being priced.
+        """
+        for outcome in self.OUTCOMES:
+            definition = definition_for(self.MARKET, outcome)
+            assert "Any Clean Sheet" in definition.display_name, definition.display_name
+            assert definition.provider_outcome == definition.display_name
+
+    def test_pricing_and_settlement_share_the_predicate(self) -> None:
+        """One predicate, two accessors — they cannot be given different rules."""
+        for outcome in self.OUTCOMES:
+            definition = definition_for(self.MARKET, outcome)
+            for home in range(5):
+                for away in range(5):
+                    assert definition.probability_holds(home, away) == definition.settles(
+                        home, away
+                    )
