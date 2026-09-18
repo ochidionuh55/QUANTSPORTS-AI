@@ -100,16 +100,28 @@ SERVICES: Final[tuple[ServiceDefinition, ...]] = (
     ServiceDefinition(
         "away_or_btts", "🔥 Best Away or BTTS", "Result or BTTS", "Away or BTTS", 0.72
     ),
+    # "Any Clean Sheet": either side keeping one settles the clean-sheet leg.
+    # ``draw_or_cs`` was removed while the market was wrongly retired, which
+    # left three published selections unable to settle. Restored with its
+    # original key so those rows resolve, and its original threshold so the
+    # revalidation measures what production would actually publish.
     ServiceDefinition(
         "home_or_cs",
-        "🔥 Best Home or Clean Sheet",
+        "🔥 Best Home Team or Any Clean Sheet",
         "Result or clean sheet",
         "Home or clean sheet",
         0.75,
     ),
     ServiceDefinition(
+        "draw_or_cs",
+        "🔥 Best Draw or Any Clean Sheet",
+        "Result or clean sheet",
+        "Draw or clean sheet",
+        0.65,
+    ),
+    ServiceDefinition(
         "away_or_cs",
-        "🔥 Best Away or Clean Sheet",
+        "🔥 Best Away Team or Any Clean Sheet",
         "Result or clean sheet",
         "Away or clean sheet",
         0.70,

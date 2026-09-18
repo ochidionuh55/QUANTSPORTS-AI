@@ -295,10 +295,32 @@ class TestPublishedServicesAreSettleable:
         for service in SERVICES:
             require_publishable(service.market, service.outcome)
 
-    def test_no_service_uses_the_retired_market(self) -> None:
+    def test_all_three_any_clean_sheet_services_are_published(self) -> None:
+        """The family is complete again.
+
+        ``draw_or_cs`` was removed while the market was wrongly retired, which
+        left three published selections with no service able to settle them.
+        All three outcomes now have a service, and each names a market the
+        registry supports.
+        """
         from app.services.best_of_day import SERVICES
 
-        assert not [s for s in SERVICES if s.outcome == "Draw or clean sheet"]
+        outcomes = {
+            s.outcome for s in SERVICES if s.market == "Result or clean sheet"
+        }
+        assert outcomes == {
+            "Home or clean sheet",
+            "Draw or clean sheet",
+            "Away or clean sheet",
+        }
+
+    def test_service_labels_say_any_clean_sheet(self) -> None:
+        """The menu must not describe a narrower bet than the one priced."""
+        from app.services.best_of_day import SERVICES
+
+        for service in SERVICES:
+            if service.market == "Result or clean sheet":
+                assert "Any Clean Sheet" in service.label, service.label
 
 
 class TestDistributionInvariants:

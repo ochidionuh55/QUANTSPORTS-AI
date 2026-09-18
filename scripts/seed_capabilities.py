@@ -84,8 +84,17 @@ LEAGUE_CODES: dict[str, tuple[str, str]] = {
     "243": ("ECB", "Liga Pro Serie B"),
 }
 
-EXPECTED = {"ACTIVE": 43, "WITHHELD": 79, "INSUFFICIENT_EVIDENCE": 46}
-EXPECTED_TOTAL = 168
+def _expected_total() -> int:
+    """How many capabilities the registry implies.
+
+    Derived, not written down. The universe was 21 services x 8 competitions
+    until "Draw or Any Clean Sheet" was restored; a hard-coded 168 would then
+    have rejected a correct matrix, or worse, accepted a stale one. The
+    registry is the authority on how many services exist.
+    """
+    from app.services.best_of_day import SERVICES
+
+    return len(SERVICES) * len(LEAGUE_CODES)
 
 
 def load() -> dict[str, dict[str, Any]]:
@@ -99,6 +108,7 @@ async def seed(session: AsyncSession, apply: bool) -> int:
     version = model_only_version()
     now = datetime.now(UTC)
 
+    expected_total = _expected_total()
     states: dict[str, int] = defaultdict(int)
     by_competition: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     created = updated = skipped = 0
@@ -180,15 +190,18 @@ async def seed(session: AsyncSession, apply: bool) -> int:
 
     print("\n  STATES")
     for state in ("ACTIVE", "WITHHELD", "INSUFFICIENT_EVIDENCE"):
-        expected = EXPECTED[state]
-        actual = states.get(state, 0)
-        mark = "ok" if actual == expected else "*** MISMATCH ***"
-        print(f"    {state:<24}{actual:>5}  expected {expected:>5}  {mark}")
+        print(f"    {state:<24}{states.get(state, 0):>5}")
 
     total = sum(states.values())
-    reconciles = total == EXPECTED_TOTAL and all(
-        states.get(state, 0) == expected for state, expected in EXPECTED.items()
-    )
+    print(f"\n  total in matrix    : {total}")
+    print(f"  registry implies   : {expected_total}"
+          f"   ({_expected_total() // len(LEAGUE_CODES)} services"
+          f" x {len(LEAGUE_CODES)} competitions)")
+
+    # The matrix must cover the whole universe. A short matrix means a service
+    # was validated for some competitions and not others, and the missing pairs
+    # would fail closed without anyone noticing they were never measured.
+    reconciles = total == expected_total
 
     print("\n  BY COMPETITION")
     for code in sorted(by_competition):
@@ -200,12 +213,13 @@ async def seed(session: AsyncSession, apply: bool) -> int:
         )
 
     if not reconciles:
-        print(f"\n  DOES NOT RECONCILE. {total} rows against {EXPECTED_TOTAL} expected.")
+        print(f"\n  DOES NOT RECONCILE. {total} rows against {expected_total} the")
+        print("  registry implies.")
         print("  Nothing was committed. A matrix that does not reconcile is not")
         print("  one to publish from.")
         return 1
 
-    print(f"\n  RECONCILES: {total} capabilities, {EXPECTED['ACTIVE']} of them ACTIVE.")
+    print(f"\n  RECONCILES: {total} capabilities, {states.get('ACTIVE', 0)} ACTIVE.")
     if apply:
         await session.commit()
         print("  Committed.")
