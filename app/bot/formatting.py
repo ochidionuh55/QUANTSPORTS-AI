@@ -2144,7 +2144,7 @@ def format_divergences(items: list[object], now: datetime | None = None) -> str:
     moment = now or datetime.now(UTC)
     lines = [
         "<b>\U0001F3B2 OUTSIDER BOARD</b>",
-        f"\U0001F4C5 Today · {moment:%a %-d %b %Y}",
+        f"\U0001F4C5 Today · {moment:%a} {moment.day} {moment:%b %Y}",
         "",
     ]
 

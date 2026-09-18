@@ -586,3 +586,35 @@ class TestSurfacesAgreeOnToday:
 
         source = inspect.getsource(scan.AnalysisRepository.upcoming)
         assert "end_of_day" not in source
+
+
+class TestNoPlatformSpecificDateFormats:
+    """Render paths must format identically on every platform.
+
+    ``%-d`` and ``%-m`` are glibc extensions. They work on Linux and raise
+    ValueError on Windows, so a header using one passed in the container and
+    broke on a developer machine — and a format that depends on the platform is
+    a production break waiting for a different base image.
+    """
+
+    FORBIDDEN = ("%-d", "%-m", "%-H", "%-I", "%-j", "%-y", "%#d", "%#m")
+
+    def test_formatting_module_uses_portable_directives(self) -> None:
+        from pathlib import Path
+
+        root = Path(__file__).resolve().parents[1] / "app"
+        offenders = []
+        for path in root.rglob("*.py"):
+            source = path.read_text(encoding="utf-8")
+            for directive in self.FORBIDDEN:
+                if directive in source:
+                    offenders.append(f"{path.name}: {directive}")
+        assert not offenders, f"platform-specific date formats: {offenders}"
+
+    def test_board_header_renders(self) -> None:
+        """The header must format without raising, whatever the platform."""
+        from app.bot.formatting import format_divergences
+
+        header = format_divergences([]).split("\n")[1]
+        assert "Today" in header
+        assert any(character.isdigit() for character in header)
