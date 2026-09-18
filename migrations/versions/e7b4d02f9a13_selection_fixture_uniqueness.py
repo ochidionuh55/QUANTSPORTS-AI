@@ -12,11 +12,17 @@ which permits the same fixture at two ranks. The scan reruns every three hours;
 a fixture whose probability shifts lands at a different rank, finds that slot
 free, and publishes again. Users saw the same match twice in one list.
 
-**Existing duplicates must be removed before this runs.** The migration checks
-and refuses rather than failing on the constraint, because the cleanup is not a
-mechanical delete: it decides which publication is canonical and records what
-was removed. ``scripts/audit_duplicate_selections.py --apply`` does that, keeps
-the earliest publication, and writes an audit entry for each removal.
+**Existing duplicates are removed here, not refused.** A first version raised
+instead, on the reasoning that choosing which publication survives is not a
+mechanical decision. But migrations run at worker startup, so the refusal took
+the service down rather than blocking a change — a guard that turns a data
+problem into an outage is the wrong guard.
+
+The choice it was protecting is made explicitly: the **earliest** publication
+is canonical, because it is what users first saw and what the audit trail
+already records. Every removal writes a ``selection_audits`` row against the
+surviving selection naming the removed id, its rank and its publication time,
+so nothing disappears silently.
 """
 
 from __future__ import annotations
@@ -31,9 +37,64 @@ depends_on: str | None = None
 
 
 def upgrade() -> None:
-    """Add the fixture uniqueness constraint, refusing if duplicates remain."""
+    """Remove duplicate fixtures, recording each, then add the constraint."""
     connection = op.get_bind()
-    duplicates = connection.execute(
+
+    # Every row that is not the earliest publication of its fixture for its
+    # service and day. Ordered by published_at, with rank and id breaking ties
+    # for rows written in the same transaction, so the survivor is
+    # deterministic rather than whichever the planner returned first.
+    doomed = connection.execute(
+        sa.text(
+            """
+            SELECT id, service_key, selection_date, provider_event_id,
+                   rank, published_at, home_name, away_name, keeper
+            FROM (
+                SELECT id, service_key, selection_date, provider_event_id,
+                       rank, published_at, home_name, away_name,
+                       FIRST_VALUE(id) OVER (
+                           PARTITION BY service_key, selection_date,
+                                        provider_event_id
+                           ORDER BY published_at, rank, id
+                       ) AS keeper
+                FROM service_selections
+            ) AS ranked
+            WHERE id <> keeper
+            """
+        )
+    ).fetchall()
+
+    for row in doomed:
+        connection.execute(
+            sa.text(
+                """
+                INSERT INTO selection_audits
+                    (selection_id, event, detail, occurred_at,
+                     created_at, updated_at)
+                VALUES (:selection_id, :event, :detail, NOW(), NOW(), NOW())
+                """
+            ),
+            {
+                "selection_id": row.keeper,
+                "event": "DUPLICATE_FIXTURE_IN_SERVICE",
+                "detail": (
+                    f"removed duplicate #{row.id} (rank {row.rank}, published "
+                    f"{row.published_at}); kept #{row.keeper} as the earliest "
+                    f"publication of {row.home_name} v {row.away_name} for "
+                    f"{row.service_key} on {row.selection_date}"
+                ),
+            },
+        )
+
+    if doomed:
+        connection.execute(
+            sa.text("DELETE FROM service_selections WHERE id = ANY(:ids)"),
+            {"ids": [row.id for row in doomed]},
+        )
+
+    # Verify before constraining: if anything is still duplicated the create
+    # would fail anyway, and this says why.
+    remaining = connection.execute(
         sa.text(
             """
             SELECT COUNT(*) FROM (
@@ -45,13 +106,10 @@ def upgrade() -> None:
             """
         )
     ).scalar_one()
-
-    if duplicates:
+    if remaining:
         raise RuntimeError(
-            f"{duplicates} service/date/fixture groups still hold duplicate "
-            "selections. Run scripts/audit_duplicate_selections.py --apply "
-            "first: it keeps the earliest publication and records every "
-            "removal. This migration will not choose for you."
+            f"{remaining} groups still duplicated after cleanup removed "
+            f"{len(doomed)} rows. The deduplication is wrong, not the data."
         )
 
     op.create_unique_constraint(

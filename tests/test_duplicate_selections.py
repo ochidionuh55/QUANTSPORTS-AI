@@ -170,15 +170,43 @@ class TestInvariantsAreDeclared:
         rank_check = source.index("ServiceSelection.rank == rank")
         assert fixture_check < rank_check
 
-    def test_migration_refuses_to_run_with_duplicates_present(self) -> None:
-        """Cleanup decides which publication is canonical; a migration must not."""
+    def _migration(self) -> str:
         from pathlib import Path
 
-        source = (
+        return (
             Path(__file__).resolve().parents[1]
             / "migrations"
             / "versions"
             / "e7b4d02f9a13_selection_fixture_uniqueness.py"
         ).read_text(encoding="utf-8")
-        assert "raise RuntimeError" in source
-        assert "audit_duplicate_selections" in source
+
+    def test_migration_deduplicates_rather_than_refusing(self) -> None:
+        """A refusal at startup is an outage, not a guard.
+
+        The first version raised when duplicates existed. Migrations run at
+        worker boot, so that turned a data problem into a dead service. It now
+        performs the cleanup, which is the decision it was trying to avoid
+        making implicitly — made explicitly instead.
+        """
+        source = self._migration()
+        assert "DELETE FROM service_selections" in source
+        assert "FIRST_VALUE(id) OVER" in source
+
+    def test_migration_keeps_the_earliest_publication(self) -> None:
+        """Ordered by published_at, with rank and id breaking ties."""
+        source = self._migration()
+        assert "ORDER BY published_at, rank, id" in source
+
+    def test_migration_records_every_removal(self) -> None:
+        """Nothing disappears without an audit row naming it."""
+        source = self._migration()
+        assert "INSERT INTO selection_audits" in source
+        assert "DUPLICATE_FIXTURE_IN_SERVICE" in source
+        assert "removed duplicate" in source
+
+    def test_migration_verifies_before_constraining(self) -> None:
+        """If cleanup failed, say so rather than failing on the constraint."""
+        source = self._migration()
+        verify = source.index("remaining = connection.execute")
+        constrain = source.index("op.create_unique_constraint")
+        assert verify < constrain
