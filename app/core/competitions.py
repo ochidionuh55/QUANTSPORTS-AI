@@ -74,6 +74,32 @@ COMPETITIONS: Final[tuple[Competition, ...]] = (
     Competition("ARG", "Liga Profesional", "Argentina", 128),
     Competition("JAP", "J1 League", "Japan", 98),
     Competition("CHN", "Chinese Super League", "China", 169),
+    # ── Wave 1 ────────────────────────────────────────────────────────────
+    #
+    # Added after the full onboarding pipeline: history audited and counted,
+    # identities seeded across every ingested season, fixtures reconciled,
+    # the model fitted per competition and validated walk-forward.
+    #
+    # Being listed here only puts a competition's fixtures into the scan. What
+    # may be *published* from them is decided separately by
+    # ``app.services.capability_gate``, which permits the 43 competition-and-
+    # service pairs that passed validation and blocks the other 125. A new
+    # competition here without a capability row publishes nothing.
+    #
+    # NPFL (399) and Liga Pro Serie B (243) are deliberately absent: NPFL for a
+    # 9.4-point home-win bias, Ecuador for 686 validation forecasts against an
+    # 800 minimum. Their history is ingested and their capabilities recorded,
+    # but neither enters the scan.
+    Competition(code="LEU", name="Liga Leumit", country="Israel", api_football_id=382),
+    Competition(
+        code="AZA", name="Azadegan League", country="Iran", api_football_id=291
+    ),
+    Competition(code="PRV", name="Prva Liga", country="Serbia", api_football_id=287),
+    Competition(code="PRB", name="Primera B", country="Colombia", api_football_id=240),
+    Competition(code="ALF", name="Liga Alef", country="Israel", api_football_id=496),
+    Competition(
+        code="BRS", name="1st League - RS", country="Bosnia", api_football_id=317
+    ),
 )
 
 BY_CODE: Final[dict[str, Competition]] = {c.code: c for c in COMPETITIONS}

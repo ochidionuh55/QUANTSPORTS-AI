@@ -22,7 +22,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 from app.database.base import Base
 from app.database.models import ServiceCapability
 from app.database.models.capabilities import CapabilityState
-from app.services.capability_gate import CapabilityGate
+from app.services.capability_gate import GATED_COMPETITIONS, CapabilityGate
 
 VERSION = "model-only-v2-dc"
 
@@ -155,16 +155,27 @@ class TestScopeAndInvariants:
         for code in ("LEU", "AZA", "PRV", "PRB", "ALF", "NPF", "BRS", "ECB"):
             assert CapabilityGate.is_gated(code)
 
-    def test_existing_competitions_are_not_gated(self) -> None:
-        """Every configured competition must be outside the gate.
+    def test_established_competitions_are_not_gated(self) -> None:
+        """The thirty-eight that predate Wave 1 must stay outside the gate.
 
         If one were inside it, a missing capability row would stop it
-        publishing — turning a safety feature into an outage.
+        publishing — turning a safety feature into an outage. Wave 1
+        competitions are gated by design and excluded here.
         """
         from app.core.competitions import COMPETITIONS
 
-        for competition in COMPETITIONS:
+        established = [
+            c for c in COMPETITIONS if c.code not in GATED_COMPETITIONS
+        ]
+        assert len(established) == 38, f"expected 38 established, got {len(established)}"
+        for competition in established:
             assert not CapabilityGate.is_gated(competition.code), competition.code
+
+    def test_gate_covers_exactly_the_wave_one_competitions(self) -> None:
+        """Nothing outside Wave 1 has crept into the gated set."""
+        assert {
+            "LEU", "AZA", "PRV", "PRB", "ALF", "NPF", "BRS", "ECB"
+        } == GATED_COMPETITIONS
 
     def test_only_active_is_publishable(self) -> None:
         from app.database.models.capabilities import PUBLISHABLE_STATES
@@ -195,3 +206,53 @@ class TestScopeAndInvariants:
         source = inspect.getsource(gate_module)
         for forbidden in ("build_grid", "derive_markets", "settles_won", "DEFAULT_WEIGHTS"):
             assert forbidden not in source
+
+
+class TestWaveOneActivation:
+    """The six added competitions, and the two deliberately left out.
+
+    Being listed in ``competitions.py`` puts a competition's fixtures into the
+    scan. Whether anything may be published from them is a separate decision,
+    and these two lists must not drift apart: a competition in the scan but
+    outside the gate would publish all twenty-one services, including the
+    seventy-nine that failed validation.
+    """
+
+    ACTIVATED = {"LEU": 382, "AZA": 291, "PRV": 287, "PRB": 240, "ALF": 496, "BRS": 317}
+
+    def test_activated_competitions_are_in_the_scan(self) -> None:
+        from app.core.competitions import code_for_api_id
+
+        for code, league_id in self.ACTIVATED.items():
+            assert code_for_api_id(league_id) == code
+
+    def test_every_activated_competition_is_gated(self) -> None:
+        """In the scan implies gated. Otherwise it publishes unvalidated."""
+        for code in self.ACTIVATED:
+            assert CapabilityGate.is_gated(code), code
+
+    def test_withheld_competitions_never_enter_the_scan(self) -> None:
+        """NPFL and Ecuador: ingested and measured, never scanned."""
+        from app.core.competitions import code_for_api_id
+
+        for league_id in (399, 243):
+            assert code_for_api_id(league_id) is None
+
+    def test_production_rho_matches_what_was_validated(self) -> None:
+        """The capabilities were measured at these values.
+
+        Production falling back to the global default would publish numbers no
+        validation describes — and for Serbia and Bosnia the default is the
+        opposite sign to the fitted value.
+        """
+        from app.quant.grid import rho_for
+
+        for code, expected in (
+            ("LEU", -0.105), ("AZA", -0.090), ("PRV", 0.020),
+            ("PRB", -0.060), ("ALF", -0.110), ("BRS", 0.010),
+        ):
+            assert abs(rho_for(code) - expected) < 1e-9, code
+
+    def test_gated_set_covers_every_wave_one_competition(self) -> None:
+        """Including the two not in the scan, so they stay blocked if added."""
+        assert set(self.ACTIVATED) | {"NPF", "ECB"} <= GATED_COMPETITIONS
