@@ -252,3 +252,58 @@ class TestTrainingCompletenessIsRunIndependent:
         source = INGEST_PATH.read_text(encoding="utf-8")
         assert "self.historical_total == self.trainable" in source
         assert "self.historical_total == self.trainable" in source
+
+
+class TestIntegrityExclusionsAreAccounted:
+    """A constraint rejection must never leave an unexplained gap.
+
+    Two Liga Alef fixtures resolve both sides to one canonical club, which the
+    ``teams_differ`` constraint refuses. The guard that avoided the crash did
+    not record what it skipped, so the reconciliation reported INCOMPLETE over
+    two fixtures with no stated reason — the silence this whole reconciliation
+    exists to prevent.
+    """
+
+    def _report(self, **kwargs: Any) -> Any:
+        report = ingest.Reconciliation(league_id=496, label="Liga Alef")
+        for key, value in kwargs.items():
+            setattr(report, key, value)
+        return report
+
+    def test_collision_is_explained_not_silent(self) -> None:
+        """Liga Alef's exact shape: 3,563 trainable, 3,561 stored, 2 refused."""
+        report = self._report(
+            returned=3993, stored_new=3993, trainable=3563, historical_total=3561
+        )
+        report.excluded["not played (PST)"] = 237
+        report.excluded["not played (CANC)"] = 193
+        report.integrity_exclusions["CANONICAL_TEAM_COLLISION"] = 2
+        assert report.balances
+        assert report.training_complete
+
+    def test_unexplained_gap_still_fails(self) -> None:
+        """Without the accounting, the same numbers must not pass."""
+        report = self._report(
+            returned=3993, stored_new=3993, trainable=3563, historical_total=3561
+        )
+        report.excluded["not played (PST)"] = 237
+        report.excluded["not played (CANC)"] = 193
+        assert not report.training_complete
+
+    def test_collision_fixtures_keep_their_provenance(self) -> None:
+        """Stored in provider_fixtures, never forced into the evidence base."""
+        source = INGEST_PATH.read_text(encoding="utf-8")
+        assert 'report.integrity_exclusions["CANONICAL_TEAM_COLLISION"] += 1' in source
+        assert 'row.exclusion_reason = "CANONICAL_TEAM_COLLISION"' in source
+        assert "row.training_eligible = False" in source
+
+    def test_collision_is_detected_before_insert(self) -> None:
+        source = INGEST_PATH.read_text(encoding="utf-8")
+        collision = source.index("home_id == away_id")
+        insert = source.index("HistoricalMatch.provider_match_id == fixture_id")
+        assert collision < insert
+
+    def test_reconciliation_includes_integrity_exclusions(self) -> None:
+        source = INGEST_PATH.read_text(encoding="utf-8")
+        assert "self.historical_total == self.trainable - self.integrity_total" in source
+        assert "INTEGRITY EXCLUSIONS" in source

@@ -248,6 +248,17 @@ class Reconciliation:
     historical_new: int = 0
     historical_existing: int = 0
     identity_failures: int = 0
+    integrity_exclusions: dict[str, int] = field(default_factory=lambda: defaultdict(int))
+    """Fixtures a database constraint legitimately refused.
+
+    Distinct from a status exclusion: the fixture was played and scored, but
+    storing it would violate an integrity rule. Two Liga Alef fixtures resolve
+    both sides to the same canonical club, which ``teams_differ`` rejects. The
+    guard that avoided the crash did not account for what it skipped, leaving a
+    two-fixture gap between trainable and stored with no stated reason — the
+    exact silence this reconciliation exists to prevent.
+    """
+
     historical_total: int = 0
     """Rows actually present in ``historical_matches`` for this competition.
 
@@ -272,6 +283,10 @@ class Reconciliation:
         return sum(self.excluded.values())
 
     @property
+    def integrity_total(self) -> int:
+        return sum(self.integrity_exclusions.values())
+
+    @property
     def balances(self) -> bool:
         """Whether nothing vanished between provider and database."""
         return (
@@ -287,7 +302,7 @@ class Reconciliation:
         second pass inserting nothing still passes.
         """
         return (
-            self.historical_total == self.trainable
+            self.historical_total == self.trainable - self.integrity_total
             and self.identity_failures == 0
             and self.historical_duplicates == 0
         )
@@ -499,6 +514,16 @@ async def ingest_competition(
 
             # Trainable fixtures also join the evidence base. Its goals are
             # NOT NULL, so only fully resolved, scored fixtures go there.
+            if row.training_eligible and home_id and away_id and home_id == away_id:
+                # Both sides resolved to one canonical club. The fixture is
+                # real and stays in provider_fixtures with full provenance;
+                # it simply cannot enter a table whose teams_differ constraint
+                # forbids it, and forcing it would corrupt the evidence base.
+                report.integrity_exclusions["CANONICAL_TEAM_COLLISION"] += 1
+                row.exclusion_reason = "CANONICAL_TEAM_COLLISION"
+                row.training_eligible = False
+                continue
+
             if row.training_eligible and home_id and away_id and home_id != away_id:
                 if fixture_id in historical_ids:
                     report.historical_existing += 1
@@ -576,6 +601,7 @@ def _persist(reports: list[Reconciliation]) -> None:
                 "historical_total": report.historical_total,
                 "historical_duplicates": report.historical_duplicates,
                 "training_complete": report.training_complete,
+                "integrity_exclusions": dict(report.integrity_exclusions),
                 "identity_failures": report.identity_failures,
                 "excluded": dict(report.excluded),
                 "seasons": sorted(report.seasons),
@@ -630,6 +656,17 @@ def report_summary() -> int:
     if not totals:
         print("  None.")
 
+    integrity: dict[str, int] = defaultdict(int)
+    for row in store.values():
+        for reason, count in dict(row.get("integrity_exclusions", {})).items():
+            integrity[reason] += int(count)
+    if integrity:
+        print("\n" + "-" * 104)
+        print("INTEGRITY EXCLUSIONS (played, but a constraint refuses them)")
+        print("-" * 104)
+        for reason, count in sorted(integrity.items(), key=lambda item: -item[1]):
+            print(f"  {reason:<60}{count:>8,}")
+
     returned = sum(int(r.get("returned", 0)) for r in store.values())
     stored = sum(int(r.get("stored", 0)) for r in store.values())
     trainable = sum(int(r.get("trainable", 0)) for r in store.values())
@@ -652,7 +689,14 @@ def report_summary() -> int:
     if returned == stored and stored == trainable + excluded:
         print("\n  BALANCED. Every returned fixture is stored, and every stored")
         print("  fixture is either trainable or excluded for a stated reason.")
-        if historical_total == trainable and not duplicates and not identity:
+        integrity_total = sum(integrity.values())
+        if integrity_total:
+            print(f"  integrity excl.   : {integrity_total}")
+        if (
+            historical_total == trainable - integrity_total
+            and not duplicates
+            and not identity
+        ):
             print(f"\n  TRAINING COMPLETE in {complete} of {len(store)} competitions.")
             print("  Every trainable fixture is present in historical_matches, with")
             print("  no duplicates and no unresolved identities.")
@@ -821,6 +865,8 @@ async def main() -> int:
         )
         for reason, count in sorted(report.excluded.items(), key=lambda i: -i[1]):
             print(f"      excluded {count:>5,}  {reason}")
+        for reason, count in sorted(report.integrity_exclusions.items(), key=lambda i: -i[1]):
+            print(f"      integrity {count:>4,}  {reason}")
         if not report.balances:
             print("      *** DOES NOT BALANCE ***")
         for error in report.errors:
