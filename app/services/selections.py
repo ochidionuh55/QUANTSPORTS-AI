@@ -316,6 +316,22 @@ class SelectionService:
     ) -> bool:
         """Write one selection, returning whether it was new."""
         service = selection.service  # type: ignore[attr-defined]
+
+        # Has this fixture already been published for this service today?
+        # Asked before the rank check, because a fixture that reappears at a
+        # different rank on a later scan would otherwise find the new slot
+        # free and publish a second time. The earlier publication stands: it
+        # is what users saw.
+        duplicate = await self._session.execute(
+            select(ServiceSelection).where(
+                ServiceSelection.service_key == service.key,
+                ServiceSelection.selection_date == moment.date(),
+                ServiceSelection.provider_event_id == analysis.provider_event_id,
+            )
+        )
+        if duplicate.scalar_one_or_none() is not None:
+            return False
+
         existing = await self._session.execute(
             select(ServiceSelection).where(
                 ServiceSelection.service_key == service.key,

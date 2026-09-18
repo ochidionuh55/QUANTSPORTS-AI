@@ -55,6 +55,19 @@ class ServiceSelection(IntPrimaryKeyMixin, TimestampMixin, Base):
         # makes a re-run of the worker safe: a second attempt cannot quietly
         # replace a claim already made.
         UniqueConstraint("service_key", "selection_date", "rank", name="uq_service_selection_day"),
+        # One fixture appears at most once in a service's list for a day.
+        #
+        # The rank constraint alone permitted the same match at ranks 4 and 5:
+        # the scan reruns every three hours, a fixture's probability shifts,
+        # it lands at a different rank, finds that slot free and publishes
+        # again. Every insert satisfied the database; the missing rule was
+        # this one.
+        UniqueConstraint(
+            "service_key",
+            "selection_date",
+            "provider_event_id",
+            name="uq_service_selection_fixture",
+        ),
         Index("ix_service_selections_date", "selection_date"),
         Index("ix_service_selections_service", "service_key"),
         Index("ix_service_selections_status", "status"),
