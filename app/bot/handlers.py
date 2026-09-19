@@ -657,8 +657,21 @@ async def handle_best_today(callback: CallbackQuery, user: User, session: object
         ]
     )
 
+    # Supported, publishable, and produced nothing. Derived from the registry
+    # rather than a constant, and excluding withheld services: a withheld
+    # market is in a different state from one that found nothing, and saying
+    # otherwise would misdescribe it.
+    empty_services = sum(1 for key in published_services() if not counts.get(key))
+
     await callback.message.edit_text(
-        format_service_menu(counts, modelled, available), reply_markup=_back(*rows)
+        format_service_menu(
+            counts,
+            modelled,
+            available,
+            day=datetime.now(UTC).date(),
+            empty_services=empty_services,
+        ),
+        reply_markup=_back(*rows),
     )
 
 

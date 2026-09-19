@@ -1781,9 +1781,27 @@ def format_service_record(records: list[object]) -> str:
     return "\n".join(lines)
 
 
-def format_service_menu(counts: dict[str, int], modelled: int, available: int) -> str:
-    """Render the Best of Today service chooser."""
-    lines = ["<b>🔥 BEST OF TODAY</b>", ""]
+def format_service_menu(
+    counts: dict[str, int],
+    modelled: int,
+    available: int,
+    day: date | None = None,
+    empty_services: int = 0,
+) -> str:
+    """Render the Best of Today service chooser.
+
+    Only services holding a qualifying selection get a button: a button
+    reading "(0)" invites a tap that leads nowhere. But absence then reads the
+    same as non-existence, and a reader cannot tell "this market found nothing
+    today" from "QUANTSPORT does not do this market". One line resolves that.
+
+    ``empty_services`` counts only services that are **supported, publishable
+    and produced nothing**. A service withheld from publication is in a
+    different state and is not something that "found nothing", so counting it
+    here would misdescribe it.
+    """
+    selected = day or datetime.now(UTC).date()
+    lines = ["<b>🔥 BEST OF TODAY</b>", format_date_header(selected), ""]
     if available:
         lines.append(f"<i>{modelled} of {available} fixtures modelled today.</i>")
         lines.append("")
@@ -1791,9 +1809,10 @@ def format_service_menu(counts: dict[str, int], modelled: int, available: int) -
     total = sum(counts.values())
     if not total:
         lines.append(
-            "<b>No qualifying selection today.</b>\n\n"
-            "Nothing on today's card cleared the bar for any service. That is a "
-            "real answer — we never publish a selection to fill a slot."
+            "<b>No selections met QUANTSPORT's qualification criteria today.</b>"
+            "\n\nNo selection was forced. Nothing on this card cleared the bar "
+            "for any market, and that is a real answer rather than an empty "
+            "screen."
         )
         lines.append("")
         lines.append(EVIDENCE_NOTE)
@@ -1804,6 +1823,14 @@ def format_service_menu(counts: dict[str, int], modelled: int, available: int) -
         "Pick the market you care about. Each one opens its own ranked list, "
         "strongest first."
     )
+    if empty_services:
+        plural = "market" if empty_services == 1 else "markets"
+        lines.append("")
+        lines.append(
+            f"<i>Only markets with qualifying selections are shown. "
+            f"{empty_services} supported {plural} had no qualifying "
+            f"selections today.</i>"
+        )
     lines.append("")
     lines.append(METHOD_NOTE)
     lines.append("")
