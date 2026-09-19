@@ -11,7 +11,7 @@ be trusted.
 from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime, timedelta
 from decimal import Decimal
 
 from app.core.community import JOIN_PROMPT
@@ -803,17 +803,42 @@ def format_league_profile(profile: object) -> str:
     return "\n".join(lines)
 
 
-def format_market_menu(counts: dict[str, int]) -> str:
+def format_date_header(day: date, today: date | None = None) -> str:
+    """Return the date line every dated surface shows.
+
+    "Today" and an explicitly chosen date must be distinguishable. A screen
+    reading only "on today's card" while listing another day's fixtures gives
+    a reader no way to notice — which is how the Outsider Board showed
+    Saturday's matches on a Friday without anyone spotting it for weeks.
+
+    Formatted without platform-specific directives: ``%-d`` is a glibc
+    extension that raises on Windows, so the day number is interpolated
+    directly.
+    """
+    reference = today or datetime.now(UTC).date()
+    stamp = f"{day:%a} {day.day} {day:%b %Y}"
+    if day == reference:
+        return f"\U0001F4C5 Today · {stamp}"
+    if day == reference - timedelta(days=1):
+        return f"\U0001F4C5 Yesterday · {stamp}"
+    if day == reference + timedelta(days=1):
+        return f"\U0001F4C5 Tomorrow · {stamp}"
+    return f"\U0001F4C5 {stamp}"
+
+
+def format_market_menu(counts: dict[str, int], day: date | None = None) -> str:
     """Render the market explorer entry screen."""
+    selected = day or datetime.now(UTC).date()
     lines = [
         "<b>Markets</b>",
+        format_date_header(selected),
         "",
         "Pick a market to see every fixture ranked by it, rather than one "
         "daily list chosen for you.",
         "",
     ]
     if counts:
-        lines.append("<b>On today's card</b>")
+        lines.append("<b>On this card</b>")
         for label, count in counts.items():
             lines.append(f"{label}: {count} fixture(s) above 55%")
         lines.append("")
@@ -2144,7 +2169,7 @@ def format_divergences(items: list[object], now: datetime | None = None) -> str:
     moment = now or datetime.now(UTC)
     lines = [
         "<b>\U0001F3B2 OUTSIDER BOARD</b>",
-        f"\U0001F4C5 Today · {moment:%a} {moment.day} {moment:%b %Y}",
+        format_date_header(moment.date()),
         "",
     ]
 

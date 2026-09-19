@@ -600,15 +600,33 @@ class TestNoPlatformSpecificDateFormats:
     FORBIDDEN = ("%-d", "%-m", "%-H", "%-I", "%-j", "%-y", "%#d", "%#m")
 
     def test_formatting_module_uses_portable_directives(self) -> None:
+        """Scans code, not prose.
+
+        Docstrings must be able to name the directive they warn against, so
+        comment and docstring lines are skipped. The check is for a directive
+        inside a real format string.
+        """
+        import re
         from pathlib import Path
 
         root = Path(__file__).resolve().parents[1] / "app"
         offenders = []
         for path in root.rglob("*.py"):
-            source = path.read_text(encoding="utf-8")
-            for directive in self.FORBIDDEN:
-                if directive in source:
-                    offenders.append(f"{path.name}: {directive}")
+            in_docstring = False
+            for number, line in enumerate(
+                path.read_text(encoding="utf-8").splitlines(), start=1
+            ):
+                stripped = line.strip()
+                if stripped.count('"""') == 1:
+                    in_docstring = not in_docstring
+                    continue
+                if in_docstring or stripped.startswith("#"):
+                    continue
+                if not re.search(r'["\']', line):
+                    continue
+                for directive in self.FORBIDDEN:
+                    if directive in line:
+                        offenders.append(f"{path.name}:{number}: {directive}")
         assert not offenders, f"platform-specific date formats: {offenders}"
 
     def test_board_header_renders(self) -> None:
