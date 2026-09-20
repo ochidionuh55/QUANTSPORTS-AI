@@ -2260,6 +2260,12 @@ def build_router() -> Router:
     router.message.register(handle_link, Command("link"))
     router.message.register(handle_reject_alias, Command("rejectalias"))
 
+    # Admin-only Research Lab (NEXT). Isolated module; reads the research store
+    # only, never a customer surface. Registered before the catch-all.
+    from app.bot.research_lab import register_research_lab
+
+    register_research_lab(router)
+
     # Catch-all last.
     router.message.register(handle_unknown)
 
