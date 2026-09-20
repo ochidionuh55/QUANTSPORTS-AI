@@ -200,10 +200,16 @@ def _walk(names: dict[int, str], rows: list[tuple], since: date) -> list[Decomp]
             ):
                 averages = acc.averages()
                 hs = team_strength(
-                    home_id, acc.home_matches[home_id], acc.away_matches[home_id], averages
+                    home_id,
+                    acc.home_matches.get(home_id, []),
+                    acc.away_matches.get(home_id, []),
+                    averages,
                 )
                 as_ = team_strength(
-                    away_id, acc.home_matches[away_id], acc.away_matches[away_id], averages
+                    away_id,
+                    acc.home_matches.get(away_id, []),
+                    acc.away_matches.get(away_id, []),
+                    averages,
                 )
                 if hs.is_reliable and as_.is_reliable and averages.is_reliable:
                     lam_h, lam_a = expected_goals(hs, as_, averages)
