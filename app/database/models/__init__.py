@@ -23,6 +23,16 @@ from app.database.models.historical import HistoricalMatch, ModelVersion
 from app.database.models.ingestion import DatasetIngestion
 from app.database.models.match import Market, Match, OddsSnapshot, Outcome
 from app.database.models.provider_fixtures import ProviderFixture
+
+# Research-scoped tables (QUANTSPORT NEXT). Registered here so Alembic keeps
+# them in the schema, but they are RESEARCH-ONLY: no customer-facing surface
+# (bot, public API, selections, settlement, capability gate) may import or read
+# them. See app/database/models/research.py for the isolation rationale.
+from app.database.models.research import (
+    ResearchExperiment,
+    ResearchOddsSnapshot,
+    ResearchPrediction,
+)
 from app.database.models.scan import BookingCode, Prediction, Scan
 from app.database.models.scan_telemetry import (
     RejectionCode,
@@ -59,6 +69,9 @@ __all__ = [
     "Prediction",
     "ProviderFixture",
     "RejectionCode",
+    "ResearchExperiment",
+    "ResearchOddsSnapshot",
+    "ResearchPrediction",
     "SavedFixture",
     "Scan",
     "ScanDecision",
