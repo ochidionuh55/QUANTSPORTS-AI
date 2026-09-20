@@ -24,7 +24,7 @@ from sqlalchemy import distinct, func, select
 
 from app.api.dependencies.common import SessionDep
 from app.core.community import CHANNEL_URL
-from app.core.competitions import CSV_COMPETITIONS
+from app.core.competitions import COMPETITIONS, CSV_COMPETITIONS
 from app.database.models import (
     FixtureView,
     HistoricalMatch,
@@ -60,7 +60,31 @@ class PlatformSummary(BaseModel):
     """
 
     matches: int = Field(description="Historical matches on record.")
-    competitions: int = Field(description="Competitions covered.")
+    competitions: int = Field(
+        description=(
+            "Legacy. Kept at its existing derivation so consumers reading it "
+            "do not have their meaning changed underneath them. Prefer "
+            "corpus_competitions or scan_competitions, which say which "
+            "question they answer."
+        )
+    )
+    corpus_competitions: int = Field(
+        default=0,
+        description=(
+            "Competitions represented by verified historical data. Counts "
+            "data held, not coverage offered: a competition researched and "
+            "withheld from publication is counted here and is not part of "
+            "scan_competitions."
+        ),
+    )
+    scan_competitions: int = Field(
+        default=0,
+        description=(
+            "Competitions in the daily analysis universe. Not a validation "
+            "claim — capability is decided per competition and service, so "
+            "this is coverage, not approval."
+        ),
+    )
     teams: int = Field(description="Canonical teams resolved.")
     services: int = Field(description="Daily services published.")
     fixtures_today: int
@@ -154,9 +178,28 @@ async def summary(session: SessionDep) -> PlatformSummary:
         ).scalar_one()
     )
 
+    # Competitions represented by verified historical data, counted through
+    # the column so a row whose competition was deleted cannot be mistaken
+    # for one that never had a competition: the foreign key is ON DELETE SET
+    # NULL, so orphans exist and must not be counted as a competition.
+    #
+    # Deliberately not filtered by scan membership, capability state or
+    # publication eligibility. The claim is about data held, not coverage
+    # offered — NPFL is researched and withheld, and both are true at once.
+    corpus = await session.execute(
+        select(func.count(distinct(HistoricalMatch.competition_id))).where(
+            HistoricalMatch.competition_id.is_not(None)
+        )
+    )
+    corpus_competitions = int(corpus.scalar_one() or 0)
+
     return PlatformSummary(
         matches=matches,
+        # Legacy, kept at its existing derivation so no consumer's meaning
+        # changes underneath it. The fields beside it say what they measure.
         competitions=len(CSV_COMPETITIONS),
+        corpus_competitions=corpus_competitions,
+        scan_competitions=len(COMPETITIONS),
         teams=teams,
         services=len(published_services()),
         fixtures_today=len(upcoming),
