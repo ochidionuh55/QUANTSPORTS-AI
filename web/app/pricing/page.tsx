@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/product/PageHeader";
 import { Button } from "@/components/ui/Button";
+import { getSummary } from "@/lib/api";
+import { formatCount } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
     "Free access to the evidence. A subscription for the analysis built on it.",
 };
+
+export const revalidate = 900;
 
 const FREE = [
   "Today's analysis — every fixture, graded",
@@ -15,15 +19,26 @@ const FREE = [
   "Methodology and data sources",
 ];
 
-const PRO = [
-  "Best of Today — 18 services, ten ranked fixtures each",
-  "Market Explorer across 38 competitions",
-  "Team Intelligence from 113,000 matches",
-  "Follow selections and track your own record",
-  "The evidence behind every selection",
-];
+export default async function PricingPage() {
+  const summary = await getSummary();
 
-export default function PricingPage() {
+  // Operational figures come from the live summary; each falls back to durable,
+  // non-numeric copy if the API is unreachable, never a stale hardcoded count.
+  // "up to ten" is durable product copy — the ranked depth, not a live number.
+  const PRO = [
+    summary
+      ? `Best of Today — ${summary.services} services, up to ten ranked fixtures each`
+      : "Best of Today — every published service, up to ten ranked fixtures each",
+    summary
+      ? `Market Explorer across ${summary.scan_competitions} competitions`
+      : "Market Explorer across every competition we scan",
+    summary
+      ? `Team Intelligence from ${formatCount(summary.matches)} matches`
+      : "Team Intelligence from our full match corpus",
+    "Follow selections and track your own record",
+    "The evidence behind every selection",
+  ];
+
   return (
     <>
       <PageHeader

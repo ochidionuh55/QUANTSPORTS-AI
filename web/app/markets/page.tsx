@@ -6,7 +6,7 @@ import { getMarkets, searchFixtures } from "@/lib/api";
 export const metadata: Metadata = {
   title: "Market Explorer",
   description:
-    "Search any market across 38 competitions, ranked by model probability.",
+    "Search any market across the competitions we scan, ranked by model probability.",
 };
 
 export const revalidate = 300;

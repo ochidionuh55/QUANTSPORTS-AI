@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/product/PageHeader";
 import { ScoreMatrix } from "@/components/hero/ScoreMatrix";
 import { Button } from "@/components/ui/Button";
+import { getSummary } from "@/lib/api";
+import { formatCount } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Methodology",
@@ -9,11 +11,19 @@ export const metadata: Metadata = {
     "How QUANTSPORT estimates probabilities, what it has been tested against, and what it does not claim.",
 };
 
+export const revalidate = 900;
+
+const TAIL =
+  "Team identity is hard and wrong matches poison everything downstream, so resolution is conservative: ambiguous names are rejected rather than guessed.";
+
 const STEPS = [
   {
     label: "01",
     title: "Count what actually happened",
-    body: "113,000 matches across 38 competitions, resolved to 1,021 canonical clubs. Team identity is hard and wrong matches poison everything downstream, so resolution is conservative: ambiguous names are rejected rather than guessed.",
+    // Durable fallback used only when the API is unreachable — no counts a
+    // reader could mistake for measured figures. When summary is available the
+    // component replaces this with the live corpus numbers.
+    body: `Matches across every competition on record, resolved to canonical clubs. ${TAIL}`,
   },
   {
     label: "02",
@@ -42,7 +52,20 @@ const STEPS = [
   },
 ];
 
-export default function MethodologyPage() {
+export default async function MethodologyPage() {
+  const summary = await getSummary();
+
+  // Corpus figures come from the database, never hardcoded. If the API is
+  // unreachable the static durable copy stands rather than inventing a count.
+  const steps = STEPS.map((step) =>
+    step.label === "01" && summary
+      ? {
+          ...step,
+          body: `${formatCount(summary.matches)} matches across ${summary.corpus_competitions} competitions on record, resolved to ${formatCount(summary.teams)} canonical clubs. ${TAIL}`,
+        }
+      : step,
+  );
+
   return (
     <>
       <PageHeader
@@ -54,7 +77,7 @@ export default function MethodologyPage() {
       <section className="mx-auto max-w-shell px-6 py-20">
         <div className="grid gap-16 lg:grid-cols-[1fr_0.85fr]">
           <ol className="space-y-12">
-            {STEPS.map((step) => (
+            {steps.map((step) => (
               <li key={step.label} className="grid gap-5 sm:grid-cols-[3rem_1fr]">
                 <span className="tabular font-mono text-sm text-emerald">
                   {step.label}

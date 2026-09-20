@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/product/PageHeader";
-import { getTeams } from "@/lib/api";
+import { getSummary, getTeams } from "@/lib/api";
+import { formatCount } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Team Intelligence",
@@ -12,15 +13,20 @@ export const metadata: Metadata = {
 export const revalidate = 300;
 
 export default async function TeamsPage() {
-  const teams = await getTeams();
+  const [teams, summary] = await Promise.all([getTeams(), getSummary()]);
   const clubs = teams ?? [];
+
+  // Corpus match count from the live summary, durable fallback if unreachable.
+  const lead = summary
+    ? `Counted from ${formatCount(summary.matches)} matches on record. No forecast involved — just what happened, measured.`
+    : "Counted from every match on record. No forecast involved — just what happened, measured.";
 
   return (
     <>
       <PageHeader
         label="Team Intelligence"
         title="What a club has actually done."
-        lead="Counted from 113,000 matches on record. No forecast involved — just what happened, measured."
+        lead={lead}
       />
 
       <section className="mx-auto max-w-shell px-5 py-16 sm:px-6 sm:py-20">

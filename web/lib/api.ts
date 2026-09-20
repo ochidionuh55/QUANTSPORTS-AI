@@ -10,7 +10,16 @@ const API = process.env.QUANTSPORT_API ?? "http://localhost:8000";
 
 export type PlatformSummary = {
   matches: number;
+  /** Legacy competition count. Ambiguous — kept only for backward
+   *  compatibility with older API responses. Prefer the two fields below,
+   *  each of which says which question it answers. */
   competitions: number;
+  /** Competitions we hold verified history for (data held, withheld
+   *  competitions included). The corpus foundation, not today's coverage. */
+  corpus_competitions: number;
+  /** Competitions in the daily analysis universe. Coverage, not approval —
+   *  capability is decided per competition and service. */
+  scan_competitions: number;
   teams: number;
   services: number;
   fixtures_today: number;

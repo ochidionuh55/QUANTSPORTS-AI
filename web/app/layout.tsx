@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "QUANTSPORT AI",
     title: "QUANTSPORT AI — Football Intelligence, Quantified",
     description:
-      "Football is full of opinions. We start with probabilities. 113,000 matches, 38 competitions, and a record that includes the losses.",
+      "Football intelligence powered by mathematical modelling, historical data and a transparent published track record.",
     url: "/",
     images: [
       {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "QUANTSPORT AI — Football Intelligence, Quantified",
     description:
-      "113,000 matches, 38 competitions, and a published record that includes the losses.",
+      "Football intelligence powered by mathematical modelling, historical data and a transparent published track record.",
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },

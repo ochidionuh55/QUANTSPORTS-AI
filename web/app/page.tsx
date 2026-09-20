@@ -72,20 +72,24 @@ export default async function Home() {
               className="mt-16 flex animate-rise flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-faint"
               style={{ animationDelay: "260ms" }}
             >
+              {/* The corpus triple: three figures describing one universe —
+                  the historical data the model is built on. All three are
+                  "data held", never "publishing today". Labels say "on record"
+                  so corpus competitions cannot be read as today's coverage. */}
               <span className="tabular text-ink">
                 {summary ? formatCount(summary.matches) : "—"}
               </span>
-              <span>matches</span>
+              <span>historical matches</span>
               <span className="text-line-strong">•</span>
               <span className="tabular text-ink">
-                {summary ? summary.competitions : "—"}
+                {summary ? summary.corpus_competitions : "—"}
               </span>
-              <span>competitions</span>
+              <span>competitions on record</span>
               <span className="text-line-strong">•</span>
               <span className="tabular text-ink">
                 {summary ? formatCount(summary.teams) : "—"}
               </span>
-              <span>teams</span>
+              <span>canonical teams</span>
             </div>
 
             <p
