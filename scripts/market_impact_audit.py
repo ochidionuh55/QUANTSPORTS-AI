@@ -56,12 +56,18 @@ from app.services.best_of_day import SERVICES
 
 CHAMPION = "model-only-v2-dc"
 HALF_LIFE = 365.0
-# Candidate configs: mode -> (version label, iterations, half_life|None).
-# half_life None => equal weight (opponent-adjusted only); iterations 0 => pure recency.
+# Candidate configs: mode -> {label, kind, iterations?, half_life?}.
+#   kind "recency"      — opponent-agnostic recency (EXP-002)
+#   kind "adjusted"     — opponent-adjusted fixed point; recency-weighted if half_life set
+#   kind "recency_norm" — recency RATIO, control TOTAL (EXP-008 totals-preserving)
 CANDIDATES = {
-    "stack": ("exp007-stack-hl365-it3", 3, HALF_LIFE),
-    "recency": ("exp002-recency-hl365", 0, HALF_LIFE),
-    "oppadj": ("exp003-oppadj-it2", 2, None),
+    "stack": {"label": "exp007-stack-hl365-it3", "kind": "adjusted", "iterations": 3,
+              "half_life": HALF_LIFE},
+    "recency": {"label": "exp002-recency-hl365", "kind": "recency", "half_life": HALF_LIFE},
+    "oppadj": {"label": "exp003-oppadj-it2", "kind": "adjusted", "iterations": 2,
+               "half_life": None},
+    "recency_norm": {"label": "exp008-recency-norm-hl365", "kind": "recency_norm",
+                     "half_life": HALF_LIFE},
 }
 RULE = "=" * 92
 MIN_LEAGUE_RESULTS = 20
@@ -184,6 +190,12 @@ def _market_probs(
     hs: TeamStrength, as_: TeamStrength, avg: LeagueAverages, code: str | None
 ) -> dict[tuple[str, str], float]:
     lam_h, lam_a = expected_goals(hs, as_, avg)
+    return _market_probs_from_lambda(lam_h, lam_a, code)
+
+
+def _market_probs_from_lambda(
+    lam_h: float, lam_a: float, code: str | None
+) -> dict[tuple[str, str], float]:
     grid = build_grid(lam_h, lam_a, corrected=True, competition=code)
     out: dict[tuple[str, str], float] = {}
     for d in SUPPORTED:
@@ -191,25 +203,41 @@ def _market_probs(
     return out
 
 
-def _candidate_strengths(
-    acc: Accumulator, avg: LeagueAverages, home_id: int, away_id: int, ordinal: int,
-    iterations: int, half_life: float | None,
-) -> tuple[TeamStrength, TeamStrength] | None:
-    """Home/away candidate strengths for the chosen mode, or None if unreliable."""
-    if iterations == 0:  # pure recency (EXP-002), opponent-agnostic
+def _candidate_lambdas(
+    acc: Accumulator, avg: LeagueAverages, ch: TeamStrength, ca: TeamStrength,
+    home_id: int, away_id: int, ordinal: int, config: dict,
+) -> tuple[float, float] | None:
+    """Candidate (lambda_home, lambda_away) for the chosen mode, or None."""
+    kind = config["kind"]
+    half_life = config.get("half_life")
+
+    if kind in {"recency", "recency_norm"}:
         assert half_life is not None
         hs = _recency_strength(acc, home_id, avg, ordinal, half_life)
         as_ = _recency_strength(acc, away_id, avg, ordinal, half_life)
-        return (hs, as_) if hs.is_reliable and as_.is_reliable else None
-    strengths = _adjusted_strengths(acc, avg, iterations, ordinal, half_life)
+        if not (hs.is_reliable and as_.is_reliable):
+            return None
+        lam_h, lam_a = expected_goals(hs, as_, avg)
+        if kind == "recency_norm":
+            # Keep recency's ratio (drives the result) but take the total-goals
+            # LEVEL from the calibrated control (which drives O/U and BTTS).
+            cl_h, cl_a = expected_goals(ch, ca, avg)
+            r_total = lam_h + lam_a
+            if r_total <= 0:
+                return None
+            scale = (cl_h + cl_a) / r_total
+            lam_h, lam_a = lam_h * scale, lam_a * scale
+        return lam_h, lam_a
+
+    # opponent-adjusted (recency-weighted iff half_life set)
+    strengths = _adjusted_strengths(acc, avg, config["iterations"], ordinal, half_life)
     if home_id in strengths and away_id in strengths:
-        return strengths[home_id], strengths[away_id]
+        return expected_goals(strengths[home_id], strengths[away_id], avg)
     return None
 
 
 def _walk(
-    names: dict[int, str], rows: list[tuple], since: date, cutoff: date,
-    iterations: int, half_life: float | None,
+    names: dict[int, str], rows: list[tuple], since: date, cutoff: date, config: dict,
 ) -> list[Scored]:
     by_comp: dict[int, list[tuple]] = defaultdict(list)
     for r in rows:
@@ -233,12 +261,12 @@ def _walk(
                 ch = _control_strength(acc, home_id, avg)
                 ca = _control_strength(acc, away_id, avg)
                 if ch.is_reliable and ca.is_reliable and avg.is_reliable:
-                    cand_s = _candidate_strengths(
-                        acc, avg, home_id, away_id, ordinal, iterations, half_life
+                    cand_lams = _candidate_lambdas(
+                        acc, avg, ch, ca, home_id, away_id, ordinal, config
                     )
-                    if cand_s is not None:
+                    if cand_lams is not None:
                         champ = _market_probs(ch, ca, avg, code)
-                        cand = _market_probs(cand_s[0], cand_s[1], avg, code)
+                        cand = _market_probs_from_lambda(cand_lams[0], cand_lams[1], code)
                         won = {d.key: int(d.holds(hg, ag)) for d in SUPPORTED}
                         out.append(Scored(name, str(season or "?"), champ, cand, won))
             acc.record(home_id, away_id, hg, ag, ordinal)
@@ -347,7 +375,8 @@ async def main() -> int:
     parser.add_argument("--window-days", type=int, default=DEFAULT_WINDOW_DAYS)
     parser.add_argument("--candidate", choices=sorted(CANDIDATES), default="stack")
     args = parser.parse_args()
-    candidate_label, iterations, half_life = CANDIDATES[args.candidate]
+    config = CANDIDATES[args.candidate]
+    candidate_label = config["label"]
 
     database = Database(get_settings())
     await database.connect()
@@ -360,7 +389,7 @@ async def main() -> int:
         max_date = max(r[4] for r in rows)
         cutoff = max_date - timedelta(days=args.test_days)
         since = cutoff - timedelta(days=args.window_days)
-        scored = _walk(names, rows, since, cutoff, iterations, half_life)
+        scored = _walk(names, rows, since, cutoff, config)
         if not scored:
             print("No settled fixtures in the audit window.")
             await database.disconnect()
