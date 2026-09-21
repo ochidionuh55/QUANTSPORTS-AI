@@ -66,7 +66,7 @@ from app.bot.formatting import (
 from app.bot.keyboards import acceptance_keyboard, back_to_menu, main_menu
 from app.core.basketball_competitions import BASKETBALL_COMPETITIONS
 from app.core.community import CHANNEL_URL
-from app.core.config import Settings
+from app.core.config import Settings, get_settings
 from app.core.logging import get_logger
 from app.core.terms import (
     AGE_NOTICE,
@@ -120,6 +120,7 @@ from app.services.subscriptions import (
     FEATURE_LABELS,
     Access,
     Feature,
+    Tier,
     describe,
     extend,
     resolve,
@@ -461,7 +462,17 @@ async def handle_highlights(
 
 
 def _access(user: User) -> Access:
-    """Read a user's current entitlement."""
+    """Read a user's current entitlement.
+
+    While ``FEATURES__OPEN_ACCESS`` is on (payments not yet wired up), everyone
+    resolves to open Pro so every paid feature is reachable and no paywall
+    shows. This is an entitlement switch only — it never touches the model,
+    predictions, capability gate or published selections — and it reverts to
+    normal trial/subscription gating the moment the flag is turned off.
+    ``get_settings()`` is cached, so this reads the same config the bot injects.
+    """
+    if get_settings().features.open_access:
+        return Access(Tier.PRO)
     return resolve(
         user.subscription_tier,
         user.subscription_expires_at,

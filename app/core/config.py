@@ -190,6 +190,18 @@ class FeatureFlags(BaseSettings):
     research_mode: bool = True
     """Research surfaces (metrics, calibration reports) are available."""
 
+    open_access: bool = False
+    """Temporarily open every paid feature to everyone — a launch switch.
+
+    While no payment provider is wired up yet, this lets every user (including
+    brand-new ones and the admin) reach Best of today, Market explorer, Team
+    intelligence and Following with no trial and no subscription, and shows no
+    paywall. It is purely an *entitlement* switch: it does not change any model,
+    prediction, capability decision or published selection. Set
+    ``FEATURES__OPEN_ACCESS=false`` (or unset it) to restore normal
+    trial/subscription gating the moment payments go live.
+    """
+
     promoted_model_version: str | None = None
     """Identifier of the model version that passed the Phase 8B gate.
 
