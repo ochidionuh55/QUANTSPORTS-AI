@@ -308,8 +308,27 @@ def format_summary_line(
     return "\n".join(parts)
 
 
-def format_stored_detail(record: object) -> str:
-    """Render the full analysis of a stored fixture."""
+_ENGINE_LABELS = {
+    "model-only-v3-stack-norm": "V3 Stack-Norm",
+    "model-only-v2-dc": "V2 Dixon-Coles",
+    "model-only-v1": "V1 Poisson",
+}
+
+
+def _engine_label(version: str | None) -> str:
+    """Human label for a stored analysis's model lineage."""
+    if not version:
+        return "V2 (legacy, pre-lineage)"
+    return _ENGINE_LABELS.get(version, version)
+
+
+def format_stored_detail(record: object, show_lineage: bool = False) -> str:
+    """Render the full analysis of a stored fixture.
+
+    ``show_lineage`` adds an admin-only line naming the engine that actually
+    produced this fixture's model numbers, read from the stored provenance —
+    never inferred from the currently-active flag.
+    """
     badge = COVERAGE_BADGE.get(getattr(record, "coverage", ""), "⚪")
     lines = [
         f"<b>{record.home_name} v {record.away_name}</b>",  # type: ignore[attr-defined]
@@ -376,6 +395,10 @@ def format_stored_detail(record: object) -> str:
     dropped = ", ".join(getattr(record, "components_dropped", []) or [])
     lines.append("")
     lines.append("<b>Model status</b>")
+    if show_lineage:
+        provenance = getattr(record, "provenance", {}) or {}
+        version = provenance.get("model_version") if isinstance(provenance, dict) else None
+        lines.append(f"🧠 Engine: {_engine_label(version)}")
     lines.append(f"Under evaluation. Components used: {used}.")
     if dropped:
         lines.append(f"Excluded for insufficient data: {dropped}.")

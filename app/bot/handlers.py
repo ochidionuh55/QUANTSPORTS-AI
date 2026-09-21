@@ -374,7 +374,7 @@ async def handle_analyse(
     picks = await SelectionService(session).picks_for_fixture(fixture_id)  # type: ignore[arg-type]
 
     await callback.message.edit_text(
-        format_stored_detail(record) + format_fixture_picks(picks),
+        format_stored_detail(record, show_lineage=user.is_admin) + format_fixture_picks(picks),
         reply_markup=InlineKeyboardMarkup(
             inline_keyboard=[
                 [

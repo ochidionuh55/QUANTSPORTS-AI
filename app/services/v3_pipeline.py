@@ -7,10 +7,13 @@ V3-modellable, it recomputes the model-only view (1X2 + expected goals) from the
 canonical :mod:`app.quant.v3_stack_norm` module over the competition's full
 history, and stamps V3 lineage on the analysis.
 
-It only ever rewrites the **model-only** view — ``model_probabilities`` and the
-expected goals the services rebuild the grid from. The published/posterior
-probabilities (the bookmaker's de-margined price where odds exist) are left
-exactly as they are: a market number is never relabelled as a model number.
+It rewrites the **model-derived** view — ``model_probabilities`` and expected
+goals (the services rebuild the grid from these), plus the goals-family markets
+that are genuinely model output: Over/Under and Both-teams-to-score, recomputed
+from the **same V3 grid** so they no longer show legacy V2 numbers beside a V3
+expected-goals figure. It never touches ``probabilities`` — the published
+1X2/Double-chance/Result, which are the bookmaker's de-margined price where odds
+exist. A market number is never relabelled as a model number.
 
 Full-precision expected goals are stored (not rounded), so the services grid
 rebuilt from them reproduces the canonical V3 grid exactly — the invariant the
@@ -20,7 +23,6 @@ Stage-2 preflight checks.
 from __future__ import annotations
 
 from datetime import datetime, timedelta
-from decimal import Decimal
 
 from sqlalchemy import select, text
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -29,7 +31,7 @@ from app.core.competitions import code_for_name
 from app.core.config import get_settings
 from app.database.models import HistoricalMatch
 from app.quant import v3_stack_norm as v3
-from app.quant.grid import build_grid
+from app.quant.grid import build_match_probabilities
 from app.services.match_analysis import MatchAnalysis
 
 V3_VERSION = v3.VERSION
@@ -77,7 +79,7 @@ async def _competition_pool(
 
 
 async def apply_v3(session: AsyncSession, analysis: MatchAnalysis, moment: datetime) -> bool:
-    """Overwrite the model-only view with V3 when V3 is active. Returns applied?
+    """Overwrite the model-derived view with V3 when V3 is active. Returns applied?
 
     Byte-identical no-op when the flag is off or the fixture is not
     V3-modellable — the V2 analysis then stands unchanged.
@@ -99,24 +101,32 @@ async def apply_v3(session: AsyncSession, analysis: MatchAnalysis, moment: datet
         return False
 
     code = code_for_name(analysis.competition)
-    grid = build_grid(lambdas[0], lambdas[1], corrected=True, competition=code)
-    ph = pd = pa = Decimal(0)
-    for (h, a), p in grid.items():
-        if h > a:
-            ph += p
-        elif h == a:
-            pd += p
-        else:
-            pa += p
-    total = ph + pd + pa
+    # One V3 grid, one source of truth: 1X2, totals and BTTS all summed from it,
+    # so the goals markets can never drift from the expected-goals figure beside
+    # them. corrected=True + per-competition rho matches the canonical grid.
+    mp = build_match_probabilities(lambdas[0], lambdas[1], corrected=True, competition=code)
+    total = mp.home_win + mp.draw + mp.away_win
     if total <= 0:
         return False
-    probs = {"home": ph / total, "draw": pd / total, "away": pa / total}
+    probs = {
+        "home": mp.home_win / total,
+        "draw": mp.draw / total,
+        "away": mp.away_win / total,
+    }
 
+    # Model-only view (1X2 + expected goals) — the V3 engine's own numbers.
     analysis.model_probabilities = probs
     analysis.expected_home_goals = lambdas[0]
     analysis.expected_away_goals = lambdas[1]
     analysis.component_views = (dict(probs),)
     analysis.components_used = ("v3-stack-norm",)
     analysis.model_version = V3_VERSION
+
+    # Model-derived goals markets from the SAME V3 grid. build_markets() then
+    # rebuilds Goals/BTTS from these while leaving 1X2/Double-chance/Result on
+    # ``analysis.probabilities`` (the market posterior) untouched — that number
+    # is the bookmaker's, and it stays labelled as such.
+    analysis.over_under = dict(mp.over_under)
+    analysis.both_teams_score = mp.both_teams_score
+    analysis.build_markets()
     return True
