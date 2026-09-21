@@ -30,6 +30,7 @@ OUTCOMES = ("home", "draw", "away")
 VERSION_LABELS = {
     "model-only-v2-dc": "Production V2-DC",
     "exp002-recency-hl365": "EXP-002-365d",
+    "exp009-stack-norm-hl365-it2": "EXP-009",
 }
 
 
