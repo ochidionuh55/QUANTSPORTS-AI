@@ -55,9 +55,14 @@ from app.quant.poisson import LeagueAverages, TeamStrength, expected_goals, team
 from app.services.best_of_day import SERVICES
 
 CHAMPION = "model-only-v2-dc"
-CANDIDATE = "exp007-stack-hl365-it3"
 HALF_LIFE = 365.0
-STACK_ITERATIONS = 3
+# Candidate configs: mode -> (version label, iterations, half_life|None).
+# half_life None => equal weight (opponent-adjusted only); iterations 0 => pure recency.
+CANDIDATES = {
+    "stack": ("exp007-stack-hl365-it3", 3, HALF_LIFE),
+    "recency": ("exp002-recency-hl365", 0, HALF_LIFE),
+    "oppadj": ("exp003-oppadj-it2", 2, None),
+}
 RULE = "=" * 92
 MIN_LEAGUE_RESULTS = 20
 DEFAULT_WINDOW_DAYS = 1095
@@ -114,10 +119,37 @@ def _control_strength(acc: Accumulator, team: int, avg: LeagueAverages) -> TeamS
     return team_strength(team, acc.home.get(team, []), acc.away.get(team, []), avg)
 
 
-def _stack_strengths(
-    acc: Accumulator, avg: LeagueAverages, iterations: int, ref: int, half_life: float
+def _recency_strength(
+    acc: Accumulator, team: int, avg: LeagueAverages, ref: int, half_life: float
+) -> TeamStrength:
+    """Opponent-agnostic recency-weighted strength (the EXP-002 estimator)."""
+    matches = acc.dated.get(team, [])
+    played = len(matches)
+    if played == 0:
+        return TeamStrength(team, 1.0, 1.0, 0)
+    baseline = (avg.home_goals + avg.away_goals) / 2
+    if baseline <= 0:
+        return TeamStrength(team, 1.0, 1.0, played)
+    wsum = wscored = wconc = 0.0
+    for g, c, o in matches:
+        w = 0.5 ** ((ref - o) / half_life)
+        wsum += w
+        wscored += w * g
+        wconc += w * c
+    expected = baseline * wsum
+    if expected <= 0:
+        return TeamStrength(team, 1.0, 1.0, played)
+    return TeamStrength(team, wscored / expected, wconc / expected, played)
+
+
+def _adjusted_strengths(
+    acc: Accumulator, avg: LeagueAverages, iterations: int, ref: int, half_life: float | None
 ) -> dict[int, TeamStrength]:
+    """Opponent-adjusted fixed point; recency-weighted when ``half_life`` given."""
+
     def w(o: int) -> float:
+        if half_life is None:
+            return 1.0
         return 0.5 ** ((ref - o) / half_life)
 
     wscored: dict[int, float] = defaultdict(float)
@@ -159,7 +191,26 @@ def _market_probs(
     return out
 
 
-def _walk(names: dict[int, str], rows: list[tuple], since: date, cutoff: date) -> list[Scored]:
+def _candidate_strengths(
+    acc: Accumulator, avg: LeagueAverages, home_id: int, away_id: int, ordinal: int,
+    iterations: int, half_life: float | None,
+) -> tuple[TeamStrength, TeamStrength] | None:
+    """Home/away candidate strengths for the chosen mode, or None if unreliable."""
+    if iterations == 0:  # pure recency (EXP-002), opponent-agnostic
+        assert half_life is not None
+        hs = _recency_strength(acc, home_id, avg, ordinal, half_life)
+        as_ = _recency_strength(acc, away_id, avg, ordinal, half_life)
+        return (hs, as_) if hs.is_reliable and as_.is_reliable else None
+    strengths = _adjusted_strengths(acc, avg, iterations, ordinal, half_life)
+    if home_id in strengths and away_id in strengths:
+        return strengths[home_id], strengths[away_id]
+    return None
+
+
+def _walk(
+    names: dict[int, str], rows: list[tuple], since: date, cutoff: date,
+    iterations: int, half_life: float | None,
+) -> list[Scored]:
     by_comp: dict[int, list[tuple]] = defaultdict(list)
     for r in rows:
         by_comp[int(r[0])].append(r)
@@ -182,14 +233,14 @@ def _walk(names: dict[int, str], rows: list[tuple], since: date, cutoff: date) -
                 ch = _control_strength(acc, home_id, avg)
                 ca = _control_strength(acc, away_id, avg)
                 if ch.is_reliable and ca.is_reliable and avg.is_reliable:
-                    champ = _market_probs(ch, ca, avg, code)
-                    stack = _stack_strengths(acc, avg, STACK_ITERATIONS, ordinal, HALF_LIFE)
-                    if home_id in stack and away_id in stack:
-                        cand = _market_probs(stack[home_id], stack[away_id], avg, code)
+                    cand_s = _candidate_strengths(
+                        acc, avg, home_id, away_id, ordinal, iterations, half_life
+                    )
+                    if cand_s is not None:
+                        champ = _market_probs(ch, ca, avg, code)
+                        cand = _market_probs(cand_s[0], cand_s[1], avg, code)
                         won = {d.key: int(d.holds(hg, ag)) for d in SUPPORTED}
-                        out.append(
-                            Scored(name, str(season or "?"), champ, cand, won)
-                        )
+                        out.append(Scored(name, str(season or "?"), champ, cand, won))
             acc.record(home_id, away_id, hg, ag, ordinal)
     return out
 
@@ -294,7 +345,9 @@ async def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--test-days", type=int, default=TEST_DAYS)
     parser.add_argument("--window-days", type=int, default=DEFAULT_WINDOW_DAYS)
+    parser.add_argument("--candidate", choices=sorted(CANDIDATES), default="stack")
     args = parser.parse_args()
+    candidate_label, iterations, half_life = CANDIDATES[args.candidate]
 
     database = Database(get_settings())
     await database.connect()
@@ -307,7 +360,7 @@ async def main() -> int:
         max_date = max(r[4] for r in rows)
         cutoff = max_date - timedelta(days=args.test_days)
         since = cutoff - timedelta(days=args.window_days)
-        scored = _walk(names, rows, since, cutoff)
+        scored = _walk(names, rows, since, cutoff, iterations, half_life)
         if not scored:
             print("No settled fixtures in the audit window.")
             await database.disconnect()
@@ -316,7 +369,7 @@ async def main() -> int:
     await database.disconnect()
 
     print(RULE)
-    print(f"FULL MARKET IMPACT AUDIT — champion {CHAMPION} vs candidate {CANDIDATE}")
+    print(f"FULL MARKET IMPACT AUDIT — champion {CHAMPION} vs candidate {candidate_label}")
     print(f"grid {grid_version()} · settled fixtures {len(scored):,} · window from {cutoff}")
     print(RULE)
 
