@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import asyncio
 import sys
+import traceback
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
@@ -223,33 +224,37 @@ async def _history(session: AsyncSession, team_id: int, moment: datetime) -> Tea
 async def _competition_strengths(
     session: AsyncSession, comp_ids: set[int], avg: LeagueAverages, moment: datetime, ref: int
 ) -> dict[int, dict[int, TeamStrength]]:
-    """Opponent-adjusted strengths per competition, from its recent matches."""
-    if not comp_ids:
-        return {}
+    """Opponent-adjusted strengths per competition, from its recent matches.
+
+    Loads **one competition at a time** and discards its matches after computing
+    the fixed point, so memory stays bounded regardless of how many competitions
+    or seasons are in play — a single bulk load of every competition's history
+    is what an earlier version choked on.
+    """
+    out: dict[int, dict[int, TeamStrength]] = {}
     cutoff = moment - timedelta(days=HISTORY_WINDOW_DAYS)
-    result = await session.execute(
-        select(
-            HistoricalMatch.competition_id,
-            HistoricalMatch.home_team_id,
-            HistoricalMatch.away_team_id,
-            HistoricalMatch.home_goals,
-            HistoricalMatch.away_goals,
-            HistoricalMatch.match_date,
-        ).where(
-            HistoricalMatch.competition_id.in_(comp_ids),
-            HistoricalMatch.match_date >= cutoff,
-            HistoricalMatch.match_date < moment,
+    for cid in comp_ids:
+        result = await session.execute(
+            select(
+                HistoricalMatch.home_team_id,
+                HistoricalMatch.away_team_id,
+                HistoricalMatch.home_goals,
+                HistoricalMatch.away_goals,
+                HistoricalMatch.match_date,
+            ).where(
+                HistoricalMatch.competition_id == cid,
+                HistoricalMatch.match_date >= cutoff,
+                HistoricalMatch.match_date < moment,
+            )
         )
-    )
-    pool: dict[int, list[tuple[int, int, int, int, int]]] = defaultdict(list)
-    for cid, h, a, hg, ag, mdate in result.all():
-        o = mdate.toordinal() if hasattr(mdate, "toordinal") else 0
-        pool[int(cid)].append((int(h), int(a), int(hg), int(ag), o))
-    return {
-        cid: _adjusted_strengths(matches, avg, ref)
-        for cid, matches in pool.items()
-        if len(matches) >= MIN_COMP_MATCHES
-    }
+        matches = [
+            (int(h), int(a), int(hg), int(ag),
+             mdate.toordinal() if hasattr(mdate, "toordinal") else 0)
+            for h, a, hg, ag, mdate in result.all()
+        ]
+        if len(matches) >= MIN_COMP_MATCHES:
+            out[cid] = _adjusted_strengths(matches, avg, ref)
+    return out
 
 
 def _rows_for(
@@ -342,7 +347,12 @@ async def main() -> int:
             resolved.append((record, home_res.team.id, away_res.team.id, comp_id))
 
         needed = {cid for *_, cid in resolved if cid is not None}
-        comp_strengths = await _competition_strengths(session, needed, league, now, ref)
+        try:
+            comp_strengths = await _competition_strengths(session, needed, league, now, ref)
+        except Exception:  # noqa: BLE001 — EXP-009 is best-effort; control+recency must still write
+            traceback.print_exc()
+            print("  EXP-009 strengths step failed; writing control + recency only.")
+            comp_strengths = {}
 
         # Pass 2: compute all arms and write.
         for record, home_id, away_id, comp_id in resolved:
