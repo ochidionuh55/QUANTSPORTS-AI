@@ -33,6 +33,7 @@ from app.providers.models import ProviderEvent
 from app.quant.grid import grid_version
 from app.services.match_analysis import Coverage, MatchAnalysis, MatchAnalysisService
 from app.services.scan_telemetry import ScanTelemetry
+from app.services.v3_pipeline import apply_v3
 
 logger = get_logger(__name__)
 
@@ -179,6 +180,20 @@ class DailyScanService:
                     rejection_detail=str(exc),
                 )
                 continue
+
+            # V3 routing. A no-op unless FEATURES__ACTIVE_MODEL_VERSION selects
+            # V3; then it overwrites only the model-only view (never the market
+            # posterior) and stamps V3 lineage. Best-effort: any failure leaves
+            # the V2 analysis untouched so the scan keeps its V2 output — the
+            # pipeline fails closed to the frozen incumbent, never aborts.
+            try:
+                await apply_v3(self._session, analysis, moment)
+            except Exception as exc:  # noqa: BLE001 - V3 must never break the scan
+                logger.warning(
+                    "scan.v3_apply_failed",
+                    fixture=event.external_id,
+                    error=str(exc),
+                )
 
             report.analysed += 1
             grade = str(analysis.coverage)
@@ -352,6 +367,7 @@ class DailyScanService:
             ],
             "components_used": list(analysis.components_used),
             "components_dropped": list(analysis.components_dropped),
+            "model_version": analysis.model_version,
             "computed_at": moment.isoformat(),
         }
         record.computed_at = moment

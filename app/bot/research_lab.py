@@ -23,6 +23,7 @@ from aiogram.types import (
     Message,
 )
 
+from app.core.config import get_settings
 from app.database.models import User
 from app.research.lab import CONTROL_VERSION, OUTCOMES, Fixture, ResearchLab, label_for
 
@@ -31,6 +32,17 @@ DISCLAIMER = "🔒 <b>RESEARCH ONLY — NOT PRODUCTION.</b> Does not affect publ
 NOT_ADMIN = "That surface is not available."
 CONTROL_LABEL = label_for(CONTROL_VERSION)
 MAX_CARDS = 8
+
+
+def _active_engine_line() -> str:
+    """The engine the production pipeline is actually serving right now.
+
+    Read live from the backend feature configuration
+    (``FEATURES__ACTIVE_MODEL_VERSION``) — never hardcoded — so this line always
+    tells the truth about what customers are being served. Observational only.
+    """
+    version = get_settings().features.active_model_version
+    return f"⚙️ <b>Active production engine:</b> <code>{version}</code> ({label_for(version)})"
 
 
 def _menu() -> InlineKeyboardMarkup:
@@ -88,7 +100,7 @@ def _card(fx: Fixture) -> str:
 
 
 def _page(title: str, subtitle: str, fixtures: list[Fixture], empty: str) -> str:
-    body = [HEADER, f"<b>{title}</b>", f"<i>{subtitle}</i>", ""]
+    body = [HEADER, _active_engine_line(), "", f"<b>{title}</b>", f"<i>{subtitle}</i>", ""]
     if not fixtures:
         body.append(empty)
     else:
@@ -116,6 +128,8 @@ def _menu_text() -> str:
     return "\n".join(
         [
             HEADER,
+            "",
+            _active_engine_line(),
             "",
             "Watch active challengers shadow the frozen champion "
             f"(<code>{CONTROL_LABEL}</code>) on real upcoming fixtures. "

@@ -190,6 +190,17 @@ class FeatureFlags(BaseSettings):
     research_mode: bool = True
     """Research surfaces (metrics, calibration reports) are available."""
 
+    active_model_version: str = "model-only-v2-dc"
+    """Which model engine the production pipeline serves.
+
+    Default ``model-only-v2-dc`` is the frozen incumbent (Poisson+Elo+Form blend).
+    Set ``FEATURES__ACTIVE_MODEL_VERSION=model-only-v3-stack-norm`` to activate the
+    validated V3 engine (recency + opponent-adjusted, totals-preserving canonical
+    grid); set it back to activate an instant, reversible rollback to V2. The V3
+    routing is inert while this reads anything other than the V3 identifier, so
+    deploying the code changes nothing until this flag is flipped.
+    """
+
     open_access: bool = False
     """Temporarily open every paid feature to everyone — a launch switch.
 

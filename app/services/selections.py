@@ -38,6 +38,7 @@ from app.database.models import (
 )
 from app.database.models.selections import LOST, PENDING, VOID, WON
 from app.quant.grid import build_grid
+from app.quant.v3_stack_norm import VERSION as V3_VERSION
 from app.services.best_of_day import (
     MIN_SAMPLE,
     SERVICES,
@@ -714,7 +715,25 @@ def _forecast(analysis: StoredAnalysis) -> ModelForecast | None:
     if sum(result.values()) <= 0:
         return None
 
-    grid = _tilted(build_grid(float(lambda_home), float(lambda_away)), result)
+    provenance = analysis.provenance if isinstance(analysis.provenance, dict) else {}
+    if provenance.get("model_version") == V3_VERSION:
+        # V3 produced the canonical per-competition Dixon-Coles grid upstream,
+        # and its published 1X2 is that grid's own result mass. Rebuild the
+        # identical grid from the same full-precision lambdas and publish it
+        # untilted: every market a service derives then comes straight from the
+        # V3 grid, so the services grid equals the V3 grid exactly. No tilt,
+        # because there is no separate blend to fold back in.
+        grid = build_grid(
+            float(lambda_home),
+            float(lambda_away),
+            corrected=True,
+            competition=code_for_name(analysis.competition),
+        )
+    else:
+        # V2/V1 incumbent: the model-only 1X2 is a Poisson+Elo+form blend, so
+        # the goals grid is tilted onto it to keep every component inside the
+        # single distribution the markets derive from.
+        grid = _tilted(build_grid(float(lambda_home), float(lambda_away)), result)
 
     views: list[dict[str, Decimal]] = []
     for raw in analysis.component_views or []:

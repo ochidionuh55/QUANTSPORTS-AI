@@ -29,6 +29,7 @@ OUTCOMES = ("home", "draw", "away")
 # Display labels. A version not listed falls back to a tidied form of its id.
 VERSION_LABELS = {
     "model-only-v2-dc": "Production V2-DC",
+    "model-only-v3-stack-norm": "Production V3 (stack-norm)",
     "exp002-recency-hl365": "EXP-002-365d",
     "exp009-stack-norm-hl365-it2": "EXP-009",
 }

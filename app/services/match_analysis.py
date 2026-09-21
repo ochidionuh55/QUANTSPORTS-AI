@@ -145,6 +145,15 @@ class MatchAnalysis:
     Averaging hides disagreement, and disagreement is the honest signal that a
     fixture is hard to call — so the individual views are kept.
     """
+
+    model_version: str = "model-only-v2-dc"
+    """The model engine that produced ``model_probabilities``.
+
+    Defaults to the frozen incumbent. The V3 routing overwrites it to
+    ``model-only-v3-stack-norm`` only when V3 is the active engine and the
+    fixture is V3-modellable; it is persisted as prediction lineage.
+    """
+
     unavailable_reason: str | None = None
 
     def build_markets(self) -> None:

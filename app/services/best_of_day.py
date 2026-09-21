@@ -32,8 +32,10 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Final
 
+from app.core.config import get_settings
 from app.quant.grid import correction_enabled
 from app.quant.markets import MARKETS, derive_markets, require_publishable
+from app.quant.v3_stack_norm import VERSION as V3_VERSION
 
 Grid = dict[tuple[int, int], Decimal]
 
@@ -161,7 +163,14 @@ def model_only_version() -> str:
     Read at publication time rather than fixed at import, so toggling the
     correction takes effect on the next scan without a deploy and without the
     version silently disagreeing with the engine that produced the numbers.
+
+    When V3 is the active production engine, selections it produces carry the
+    V3 version string, so a stored selection always names the engine behind its
+    numbers. Default-OFF this returns exactly what it did before, so nothing
+    changes until the flag is flipped.
     """
+    if get_settings().features.active_model_version == V3_VERSION:
+        return V3_VERSION
     return MODEL_ONLY_VERSION_DC if correction_enabled() else MODEL_ONLY_VERSION
 
 MIN_SAMPLE: Final[int] = 15
