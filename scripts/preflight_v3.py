@@ -37,7 +37,7 @@ from __future__ import annotations
 import asyncio
 import os
 import sys
-from datetime import UTC, timedelta
+from datetime import datetime, timedelta
 from decimal import Decimal
 from pathlib import Path
 
@@ -129,16 +129,17 @@ async def main() -> int:
         print("No historical matches — cannot run preflight.")
         return 1
 
-    max_date = max(r[5] for r in rows)
-    if max_date.tzinfo is None:
-        max_date = max_date.replace(tzinfo=UTC)
-    window_start = max_date - timedelta(days=WINDOW_DAYS)
+    # match_date is a DATE column; normalise any stray datetime to a date so
+    # comparisons and ordinals are consistent.
+    def _as_date(x: object) -> object:
+        return x.date() if isinstance(x, datetime) else x
+
+    max_date = max(_as_date(r[5]) for r in rows)  # type: ignore[type-var]
+    window_start = max_date - timedelta(days=WINDOW_DAYS)  # type: ignore[operator]
 
     by_comp: dict[int, list[tuple]] = {}
     for r in rows:
-        md = r[5]
-        if md.tzinfo is None:
-            md = md.replace(tzinfo=UTC)
+        md = _as_date(r[5])
         by_comp.setdefault(int(r[0]), []).append(
             (int(r[1]), int(r[2]), int(r[3]), int(r[4]), md)
         )
@@ -259,7 +260,7 @@ async def main() -> int:
     checks = [check_a, check_b, check_c, check_d, check_e]
     print(RULE)
     print("V3 PRODUCTION PREFLIGHT — Stage 2")
-    print(f"window [{window_start.date()}, {max_date.date()})  fixtures exercised: {sampled}")
+    print(f"window [{window_start}, {max_date})  fixtures exercised: {sampled}")
     print(RULE)
     for c in checks:
         print(c.report())
