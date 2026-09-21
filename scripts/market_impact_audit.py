@@ -68,6 +68,9 @@ CANDIDATES = {
                "half_life": None},
     "recency_norm": {"label": "exp008-recency-norm-hl365", "kind": "recency_norm",
                      "half_life": HALF_LIFE},
+    # EXP-009: both clean levers — recency+opponent-adjusted RATIO, control TOTAL.
+    "stack_norm": {"label": "exp009-stack-norm-hl365-it3", "kind": "adjusted_norm",
+                   "iterations": 3, "half_life": HALF_LIFE},
 }
 RULE = "=" * 92
 MIN_LEAGUE_RESULTS = 20
@@ -207,33 +210,38 @@ def _candidate_lambdas(
     acc: Accumulator, avg: LeagueAverages, ch: TeamStrength, ca: TeamStrength,
     home_id: int, away_id: int, ordinal: int, config: dict,
 ) -> tuple[float, float] | None:
-    """Candidate (lambda_home, lambda_away) for the chosen mode, or None."""
+    """Candidate (lambda_home, lambda_away) for the chosen mode, or None.
+
+    ``*_norm`` kinds keep the candidate's ratio but rescale the total to the
+    calibrated control's total — recency/opponent adjustment for *who wins*,
+    control for *how many goals*.
+    """
     kind = config["kind"]
     half_life = config.get("half_life")
+    normalize = kind.endswith("_norm")
+    base = kind[:-5] if normalize else kind
 
-    if kind in {"recency", "recency_norm"}:
+    if base == "recency":
         assert half_life is not None
         hs = _recency_strength(acc, home_id, avg, ordinal, half_life)
         as_ = _recency_strength(acc, away_id, avg, ordinal, half_life)
         if not (hs.is_reliable and as_.is_reliable):
             return None
         lam_h, lam_a = expected_goals(hs, as_, avg)
-        if kind == "recency_norm":
-            # Keep recency's ratio (drives the result) but take the total-goals
-            # LEVEL from the calibrated control (which drives O/U and BTTS).
-            cl_h, cl_a = expected_goals(ch, ca, avg)
-            r_total = lam_h + lam_a
-            if r_total <= 0:
-                return None
-            scale = (cl_h + cl_a) / r_total
-            lam_h, lam_a = lam_h * scale, lam_a * scale
-        return lam_h, lam_a
+    else:  # "adjusted" — opponent-adjusted, recency-weighted iff half_life set
+        strengths = _adjusted_strengths(acc, avg, config["iterations"], ordinal, half_life)
+        if home_id not in strengths or away_id not in strengths:
+            return None
+        lam_h, lam_a = expected_goals(strengths[home_id], strengths[away_id], avg)
 
-    # opponent-adjusted (recency-weighted iff half_life set)
-    strengths = _adjusted_strengths(acc, avg, config["iterations"], ordinal, half_life)
-    if home_id in strengths and away_id in strengths:
-        return expected_goals(strengths[home_id], strengths[away_id], avg)
-    return None
+    if normalize:
+        cl_h, cl_a = expected_goals(ch, ca, avg)
+        total = lam_h + lam_a
+        if total <= 0:
+            return None
+        scale = (cl_h + cl_a) / total
+        lam_h, lam_a = lam_h * scale, lam_a * scale
+    return lam_h, lam_a
 
 
 def _walk(
