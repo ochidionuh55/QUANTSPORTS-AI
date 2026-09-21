@@ -82,6 +82,8 @@ def _card(fx: Fixture) -> str:
             f"     <i>SHADOW — NOT PRODUCTION</i> · "
             f"recorded {fx.generated_at:%H:%M} · KO {fx.kickoff:%d %b %H:%M} UTC"
         )
+    versions = ", ".join(fx.challengers)
+    lines.append(f"     <code>{fx.experiment_id} · {versions}</code>")
     return "\n".join(lines)
 
 
