@@ -12,6 +12,7 @@ from datetime import UTC, datetime
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.config import get_settings
 from app.core.logging import get_logger
 from app.core.terms import TERMS_VERSION
 from app.database.models import User
@@ -73,6 +74,12 @@ class UserService:
         user = await self.get_by_telegram_id(telegram_id)
         created = False
 
+        # Admin status is config-driven: a user is admin iff their Telegram ID
+        # is in TELEGRAM__ADMIN_IDS. Re-derived on every touch so the flag
+        # always reflects the current config — granting when an ID is added,
+        # revoking when it is removed — and never drifts from it.
+        is_admin = telegram_id in set(get_settings().telegram.admin_ids)
+
         if user is None:
             user = User(
                 telegram_id=telegram_id,
@@ -80,15 +87,17 @@ class UserService:
                 first_name=first_name,
                 language_code=language_code,
                 credits=0,
+                is_admin=is_admin,
             )
             self._session.add(user)
             created = True
-            logger.info("user.registered", telegram_id=telegram_id)
+            logger.info("user.registered", telegram_id=telegram_id, is_admin=is_admin)
         else:
             # Telegram handles and names change; keep them current.
             user.username = username
             user.first_name = first_name
             user.language_code = language_code
+            user.is_admin = is_admin
 
         user.last_seen_at = datetime.now(UTC)
         await self._session.flush()
