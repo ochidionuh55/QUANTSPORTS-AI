@@ -20,7 +20,11 @@ a user only through a deliberate, separate promotion step that does not exist
 yet. Isolation is by construction: these tables carry no foreign key from any
 production table, and no production query references them.
 
-The control ``model-only-v2-dc`` is never written here or anywhere by research.
+Research never *modifies or promotes* the control ``model-only-v2-dc`` and never
+writes it to a production table. It may, however, record the frozen champion's
+own forecast as an append-only paired baseline in ``research_predictions`` — the
+champion's logic is unchanged, and pairing a challenger against the frozen grid
+on identical inputs is the only way "one thing changed" can be measured.
 """
 
 from __future__ import annotations

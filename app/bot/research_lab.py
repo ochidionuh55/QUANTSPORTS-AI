@@ -24,11 +24,12 @@ from aiogram.types import (
 )
 
 from app.database.models import User
-from app.research.lab import CONTROL_LABEL, OUTCOMES, Fixture, ResearchLab
+from app.research.lab import CONTROL_VERSION, OUTCOMES, Fixture, ResearchLab, label_for
 
 HEADER = "🧪 <b>QUANTSPORT RESEARCH LAB</b>"
-DISCLAIMER = "<i>RESEARCH ONLY — does not affect published QUANTSPORT selections.</i>"
+DISCLAIMER = "🔒 <b>RESEARCH ONLY — NOT PRODUCTION.</b> Does not affect published selections."
 NOT_ADMIN = "That surface is not available."
+CONTROL_LABEL = label_for(CONTROL_VERSION)
 MAX_CARDS = 8
 
 
@@ -57,35 +58,35 @@ def _delta(value: float) -> str:
     return f"{round(value * 100):+d}pp"
 
 
-def _short(version: str) -> str:
-    return version.replace("model-only-", "").upper()
+def _probs_line(icon: str, name: str, probs: dict[str, float]) -> str:
+    cells = " · ".join(f"{o[0].upper()} {_pct(probs.get(o, 0.0))}" for o in OUTCOMES)
+    return f"{icon} <b>{name}</b>   {cells}"
 
 
 def _card(fx: Fixture) -> str:
-    lines = [f"<b>{fx.home_name} vs {fx.away_name}</b>"]
-    c = fx.control
-    lines.append(
-        f"🏆 {CONTROL_LABEL}   "
-        + " · ".join(f"{o[0].upper()} {_pct(c.get(o, 0.0))}" for o in OUTCOMES)
-    )
+    comp = f"  <i>{fx.competition}</i>" if fx.competition else ""
+    lines = [f"<b>{fx.home_name} vs {fx.away_name}</b>{comp}"]
+    lines.append(_probs_line("🏆", CONTROL_LABEL, fx.control))
     for version, probs in fx.challengers.items():
         d = fx.deltas(version)
-        lines.append(
-            f"🧪 {_short(version)}   "
-            + " · ".join(f"{o[0].upper()} {_pct(probs.get(o, 0.0))}" for o in OUTCOMES)
-        )
-        lines.append("     Δ " + " · ".join(f"{o[0].upper()} {_delta(d[o])}" for o in OUTCOMES))
-    if not fx.has_challenger:
-        lines.append("     <i>no challenger prediction stored yet</i>")
+        lines.append(_probs_line("🧪", label_for(version), probs))
+        lines.append("     Diff  " + " · ".join(f"{o[0].upper()} {_delta(d[o])}" for o in OUTCOMES))
     if fx.settled and fx.home_goals is not None:
-        lines.append(f"     FT {fx.home_goals}-{fx.away_goals} · settled ✓")
+        result = f" ({fx.settled_outcome})" if fx.settled_outcome else ""
+        lines.append(
+            f"     FT {fx.home_goals}-{fx.away_goals}{result} · "
+            f"recorded {fx.generated_at:%d %b %H:%M} before KO {fx.kickoff:%H:%M} UTC · settled ✓"
+        )
     else:
-        lines.append(f"     <i>SHADOW — NOT PRODUCTION</i> · KO {fx.kickoff:%H:%M} UTC")
+        lines.append(
+            f"     <i>SHADOW — NOT PRODUCTION</i> · "
+            f"recorded {fx.generated_at:%H:%M} · KO {fx.kickoff:%d %b %H:%M} UTC"
+        )
     return "\n".join(lines)
 
 
-def _page(title: str, fixtures: list[Fixture], empty: str) -> str:
-    body = [HEADER, f"<b>{title}</b>", ""]
+def _page(title: str, subtitle: str, fixtures: list[Fixture], empty: str) -> str:
+    body = [HEADER, f"<b>{title}</b>", f"<i>{subtitle}</i>", ""]
     if not fixtures:
         body.append(empty)
     else:
@@ -115,7 +116,8 @@ def _menu_text() -> str:
             HEADER,
             "",
             "Watch active challengers shadow the frozen champion "
-            f"(<code>{CONTROL_LABEL}</code>) on real upcoming fixtures.",
+            f"(<code>{CONTROL_LABEL}</code>) on real upcoming fixtures. "
+            "Every prediction is recorded before kickoff and never edited after.",
             "",
             DISCLAIMER,
         ]
@@ -149,7 +151,12 @@ async def handle_lab_today(callback: CallbackQuery, user: User, session: object)
     fixtures = await ResearchLab(session).today()
     await _show(
         callback,
-        _page("Today's Shadow Matches", fixtures, "No upcoming fixtures with a stored shadow yet."),
+        _page(
+            "Today's Shadow Matches",
+            f"{CONTROL_LABEL} vs challenger — recorded before kickoff",
+            fixtures,
+            "No upcoming fixtures with a stored shadow comparison yet.",
+        ),
         _back(),
     )
 
@@ -162,8 +169,9 @@ async def handle_lab_disagree(callback: CallbackQuery, user: User, session: obje
         callback,
         _page(
             "Biggest Model Disagreements",
+            "Sorted by largest probability gap vs control",
             fixtures,
-            "No challenger predictions stored yet — disagreements appear once a "
+            "No challenger comparisons stored yet — disagreements appear once a "
             "challenger is producing shadow forecasts.",
         ),
         _back(),
@@ -176,26 +184,55 @@ async def handle_lab_settled(callback: CallbackQuery, user: User, session: objec
     fixtures = await ResearchLab(session).recent_settled()
     await _show(
         callback,
-        _page("Recent Settled Shadow Results", fixtures, "No settled shadow fixtures yet."),
+        _page(
+            "Recent Settled Shadow Results",
+            "Original pre-kickoff forecasts, shown against the eventual result",
+            fixtures,
+            "No settled shadow fixtures yet.",
+        ),
         _back(),
     )
+
+
+def _historical_line(metrics: dict[str, object]) -> str | None:
+    delta = metrics.get("test_paired_delta")
+    ci = metrics.get("test_delta_ci")
+    if not isinstance(delta, int | float):
+        return None
+    line = f"  historical (held-out): paired Brier Δ {float(delta):+.4f}"
+    if isinstance(ci, list) and len(ci) == 2:
+        line += f" · 95% CI [{float(ci[0]):+.4f}, {float(ci[1]):+.4f}]"
+    return line
 
 
 async def handle_lab_experiments(callback: CallbackQuery, user: User, session: object) -> None:
     if not await _guard(callback, user):
         return
-    experiments = await ResearchLab(session).experiments()
+    lab = ResearchLab(session)
+    experiments = await lab.experiments()
+    counts = await lab.shadow_counts()
     lines = [HEADER, "<b>Experiment Status</b>", ""]
     if not experiments:
         lines.append("No experiments registered yet.")
     else:
         for e in experiments:
             challenger = e.challenger_version or "—"
-            lines.append(
-                f"<b>{e.experiment_id}</b> · {e.status}\n"
-                f"  {e.title}\n"
-                f"  control <code>{e.control_version}</code> · challenger <code>{challenger}</code>"
-            )
+            block = [
+                f"<b>{e.experiment_id}</b> · {e.status}",
+                f"  {e.title}",
+                f"  control <code>{e.control_version}</code> · "
+                f"challenger <code>{challenger}</code>",
+            ]
+            hist = _historical_line(e.metrics or {})
+            if hist:
+                block.append(hist)
+            c = counts.get(e.challenger_version or "", {})
+            if c:
+                block.append(
+                    f"  shadow: {c.get('fixtures', 0)} fixtures "
+                    f"({c.get('settled', 0)} settled)"
+                )
+            lines.append("\n".join(block))
     lines += ["", DISCLAIMER]
     await _show(callback, "\n".join(lines), _back())
 
